@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum — secure galvano ai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --schild-blau: #2B5EA7;
+            --dunkelblau: #1B2A4A;
+            --logo-gruen: #3D8C3E;
+            --silber: #D4D8DC;
+            --hellgrau: #F5F7FA;
+            --weiss: #FFFFFF;
+            --text-body: #334155;
+            --text-light: #64748b;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dunkelblau);
+            background: var(--weiss);
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        a { color: var(--schild-blau); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--silber);
+            box-shadow: 0 2px 20px rgba(27,42,74,0.08);
+        }
+        .nav-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px; max-width: 1120px; margin: 0 auto; padding: 0 24px;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+        .nav-logo img { height: 40px; }
+        .nav-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.1rem; }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a {
+            font-family: 'Montserrat', Arial, sans-serif; font-weight: 600;
+            font-size: 0.9rem; color: var(--text-body); text-decoration: none;
+        }
+        .nav-links a:hover { color: var(--schild-blau); }
+
+        .page-header {
+            padding: 130px 0 60px;
+            background: linear-gradient(165deg, var(--dunkelblau) 0%, #162240 100%);
+            color: var(--weiss);
+        }
+        .page-header h1 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
+
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+        .content { max-width: 780px; padding: 60px 0 100px; }
+        .content h2 { font-size: 1.3rem; margin: 40px 0 12px; color: var(--dunkelblau); }
+        .content h2:first-child { margin-top: 0; }
+        .content p { color: var(--text-body); margin-bottom: 12px; }
+        .content ul { color: var(--text-body); margin: 0 0 12px 24px; }
+        .content li { margin-bottom: 6px; }
+        .content .info-block { margin-bottom: 24px; }
+        .content .info-block p { margin-bottom: 4px; }
+
+        .footer {
+            background: #0f1c33; color: rgba(255,255,255,0.5); padding: 48px 0 32px;
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 24px;
+        }
+        .footer-logo { display: flex; align-items: center; gap: 10px; }
+        .footer-logo img { height: 32px; opacity: 0.7; }
+        .footer-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 600; font-size: 0.9rem; }
+        .footer-links { display: flex; gap: 28px; list-style: none; }
+        .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-decoration: none; }
+        .footer-links a:hover { color: rgba(255,255,255,0.8); }
+        .footer-copy {
+            width: 100%; text-align: center; padding-top: 32px; margin-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.8rem;
+        }
+
+        @media (max-width: 680px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="logo.png" alt="Logo">
+            <span>secure galvano ai</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container">
+        <h1>Impressum</h1>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content">
+
+        <h2>Angaben gemaess ECG und UGB</h2>
+        <div class="info-block">
+            <p><strong>Stefan Maier</strong></p>
+            <p>Einzelunternehmen</p>
+            <p>Nannen 206/3</p>
+            <p>6861 Alberschwende</p>
+            <p>Oesterreich</p>
+        </div>
+
+        <h2>Kontakt</h2>
+        <div class="info-block">
+            <p>E-Mail: <a href="mailto:smaier@rvh.at">smaier@rvh.at</a></p>
+        </div>
+
+        <h2>Umsatzsteuer-Identifikationsnummer</h2>
+        <div class="info-block">
+            <p>USt-IdNr.: ATU82112615</p>
+        </div>
+
+        <h2>Gewerbeberechtigung</h2>
+        <div class="info-block">
+            <p><strong>Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik</strong></p>
+            <p>GISA-Zahl: 802-37061678</p>
+        </div>
+        <div class="info-block">
+            <p><strong>Unternehmensberatung einschliesslich der Unternehmensorganisation</strong></p>
+            <p>GISA-Zahl: 802-38966637</p>
+        </div>
+
+        <h2>Kammerzugehoerigkeit</h2>
+        <div class="info-block">
+            <p>Wirtschaftskammer Vorarlberg</p>
+            <p>Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie</p>
+        </div>
+
+        <h2>Anwendbare Rechtsvorschriften</h2>
+        <div class="info-block">
+            <p>Gewerbeordnung 1994 (GewO)</p>
+            <p>Abrufbar unter: <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a></p>
+        </div>
+
+        <h2>Behoerde gemaess ECG</h2>
+        <div class="info-block">
+            <p>Bezirkshauptmannschaft Bregenz</p>
+        </div>
+
+        <h2>Haftungsausschluss</h2>
+        <p>Die Inhalte dieser Website werden mit groesster Sorgfalt erstellt. Fuer die Richtigkeit, Vollstaendigkeit und Aktualitaet der Inhalte wird jedoch keine Gewaehr uebernommen.</p>
+        <p>Als Diensteanbieter sind wir gemaess § 16 ECG fuer eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Eine Verpflichtung zur Ueberwachung uebermittelter oder gespeicherter fremder Informationen besteht jedoch nicht.</p>
+
+        <h2>Urheberrecht</h2>
+        <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem oesterreichischen Urheberrecht. Die Vervielfaeltigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechtes beduerfen der schriftlichen Zustimmung des Autors.</p>
+
+        <h2>Streitschlichtung</h2>
+        <p>Die Europaeische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a></p>
+        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo">
+                <span>secure galvano ai</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2025&ndash;2026 secure-galvano-ai</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
