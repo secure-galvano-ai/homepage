@@ -453,65 +453,144 @@
             line-height: 1.4;
         }
 
-        /* ===== QUOTE / DIFFERENTIATOR ===== */
-        .quote-section {
-            padding: 80px 0;
+        /* ===== FOUNDER ===== */
+        .founder {
+            padding: 100px 0;
             background: var(--hellgrau);
         }
 
-        .quote-inner {
-            max-width: 900px;
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 56px;
+            align-items: start;
+            max-width: 960px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 48px;
         }
 
-        .quote-portrait {
-            flex-shrink: 0;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
+        .founder-photo-wrapper {
+            position: sticky;
+            top: 100px;
+        }
+
+        .founder-portrait {
+            width: 100%;
+            border-radius: 16px;
             object-fit: cover;
             object-position: center 15%;
-            border: 4px solid var(--silber);
-            box-shadow: 0 8px 30px rgba(27, 42, 74, 0.1);
+            box-shadow: 0 12px 40px rgba(27, 42, 74, 0.12);
         }
 
-        .quote-text {
-            flex: 1;
+        .founder-name-card {
+            background: var(--dunkelblau);
+            color: var(--weiss);
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin-top: -40px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
         }
 
-        .quote-text blockquote {
+        .founder-name-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .founder-name-card p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.4;
+        }
+
+        .founder-content h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin-bottom: 8px;
+            color: var(--dunkelblau);
+        }
+
+        .founder-content .founder-subtitle {
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--schild-blau);
+            margin-bottom: 24px;
+        }
+
+        .founder-content .founder-intro {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .founder-focus {
+            margin-bottom: 32px;
+        }
+
+        .founder-focus h4 {
+            font-size: 1.1rem;
+            color: var(--dunkelblau);
+            margin-bottom: 16px;
+        }
+
+        .focus-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .focus-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: var(--weiss);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+            box-shadow: 0 2px 8px rgba(27, 42, 74, 0.06);
+        }
+
+        .focus-item h5 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--dunkelblau);
+            margin-bottom: 4px;
+        }
+
+        .focus-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .founder-quote {
+            background: var(--weiss);
+            border-left: 3px solid var(--schild-blau);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 8px;
+        }
+
+        .founder-quote blockquote {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--dunkelblau);
             line-height: 1.5;
-            margin-bottom: 16px;
             font-style: italic;
         }
 
-        .quote-text cite {
-            font-style: normal;
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-
-        .quote-text .quote-role {
-            display: block;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
-
-        @media (max-width: 680px) {
-            .quote-inner {
-                flex-direction: column;
-                text-align: center;
-                gap: 28px;
+        @media (max-width: 900px) {
+            .founder-grid {
+                grid-template-columns: 1fr;
+                max-width: 560px;
             }
-            .quote-portrait { width: 140px; height: 140px; }
+            .founder-photo-wrapper { position: static; max-width: 280px; margin: 0 auto; }
+            .founder-name-card { margin-top: -32px; }
         }
 
         /* ===== CTA ===== */
@@ -785,16 +864,64 @@
     </div>
 </section>
 
-<!-- ===== QUOTE ===== -->
-<section class="quote-section">
+<!-- ===== FOUNDER ===== -->
+<section class="founder" id="ueber">
     <div class="container">
-        <div class="quote-inner fade-up">
-            <img src="portrait.jpg" alt="Stefan Maier" class="quote-portrait">
-            <div class="quote-text">
-                <blockquote>"Ihre Prozessdaten arbeiten bereits fuer Sie — Sie sehen es nur noch nicht."</blockquote>
-                <cite>Stefan Maier
-                    <span class="quote-role">Gruender secure-galvano-ai &middot; 23 Jahre Galvanik & Beschichtung</span>
-                </cite>
+        <div class="founder-grid">
+            <div class="founder-photo-wrapper fade-up">
+                <img src="portrait.jpg" alt="Stefan Maier" class="founder-portrait">
+                <div class="founder-name-card">
+                    <h3>Stefan Maier</h3>
+                    <p>Umweltphysiker &middot; Oberflaechentechnikmeister &middot; KI-Entwickler</p>
+                    <a href="https://www.linkedin.com/in/stefan-maier-bb0b73100" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+                        LinkedIn Profil
+                    </a>
+                </div>
+            </div>
+            <div class="founder-content fade-up">
+                <p class="section-label">Ueber mich</p>
+                <h2>Machine Learning fuer die Galvanotechnik</h2>
+                <p class="founder-subtitle">23 Jahre Praxis. Jetzt als KI.</p>
+                <p class="founder-intro">Meine Karriere begann dort, wo es nach Saeure riecht und Handschuhe Pflicht sind: an der Galvanikanlage. 23 Jahre spaeter verbinde ich dieses Praxiswissen mit kuenstlicher Intelligenz. Mein Antrieb: Galvanikbetrieben helfen, mit weniger Ressourcen mehr zu erreichen — fuer eine Branche, die nachhaltiger werden muss und kann.</p>
+
+                <div class="founder-focus">
+                    <h4>Mein Fokus</h4>
+
+                    <div class="focus-item">
+                        <div class="focus-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div>
+                            <h5>KI-gestuetzte Prozessoptimierung</h5>
+                            <p>Optimierung von Chemikalien- und Energieverbrauch, Echtzeit-Anomalieerkennung, Predictive Maintenance — entwickelt fuer die spezifischen Anforderungen der Galvanotechnik.</p>
+                        </div>
+                    </div>
+
+                    <div class="focus-item">
+                        <div class="focus-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                        </div>
+                        <div>
+                            <h5>Datenintegration</h5>
+                            <p>Von Excel-Tabellen ueber SCADA-Systeme bis zu ERP-Daten — ich bringe Ihre Prozessdaten zusammen und mache sie nutzbar. Von Data Governance ueber Datenarchitektur bis zur massgeschneiderten KI-Software.</p>
+                        </div>
+                    </div>
+
+                    <div class="focus-item">
+                        <div class="focus-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <h5>KI-Sicherheit & Trusted AI</h5>
+                            <p>Geprueft durch die Trusted-AI-Zertifizierung des TUeV Austria. Konform mit EU AI Act, ISO 42001 und IEEE 7000. Transparente Algorithmen, menschliche Kontrolle, dokumentierte Entscheidungsgrundlagen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="founder-quote">
+                    <blockquote>"Ich weiss, wie es sich anfuehlt, wenn ein Bad kippt oder eine Reklamation reinkommt. 15 Jahre an Galvanikanlagen haben mich gepraegt — dieses Wissen steckt in jeder Loesung, die ich entwickle."</blockquote>
+                </div>
             </div>
         </div>
     </div>
