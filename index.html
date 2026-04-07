@@ -459,26 +459,59 @@
             background: var(--hellgrau);
         }
 
-        .quote-card {
-            max-width: 800px;
+        .quote-inner {
+            max-width: 900px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 48px;
         }
 
-        .quote-card blockquote {
+        .quote-portrait {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 15%;
+            border: 4px solid var(--silber);
+            box-shadow: 0 8px 30px rgba(27, 42, 74, 0.1);
+        }
+
+        .quote-text {
+            flex: 1;
+        }
+
+        .quote-text blockquote {
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
             font-weight: 600;
             color: var(--dunkelblau);
             line-height: 1.5;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             font-style: italic;
         }
 
-        .quote-card cite {
+        .quote-text cite {
             font-style: normal;
             font-size: 0.95rem;
             color: var(--text-light);
+        }
+
+        .quote-text .quote-role {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        @media (max-width: 680px) {
+            .quote-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 28px;
+            }
+            .quote-portrait { width: 140px; height: 140px; }
         }
 
         /* ===== CTA ===== */
@@ -755,9 +788,14 @@
 <!-- ===== QUOTE ===== -->
 <section class="quote-section">
     <div class="container">
-        <div class="quote-card fade-up">
-            <blockquote>"Ihre Prozessdaten arbeiten bereits fuer Sie — Sie sehen es nur noch nicht."</blockquote>
-            <cite>Stefan Maier, Gruender secure-galvano-ai</cite>
+        <div class="quote-inner fade-up">
+            <img src="portrait.jpg" alt="Stefan Maier" class="quote-portrait">
+            <div class="quote-text">
+                <blockquote>"Ihre Prozessdaten arbeiten bereits fuer Sie — Sie sehen es nur noch nicht."</blockquote>
+                <cite>Stefan Maier
+                    <span class="quote-role">Gruender secure-galvano-ai &middot; 23 Jahre Galvanik & Beschichtung</span>
+                </cite>
+            </div>
         </div>
     </div>
 </section>
