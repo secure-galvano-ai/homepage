@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>secure galvano ai — KI & Datensysteme für Galvanotechnik</title>
     <meta name="google-site-verification" content="1CuEQy-PGD06yCtj07MiZyf_Xma5G6dNT5HaJt2nluQ">
-    <meta name="description" content="KI & Datensysteme für Galvanotechnik — Monitoring, Fehleranalyse, KI-Software & Datenbanksysteme. On-Premise, TÜV-zertifiziert, AWS Deep Tech gefördert.">
+    <meta name="description" content="KI & Datensysteme für Galvanotechnik — Monitoring, Fehleranalyse, KI-Software & Datenbanksysteme. On-Premise, TÜV-zertifiziert, AWS Deep Tech gefördert. Industrieforschung & Kooperationen im Bereich Trusted AI für Oberflächentechnik.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:title" content="secure galvano ai — KI & Datensysteme für Galvanotechnik">
@@ -603,6 +603,279 @@
             .founder-name-card { margin-top: -32px; }
         }
 
+        /* ===== FORSCHUNG ===== */
+        .research {
+            padding: 100px 0;
+            background: var(--weiss);
+        }
+
+        .research-intro {
+            max-width: 720px;
+            margin: 0 auto 56px;
+            text-align: center;
+        }
+
+        .research-intro p {
+            color: var(--text-body);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, var(--dunkelblau) 0%, #162240 100%);
+            color: var(--weiss);
+            border-radius: 20px;
+            padding: 40px 44px;
+            margin-bottom: 56px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .project-card-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-card .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 165, 0, 0.15);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #FFB84D;
+            margin-bottom: 20px;
+            letter-spacing: 0.03em;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 14px;
+            color: var(--weiss);
+        }
+
+        .project-card p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 780px;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .project-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .project-meta-label {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .project-meta-value {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--weiss);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 56px;
+        }
+
+        .research-col h3 {
+            font-size: 1.25rem;
+            color: var(--dunkelblau);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--schild-blau);
+            display: inline-block;
+        }
+
+        .research-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .research-list li {
+            display: flex;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--silber);
+        }
+
+        .research-list li:last-child { border-bottom: none; }
+
+        .research-list .research-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--hellgrau);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .research-list h4 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--dunkelblau);
+            margin-bottom: 4px;
+        }
+
+        .research-list p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .research-list .status-pill {
+            display: inline-block;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 2px 10px;
+            border-radius: 10px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .status-confirmed { background: rgba(61, 140, 62, 0.12); color: #3D8C3E; }
+        .status-progress { background: rgba(43, 94, 167, 0.1); color: var(--schild-blau); }
+        .status-tbd { background: rgba(100, 116, 139, 0.12); color: var(--text-light); }
+
+        .research-cta {
+            background: var(--hellgrau);
+            border-radius: 16px;
+            padding: 40px 44px;
+            text-align: center;
+            border: 1px solid var(--silber);
+        }
+
+        .research-cta h3 {
+            font-size: 1.3rem;
+            color: var(--dunkelblau);
+            margin-bottom: 12px;
+        }
+
+        .research-cta p {
+            color: var(--text-body);
+            font-size: 1rem;
+            margin-bottom: 24px;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .research-cta .funding-tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .research-cta .funding-tag {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: var(--weiss);
+            border: 1px solid var(--silber);
+            color: var(--text-body);
+            padding: 6px 14px;
+            border-radius: 50px;
+        }
+
+        .research-mail {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--schild-blau);
+            color: var(--weiss);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+        }
+
+        .research-mail:hover {
+            background: var(--schild-blau-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(43, 94, 167, 0.25);
+        }
+
+        .research-video {
+            margin-bottom: 56px;
+        }
+
+        .research-video-frame {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(27, 42, 74, 0.12);
+            background: var(--dunkelblau);
+        }
+
+        .research-video-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .research-video-caption {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        @media (max-width: 900px) {
+            .research-grid { grid-template-columns: 1fr; gap: 32px; }
+            .project-card { padding: 32px 28px; }
+            .research-cta { padding: 32px 24px; }
+        }
+
         /* ===== CTA ===== */
         .cta {
             padding: 100px 0;
@@ -730,6 +1003,7 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#services">Leistungen</a></li>
             <li><a href="#vorteile">Vorteile</a></li>
+            <li><a href="#forschung">Forschung</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstberatung</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -933,6 +1207,155 @@
                     <blockquote>"Ich weiß, wie es sich anfühlt, wenn ein Bad kippt oder eine Reklamation reinkommt. 23 Jahre an Galvanikanlagen haben mich geprägt — dieses Wissen steckt in jeder Lösung, die ich entwickle."</blockquote>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FORSCHUNG & KOOPERATION ===== -->
+<section class="research" id="forschung">
+    <div class="container">
+        <div class="section-header fade-up">
+            <p class="section-label">Forschung & Kooperation</p>
+            <h2>Industrieforschung an der Schnittstelle Oberflächentechnik, Umweltphysik & Trusted AI</h2>
+        </div>
+
+        <div class="research-intro fade-up">
+            <p>23 Jahre Praxis in der Galvanotechnik kombiniert mit einem MSc Umweltphysik (Universität Wien, 2016, summa cum laude) und produktiver KI-Entwicklung. Ich schließe die Lücke zwischen akademischer Forschung und industrieller Realität — als externer Partner für Institute, Förderkonsortien und Begleitforschung.</p>
+        </div>
+
+        <!-- Aktuelles Projekt -->
+        <div class="project-card fade-up">
+            <div class="project-card-inner">
+                <span class="tag">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Laufendes Förderprojekt — bis 31.05.2026
+                </span>
+                <h3>KI-gestützte Prozessoptimierung in der Galvanotechnik zugunsten der Umweltbilanz</h3>
+                <p>Automatisierte Datenerfassung und branchenspezifische Machine-Learning-Modelle zur Reduktion von Chemikalien- und Metallverbrauch, Energiekosten, Wasserbedarf und Abfallmengen — bei gleichzeitiger ESG-konformer Datenintegration. Vorhersage von Prozessparametern, Qualitätsproblemen und Störfällen zur Entlastung verfahrenstechnischer Teams.</p>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span class="project-meta-label">Förderer</span>
+                        <span class="project-meta-value">AWS Deep Tech (Austria Wirtschaftsservice)</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span class="project-meta-label">Förderschiene</span>
+                        <span class="project-meta-value">aws Digitalisierung — AI-Adoption Green</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span class="project-meta-label">Laufzeit</span>
+                        <span class="project-meta-value">bis 31.05.2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software-Demo Video -->
+        <div class="research-video fade-up">
+            <div class="research-video-frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/ANMXEK3wz9A?rel=0"
+                    title="Software-Demo — Dashboards & Predictive Maintenance für die Oberflächentechnik"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <p class="research-video-caption">Software-Demo — Dashboards und Predictive-Maintenance-Anwendungen für die Oberflächentechnik. Analyse realer Prozessdaten einer Galvanikanlage mit Optimierungs- und Einsparpotentialen.</p>
+        </div>
+
+        <!-- Schwerpunkte + Aktivitäten -->
+        <div class="research-grid">
+            <div class="research-col fade-up">
+                <h3>Forschungsschwerpunkte</h3>
+                <ul class="research-list">
+                    <li>
+                        <div class="research-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 9 4-18 3 9h4"/></svg>
+                        </div>
+                        <div>
+                            <h4>Anomalieerkennung auf industriellen Zeitreihen</h4>
+                            <p>Reproduzierbare ML-Methodik (Isolation Forest + XAI) für sensorarme, hochdimensionale Galvanikprozesse.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="research-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/></svg>
+                        </div>
+                        <div>
+                            <h4>Explainable AI für Prozessentscheidungen</h4>
+                            <p>Transparente Modellentscheidungen zur Validierung durch Fachpersonal — EU AI Act konform.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="research-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div>
+                            <h4>ESG-Datenintegration & Umweltbilanzierung</h4>
+                            <p>Automatisierte Erfassung und Modellierung von Energie-, Chemikalien- und Wasserströmen für nachweisbare Nachhaltigkeit.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="research-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Trusted AI & Zertifizierungsmethodik</h4>
+                            <p>TÜV Austria Trusted AI, ISO 42001, IEEE 7000 — reproduzierbare Validierung für den industriellen Einsatz.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="research-col fade-up">
+                <h3>Vorträge & Publikationen 2026</h3>
+                <ul class="research-list">
+                    <li>
+                        <div class="research-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1v-5h3zM3 19a2 2 0 002 2h1v-5H3z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Galvano-Forum 2026<span class="status-pill status-confirmed">Im Programm</span></h4>
+                            <p>Swiss Galvanic, offizieller Programmpunkt. <a href="https://swissgalvanic.ch/galvanofinder/veranstaltung/galvano-forum-2026" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:600">Veranstaltungsdetails →</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="research-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1v-5h3zM3 19a2 2 0 002 2h1v-5H3z"/></svg>
+                        </div>
+                        <div>
+                            <h4>AOT Symposium 2026<span class="status-pill status-tbd">Termin folgt</span></h4>
+                            <p>ARGE Oberflächentechnik Austria — Vortrag zur KI-gestützten Prozessoptimierung. <a href="https://www.arge-ot.at/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:600">arge-ot.at →</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="research-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Fachartikel — Machine Learning in der Galvanotechnik<span class="status-pill status-progress">In Arbeit</span></h4>
+                            <p>Leuze Verlag — Einordnung von ML-Methoden für die industrielle Oberflächentechnik, Fokus auf Praxis und Methodenrigor.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kooperations-CTA -->
+        <div class="research-cta fade-up">
+            <h3>Offen für Forschungskooperationen</h3>
+            <p>Co-Autorenschaften, Validierungs-Kooperationen, Konsortialanträge und Industrie-Begleitforschung. Ich bringe produktionsseitige Galvanik-Erfahrung, akademische Physik-Ausbildung und produktive KI-Systeme in gemeinsame Projekte ein.</p>
+            <div class="funding-tags">
+                <span class="funding-tag">FFG</span>
+                <span class="funding-tag">Horizon Europe</span>
+                <span class="funding-tag">BMBF Industrie 5.0</span>
+                <span class="funding-tag">aws Digitalisierung</span>
+                <span class="funding-tag">Innovationsschecks</span>
+            </div>
+            <a href="mailto:smaier@rvh.at?subject=Forschungskooperation%20%E2%80%94%20secure-galvano-ai" class="research-mail">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Kooperationsanfrage an smaier@rvh.at
+            </a>
         </div>
     </div>
 </section>
