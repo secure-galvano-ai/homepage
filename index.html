@@ -372,6 +372,23 @@
             line-height: 1.6;
         }
 
+        /* ===== LIVE DEMOS ===== */
+        .demos {
+            padding: 80px 0 100px;
+            background: var(--hellgrau);
+            border-top: 1px solid rgba(43, 94, 167, 0.08);
+        }
+
+        .demos .research-video {
+            max-width: 880px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .demos .research-video + .research-video {
+            margin-top: 48px;
+        }
+
         /* ===== VALUE PROPOSITIONS ===== */
         .values {
             padding: 100px 0;
@@ -1048,7 +1065,7 @@
                 Modellprüfung in Kooperation mit TÜV AUSTRIA Trusted AI
             </div>
             <h1>KI & Datensysteme für <span class="accent">Galvanotechnik & Industrie</span></h1>
-            <p>Monitoring, Fehleranalyse, KI-Software und Datenbanksysteme — entwickelt von jemandem, der selbst 23 Jahre an der Anlage stand. On-Premise, datenschutzkonform, ohne Vendor Lock-in.</p>
+            <p>Monitoring, Fehleranalyse, KI-Software und Datenbanksysteme — entwickelt von jemandem mit 23 Jahren Praxis in der Galvanotechnik. On-Premise, datenschutzkonform, ohne Vendor Lock-in.</p>
             <div class="hero-buttons">
                 <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary">Kostenlose Erstberatung</a>
                 <a href="#services" class="btn btn-outline">Leistungen ansehen</a>
@@ -1114,14 +1131,53 @@
     </div>
 </section>
 
+<!-- ===== LIVE DEMOS ===== -->
+<section class="demos" id="demos">
+    <div class="container">
+        <div class="section-header fade-up">
+            <p class="section-label">Live-Demos</p>
+            <h2>So sieht das in der Praxis aus</h2>
+            <p>Zwei kurze Demonstrationen auf realen Prozessdaten — die wissenschaftliche Methode und der produktive Einsatz im Dashboard.</p>
+        </div>
+
+        <!-- Forschungs-Demo Video -->
+        <div class="research-video fade-up">
+            <div class="research-video-frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/1vunuBsCdkc?rel=0"
+                    title="Forschungs-Demo — Anomalieerkennung auf galvanischen Sensordaten mittels Unsupervised Learning"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <p class="research-video-caption">Forschungs-Demo — Anomalieerkennung auf galvanischen Sensordaten mittels Unsupervised Learning. Anwendung der ML-Pipeline auf reale Produktionsdaten einer Galvanikanlage. <em>Hinweis: Sensor-IDs, Prozessgruppen und Zeitachsen wurden zum Schutz von Kundendaten und betrieblichem Know-how anonymisiert.</em></p>
+        </div>
+
+        <!-- Software-Demo Video -->
+        <div class="research-video fade-up">
+            <div class="research-video-frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/ANMXEK3wz9A?rel=0"
+                    title="Software-Demo — Dashboards & Predictive Maintenance für die Oberflächentechnik"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <p class="research-video-caption">Software-Demo — Dashboards und Predictive-Maintenance-Anwendungen für die Oberflächentechnik. Analyse realer Prozessdaten einer Galvanikanlage mit Optimierungs- und Einsparpotentialen.</p>
+        </div>
+    </div>
+</section>
+
 <!-- ===== VALUE PROPOSITIONS ===== -->
 <section class="values" id="vorteile">
     <div class="container">
         <div class="values-grid">
             <div class="values-content fade-up">
                 <p class="section-label">Warum wir</p>
-                <h2>Entwickelt von jemandem, der selbst 23 Jahre an der Anlage stand</h2>
-                <p>Kein Konzern-Sprech, keine Cloud-Abhängigkeit. Lösungen, die in der Praxis funktionieren.</p>
+                <h2>Aus der Praxis. Für die Praxis.</h2>
+                <p>Kein Konzern-Sprech, keine Cloud-Abhängigkeit. Lösungen, die in der Galvanotechnik funktionieren.</p>
 
                 <div class="value-item">
                     <div class="value-check">
@@ -1189,44 +1245,6 @@
                 <h2>KI & Datensysteme für die Galvanotechnik</h2>
                 <p class="founder-subtitle">23 Jahre Praxis. Vom Meister gelernt. Vom Physiker validiert. Durch KI automatisiert.</p>
                 <p class="founder-intro">Meine Karriere begann dort, wo es nach Säure riecht und Handschuhe Pflicht sind: an der Galvanikanlage. 23 Jahre später verbinde ich dieses Praxiswissen mit künstlicher Intelligenz. Mein Antrieb: Galvanikbetrieben helfen, mit weniger Ressourcen mehr zu erreichen — für eine Branche, die nachhaltiger werden muss und kann.</p>
-
-                <div class="founder-focus">
-                    <h4>Mein Fokus</h4>
-
-                    <div class="focus-item">
-                        <div class="focus-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                        </div>
-                        <div>
-                            <h5>KI-gestützte Prozessoptimierung</h5>
-                            <p>Optimierung von Chemikalien- und Energieverbrauch, Echtzeit-Anomalieerkennung, Predictive Maintenance — entwickelt für die spezifischen Anforderungen der Galvanotechnik.</p>
-                        </div>
-                    </div>
-
-                    <div class="focus-item">
-                        <div class="focus-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
-                        </div>
-                        <div>
-                            <h5>Datenintegration</h5>
-                            <p>Von Excel-Tabellen über SCADA-Systeme bis zu ERP-Daten — ich bringe Ihre Prozessdaten zusammen und mache sie nutzbar. Von Data Governance über Datenarchitektur bis zur maßgeschneiderten KI-Software.</p>
-                        </div>
-                    </div>
-
-                    <div class="focus-item">
-                        <div class="focus-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        </div>
-                        <div>
-                            <h5>KI-Sicherheit & Trusted AI</h5>
-                            <p>Modellprüfung in Kooperation mit TÜV AUSTRIA Trusted AI. Methodik orientiert an EU AI Act, ISO 42001 und IEEE 7000. Transparente Modellentscheidungen, menschliche Kontrolle, dokumentierte Entscheidungsgrundlagen.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="founder-quote">
-                    <blockquote>"Ich weiß, wie es sich anfühlt, wenn ein Bad kippt oder eine Reklamation reinkommt. 23 Jahre an Galvanikanlagen haben mich geprägt — dieses Wissen steckt in jeder Lösung, die ich entwickle."</blockquote>
-                </div>
             </div>
         </div>
     </div>
@@ -1268,34 +1286,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Forschungs-Demo Video -->
-        <div class="research-video fade-up">
-            <div class="research-video-frame">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/1vunuBsCdkc?rel=0"
-                    title="Forschungs-Demo — Anomalieerkennung auf galvanischen Sensordaten mittels Unsupervised Learning"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>
-            <p class="research-video-caption">Forschungs-Demo — Anomalieerkennung auf galvanischen Sensordaten mittels Unsupervised Learning. Anwendung der ML-Pipeline auf reale Produktionsdaten einer Galvanikanlage. <em>Hinweis: Sensor-IDs, Prozessgruppen und Zeitachsen wurden zum Schutz von Kundendaten und betrieblichem Know-how anonymisiert.</em></p>
-        </div>
-
-        <!-- Software-Demo Video -->
-        <div class="research-video fade-up">
-            <div class="research-video-frame">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/ANMXEK3wz9A?rel=0"
-                    title="Software-Demo — Dashboards & Predictive Maintenance für die Oberflächentechnik"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>
-            <p class="research-video-caption">Software-Demo — Dashboards und Predictive-Maintenance-Anwendungen für die Oberflächentechnik. Analyse realer Prozessdaten einer Galvanikanlage mit Optimierungs- und Einsparpotentialen.</p>
         </div>
 
         <!-- Schwerpunkte + Aktivitäten -->
