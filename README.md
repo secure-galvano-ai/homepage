@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-04-07
+**Stand:** 2026-04-29
 
 ---
 
@@ -24,10 +24,11 @@
 - [x] Open Graph Tags (Social Media Sharing)
 - [x] robots.txt + sitemap.xml
 - [x] Google Search Console verifiziert + Sitemap eingereicht
+- [x] WhatsApp-Floating-Button auf allen Pages (private Nummer aus CV)
+- [x] Nachweise-Page mit 22 Zertifikaten (Hall-of-Fame Gallery + Lightbox-Modal)
 
 ## Optional (noch offen)
 
-- [ ] Video-Embed (YouTube)
 - [ ] Google Fonts lokal hosten (DSGVO-optimiert)
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
 
@@ -37,9 +38,14 @@
 
 ```
 homepage/
-  index.html              Landing Page
+  index.html               Landing Page (mit WhatsApp-FAB)
+  nachweise.html           Hall-of-Fame Gallery — 22 Zertifikate, Lightbox-Modal
   impressum.html           Impressum (ECG/UGB)
   datenschutz.html         Datenschutzerklärung (DSGVO)
+  credentials/
+    _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full
+    thumbs/                Grid-Thumbnails (~600w, ~1.5 MB total)
+    full/                  Lightbox-Originale (~1800w, ~9.5 MB total)
   logo.png                 Logo (aus brand/)
   portrait.jpg             Gründer-Porträt
   favicon.ico              Browser-Tab Icon
@@ -121,3 +127,15 @@ Assets neu generieren (Favicon, OG-Image):
 cd homepage
 py _generate_assets.py
 ```
+
+Nachweise neu rendern (wenn das Quell-PDF aktualisiert wird):
+```bash
+cd homepage
+py credentials/_generate_credentials.py
+```
+Quelle: `TrustedAIZertifizierung/kompetenznachweise/20251030_Lebenslauf & Nachweise_Stefan Maier.pdf`.
+Metadaten (Titel, Untertitel, Kategorie pro Seite) sind in `credentials/_generate_credentials.py` definiert — Reihenfolge dort ändern, Seiten 6-27 des PDFs werden zu 22 JPG-Paaren.
+
+## WhatsApp-Kontakt
+
+Floating-Button unten rechts auf jeder Page, verlinkt auf `wa.me/4368181483538` mit voreingestelltem Greeting. Funktioniert mit normaler WhatsApp-App **und** WhatsApp Business — keine separate Konfiguration nötig.
