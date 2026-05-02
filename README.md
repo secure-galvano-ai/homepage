@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-04-29
+**Stand:** 2026-05-02
 
 ---
 
@@ -25,7 +25,12 @@
 - [x] robots.txt + sitemap.xml
 - [x] Google Search Console verifiziert + Sitemap eingereicht
 - [x] WhatsApp-Floating-Button auf allen Pages (private Nummer aus CV)
-- [x] Nachweise-Page mit 22 Zertifikaten (Hall-of-Fame Gallery + Lightbox-Modal)
+- [x] Nachweise als Sektion auf `ueber-mich.html` (16 Zertifikate, Lightbox); `nachweise.html` ist Redirect-Stub
+- [x] `ueber-mich.html` als vollständiges Profil + Bio + Nachweise (2026-05-02)
+- [x] Audit-First-Funnel mit Festpreisen (Audit 1.890 €, Klick-Demo 990 €) — 2026-05-02
+- [x] FAQ-Section, Pakete-Section, Ablauf-Section (2026-05-02)
+- [x] JSON-LD Structured Data (LocalBusiness, Person, Service, FAQPage)
+- [x] Galvano-Forum-2026-Portrait + Forschungsvorhaben-Präsentation als PDF-Downloads (`docs/`)
 
 ## Optional (noch offen)
 
@@ -38,14 +43,18 @@
 
 ```
 homepage/
-  index.html               Landing Page (mit WhatsApp-FAB)
-  nachweise.html           Hall-of-Fame Gallery — 22 Zertifikate, Lightbox-Modal
-  impressum.html           Impressum (ECG/UGB)
+  index.html               Landing Page mit Funnel (Hero, Services, Ablauf, Pakete, Demos, Vorteile, Founder, Forschung, FAQ, CTA)
+  ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
+  nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise
+  impressum.html           Impressum (ECG/UGB) + Marken-Hinweis
   datenschutz.html         Datenschutzerklärung (DSGVO)
   credentials/
     _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full
-    thumbs/                Grid-Thumbnails (~600w, ~1.5 MB total)
-    full/                  Lightbox-Originale (~1800w, ~9.5 MB total)
+    thumbs/                Grid-Thumbnails (16 Zertifikate)
+    full/                  Lightbox-Originale
+  docs/
+    portrait_galvano_forum_2026.pdf      Galvano-Forum-Referenten-Portrait
+    praesentation_forschungsvorhaben_2025-07.pdf  Forschungsvorhaben-Präsentation (Stand Juli 2025)
   logo.png                 Logo (aus brand/)
   portrait.jpg             Gründer-Porträt
   favicon.ico              Browser-Tab Icon
@@ -53,7 +62,7 @@ homepage/
   og-image.jpg             Social Media Vorschaubild
   CNAME                    Custom Domain Config
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap
+  sitemap.xml              Google Sitemap (4 URLs: /, ueber-mich, impressum, datenschutz)
   _generate_assets.py      Generator für Favicon/OG-Image
   README.md                Diese Datei
 ```
@@ -106,7 +115,7 @@ homepage/
 
 | Service | Zweck | Link |
 |---------|-------|------|
-| Microsoft Bookings | Erstberatung buchen | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
+| Microsoft Bookings | Erstgespräch buchen | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
 | Google Search Console | SEO / Indexierung | `search.google.com/search-console` |
 | GitHub Pages | Hosting | `github.com/secure-galvano-ai/homepage/settings/pages` |
 | IONOS | Domain-Registrar | `my.ionos.de` |
