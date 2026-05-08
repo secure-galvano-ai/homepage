@@ -168,14 +168,20 @@
         <p>Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an einer einheitlichen Darstellung (Art. 6 Abs. 1 lit. f DSGVO). Google ist unter dem EU-US Data Privacy Framework zertifiziert.</p>
         <p>Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
 
-        <h2>5. Keine Cookies und kein Tracking</h2>
-        <p>Diese Website verwendet <strong>keine Cookies</strong>, keine Analyse-Tools (wie Google Analytics) und kein Tracking. Es werden keine personenbezogenen Daten zu Marketingzwecken erhoben oder an Dritte weitergegeben.</p>
+        <h2>5. YouTube-Videos (eingebettet)</h2>
+        <p>Auf dieser Website sind Videos eingebettet, die über den datenschutzfreundlichen Modus von YouTube (<strong>youtube-nocookie.com</strong>, Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) ausgeliefert werden. Die Video-Player werden erst beim Aufruf der jeweiligen Seite geladen. Dabei wird Ihre IP-Adresse an Google übermittelt, damit das Video an Ihren Browser ausgeliefert werden kann.</p>
+        <p>Im verwendeten Modus setzt YouTube <strong>vor dem Klick auf „Wiedergabe" keine Cookies</strong>. Erst wenn Sie ein Video aktiv starten, kann Google personenbezogene Daten (z. B. Geräte- und Wiedergabeinformationen) verarbeiten und ggf. Cookies setzen.</p>
+        <p>Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an einer ansprechenden Darstellung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO). Google ist unter dem EU-US Data Privacy Framework zertifiziert.</p>
+        <p>Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
 
-        <h2>6. Kontaktaufnahme per E-Mail</h2>
+        <h2>6. Keine Cookies und kein Tracking</h2>
+        <p>Diese Website setzt <strong>selbst keine Cookies</strong>, verwendet keine Analyse-Tools (wie Google Analytics) und kein Tracking. Es werden keine personenbezogenen Daten zu Marketingzwecken erhoben oder an Dritte weitergegeben. Cookies können — wie unter Punkt 5 beschrieben — ausschließlich beim aktiven Start eingebetteter YouTube-Videos durch Google gesetzt werden.</p>
+
+        <h2>7. Kontaktaufnahme per E-Mail</h2>
         <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben (Name, E-Mail-Adresse, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden ohne Ihre Einwilligung nicht weitergegeben.</p>
         <p>Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bzw. zur Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO). Die Daten werden gelöscht, sobald der Zweck der Speicherung entfällt.</p>
 
-        <h2>7. Ihre Rechte</h2>
+        <h2>8. Ihre Rechte</h2>
         <p>Ihnen stehen gemäß DSGVO folgende Rechte zu:</p>
         <ul>
             <li><strong>Auskunft</strong> (Art. 15 DSGVO) — Welche Daten wir über Sie gespeichert haben</li>
@@ -187,18 +193,66 @@
         </ul>
         <p>Zur Ausübung Ihrer Rechte wenden Sie sich an: <a href="mailto:smaier@rvh.at">smaier@rvh.at</a></p>
 
-        <h2>8. Beschwerderecht</h2>
+        <h2>9. Beschwerderecht</h2>
         <p>Sie haben das Recht, sich bei der österreichischen Datenschutzbehörde zu beschweren:</p>
         <p>Österreichische Datenschutzbehörde<br>
         Barichgasse 40-42, 1030 Wien<br>
         <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a></p>
 
-        <h2>9. Änderungen</h2>
+        <h2>10. Änderungen</h2>
         <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an geänderte Rechtslagen oder Änderungen unserer Website anzupassen.</p>
-        <p><em>Stand: April 2026</em></p>
+        <p><em>Stand: Mai 2026</em></p>
 
     </div>
 </main>
+
+<!-- ===== PRIVACY / COOKIE INFO NOTICE ===== -->
+<div id="privacy-notice" class="privacy-notice" hidden role="region" aria-label="Datenschutz-Hinweis">
+    <p>Diese Website verwendet <strong>keine Cookies</strong>. Externe Dienste (Schriften, Videos) werden beim Aufruf nachgeladen — Details: <a href="datenschutz.html">Datenschutz</a>.</p>
+    <button type="button" class="privacy-notice-close" aria-label="Hinweis schließen">OK</button>
+</div>
+<style>
+    .privacy-notice {
+        position: fixed; left: 16px; bottom: 16px; z-index: 95;
+        max-width: 420px;
+        background: rgba(27, 42, 74, 0.97);
+        color: rgba(255,255,255,0.92);
+        padding: 14px 16px; border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 0.82rem; line-height: 1.5;
+        display: flex; align-items: center; gap: 12px;
+    }
+    .privacy-notice p { margin: 0; }
+    .privacy-notice a { color: #9CC4FF; text-decoration: underline; }
+    .privacy-notice-close {
+        flex-shrink: 0;
+        background: rgba(255,255,255,0.15); color: #fff;
+        border: 0; border-radius: 6px;
+        padding: 6px 14px;
+        font-family: inherit; font-weight: 600; font-size: 0.8rem;
+        cursor: pointer; transition: background 0.2s;
+    }
+    .privacy-notice-close:hover { background: rgba(255,255,255,0.25); }
+    @media (max-width: 680px) {
+        .privacy-notice {
+            left: 12px; right: 90px; bottom: 12px; max-width: none;
+            padding: 12px 14px; font-size: 0.78rem;
+        }
+    }
+</style>
+<script>
+    (function(){
+        try { if (sessionStorage.getItem('privacy-notice-dismissed') === '1') return; } catch (e) {}
+        var el = document.getElementById('privacy-notice');
+        if (!el) return;
+        el.hidden = false;
+        el.querySelector('.privacy-notice-close').addEventListener('click', function(){
+            el.hidden = true;
+            try { sessionStorage.setItem('privacy-notice-dismissed', '1'); } catch (e) {}
+        });
+    })();
+</script>
 
 <a class="wa-fab" href="https://wa.me/4368181483538?text=Hallo%20Stefan%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen." target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.005a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
