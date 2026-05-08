@@ -118,7 +118,7 @@
             {
               "@type": "Question",
               "name": "Müssen meine Daten in die Cloud?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Nein. Alle Lösungen werden On-Premise auf Ihrer Hardware betrieben — Industrie-PC, lokaler Server oder bestehende IT-Infrastruktur. Ihre Daten verlassen Ihren Betrieb nicht." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Nein. Alle Lösungen werden On-Premise auf Ihrer Hardware betrieben — Industrie-PC, lokaler Server oder bestehende IT-Infrastruktur. Ihre Daten verlassen Ihren Betrieb nicht. Der Datenfluss zur KI-Komponente ist als Einbahnstraße konzipiert (Sensordaten rein, Empfehlungen raus, kein Rücksteuern in die Produktionsanlage); Architektur orientiert an NIS2, EU AI Act und IEC 62443. Cloud-Anbindung ist optional." }
             },
             {
               "@type": "Question",
@@ -2157,7 +2157,9 @@
             <details class="faq-item fade-up">
                 <summary>Müssen meine Daten in die Cloud?</summary>
                 <div class="faq-answer">
-                    <p>Nein. Alle Lösungen werden On-Premise auf Ihrer Hardware betrieben — Industrie-PC, lokaler Server oder bestehende IT-Infrastruktur. Ihre Daten verlassen Ihren Betrieb nicht. Cloud-Anbindung ist optional und wird nur eingerichtet, wenn Sie das ausdrücklich wünschen (z.B. für Remote-Auswertung).</p>
+                    <p>Nein. Alle Lösungen werden On-Premise auf Ihrer Hardware betrieben — Industrie-PC, lokaler Server oder bestehende IT-Infrastruktur. Ihre Daten verlassen Ihren Betrieb nicht.</p>
+                    <p>Der Datenfluss zur KI-Komponente ist als <strong>Einbahnstraße</strong> konzipiert: Sensordaten gehen rein, Empfehlungen kommen raus — das System kann nicht in die Produktionsanlage zurücksteuern. Diese Architektur orientiert sich an NIS2, EU AI Act und IEC 62443 (industrielle Cybersecurity).</p>
+                    <p>Cloud-Anbindung ist optional und wird nur eingerichtet, wenn Sie das ausdrücklich wünschen (z.B. für Remote-Auswertung).</p>
                 </div>
             </details>
 
