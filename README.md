@@ -142,8 +142,8 @@ Nachweise neu rendern (wenn das Quell-PDF aktualisiert wird):
 cd homepage
 py credentials/_generate_credentials.py
 ```
-Quelle: `TrustedAIZertifizierung/kompetenznachweise/20251030_Lebenslauf & Nachweise_Stefan Maier.pdf`.
-Metadaten (Titel, Untertitel, Kategorie pro Seite) sind in `credentials/_generate_credentials.py` definiert — Reihenfolge dort ändern, Seiten 6-27 des PDFs werden zu 22 JPG-Paaren.
+Quelle: `TrustedAIZertifizierung/kompetenznachweise/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`.
+Metadaten (Titel, Untertitel, Kategorie pro Seite) sind in `credentials/_generate_credentials.py` definiert — Reihenfolge dort ändern, Seiten 6-28 des PDFs werden zu 23 JPG-Paaren (Seite 28: WKO-Workshop NISG 2026, ergänzt 05/2026).
 
 ## WhatsApp-Kontakt
 

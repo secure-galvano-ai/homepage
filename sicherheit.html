@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datensicherheit & Compliance — secure galvano ai</title>
+    <meta name="description" content="Datensicherheit und Compliance für Galvanikbetriebe: EU AI Act, NIS2/NISG, IEC 62443, DSGVO, Cybersecurity Act 2.0, TÜV AUSTRIA Trusted AI. Wie die Diagnose Ihre eigene Compliance gegenüber OEM-Kunden und Behörden unterstützt.">
+    <meta name="keywords" content="EU AI Act Galvanik, NIS2 KMU Galvanik, IEC 62443 Oberflächentechnik, DSGVO Maschinendaten, TÜV Trusted AI Galvanik, NISG 2026, Compliance Galvanik">
+    <link rel="canonical" href="https://secure-galvano-ai.com/sicherheit.html">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="Datensicherheit & Compliance — secure galvano ai">
+    <meta property="og:description" content="Wie die Diagnose Ihre eigene Compliance gegenüber OEM-Kunden und Behörden unterstützt. Sechs Rahmenwerke, klar erklärt.">
+    <meta property="og:image" content="https://secure-galvano-ai.com/og-image.jpg">
+    <meta property="og:url" content="https://secure-galvano-ai.com/sicherheit.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_AT">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --schild-blau: #2B5EA7;
+            --dunkelblau: #1B2A4A;
+            --logo-gruen: #3D8C3E;
+            --silber: #D4D8DC;
+            --hellgrau: #F5F7FA;
+            --weiss: #FFFFFF;
+            --cyan-akzent: #00D4FF;
+            --schild-blau-hover: #234d8c;
+            --text-body: #334155;
+            --text-light: #64748b;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dunkelblau);
+            background: var(--weiss);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+        /* Nav */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--silber);
+            transition: box-shadow 0.3s;
+        }
+        .nav.scrolled { box-shadow: 0 2px 20px rgba(27, 42, 74, 0.08); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; }
+        .nav-logo img { height: 40px; width: auto; }
+        .nav-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--dunkelblau); }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-body);
+            transition: color 0.2s;
+            letter-spacing: 0.02em;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--schild-blau); }
+        .nav-cta {
+            background: var(--schild-blau);
+            color: var(--weiss) !important;
+            padding: 10px 24px;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--schild-blau-hover); transform: translateY(-1px); }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 140px 0 70px;
+            background: linear-gradient(165deg, var(--dunkelblau) 0%, #162240 60%, #1a3055 100%);
+            color: var(--weiss);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -15%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .page-hero-content { position: relative; z-index: 1; max-width: 760px; }
+        .page-hero .section-label {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--cyan-akzent);
+            margin-bottom: 16px;
+        }
+        .page-hero h1 {
+            font-size: clamp(1.9rem, 4vw, 2.6rem);
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+        .page-hero p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.75;
+        }
+
+        /* Intro */
+        .intro { padding: 70px 0 40px; }
+        .intro p {
+            font-size: 1.02rem;
+            color: var(--text-body);
+            line-height: 1.75;
+            max-width: 760px;
+            margin: 0 auto 18px;
+        }
+        .intro p.lead {
+            font-size: 1.1rem;
+            color: var(--dunkelblau);
+        }
+
+        /* Rahmenwerke */
+        .frameworks { padding: 30px 0 60px; }
+        .framework {
+            padding: 36px 0;
+            border-bottom: 1px solid var(--silber);
+        }
+        .framework:last-child { border-bottom: none; }
+        .framework-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+        .framework h3 {
+            font-size: 1.3rem;
+            color: var(--dunkelblau);
+            line-height: 1.3;
+        }
+        .framework-ref {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-light);
+            letter-spacing: 0.04em;
+        }
+        .framework p {
+            color: var(--text-body);
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+        .framework p:last-child { margin-bottom: 0; }
+        .framework-note {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            padding-top: 4px;
+        }
+        .framework-note a { color: var(--schild-blau); text-decoration: underline; }
+        .framework-note a:hover { color: var(--schild-blau-hover); }
+
+        /* Methodik */
+        .methodik {
+            background: var(--hellgrau);
+            padding: 60px 0;
+        }
+        .methodik-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .methodik h2 {
+            font-size: 1.5rem;
+            color: var(--dunkelblau);
+            margin-bottom: 18px;
+        }
+        .methodik p {
+            color: var(--text-body);
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+
+        /* CTA */
+        .cta-bottom {
+            padding: 70px 0;
+            background: var(--weiss);
+            text-align: center;
+        }
+        .cta-bottom h2 {
+            font-size: 1.6rem;
+            color: var(--dunkelblau);
+            margin-bottom: 14px;
+        }
+        .cta-bottom p {
+            color: var(--text-body);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 26px;
+            border-radius: 8px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: var(--schild-blau);
+            color: var(--weiss);
+        }
+        .btn-primary:hover { background: var(--schild-blau-hover); transform: translateY(-1px); }
+        .btn-outline {
+            background: var(--weiss);
+            color: var(--dunkelblau);
+            border: 1px solid var(--silber);
+        }
+        .btn-outline:hover { border-color: var(--schild-blau); color: var(--schild-blau); }
+
+        /* Footer */
+        .footer { background: var(--dunkelblau); color: rgba(255,255,255,0.7); padding: 40px 0; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+        .footer-logo { display: flex; align-items: center; gap: 12px; }
+        .footer-logo img { height: 32px; }
+        .footer-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; color: var(--weiss); }
+        .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { font-size: 0.88rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--weiss); }
+        .footer-copy { font-size: 0.8rem; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .framework-head { flex-direction: column; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="logo.png" alt="secure galvano ai">
+            <span>secure galvano ai</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#angebot">Angebot</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="sicherheit.html" class="active">Sicherheit</a></li>
+            <li><a href="forschung.html">Forschung</a></li>
+            <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstgespräch</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <p class="section-label">Datensicherheit &amp; Compliance</p>
+            <h1>Sechs Rahmenwerke, die für Galvanikbetriebe relevant sind</h1>
+            <p>OEM-Kunden in der Automobilindustrie verlangen zunehmend Nachweise zur Datensicherheit ihrer Lieferanten. Ab Oktober 2026 greift in Österreich das NISG (NIS-2-Umsetzung), in Deutschland und der Schweiz parallele Regelungen. Diese Seite zeigt, welche Rahmenwerke für die Diagnose und ein späteres Live-System adressiert wurden und wie das in der Praxis aussieht.</p>
+        </div>
+    </div>
+</section>
+
+<section class="intro">
+    <div class="container">
+        <p class="lead">Compliance ist kein Selbstzweck. Wenn Hauptkunden auditieren oder die Behörde nachfragt, müssen Sie nachweisen können, dass auch Ihre Software-Lieferanten sauber arbeiten. Die folgende Übersicht ist so geschrieben, dass Sie diese Seite intern weitergeben oder im Erstgespräch gemeinsam durchgehen können.</p>
+    </div>
+</section>
+
+<section class="frameworks">
+    <div class="container">
+
+        <article class="framework">
+            <div class="framework-head">
+                <h3>EU AI Act</h3>
+                <span class="framework-ref">Verordnung 2024/1689 · gültig schrittweise ab 2025/2026</span>
+            </div>
+            <p>Die EU teilt KI-Systeme in vier Risikoklassen ein. Die Anomalieerkennung ist als Advisory-System ausgelegt: Auffälligkeiten werden markiert, die Reaktion entscheidet immer eine geschulte Fachkraft. Damit fällt sie in „minimal/limited risk" — keine Hochrisiko-Konformitätsbewertung erforderlich. Für jede markierte Anomalie ist nachvollziehbar, welche Sensoren und welche Datenmuster sie verursacht haben (Explainable AI). Keine automatischen Eingriffe in die Anlage.</p>
+        </article>
+
+        <article class="framework">
+            <div class="framework-head">
+                <h3>NIS2 / NISG 2026</h3>
+                <span class="framework-ref">Richtlinie 2022/2555 · NISG-Umsetzung in Österreich ab 10/2026</span>
+            </div>
+            <p>NIS2 verpflichtet größere Industriebetriebe zu Cybersecurity-Risikoanalyse, Incident-Reporting und Lieferkettensicherheit. Kleinere Betriebe sind nicht direkt erfasst — aber NIS2-pflichtige Hauptkunden reichen die Anforderung an ihre Lieferanten weiter. Die Diagnose-Methodik ist so dokumentiert, dass sie als Nachweis gegenüber auditierenden Kunden taugt: Patch-Prozesse, Logging, Vorgehen bei Sicherheitsvorfällen.</p>
+        </article>
+
+        <article class="framework">
+            <div class="framework-head">
+                <h3>EU Cybersecurity Act 2.0</h3>
+                <span class="framework-ref">Anwendbar seit 01/2026</span>
+            </div>
+            <p>Der Cybersecurity Act fokussiert auf sichere Entwicklungsprozesse und Lieferketten-Security. Jede Code-Änderung läuft durch sieben automatisierte Prüfungen (statische Codeanalyse, Abhängigkeitsprüfung, Lizenz-Check unter anderem), Commits werden kryptografisch mit einem Hardware-Token (Yubikey) signiert, Änderungen sind über die gesamte Historie nachvollziehbar. Kritische Sicherheitsupdates werden innerhalb weniger Tage ausgeliefert.</p>
+        </article>
+
+        <article class="framework">
+            <div class="framework-head">
+                <h3>DSGVO</h3>
+                <span class="framework-ref">Verordnung 2016/679 · Art. 32 Datensicherheit</span>
+            </div>
+            <p>Verarbeitet werden ausschließlich Maschinendaten — Sensorwerte, Prozessparameter, Reklamationsstatistiken. Personenbezogene Daten kommen weder in die Auswertung noch in das Modell. Die Sicherheitsanforderungen aus Artikel 32 sind trotzdem umgesetzt: Verschlüsselung bei der Übertragung, Zugriffskontrolle, dokumentierte Löschung nach Projektende. Sollten Datenexports versehentlich personenbezogene Daten enthalten (z.B. Bediener-Namen in Schichtprotokollen), werden diese vor der Analyse entfernt und das Vorgehen schriftlich festgehalten.</p>
+        </article>
+
+        <article class="framework">
+            <div class="framework-head">
+                <h3>IEC 62443-2-1</h3>
+                <span class="framework-ref">Industrial Control Systems Security · Edition 2024</span>
+            </div>
+            <p>IEC 62443 ist der zentrale Standard für Cybersecurity in industriellen Steuerungssystemen. Ein wichtiges Prinzip ist der einseitige Datenfluss: Daten dürfen von der Anlage zur Auswertung fließen, niemals zurück. So kann auch ein kompromittiertes Auswertungssystem den Produktionsprozess nicht manipulieren. Diese Trennung ist in der Architektur fest verankert — die Auswertung läuft auf einem abgeschotteten lokalen System mit ausschließlich lesendem Zugriff. Keine Schreibrechte auf SPS, Bad-Steuerung oder Anlagentechnik. Das ist nicht nur technische Maßnahme, sondern auch vertragliche Zusage.</p>
+        </article>
+
+        <article class="framework">
+            <div class="framework-head">
+                <h3>TÜV AUSTRIA Trusted AI</h3>
+                <span class="framework-ref">Inspection Framework · Modellprüfung eingereicht 04/2026</span>
+            </div>
+            <p>TÜV AUSTRIA bietet eine freiwillige Modellprüfung für KI-Systeme im industriellen Einsatz an. Geprüft werden unter anderem statistische Validierung, Reproduzierbarkeit, Vorgehen bei Modell-Drift und die Trennung von Trainings- und Validierungsdaten. Die Unterlagen wurden im April 2026 eingereicht und befinden sich derzeit in der Prüfung — das Ergebnis wird hier veröffentlicht, sobald es vorliegt.</p>
+        </article>
+
+    </div>
+</section>
+
+<section class="methodik">
+    <div class="container methodik-inner">
+        <h2>Wie das im Alltag organisiert ist</h2>
+        <p>Die internen Datensicherheits-Prozesse folgen den Prinzipien der ISO/IEC 27001 — Risikobetrachtung, Zugriffskontrolle, dokumentierte Verfahren, Vorfallreaktion. Die Entwicklung läuft auf einem getrennten Arbeitsgerät mit Festplattenverschlüsselung, Multi-Faktor-Authentifizierung und Hardware-Token für Code-Signierung. Reale Kundendaten werden lokal verarbeitet und gelangen nicht in externe Werkzeuge; für Entwicklungs-Tests kommen synthetische Daten aus einem digitalen Zwilling zum Einsatz.</p>
+        <p>Vor jedem Projektstart wird eine Geheimhaltungsvereinbarung unterzeichnet. Ihre Daten bleiben während des gesamten Projekts in einer geschützten Umgebung und werden auf Wunsch nach Projektende vollständig gelöscht, mit schriftlicher Bestätigung.</p>
+    </div>
+</section>
+
+<section class="cta-bottom">
+    <div class="container">
+        <h2>Fragen oder konkreter Bedarf?</h2>
+        <p>Wer einen detaillierten Konformitäts-Bericht braucht — etwa für die Compliance-Abteilung des Hauptkunden oder als Anhang zu einer Förderung — bekommt das Dokument auf Anfrage zugesendet. Im Erstgespräch lässt sich auch der konkrete Audit-Kontext durchsprechen.</p>
+        <div class="cta-buttons">
+            <a href="mailto:smaier@rvh.at?subject=Anfrage%3A%20Konformit%C3%A4ts-Bericht&amp;body=Hallo%20Stefan%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20den%20detaillierten%20Konformit%C3%A4ts-Bericht.%0A%0AUnternehmen%3A%20%0AAnsprechpartner%3A%20%0AAnlass%2FAudit-Kontext%3A%20%0A%0AVielen%20Dank%21" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Konformitäts-Bericht anfordern
+            </a>
+            <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-outline">
+                Erstgespräch buchen
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logo">
+            <span>secure galvano ai</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <p class="footer-copy">&copy; 2025&ndash;2026 secure-galvano-ai</p>
+    </div>
+</footer>
+
+<script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+</script>
+
+</body>
+</html>
