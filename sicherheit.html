@@ -255,15 +255,6 @@
             .framework-head { flex-direction: column; gap: 6px; }
         }
     </style>
-
-    <!-- Microsoft Clarity Analytics (Page-Views, Heatmaps, Session Recordings) -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "wql3vpgrxl");
-    </script>
 </head>
 <body>
 
@@ -376,55 +367,6 @@
         </div>
     </div>
 </section>
-
-<!-- ===== PRIVACY / COOKIE INFO NOTICE ===== -->
-<div id="privacy-notice" class="privacy-notice" hidden role="region" aria-label="Datenschutz-Hinweis">
-    <p>Diese Website nutzt <strong>Microsoft Clarity</strong> zur anonymen Analyse der Nutzung (Heatmaps, Verweildauer). Eingebettete Video-Vorschauen (YouTube) werden beim Aufruf nachgeladen — Details: <a href="datenschutz.html">Datenschutz</a>.</p>
-    <button type="button" class="privacy-notice-close" aria-label="Hinweis schließen">OK</button>
-</div>
-<style>
-    .privacy-notice {
-        position: fixed; left: 16px; bottom: 16px; z-index: 95;
-        max-width: 420px;
-        background: rgba(27, 42, 74, 0.97);
-        color: rgba(255,255,255,0.92);
-        padding: 14px 16px; border-radius: 10px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 0.82rem; line-height: 1.5;
-        display: flex; align-items: center; gap: 12px;
-    }
-    .privacy-notice[hidden] { display: none; }
-    .privacy-notice p { margin: 0; }
-    .privacy-notice a { color: #9CC4FF; text-decoration: underline; }
-    .privacy-notice-close {
-        flex-shrink: 0;
-        background: rgba(255,255,255,0.15); color: #fff;
-        border: 0; border-radius: 6px;
-        padding: 6px 14px;
-        font-family: inherit; font-weight: 600; font-size: 0.8rem;
-        cursor: pointer; transition: background 0.2s;
-    }
-    .privacy-notice-close:hover { background: rgba(255,255,255,0.25); }
-    @media (max-width: 680px) {
-        .privacy-notice {
-            left: 12px; right: 90px; bottom: 12px; max-width: none;
-            padding: 12px 14px; font-size: 0.78rem;
-        }
-    }
-</style>
-<script>
-    (function(){
-        try { if (sessionStorage.getItem('privacy-notice-dismissed') === '1') return; } catch (e) {}
-        var el = document.getElementById('privacy-notice');
-        if (!el) return;
-        el.hidden = false;
-        el.querySelector('.privacy-notice-close').addEventListener('click', function(){
-            el.hidden = true;
-            try { sessionStorage.setItem('privacy-notice-dismissed', '1'); } catch (e) {}
-        });
-    })();
-</script>
 
 <footer class="footer">
     <div class="container footer-inner">

@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-05-13
+**Stand:** 2026-05-14
 
 ---
 
@@ -31,7 +31,7 @@
 - [x] FAQ-Section, Pakete-Section, Ablauf-Section
 - [x] JSON-LD Structured Data (LocalBusiness, Person, Service, FAQPage)
 - [x] Galvano-Forum-2026-Portrait + Forschungsvorhaben-Präsentation als PDF-Downloads (`docs/`)
-- [x] Microsoft Clarity Analytics + Cookie-/Privacy-Notice auf allen 6 Pages (2026-05-13)
+- [x] **Kein Tracking** — bewusst keine Web-Analyse, keine Cookies, kein Consent-Banner (2026-05-14)
 - [x] Trust-Bar mit echten Logos (aws Deep Tech + TRUSTIFAI by TÜV AUSTRIA) (2026-05-13)
 - [x] Cost-of-Inaction-Streifen, Datenfluss-Grafik, Fachpresse-Platzhalter (2026-05-13)
 - [x] **Self-Hosted Fonts** (Montserrat + Open Sans lokal, kein Google-Fonts-Request) (2026-05-13)
