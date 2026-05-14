@@ -141,6 +141,10 @@ git commit -m "Beschreibung"
 git push
 ```
 
+**KEIN GPG-Signing in diesem Repo.** Die Homepage ist ein reines Content-Repo
+(HTML/CSS/Assets) — Commit-Signing ist nur für Code-Repos vorgesehen. Lokal per
+`git config commit.gpgsign false` deaktiviert; Commits laufen ohne Yubikey-PIN-Dialog.
+
 Assets neu generieren (Favicon, OG-Image):
 ```bash
 cd homepage
