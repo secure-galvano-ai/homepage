@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-05-02
+**Stand:** 2026-05-13
 
 ---
 
@@ -27,14 +27,17 @@
 - [x] WhatsApp-Floating-Button auf allen Pages (private Nummer aus CV)
 - [x] Nachweise als Sektion auf `ueber-mich.html` (16 Zertifikate, Lightbox); `nachweise.html` ist Redirect-Stub
 - [x] `ueber-mich.html` als vollständiges Profil + Bio + Nachweise (2026-05-02)
-- [x] Audit-First-Funnel mit Festpreisen (Audit 1.890 €, Klick-Demo 990 €) — 2026-05-02
-- [x] FAQ-Section, Pakete-Section, Ablauf-Section (2026-05-02)
+- [x] 8-Wochen-Diagnose mit Festpreis 9.500 € netto (Briefing 2026-05-12)
+- [x] FAQ-Section, Pakete-Section, Ablauf-Section
 - [x] JSON-LD Structured Data (LocalBusiness, Person, Service, FAQPage)
 - [x] Galvano-Forum-2026-Portrait + Forschungsvorhaben-Präsentation als PDF-Downloads (`docs/`)
+- [x] Microsoft Clarity Analytics + Cookie-/Privacy-Notice auf allen 6 Pages (2026-05-13)
+- [x] Trust-Bar mit echten Logos (aws Deep Tech + TRUSTIFAI by TÜV AUSTRIA) (2026-05-13)
+- [x] Cost-of-Inaction-Streifen, Datenfluss-Grafik, Fachpresse-Platzhalter (2026-05-13)
+- [x] **Self-Hosted Fonts** (Montserrat + Open Sans lokal, kein Google-Fonts-Request) (2026-05-13)
 
 ## Optional (noch offen)
 
-- [ ] Google Fonts lokal hosten (DSGVO-optimiert)
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
 
 ---
@@ -55,6 +58,12 @@ homepage/
   docs/
     portrait_galvano_forum_2026.pdf      Galvano-Forum-Referenten-Portrait
     praesentation_forschungsvorhaben_2025-07.pdf  Forschungsvorhaben-Präsentation (Stand Juli 2025)
+  fonts/
+    fonts.css                Self-Hosted @font-face Definitionen (Montserrat + Open Sans, OFL)
+    Montserrat-{400,600,700}-{latin,latin-ext}.woff2   6 WOFF2-Files
+    OpenSans-{300,400,600}-{latin,latin-ext}.woff2     6 WOFF2-Files
+  aws.png                  aws Deep Tech Logo (Trust-Bar)
+  trustifai.png            TRUSTIFAI by TÜV AUSTRIA Logo (Trust-Bar)
   logo.png                 Logo (aus brand/)
   portrait.jpg             Gründer-Porträt
   favicon.ico              Browser-Tab Icon
@@ -107,9 +116,10 @@ homepage/
 
 ### Fonts
 
-- **Headlines:** Montserrat (Bold/SemiBold) — Google Fonts
-- **Body:** Open Sans (Regular/Light) — Google Fonts
+- **Headlines:** Montserrat (Bold/SemiBold) — **lokal self-hosted** in `fonts/` (OFL-lizenziert)
+- **Body:** Open Sans (Regular/Light) — **lokal self-hosted** in `fonts/` (OFL-lizenziert)
 - **Fallback:** Arial
+- Einbindung in jeder Page über `<link href="fonts/fonts.css" rel="stylesheet">` — kein Google-Fonts-Request, DSGVO-freundlich
 
 ## Externe Services
 
