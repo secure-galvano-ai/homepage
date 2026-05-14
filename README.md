@@ -31,7 +31,7 @@
 - [x] FAQ-Section, Pakete-Section, Ablauf-Section
 - [x] JSON-LD Structured Data (LocalBusiness, Person, Service, FAQPage)
 - [x] Galvano-Forum-2026-Portrait + Forschungsvorhaben-Präsentation als PDF-Downloads (`docs/`)
-- [x] **Kein Tracking** — bewusst keine Web-Analyse, keine Cookies, kein Consent-Banner (2026-05-14)
+- [x] **Microsoft Clarity, Opt-in-Consent** — `consent.js` laedt Clarity nur nach Zustimmung, Funnel-Events auf den CTAs, Widerruf via Footer-Link (2026-05-14)
 - [x] Trust-Bar mit echten Logos (aws Deep Tech + TRUSTIFAI by TÜV AUSTRIA) (2026-05-13)
 - [x] Cost-of-Inaction-Streifen, Datenfluss-Grafik, Fachpresse-Platzhalter (2026-05-13)
 - [x] **Self-Hosted Fonts** (Montserrat + Open Sans lokal, kein Google-Fonts-Request) (2026-05-13)
@@ -72,6 +72,7 @@ homepage/
   CNAME                    Custom Domain Config
   robots.txt               Crawler-Erlaubnis
   sitemap.xml              Google Sitemap (4 URLs: /, ueber-mich, impressum, datenschutz)
+  consent.js               Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
   _generate_assets.py      Generator für Favicon/OG-Image
   README.md                Diese Datei
 ```
@@ -126,6 +127,7 @@ homepage/
 | Service | Zweck | Link |
 |---------|-------|------|
 | Microsoft Bookings | Erstgespräch buchen | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
+| Microsoft Clarity | Web-Analyse (Opt-in, Projekt `wql3vpgrxl`) | `clarity.microsoft.com` |
 | Google Search Console | SEO / Indexierung | `search.google.com/search-console` |
 | GitHub Pages | Hosting | `github.com/secure-galvano-ai/homepage/settings/pages` |
 | IONOS | Domain-Registrar | `my.ionos.de` |
