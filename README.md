@@ -51,6 +51,11 @@ homepage/
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise
   impressum.html           Impressum (ECG/UGB) + Marken-Hinweis
   datenschutz.html         Datenschutzerklärung (DSGVO)
+  assets/
+    img/                   Bild-Assets: logo, portrait, aws, trustifai, og-image,
+                           techniker-monitoring, stefan-entmetallisierung-2006
+    js/
+      consent.js           Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
   credentials/
     _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full
     thumbs/                Grid-Thumbnails (16 Zertifikate)
@@ -62,18 +67,12 @@ homepage/
     fonts.css                Self-Hosted @font-face Definitionen (Montserrat + Open Sans, OFL)
     Montserrat-{400,600,700}-{latin,latin-ext}.woff2   6 WOFF2-Files
     OpenSans-{300,400,600}-{latin,latin-ext}.woff2     6 WOFF2-Files
-  aws.png                  aws Deep Tech Logo (Trust-Bar)
-  trustifai.png            TRUSTIFAI by TÜV AUSTRIA Logo (Trust-Bar)
-  logo.png                 Logo (aus brand/)
-  portrait.jpg             Gründer-Porträt
-  favicon.ico              Browser-Tab Icon
-  apple-touch-icon.png     iOS Home Screen Icon
-  og-image.jpg             Social Media Vorschaubild
+  favicon.ico              Browser-Tab Icon (Root — Browser-Konvention)
+  apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
   CNAME                    Custom Domain Config
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (4 URLs: /, ueber-mich, impressum, datenschutz)
-  consent.js               Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
-  _generate_assets.py      Generator für Favicon/OG-Image
+  sitemap.xml              Google Sitemap (6 URLs)
+  _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
   README.md                Diese Datei
 ```
 

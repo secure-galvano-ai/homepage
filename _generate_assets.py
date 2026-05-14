@@ -5,7 +5,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).parent
-logo = Image.open(ROOT / "logo.png")
+IMG = ROOT / "assets" / "img"
+logo = Image.open(IMG / "logo.png")
 
 # Favicon 32x32
 img_32 = logo.resize((32, 32), Image.LANCZOS)
@@ -37,6 +38,6 @@ draw.text((600, 370), title, fill=(255, 255, 255), font=font_large, anchor="mt")
 draw.text((600, 420), subtitle, fill=(180, 190, 210), font=font_small, anchor="mt")
 
 og_rgb = og.convert("RGB")
-og_rgb.save(ROOT / "og-image.jpg", quality=90)
+og_rgb.save(IMG / "og-image.jpg", quality=90)
 
 print("Generated: favicon.ico, apple-touch-icon.png, og-image.jpg")
