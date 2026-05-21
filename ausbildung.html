@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Datenanalyse für GalvanotechnikerInnen — Praxiskurs · secure galvano ai</title>
+    <meta name="description" content="Praxiskurs für GalvanotechnikerInnen ohne Programmierkenntnisse: Mit KI-Unterstützung datenschutzkonform eigene Auswertungs-Software für Sensordaten bauen. Pilotkurs, max. 6 Plätze.">
+    <link rel="canonical" href="https://secure-galvano-ai.com/ausbildung.html">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="KI-Datenanalyse für GalvanotechnikerInnen — Praxiskurs">
+    <meta property="og:description" content="Werden Sie die treibende Kraft für datengestützte Entscheidungen in Ihrem Betrieb — KI macht's möglich, auch ohne IT-Hintergrund.">
+    <meta property="og:image" content="https://secure-galvano-ai.com/assets/img/og-image.jpg">
+    <meta property="og:url" content="https://secure-galvano-ai.com/ausbildung.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_AT">
+    <link href="fonts/fonts.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "KI-Datenanalyse für GalvanotechnikerInnen",
+      "description": "Praxiskurs für Fachkräfte der Oberflächentechnik ohne Programmierkenntnisse: Mit KI-Unterstützung datenschutzkonform eigene Auswertungs-Software für Sensor- und Prozessdaten bauen. Geübt wird an synthetischen Daten eines digitalen Zwillings.",
+      "provider": {
+        "@type": "Organization",
+        "name": "secure galvano ai",
+        "url": "https://secure-galvano-ai.com"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT12H"
+      }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --schild-blau: #2B5EA7;
+            --dunkelblau: #1B2A4A;
+            --logo-gruen: #3D8C3E;
+            --silber: #D4D8DC;
+            --hellgrau: #F5F7FA;
+            --weiss: #FFFFFF;
+            --cyan-akzent: #00D4FF;
+            --schild-blau-hover: #234d8c;
+            --text-body: #334155;
+            --text-light: #64748b;
+            --whatsapp-gruen: #25D366;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--dunkelblau);
+            background: var(--weiss);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+        /* Nav */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--silber);
+            transition: box-shadow 0.3s;
+        }
+        .nav.scrolled { box-shadow: 0 2px 20px rgba(27, 42, 74, 0.08); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; }
+        .nav-logo img { height: 40px; width: auto; }
+        .nav-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--dunkelblau); }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-body);
+            transition: color 0.2s;
+            letter-spacing: 0.02em;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--schild-blau); }
+        .nav-cta {
+            background: var(--schild-blau);
+            color: var(--weiss) !important;
+            padding: 10px 24px;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--schild-blau-hover); transform: translateY(-1px); }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 140px 0 70px;
+            background: linear-gradient(165deg, var(--dunkelblau) 0%, #162240 60%, #1a3055 100%);
+            color: var(--weiss);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -15%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .page-hero-content { position: relative; z-index: 1; max-width: 820px; }
+        .page-hero .section-label {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--cyan-akzent);
+            margin-bottom: 16px;
+        }
+        .page-hero h1 {
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+        .page-hero p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.75;
+            max-width: 740px;
+        }
+
+        /* Course */
+        .course { padding: 70px 0; background: var(--hellgrau); }
+        .section-label-light {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            font-size: 0.78rem;
+            color: var(--schild-blau);
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        /* Zielgruppen */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 56px;
+        }
+        .audience-card {
+            background: var(--weiss);
+            border: 1px solid var(--silber);
+            border-radius: 16px;
+            padding: 30px 32px;
+        }
+        .audience-card h3 { font-size: 1.15rem; color: var(--dunkelblau); margin-bottom: 10px; }
+        .audience-card p { color: var(--text-light); line-height: 1.7; font-size: 0.95rem; }
+
+        /* Eckdaten */
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 16px;
+            margin-bottom: 56px;
+        }
+        .fact-card {
+            background: var(--weiss);
+            border: 1px solid var(--silber);
+            border-radius: 12px;
+            padding: 22px 24px;
+        }
+        .fact-label {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        .fact-value { font-size: 0.98rem; color: var(--dunkelblau); font-weight: 600; line-height: 1.5; }
+
+        /* Module */
+        .modules { max-width: 880px; margin: 0 auto 56px; }
+        .module-card {
+            background: var(--weiss);
+            border: 1px solid var(--silber);
+            border-radius: 14px;
+            padding: 26px 30px;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 22px;
+            align-items: flex-start;
+        }
+        .module-num {
+            flex-shrink: 0;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: var(--schild-blau);
+            color: var(--weiss);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .module-card h3 { font-size: 1.1rem; color: var(--dunkelblau); margin-bottom: 8px; }
+        .module-card p { color: var(--text-body); line-height: 1.65; font-size: 0.95rem; }
+        .module-takeaway {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: var(--hellgrau);
+            border-left: 3px solid var(--logo-gruen);
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: var(--dunkelblau);
+        }
+
+        /* Outcomes */
+        .outcomes {
+            max-width: 880px;
+            margin: 0 auto 56px;
+            background: var(--weiss);
+            border: 1px solid var(--silber);
+            border-radius: 16px;
+            padding: 36px 40px;
+        }
+        .outcomes h3 { font-size: 1.3rem; color: var(--dunkelblau); margin-bottom: 18px; }
+        .outcomes ul { list-style: none; }
+        .outcomes li {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0;
+            color: var(--text-body);
+            line-height: 1.6;
+            font-size: 0.96rem;
+        }
+        .outcomes li svg { flex-shrink: 0; margin-top: 3px; }
+
+        /* Preis + Anmeldung */
+        .signup {
+            max-width: 880px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 48px 32px;
+            background: linear-gradient(135deg, var(--dunkelblau), var(--schild-blau));
+            border-radius: 20px;
+            color: var(--weiss);
+        }
+        .signup .pilot-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,212,255,0.14);
+            color: var(--cyan-akzent);
+            padding: 7px 16px;
+            border-radius: 50px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            margin-bottom: 20px;
+        }
+        .price-row {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin: 8px 0 6px;
+        }
+        .price-main { font-size: 2.4rem; font-weight: 700; line-height: 1.1; }
+        .price-member { font-size: 1.15rem; font-weight: 600; color: var(--cyan-akzent); }
+        .price-member small { display: block; font-size: 0.78rem; font-weight: 400; opacity: 0.8; margin-top: 2px; }
+        .signup-note { font-size: 0.9rem; opacity: 0.85; max-width: 560px; margin: 16px auto 26px; line-height: 1.6; }
+        .signup-btn {
+            display: inline-block;
+            background: var(--weiss);
+            color: var(--dunkelblau);
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .signup-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+        .signup-sub { font-size: 0.82rem; opacity: 0.78; margin-top: 16px; }
+
+        /* Footer */
+        .footer { background: var(--dunkelblau); color: rgba(255,255,255,0.7); padding: 40px 0; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+        .footer-logo { display: flex; align-items: center; gap: 12px; }
+        .footer-logo img { height: 32px; }
+        .footer-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; color: var(--weiss); }
+        .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { font-size: 0.88rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--weiss); }
+        .footer-copy { font-size: 0.8rem; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .module-card { flex-direction: column; gap: 14px; }
+        }
+        /* WhatsApp */
+        .wa-fab {
+            position: fixed; right: 24px; bottom: 24px; z-index: 90;
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--whatsapp-gruen); color: var(--weiss);
+            padding: 14px 22px 14px 18px; border-radius: 50px;
+            font-family: 'Montserrat', Arial, sans-serif; font-weight: 600; font-size: 0.92rem;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .wa-fab:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
+        .wa-fab svg { flex-shrink: 0; }
+        @media (max-width: 680px) {
+            .wa-fab { padding: 14px; right: 16px; bottom: 16px; }
+            .wa-fab .wa-label { display: none; }
+            .price-row { gap: 14px; }
+        }
+    </style>
+
+    <script src="assets/js/consent.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/img/logo.png" alt="secure galvano ai">
+            <span>secure galvano ai</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#angebot">Angebot</a></li>
+            <li><a href="ausbildung.html" class="active">Ausbildung</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="sicherheit.html">Sicherheit</a></li>
+            <li><a href="forschung.html">Forschung</a></li>
+            <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstgespräch</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <p class="section-label">Der Praxiskurs · Pilotgruppe 2026</p>
+            <h1>KI-Datenanalyse für GalvanotechnikerInnen</h1>
+            <p>Werden Sie die treibende Kraft für datengestützte Entscheidungen in Ihrem Betrieb — KI macht's möglich, auch ohne IT-Hintergrund. In einem praxisbegleiteten Kurs richten Sie die Werkzeuge auf Ihrem eigenen Laptop ein und lernen, mit KI-Unterstützung eigene Auswertungs-Software für Ihre Sensor- und Prozessdaten zu bauen — datenschutzkonform.</p>
+        </div>
+    </div>
+</section>
+
+<section class="course">
+    <div class="container">
+
+        <!-- Für wen -->
+        <p class="section-label-light">Für wen der Kurs gedacht ist</p>
+        <div class="audience-grid">
+            <div class="audience-card">
+                <h3>Für Prozess-Spezialisten</h3>
+                <p>Galvaniseure, Verfahrens- und Qualitätsfachkräfte, die ihr Prozesswissen mit KI zu echten Auswertungen machen wollen — ganz ohne Programmierkenntnisse. Sie werden zum Key User der neuen Technologie in Ihrem Unternehmen.</p>
+            </div>
+            <div class="audience-card">
+                <h3>Für Unternehmen, die Datensicherheit ernst nehmen</h3>
+                <p>Geübt wird ausschließlich an synthetischen Daten aus einem digitalen Zwilling — kein echter Prozessdaten-Upload, keine sensiblen Betriebsdaten verlassen das Haus. So bleibt die Datensouveränität von der ersten Minute an gewahrt.</p>
+            </div>
+        </div>
+
+        <!-- Eckdaten -->
+        <p class="section-label-light">Die Eckdaten</p>
+        <div class="fact-grid">
+            <div class="fact-card">
+                <div class="fact-label">Format</div>
+                <div class="fact-value">Live online, praxisbegleitet — jeder am eigenen Laptop</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-label">Gruppe</div>
+                <div class="fact-value">Max. 6 Teilnehmer (Pilot) · First come, first serve</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-label">Voraussetzung</div>
+                <div class="fact-value">Eigener Laptop · keine Programmierkenntnisse nötig</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-label">Geübt wird an</div>
+                <div class="fact-value">Synthetischem Datensatz aus dem digitalen Zwilling</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-label">Umfang</div>
+                <div class="fact-value">4 Sessions à ~3 Std. (z.&nbsp;B. wöchentlich)</div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-label">Termine</div>
+                <div class="fact-value">Werden mit der Gruppe gemeinsam abgestimmt</div>
+            </div>
+        </div>
+
+        <!-- Module -->
+        <p class="section-label-light">Der Kursaufbau</p>
+        <div class="modules">
+            <div class="module-card">
+                <div class="module-num">1</div>
+                <div>
+                    <h3>KI-Werkzeuge auf dem eigenen Laptop einrichten</h3>
+                    <p>Eine moderne KI-gestützte Entwicklungsumgebung auf dem eigenen Gerät einrichten und das erste Mal mit der KI zusammenarbeiten. Den synthetischen Zwillings-Datensatz laden und einen ersten Blick darauf werfen — wie ist so ein Produktionsdatensatz aufgebaut?</p>
+                    <span class="module-takeaway"><strong>Takeaway:</strong> einsatzbereite KI-Werkzeuge auf dem eigenen Laptop und der erste Daten-Import, der bei Excel längst kapituliert hätte.</span>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">2</div>
+                <div>
+                    <h3>Daten verstehen und aufbereiten</h3>
+                    <p>Badwerte, Strom- und Spannungsverläufe und Schichtdaten bereinigen, sinnvoll zusammenfassen und lesbar machen. Erste Auffälligkeiten sichtbar machen — eine Drift im Bad oder am Gleichrichter erkennen, bevor sie als Reklamation zurückkommt.</p>
+                    <span class="module-takeaway"><strong>Takeaway:</strong> ein sauberer Datensatz und die ersten selbst gefundenen Auffälligkeiten.</span>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">3</div>
+                <div>
+                    <h3>Dashboards bauen</h3>
+                    <p>Ein interaktives Dashboard mit Verläufen, Trends und Kennzahlen aufbauen — so, dass Meister und Schichtführung es auf einen Blick lesen, ohne erst Zahlenkolonnen in Excel zu wälzen.</p>
+                    <span class="module-takeaway"><strong>Takeaway:</strong> das eigene, funktionierende Dashboard.</span>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">4</div>
+                <div>
+                    <h3>Reports und der Weg in den eigenen Betrieb</h3>
+                    <p>Aus den Erkenntnissen einen automatischen Report mit Tages-Takeaways erzeugen — die Grundlage, um Ausschuss und Reklamationen früher zu erkennen. Ausblick: Wie wird daraus im eigenen Unternehmen ein Monitoring- oder Predictive-Maintenance-Werkzeug, und wie bleibt dabei alles datensicher?</p>
+                    <span class="module-takeaway"><strong>Takeaway:</strong> ein fertiger Report und eine Roadmap für die eigene Auswertungs-Software im Betrieb.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outcomes -->
+        <div class="outcomes">
+            <h3>Was Sie am Ende können</h3>
+            <ul>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D8C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    KI-gestützte Entwicklungswerkzeuge selbstständig auf dem eigenen Laptop bedienen
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D8C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Eigene Auswertungs-Software für Ihre Themen und Probleme bauen — ohne Programmierer
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D8C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Sensordaten extrahieren und auswerten, die für Excel zu groß sind
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D8C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Eigene Dashboards und Reports erstellen
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D8C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Den Grundstein für eigene Monitoring- und Predictive-Maintenance-Werkzeuge legen — datenschutzkonform über synthetische Daten
+                </li>
+            </ul>
+        </div>
+
+        <!-- Preis + Anmeldung -->
+        <div class="signup" id="anmelden">
+            <span class="pilot-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Nur 6 Plätze · First come, first serve
+            </span>
+            <div class="price-row">
+                <div class="price-main">1.260 € netto</div>
+                <div class="price-member">560 € für DGO-Mitglieder<small>bei Angabe der Mitgliedsnummer</small></div>
+            </div>
+            <p class="signup-note">Der vergünstigte Preis gilt für Mitglieder der <a href="https://www.dgo-online.de/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">DGO (Deutsche Gesellschaft für Galvano- und Oberflächentechnik)</a>. Geben Sie Ihre Mitgliedsnummer einfach bei der Anmeldung an. Termine werden anschließend mit der Pilotgruppe gemeinsam abgestimmt.</p>
+            <a class="signup-btn" href="mailto:smaier@rvh.at?subject=Anmeldung%20Pilotkurs%20%E2%80%94%20KI-Datenanalyse%20f%C3%BCr%20GalvanotechnikerInnen&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20mich%20f%C3%BCr%20den%20Pilotkurs%20%E2%80%9EKI-Datenanalyse%20f%C3%BCr%20GalvanotechnikerInnen%E2%80%9C%20anmelden.%0A%0AName%3A%20%0AUnternehmen%3A%20%0AE-Mail%3A%20%0ATelefon%20(optional)%3A%20%0ADGO-Mitgliedsnummer%20(optional%2C%20f%C3%BCr%20den%20Mitglieder-Preis)%3A%20%0A%0ADas%20m%C3%B6chte%20ich%20gern%20auswerten%20%2F%20diese%20Themen%20interessieren%20mich%3A%0A-%20%0A%0AVielen%20Dank%21">Jetzt Platz sichern</a>
+            <p class="signup-sub">Öffnet eine vorausgefüllte E-Mail an smaier@rvh.at — Sie ergänzen nur Ihre Angaben und senden ab.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<a class="wa-fab" href="https://wa.me/4368181483538?text=Hallo%20Stefan%2C%20ich%20habe%20eine%20Frage%20zum%20Kurs%20KI-Datenanalyse." target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.005a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-label">Fragen zum Kurs?</span>
+</a>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="assets/img/logo.png" alt="Logo">
+            <span>secure galvano ai</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="sicherheit.html">Sicherheit</a></li>
+            <li><a href="forschung.html">Forschung</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="#" class="cookie-settings">Cookie-Einstellungen</a></li>
+        </ul>
+        <p class="footer-copy">&copy; 2025&ndash;2026 secure-galvano-ai</p>
+    </div>
+</footer>
+
+<script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+</script>
+
+</body>
+</html>
