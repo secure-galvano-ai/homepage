@@ -1,6 +1,6 @@
 """Render certificate pages from CV PDF into thumbnails + full-size JPGs.
 
-Source: TrustedAIZertifizierung/kompetenznachweise/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf
+Source: Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf
 Output: homepage/credentials/thumbs/<slug>.jpg (~600w) + homepage/credentials/full/<slug>.jpg (~1800w)
 
 Run: py homepage/credentials/_generate_credentials.py
@@ -13,7 +13,7 @@ import fitz
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-PDF_PATH = ROOT / "TrustedAIZertifizierung" / "kompetenznachweise" / "20260512_Lebenslauf & Nachweise_Stefan Maier.pdf"
+PDF_PATH = ROOT / "Business Development" / "resources" / "credentials" / "20260512_Lebenslauf & Nachweise_Stefan Maier.pdf"
 OUT_DIR = Path(__file__).resolve().parent
 THUMB_DIR = OUT_DIR / "thumbs"
 FULL_DIR = OUT_DIR / "full"
