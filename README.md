@@ -36,6 +36,7 @@
 - [x] Cost-of-Inaction-Streifen, Datenfluss-Grafik, Fachpresse-Platzhalter (2026-05-13)
 - [x] **Self-Hosted Fonts** (Montserrat + Open Sans lokal, kein Google-Fonts-Request) (2026-05-13)
 - [x] `ausbildung.html`: Entscheider-/Geschäftsführungs-Zielgruppe + Förderhinweis ergänzt — Ausrichtung auf DGO-FA "Digitale Transformation und Innovation" (digitale Optimierung + Fördermöglichkeiten) (2026-05-24)
+- [x] `ausbildung.html`: als **Basis-Kurs** positioniert (Entwicklungsumgebung als Fundament, Aufbaustufen folgen) + Durchführung **ab 4 Teilnehmern** (Gruppe-Eckdaten + Pilot-Badge) (2026-05-24)
 
 ## Optional (noch offen)
 
