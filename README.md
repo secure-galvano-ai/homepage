@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-05-14
+**Stand:** 2026-05-24
 
 ---
 
@@ -35,6 +35,7 @@
 - [x] Trust-Bar mit echten Logos (aws Deep Tech + TRUSTIFAI by TÜV AUSTRIA) (2026-05-13)
 - [x] Cost-of-Inaction-Streifen, Datenfluss-Grafik, Fachpresse-Platzhalter (2026-05-13)
 - [x] **Self-Hosted Fonts** (Montserrat + Open Sans lokal, kein Google-Fonts-Request) (2026-05-13)
+- [x] `ausbildung.html`: Entscheider-/Geschäftsführungs-Zielgruppe + Förderhinweis ergänzt — Ausrichtung auf DGO-FA "Digitale Transformation und Innovation" (digitale Optimierung + Fördermöglichkeiten) (2026-05-24)
 
 ## Optional (noch offen)
 
