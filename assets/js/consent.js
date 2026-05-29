@@ -42,6 +42,32 @@
                 });
             });
         });
+
+        // Leistungs-Kacheln + sonstige markierte Funnel-Elemente (data-funnel)
+        document.querySelectorAll('[data-funnel]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                if (window.clarity) window.clarity('event', el.getAttribute('data-funnel'));
+            });
+        });
+
+        wireScrollDepth();
+    }
+
+    // Scroll-Tiefe als Clarity-Events (25/50/75/100 %), einmal pro Marke
+    function wireScrollDepth() {
+        var marks = [25, 50, 75, 100], hit = {};
+        window.addEventListener('scroll', function () {
+            var doc = document.documentElement;
+            var scrollable = doc.scrollHeight - window.innerHeight;
+            if (scrollable <= 0) return;
+            var pct = (doc.scrollTop / scrollable) * 100;
+            marks.forEach(function (m) {
+                if (!hit[m] && pct >= m) {
+                    hit[m] = true;
+                    if (window.clarity) window.clarity('event', 'scroll-' + m);
+                }
+            });
+        }, { passive: true });
     }
 
     // --- Consent-Banner ---

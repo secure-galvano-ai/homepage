@@ -39,6 +39,15 @@
 - [x] `ausbildung.html`: als **Basis-Kurs** positioniert (Entwicklungsumgebung als Fundament, Aufbaustufen folgen) + Durchführung **ab 4 Teilnehmern** (Gruppe-Eckdaten + Pilot-Badge) (2026-05-24)
 - [x] `index.html`: schlanke "Zweiter Weg"-Brücke nach der Trust-Bar — holt proaktive "Digitalisierung-vorantreiben"-Betriebe ab (ohne akuten Schmerz) und leitet zu Praxiskurs + Folgewege, Hero bleibt schmerz-first (2026-05-24)
 - [x] `index.html`: "Zweiter Weg"-Streifen zur Sektion **Datendienstleistungen** (`#datendienste`) ausgebaut — "Data Scientist auf Zeit"-On-Ramp für Betriebe ohne strukturierte Datenbasis, mit "Auf Anfrage"-Badge + Mailto-Anfrage (kein neues Backend, reuse Bookings + mailto-Pattern) (2026-05-29)
+- [x] **Customer-Journey-Reorder (evidenzbasiert, B2B-CRO-Recherche)** (2026-05-29):
+  - Neue **3-Kachel-Leistungsübersicht** (`#leistungen`) direkt nach Trust-Bar — Self-Select-Onramp (Diagnose dominant, Daten/Praxiskurs dezent); Hero bleibt schmerz-first
+  - Hero-Sekundär-Button → "Leistungen ansehen ↓" (`#leistungen`, kein Duplikat zu Diagnose-Kachel, Scroll-Cue)
+  - **PAS-Reihenfolge:** 3 Symptome (Agitate) jetzt VOR Cost-of-Inaction
+  - **Datendienste-Vollblock** von oben nach unten (hinter Angebot) — konkurriert nicht mehr früh mit Haupt-Conversion
+  - **Mid-Scroll-CTA** ("Verfügbarkeit anfragen") an der Pull-Quote
+  - Versteckter **Kundenstimmen-/Referenz-Slot** in der Pull-Quote-Sektion (auskommentiert, aktivieren nach Pilotkunden-Freigabe)
+  - **Sticky-Mobil-CTA** (`#stickyCta`, erscheint ab 700px Scroll, nur ≤760px; WhatsApp-FAB weicht aus)
+  - **Funnel-Tracking** in `consent.js`: Kachel-Klicks (`data-funnel`) + Mid-Scroll-CTA + Scroll-Tiefe (25/50/75/100 %) als Clarity-Events (nur nach Consent)
 
 ## Optional (noch offen)
 
