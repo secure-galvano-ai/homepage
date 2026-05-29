@@ -38,6 +38,7 @@
 - [x] `ausbildung.html`: Entscheider-/Geschäftsführungs-Zielgruppe + Förderhinweis ergänzt — Ausrichtung auf DGO-FA "Digitale Transformation und Innovation" (digitale Optimierung + Fördermöglichkeiten) (2026-05-24)
 - [x] `ausbildung.html`: als **Basis-Kurs** positioniert (Entwicklungsumgebung als Fundament, Aufbaustufen folgen) + Durchführung **ab 4 Teilnehmern** (Gruppe-Eckdaten + Pilot-Badge) (2026-05-24)
 - [x] `index.html`: schlanke "Zweiter Weg"-Brücke nach der Trust-Bar — holt proaktive "Digitalisierung-vorantreiben"-Betriebe ab (ohne akuten Schmerz) und leitet zu Praxiskurs + Folgewege, Hero bleibt schmerz-first (2026-05-24)
+- [x] `index.html`: "Zweiter Weg"-Streifen zur Sektion **Datendienstleistungen** (`#datendienste`) ausgebaut — "Data Scientist auf Zeit"-On-Ramp für Betriebe ohne strukturierte Datenbasis, mit "Auf Anfrage"-Badge + Mailto-Anfrage (kein neues Backend, reuse Bookings + mailto-Pattern) (2026-05-29)
 
 ## Optional (noch offen)
 
