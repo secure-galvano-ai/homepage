@@ -307,6 +307,8 @@
             transition: transform 0.4s;
         }
         .card:hover .card-thumb img { transform: scale(1.03); }
+        /* TÜV-Inspektionsbericht ist Querformat — links ausrichten, damit das Logo sichtbar bleibt */
+        .card[data-slug="19-tuev-inspektionsbericht"] .card-thumb img { object-position: top left; }
         .card-body {
             padding: 16px 18px 18px;
             flex: 1;
@@ -615,7 +617,7 @@
             </div>
             <div class="focus-item">
                 <h4>Methodik vor Magie</h4>
-                <p>Reproduzierbare Modelle, erklärbare Entscheidungen. Modellprüfung bei TÜV AUSTRIA Trusted AI eingereicht (in Prüfung).</p>
+                <p>Reproduzierbare Modelle, erklärbare Entscheidungen. Modellprüfung durch TÜV AUSTRIA Trusted AI (TRUSTIFAI) erfolgreich abgeschlossen.</p>
             </div>
             <div class="focus-item">
                 <h4>Nachhaltigkeit vor Wachstum</h4>
@@ -633,6 +635,15 @@
             <h2>Belegte Stationen aus über 20 Jahren Laufbahn</h2>
             <p>Vom Lehrbrief Oberflächentechniker über die Meisterprüfung bis zum Master of Science Umweltphysik (Schwerpunkt Materialphysik, mit Auszeichnung) — die formellen Diplome, Lehrbriefe und Zertifikate als Originale. Klick auf eine Karte öffnet das Dokument in voller Auflösung.</p>
         </div>
+
+        <!-- MODELLPRÜFUNG -->
+        <section class="category">
+            <div class="category-header">
+                <h3>Modellprüfung &amp; Trusted AI</h3>
+                <p>Inspektion des Anomalieerkennungs-Systems nach dem TÜV AUSTRIA AI Inspection Framework (TRUSTIFAI) — mit Auditgespräch und Live-Demonstration des Modells. Auszug aus dem Management Summary des Inspektionsberichts.</p>
+            </div>
+            <div class="grid" data-category="modellpruefung"></div>
+        </section>
 
         <!-- AKADEMISCH -->
         <section class="category">
@@ -731,6 +742,8 @@
 
 <script>
     const CERTIFICATES = [
+        { slug: "19-tuev-inspektionsbericht", title: "Inspektionsbericht — Management Summary", subtitle: "TÜV AUSTRIA TRUSTIFAI — ML-gestützte Anomalieerkennung an stromzuführenden Elementen galvanischer Prozesse", year: "2026", category: "modellpruefung" },
+
         { slug: "02-msc-bescheid", title: "Master of Science — Verleihungsurkunde", subtitle: "Universität Wien", year: "2016", category: "akademisch" },
         { slug: "03-msc-abschluss", title: "Master Abschlusszeugnis", subtitle: "Universität Wien — Notenschnitt 1,1, mit Auszeichnung bestanden", year: "2016", category: "akademisch" },
         { slug: "04-msc-masterarbeit", title: "Beurteilung Masterarbeit", subtitle: "High Pressure Torsion auf CoCrFeMnNi High-Entropy-Alloy", year: "2016", category: "akademisch" },
