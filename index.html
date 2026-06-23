@@ -1908,6 +1908,28 @@
     </div>
 </section>
 
+<!-- ===== PITCH-VIDEO ===== -->
+<section style="padding:48px 0;background:#fff;">
+    <div class="container fade-up" style="max-width:860px;text-align:center;">
+        <p class="section-label">In 90 Sekunden</p>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--dunkelblau);margin-bottom:22px;">Warum Galvaniken auf Daten statt Bauchgefühl setzen</h2>
+        <!-- VIDEO-EINBINDUNG (TODO Stefan): Pitch-Video bei Vimeo/YouTube hochladen (privacy-mode) und das Platzhalter-div
+             unten durch ein iframe ersetzen, z.B.:
+             <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Pitch-Video" allowfullscreen
+                     style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+             WICHTIG: KEINE Kundendaten im Video zeigen. Solange kein Video da ist, bleibt der Platzhalter sichtbar. -->
+        <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#1B2A4A,#2B5EA7);box-shadow:0 14px 40px rgba(27,42,74,0.22);display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:#fff;">
+                <div style="width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.04em;">Pitch-Video folgt in Kürze</div>
+                <div style="font-size:0.85rem;opacity:0.8;margin-top:4px;">16:9 · ca. 90 Sekunden</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== TRUST BAR ===== -->
 <div class="trust-bar">
     <div class="container">
@@ -1940,50 +1962,79 @@
     </div>
 </div>
 
-<!-- ===== LEISTUNGS-ÜBERSICHT — 3 Wege (Self-Select Onramp) ===== -->
+<!-- ===== PREIS-LEITER — Drei Stufen (Good-Better-Best) ===== -->
 <section id="leistungen" style="padding:56px 0 48px;background:var(--hellgrau);border-bottom:1px solid var(--silber);">
     <div class="container">
-        <div class="fade-up" style="text-align:center;max-width:640px;margin:0 auto 32px;">
-            <p class="section-label">Wo stehen Sie gerade?</p>
-            <h2 style="font-size:clamp(1.4rem,2.6vw,2rem);color:var(--dunkelblau);">Drei Wege — wählen Sie Ihren Einstieg</h2>
+        <div class="fade-up" style="text-align:center;max-width:660px;margin:0 auto 30px;">
+            <p class="section-label">Wo wollen Sie einsteigen?</p>
+            <h2 style="font-size:clamp(1.4rem,2.6vw,2rem);color:var(--dunkelblau);">Drei Stufen — vom Vor-Ort-Tag bis zur Voll-Diagnose</h2>
+            <p style="color:var(--text-light);font-size:0.95rem;margin-top:10px;line-height:1.6;">Jede Stufe ist auf die nächste anrechenbar. Sichere Zahlung via Stripe, Rechnung mit USt.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:20px;max-width:1000px;margin:0 auto;align-items:stretch;">
 
-            <!-- Tile 1: Diagnose (dominant) -->
-            <a href="#angebot" data-funnel="tile-diagnose" class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:2px solid var(--schild-blau);border-radius:16px;padding:28px 26px 24px;text-decoration:none;color:inherit;box-shadow:0 8px 28px rgba(43,94,167,0.12);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 14px 36px rgba(43,94,167,0.18)';" onmouseout="this.style.transform='';this.style.boxShadow='0 8px 28px rgba(43,94,167,0.12)';">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:rgba(43,94,167,0.1);color:var(--schild-blau);margin-bottom:16px;">Häufigster Einstieg</span>
-                <div style="width:46px;height:46px;border-radius:12px;background:var(--hellgrau);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                </div>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:8px;">KI-Diagnose</h3>
-                <p style="color:var(--text-light);font-size:0.92rem;line-height:1.55;margin-bottom:14px;flex:1;">Akutes Qualitätsproblem in 8 Wochen klären — mit den Daten, die Sie schon haben.</p>
-                <span style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.85rem;color:var(--dunkelblau);margin-bottom:6px;">8 Wochen · 9.500 €</span>
-                <span style="font-family:'Montserrat',Arial,sans-serif;font-weight:600;font-size:0.9rem;color:var(--schild-blau);">Diagnose ansehen →</span>
-            </a>
+        <!-- STRIPE-WIRING (TODO Stefan): jede Buchen-Schaltflaeche ist fuer einen Stripe Payment Link vorbereitet.
+             1) In Stripe je Produkt einen Payment Link anlegen: Vor-Ort-Tag 1.200 EUR, Fokus-Anzahlung 900 EUR, Audit-Anzahlung 1.500 EUR.
+             2) Im Link "Promotion codes" aktivieren -> Galvano-Forum-Karte traegt Code (z.B. GALVANOFORUM) -> 500 EUR auf den Vor-Ort-Tag.
+             3) buy.stripe.com/... URL jeweils unten in href einsetzen (ersetzt den interim Booking/mailto-Fallback).
+             Alternativ inline-Checkout: <stripe-buy-button buy-button-id="..." publishable-key="pk_live_..."></stripe-buy-button>. -->
 
-            <!-- Tile 2: Datendienste -->
-            <a href="#datendienste" data-funnel="tile-datendienste" class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:16px;padding:28px 26px 24px;text-decoration:none;color:inherit;transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(27,42,74,0.1)';this.style.borderColor='var(--schild-blau)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--silber)';">
-                <div style="width:46px;height:46px;border-radius:12px;background:var(--hellgrau);display:flex;align-items:center;justify-content:center;margin-bottom:16px;margin-top:34px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg>
-                </div>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:8px;">Daten auf Zeit</h3>
-                <p style="color:var(--text-light);font-size:0.92rem;line-height:1.55;margin-bottom:14px;flex:1;">Noch keine saubere Datenbasis? Ich baue sie mit Ihnen auf — Data Scientist auf Zeit.</p>
-                <span style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-light);margin-bottom:6px;">Auf Anfrage</span>
-                <span style="font-family:'Montserrat',Arial,sans-serif;font-weight:600;font-size:0.9rem;color:var(--schild-blau);">Mehr erfahren →</span>
-            </a>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1040px;margin:0 auto;align-items:stretch;">
 
-            <!-- Tile 3: Praxiskurs -->
-            <a href="ausbildung.html" data-funnel="tile-praxiskurs" class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:16px;padding:28px 26px 24px;text-decoration:none;color:inherit;transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(27,42,74,0.1)';this.style.borderColor='var(--schild-blau)';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--silber)';">
-                <div style="width:46px;height:46px;border-radius:12px;background:var(--hellgrau);display:flex;align-items:center;justify-content:center;margin-bottom:16px;margin-top:34px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
-                </div>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:8px;">Praxiskurs</h3>
-                <p style="color:var(--text-light);font-size:0.92rem;line-height:1.55;margin-bottom:14px;flex:1;">Ihr Team lernt, Sensordaten selbst auszuwerten — ohne Programmierkenntnisse.</p>
-                <span style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-light);margin-bottom:6px;">Für Ihr Team</span>
-                <span style="font-family:'Montserrat',Arial,sans-serif;font-weight:600;font-size:0.9rem;color:var(--schild-blau);">Kurs ansehen →</span>
-            </a>
+            <!-- Stufe 1: Vor-Ort-Tag -->
+            <div class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:16px;padding:28px 26px 24px;">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:var(--hellgrau);color:var(--text-light);margin-bottom:16px;">Einstieg</span>
+                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:4px;">Vor-Ort-Tag</h3>
+                <p style="color:var(--text-light);font-size:0.86rem;margin-bottom:14px;">KI-Potenzialbewertung · 1 Tag bei Ihnen</p>
+                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--dunkelblau);line-height:1;">1.200 €</div>
+                <p style="font-size:0.82rem;color:var(--logo-gruen);font-weight:700;margin:6px 0 16px;">Galvano-Forum-Karte → 500 €</p>
+                <ul style="list-style:none;padding:0;margin:0 0 20px;flex:1;font-size:0.9rem;line-height:1.5;color:var(--text-body);">
+                    <li style="margin-bottom:8px;">✓ Anlage gemeinsam ansehen</li>
+                    <li style="margin-bottom:8px;">✓ Verdikt: lohnt sich KI bei Ihnen?</li>
+                    <li style="margin-bottom:8px;">✓ Größter Hebel benannt</li>
+                    <li style="color:var(--text-light);">↳ voll anrechenbar</li>
+                </ul>
+                <!-- TODO Stripe Payment Link (1.200 EUR, Promo -> 500 EUR) — interim: Booking -->
+                <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" data-funnel="pay-vorort" style="display:block;text-align:center;background:#fff;color:var(--schild-blau);border:2px solid var(--schild-blau);padding:12px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.92rem;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='var(--schild-blau)';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='var(--schild-blau)';">Vor-Ort-Tag buchen →</a>
+            </div>
+
+            <!-- Stufe 2: Fokus-Analyse (Meistgewählt) -->
+            <div class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:2px solid var(--schild-blau);border-radius:16px;padding:28px 26px 24px;box-shadow:0 8px 28px rgba(43,94,167,0.14);position:relative;">
+                <span style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:5px 14px;border-radius:50px;background:var(--schild-blau);color:#fff;white-space:nowrap;">★ Meistgewählt</span>
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:rgba(43,94,167,0.1);color:var(--schild-blau);margin-bottom:16px;margin-top:8px;">Fokus</span>
+                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:4px;">Fokus-Analyse</h3>
+                <p style="color:var(--text-light);font-size:0.86rem;margin-bottom:14px;">1 Prozessbereich · 1–2 Wochen</p>
+                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--dunkelblau);line-height:1;">3.500 €</div>
+                <p style="font-size:0.82rem;color:var(--text-light);font-weight:600;margin:6px 0 16px;">Anzahlung 900 € · Rest per Rechnung</p>
+                <ul style="list-style:none;padding:0;margin:0 0 20px;flex:1;font-size:0.9rem;line-height:1.5;color:var(--text-body);">
+                    <li style="margin-bottom:8px;">✓ Echte Datenauswertung, 1 Bereich</li>
+                    <li style="margin-bottom:8px;">✓ ROI-Schätzung</li>
+                    <li style="margin-bottom:8px;">✓ Go/No-Go fürs Audit</li>
+                    <li style="color:var(--text-light);">↳ anrechenbar aufs Audit</li>
+                </ul>
+                <!-- TODO Stripe Payment Link (Anzahlung 900 EUR) — interim: mailto -->
+                <a href="mailto:smaier@rvh.at?subject=Fokus-Analyse%20Slot%20sichern&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20eine%20Fokus-Analyse%20(1%20Prozessbereich)%20buchen.%0A%0AUnternehmen%3A%20%0AProzessbereich%3A%20%0A%0AVielen%20Dank%21" data-funnel="pay-fokus" style="display:block;text-align:center;background:var(--schild-blau);color:#fff;padding:13px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.92rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--dunkelblau)';" onmouseout="this.style.background='var(--schild-blau)';">Slot sichern · Anzahlung 900 €</a>
+            </div>
+
+            <!-- Stufe 3: Standort-Audit -->
+            <div class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:16px;padding:28px 26px 24px;">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);margin-bottom:16px;">Das volle Bild</span>
+                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:4px;">Standort-Audit</h3>
+                <p style="color:var(--text-light);font-size:0.86rem;margin-bottom:14px;">Ganzer Standort · 8 Wochen</p>
+                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--dunkelblau);line-height:1;">9.500 €</div>
+                <p style="font-size:0.82rem;color:var(--text-light);font-weight:600;margin:6px 0 16px;">Anzahlung 1.500 € · Rest per Rechnung</p>
+                <ul style="list-style:none;padding:0;margin:0 0 20px;flex:1;font-size:0.9rem;line-height:1.5;color:var(--text-body);">
+                    <li style="margin-bottom:8px;">✓ Alle Prozessgruppen</li>
+                    <li style="margin-bottom:8px;">✓ Bericht + Klick-Demo</li>
+                    <li style="margin-bottom:8px;">✓ Roadmap → Pilot/Lizenz</li>
+                    <li style="color:var(--text-light);">↳ TÜV-geprüftes Verfahren</li>
+                </ul>
+                <a href="#angebot" data-funnel="pay-audit" style="display:block;text-align:center;background:var(--dunkelblau);color:#fff;padding:13px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.92rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--schild-blau)';" onmouseout="this.style.background='var(--dunkelblau)';">Details ansehen →</a>
+            </div>
 
         </div>
+
+        <p class="fade-up" style="text-align:center;max-width:760px;margin:24px auto 0;font-size:0.9rem;color:var(--text-light);line-height:1.6;">
+            Noch keine saubere Datenbasis? → <a href="#datendienste" style="color:var(--schild-blau);font-weight:600;">Daten auf Zeit</a> · Team selbst befähigen? → <a href="#ausbildung" style="color:var(--schild-blau);font-weight:600;">In-House-Coaching</a>
+        </p>
     </div>
 </section>
 
@@ -1993,7 +2044,7 @@
         <div class="section-header fade-up">
             <p class="section-label">Kennen Sie das?</p>
             <h2>Drei Symptome, die jeden erfahrenen Galvaniker an Grenzen bringen</h2>
-            <p><strong>Sie messen Ihre Qualität — steuern können Sie sie nicht.</strong> Kein Galvanik-Prozess folgt der Logik „gleiche Einstellung = gleiches Ergebnis": Sie halten Temperatur und Konzentration stabil und hoffen, dass die Qualität stimmt. Bei 50 Parametern, die nichtlinear zusammenwirken, stößt jeder erfahrene Techniker an die Grenzen menschlicher Wahrnehmung — <strong>kein persönliches Versagen, sondern ein Datenproblem.</strong> Genau hier setzt die Diagnose an.</p>
+            <p><strong>Sie messen Ihre Qualität — steuern können Sie sie nicht.</strong> Bei 50 nichtlinear zusammenwirkenden Parametern ist das kein persönliches Versagen, sondern ein Datenproblem. Genau hier setzt die Diagnose an.</p>
         </div>
         <div class="services-grid">
             <div class="service-card fade-up">
@@ -2021,38 +2072,31 @@
     </div>
 </section>
 
-<!-- ===== COST OF INACTION — Preis-Anker schärfen ===== -->
-<div style="background:linear-gradient(135deg,#1B2A4A 0%,#2B5EA7 100%);padding:32px 0;color:#fff;">
-    <div class="container fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:980px;text-align:center;">
+<!-- ===== PROOF: Cost-Anker + Beispiel-Ergebnis (zusammengefuehrt) ===== -->
+<div style="background:linear-gradient(135deg,#1B2A4A 0%,#2B5EA7 100%);padding:30px 0;color:#fff;">
+    <div class="container fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:980px;text-align:center;">
         <div>
             <div style="font-size:1.7rem;font-weight:700;font-family:'Montserrat',Arial,sans-serif;line-height:1.1;margin-bottom:6px;">5-stellig</div>
-            <div style="font-size:0.88rem;opacity:0.82;line-height:1.5;">Eine Reklamation aus der Galvanik</div>
+            <div style="font-size:0.88rem;opacity:0.82;line-height:1.5;">Eine Reklamation</div>
         </div>
         <div>
             <div style="font-size:1.7rem;font-weight:700;font-family:'Montserrat',Arial,sans-serif;line-height:1.1;margin-bottom:6px;">6-stellig</div>
             <div style="font-size:0.88rem;opacity:0.82;line-height:1.5;">Ein verlorener Hauptkunde</div>
         </div>
         <div>
-            <div style="font-size:1.7rem;font-weight:700;font-family:'Montserrat',Arial,sans-serif;line-height:1.1;margin-bottom:6px;color:var(--cyan-akzent);">9.500 €</div>
-            <div style="font-size:0.88rem;opacity:0.82;line-height:1.5;">Eine 8-Wochen-Diagnose</div>
+            <div style="font-size:1.7rem;font-weight:700;font-family:'Montserrat',Arial,sans-serif;line-height:1.1;margin-bottom:6px;color:var(--cyan-akzent);">ab 500 €</div>
+            <div style="font-size:0.88rem;opacity:0.82;line-height:1.5;">Ihr Einstieg (Vor-Ort-Tag)</div>
         </div>
     </div>
 </div>
 
-<!-- ===== PULL-QUOTE: So sieht das Ergebnis aus ===== -->
-<section style="padding:60px 0;background:#fff;">
+<section style="padding:48px 0;background:#fff;">
     <div class="container fade-up" style="max-width:820px;">
         <p style="text-align:center;font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.12em;font-size:0.78rem;color:#2B5EA7;text-transform:uppercase;margin-bottom:18px;">So konkret klingt das Ergebnis</p>
         <blockquote style="margin:0;padding:32px 36px;background:linear-gradient(135deg,#F4F6F9 0%,#E8F1FB 100%);border-left:5px solid #2B5EA7;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-size:1.18rem;line-height:1.55;color:#1B2A4A;font-style:italic;font-weight:500;">
             „Der Strom auf Gleichrichter 3 schwankt mittwochs ab 14 Uhr — das passt zu den Reklamationen aus den Vormittags-Chargen und zur Stromdichte-Hypothese bei Teilbeladung."
         </blockquote>
-        <p style="text-align:center;margin-top:22px;color:#1B2A4A;font-size:0.98rem;line-height:1.6;font-weight:600;">Konkret. Belegt. Umsetzbar.</p>
-        <p style="text-align:center;margin-top:8px;color:#64748b;font-size:0.92rem;line-height:1.6;max-width:620px;margin-left:auto;margin-right:auto;">Ihr Techniker bleibt am Hebel — die Auswertung liefert die Daten-Bestätigung für sein Bauchgefühl.</p>
-
-        <!-- Mid-Scroll-CTA (laut Recherche ~84% staerker als nur Footer-CTA) -->
-        <div class="fade-up" style="text-align:center;margin-top:34px;">
-            <a href="mailto:smaier@rvh.at?subject=Verf%C3%BCgbarkeit%20Diagnose-Projekt&amp;body=Hallo%20Stefan%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20einen%20freien%20Slot%20f%C3%BCr%20eine%208-Wochen-Diagnose.%0A%0AUnternehmen%3A%20%0AAnsprechpartner%3A%20%0AWunschstart%3A%20%0A%0AVielen%20Dank%21" data-funnel="midscroll-verfuegbarkeit" class="btn btn-primary">📅 Verfügbarkeit für eine Diagnose anfragen</a>
-        </div>
+        <p style="text-align:center;margin-top:18px;color:#1B2A4A;font-size:0.98rem;line-height:1.6;font-weight:600;">Konkret. Belegt. Umsetzbar. — Ihr Techniker bleibt am Hebel.</p>
 
         <!-- ===== KUNDENSTIMME / REFERENZ-SLOT — staerkster Trust-Hebel an dieser Stelle =====
              AKTIVIEREN: Kommentar-Marker (diese Zeile + Endezeile) entfernen, dann Zitat,
@@ -2084,23 +2128,47 @@
     </div>
 </section>
 
-<!-- ===== FACHPRESSE ===== -->
-<section id="fachpresse" style="padding:32px 0;background:#FFFFFF;">
-    <div class="container fade-up" style="max-width:880px;">
-        <p style="text-align:center;font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.12em;font-size:0.78rem;color:#2B5EA7;text-transform:uppercase;margin-bottom:18px;">Fachpresse</p>
-        <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center;padding:22px 28px;background:#F4F6F9;border:1px solid #E0E5EC;border-radius:12px;">
-            <!-- Magazin-Icon-Platzhalter (durch Cover-Thumbnail ersetzen sobald Heft erscheint) -->
-            <div style="width:64px;height:80px;border-radius:6px;background:linear-gradient(135deg,#2B5EA7 0%,#1B2A4A 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(27,42,74,0.18);">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12v16H4z"/><path d="M16 8h4v12h-4"/><line x1="7" y1="8" x2="13" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/><line x1="7" y1="16" x2="11" y2="16"/></svg>
+<!-- ===== VERÖFFENTLICHUNGEN ===== -->
+<section id="fachpresse" style="padding:36px 0;background:#FFFFFF;">
+    <div class="container fade-up" style="max-width:920px;">
+        <p style="text-align:center;font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.12em;font-size:0.78rem;color:#2B5EA7;text-transform:uppercase;margin-bottom:20px;">Veröffentlichungen · Eugen G. Leuze Verlag</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;">
+
+            <!-- Artikel 1: erschienen -->
+            <div style="display:flex;flex-direction:column;gap:14px;padding:24px 26px;background:#F4F6F9;border:1px solid #E0E5EC;border-radius:12px;">
+                <div style="display:flex;align-items:center;gap:16px;">
+                    <div style="width:52px;height:66px;border-radius:6px;background:linear-gradient(135deg,#2B5EA7 0%,#1B2A4A 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(27,42,74,0.18);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12v16H4z"/><path d="M16 8h4v12h-4"/><line x1="7" y1="8" x2="13" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
+                    </div>
+                    <div>
+                        <span style="display:inline-block;font-size:0.66rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--logo-gruen);">Erschienen</span>
+                        <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;color:#1B2A4A;font-size:1rem;line-height:1.3;">Vertrauenswürdige KI in der Galvanotechnik</div>
+                    </div>
+                </div>
+                <p style="color:#64748b;font-size:0.9rem;line-height:1.55;margin:0;flex:1;">Fachzeitschrift <em>Galvanotechnik</em> — KI-gestützte Anomalieerkennung, nachvollziehbar und prüfbar.</p>
+                <a href="docs/fachartikel_leuze_vertrauenswuerdige_ki.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#2B5EA7;color:#fff;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;align-self:flex-start;transition:background 0.2s;" onmouseover="this.style.background='#1B2A4A';" onmouseout="this.style.background='#2B5EA7';">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Fachartikel (PDF)
+                </a>
             </div>
-            <div style="flex:1 1 320px;min-width:240px;">
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;color:#1B2A4A;font-size:1.05rem;letter-spacing:-0.01em;">Fachartikel in <em style="font-style:italic;">Galvanotechnik</em></div>
-                <p style="color:#64748b;font-size:0.92rem;line-height:1.55;margin:6px 0 0;">Eugen G. Leuze Verlag — Fachartikel zu vertrauenswürdiger KI und KI-gestützter Anomalieerkennung in der Galvanotechnik. <strong style="color:#2B5EA7;">Jetzt erschienen.</strong></p>
+
+            <!-- Artikel 2: in Vorbereitung -->
+            <div style="display:flex;flex-direction:column;gap:14px;padding:24px 26px;background:#F4F6F9;border:1px dashed #B9C2CE;border-radius:12px;">
+                <div style="display:flex;align-items:center;gap:16px;">
+                    <div style="width:52px;height:66px;border-radius:6px;background:#fff;border:1px solid #E0E5EC;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12v16H4z"/><path d="M16 8h4v12h-4"/><line x1="7" y1="8" x2="13" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
+                    </div>
+                    <div>
+                        <span style="display:inline-block;font-size:0.66rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--text-light);">In Vorbereitung</span>
+                        <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;color:#1B2A4A;font-size:1rem;line-height:1.3;">Lehrlinge mit KI in der Datenauswertung schulen</div>
+                    </div>
+                </div>
+                <p style="color:#64748b;font-size:0.9rem;line-height:1.55;margin:0;flex:1;">Wie Fachkräfte und Lehrlinge mit modernen KI-Werkzeugen lernen, Prozessdaten selbst auszuwerten — Praxisbericht, demnächst in <em>Galvanotechnik</em>.</p>
+                <a href="mailto:smaier@rvh.at?subject=Benachrichtigung%3A%20Leuze-Fachartikel%20KI-Schulung&amp;body=Hallo%20Stefan%2C%0A%0Abitte%20informieren%20Sie%20mich%2C%20wenn%20der%20Fachartikel%20zur%20KI-gest%C3%BCtzten%20Schulung%20erscheint.%0A%0AVielen%20Dank%21" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#fff;color:#2B5EA7;border:1px solid #2B5EA7;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;align-self:flex-start;transition:all 0.2s;" onmouseover="this.style.background='#2B5EA7';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#2B5EA7';">
+                    Bei Erscheinen benachrichtigen
+                </a>
             </div>
-            <a href="docs/fachartikel_leuze_vertrauenswuerdige_ki.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#2B5EA7;color:#fff;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.background='#1B2A4A';" onmouseout="this.style.background='#2B5EA7';">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Fachartikel (PDF)
-            </a>
+
         </div>
     </div>
 </section>
@@ -2109,138 +2177,137 @@
 <section class="pakete" id="angebot">
     <div class="container">
         <div class="section-header fade-up">
-            <p class="section-label">Die Diagnose</p>
-            <h2>Das Angebot</h2>
-            <p>Wenn im Tagesgeschäft die Zeit für tiefe Ursachenanalyse fehlt — Sie bekommen in 8 Wochen die Antworten auf Ihre teuersten Qualitätsprobleme. <strong>Schwarz auf weiß — und gehört vom ersten Tag Ihnen.</strong></p>
+            <p class="section-label">Stufe 3 · Das volle Bild</p>
+            <h2>Standort-Audit im Detail</h2>
+            <p>8 Wochen, ganzer Standort, Festpreis — <strong>schwarz auf weiß, und vom ersten Tag Ihnen.</strong></p>
         </div>
 
-        <div class="pakete-grid" style="grid-template-columns:repeat(auto-fit,minmax(340px,1fr));max-width:1000px;margin:0 auto;">
+        <style>
+        .audit-acc{max-width:880px;margin:14px auto 0;background:#fff;border:1px solid #E0E5EC;border-radius:10px;overflow:hidden;}
+        .audit-acc summary{cursor:pointer;list-style:none;padding:16px 22px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;color:#1B2A4A;font-size:1rem;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+        .audit-acc summary::-webkit-details-marker{display:none;}
+        .audit-acc summary::after{content:'+';color:#2B5EA7;font-size:1.5rem;font-weight:400;line-height:1;}
+        .audit-acc[open] summary::after{content:'\2212';}
+        .audit-acc-body{padding:4px 22px 22px;}
+        </style>
 
-            <div class="paket-card fade-up">
-                <span class="paket-status verfuegbar">Phase 1 · Wochen 1-4</span>
-                <h3>Verstehen</h3>
-                <p class="paket-tagline">Anlage gemeinsam betrachten, Daten konsolidieren, Probleme priorisieren.</p>
-                <ul class="paket-list">
-                    <li>Vor-Ort-Termin — ich verstehe Ihre Anlage am ersten Tag</li>
-                    <li>Datenquellen aus dem Bestand: Sensorik, Labor, Reklamationen, Excel/SCADA</li>
-                    <li>Top 2 Qualitätsprobleme priorisiert — fokussiert auf das, was am meisten Geld kostet</li>
-                </ul>
-            </div>
-
-            <div class="paket-card fade-up">
-                <span class="paket-status verfuegbar">Phase 2 · Wochen 5-8</span>
-                <h3>Auswerten</h3>
-                <p class="paket-tagline">Auswertung auf abgeschotteter Hardware, Ursachenanalyse, Abschluss bei Ihnen vor Ort.</p>
-                <ul class="paket-list">
-                    <li>Auswertung auf abgeschotteter Hardware — Löschung auf Wunsch</li>
-                    <li>Strukturierte Ursachenanalyse — Wochen statt Monate bis zur Wurzel</li>
-                    <li>Abschluss-Präsentation bei Ihnen vor Ort — Übergabe von Bericht, Foliensatz und Klick-Demo</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <!-- Lieferleistung -->
-        <div class="fade-up" style="max-width:880px;margin:48px auto 0;padding:28px 32px;background:#F4F6F9;border-radius:14px;border-left:4px solid #2B5EA7;">
-            <h3 style="margin:0 0 16px;font-size:1.25rem;">Was Sie am Ende in der Hand haben</h3>
-            <ol style="padding-left:22px;line-height:1.75;margin:0;font-size:0.98rem;">
-                <li style="margin-bottom:12px;"><strong>Diagnose-Bericht</strong> — Hauptursachen, klare Handlungsempfehlungen, in Ihrer Sprache. Ihr Techniker weiß am ersten Tag, woran er schrauben soll.</li>
-                <li style="margin-bottom:12px;"><strong>Management-Foliensatz</strong> — die Antwort, wenn Beirat, Eigentümer oder Hauptkunde fragt: „Was tut ihr gegen die Reklamationen?" <a href="mailto:smaier@rvh.at?subject=Anfrage%3A%20Beispiel-Foliensatz%20Diagnose&amp;body=Hallo%20Stefan%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20einen%20verfremdeten%20Beispiel-Foliensatz%20aus%20einem%20realen%20Diagnose-Projekt.%0A%0AUnternehmen%3A%20%0AAnsprechpartner%3A%20%0A%0AVielen%20Dank%21" style="color:#2B5EA7;font-weight:600;text-decoration:underline;">✉ Beispiel anfordern</a></li>
-                <li><strong>KI-Klick-Demo mit Ihren Daten</strong> — Sie sehen das Ergebnis selbst durchklicken und entscheiden, ob eine Live-Auswertung in einem Folgeprojekt für Sie sinnvoll ist. <a href="#videos" style="color:#2B5EA7;font-weight:600;text-decoration:underline;">▶ Videos ansehen</a></li>
-            </ol>
-            <p style="margin:18px 0 0;color:#6B7380;font-size:0.92rem;"><strong>Dazu:</strong> Abschluss-Präsentation bei Ihnen vor Ort.</p>
-        </div>
-
-        <!-- Preis-Block -->
-        <div class="fade-up" style="text-align:center;max-width:880px;margin:32px auto 0;padding:40px 28px;background:linear-gradient(135deg,#1B2A4A,#2B5EA7);border-radius:16px;color:#fff;">
+        <!-- Preis-Block zuerst (die Conversion) -->
+        <div class="fade-up" style="text-align:center;max-width:880px;margin:0 auto;padding:40px 28px;background:linear-gradient(135deg,#1B2A4A,#2B5EA7);border-radius:16px;color:#fff;">
             <div style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.14em;opacity:0.88;margin-bottom:10px;">Festpreis · alles inklusive</div>
             <div style="font-size:2.6rem;font-weight:700;margin-bottom:12px;line-height:1.1;">9.500 € netto</div>
-            <p style="font-size:0.98rem;opacity:0.92;max-width:560px;margin:0 auto 18px;line-height:1.6;">Vor-Ort-Termine, Auswertung, Bericht, Klick-Demo, Abschluss-Präsentation. Anreise im 250-km-Radius um Bregenz inklusive (darüber + 1 €/km auf den Netto-Preis).</p>
-            <p style="font-size:0.9rem;opacity:0.82;max-width:560px;margin:0 auto 18px;line-height:1.55;letter-spacing:0.01em;">Der Festpreis gilt für die abgeschlossene Diagnose. Darauf aufbauende Projekte — Live-Auswertung in der Produktion, Validierung gegen Qualitätsdaten, Integration — werden separat und individuell nach Umfang kalkuliert.</p>
-            <p style="font-size:0.88rem;opacity:0.82;max-width:560px;margin:0 auto 22px;line-height:1.55;letter-spacing:0.02em;">NDA vor Datenübergabe · DSGVO-konforme Löschung auf Wunsch · Verarbeitung auf abgeschotteter Hardware</p>
-
-            <!-- Verfügbarkeits-Anfrage -->
-            <a href="mailto:smaier@rvh.at?subject=Verf%C3%BCgbarkeit%20Diagnose-Projekt&amp;body=Hallo%20Stefan%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20einen%20freien%20Slot%20f%C3%BCr%20eine%208-Wochen-Diagnose.%0A%0AUnternehmen%3A%20%0AAnsprechpartner%3A%20%0AWunschstart%3A%20%0A%0AVielen%20Dank%21" style="display:inline-block;font-size:0.85rem;color:rgba(255,255,255,0.88);text-decoration:underline;text-decoration-color:rgba(255,255,255,0.35);text-underline-offset:3px;margin-bottom:24px;letter-spacing:0.02em;transition:color 0.2s;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,0.88)';">📅 Verfügbarkeit anfragen — aktuell freie Slots auf Anfrage</a>
-
+            <p style="font-size:0.98rem;opacity:0.92;max-width:560px;margin:0 auto 16px;line-height:1.6;">Vor-Ort-Termine, Auswertung, Bericht, Klick-Demo, Abschluss-Präsentation. Anreise im 250-km-Radius um Bregenz inklusive (darüber + 1 €/km).</p>
+            <p style="font-size:0.86rem;opacity:0.8;max-width:560px;margin:0 auto 22px;line-height:1.55;">NDA vor Datenübergabe · DSGVO-konforme Löschung auf Wunsch · Anzahlung 1.500 €, Rest per Rechnung</p>
             <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
-                <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:#1B2A4A;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(0,0,0,0.22)';" onmouseout="this.style.transform='';this.style.boxShadow='';">Erstgespräch buchen</a>
+                <!-- TODO Stripe Payment Link (Audit-Anzahlung 1.500 EUR) — interim: mailto -->
+                <a href="mailto:smaier@rvh.at?subject=Standort-Audit%20Slot%20sichern%20(Anzahlung)&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20einen%20Slot%20f%C3%BCr%20das%208-Wochen-Standort-Audit%20sichern%20(Anzahlung%201.500%20%E2%82%AC%2C%20Rest%20per%20Rechnung).%0A%0AUnternehmen%3A%20%0AWunschstart%3A%20%0A%0AVielen%20Dank%21" style="display:inline-block;background:#fff;color:#1B2A4A;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(0,0,0,0.22)';" onmouseout="this.style.transform='';this.style.boxShadow='';">Slot sichern · Anzahlung 1.500 €</a>
+                <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.6);padding:14px 32px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';" onmouseout="this.style.background='transparent';">Erst Erstgespräch</a>
             </div>
         </div>
 
-        <!-- Schutz-Block: Was wenn Ursache komplex -->
-        <div class="fade-up" style="max-width:880px;margin:28px auto 0;padding:24px 28px;background:#F4F6F9;border-left:4px solid #3D8C3E;border-radius:8px;">
-            <h3 style="font-size:1.1rem;margin:0 0 12px;color:#1B2A4A;">Sie verlassen die Diagnose immer mit Klarheit</h3>
-            <p style="margin:0 0 12px;color:#1B2A4A;line-height:1.6;font-size:0.95rem;">Auch wenn eine Ursache nicht eindeutig zu klären ist — Sie bekommen in jedem Fall:</p>
-            <ul style="margin:0;padding-left:22px;line-height:1.7;color:#1B2A4A;font-size:0.93rem;">
-                <li>eine strukturierte Liste, <strong>welche Hypothesen die Daten stützen</strong> — und welche sich ausschließen lassen</li>
-                <li>einen konkreten <strong>Maßnahmenplan für die nächste Analyse-Stufe</strong>: welche Zusatzmessung, welche Datenquelle die offene Frage klärt</li>
-                <li>die <strong>Klick-Demo mit Ihren Daten</strong>, an der Sie die Ergebnisse interaktiv durchgehen</li>
-                <li>auf Wunsch: <strong>Begleitung der nächsten Analyse-Stufe</strong> — gemeinsam strukturiert, ohne neues Pitch-Gespräch</li>
-            </ul>
-        </div>
-
-        <!-- 3-Schritt-Ablauf -->
-        <div class="fade-up" style="max-width:880px;margin:32px auto 0;">
-            <p style="text-align:center;font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.12em;font-size:0.78rem;color:#2B5EA7;text-transform:uppercase;margin-bottom:18px;">So geht's nach dem Klick weiter</p>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;">
-                <div style="background:#fff;border:1px solid #E0E5EC;border-radius:10px;padding:18px 20px;text-align:left;position:relative;">
-                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#2B5EA7;color:#fff;font-weight:700;font-size:0.85rem;">1</span><strong style="font-size:0.95rem;color:#1B2A4A;font-family:'Montserrat',Arial,sans-serif;">Erstgespräch (30 min)</strong></div>
-                    <p style="font-size:0.85rem;color:#64748b;margin:0;line-height:1.5;">Kostenlos. Wir klären, ob die Diagnose für Ihre Anlage Sinn macht.</p>
+        <!-- Akkordeon 1: Ablauf -->
+        <details class="audit-acc fade-up">
+            <summary>Ablauf in 8 Wochen</summary>
+            <div class="audit-acc-body">
+                <div class="pakete-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin:0;gap:16px;">
+                    <div class="paket-card">
+                        <span class="paket-status verfuegbar">Phase 1 · Wochen 1-4</span>
+                        <h3>Verstehen</h3>
+                        <p class="paket-tagline">Anlage gemeinsam betrachten, Daten konsolidieren, Probleme priorisieren.</p>
+                        <ul class="paket-list">
+                            <li>Vor-Ort-Termin — ich verstehe Ihre Anlage am ersten Tag</li>
+                            <li>Datenquellen aus dem Bestand: Sensorik, Labor, Reklamationen, Excel/SCADA</li>
+                            <li>Top 2 Qualitätsprobleme priorisiert — fokussiert auf das, was am meisten Geld kostet</li>
+                        </ul>
+                    </div>
+                    <div class="paket-card">
+                        <span class="paket-status verfuegbar">Phase 2 · Wochen 5-8</span>
+                        <h3>Auswerten</h3>
+                        <p class="paket-tagline">Auswertung auf abgeschotteter Hardware, Ursachenanalyse, Abschluss bei Ihnen vor Ort.</p>
+                        <ul class="paket-list">
+                            <li>Auswertung auf abgeschotteter Hardware — Löschung auf Wunsch</li>
+                            <li>Strukturierte Ursachenanalyse — Wochen statt Monate bis zur Wurzel</li>
+                            <li>Abschluss-Präsentation bei Ihnen vor Ort — Übergabe von Bericht, Foliensatz und Klick-Demo</li>
+                        </ul>
+                    </div>
                 </div>
-                <div style="background:#fff;border:1px solid #E0E5EC;border-radius:10px;padding:18px 20px;text-align:left;">
-                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#2B5EA7;color:#fff;font-weight:700;font-size:0.85rem;">2</span><strong style="font-size:0.95rem;color:#1B2A4A;font-family:'Montserrat',Arial,sans-serif;">NDA + Datenliste</strong></div>
-                    <p style="font-size:0.85rem;color:#64748b;margin:0;line-height:1.5;">Geheimhaltung wird unterschrieben, Sie erhalten die konkrete Datenliste.</p>
-                </div>
-                <div style="background:#fff;border:1px solid #E0E5EC;border-radius:10px;padding:18px 20px;text-align:left;">
-                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#3D8C3E;color:#fff;font-weight:700;font-size:0.85rem;">3</span><strong style="font-size:0.95rem;color:#1B2A4A;font-family:'Montserrat',Arial,sans-serif;">Vor-Ort-Termin · Start</strong></div>
-                    <p style="font-size:0.85rem;color:#64748b;margin:0;line-height:1.5;">Anlage gemeinsam betrachten, Datenübergabe per verschlüsseltem Datenträger.</p>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px;">
+                    <div style="background:#F4F6F9;border-radius:10px;padding:16px 18px;"><strong style="font-family:'Montserrat',Arial,sans-serif;color:#1B2A4A;font-size:0.92rem;">1 · Erstgespräch (30 min)</strong><p style="font-size:0.85rem;color:#64748b;margin:6px 0 0;line-height:1.5;">Kostenlos. Wir klären, ob die Diagnose für Ihre Anlage Sinn macht.</p></div>
+                    <div style="background:#F4F6F9;border-radius:10px;padding:16px 18px;"><strong style="font-family:'Montserrat',Arial,sans-serif;color:#1B2A4A;font-size:0.92rem;">2 · NDA + Datenliste</strong><p style="font-size:0.85rem;color:#64748b;margin:6px 0 0;line-height:1.5;">Geheimhaltung unterschrieben, Sie erhalten die konkrete Datenliste.</p></div>
+                    <div style="background:#F4F6F9;border-radius:10px;padding:16px 18px;"><strong style="font-family:'Montserrat',Arial,sans-serif;color:#1B2A4A;font-size:0.92rem;">3 · Vor-Ort-Termin · Start</strong><p style="font-size:0.85rem;color:#64748b;margin:6px 0 0;line-height:1.5;">Anlage gemeinsam betrachten, Datenübergabe verschlüsselt.</p></div>
                 </div>
             </div>
-        </div>
+        </details>
 
-    </div>
-</section>
+        <!-- Akkordeon 2: Lieferleistung -->
+        <details class="audit-acc fade-up">
+            <summary>Was Sie am Ende in der Hand haben</summary>
+            <div class="audit-acc-body">
+                <ol style="padding-left:22px;line-height:1.75;margin:0;font-size:0.96rem;">
+                    <li style="margin-bottom:12px;"><strong>Diagnose-Bericht</strong> — Hauptursachen, klare Handlungsempfehlungen, in Ihrer Sprache.</li>
+                    <li style="margin-bottom:12px;"><strong>Management-Foliensatz</strong> — die Antwort für Beirat, Eigentümer oder Hauptkunde. <a href="mailto:smaier@rvh.at?subject=Anfrage%3A%20Beispiel-Foliensatz%20Diagnose&amp;body=Hallo%20Stefan%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20einen%20verfremdeten%20Beispiel-Foliensatz%20aus%20einem%20realen%20Diagnose-Projekt.%0A%0AUnternehmen%3A%20%0AAnsprechpartner%3A%20%0A%0AVielen%20Dank%21" style="color:#2B5EA7;font-weight:600;text-decoration:underline;">✉ Beispiel anfordern</a></li>
+                    <li><strong>KI-Klick-Demo mit Ihren Daten</strong> — Sie klicken das Ergebnis selbst durch. <a href="#videos" style="color:#2B5EA7;font-weight:600;text-decoration:underline;">▶ Videos ansehen</a></li>
+                </ol>
+            </div>
+        </details>
 
-<!-- ===== DATENDIENSTLEISTUNGEN — Data Scientist auf Zeit (sekundaerer Weg) ===== -->
-<section id="datendienste" style="background:var(--hellgrau);border-top:1px solid var(--silber);border-bottom:1px solid var(--silber);padding:48px 0;">
-    <div class="container fade-up" style="max-width:980px;">
-        <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
-            <div style="flex:1 1 460px;min-width:280px;">
-                <span class="paket-status anfrage" style="position:static;display:inline-block;margin-bottom:12px;">Auf Anfrage</span>
-                <p class="section-label" style="margin-bottom:8px;">Kein akuter Brandherd?</p>
-                <h2 style="font-size:1.5rem;line-height:1.25;color:var(--dunkelblau);margin-bottom:12px;">Noch keine saubere Datenbasis? Damit fängt es oft erst an.</h2>
-                <p style="color:var(--text-body);font-size:0.98rem;line-height:1.65;margin-bottom:18px;">Als Physiker mit systematischer Vorgehensweise baue ich mit Ihnen die Datengrundlage auf, bevor ausgewertet wird — <strong>Data Scientist auf Zeit</strong> für die Oberflächentechnik. Im Digitalisierungsprojekt, bei der Ausschreibung oder als verlängerte Hand zu Ihrem Standort.</p>
-                <ul class="paket-list" style="margin-bottom:0;">
-                    <li><strong>Datenbasis schaffen</strong> — verstreute Sensor-Logs, Excel und Laborwerte zu einer auswertbaren Grundlage zusammenführen</li>
-                    <li><strong>Systematik statt Bauchgefühl</strong> — physikalisch fundierte Vorgehensweise, kein Tool-Wildwuchs</li>
-                    <li><strong>Begleitung statt Abhängigkeit</strong> — Sie bleiben Eigentümer Ihrer Daten und Entscheidungen</li>
+        <!-- Akkordeon 3: Schutz -->
+        <details class="audit-acc fade-up">
+            <summary>Was, wenn die Ursache komplex ist?</summary>
+            <div class="audit-acc-body">
+                <p style="margin:0 0 10px;color:#1B2A4A;line-height:1.6;font-size:0.93rem;">Auch wenn eine Ursache nicht eindeutig zu klären ist — Sie bekommen in jedem Fall:</p>
+                <ul style="margin:0;padding-left:22px;line-height:1.7;color:#1B2A4A;font-size:0.92rem;">
+                    <li>welche <strong>Hypothesen die Daten stützen</strong> — und welche sich ausschließen lassen</li>
+                    <li>einen <strong>Maßnahmenplan für die nächste Analyse-Stufe</strong></li>
+                    <li>die <strong>Klick-Demo mit Ihren Daten</strong></li>
+                    <li>auf Wunsch: <strong>Begleitung der nächsten Stufe</strong> — ohne neues Pitch-Gespräch</li>
                 </ul>
             </div>
-            <div style="flex:0 0 auto;display:flex;flex-direction:column;gap:12px;align-items:stretch;min-width:230px;">
-                <a href="mailto:smaier@rvh.at?subject=Anfrage%3A%20Datendienstleistung%20(Data%20Scientist%20auf%20Zeit)&amp;body=Hallo%20Stefan%2C%0A%0Awir%20m%C3%B6chten%20unsere%20Datenbasis%20aufbauen%20oder%20ein%20Digitalisierungsprojekt%20starten%20und%20suchen%20Begleitung%20als%20Data%20Scientist%20auf%20Zeit.%0A%0AUnternehmen%3A%20%0AAnsprechpartner%3A%20%0AWorum%20es%20geht%3A%20%0A%0AVielen%20Dank%21" class="paket-cta paket-cta-primary">✉ Datendienstleistung anfragen</a>
-                <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="paket-cta paket-cta-outline">Erstgespräch (30 min)</a>
-                <span style="font-size:0.85rem;color:var(--text-light);text-align:center;line-height:1.6;">oder:
-                    <a href="ausbildung.html" style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">Praxiskurs</a> ·
-                    <a href="#weiter" style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">Was möglich wird</a>
-                </span>
-            </div>
-        </div>
+        </details>
+
     </div>
 </section>
 
-<!-- ===== AUSBILDUNG TEASER — Praxiskurs als zweiter Weg ===== -->
-<section id="ausbildung" style="padding:56px 0;background:#fff;">
+<!-- ===== WEITERE WEGE — Datendienst + In-House-Coaching (kompakt) ===== -->
+<section id="datendienste" style="background:var(--hellgrau);border-top:1px solid var(--silber);border-bottom:1px solid var(--silber);padding:48px 0;">
     <div class="container fade-up" style="max-width:980px;">
-        <div style="background:linear-gradient(135deg,#1B2A4A,#2B5EA7);border-radius:18px;padding:40px 44px;color:#fff;display:flex;gap:36px;align-items:center;flex-wrap:wrap;">
-            <div style="flex:1 1 420px;min-width:280px;">
-                <p style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.12em;font-size:0.76rem;color:var(--cyan-akzent);text-transform:uppercase;margin-bottom:14px;">Neu · Praxiskurs für Ihr Team</p>
-                <h2 style="font-size:1.6rem;line-height:1.25;margin-bottom:14px;color:#fff;">Lieber selbst auswerten statt auswerten lassen?</h2>
-                <p style="color:rgba(255,255,255,0.86);line-height:1.7;font-size:0.98rem;margin-bottom:18px;">In der Diagnose werte ich Ihre Daten aus. Im Praxiskurs <strong>KI-Datenanalyse für GalvanotechnikerInnen</strong> lernen Ihre Fachkräfte, selbst Sensordaten auszuwerten, Dashboards zu bauen und Reklamationsursachen zu finden — ohne Programmierkenntnisse, geübt an synthetischen Daten ohne echten Datenupload.</p>
-                <p style="font-size:0.85rem;color:rgba(255,255,255,0.78);font-weight:600;letter-spacing:0.02em;">Pilotgruppe · max. 6 Plätze · 1.260 € · 560 € für DGO-Mitglieder</p>
+        <p class="section-label" style="text-align:center;">Weitere Wege</p>
+        <h2 style="text-align:center;font-size:1.5rem;color:var(--dunkelblau);margin-bottom:26px;">Kein akuter Brandherd?</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;" id="ausbildung">
+
+            <!-- Karte 1: Daten auf Zeit -->
+            <div style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:14px;padding:26px;">
+                <h3 style="font-size:1.15rem;color:var(--dunkelblau);margin-bottom:8px;">Daten auf Zeit</h3>
+                <p style="color:var(--text-light);font-size:0.92rem;line-height:1.55;margin-bottom:12px;flex:1;">Noch keine saubere Datenbasis? Ich baue sie mit Ihnen auf — Data Scientist auf Zeit für die Oberflächentechnik.</p>
+                <details class="audit-acc" style="margin:0 0 14px;border:1px solid #E0E5EC;">
+                    <summary style="padding:11px 16px;font-size:0.9rem;">Was drinsteckt</summary>
+                    <div class="audit-acc-body" style="padding:0 16px 14px;">
+                        <ul class="paket-list" style="margin:0;">
+                            <li>Datenbasis schaffen — verstreute Logs, Excel, Laborwerte zusammenführen</li>
+                            <li>Systematik statt Bauchgefühl — physikalisch fundiert</li>
+                            <li>Begleitung statt Abhängigkeit — Sie bleiben Eigentümer</li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="mailto:smaier@rvh.at?subject=Anfrage%3A%20Datendienstleistung%20(Data%20Scientist%20auf%20Zeit)&amp;body=Hallo%20Stefan%2C%0A%0Awir%20m%C3%B6chten%20unsere%20Datenbasis%20aufbauen%20oder%20ein%20Digitalisierungsprojekt%20starten.%0A%0AUnternehmen%3A%20%0AWorum%20es%20geht%3A%20%0A%0AVielen%20Dank%21" style="display:block;text-align:center;background:var(--schild-blau);color:#fff;padding:12px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.9rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--dunkelblau)';" onmouseout="this.style.background='var(--schild-blau)';">✉ Datendienst anfragen</a>
             </div>
-            <div style="flex:0 0 auto;">
-                <a href="ausbildung.html" style="display:inline-block;background:#fff;color:#1B2A4A;padding:15px 36px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1rem;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(0,0,0,0.28)';" onmouseout="this.style.transform='';this.style.boxShadow='';">Kurs ansehen →</a>
+
+            <!-- Karte 2: In-House-Coaching -->
+            <div style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:14px;padding:26px;">
+                <h3 style="font-size:1.15rem;color:var(--dunkelblau);margin-bottom:8px;">In-House-Coaching</h3>
+                <p style="color:var(--text-light);font-size:0.92rem;line-height:1.55;margin-bottom:12px;flex:1;">Ihre Fachkräfte &amp; Lehrlinge lernen, mit KI selbst Sensordaten auszuwerten — bei Ihnen vor Ort, an synthetischen Daten, ohne Programmierkenntnisse.</p>
+                <details class="audit-acc" style="margin:0 0 14px;border:1px solid #E0E5EC;">
+                    <summary style="padding:11px 16px;font-size:0.9rem;">Was drinsteckt</summary>
+                    <div class="audit-acc-body" style="padding:0 16px 14px;">
+                        <ul class="paket-list" style="margin:0;">
+                            <li>Bei Ihnen vor Ort, an Ihren Themen — 1:1 oder kleine Gruppe</li>
+                            <li>Pro Betrieb gebucht, kein Wartelisten-Kurs</li>
+                            <li>Methode aus dem Leuze-Fachartikel — <a href="ausbildung.html" style="color:var(--schild-blau);font-weight:600;">auch als Praxiskurs</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <a href="mailto:smaier@rvh.at?subject=In-House-Coaching%20f%C3%BCr%20unser%20Team&amp;body=Hallo%20Stefan%2C%0A%0Awir%20m%C3%B6chten%20unsere%20Fachkr%C3%A4fte%2FLehrlinge%20in%20der%20KI-Datenauswertung%20schulen%20lassen.%0A%0AUnternehmen%3A%20%0AAnzahl%20Teilnehmer%3A%20%0A%0AVielen%20Dank%21" style="display:block;text-align:center;background:var(--schild-blau);color:#fff;padding:12px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.9rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--dunkelblau)';" onmouseout="this.style.background='var(--schild-blau)';">✉ Coaching anfragen</a>
             </div>
+
         </div>
     </div>
 </section>
@@ -2251,12 +2318,13 @@
         <div class="fade-up" style="text-align:center;max-width:780px;margin:0 auto 28px;">
             <p class="section-label">Was nach der Diagnose möglich wird</p>
             <h2 style="font-size:1.5rem;margin-bottom:10px;">Sie entscheiden frei — drei typische Folgewege</h2>
-            <p style="color:#64748b;font-size:0.96rem;line-height:1.6;">Berichte für Behörde &amp; Hauptkunden · Live-Auswertung in der Produktion · Tracking mit AT-Förderoptionen (KMU.DIGITAL, aws, FFG). <strong>Folgeprojekte werden separat angefragt und individuell nach Umfang kalkuliert</strong> — die Diagnose ist für sich vorzeigbar.</p>
+            <p style="color:#64748b;font-size:0.95rem;line-height:1.6;">Berichte für Behörde &amp; Hauptkunden · Live-Auswertung in der Produktion · Tracking mit AT-Förderoptionen. <strong>Folgeprojekte separat, individuell kalkuliert.</strong></p>
         </div>
 
-        <!-- Datenfluss-Visualisierung: Datenquellen → Auswertung → Dashboard → Mensch -->
-        <div class="fade-up" style="max-width:960px;margin:36px auto 0;">
-            <p style="text-align:center;font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.12em;font-size:0.78rem;color:#2B5EA7;text-transform:uppercase;margin-bottom:22px;">Wie aus Ihren Daten Entscheidungen werden</p>
+        <!-- Akkordeon: Datenfluss (Progressive Disclosure) -->
+        <details class="audit-acc fade-up" style="max-width:960px;">
+            <summary>Wie aus Ihren Daten Entscheidungen werden</summary>
+            <div class="audit-acc-body">
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;align-items:stretch;">
 
                 <!-- Station 1: Datenquellen -->
@@ -2296,8 +2364,9 @@
                 </div>
 
             </div>
-            <p style="text-align:center;color:#64748b;font-size:0.88rem;margin:18px auto 0;max-width:640px;line-height:1.55;">Ihre Daten bleiben unter Ihrer Kontrolle: Übergabe zu Analysezwecken auf einem Übertragungsweg Ihrer Wahl — dokumentiert und datenschutzkonform. Die Auswertung läuft auf abgeschotteter Hardware.</p>
-        </div>
+            <p style="text-align:center;color:#64748b;font-size:0.88rem;margin:16px auto 0;max-width:640px;line-height:1.55;">Ihre Daten bleiben unter Ihrer Kontrolle: Übergabe auf einem Übertragungsweg Ihrer Wahl — dokumentiert und datenschutzkonform. Auswertung auf abgeschotteter Hardware.</p>
+            </div>
+        </details>
 
         <!-- Praxisbild: Techniker mit Auswertung am Tablet -->
         <div class="fade-up" style="max-width:880px;margin:44px auto 0;text-align:center;">
@@ -2334,7 +2403,7 @@
                     </div>
                     <div style="padding:16px 18px;">
                         <h4 style="font-size:1rem;color:#1B2A4A;margin-bottom:4px;font-family:'Montserrat',Arial,sans-serif;">Methodik-Demo</h4>
-                        <p style="font-size:0.88rem;color:#64748b;margin:0;line-height:1.5;">Anomalieerkennung auf realen Galvanik-Sensordaten (verfremdet).</p>
+                        <p style="font-size:0.88rem;color:#64748b;margin:0;line-height:1.5;">Anomalieerkennung an Galvanik-Prozessdaten (Demo).</p>
                     </div>
                 </a>
                 <a href="https://www.youtube.com/watch?v=lWJQq0x2_1c" target="_blank" rel="noopener" style="display:block;background:#fff;border:1px solid #D4D8DC;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 28px rgba(27,42,74,0.12)';this.style.borderColor='#2B5EA7';" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#D4D8DC';">
@@ -2348,7 +2417,7 @@
                     </div>
                     <div style="padding:16px 18px;">
                         <h4 style="font-size:1rem;color:#1B2A4A;margin-bottom:4px;font-family:'Montserrat',Arial,sans-serif;">Realtime-Monitoring</h4>
-                        <p style="font-size:0.88rem;color:#64748b;margin:0;line-height:1.5;">Verschiedene Prozessparameter einer Kupfer-Nickel-Anlage live im Blick.</p>
+                        <p style="font-size:0.88rem;color:#64748b;margin:0;line-height:1.5;">Verschiedene Prozessparameter einer Galvanik-Linie live im Blick.</p>
                     </div>
                 </a>
             </div>
