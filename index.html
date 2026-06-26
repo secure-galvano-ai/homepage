@@ -1913,19 +1913,11 @@
     <div class="container fade-up" style="max-width:860px;text-align:center;">
         <p class="section-label">In 90 Sekunden</p>
         <h2 style="font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--dunkelblau);margin-bottom:22px;">Warum Galvaniken auf Daten statt Bauchgefühl setzen</h2>
-        <!-- VIDEO-EINBINDUNG (TODO Stefan): Pitch-Video bei Vimeo/YouTube hochladen (privacy-mode) und das Platzhalter-div
-             unten durch ein iframe ersetzen, z.B.:
-             <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Pitch-Video" allowfullscreen
-                     style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
-             WICHTIG: KEINE Kundendaten im Video zeigen. Solange kein Video da ist, bleibt der Platzhalter sichtbar. -->
-        <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#1B2A4A,#2B5EA7);box-shadow:0 14px 40px rgba(27,42,74,0.22);display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:#fff;">
-                <div style="width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.04em;">Pitch-Video folgt in Kürze</div>
-                <div style="font-size:0.85rem;opacity:0.8;margin-top:4px;">16:9 · ca. 90 Sekunden</div>
-            </div>
+        <!-- Pitch-Video (youtube-nocookie: kein Cookie/Tracking vor Klick, DSGVO-konform). WICHTIG: KEINE Kundendaten im Video zeigen. -->
+        <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#1B2A4A;box-shadow:0 14px 40px rgba(27,42,74,0.22);">
+            <iframe src="https://www.youtube-nocookie.com/embed/43rRRsvbFDw?rel=0" title="Pitch-Video — secure galvano ai"
+                    loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                    style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
         </div>
     </div>
 </section>
