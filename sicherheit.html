@@ -15,6 +15,8 @@
     <meta property="og:url" content="https://secure-galvano-ai.com/sicherheit.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_AT">
+    <meta property="og:site_name" content="secure galvano ai">
+    <meta name="twitter:card" content="summary_large_image">
     <link href="fonts/fonts.css" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -80,6 +82,8 @@
             transition: background 0.2s, transform 0.2s;
         }
         .nav-cta:hover { background: var(--schild-blau-hover); transform: translateY(-1px); }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--dunkelblau); margin: 6px 0; transition: 0.3s; }
 
         /* Page Hero */
         .page-hero {
@@ -252,6 +256,8 @@
 
         @media (max-width: 900px) {
             .nav-links { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--weiss); padding: 24px; border-bottom: 1px solid var(--silber); box-shadow: 0 8px 30px rgba(0,0,0,0.1); z-index: 50; }
             .footer-inner { flex-direction: column; text-align: center; }
             .framework-head { flex-direction: column; gap: 6px; }
         }
@@ -295,7 +301,7 @@
             <img src="assets/img/logo.png" alt="secure galvano ai">
             <span>secure galvano ai</span>
         </a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html#angebot">Angebot</a></li>
             <li><a href="ausbildung.html">Ausbildung</a></li>
             <li><a href="ueber-mich.html">Über mich</a></li>
@@ -303,6 +309,7 @@
             <li><a href="forschung.html">Forschung</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstgespräch</a></li>
         </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
 </nav>
 
@@ -429,6 +436,7 @@
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 20);
     });
+    (function(){var t=document.getElementById('navToggle');if(!t)return;t.addEventListener('click',function(){var l=document.getElementById('navLinks');var open=l.classList.toggle('open');t.setAttribute('aria-expanded',open?'true':'false');});})();
 </script>
 
 </body>

@@ -17,6 +17,7 @@
     <meta property="og:url" content="https://secure-galvano-ai.com/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_AT">
+    <meta property="og:site_name" content="secure galvano ai">
     <meta name="twitter:card" content="summary_large_image">
     <link href="fonts/fonts.css" rel="stylesheet">
 
@@ -1864,7 +1865,7 @@
             <li><a href="forschung.html">Forschung</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstgespräch</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -1882,7 +1883,6 @@
                 <h1>Ausschuss, Reklamationen, Kundenfrust — und keiner weiß genau, <span class="accent">woran's liegt</span>?</h1>
                 <p style="font-family:'Montserrat',Arial,sans-serif;font-size:1.55rem;font-weight:700;color:var(--cyan-akzent);margin:0 0 22px;letter-spacing:-0.01em;max-width:560px;">Schlafen Sie wieder ruhig — weil Sie wissen, was in Ihrer Anlage passiert.</p>
                 <p>In 8 Wochen haben Sie die Antwort — mit den Daten, die Sie bereits haben. Ihre Produktion läuft uneingeschränkt weiter.</p>
-                <p style="font-size:0.95rem;color:var(--text-light);margin-top:12px;font-weight:600;letter-spacing:0.02em;">8 Wochen · 9.500 € Festpreis · Galvaniken im DACH-Raum</p>
                 <div class="hero-buttons">
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary">Kostenloses Erstgespräch</a>
                     <a href="#leistungen" class="btn btn-outline">Leistungen ansehen ↓</a>
@@ -2037,27 +2037,27 @@
             <p><strong>Sie messen Ihre Qualität — steuern können Sie sie nicht.</strong> Bei 50 nichtlinear zusammenwirkenden Parametern ist das kein persönliches Versagen, sondern ein Datenproblem. Genau hier setzt die Diagnose an.</p>
         </div>
         <div class="services-grid">
-            <div class="service-card fade-up">
+            <a href="#leistungen" class="service-card fade-up" style="text-decoration:none;color:inherit;">
                 <div class="service-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </div>
                 <h3>Reklamationen, deren Ursache nie geklärt wird</h3>
                 <p>Schluss mit Rätselraten und Krisen-Meetings: Sie wissen am Ende, <strong>welche Anlage, welcher Parameter, welche Schicht</strong> Ihre teuersten Reklamationen verursacht.</p>
-            </div>
-            <div class="service-card fade-up">
+            </a>
+            <a href="#leistungen" class="service-card fade-up" style="text-decoration:none;color:inherit;">
                 <div class="service-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 9 4-18 3 9h4"/></svg>
                 </div>
                 <h3>Schwankungen, für die niemand eine Erklärung hat</h3>
                 <p>Eine Reklamation kostet schnell 5-stellig. Sie sehen Auffälligkeiten im Bad, am Gleichrichter oder in den Schichtdaten — <strong>bevor sie auf der Lieferschein-Reklamation landen.</strong></p>
-            </div>
-            <div class="service-card fade-up">
+            </a>
+            <a href="#leistungen" class="service-card fade-up" style="text-decoration:none;color:inherit;">
                 <div class="service-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
                 </div>
                 <h3>Ressourcen-Verschwendung — teuer und unnötig</h3>
                 <p>Wo Ihre Anlage Chemie, Energie und Wasser verschwendet — mit der konkreten Stellschraube auf Datenbasis. Verschwendung erkennen und beheben heißt: weniger Kosten <strong>und</strong> nachhaltigerer Betrieb. <strong>5 % Chemie-Einsparung entlasten eine mittlere Galvanik mit ~50.000 € pro Jahr.</strong></p>
-            </div>
+            </a>
         </div>
     </div>
 </section>
@@ -2579,8 +2579,9 @@
     }, { passive: true });
 
     // Mobile menu toggle
-    document.getElementById('navToggle').addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('open');
+    document.getElementById('navToggle').addEventListener('click', (e) => {
+        const open = document.getElementById('navLinks').classList.toggle('open');
+        e.currentTarget.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
     // Scroll animations

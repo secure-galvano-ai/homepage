@@ -13,6 +13,7 @@
     <meta property="og:url" content="https://secure-galvano-ai.com/ueber-mich.html">
     <meta property="og:type" content="profile">
     <meta property="og:locale" content="de_AT">
+    <meta property="og:site_name" content="secure galvano ai">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="author" content="Stefan Maier">
     <link rel="canonical" href="https://secure-galvano-ai.com/ueber-mich.html">
@@ -160,6 +161,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            padding: 6px 0;
             color: rgba(255, 255, 255, 0.85);
             font-size: 0.9rem;
             font-weight: 600;
@@ -556,7 +558,7 @@
             <li><a href="forschung.html">Forschung</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstgespräch</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -848,8 +850,10 @@
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 20);
     });
-    document.getElementById('navToggle').addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('open');
+    const navToggle = document.getElementById('navToggle');
+    navToggle.addEventListener('click', () => {
+        const isOpen = document.getElementById('navLinks').classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 </script>
 
