@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Leistungsbausteine — geteilte Komponente (Katalog + Teaser)
+   Verwendet auf leistungen.html (voller Katalog) und index.html (Teaser).
+   Die Karten selbst werden aus _generate_leistungen.py erzeugt; diese Datei
+   liefert nur das Styling. CSS-Variablen (--schild-blau usw.) stammen aus
+   dem :root-Block der jeweiligen Seite.
+   ========================================================================== */
+
+/* ---- Grid --------------------------------------------------------------- */
+.leistung-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+    /* start (nicht stretch): beim Aufklappen einer Karte waechst nur DIESE,
+       die Nachbarkarten bleiben kompakt statt leeren Raum zu bekommen. */
+    align-items: start;
+}
+
+/* ---- Karte -------------------------------------------------------------- */
+.leistung-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--weiss);
+    border: 1px solid var(--silber);
+    border-radius: 16px;
+    padding: 30px 28px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+/* Akzentbalken oben, wie bei .service-card auf der Startseite */
+.leistung-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--schild-blau);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+.leistung-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(27, 42, 74, 0.1);
+    border-color: var(--schild-blau);
+}
+.leistung-card:hover::before { transform: scaleX(1); }
+
+/* ---- Icon --------------------------------------------------------------- */
+.leistung-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: var(--hellgrau);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* ---- Kategorie-Chip ----------------------------------------------------- */
+.leistung-cat {
+    align-self: flex-start;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--schild-blau);
+    background: rgba(43, 94, 167, 0.08);
+    padding: 4px 10px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+/* ---- Titel + Teaser ----------------------------------------------------- */
+.leistung-card h3 {
+    font-size: 1.2rem;
+    color: var(--dunkelblau);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.leistung-teaser {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* ---- Aufklappbare Details (Progressive Disclosure) ---------------------- */
+.leistung-more {
+    margin-top: auto;
+    border-top: 1px solid var(--silber);
+    padding-top: 14px;
+}
+.leistung-more > summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--schild-blau);
+    transition: color 0.2s;
+}
+.leistung-more > summary::-webkit-details-marker { display: none; }
+.leistung-more > summary::before {
+    content: '\25B8';           /* ▸ */
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.leistung-more[open] > summary::before { transform: rotate(90deg); }
+.leistung-more > summary:hover { color: var(--dunkelblau); }
+
+.leistung-detaillist {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+}
+.leistung-detaillist li {
+    position: relative;
+    padding: 6px 0 6px 24px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-body);
+}
+.leistung-detaillist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: rgba(61, 140, 62, 0.15);
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M2.5 7L5.5 10L11.5 4' stroke='%233D8C3E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.leistung-morelink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--schild-blau);
+    transition: gap 0.2s, color 0.2s;
+}
+.leistung-morelink:hover { gap: 10px; color: var(--dunkelblau); }
+
+/* ---- Mail-CTA je Baustein (primaeres Ziel: Kontaktaufnahme) ------------- */
+.leistung-mailbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: var(--schild-blau);
+    color: var(--weiss);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.2s;
+}
+.leistung-mailbtn:hover { background: var(--dunkelblau); transform: translateY(-1px); }
+
+/* ---- Teaser-Variante (ganze Karte ist ein Link, kein Aufklappen) -------- */
+a.leistung-card--teaser { text-decoration: none; color: inherit; }
+.leistung-card--teaser .leistung-morelink { margin-top: auto; }
+
+/* ---- Abschnitt-Kopf auf der Katalogseite -------------------------------- */
+.leistung-section { padding: 60px 0; }

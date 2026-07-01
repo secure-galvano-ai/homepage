@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-05-24
+**Stand:** 2026-07-01
 
 ---
 
@@ -59,7 +59,8 @@
 
 ```
 homepage/
-  index.html               Landing Page mit Funnel (Hero, Services, Ablauf, Pakete, Demos, Vorteile, Founder, Forschung, FAQ, CTA)
+  index.html               Schlanke Landing Page, 7 Sektionen (Hero, Trust-Bar, 6 Leistungsbausteine je mit Mail-Button, Proof, Kontakt) — Bausteine aus _generate_leistungen.py
+  leistungen.html          Leistungs-Katalog: 6 Bausteine + Preis-Leiter (#preise), Audit-Detail (#standort-audit), Folgewege/Videos (#folgewege/#videos), FAQ (#faq)
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise
   impressum.html           Impressum (ECG/UGB) + Marken-Hinweis
@@ -67,6 +68,8 @@ homepage/
   assets/
     img/                   Bild-Assets: logo, portrait, aws, trustifai, og-image,
                            techniker-monitoring, stefan-entmetallisierung-2006
+    css/
+      leistungen.css       Geteilte Komponenten-CSS für die Leistungsbausteine (Karten + Mail-Button); genutzt von leistungen.html + index.html
     js/
       consent.js           Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
   credentials/
@@ -84,8 +87,9 @@ homepage/
   apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
   CNAME                    Custom Domain Config
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (6 URLs)
+  sitemap.xml              Google Sitemap (7 URLs)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
+  _generate_leistungen.py  Generator für die Leistungsbausteine (eine Datenquelle -> Karten in leistungen.html + index.html)
   README.md                Diese Datei
 ```
 
@@ -164,6 +168,19 @@ Assets neu generieren (Favicon, OG-Image):
 cd homepage
 py _generate_assets.py
 ```
+
+Leistungsbausteine ändern/ergänzen (Karten auf `leistungen.html` + Teaser auf `index.html`):
+```bash
+cd homepage
+# 1. Baustein in der LEISTUNGEN-Liste in _generate_leistungen.py bearbeiten
+# 2. Neu rendern:
+py _generate_leistungen.py
+```
+**Eine Datenquelle:** die `LEISTUNGEN`-Liste in `_generate_leistungen.py`. Der
+Generator schreibt statisches HTML zwischen die `<!-- BEGIN/END leistungen:* -->`
+-Marker (crawlbar, kein JS nötig). Das HTML zwischen den Markern **nicht von Hand
+bearbeiten** — es wird beim nächsten Lauf überschrieben. Kategorie-Chips (`data-cat`)
+sind gesetzt, ein Filter lässt sich später ohne Datenänderung ergänzen.
 
 Nachweise neu rendern (wenn das Quell-PDF aktualisiert wird):
 ```bash
