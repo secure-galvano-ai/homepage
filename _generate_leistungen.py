@@ -92,45 +92,6 @@ LEISTUNGEN = [
         ],
         "more": ("Folgewege ansehen", "leistungen.html#folgewege"),
     },
-    {
-        "id": "daten-auf-zeit",
-        "title": "Daten auf Zeit",
-        "teaser": "Noch keine saubere Datenbasis? Data Scientist auf Zeit baut sie mit Ihnen auf.",
-        "category": "Fundament",
-        "icon": "database",
-        "details": [
-            "Verstreute Logs, Excel-Tabellen und Laborwerte zusammenführen",
-            "Systematik statt Bauchgefühl — physikalisch fundiert",
-            "Begleitung statt Abhängigkeit — Sie bleiben Eigentümer Ihrer Daten",
-        ],
-        "more": None,
-    },
-    {
-        "id": "in-house-coaching",
-        "title": "In-House-Coaching",
-        "teaser": "Ihre Fachkräfte und Lehrlinge werten Sensordaten selbst aus — ohne Programmierkenntnisse.",
-        "category": "Befähigung",
-        "icon": "users",
-        "details": [
-            "Bei Ihnen vor Ort, an Ihren Themen — 1:1 oder kleine Gruppe",
-            "An synthetischen Daten geübt, kein Wartelisten-Kurs",
-            "Methode aus dem Leuze-Fachartikel",
-        ],
-        "more": ("Zur Ausbildung", "ausbildung.html"),
-    },
-    {
-        "id": "trusted-ai",
-        "title": "Trusted AI & Nachweise",
-        "teaser": "TÜV-AUSTRIA-geprüftes Verfahren, lokal und ohne Cloud — nachweisbar für Kunden und Behörde.",
-        "category": "Vertrauen",
-        "icon": "shield",
-        "details": [
-            "Modellprüfung bei TÜV AUSTRIA Trusted AI abgeschlossen",
-            "EU AI Act, NIS2, IEC 62443 und DSGVO adressiert",
-            "Konformitäts-Bericht auf Anfrage für Audits und Förderungen",
-        ],
-        "more": ("Zu Sicherheit & Compliance", "sicherheit.html"),
-    },
 ]
 
 

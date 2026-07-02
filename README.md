@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-07-01
+**Stand:** 2026-07-02
 
 ---
 
@@ -48,6 +48,10 @@
   - Versteckter **Kundenstimmen-/Referenz-Slot** in der Pull-Quote-Sektion (auskommentiert, aktivieren nach Pilotkunden-Freigabe)
   - **Sticky-Mobil-CTA** (`#stickyCta`, erscheint ab 700px Scroll, nur ≤760px; WhatsApp-FAB weicht aus)
   - **Funnel-Tracking** in `consent.js`: Kachel-Klicks (`data-funnel`) + Mid-Scroll-CTA + Scroll-Tiefe (25/50/75/100 %) als Clarity-Events (nur nach Consent)
+- [x] **Fokussierung (2026-07-02):** Seite auf den Kern-Funnel verschlankt.
+  - `ausbildung.html` + `sicherheit.html` **zurückgestellt** — `noindex`, raus aus Nav/Footer/Sitemap; Dateien bleiben erhalten und sind jederzeit reaktivierbar (Nav-`<li>` wieder einsetzen + Sitemap-Eintrag + `noindex` entfernen).
+  - Leistungen von 6 auf **3 Kern-Bausteine** reduziert (KI-Diagnose, Live-Monitoring, KPI-Dashboard) — Datenquelle `LEISTUNGEN` in `_generate_leistungen.py`, danach `py _generate_leistungen.py`.
+  - Sicherheits-Inhalt als **Corporate-PDF** `docs/sicherheit-methoden-standards.pdf` (Statement „Methoden & Standards"), verlinkt in der Trust-Bar (Startseite) und im Footer. Quelle/Build: `Desktop/sga_pdf_build/` (Pandoc + XeLaTeX via `templates/pdf-corporate/build_pdf.py`, kundentaugliches `_statement_template.tex`).
 
 ## Optional (noch offen)
 
@@ -59,8 +63,10 @@
 
 ```
 homepage/
-  index.html               Schlanke Landing Page, 7 Sektionen (Hero, Trust-Bar, 6 Leistungsbausteine je mit Mail-Button, Proof, Kontakt) — Bausteine aus _generate_leistungen.py
-  leistungen.html          Leistungs-Katalog: 6 Bausteine + Preis-Leiter (#preise), Audit-Detail (#standort-audit), Folgewege/Videos (#folgewege/#videos), FAQ (#faq)
+  index.html               Schlanke Landing Page, 7 Sektionen (Hero, Trust-Bar, 3 Leistungsbausteine je mit Mail-Button, Proof, Kontakt) — Bausteine aus _generate_leistungen.py
+  leistungen.html          Leistungs-Katalog: 3 Bausteine + Preis-Leiter (#preise), Audit-Detail (#standort-audit), Folgewege/Videos (#folgewege/#videos), FAQ (#faq)
+  ausbildung.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — Datei erhalten
+  sicherheit.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — ersetzt durch docs/sicherheit-methoden-standards.pdf
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise
   impressum.html           Impressum (ECG/UGB) + Marken-Hinweis
@@ -77,6 +83,7 @@ homepage/
     thumbs/                Grid-Thumbnails (16 Zertifikate)
     full/                  Lightbox-Originale
   docs/
+    sicherheit-methoden-standards.pdf    Corporate-PDF Statement „Datensicherheit & Compliance" (ersetzt sicherheit.html)
     portrait_galvano_forum_2026.pdf      Galvano-Forum-Referenten-Portrait
     praesentation_forschungsvorhaben_2025-07.pdf  Forschungsvorhaben-Präsentation (Stand Juli 2025)
   fonts/
@@ -87,7 +94,7 @@ homepage/
   apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
   CNAME                    Custom Domain Config
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (7 URLs)
+  sitemap.xml              Google Sitemap (6 URLs)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
   _generate_leistungen.py  Generator für die Leistungsbausteine (eine Datenquelle -> Karten in leistungen.html + index.html)
   README.md                Diese Datei
