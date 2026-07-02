@@ -29,7 +29,7 @@
         {
           "@type": "Question",
           "name": "Was kostet die Diagnose?",
-          "acceptedAnswer": { "@type": "Answer", "text": "9.500 € netto, alles drin — Vor-Ort-Termine, Datenauswertung, Bericht und KI-Klick-Demo. Klarer Festpreis, schnelle Abwicklung ohne Förder-Bürokratie. Förder-Optionen werden für Folgeprojekte gemeinsam eruiert." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Ein fester Projektpreis für die gesamte Diagnose — kein Stundensatz, keine offene Rechnung. Die genaue Zahl nenne ich Ihnen nach einem kurzen Erstgespräch; Sie kennen sie, bevor die ersten Daten übergeben werden. Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten deutlich senken." }
         },
         {
           "@type": "Question",
@@ -724,8 +724,8 @@
     <div class="container">
         <div class="page-hero-content">
             <p class="section-label">Leistungen</p>
-            <h1>Was wir für Ihre Galvanik tun</h1>
-            <p>Von der Ursachen-Diagnose über Live-Monitoring bis zu Dashboard &amp; Berichten — alle Bausteine auf einen Blick. Klicken Sie auf einen Baustein oder buchen Sie ein kostenloses Erstgespräch.</p>
+            <h1>Was ich für Ihre Galvanik tue</h1>
+            <p>Erst die Ursache finden, dann live erkennen, am Ende vorher reagieren — hier die Stufen im Detail, mit Ablauf, Beispielen und häufigen Fragen. Oder direkt ein kostenloses Erstgespräch.</p>
         </div>
     </div>
 </section>
@@ -747,7 +747,7 @@
                     <li>Konkret benannt: welche Anlage, welcher Parameter, welche Schicht</li>
                     <li>Bericht, Management-Foliensatz und KI-Klick-Demo mit Ihren eigenen Daten</li>
                     </ul>
-                    <a class="leistung-morelink" href="leistungen.html#preise">Zu den Einstiegsstufen &amp; Preisen →</a>
+                    <a class="leistung-morelink" href="leistungen.html#preise">Zum Einstieg — die Diagnose →</a>
                 </details>
                 <a class="leistung-mailbtn" href="mailto:smaier@rvh.at?subject=Anfrage%3A%20KI-Diagnose&amp;body=Hallo%20Stefan%2C%0A%0Aich%20interessiere%20mich%20fuer%20KI-Diagnose.%0A%0AUnternehmen%3A%0AStandort%20%28PLZ%2FOrt%29%3A%0AWorum%20es%20geht%3A%0A%0AVielen%20Dank%21" data-funnel="mail-baustein">✉ Per Mail anfragen</a>
             </article>
@@ -802,74 +802,28 @@
     </div>
 </section>
 
-<!-- ===== PREIS-LEITER — Drei Stufen (Good-Better-Best) ===== -->
+<!-- ===== EINSTIEG — die Diagnose (preisfrei) ===== -->
 <section id="preise" style="padding:56px 0 48px;background:var(--hellgrau);border-bottom:1px solid var(--silber);">
     <div class="container">
-        <div class="fade-up" style="text-align:center;max-width:660px;margin:0 auto 30px;">
-            <p class="section-label">Wo wollen Sie einsteigen?</p>
-            <h2 style="font-size:clamp(1.4rem,2.6vw,2rem);color:var(--dunkelblau);">Die KI-Diagnose in drei Stufen</h2>
-            <p style="color:var(--text-light);font-size:0.95rem;margin-top:10px;line-height:1.6;">Vom eintägigen Vor-Ort-Check bis zum vollständigen <strong>Standort-Audit</strong> (8 Wochen) — dieselbe Methode, drei Tiefen. Unkomplizierte Buchung per Mail-Anfrage, Rechnung mit USt.</p>
-            <p class="fade-up" style="margin-top:14px;font-size:0.98rem;color:var(--text-body);line-height:1.6;">Noch nicht sicher, welche Stufe passt? Starten Sie mit einem <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:700;">kostenlosen Erstgespräch</a> — 30 Min, unverbindlich. Schon entschieden? Direkt unten anfragen.</p>
+        <div class="fade-up" style="text-align:center;max-width:680px;margin:0 auto 26px;">
+            <p class="section-label">Der Einstieg</p>
+            <h2 style="font-size:clamp(1.4rem,2.6vw,2rem);color:var(--dunkelblau);">Die Diagnose auf Ihren eigenen Daten</h2>
+            <p style="color:var(--text-light);font-size:0.95rem;margin-top:10px;line-height:1.6;">Acht Wochen, ein Ergebnis: die belegte Ursache hinter Ihrem Ausschuss — plus die ehrliche Antwort, ob Ihre Datenlage eine laufende Live-Erkennung trägt. Nicht sicher, ob es passt? Starten Sie mit einem <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:700;">kostenlosen Erstgespräch</a>.</p>
         </div>
-
-        <!-- Buchung bewusst per Mail (vorausgefuellte mailto-Vorlagen) + Rechnung — kein Stripe noetig:
-             passt zum B2B-Verkauf, keine Gebuehren/USt-Tool-Setup, Lead-Kontaktdaten kommen direkt mit.
-             Optional spaeter (nur falls Einstieg viel Volumen bekommt): Instant-Pay je Stufe via Stripe Payment Link in die href einsetzen. -->
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1040px;margin:0 auto;align-items:stretch;">
-
-            <!-- Stufe 1: Vor-Ort-Tag -->
-            <div class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:16px;padding:28px 26px 24px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:var(--hellgrau);color:var(--text-light);margin-bottom:16px;">Einstieg</span>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:4px;">Vor-Ort-Tag</h3>
-                <p style="color:var(--text-light);font-size:0.86rem;margin-bottom:14px;">KI-Potenzialbewertung · 1 Tag bei Ihnen</p>
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--dunkelblau);line-height:1;">1.200 €</div>
-                <p style="font-size:0.82rem;color:var(--logo-gruen);font-weight:700;margin:6px 0 16px;">Galvano-Forum-Karte → 500 €</p>
-                <ul style="list-style:none;padding:0;margin:0 0 20px;flex:1;font-size:0.9rem;line-height:1.5;color:var(--text-body);">
-                    <li style="margin-bottom:8px;">✓ Anlage gemeinsam ansehen</li>
-                    <li style="margin-bottom:8px;">✓ Klare Einschätzung: lohnt sich KI bei Ihnen?</li>
-                    <li style="margin-bottom:8px;">✓ Größtes Einsparpotenzial benannt</li>
-                </ul>
-                <!-- TODO Stripe Payment Link (1.200 EUR, Promo -> 500 EUR) — interim: mailto -->
-                <a href="mailto:smaier@rvh.at?subject=Vor-Ort-Tag%20buchen%20(KI-Potenzialbewertung)&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20einen%20Vor-Ort-Tag%20(KI-Potenzialbewertung)%20buchen.%0A%0AUnternehmen%3A%20%0AStandort%20(PLZ%2FOrt)%3A%20%0AWunschtermin%3A%20%0AGalvano-Forum-Karte%20vorhanden%20(Code%20f%C3%BCr%20500%20%E2%82%AC)%3F%20%0A%0AVielen%20Dank%21" data-funnel="pay-vorort" style="display:block;text-align:center;background:#fff;color:var(--schild-blau);border:2px solid var(--schild-blau);padding:12px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.92rem;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='var(--schild-blau)';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='var(--schild-blau)';">Buchungsanfrage senden</a>
+        <div style="max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--silber);border-radius:16px;padding:32px 32px 28px;">
+            <ul style="list-style:none;padding:0;margin:0 0 22px;display:grid;gap:12px;font-size:0.95rem;color:var(--text-body);line-height:1.55;">
+                <li><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Vor-Ort-Termin — ich verstehe Ihre Anlage am ersten Tag</li>
+                <li><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Auswertung Ihrer vorhandenen Daten auf abgeschotteter Hardware, kein Cloud-Upload</li>
+                <li><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Diagnose-Bericht, Management-Foliensatz und Klick-Demo mit Ihren eigenen Daten</li>
+                <li><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Ehrliche Einschätzung: trägt Ihre Datenlage eine laufende Live-Erkennung?</li>
+            </ul>
+            <div style="border-top:1px solid var(--silber);padding-top:20px;text-align:center;">
+                <p style="color:var(--text-body);font-size:0.95rem;margin-bottom:6px;"><strong>Fester Projektpreis</strong> für die gesamte Diagnose — kein Stundensatz, keine offene Rechnung. Sie kennen die Zahl, bevor die ersten Daten übergeben werden.</p>
+                <p style="color:var(--text-light);font-size:0.88rem;margin-bottom:20px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten deutlich senken. <strong>NDA vor jeder Datenübergabe</strong>, kein Eingriff in den laufenden Betrieb.</p>
+                <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-diagnose">Erstgespräch vereinbaren</a>
+                <p style="color:var(--text-light);font-size:0.85rem;margin-top:14px;">Lieber erst unverbindlich kennenlernen? Ein <a href="mailto:smaier@rvh.at?subject=Vor-Ort-Tag%20kennenlernen&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20unverbindlich%20mit%20einem%20Vor-Ort-Tag%20starten.%0A%0AUnternehmen%3A%20%0AStandort%20(PLZ%2FOrt)%3A%20%0A%0AVielen%20Dank%21" style="color:var(--schild-blau);text-decoration:underline;">Vor-Ort-Tag</a> genügt.</p>
             </div>
-
-            <!-- Stufe 2: Fokus-Analyse (Meistgewählt) -->
-            <div class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:2px solid var(--schild-blau);border-radius:16px;padding:28px 26px 24px;box-shadow:0 8px 28px rgba(43,94,167,0.14);position:relative;">
-                <span style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:5px 14px;border-radius:50px;background:var(--schild-blau);color:#fff;white-space:nowrap;">★ Meistgewählt</span>
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:rgba(43,94,167,0.1);color:var(--schild-blau);margin-bottom:16px;margin-top:8px;">Fokus</span>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:4px;">Fokus-Analyse</h3>
-                <p style="color:var(--text-light);font-size:0.86rem;margin-bottom:14px;">1 Prozessbereich · 1–2 Wochen</p>
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--dunkelblau);line-height:1;">3.500 €</div>
-                <p style="font-size:0.82rem;color:var(--text-light);font-weight:600;margin:6px 0 16px;">netto · Rechnung mit USt.</p>
-                <ul style="list-style:none;padding:0;margin:0 0 20px;flex:1;font-size:0.9rem;line-height:1.5;color:var(--text-body);">
-                    <li style="margin-bottom:8px;">✓ Echte Datenauswertung, 1 Bereich</li>
-                    <li style="margin-bottom:8px;">✓ ROI-Schätzung</li>
-                    <li style="margin-bottom:8px;">✓ Klare Empfehlung: Audit ja oder nein</li>
-                </ul>
-                <!-- TODO Stripe Payment Link (Anzahlung 900 EUR) — interim: mailto -->
-                <a href="mailto:smaier@rvh.at?subject=Fokus-Analyse%20Slot%20sichern&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20eine%20Fokus-Analyse%20(1%20Prozessbereich)%20buchen.%0A%0AUnternehmen%3A%20%0AStandort%20(PLZ%2FOrt)%3A%20%0AProzessbereich%3A%20%0A%0AVielen%20Dank%21" data-funnel="pay-fokus" style="display:block;text-align:center;background:var(--schild-blau);color:#fff;padding:13px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.92rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--dunkelblau)';" onmouseout="this.style.background='var(--schild-blau)';">Buchungsanfrage senden</a>
-            </div>
-
-            <!-- Stufe 3: Standort-Audit -->
-            <div class="fade-up" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--silber);border-radius:16px;padding:28px 26px 24px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);margin-bottom:16px;">Das volle Bild</span>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:4px;">Standort-Audit</h3>
-                <p style="color:var(--text-light);font-size:0.86rem;margin-bottom:14px;">Ganzer Standort · 8 Wochen</p>
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--dunkelblau);line-height:1;">9.500 €</div>
-                <p style="font-size:0.82rem;color:var(--text-light);font-weight:600;margin:6px 0 16px;">netto · Rechnung mit USt.</p>
-                <ul style="list-style:none;padding:0;margin:0 0 20px;flex:1;font-size:0.9rem;line-height:1.5;color:var(--text-body);">
-                    <li style="margin-bottom:8px;">✓ Alle Prozessgruppen</li>
-                    <li style="margin-bottom:8px;">✓ Bericht + Klick-Demo</li>
-                    <li style="margin-bottom:8px;">✓ Roadmap → Pilot/Lizenz</li>
-                    <li style="color:var(--text-light);">↳ TÜV-geprüftes Verfahren</li>
-                </ul>
-                <a href="#standort-audit" data-funnel="pay-audit" style="display:block;text-align:center;background:var(--dunkelblau);color:#fff;padding:13px 18px;border-radius:8px;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:0.92rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--schild-blau)';" onmouseout="this.style.background='var(--dunkelblau)';">Details ansehen →</a>
-            </div>
-
         </div>
-
-        <p class="fade-up" style="text-align:center;max-width:760px;margin:24px auto 0;font-size:0.95rem;color:var(--text-body);line-height:1.6;"><strong>Kein Eingriff in den laufenden Betrieb</strong> · ausgewertet wird nur, was Ihre Anlage ohnehin aufzeichnet · <strong>NDA vor Datenübergabe</strong></p>
     </div>
 </section>
 
@@ -877,9 +831,9 @@
 <section class="pakete" id="standort-audit">
     <div class="container">
         <div class="section-header fade-up">
-            <p class="section-label">Stufe 3 · Das volle Bild</p>
-            <h2>Standort-Audit im Detail</h2>
-            <p>8 Wochen, ganzer Standort, Festpreis — <strong>schwarz auf weiß, und vom ersten Tag Ihnen.</strong></p>
+            <p class="section-label">Der Ablauf</p>
+            <h2>Die Diagnose im Detail</h2>
+            <p>Acht Wochen, ganzer Standort, fester Projektpreis — <strong>schwarz auf weiß, und vom ersten Tag Ihnen.</strong></p>
         </div>
 
         <style>
@@ -1085,8 +1039,8 @@
                     <details class="faq-item">
                         <summary>Was kostet die Diagnose?</summary>
                         <div class="faq-answer">
-                            <p>9.500 € netto, alles drin — Vor-Ort-Termine, Datenauswertung, Bericht und KI-Klick-Demo.</p>
-                            <p style="margin-top:10px;color:#64748b;font-size:0.92rem;">Klarer Festpreis, schnelle Abwicklung — ohne Förder-Bürokratie. Förder-Optionen werden für Folgeprojekte gemeinsam eruiert (siehe nächste Frage).</p>
+                            <p>Ein fester Projektpreis für die gesamte Diagnose — kein Stundensatz, keine offene Rechnung. Die genaue Zahl nenne ich Ihnen nach einem kurzen Erstgespräch; Sie kennen sie, bevor die ersten Daten übergeben werden.</p>
+                            <p style="margin-top:10px;color:#64748b;font-size:0.92rem;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten deutlich senken — die Optionen besprechen wir gemeinsam (siehe nächste Frage).</p>
                         </div>
                     </details>
                     <details class="faq-item">
@@ -1164,7 +1118,7 @@
         <p>Schildern Sie kurz Ihre Situation — Sie bekommen eine ehrliche Einschätzung, wo der Einstieg am meisten bringt. 30 Min, unverbindlich.</p>
         <div class="cta-buttons">
             <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary">Erstgespräch buchen</a>
-            <a href="#preise" class="btn btn-outline">Zu den Einstiegsstufen &amp; Preisen</a>
+            <a href="#preise" class="btn btn-outline">Zum Einstieg (Diagnose)</a>
         </div>
     </div>
 </section>

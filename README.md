@@ -63,8 +63,8 @@
 
 ```
 homepage/
-  index.html               Schlanke Landing Page, 7 Sektionen (Hero, Trust-Bar, 3 Leistungsbausteine je mit Mail-Button, Proof, Kontakt) — Bausteine aus _generate_leistungen.py
-  leistungen.html          Leistungs-Katalog: 3 Bausteine + Preis-Leiter (#preise), Audit-Detail (#standort-audit), Folgewege/Videos (#folgewege/#videos), FAQ (#faq)
+  index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Diagnose-Angebot ohne Preis (#angebot), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
+  leistungen.html          Detailseite (Diagnose-Faden, KEINE Preise): 3 Bausteine (aus _generate_leistungen.py) + Einstieg/Diagnose (#preise, preisfrei) + Ablauf-Detail (#standort-audit) + Folgewege/Videos (#folgewege/#videos) + FAQ (#faq)
   ausbildung.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — Datei erhalten
   sicherheit.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — ersetzt durch docs/sicherheit-methoden-standards.pdf
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie

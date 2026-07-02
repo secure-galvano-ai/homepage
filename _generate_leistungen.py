@@ -64,7 +64,7 @@ LEISTUNGEN = [
             "Konkret benannt: welche Anlage, welcher Parameter, welche Schicht",
             "Bericht, Management-Foliensatz und KI-Klick-Demo mit Ihren eigenen Daten",
         ],
-        "more": ("Zu den Einstiegsstufen & Preisen", "leistungen.html#preise"),
+        "more": ("Zum Einstieg — die Diagnose", "leistungen.html#preise"),
     },
     {
         "id": "live-monitoring",
@@ -177,13 +177,12 @@ def inject(path: Path, marker: str, inner_html: str) -> None:
 
 def main() -> None:
     catalog_html = "\n".join(render_catalog_card(i) for i in LEISTUNGEN)
-    home_html = "\n".join(render_home_card(i) for i in LEISTUNGEN)
 
     print(f"Rendering {len(LEISTUNGEN)} Leistungsbausteine...")
-    # leistungen.html = full catalog (expandable details); index.html = compact
-    # overview cards (teaser + "Details ->" link + direct mail button).
+    # leistungen.html = full catalog (expandable details).
+    # index.html traegt seit dem Predictive-Quality-Reposition keine Teaser-Karten
+    # mehr (eine Treppe statt Kachel-Menue) -> nur noch leistungen.html rendern.
     inject(ROOT / "leistungen.html", "leistungen:catalog", catalog_html)
-    inject(ROOT / "index.html", "leistungen:catalog", home_html)
     print("Done.")
 
 
