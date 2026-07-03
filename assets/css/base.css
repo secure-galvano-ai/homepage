@@ -1,0 +1,342 @@
+/* ==========================================================================
+   base.css — Single-Source-Fundament fuer alle Seiten
+   --------------------------------------------------------------------------
+   Enthaelt das, was JEDE Seite teilt: Design-Tokens (Corporate Design),
+   Reset, Basis-Typografie, Container, Navigation, Buttons, Section-Header,
+   Footer, WhatsApp-FAB, Sticky-Mobil-CTA und die fade-up-Animation.
+
+   Diese Datei ist die EINZIGE Quelle fuer diese Bausteine — Seiten binden sie
+   als erstes CSS ein (vor leistungen.css und vor dem seiteneigenen <style>).
+   Seiten-spezifisches CSS (Hero, einzelne Sektionen) bleibt im jeweiligen
+   <style>-Block der Seite bzw. in assets/css/<seite>.css.
+
+   Farbwerte sind kanonisch abgeleitet aus:
+     Business Development/areas/brand/corporate_design.md
+   Aendern sich Markenfarben, wird NUR hier editiert.
+   ========================================================================== */
+
+/* ===== RESET ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+    /* Markenpalette (kanonisch — corporate_design.md) */
+    --schild-blau: #2B5EA7;   /* Primaer — Headlines, Buttons, Akzente */
+    --dunkelblau:  #1B2A4A;   /* Hintergruende (dunkel), Text auf hell */
+    --logo-gruen:  #3D8C3E;   /* Akzent — Checkmarks, Erfolg (sparsam) */
+    --silber:      #D4D8DC;   /* Trennlinien, dezente Flaechen */
+    --hellgrau:    #F5F7FA;   /* Sektions-Hintergrund, Karten */
+    --weiss:       #FFFFFF;
+    --cyan-akzent: #00D4FF;   /* Tech-Akzent (sparsam) */
+
+    /* Funktional / abgeleitet */
+    --schild-blau-hover: #234D8C;   /* Button-/Link-Hover */
+    --dunkelblau-mid:    #162240;   /* Verlaufs-Mitte (Hero/CTA) */
+    --dunkelblau-deep:   #0F1C33;   /* Footer-Hintergrund */
+    --blau-tint:         #1A3055;   /* Verlaufs-Akzent (Hero) */
+    --text-body:         #334155;   /* Fliesstext dunkel */
+    --text-light:        #64748B;   /* Sekundaertext */
+    --whatsapp-gruen:    #25D366;   /* NUR WhatsApp-FAB */
+}
+
+/* ===== BASIS-ELEMENTE ===== */
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dunkelblau);
+    background: var(--weiss);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; }
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--silber);
+    transition: box-shadow 0.3s;
+}
+
+.nav.scrolled { box-shadow: 0 2px 20px rgba(27, 42, 74, 0.08); }
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo img { height: 40px; width: auto; }
+
+.nav-logo span {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dunkelblau);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-body);
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--schild-blau); }
+
+.nav-cta {
+    background: var(--schild-blau);
+    color: var(--weiss) !important;
+    padding: 10px 24px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.nav-cta:hover {
+    background: var(--schild-blau-hover);
+    transform: translateY(-1px);
+}
+
+/* Mobile-Menue-Toggle */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--dunkelblau); margin: 6px 0; transition: 0.3s; }
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--schild-blau);
+    color: var(--weiss);
+}
+
+.btn-primary:hover {
+    background: var(--schild-blau-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(43, 94, 167, 0.35);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--weiss);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    border-color: var(--weiss);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== SECTION-HEADER (geteiltes Abschnitts-Kopf-Muster) ===== */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-label {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--schild-blau);
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    color: var(--dunkelblau);
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--dunkelblau-deep);
+    color: rgba(255, 255, 255, 0.5);
+    padding: 48px 0 32px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img { height: 32px; opacity: 0.7; }
+.footer-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 600; font-size: 0.9rem; }
+
+.footer-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer-links a {
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover { color: rgba(255, 255, 255, 0.8); }
+
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    padding-top: 32px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.8rem;
+}
+
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.wa-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 90;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--whatsapp-gruen);
+    color: var(--weiss);
+    padding: 14px 22px 14px 18px;
+    border-radius: 50px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.wa-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+}
+
+.wa-fab svg { flex-shrink: 0; }
+
+/* ===== STICKY MOBIL-CTA ===== */
+.sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    display: none;
+    background: var(--schild-blau);
+    box-shadow: 0 -4px 16px rgba(27, 42, 74, 0.2);
+    padding: 9px 14px;
+}
+
+.sticky-cta a {
+    display: block;
+    text-align: center;
+    color: var(--weiss);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE (geteilte Bausteine) ===== */
+@media (max-width: 760px) {
+    .sticky-cta.show { display: block; }
+    body.sticky-active .wa-fab { bottom: 88px; }
+}
+
+@media (max-width: 680px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--weiss);
+        padding: 24px;
+        border-bottom: 1px solid var(--silber);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+    .wa-fab { padding: 14px; right: 16px; bottom: 16px; }
+    .wa-fab .wa-label { display: none; }
+}

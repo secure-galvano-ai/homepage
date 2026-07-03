@@ -17,77 +17,13 @@
     <meta property="og:site_name" content="secure galvano ai">
     <meta name="twitter:card" content="summary_large_image">
     <link href="fonts/fonts.css" rel="stylesheet">
+    <link href="assets/css/base.css" rel="stylesheet">
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --schild-blau: #2B5EA7;
-            --dunkelblau: #1B2A4A;
-            --logo-gruen: #3D8C3E;
-            --silber: #D4D8DC;
-            --hellgrau: #F5F7FA;
-            --weiss: #FFFFFF;
-            --cyan-akzent: #00D4FF;
-            --schild-blau-hover: #234d8c;
-            --text-body: #334155;
-            --text-light: #64748b;
-            --whatsapp-gruen: #25D366;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            color: var(--dunkelblau);
-            background: var(--weiss);
-            -webkit-font-smoothing: antialiased;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; height: auto; }
-        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-        /* Nav */
-        .nav {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(255,255,255,0.97);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--silber);
-            transition: box-shadow 0.3s;
-        }
-        .nav.scrolled { box-shadow: 0 2px 20px rgba(27, 42, 74, 0.08); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-        .nav-logo { display: flex; align-items: center; gap: 12px; }
-        .nav-logo img { height: 40px; width: auto; }
-        .nav-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--dunkelblau); }
-        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a {
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--text-body);
-            transition: color 0.2s;
-            letter-spacing: 0.02em;
-        }
-        .nav-links a:hover, .nav-links a.active { color: var(--schild-blau); }
-        .nav-cta {
-            background: var(--schild-blau);
-            color: var(--weiss) !important;
-            padding: 10px 24px;
-            border-radius: 6px;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .nav-cta:hover { background: var(--schild-blau-hover); transform: translateY(-1px); }
-        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--dunkelblau); margin: 6px 0; transition: 0.3s; }
 
         /* Page Hero */
         .page-hero {
             padding: 140px 0 70px;
-            background: linear-gradient(165deg, var(--dunkelblau) 0%, #162240 60%, #1a3055 100%);
+            background: linear-gradient(165deg, var(--dunkelblau) 0%, var(--dunkelblau-mid) 60%, var(--blau-tint) 100%);
             color: var(--weiss);
             position: relative;
             overflow: hidden;
@@ -126,7 +62,7 @@
         .research { padding: 80px 0; background: var(--hellgrau); }
 
         .project-card {
-            background: linear-gradient(135deg, var(--dunkelblau), #162240);
+            background: linear-gradient(135deg, var(--dunkelblau), var(--dunkelblau-mid));
             color: var(--weiss);
             border-radius: 16px;
             padding: 36px 40px;
@@ -303,40 +239,16 @@
             .project-meta { grid-template-columns: 1fr; }
             .footer-inner { flex-direction: column; text-align: center; }
         }
-        /* ===== WHATSAPP FLOATING BUTTON ===== */
-        .wa-fab {
-            position: fixed;
-            right: 24px;
-            bottom: 24px;
-            z-index: 90;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--whatsapp-gruen);
-            color: var(--weiss);
-            padding: 14px 22px 14px 18px;
-            border-radius: 50px;
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-weight: 600;
-            font-size: 0.92rem;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-            transition: transform 0.25s, box-shadow 0.25s;
-        }
-        .wa-fab:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
-        }
-        .wa-fab svg { flex-shrink: 0; }
-        @media (max-width: 680px) {
-            .wa-fab { padding: 14px; right: 16px; bottom: 16px; }
-            .wa-fab .wa-label { display: none; }
-        }
+
     </style>
 
     <script src="assets/js/consent.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
 </head>
 <body>
 
+<!-- BEGIN nav -->
+<!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
 <nav class="nav" id="nav">
     <div class="container nav-inner">
         <a href="index.html" class="nav-logo">
@@ -349,9 +261,12 @@
             <li><a href="forschung.html" class="active">Forschung</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstgespräch</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
+<!-- END nav -->
 
 <section class="page-hero">
     <div class="container">
@@ -493,39 +408,40 @@
     </div>
 </section>
 
-<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<!-- BEGIN wa-fab -->
+<!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
 <a class="wa-fab" href="https://wa.me/4368181483538?text=Hallo%20Stefan%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen." target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.005a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="wa-label">Sprechen wir über Ihre Möglichkeiten</span>
 </a>
+<!-- END wa-fab -->
 
+<!-- BEGIN footer -->
+<!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
 <footer class="footer">
-    <div class="container footer-inner">
-        <div class="footer-logo">
-            <img src="assets/img/logo.png" alt="Logo">
-            <span>secure galvano ai</span>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="assets/img/logo.png" alt="secure galvano ai">
+                <span>secure galvano ai</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="ueber-mich.html">Über mich</a></li>
+                <li><a href="docs/sicherheit-methoden-standards.pdf" target="_blank" rel="noopener">Sicherheit (PDF)</a></li>
+                <li><a href="forschung.html">Forschung</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="#" class="cookie-settings">Cookie-Einstellungen</a></li>
+            </ul>
+            <p class="footer-copy">Personenbezogene Daten sind gemäß der DSGVO geschützt. &copy; 2025&ndash;2026 secure-galvano-ai</p>
         </div>
-        <ul class="footer-links">
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="ueber-mich.html">Über mich</a></li>
-            <li><a href="docs/sicherheit-methoden-standards.pdf" target="_blank" rel="noopener">Sicherheit (PDF)</a></li>
-            <li><a href="forschung.html">Forschung</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
-            <li><a href="#" class="cookie-settings">Cookie-Einstellungen</a></li>
-        </ul>
-        <p class="footer-copy">&copy; 2025&ndash;2026 secure-galvano-ai</p>
     </div>
 </footer>
+<!-- END footer -->
 
-<script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 20);
-    });
-    (function(){var t=document.getElementById('navToggle');if(!t)return;t.addEventListener('click',function(){var l=document.getElementById('navLinks');var open=l.classList.toggle('open');t.setAttribute('aria-expanded',open?'true':'false');});})();
-</script>
+<!-- geteiltes Verhalten (Nav-Scroll, Mobile-Menue, fade-up) -> assets/js/site.js -->
 
 </body>
 </html>

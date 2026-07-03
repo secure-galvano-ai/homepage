@@ -59,6 +59,52 @@
 
 ---
 
+## Architektur (Single-Source, seit 2026-07-03)
+
+Gemeinsame Bausteine liegen **an genau einer Stelle** und werden nicht mehr pro
+Seite dupliziert. Wer Farben, Nav oder Footer aendert, editiert **eine** Quelle:
+
+| Baustein | Single Source | Wird genutzt von |
+|----------|---------------|------------------|
+| Design-Tokens (Farben) + Reset + Typo + Container + Nav + Buttons + section-header + Footer + WA-FAB + Sticky-CTA + fade-up | `assets/css/base.css` | jede Seite (erstes CSS im `<head>`) |
+| Geteiltes Verhalten (Nav-Scroll, Mobile-Menue, fade-up) | `assets/js/site.js` | jede Seite (`defer`) |
+| Nav + Footer + WA-FAB + Sticky (HTML) | `_generate_layout.py` -> Marker `<!-- BEGIN/END nav -->` usw. | index, leistungen, ueber-mich, forschung, impressum, datenschutz |
+| Leistungs-Karten | `_generate_leistungen.py` -> Marker | leistungen.html |
+
+Die Markenfarben in `base.css :root` sind **kanonisch abgeleitet** aus
+`Business Development/areas/brand/corporate_design.md`. Aendern sich Markenfarben,
+wird NUR `base.css` editiert. Seiten-spezifisches CSS (Hero, einzelne Sektionen)
+bleibt im `<style>`-Block der jeweiligen Seite.
+
+**Nicht migriert (bewusst):** `ausbildung.html` + `sicherheit.html` sind
+zurueckgestellt (noindex, nicht in Nav/Sitemap) und tragen weiter ihr eigenes
+CSS. Zum Reaktivieren: in `_generate_layout.py` PAGES + NAV_LINKS ergaenzen,
+Marker in die Seite setzen, `py _generate_layout.py` laufen lassen.
+
+## Qualitaetssicherung / Self-Check
+
+**Bei groesseren Aenderungen an HTML/CSS/Layout IMMER vor dem Commit/Deploy:**
+
+```bash
+cd homepage
+py _generate_layout.py          # Nav/Footer/FAB/Sticky aus Single-Source neu rendern
+py _scripts/check_site.py        # Self-Check (0 Fehler = grün)
+```
+
+`_scripts/check_site.py` ist das "pyright der Homepage" (zero-dependency ausser
+tinycss2) und prueft je Seite: HTML wohlgeformt, CSS parst sauber, alle
+`var(--token)` aufloesbar, Layout-Marker vorhanden **und in Sync mit dem
+Generator**, interne Links/Assets existieren, keine Transliterations-Reste im
+Sichttext. Exit 1 bei Fehlern -> nicht deployen.
+
+Optionaler zweiter/dritter Validator (Node, kein Java noetig), als unabhaengiger
+Gegencheck bei groesseren Umbauten:
+
+```bash
+npx --yes htmlhint *.html
+npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.html impressum.html datenschutz.html
+```
+
 ## Projektstruktur
 
 ```
@@ -75,9 +121,14 @@ homepage/
     img/                   Bild-Assets: logo, portrait, aws, trustifai, og-image,
                            techniker-monitoring, stefan-entmetallisierung-2006
     css/
-      leistungen.css       Geteilte Komponenten-CSS für die Leistungsbausteine (Karten + Mail-Button); genutzt von leistungen.html + index.html
+      base.css             SINGLE SOURCE: Tokens + Reset + Typo + Container + Nav + Buttons + section-header + Footer + WA-FAB + Sticky + fade-up (jede Seite bindet es als erstes CSS ein)
+      leistungen.css       Geteilte Komponenten-CSS für die Leistungsbausteine (Karten + Mail-Button); genutzt von leistungen.html
     js/
       consent.js           Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
+      site.js              Geteiltes Verhalten: Nav-Scroll-Schatten, Mobile-Menue-Toggle, fade-up-Scroll-Animation
+  _scripts/
+    check_site.py          Self-Check (HTML/CSS/Tokens/Marker-Sync/Links/Transliteration) — vor jedem Deploy laufen lassen
+  _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
   credentials/
     _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full
     thumbs/                Grid-Thumbnails (16 Zertifikate)
@@ -129,14 +180,19 @@ homepage/
 
 ### Farben
 
-| Farbe | Hex | Verwendung |
+**Single Source: `assets/css/base.css :root`** (kanonisch aus `corporate_design.md`).
+Farbe ändern = nur dort editieren, gilt sofort site-weit. Ad-hoc-Hex im Seiten-CSS
+vermeiden — stattdessen Token `var(--name)` nutzen.
+
+| Farbe | Token / Hex | Verwendung |
 |-------|-----|------------|
-| Schild-Blau | `#2B5EA7` | Primär — Headlines, Buttons |
-| Dunkelblau | `#1B2A4A` | Hintergründe, Text |
-| Logo-Grün | `#3D8C3E` | Akzent — Checkmarks, Erfolg |
-| Silber | `#D4D8DC` | Trennlinien, dezente Flächen |
-| Hellgrau | `#F5F7FA` | Sektions-Hintergrund |
-| Cyan | `#00D4FF` | Tech-Akzent (sparsam) |
+| Schild-Blau | `--schild-blau` `#2B5EA7` | Primär — Headlines, Buttons |
+| Dunkelblau | `--dunkelblau` `#1B2A4A` | Hintergründe, Text |
+| Logo-Grün | `--logo-gruen` `#3D8C3E` | Akzent — Checkmarks, Erfolg |
+| Silber | `--silber` `#D4D8DC` | Trennlinien, dezente Flächen |
+| Hellgrau | `--hellgrau` `#F5F7FA` | Sektions-Hintergrund |
+| Cyan | `--cyan-akzent` `#00D4FF` | Tech-Akzent (sparsam) |
+| (abgeleitet) | `--schild-blau-hover` `--dunkelblau-mid` `--dunkelblau-deep` `--blau-tint` `--text-body` `--text-light` | Hover, Verläufe, Footer-BG, Fließtext |
 
 ### Fonts
 
