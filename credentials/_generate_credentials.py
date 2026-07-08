@@ -24,26 +24,29 @@ THUMB_QUALITY = 85
 FULL_QUALITY = 90
 
 # (page_num, slug, title, subtitle, year, category)
-# page_num is 1-indexed, matching the PDF
+# page_num is 1-indexed, matching the 29-page PDF.
+# Page 17 (Startup Vorarlberg "Pre-Inkubation Batch #3") is intentionally omitted
+# from the public gallery — it is a program-participation certificate, not a
+# personal qualification, so it does not fit the credential categories below.
 CERTIFICATES = [
     (10, "02-msc-bescheid", "Master of Science — Verleihungsurkunde", "Universität Wien", "2016", "akademisch"),
     (12, "03-msc-abschluss", "Master Abschlusszeugnis", "Universität Wien — Notenschnitt 1,1, mit Auszeichnung bestanden", "2016", "akademisch"),
     (13, "04-msc-masterarbeit", "Beurteilung Masterarbeit", "High Pressure Torsion auf CoCrFeMnNi High-Entropy-Alloy", "2016", "akademisch"),
 
-    (26, "06-lehrbrief-oberflaechentechniker", "Lehrbrief Oberflächentechniker", "WKO Vorarlberg", "2006", "galvanik"),
+    (27, "06-lehrbrief-oberflaechentechniker", "Lehrbrief Oberflächentechniker", "WKO Vorarlberg", "2006", "galvanik"),
     (15, "07-meisterpruefung", "Meisterprüfung Oberflächentechnik", "WKO Kärnten", "2009", "galvanik"),
 
-    (18, "08-senior-process-manager", "Senior Process Manager (SPüK)", "Zertifizierungsstelle WIFI / Quality Austria", "2017", "management"),
+    (19, "08-senior-process-manager", "Senior Process Manager (SPüK)", "Zertifizierungsstelle WIFI / Quality Austria", "2017", "management"),
     (16, "09-itil-foundation", "ITIL Foundation in IT Service Management", "APMG International / AXELOS", "2017", "management"),
-    (20, "10-projektmanagement-pmi", "Projektmanagement Grundlagen nach PMI®", "EFS Unternehmensberatung", "2016", "management"),
-    (21, "11-scrum", "SCRUM Schulung", "EFS Unternehmensberatung", "2017", "management"),
-    (17, "12-wertstrom-workshop", "Wertstrom-Expertenworkshop", "IPAL — Wolfgang Gall, Friedrich Dürst", "2023", "management"),
-    (27, "13-lehrbrief-industriekaufmann", "Lehrbrief Industriekaufmann (mit Auszeichnung)", "WKO Vorarlberg", "2006", "management"),
-    (24, "14-ausbildertraining", "Zeugnis Ausbildertraining", "Lernlabor — Bruno Bereuter, Franz Längle", "2008", "management"),
-    (25, "15-sicherheitsvertrauensperson", "Sicherheitstechnisches Seminar (SVP)", "AUVA Landesstelle Salzburg", "2007", "management"),
+    (21, "10-projektmanagement-pmi", "Projektmanagement Grundlagen nach PMI®", "EFS Unternehmensberatung", "2016", "management"),
+    (22, "11-scrum", "SCRUM Schulung", "EFS Unternehmensberatung", "2017", "management"),
+    (18, "12-wertstrom-workshop", "Wertstrom-Expertenworkshop", "IPAL — Wolfgang Gall, Friedrich Dürst", "2023", "management"),
+    (28, "13-lehrbrief-industriekaufmann", "Lehrbrief Industriekaufmann (mit Auszeichnung)", "WKO Vorarlberg", "2006", "management"),
+    (25, "14-ausbildertraining", "Zeugnis Ausbildertraining", "Lernlabor — Bruno Bereuter, Franz Längle", "2008", "management"),
+    (26, "15-sicherheitsvertrauensperson", "Sicherheitstechnisches Seminar (SVP)", "AUVA Landesstelle Salzburg", "2007", "management"),
 
-    (23, "16-psychologischer-berater", "Psychologischer Berater / Personal Coach", "Hamburger Akademie für Fernstudien (Note 1,7)", "2018", "weiterbildung"),
-    (22, "17-channel-ausbildung", "Channel-Ausbildung", "Rhiannon Augenthaler", "2024", "weiterbildung"),
+    (24, "16-psychologischer-berater", "Psychologischer Berater / Personal Coach", "Hamburger Akademie für Fernstudien (Note 1,7)", "2018", "weiterbildung"),
+    (23, "17-channel-ausbildung", "Channel-Ausbildung", "Rhiannon Augenthaler", "2024", "weiterbildung"),
 ]
 
 
