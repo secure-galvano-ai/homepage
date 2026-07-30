@@ -63,8 +63,23 @@
   - **Faehigkeiten-Treppe verdichtet** — aus drei Karten wird eine Aussage plus kompakte
     3-Schritt-Leiste. Zwei nummerierte Treppen auf einer Seite waren die groesste Redundanz.
   - **Datenflut + Datenhoheit zusammengelegt** (waren zwei Sektionen, eine Botschaft).
-  - **Ergebnis: 9 Sektionen → 8, Seitenlaenge 9,8 → 7,0 Bildschirme (−29 %)**, Haupt-CTA von
+  - **Ergebnis: 9 Sektionen → 8, Seitenlaenge 9,8 → 7,2 Bildschirme (−27 %)**, Haupt-CTA von
     85 % auf 75 % Scrolltiefe. Kein horizontaler Ueberlauf, keine Tap-Ziele < 44 px (mobil geprueft).
+  - **Ton durchgaengig auf Kundennutzen** (Vorgabe Stefan): im Ablauf-Block keine einzige Ich-Form
+    mehr. Aus „Ohne diesen Schritt nenne ich keinen Festpreis" wird „Ihren Festpreis bekommen Sie
+    danach auf belastbarer Grundlage statt auf Verdacht".
+  - **Erstgespraech 30 → 60 Minuten**, seitenweit angeglichen (auch `ueber-mich.html` + Bookings).
+  - **Diagnose: 8 Wochen → innerhalb einer Woche.** Der Ablauf-Block auf `leistungen.html` heisst
+    jetzt „Ablauf in zwei Schritten"; die alten Phasen bildeten die neue Leiter bereits ab
+    (Phase 1 „Verstehen" = Standortanalyse, Phase 2 „Auswerten" = Diagnose). **Der Produktname
+    bleibt „Diagnose"** — `business-model.md` legt das ausdruecklich fest; „Proof of Concept" ist
+    die Funktion, nicht der Kundenname (und Beraterjargon auf einer deutschen Seite).
+    ⚠ **`BD/areas/business-model.md` fuehrt Stufe 3 weiter mit 8 Wochen / 9.500 € — muss nachgezogen
+    werden**, sonst widersprechen sich Website und Angebotsvorlage.
+  - **Je Phase ein Beleg zum Selbstbedienen** statt nur „Termin buchen": Beispiel-Auswertung
+    (Stufe 2), Unternehmenspraesentation (Stufe 3), Sicherheits-PDF (Stufe 5). Grundlage:
+    Gartner via Vereigen Media — *75 % der B2B-Einkaeufer bevorzugen einen rep-free Kaufprozess*;
+    HubSpot — oben im Trichter gehoert Aufklaerung hin, das Beratungsgespraech ans Ende.
   - **WhatsApp-FAB eingeklappt** (`base.css`) — der dauerhaft sichtbare ganze Satz konkurrierte mit
     dem primaeren CTA; 358 px → 72 px, Beschriftung klappt bei Hover/Fokus auf. Kanal bleibt.
   - **Vor-Ort-Tag entfernt** (Startseite + Leistungen) — als Produkt am 28.07. gestrichen, stand aber
