@@ -114,9 +114,16 @@ homepage/
   ausbildung.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — Datei erhalten
   sicherheit.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — ersetzt durch docs/sicherheit-methoden-standards.pdf
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
-  nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise
+  nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
+  impressum/ stefan-maier/ kontakt/ trusted-ai/ data-analytics/
+                           Redirect-Stubs auf die WordPress-Alt-URLs — generiert aus _generate_redirects.py,
+                           nicht von Hand editieren. Nur Pfade mit echtem Nachfolger; tote PDFs bleiben 404.
   impressum.html           Impressum (ECG/UGB) + Marken-Hinweis
   datenschutz.html         Datenschutzerklärung (DSGVO)
+  404.html                 GitHub-Pages-Fehlerseite (noindex, nicht in Nav/Sitemap) — faengt Alt-URLs
+                           der WordPress-Zeit ab. NUR absolute Pfade (/assets/...), weil Pages die Datei
+                           auch fuer tiefe Pfade wie /wp-content/uploads/... ausliefert. Ohne Layout-Marker
+                           (Generator erzeugt relative hrefs) und ohne JS.
   assets/
     img/                   Bild-Assets: logo, portrait, aws, trustifai, og-image,
                            techniker-monitoring, stefan-entmetallisierung-2006
@@ -129,6 +136,7 @@ homepage/
   _scripts/
     check_site.py          Self-Check (HTML/CSS/Tokens/Marker-Sync/Links/Transliteration) — vor jedem Deploy laufen lassen
   _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
+  _generate_redirects.py   Generator: Redirect-Stubs fuer WordPress-Alt-URLs (REDIRECTS-Dict = einzige Quelle)
   credentials/
     _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full
     thumbs/                Grid-Thumbnails (16 Zertifikate)
@@ -150,6 +158,39 @@ homepage/
   _generate_leistungen.py  Generator für die Leistungsbausteine (eine Datenquelle -> Karten in leistungen.html + index.html)
   README.md                Diese Datei
 ```
+
+## Search Console / Indexierung
+
+Der Bericht **Seitenindexierung** meldet regelmaessig „nicht indexierte Seiten". Die
+meisten Eintraege sind **Soll-Zustand**, kein Defekt. Einordnung vor jeder Reaktion:
+
+| Meldung | Ursache | Zu tun |
+|---|---|---|
+| **Nicht gefunden (404)** | Alt-URLs der WordPress-Installation bei IONOS. Instanz ist mit dem Vertragsende **02.06.2026** weg. Kein Link im Repo zeigt darauf (`check_site.py` prueft das). | Zweiteilen: Alt-URL **mit** heutigem Pendant -> Redirect-Stub in `_generate_redirects.py` eintragen. Alt-URL **ohne** Pendant (tote PDFs, `/wp-*.php`-Bot-Scans) -> nichts tun, 404 ist der korrekte Endzustand. |
+| **Durch „noindex"-Tag ausgeschlossen** | `ausbildung.html`, `sicherheit.html` — bewusst zurueckgestellt (Fokussierung 2026-07-02). | Nichts. Reaktivierung siehe Setup-Abschnitt oben. |
+| **Alternative Seite mit richtigem kanonischen Tag** | `/index.html` vs. `/` — Canonical zeigt korrekt auf `/`. | Nichts. |
+| **Gecrawlt / Gefunden – zurzeit nicht indexiert** | Googles Qualitaets-/Budget-Entscheidung, kein technischer Fehler. Einziger echter SEO-Hebel im Bericht. | Betroffene URL in der URL-Pruefung ansehen, Inhalt schaerfen (eigenstaendiger Text, interne Verlinkung), dann **„Indexierung beantragen"**. Nicht wiederholt beantragen. |
+
+**„Behebung validieren" bei 404 nicht klicken.** GSC validiert nur gegen 200/Redirect.
+Solange auch nur eine legitim tote URL in der Gruppe steckt, schlaegt der Lauf
+zwangslaeufig fehl — das erklaert den Status „Fehlgeschlagen" vom 25.07.2026, nicht ein
+Defekt auf der Seite. Google dropt solche URLs nach ~4–8 Wochen selbst; wer es
+beschleunigen will, nimmt `Entfernungen → Neuer Antrag → Praefix` fuer `…/wp-content/`.
+
+**Redirects auf GitHub Pages.** Server-seitige 301 gibt es nicht. Google behandelt den
+**Instant-Meta-Refresh** (`content="0; url=…"`) laut Doku als permanenten Redirect und
+nennt ihn ausdruecklich als Ersatz, wenn server-seitige Redirects nicht implementierbar
+sind. Genau das erzeugt `_generate_redirects.py` — plus `rel=canonical` und einen
+sichtbaren Link als No-JS-Fallback.
+
+**Kein `noindex` auf Redirect-Stubs.** `noindex` blockt die URL komplett aus der Suche
+und verhindert damit, dass Google den Refresh ueberhaupt als Redirect verarbeitet;
+zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL.
+`noindex` gehoert nur auf zurueckgestellte **Inhalts**seiten mit Self-Canonical
+(`ausbildung.html`, `sicherheit.html`).
+
+**Sitemap:** `lastmod` beim Deploy auf das tatsaechliche Aenderungsdatum ziehen
+(`git log -1 --format=%ad --date=short -- <datei>`) — veraltete Werte kosten Crawl-Prioritaet.
 
 ## DNS-Konfiguration (IONOS)
 

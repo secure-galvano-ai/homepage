@@ -141,10 +141,15 @@ def main() -> int:
         warn("_generate_layout", f"nicht importierbar ({e}) -> Sync-Check aus")
 
     args = sys.argv[1:]
-    pages = [ROOT / a for a in args] if args else sorted(ROOT.glob("*.html"))
+    if args:
+        pages = [ROOT / a for a in args]
+    else:
+        # Root-Seiten + die Redirect-Stubs aus _generate_redirects.py, damit ein
+        # totes Redirect-Ziel genauso auffliegt wie ein toter interner Link.
+        pages = sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("*/index.html"))
 
     for path in pages:
-        page = path.name
+        page = path.relative_to(ROOT).as_posix()
         html = path.read_text(encoding="utf-8")
 
         check_html(page, html)
@@ -184,7 +189,13 @@ def main() -> int:
                 continue
             if "${" in ref or "{{" in ref:  # JS-Template / dynamischer Pfad
                 continue
-            target = (ROOT / ref.split("#")[0].split("?")[0]).resolve()
+            rel = ref.split("#")[0].split("?")[0]
+            # Root-absolute Pfade (/assets/...) zeigen auf die Site-Wurzel, nicht
+            # auf das Laufwerk -- 404.html braucht sie, weil GitHub Pages sie fuer
+            # beliebig tiefe Alt-URLs ausliefert.
+            if rel.startswith("/"):
+                rel = rel.lstrip("/") or "index.html"
+            target = (ROOT / rel).resolve()
             if not target.exists():
                 err(page, f"toter Verweis: {ref}")
 
