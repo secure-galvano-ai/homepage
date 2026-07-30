@@ -1537,7 +1537,7 @@
             <li><a href="leistungen.html">Leistungen</a></li>
             <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="forschung.html">Forschung</a></li>
-            <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta">Erstgespräch</a></li>
+            <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta" data-funnel="cta-nav">Erstgespräch</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -1558,7 +1558,7 @@
                 <h1>Der Fehler steckt schon in Ihren Daten. <span class="accent">Sie sehen ihn nur nicht.</span></h1>
                 <p>Aus hunderttausenden Messwerten pro Tag rutscht eine Auffälligkeit von zehn Minuten unentdeckt durch — und landet als Reklamation bei Ihrem Kunden. Ich finde diese Spur in Ihren vorhandenen Daten, bevor sie teuer wird.</p>
                 <div class="hero-buttons">
-                    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary">Kostenloses Erstgespräch</a>
+                    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero">Kostenloses Erstgespräch</a>
                     <a href="#so-funktionierts" class="btn btn-outline">Wie das funktioniert ↓</a>
                 </div>
                 <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:12px;letter-spacing:0.02em;">30 Minuten · unverbindlich · kostenlos</p>
@@ -1669,54 +1669,85 @@
 </section>
 
 <!-- ===== ROTER FADEN — Fehlersuche -> Live -> Frueherkennung ===== -->
-<section id="so-funktionierts" style="padding:90px 0;background:var(--weiss);">
+<section id="so-funktionierts" style="padding:72px 0;background:var(--weiss);">
+    <div class="container" style="max-width:900px;">
+        <div class="section-header fade-up" style="margin-bottom:28px;">
+            <p class="section-label">Das Ziel</p>
+            <h2 style="color:var(--dunkelblau);">Eingreifen, bevor der Ausschuss entsteht.</h2>
+            <p>Ein Weg, kein Baukasten. Er beginnt damit, die Ursache in Ihren vorhandenen Daten zu finden — und endet dort, wo Sie reagieren, bevor überhaupt etwas schiefgeht. Fachleute nennen das <strong>Predictive Quality</strong>.</p>
+        </div>
+        <div class="fade-up" style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:12px;margin-bottom:26px;">
+            <span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">1 · Ursache finden</strong><br>In den Daten, die Sie ohnehin aufzeichnen. Kein Eingriff in den Betrieb.</span>
+            <span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">2 · Live sehen</strong><br>Auffälligkeiten erkennen, während die Ware noch bei Ihnen im Haus ist.</span>
+            <span style="flex:1 1 210px;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);box-shadow:0 6px 20px rgba(43,94,167,0.12);"><strong style="color:var(--schild-blau);">3 · Vorher reagieren</strong><br>Der Störung voraus statt hinterher — bevor Ausschuss überhaupt entsteht.</span>
+        </div>
+        <p class="fade-up" style="font-style:italic;font-size:1.02rem;color:var(--schild-blau);line-height:1.6;border-left:3px solid var(--schild-blau);padding-left:18px;margin:0 0 22px;">„Der Strom auf Gleichrichter 3 schwankt mittwochs ab 14 Uhr — das passt zu den Reklamationen aus den Vormittags-Chargen."</p>
+        <p class="fade-up" style="font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:18px 22px;margin:0;"><strong style="color:var(--text-body);">Ehrlich gesagt:</strong> Wie weit es bei Ihnen geht, entscheiden Ihre Daten — nicht mein Versprechen. Schritt 1 zeigt, was Ihre Datenlage trägt.</p>
+    </div>
+</section>
+
+<!-- ===== ABLAUF — Vertriebsleiter (Quelle: BD/areas/business-model.md, Stand 2026-07-29) =====
+     Bewusst ohne Preise: der Kunde soll den WEG verstehen, verhandelt wird im Gespraech. -->
+<section id="ablauf" style="padding:88px 0;background:var(--hellgrau);">
     <div class="container">
         <div class="section-header fade-up">
-            <p class="section-label">So funktioniert es</p>
-            <h2 style="color:var(--dunkelblau);">Erst finden. Dann live sehen. Am Ende vorher reagieren.</h2>
-            <p>Ein Weg in drei Stufen — kein Baukasten zum Auswählen. Jede Stufe baut darauf auf, was die vorige auf Ihren echten Daten bewiesen hat.</p>
+            <p class="section-label">So arbeiten wir zusammen</p>
+            <h2 style="color:var(--dunkelblau);">Sechs Schritte. Jeder beantwortet eine Frage.</h2>
+            <p>Nach jedem Schritt entscheiden Sie, ob der nächste kommt. Jeder wird einzeln beauftragt und einzeln bezahlt — bis auf das Erstgespräch, das ist kostenlos.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:stretch;">
-            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:30px 26px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);margin-bottom:16px;">Stufe 1 · heute</span>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:10px;">Fehler finden</h3>
-                <p style="color:var(--text-body);font-size:0.95rem;line-height:1.65;margin-bottom:18px;flex:1;">Ich finde die Ursache hinter Ausschuss und Reklamationen — in Ihren vorhandenen Daten. Kein Umbau, kein Eingriff in den Betrieb.</p>
-                <p style="font-style:italic;font-size:0.9rem;color:var(--schild-blau);line-height:1.55;border-left:3px solid var(--schild-blau);padding-left:14px;margin:0;">„Der Strom auf Gleichrichter 3 schwankt mittwochs ab 14 Uhr — das passt zu den Reklamationen aus den Vormittags-Chargen."</p>
+
+        <p class="fade-up" style="font-family:'Montserrat',Arial,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin:0 0 14px;">Bis zur Entscheidung</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;align-items:stretch;">
+            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:28px 24px;">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);margin-bottom:14px;">1 · kostenlos</span>
+                <h3 style="font-size:1.12rem;color:var(--dunkelblau);margin-bottom:9px;">Passt das zu Ihrem Betrieb?</h3>
+                <p style="color:var(--text-body);font-size:0.95rem;line-height:1.65;margin:0;"><strong>Erstgespräch.</strong> 30 Minuten, kein Verkauf. Wenn ich nicht der Richtige für Ihr Problem bin, sage ich Ihnen das.</p>
             </article>
-            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:30px 26px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:rgba(43,94,167,0.1);color:var(--schild-blau);margin-bottom:16px;">Stufe 2 · live</span>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:10px;">Live sehen, bevor die Ware rausgeht</h3>
-                <p style="color:var(--text-body);font-size:0.95rem;line-height:1.65;margin-bottom:18px;flex:1;">Fällt etwas aus dem Rahmen, sehen Sie es, während die Ware noch bei Ihnen ist — Zeit zu prüfen, bevor sie zu Ihrem Kunden geht.</p>
-                <p style="font-style:italic;font-size:0.9rem;color:var(--schild-blau);line-height:1.55;border-left:3px solid var(--schild-blau);padding-left:14px;margin:0;">„Der Elektrolyt an Linie 2 driftet seit heute Morgen weg — die Charge von 11 Uhr besser noch einmal ansehen, bevor sie verpackt wird."</p>
+            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:28px 24px;">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:rgba(43,94,167,0.1);color:var(--schild-blau);margin-bottom:14px;">2 · vor Ort</span>
+                <h3 style="font-size:1.12rem;color:var(--dunkelblau);margin-bottom:9px;">Sind Ihre Daten brauchbar — und wo liegt das Geld?</h3>
+                <p style="color:var(--text-body);font-size:0.95rem;line-height:1.65;margin:0;"><strong>Standortanalyse.</strong> Ich sehe mir Ihre Anlagen an: welches Signal anliegt, wie ich drankomme, was der Aufwand ist. Dazu, welcher Anwendungsfall Ihnen wie viel pro Jahr bringt. Ohne diesen Schritt nenne ich keinen Festpreis.</p>
             </article>
-            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:16px;padding:30px 26px;box-shadow:0 8px 28px rgba(43,94,167,0.14);">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:var(--schild-blau);color:#fff;margin-bottom:16px;">Stufe 3 · das Ziel</span>
-                <h3 style="font-size:1.2rem;color:var(--dunkelblau);margin-bottom:10px;">Früherkennung: reagieren, bevor etwas schiefgeht</h3>
-                <p style="color:var(--text-body);font-size:0.95rem;line-height:1.65;margin-bottom:18px;flex:1;">Das Ziel: eingreifen, bevor überhaupt Ausschuss entsteht — der Störung voraus statt hinterher. (Fachleute nennen das Predictive Quality.)</p>
-                <p style="font-style:italic;font-size:0.9rem;color:var(--schild-blau);line-height:1.55;border-left:3px solid var(--schild-blau);padding-left:14px;margin:0;">„Die Werte laufen in dieselbe Richtung wie vor dem letzten Ausfall — nachfüllen, bevor es kippt."</p>
+            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:16px;padding:28px 24px;box-shadow:0 8px 28px rgba(43,94,167,0.14);">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:var(--schild-blau);color:#fff;margin-bottom:14px;">3 · 8 Wochen</span>
+                <h3 style="font-size:1.12rem;color:var(--dunkelblau);margin-bottom:9px;">Geht es überhaupt?</h3>
+                <p style="color:var(--text-body);font-size:0.95rem;line-height:1.65;margin:0;"><strong>Diagnose.</strong> Auf Ihren vorhandenen Daten, ohne Eingriff in den Betrieb. Bericht mit der belegten Ursache, Foliensatz für Beirat oder Eigentümer, Klick-Demo mit Ihren eigenen Zahlen. Am Ende ein ehrliches Ja oder Nein.</p>
             </article>
         </div>
-        <p class="fade-up" style="max-width:780px;margin:32px auto 0;text-align:center;font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:20px 26px;"><strong style="color:var(--text-body);">Ehrlich gesagt:</strong> Live-Erkennung und Früherkennung beweisen sich erst auf Ihren echten Daten. Der erste Schritt zeigt, wie weit Ihre Datenlage trägt — niemand verspricht Ihnen Stufe 3, bevor Stufe 1 sie belegt hat.</p>
-        <div class="fade-up" style="text-align:center;margin-top:30px;">
-            <a href="#angebot" class="btn btn-primary">So funktioniert der Einstieg ↓</a>
+
+        <p class="fade-up" style="font-family:'Montserrat',Arial,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin:34px 0 14px;">Wenn es trägt</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;align-items:stretch;">
+            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;">Schritt 4</span>
+                <h3 style="font-size:1.05rem;color:var(--dunkelblau);margin-bottom:8px;">Wirkt es im laufenden Betrieb?</h3>
+                <p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;"><strong>Pilot.</strong> Echtbetrieb an einer Anlage, gemessen an einer Kennzahl, die wir vorher gemeinsam festlegen. Befristet.</p>
+            </article>
+            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;">Schritt 5</span>
+                <h3 style="font-size:1.05rem;color:var(--dunkelblau);margin-bottom:8px;">Wie kommt es in den Regelbetrieb?</h3>
+                <p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;"><strong>Inbetriebnahme.</strong> Einrichten und Einfahren auf den Anlagen Ihres Standorts, mit Abnahme.</p>
+            </article>
+            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
+                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;">Schritt 6</span>
+                <h3 style="font-size:1.05rem;color:var(--dunkelblau);margin-bottom:8px;">Wie bleibt es richtig?</h3>
+                <p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;"><strong>Betreuung.</strong> Laufend je überwachter Anlage: Fern-Befund, Nachjustieren wenn sich die Anlage verändert, Nachweise für Ihre Dokumentation.</p>
+            </article>
+        </div>
+
+        <div class="fade-up" style="text-align:center;margin-top:38px;">
+            <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-ablauf" style="font-size:1.02rem;padding:15px 36px;">Mit Schritt 1 beginnen — Erstgespräch</a>
+            <p style="color:var(--text-light);font-size:0.9rem;margin-top:16px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten der späteren Schritte deutlich senken.</p>
         </div>
     </div>
 </section>
 
-<!-- ===== DEPTH PROOF — Datenflut + Erklaerbarkeit ===== -->
-<section style="padding:70px 0;background:var(--hellgrau);">
-    <div class="container fade-up" style="max-width:820px;text-align:center;">
-        <p class="section-label">So viel Datenflut — und trotzdem nachvollziehbar</p>
-        <p style="font-size:1.12rem;color:var(--text-body);line-height:1.75;margin-top:12px;">Aus rund <strong>300 Sensoren</strong> und einer <strong>halben Million Messwerten pro Tag</strong> bleibt, was zählt — die wenigen Meldungen mit echter Ursache. <strong>Ihr Techniker bleibt am Hebel:</strong> Die KI liefert die Spur, entschieden wird bei Ihnen.</p>
-    </div>
-</section>
-
-<!-- ===== EINWAND-ABBAU ===== -->
-<section style="padding:70px 0;background:var(--weiss);">
+<!-- ===== EINWAND-ABBAU — Datenflut + Datenhoheit (zusammengelegt) ===== -->
+<section style="padding:76px 0;background:var(--weiss);">
     <div class="container fade-up" style="max-width:920px;">
-        <div class="section-header" style="margin-bottom:34px;">
+        <div class="section-header" style="margin-bottom:30px;">
             <p class="section-label">Ruhig, im Haus, ohne Risiko</p>
             <h2 style="color:var(--dunkelblau);">Ihre Daten bleiben bei Ihnen</h2>
+            <p>Aus rund <strong>300 Sensoren</strong> und einer <strong>halben Million Messwerten pro Tag</strong> bleibt, was zählt — die wenigen Meldungen mit echter Ursache. Ihr Techniker bleibt am Hebel: Die KI liefert die Spur, entschieden wird bei Ihnen.</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
             <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Lokal</strong> auf abgeschotteter Hardware — kein Cloud-Upload.</div>
@@ -1727,34 +1758,14 @@
     </div>
 </section>
 
-<!-- ===== ANGEBOT — EIN Einstieg, kein Preis auf der Startseite ===== -->
-<section id="angebot" style="padding:84px 0;background:var(--hellgrau);">
-    <div class="container fade-up" style="max-width:720px;">
-        <div style="background:#fff;border:1px solid var(--silber);border-radius:20px;padding:48px 44px;text-align:center;box-shadow:0 12px 40px rgba(27,42,74,0.08);">
-            <p class="section-label">Der Einstieg</p>
-            <h2 style="color:var(--dunkelblau);font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:18px;">Die Diagnose auf Ihren eigenen Daten</h2>
-            <p style="color:var(--text-body);font-size:1.08rem;line-height:1.75;max-width:600px;margin:0 auto 30px;">Acht Wochen, ein Ergebnis: die belegte Ursache hinter Ihrem Ausschuss — plus die ehrliche Antwort, ob Ihre Datenlage eine laufende Live-Erkennung trägt. Ob danach mehr sinnvoll ist, entscheiden die Ergebnisse — nicht ein Verkaufsgespräch.</p>
-            <ul style="list-style:none;padding:0;margin:0 auto 30px;max-width:540px;text-align:left;display:grid;gap:12px;">
-                <li style="line-height:1.55;color:var(--text-body);"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Diagnose-Bericht mit der belegten Ursache — in Ihrer Sprache</li>
-                <li style="line-height:1.55;color:var(--text-body);"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Management-Foliensatz für Beirat, Eigentümer oder Hauptkunde</li>
-                <li style="line-height:1.55;color:var(--text-body);"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Klick-Demo mit Ihren eigenen Daten</li>
-                <li style="line-height:1.55;color:var(--text-body);"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Ehrliche Einschätzung: trägt Ihre Datenlage eine laufende Live-Erkennung?</li>
-            </ul>
-            <p style="color:var(--text-body);font-size:0.95rem;margin-bottom:8px;">Ein <strong>fester Projektpreis</strong> für die gesamte Diagnose — kein Stundensatz, keine offene Rechnung. Sie kennen die Zahl, bevor die ersten Daten übergeben werden, und entscheiden in Ruhe.</p>
-            <p style="color:var(--text-light);font-size:0.88rem;margin-bottom:26px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten deutlich senken.</p>
-            <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-angebot" style="font-size:1.02rem;padding:15px 36px;">Erstgespräch vereinbaren</a>
-            <p style="color:var(--text-light);font-size:0.9rem;margin-top:20px;line-height:1.6;">Lieber erst unverbindlich kennenlernen? Ein <a href="mailto:smaier@rvh.at?subject=Vor-Ort-Tag%20kennenlernen&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20unverbindlich%20mit%20einem%20Vor-Ort-Tag%20starten.%0A%0AUnternehmen%3A%20%0AStandort%20(PLZ%2FOrt)%3A%20%0A%0AVielen%20Dank%21" style="color:var(--schild-blau);text-decoration:underline;">Vor-Ort-Tag</a> genügt — einen Tag gemeinsam auf Ihre Daten schauen, ohne große Verpflichtung.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== ERSTGESPRÄCH ===== -->
+<!-- ===== ABSCHLUSS — zwei Wege, kein Termindruck. #kontakt wird von /kontakt/ angesteuert. -->
 <section class="cta" id="kontakt">
     <div class="container fade-up">
-        <h2>Noch nicht so weit für einen Termin?</h2>
-        <p>Schildern Sie Ihr Anliegen kurz per Mail — Sie bekommen eine ehrliche fachliche Einschätzung, ob eine Diagnose bei Ihnen überhaupt Sinn ergibt. Ganz unverbindlich, ohne Termindruck.</p>
+        <h2>Reden wir über Ihren Ausschuss.</h2>
+        <p>30 Minuten, kostenlos, kein Verkauf. Lieber erst schreiben? Schildern Sie Ihr Anliegen per Mail — Sie bekommen eine ehrliche Einschätzung, ob sich der erste Schritt bei Ihnen überhaupt lohnt.</p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-            <a href="mailto:smaier@rvh.at?subject=Anfrage%20an%20secure%20galvano%20ai&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20mein%20Anliegen%20schildern.%0A%0AUnternehmen%3A%20%0AStandort%20(PLZ%2FOrt)%3A%20%0AWorum%20es%20geht%3A%20%0A%0AVielen%20Dank%21" data-funnel="mail-kontakt" class="btn" style="background:#fff;color:var(--dunkelblau);">✉ Anliegen per Mail schildern</a>
+            <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" data-funnel="cta-abschluss" class="btn btn-primary">Erstgespräch vereinbaren</a>
+            <a href="mailto:smaier@rvh.at?subject=Anfrage%20an%20secure%20galvano%20ai&amp;body=Hallo%20Stefan%2C%0A%0Aich%20m%C3%B6chte%20mein%20Anliegen%20schildern.%0A%0AUnternehmen%3A%20%0AStandort%20(PLZ%2FOrt)%3A%20%0AWorum%20es%20geht%3A%20%0A%0AVielen%20Dank%21" data-funnel="mail-abschluss" class="btn" style="background:#fff;color:var(--dunkelblau);">✉ Anliegen per Mail schildern</a>
         </div>
         <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-top:18px;">Die Mail öffnet vorausgefüllt — Sie ergänzen nur Ihre Angaben. Antwort in der Regel innerhalb eines Werktags.</p>
     </div>
@@ -1770,7 +1781,7 @@
 <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
 <!-- BEGIN wa-fab -->
 <!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
-<a class="wa-fab" href="https://wa.me/4368181483538?text=Hallo%20Stefan%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen." target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen">
+<a class="wa-fab" href="https://wa.me/4368181483538?text=Hallo%20Stefan%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen." target="_blank" rel="noopener" data-funnel="cta-whatsapp-fab" aria-label="Per WhatsApp anfragen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.005a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="wa-label">Sprechen wir über Ihre Möglichkeiten</span>
 </a>
@@ -1780,7 +1791,7 @@
 <!-- BEGIN sticky-cta -->
 <!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
 <div class="sticky-cta" id="stickyCta">
-    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener">Kostenloses Erstgespräch buchen</a>
+    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" data-funnel="cta-sticky">Kostenloses Erstgespräch buchen</a>
 </div>
 <!-- END sticky-cta -->
 

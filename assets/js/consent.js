@@ -18,14 +18,22 @@
     }
 
     // --- Microsoft Clarity laden + Sales-Funnel-Events auf den CTAs setzen ---
+    var funnelVerdrahtet = false;
+
     function loadClarity() {
-        if (window.clarity) return;
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-            t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, 'clarity', 'script', CLARITY_PROJECT_ID);
-        wireFunnelEvents();
+        if (!window.clarity) {
+            (function (c, l, a, r, i, t, y) {
+                c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+                t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+                y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+            })(window, document, 'clarity', 'script', CLARITY_PROJECT_ID);
+        }
+        // Ausserhalb des window.clarity-Checks: nach "Cookie-Einstellungen -> erneut
+        // akzeptieren" ist clarity schon geladen, die Listener waeren sonst nie gesetzt.
+        if (!funnelVerdrahtet) {
+            funnelVerdrahtet = true;
+            wireFunnelEvents();
+        }
     }
 
     // CTA-Klicks als Clarity-Events: Bookings, WhatsApp, E-Mail
@@ -43,14 +51,47 @@
             });
         });
 
-        // Leistungs-Kacheln + sonstige markierte Funnel-Elemente (data-funnel)
+        // Leistungs-Kacheln + sonstige markierte Funnel-Elemente (data-funnel).
+        // WICHTIG: Die drei Selektoren oben feuern fuer JEDEN Buchungs-/Mail-Link
+        // denselben Event-Namen -- daran laesst sich nicht ablesen, WELCHE Position
+        // geklickt wurde. Genau dafuer traegt jeder CTA zusaetzlich ein data-funnel.
         document.querySelectorAll('[data-funnel]').forEach(function (el) {
             el.addEventListener('click', function () {
                 if (window.clarity) window.clarity('event', el.getAttribute('data-funnel'));
             });
         });
 
+        wirePdfDownloads();
+        wireVideoInteraktion();
         wireScrollDepth();
+    }
+
+    // PDF-Downloads: eigenes Event je Dokument. Die Unternehmenspraesentation ist das
+    // staerkste Sales-Asset und war bisher als einziges ungetrackt.
+    function wirePdfDownloads() {
+        document.querySelectorAll('a[href$=".pdf"]').forEach(function (el) {
+            var name = el.getAttribute('href').split('/').pop().replace(/\.pdf$/, '');
+            el.addEventListener('click', function () {
+                if (window.clarity) window.clarity('event', 'pdf-' + name);
+            });
+        });
+    }
+
+    // Video-Start ist ueber die YouTube-IFrame-API nur mit einem zusaetzlichen
+    // Google-Skript messbar -- das wollen wir dem nocookie-Embed nicht antun.
+    // Ersatz ohne Fremd-Request: Klickt jemand in das iframe, verliert das
+    // Eltern-Dokument den Fokus und activeElement wird das iframe.
+    function wireVideoInteraktion() {
+        var video = document.querySelector('iframe[src*="youtube"]');
+        if (!video) return;
+        var gemeldet = false;
+        window.addEventListener('blur', function () {
+            if (gemeldet) return;
+            if (document.activeElement === video) {
+                gemeldet = true;
+                if (window.clarity) window.clarity('event', 'video-gestartet');
+            }
+        });
     }
 
     // Scroll-Tiefe als Clarity-Events (25/50/75/100 %), einmal pro Marke

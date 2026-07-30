@@ -279,6 +279,27 @@ img { max-width: 100%; height: auto; }
 
 .wa-fab svg { flex-shrink: 0; }
 
+/* Der Beschriftungstext ist standardmaessig eingeklappt: als dauerhaft sichtbarer
+   ganzer Satz konkurrierte er direkt mit dem primaeren CTA (Attention Ratio) --
+   in 60 Tagen ohne einen einzigen Klick. Der Kanal bleibt, das Gewicht sinkt.
+   Auf Hover/Fokus klappt die Beschriftung auf. */
+.wa-fab .wa-label {
+    display: inline-block;   /* max-width greift nicht auf inline-Elemente */
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transition: max-width 0.3s ease, opacity 0.2s ease, margin-left 0.3s ease;
+    margin-left: -10px;   /* neutralisiert das gap solange eingeklappt */
+}
+
+.wa-fab:hover .wa-label,
+.wa-fab:focus-visible .wa-label {
+    max-width: 320px;
+    opacity: 1;
+    margin-left: 0;
+}
+
 /* ===== STICKY MOBIL-CTA ===== */
 .sticky-cta {
     position: fixed;

@@ -53,6 +53,28 @@
   - Leistungen von 6 auf **3 Kern-Bausteine** reduziert (KI-Diagnose, Live-Monitoring, KPI-Dashboard) — Datenquelle `LEISTUNGEN` in `_generate_leistungen.py`, danach `py _generate_leistungen.py`.
   - Sicherheits-Inhalt als **Corporate-PDF** `docs/sicherheit-methoden-standards.pdf` (Statement „Methoden & Standards"), verlinkt in der Trust-Bar (Startseite) und im Footer. Quelle/Build: `Desktop/sga_pdf_build/` (Pandoc + XeLaTeX via `templates/pdf-corporate/build_pdf.py`, kundentaugliches `_statement_template.tex`).
 
+- [x] **Fokussierung auf EINE Botschaft (2026-07-30)** — ausgeloest durch 60 Tage Clarity-Daten
+  (104 Sitzungen, **0 Klicks** auf den Buchungs-CTA, 15 % erreichten den Abschluss-Bereich).
+  - **Neue Sektion `#ablauf` „So arbeiten wir zusammen"** — die sechsstufige Vertriebsleiter aus
+    `BD/areas/business-model.md` (Stand 29.07.), **ohne Preise**. Schliesst die Luecke, dass die
+    Website die **Standortanalyse** (Pflicht-Gate vor jedem Festpreis) gar nicht kannte und direkt
+    die 8-Wochen-Diagnose versprach. Ersetzt die Sektionen „Die Diagnose auf Ihren eigenen Daten"
+    und „Noch nicht so weit für einen Termin?" — beide gingen darin auf.
+  - **Faehigkeiten-Treppe verdichtet** — aus drei Karten wird eine Aussage plus kompakte
+    3-Schritt-Leiste. Zwei nummerierte Treppen auf einer Seite waren die groesste Redundanz.
+  - **Datenflut + Datenhoheit zusammengelegt** (waren zwei Sektionen, eine Botschaft).
+  - **Ergebnis: 9 Sektionen → 8, Seitenlaenge 9,8 → 7,0 Bildschirme (−29 %)**, Haupt-CTA von
+    85 % auf 75 % Scrolltiefe. Kein horizontaler Ueberlauf, keine Tap-Ziele < 44 px (mobil geprueft).
+  - **WhatsApp-FAB eingeklappt** (`base.css`) — der dauerhaft sichtbare ganze Satz konkurrierte mit
+    dem primaeren CTA; 358 px → 72 px, Beschriftung klappt bei Hover/Fokus auf. Kanal bleibt.
+  - **Vor-Ort-Tag entfernt** (Startseite + Leistungen) — als Produkt am 28.07. gestrichen, stand aber
+    noch direkt neben dem Haupt-CTA. Auf der Leistungsseite ersetzt durch den Hinweis auf die Standortanalyse.
+  - **Tracking differenziert** — bisher feuerten alle vier Buchungs-CTAs denselben Event-Namen, die
+    Position war nicht ablesbar. Jetzt je Position ein eigener: `cta-nav`, `cta-hero`, `cta-ablauf`,
+    `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`. Dazu neu: `pdf-<dateiname>`
+    je Download und `video-gestartet`. Ausserdem gefixt: nach „Cookie-Einstellungen → erneut
+    akzeptieren" wurden die Funnel-Listener nie gesetzt.
+
 ## Optional (noch offen)
 
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
@@ -111,7 +133,8 @@ npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.htm
 homepage/
   index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Diagnose-Angebot ohne Preis (#angebot), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
   leistungen.html          Detailseite (Diagnose-Faden, KEINE Preise): 3 Bausteine (aus _generate_leistungen.py) + Einstieg/Diagnose (#preise, preisfrei) + Ablauf-Detail (#standort-audit) + Folgewege/Videos (#folgewege/#videos) + FAQ (#faq)
-  ausbildung.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — Datei erhalten
+  ausbildung.html          Redirect-Stub auf die Startseite (Praxiskurs = Saeule 2, bis 2027 eingefroren).
+                           Kursinhalt reaktivieren: git show feed14a:ausbildung.html
   sicherheit.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — ersetzt durch docs/sicherheit-methoden-standards.pdf
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
