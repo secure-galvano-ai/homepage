@@ -1,3 +1,11 @@
+"""STILLGELEGT am 2026-07-30 -- leistungen.html ist nur noch ein Redirect-Stub.
+
+Die Leistungsbausteine sind mit der Konsolidierung auf die Startseite in den
+Ablauf-Block (#ablauf) aufgegangen. Dieses Skript wuerde den Stub ueberschreiben.
+NICHT ausfuehren. Letzter Stand der erzeugten Seite: git show 78ce8c3:leistungen.html
+"""
+raise SystemExit(__doc__)
+
 """Generate the Leistungsbausteine cards (catalog + teaser) from one data source.
 
 Single source of truth = the LEISTUNGEN list below. Running this script renders

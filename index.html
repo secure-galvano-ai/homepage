@@ -105,6 +105,27 @@
           "provider": { "@id": "https://secure-galvano-ai.com/#business" },
           "description": "Folgeleistungen nach der Diagnose: KPI-Dashboard, Live-Auswertung in der Produktion (Anomalieerkennung), kontinuierliches Tracking. Lokal, ohne Cloud, Trusted-AI-Methodik. Konditionen individuell auf Basis Diagnose-Ergebnis. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
           "serviceType": "Custom Software Development"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://secure-galvano-ai.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Welche Daten brauchen Sie — und was, wenn unsere Datenlage nicht ideal ist?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Excel-Aufzeichnungen, Laborprotokolle, Reklamationsberichte. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage etwas Wesentliches nicht hergibt, bekommen Sie eine klare Aussage dazu statt einer Ausrede." }
+            },
+            {
+              "@type": "Question",
+              "name": "Was, wenn die Ursache nicht eindeutig zu finden ist?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Meistens werden die Hauptursachen klar sichtbar. In den kniffligen Fällen bekommen Sie trotzdem etwas in die Hand: welche Hypothesen die Daten stützen und welche ausgeschlossen sind, plus den Vorschlag, welche gezielte Zusatzmessung die offene Frage klärt. Sie gehen in jedem Fall mit mehr Klarheit raus als vorher." }
+            },
+            {
+              "@type": "Question",
+              "name": "Wir haben mehrere Standorte. Wie läuft das?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Es beginnt an einem Standort — der trägt die Analyse. Jeder weitere ist danach deutlich günstiger, weil die Methode steht und nichts neu entwickelt werden muss. Abgerechnet wird je überwachter Anlage, und Sie entscheiden Standort für Standort neu." }
+            }
+          ]
         }
       ]
     }
@@ -1534,7 +1555,7 @@
             <span>secure galvano ai</span>
         </a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="index.html#ablauf">Leistungen</a></li>
             <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="forschung.html">Forschung</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta" data-funnel="cta-nav">Erstgespräch</a></li>
@@ -1765,11 +1786,25 @@
             <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Kein Eingriff</strong> in die Anlage, keine neue Verkabelung.</div>
             <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Es reichen die <strong style="color:var(--dunkelblau);">Daten, die Sie ohnehin aufzeichnen</strong>. Energiearm, ohne Rechenzentrum.</div>
             <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">NDA</strong>, bevor auch nur ein Messwert Ihr Haus verlässt.</div>
+            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Ergebnisse gehören Ihnen</strong> — Bericht und Klick-Demo, voller Zugriff, kein Lock-in.</div>
         </div>
-        <!-- Einziger inhaltlicher Link auf die Leistungsseite. Bewusst hier: wer die
-             Einwand-Kacheln liest, sucht Tiefe -- und hier konkurriert er nicht mit
-             dem Abschluss-CTA. Ueber Nav und Footer allein blieb die Seite dunkel. -->
-        <p style="text-align:center;margin-top:26px;"><a href="leistungen.html#faq" data-funnel="zu-leistungen" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Alle Fragen und Antworten im Detail →</a></p>
+
+        <!-- Nur die drei Fragen, die weder die Kacheln oben noch die sechs Schritte
+             schon beantworten. Alles andere aus der frueheren FAQ war redundant. -->
+        <div class="fade-up" style="max-width:760px;margin:34px auto 0;">
+            <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
+                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Welche Daten brauchen Sie — und was, wenn unsere Datenlage nicht ideal ist?</summary>
+                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Excel-Aufzeichnungen, Laborprotokolle, Reklamationsberichte. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage etwas Wesentliches nicht hergibt, bekommen Sie eine klare Aussage dazu statt einer Ausrede.</p>
+            </details>
+            <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
+                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Was, wenn die Ursache nicht eindeutig zu finden ist?</summary>
+                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Meistens werden die Hauptursachen klar sichtbar. In den kniffligen Fällen bekommen Sie trotzdem etwas in die Hand: welche Hypothesen die Daten stützen und welche ausgeschlossen sind, plus den Vorschlag, welche gezielte Zusatzmessung die offene Frage klärt. Sie gehen in jedem Fall mit mehr Klarheit raus als vorher.</p>
+            </details>
+            <details class="faq-item" style="border-top:1px solid var(--silber);border-bottom:1px solid var(--silber);padding:16px 0;">
+                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Wir haben mehrere Standorte. Wie läuft das?</summary>
+                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Es beginnt an einem Standort — der trägt die Analyse. Jeder weitere ist danach deutlich günstiger, weil die Methode steht und nichts neu entwickelt werden muss. Abgerechnet wird je überwachter Anlage, und Sie entscheiden Standort für Standort neu.</p>
+            </details>
+        </div>
     </div>
 </section>
 
@@ -1825,7 +1860,7 @@
             </div>
             <ul class="footer-links">
                 <li><a href="index.html">Startseite</a></li>
-                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="index.html#ablauf">Leistungen</a></li>
                 <li><a href="ueber-mich.html">Über mich</a></li>
                 <li><a href="docs/sicherheit-methoden-standards.pdf" target="_blank" rel="noopener">Sicherheit (PDF)</a></li>
                 <li><a href="forschung.html">Forschung</a></li>

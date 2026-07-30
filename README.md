@@ -90,6 +90,17 @@
     je Download und `video-gestartet`. Ausserdem gefixt: nach „Cookie-Einstellungen → erneut
     akzeptieren" wurden die Funnel-Listener nie gesetzt.
 
+- [x] **Konsolidierung auf EINE Seite (2026-07-30, Entscheidung Stefan):** `leistungen.html`
+  aufgeloest, alles auf der Startseite. Nach dem Fokus-Umbau war der Grossteil ohnehin redundant —
+  die sechs Schritte deckten Ablauf und Folgewege ab, die Einwand-Kacheln vier der neun FAQ.
+  **Uebernommen wurde nur das Nicht-Redundante:** drei FAQ (Datenlage, uneindeutige Ursache,
+  mehrere Standorte) als eingeklapptes Accordion + Datenhoheit als fuenfte Kachel. Die drei
+  Demo-Videos haengen jetzt an den Schritten 3, 4 und 6. FAQPage-Schema von `leistungen.html`
+  nach `index.html` uebernommen (Rich-Result-Faehigkeit bleibt). Nav und Footer zeigen auf
+  `index.html#ablauf`, Sitemap 6 -> 5 URLs, `_generate_leistungen.py` stillgelegt.
+  **Kosten: 7,4 -> 7,8 Bildschirme** (+0,4 fuer eine ganze aufgenommene Seite, weil die FAQ
+  eingeklappt ist). Haupt-CTA bei 71 %.
+
 ## Optional (noch offen)
 
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
@@ -147,7 +158,8 @@ npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.htm
 ```
 homepage/
   index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Diagnose-Angebot ohne Preis (#angebot), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
-  leistungen.html          Detailseite (Diagnose-Faden, KEINE Preise): 3 Bausteine (aus _generate_leistungen.py) + Einstieg/Diagnose (#preise, preisfrei) + Ablauf-Detail (#standort-audit) + Folgewege/Videos (#folgewege/#videos) + FAQ (#faq)
+  leistungen.html          Redirect-Stub auf index.html#ablauf (aufgeloest 2026-07-30, alles auf EINE Seite).
+                           Vollstaendige Seite: git show 78ce8c3:leistungen.html
   ausbildung.html          Redirect-Stub auf die Startseite (Praxiskurs = Saeule 2, bis 2027 eingefroren).
                            Kursinhalt reaktivieren: git show feed14a:ausbildung.html
   sicherheit.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — ersetzt durch docs/sicherheit-methoden-standards.pdf
@@ -191,9 +203,9 @@ homepage/
   apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
   CNAME                    Custom Domain Config
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (6 URLs)
+  sitemap.xml              Google Sitemap (5 URLs)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
-  _generate_leistungen.py  Generator für die Leistungsbausteine (eine Datenquelle -> Karten in leistungen.html + index.html)
+  _generate_leistungen.py  STILLGELEGT (Ziel ist nur noch ein Redirect-Stub) — bricht bewusst beim Aufruf ab
   README.md                Diese Datei
 ```
 
