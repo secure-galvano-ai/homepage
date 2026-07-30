@@ -34,7 +34,7 @@ REDIRECTS = {
     "stefan-maier": ("/ueber-mich.html", "Über mich"),
     "kontakt": ("/index.html#kontakt", "Kontakt"),
     "trusted-ai": ("/forschung.html", "Forschung & TÜV-Modellprüfung"),
-    "data-analytics": ("/leistungen.html", "Leistungen"),
+    "data-analytics": ("/index.html#ablauf", "Leistungen"),
 }
 
 SITE = "https://secure-galvano-ai.com"
