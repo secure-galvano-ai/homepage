@@ -90,6 +90,31 @@
     je Download und `video-gestartet`. Ausserdem gefixt: nach „Cookie-Einstellungen → erneut
     akzeptieren" wurden die Funnel-Listener nie gesetzt.
 
+- [x] **Presse-/Aktuell-Sektion (2026-08-10)** — VN-/VOL.AT-Bericht vom 06.08.2026
+  („Alberschwender Ingenieur entwickelt Prüf-Software, die mit KI immer besser wird",
+  Andreas Scalet) eingebunden.
+  - **Neue Sektion `#aktuell` auf `index.html`**, direkt **nach der Trust-Bar** — bewusst hoch:
+    laut Clarity erreichen nur ~15 % den unteren Seitenbereich, eine News-Sektion im Fuss waere tot.
+    Zwei Karten: **Pressestimme** (Headline + Kurzzitat + Quelle) und **Termin** (KI Days Vorarlberg,
+    28.–30.09.2026, Forum Vorarlberg / Campus V Dornbirn) als Dringlichkeits-Anker mit
+    eigenem Funnel-Event `cta-aktuell-termin`; darunter das Knappheits-Zitat aus dem Artikel
+    („in der Tiefe statt in der Breite") — **fremdbelegt statt selbst behauptet**.
+  - **`ueber-mich.html`:** Sektion `#fachpresse` heisst jetzt „Presse & Veröffentlichungen",
+    Medienbericht als erste, volle Breite einnehmende Karte ueber den beiden Leuze-Fachartikeln.
+  - **Bewusst OHNE Link/PDF.** Der VOL.AT-Artikel liegt hinter der Bezahlschranke — ein Button
+    dorthin fuehrt Besucher gegen eine Paywall, das ist schlechter als kein Button. Der Volltext
+    (auch als Scan oder nachgebautes PDF) darf **nicht** selbst gehostet werden: Nachdruck-/
+    Online-Rechte liegen bei Russmedia/VN, Zitatrecht deckt nur Kurzzitate. Stattdessen
+    „Pressestimme"-Karte: Kurzzitat + Blattname + Autor + Datum. **Button-Slot liegt
+    auskommentiert im Code** (`index.html`, `ueber-mich.html`, Marker `VOLAT_ARTIKEL_URL`) —
+    einkommentieren, sobald eine frei zugaengliche URL oder eine schriftliche Verlagsfreigabe
+    vorliegt.
+  - **Urheberrecht generell:** nur Kurzzitate + Quellenangabe. **Keine VN-Fotos** (©Fa/Demako, ©FA)
+    und **kein VOL.AT-Logo als Bild** — Quellen-Nennung als Text. Beim Nachpflegen beibehalten.
+  - **Pflegeregel:** max. 2 Karten in `#aktuell`, veraltete ersetzen statt stapeln. Ist kein
+    Termin offen, Karte 2 durch die naechste Neuigkeit tauschen — eine sichtbar veraltete
+    News-Sektion schadet mehr als keine. **Nach dem 30.09.2026 ist die Termin-Karte abgelaufen.**
+
 - [x] **Konsolidierung auf EINE Seite (2026-07-30, Entscheidung Stefan):** `leistungen.html`
   aufgeloest, alles auf der Startseite. Nach dem Fokus-Umbau war der Grossteil ohnehin redundant —
   die sechs Schritte deckten Ablauf und Folgewege ab, die Einwand-Kacheln vier der neun FAQ.
