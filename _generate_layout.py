@@ -53,8 +53,13 @@ FOOTER_LINKS = [
     ("Impressum", "impressum.html", False),
     ("Datenschutz", "datenschutz.html", False),
 ]
+# Bewusst ein Verweis statt einer Schutzzusage: "Personenbezogene Daten sind gemaess der
+# DSGVO geschuetzt" ist eine pauschale Rechtsaussage im Footer, die niemand pruefen kann und
+# die im Streitfall gegen uns ausgelegt wird. Der Verweis auf die Datenschutzerklaerung ist
+# rechtlich sauberer und sagt inhaltlich mehr. Geaendert 11.08.2026.
 FOOTER_COPY = (
-    "Personenbezogene Daten sind gemäß der DSGVO geschützt. "
+    "Hinweise zur Verarbeitung personenbezogener Daten finden Sie in der "
+    '<a href="datenschutz.html">Datenschutzerklärung</a>. '
     "&copy; 2025&ndash;2026 secure-galvano-ai"
 )
 

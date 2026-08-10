@@ -1,33 +1,33 @@
 ---
 title: "Was in Anlagendaten steckt"
-subtitle: "Fünf Auswertungen an einem erfundenen Beispiel"
+subtitle: "Fünf Auswertungen an einem exemplarischen Betrieb"
 reference: "Rechenwege der Galvanotechnik, angewandt auf laufende Betriebsdaten"
-footnote: "Alle Zahlen in diesem Dokument sind erfunden. Es fließen keine Daten aus Kundenprojekten ein."
+footnote: "Sämtliche Zahlen sind exemplarisch gewählt. Es fließen keine Daten aus Kundenprojekten ein."
 ---
 
 # Worum es geht
 
-Eine Galvanikanlage schreibt jeden Tag Zehntausende Messwerte. Die meisten davon werden
-nie angesehen. Dieses Dokument zeigt an einem **erfundenen Beispielbetrieb**, was sich aus
+Eine Galvanikanlage schreibt jeden Tag Zehntausende Messwerte. Die wenigsten davon werden
+ausgewertet. Dieses Dokument zeigt an einem **exemplarischen Betrieb**, was sich aus
 diesen Daten rechnen lässt — und wo die Grenze zwischen einer belastbaren Aussage und
 einer Vermutung verläuft.
 
-**Alle Zahlen sind frei erfunden.** Betrieb, Anlage, Messwerte und Mengen stammen aus
-keinem realen Projekt. Die Rechenwege dagegen sind die üblichen der Galvanotechnik; die
+**Sämtliche Zahlen sind exemplarisch gewählt.** Betrieb, Anlage, Messwerte und Mengen
+stammen aus keinem realen Projekt. Die Rechenwege dagegen sind die üblichen der Galvanotechnik; die
 Quellen stehen am Ende.
 
-Der Beispielbetrieb fährt eine **Zink-Nickel-Gestellanlage im alkalischen Elektrolyten**:
+Der betrachtete Betrieb fährt eine **Zink-Nickel-Gestellanlage im alkalischen Elektrolyten**:
 6 Warenträger je Stunde mit 1,8 m² Warenoberfläche, also 10,8 m² je Stunde, im
 Zweischichtbetrieb an 220 Tagen — 3.520 Betriebsstunden im Jahr, bei 1.800 A mittlerem
 Strom.
 
-# 1 Strom und Spannung: der Widerstand sieht mehr
+# 1 Strom und Spannung: der Widerstand als früherer Indikator
 
 Gleichrichter zeichnen Spannung und Strom auf. Beide schwanken im Betrieb, und beide
 schwanken normalerweise deutlich — Beschickung, Temperatur und Badalter wirken auf sie
-ein. Genau deshalb ist eine einzelne Größe ein schlechter Wächter.
+ein. Eine einzelne Größe ist als Überwachungsgröße deshalb wenig geeignet.
 
-Aus beiden zusammen lässt sich der Widerstand bilden, und der verhält sich anders:
+Aus beiden zusammen lässt sich der Widerstand bilden, und dieser verhält sich anders:
 
 | | Spannung | Strom | Widerstand |
 |---|---|---|---|
@@ -35,10 +35,10 @@ Aus beiden zusammen lässt sich der Widerstand bilden, und der verhält sich and
 | beginnende Kontaktstörung | 8,45 V | 1.710 A | 4,942 mΩ |
 | Änderung | **+3,0 %** | **−5,0 %** | **+8,5 %** |
 
-Der Punkt liegt in der letzten Spalte. Eine Spannungsänderung von drei Prozent und eine
+Entscheidend ist die letzte Spalte. Eine Spannungsänderung von drei Prozent und eine
 Stromänderung von fünf Prozent liegen bei den meisten Anlagen noch im normalen Rauschen —
 jede für sich würde keinen Alarm auslösen. Der Widerstand steigt dagegen um 8,5 Prozent,
-weil sich die beiden Effekte im Quotienten **addieren** statt sich zu verstecken.
+weil sich beide Effekte im Quotienten **addieren**, statt sich auszugleichen.
 
 Deshalb ist die erste Frage an eine Anlage nicht, ob sie Werte aufzeichnet, sondern ob sie
 **beide** aufzeichnet. Eine Anlage, die nur die Spannung festhält, lässt diesen Hebel
@@ -46,7 +46,7 @@ ungenutzt.
 
 # 2 Amperestunden: was hätte abgeschieden werden müssen
 
-Der Strom sagt mehr, als man ihm ansieht. Über sein Zeitintegral — die Amperestunden —
+Der Stromverlauf trägt mehr Information, als die Momentanwerte erkennen lassen. Über sein Zeitintegral — die Amperestunden —
 liegt die abgeschiedene Metallmenge physikalisch fest. Das elektrochemische Äquivalent
 folgt aus der molaren Masse, der Wertigkeit und der Faraday-Konstante:
 
@@ -62,8 +62,8 @@ hängt stark am Elektrolyten:
 | saures Zink | 90 – 95 % | rund 1,10 g/Ah |
 | alkalisches Zink, Zink-Nickel | 50 – 70 % | rund 0,73 g/Ah bei 60 % |
 
-**Diese Zahl muss immer mit dem Elektrolyttyp genannt werden.** Wer sie verwechselt, liegt
-um den Faktor 1,5 daneben — das ist der häufigste Fehler in solchen Rechnungen.
+**Diese Zahl muss immer mit dem Elektrolyttyp genannt werden.** Eine Verwechslung verschiebt
+das Ergebnis um den Faktor 1,5.
 
 Für unser Beispiel:
 
@@ -73,7 +73,7 @@ Das ist keine Schätzung und kein Erfahrungswert, sondern eine physikalische Unt
 dessen, was der Betrieb verbraucht haben muss. Sie entsteht ohne einen einzigen neuen
 Sensor — der Strom wird ohnehin aufgezeichnet.
 
-Nebenbei umgeht dieser Weg einen bekannten Fallstrick: Rechnet man stattdessen von der
+Dieser Weg umgeht zugleich eine bekannte Fehlerquelle: Rechnet man stattdessen von der
 Sollschichtdicke aus, muss man einen Zuschlag für mechanischen Abrieb und für die
 Streuung der Teile schätzen — in der Literatur rund 15 Prozent. Die gemessenen
 Amperestunden enthalten diesen Effekt bereits.
@@ -82,18 +82,18 @@ Amperestunden enthalten diesen Effekt bereits.
 
 Was die Ware aus dem Bad trägt, ist kein Nebeneffekt, sondern die zweite bestimmende
 Größe für den Chemikalienverbrauch — und sie hängt an der **Fläche**, nicht an der
-Stückzahl. Je Quadratmeter Warenoberfläche verlassen erfahrungsgemäß 100 bis 250
+Stückzahl. Je Quadratmeter Warenoberfläche verlassen je nach Verfahren 100 bis 250
 Milliliter das Becken, abhängig von Abtropfzeit, Geometrie und Viskosität. Die
 Fachliteratur rechnet Beispiele mit 120 ml/m²; wir setzen hier 180 an.
 
     10,8 m²/h  ×  180 ml/m²  =  1,94 l/h  →  6.843 l im Jahr
 
 Wie stark der Wert durchschlägt, zeigt die Gegenrechnung: mit 120 ml/m² wären es 4.562
-Liter — ein Drittel weniger. Der Wert ist also nichts, was man raten sollte.
+Liter — ein Drittel weniger. Der Wert sollte deshalb bestimmt und nicht geschätzt werden.
 
 ## Woran die Verschleppung hängt
 
-**Abtropfzeit.** Der wirksamste Hebel und der billigste. Empfohlen werden 10 Sekunden bei
+**Abtropfzeit.** Der wirksamste und zugleich kostengünstigste Hebel. Empfohlen werden 10 Sekunden bei
 Gestellen, vor und hinter stark belasteten Bädern eher 15 bis 20. Bei Trommeln zwei halbe
 Umdrehungen über dem Becken. Sehr lange Abtropfzeiten helfen nicht weiter — bei den
 meisten Verfahren beginnt die Oberfläche dann zu reagieren.
@@ -109,7 +109,7 @@ Physik unterscheidet sich, sondern die Kenntnis der Fläche.
 
 ## Die Gegenprobe über die Spüle
 
-Der Tabellenwert lässt sich prüfen, statt ihm zu glauben. Als Maß für die Spülqualität
+Der Tabellenwert lässt sich überprüfen. Als Maß für die Spülqualität
 dient die dimensionslose **Kushnerzahl** — das Verhältnis der Konzentration im Prozessbad
 zu der in der letzten Spüle:
 
@@ -122,8 +122,8 @@ gilt näherungsweise:
 
 Mit Ku = 2.400 und drei Stufen ergibt das aus 1,94 l/h Verschleppung einen
 Frischwasserbedarf von **24,1 l/h**. Dieselbe Spülqualität in einer Einfachspüle
-verlangte **4.666 l/h** — das 194-Fache. Wer über Spülwasser spricht, spricht in
-Wahrheit über die Stufenzahl.
+verlangte **4.666 l/h** — das 194-Fache. Der Spülwasserbedarf wird damit
+vorrangig von der Stufenzahl bestimmt.
 
 Die Formel lässt sich umstellen. Aus dem gemessenen Frischwasserzulauf und dem Leitwert
 der letzten Stufe, der sich proportional zur Konzentration verhält, folgt die
@@ -135,10 +135,10 @@ Damit wird aus dem Tabellenwert eine Messung. Und wenn beide Wege auseinanderlau
 genau diese Differenz die Information: Sie zeigt, ob die Abtropfzeiten im Betrieb halten,
 was die Auslegung annimmt.
 
-Zwei Einschränkungen gehören dazu. Die Näherung trägt nur oberhalb von etwa 20 l/h — unser
+Zwei Einschränkungen sind zu beachten. Die Näherung trägt nur oberhalb von etwa 20 l/h — unser
 Beispiel liegt mit 24,1 l/h knapp darüber, ohne Reserve. Und die Rückführung aus der
-Sparspüle ins Bad ist durch die **Verdunstung** begrenzt: Zurückführen lässt sich nur, was
-im Arbeitsbehälter Platz macht.
+Sparspüle ins Bad ist durch die **Verdunstung** begrenzt: Zurückführen lässt sich nur die Menge, die im
+Arbeitsbehälter verdunstet.
 
 # 4 Die Bilanz
 
@@ -165,7 +165,7 @@ Zusammenhang seit Langem als Gleichung beschrieben und wird auch dort auf die
 Ladungseinheit bezogen gerechnet. Praktisch heißt das: Eine schrumpfende Anodenfläche
 treibt den Verbrauch je Amperestunde stärker als linear.
 
-Bemerkenswert an der Tabelle ist die Verteilung. Das über die Verschleppung verlorene
+Aufschlussreich ist die Verteilung. Das über die Verschleppung verlorene
 Metall macht nur gut ein Prozent aus — der wirtschaftliche Schaden der Verschleppung liegt
 nicht beim Metall, sondern bei Additiven, Komplexbildnern und der Abwasserbehandlung.
 Wer die Verschleppung über den Metallwert rechnet, unterschätzt sie erheblich.
@@ -174,27 +174,28 @@ Wer die Verschleppung über den Metallwert rechnet, unterschätzt sie erheblich.
 
 Die 316 Kilogramm sind das Ergebnis dieser Auswertung — nicht die 4.637.
 
-Die ersten drei Posten sind vorhersagbar. Wer sie kennt, hat noch nichts gelernt, was er
-nicht auch überschlagen könnte. Interessant wird es dort, wo die Bilanz **nicht** aufgeht.
+Die ersten drei Posten sind vorhersagbar. Sie lassen sich auch überschlagen; ein
+Erkenntnisgewinn entsteht daraus nicht. Aussagekräftig wird die Bilanz dort, wo sie **nicht**
+aufgeht.
 Ein Rest von wenigen Prozent ist normal: Wägetoleranzen, Buchungsungenauigkeit im Lager,
 Schwankungen der Stromausbeute über das Badalter. Ein Rest, der darüber hinauswächst oder
-über die Monate systematisch zunimmt, ist ein Suchauftrag.
+über die Monate systematisch zunimmt, begründet eine Ursachensuche.
 
 Der eigentliche Wert liegt darin, dass das System **überbestimmt** ist. Die Amperestunden
 kommen aus dem Strom, die Verschleppung unabhängig davon aus Leitwert und Durchsatz. Zwei
 Wege auf dieselbe Größe. Stimmen sie überein, ist eine Aussage belegt statt geschätzt.
-Weichen sie voneinander ab, weiß man sofort, dass gesucht werden muss — und das ist etwas
-grundlegend anderes als ein überschrittener Grenzwert, der nur sagt, dass ein Wert zu hoch
-ist.
+Weichen sie voneinander ab, ist der Anlass zur Ursachensuche eindeutig. Das unterscheidet
+das Vorgehen von einer Grenzwertüberwachung, die lediglich meldet, dass ein Wert
+überschritten wurde.
 
 Welche Ursache hinter welchem Rest steckt und wie er sich zuordnen lässt, ist der Teil,
 der in einem Projekt erarbeitet wird. Er hängt an der einzelnen Anlage und lässt sich
-nicht aus einem Papier ablesen.
+nicht aus einem Dokument ableiten.
 
 # Was hier bewusst nicht steht
 
-**Keine Zusagen.** Die Rechenwege sind allgemein, die Zahlen erfunden. Was Ihre Anlage
-tatsächlich zeigt, weiß niemand, bevor die Daten ausgewertet sind.
+**Keine Zusagen.** Die Rechenwege sind allgemein, die Zahlen exemplarisch. Was Ihre Anlage
+tatsächlich zeigt, ergibt sich erst aus der Auswertung Ihrer Daten.
 
 **Keine Betriebsdaten.** Es sind keine Werte aus Kundenprojekten eingeflossen — weder
 gerundet noch verfremdet.
@@ -203,7 +204,7 @@ gerundet noch verfremdet.
 Verbrauchskoeffizienten je Chemikalie gelten und wo die Grenze zwischen Rauschen und
 Befund liegt, steht hier nicht. Das ist die Arbeit, nicht ihre Beschreibung.
 
-**Ein ehrlicher Hinweis zum Aufwand.** Die Amperestunden-Rechnung braucht keinen neuen
+**Zum Aufwand.** Die Amperestunden-Rechnung braucht keinen neuen
 Sensor, aber Verbrauchsmengen, die je Anlage gebucht sind. Wird im Lager nur nach Gebinde
 gebucht, ohne Anlagenzuordnung, fehlt die zweite Hälfte der Bilanz.
 
