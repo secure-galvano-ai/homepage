@@ -36,25 +36,17 @@
         }
     }
 
-    // CTA-Klicks als Clarity-Events: Bookings, WhatsApp, E-Mail
+    // CTA-Klicks als Clarity-Events -- ausschliesslich ueber data-funnel.
+    //
+    // Frueher liefen hier zusaetzlich drei generische Selektoren
+    // (a[href*="outlook.office.com/book"] -> 'cta-erstgespraech', wa.me -> 'cta-whatsapp',
+    // mailto: -> 'cta-email'). Weil jeder CTA ohnehin ein data-funnel traegt, feuerte
+    // JEDER Klick zwei Events. In der Auswertung sah ein einzelner Buchungsklick dadurch
+    // aus wie zwei -- die Zahlen liessen sich weder summieren noch vergleichen.
+    // Entfernt am 10.08.2026. Voraussetzung dafuer: alle Buchungs-, Mail- und
+    // WhatsApp-Links tragen ein data-funnel. Beim Anlegen neuer CTAs mit pruefen:
+    //     grep -o '<a [^>]*\(outlook.office.com/book\|mailto:\|wa.me/\)[^>]*>' *.html | grep -v data-funnel
     function wireFunnelEvents() {
-        var ctas = [
-            { selector: 'a[href*="outlook.office.com/book"]', event: 'cta-erstgespraech' },
-            { selector: 'a[href^="https://wa.me/"]', event: 'cta-whatsapp' },
-            { selector: 'a[href^="mailto:"]', event: 'cta-email' }
-        ];
-        ctas.forEach(function (cta) {
-            document.querySelectorAll(cta.selector).forEach(function (el) {
-                el.addEventListener('click', function () {
-                    if (window.clarity) window.clarity('event', cta.event);
-                });
-            });
-        });
-
-        // Leistungs-Kacheln + sonstige markierte Funnel-Elemente (data-funnel).
-        // WICHTIG: Die drei Selektoren oben feuern fuer JEDEN Buchungs-/Mail-Link
-        // denselben Event-Namen -- daran laesst sich nicht ablesen, WELCHE Position
-        // geklickt wurde. Genau dafuer traegt jeder CTA zusaetzlich ein data-funnel.
         document.querySelectorAll('[data-funnel]').forEach(function (el) {
             el.addEventListener('click', function () {
                 if (window.clarity) window.clarity('event', el.getAttribute('data-funnel'));
@@ -68,8 +60,12 @@
 
     // PDF-Downloads: eigenes Event je Dokument. Die Unternehmenspraesentation ist das
     // staerkste Sales-Asset und war bisher als einziges ungetrackt.
+    // Traegt der Link bereits ein data-funnel, ist er oben schon verdrahtet -- sonst
+    // entstuenden zwei verschiedene Event-Namen fuer denselben Klick (z. B.
+    // 'pdf-musterbefund' aus dem Attribut und 'pdf-standortanalyse-musterbefund' aus
+    // dem Dateinamen), die in der Auswertung wie zwei Downloads aussehen.
     function wirePdfDownloads() {
-        document.querySelectorAll('a[href$=".pdf"]').forEach(function (el) {
+        document.querySelectorAll('a[href$=".pdf"]:not([data-funnel])').forEach(function (el) {
             var name = el.getAttribute('href').split('/').pop().replace(/\.pdf$/, '');
             el.addEventListener('click', function () {
                 if (window.clarity) window.clarity('event', 'pdf-' + name);

@@ -115,6 +115,31 @@
     Termin offen, Karte 2 durch die naechste Neuigkeit tauschen — eine sichtbar veraltete
     News-Sektion schadet mehr als keine. **Nach dem 30.09.2026 ist die Termin-Karte abgelaufen.**
 
+- [x] **Erster Optimierungslauf (2026-08-10)** — Grundlage: 28 Tage Clarity (95 Sitzungen) + GSC
+  (47 Klicks, +422 % durch den VN-Bericht). Ablauf und Regeln ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md),
+  monatlich per `/optimierung`.
+  - **Messung repariert.** `consent.js` verdrahtete jeden Buchungs-/Mail-/WhatsApp-Link doppelt:
+    einmal generisch (`cta-erstgespraech`), einmal positionsgenau ueber `data-funnel`. Ein einzelner
+    Klick sah dadurch aus wie zwei, die Zahlen waren weder summierbar noch vergleichbar. Generische
+    Selektoren entfernt; Voraussetzung dafuer waren **7 bisher ungetrackte CTAs** (u. a. der
+    Abschluss-Button auf `ueber-mich.html`, die Forschungs-Mail, vier Links auf `sicherheit.html`).
+    Ebenso raus: das Inline-`onclick` `pdf_download_beispiel` auf `forschung.html` und die
+    PDF-Doppelbenennung (`a[href$=".pdf"]:not([data-funnel])`).
+  - **Zweiter Hero-Button ist jetzt ein Angebot statt eines Sprungankers** — Musterbefund-PDF
+    (`pdf-musterbefund-hero`). Der Verkehr kommt presse-/namensgetrieben, also in der
+    Orientierungsphase; 45 % der Sitzungen erreichen nicht einmal 25 % Scrolltiefe, der Beleg lag
+    vorher erst bei ~60 %. Belege wurden im Messzeitraum ~10-mal abgerufen, ein Termin einmal geklickt.
+  - **`forschung.html` hat einen Kunden-Pfad bekommen** — drittstaerkste Seite (17 Aufrufe), vorher
+    ohne jeden Ausgang fuer Betriebe; der vorhandene Mailto richtet sich an Forschungspartner.
+  - **Klickfalle in der Presse-Karte beseitigt** — fett gesetzte Artikel-Ueberschrift ohne Ziel neben
+    einer optisch gleichen Karte *mit* Button (15,8 % tote Klicks). Karte hat jetzt ein echtes Ziel
+    (`ueber-mich.html#fachpresse`). Der VOL.AT-Button bleibt auskommentiert, bis eine frei
+    zugaengliche URL vorliegt.
+  - **Gruendungsdatum 01.05.2025** ergaenzt (Impressum + Werdegang) — wurde extern angefragt.
+  - **Sitemap-`lastmod`** auf den tatsaechlichen Stand gezogen.
+  - ⚠ **`check_site.py` meldet zwei tote Verweise auf `VOLAT_ARTIKEL_URL`** — beide stehen in
+    HTML-Kommentaren, der Pruefer entfernt Kommentare nicht. Falscher Alarm, kein Defekt.
+
 - [x] **Konsolidierung auf EINE Seite (2026-07-30, Entscheidung Stefan):** `leistungen.html`
   aufgeloest, alles auf der Startseite. Nach dem Fokus-Umbau war der Grossteil ohnehin redundant —
   die sechs Schritte deckten Ablauf und Folgewege ab, die Einwand-Kacheln vier der neun FAQ.
@@ -235,6 +260,10 @@ homepage/
 ```
 
 ## Search Console / Indexierung
+
+> Der **monatliche Optimierungslauf** (Clarity + Search Console, Kennzahlen, Entscheidungsregeln,
+> Zugaenge) steht in [`OPTIMIERUNG.md`](OPTIMIERUNG.md). Dieser Abschnitt hier deckt nur die
+> Indexierungs-Sonderfaelle ab.
 
 Der Bericht **Seitenindexierung** meldet regelmaessig „nicht indexierte Seiten". Die
 meisten Eintraege sind **Soll-Zustand**, kein Defekt. Einordnung vor jeder Reaktion:

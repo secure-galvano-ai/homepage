@@ -1586,7 +1586,12 @@
                 <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">Für <strong style="color:#fff;">Galvanik- und Eloxalbetriebe mit mehreren Anlagen</strong> — an einem Standort oder über mehrere Werke hinweg.</p>
                 <div class="hero-buttons">
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero">Kostenloses Erstgespräch</a>
-                    <a href="#so-funktionierts" class="btn btn-outline">Wie das funktioniert ↓</a>
+                    <!-- Zweiter Hero-Button ist bewusst ein Angebot, kein Sprunganker (10.08.2026):
+                         Der Verkehr kommt presse- und namensgetrieben an, also in der Orientierungs-
+                         phase. Dort wirkt neben dem 60-Minuten-Termin ein Beleg zum Mitnehmen. Der
+                         Musterbefund lag vorher erst bei ~60 % Scrolltiefe -- 45 % der Sitzungen
+                         erreichen nicht einmal 25 %. -->
+                    <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-funnel="pdf-musterbefund-hero">Beispiel-Befund ansehen</a>
                 </div>
                 <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:12px;letter-spacing:0.02em;">60 Minuten · unverbindlich · kostenlos</p>
             </div>
@@ -1706,6 +1711,14 @@
                 <div style="padding-top:14px;border-top:1px solid var(--silber);font-size:0.82rem;color:var(--text-light);line-height:1.5;">
                     Bericht von Andreas Scalet, <strong style="color:var(--text-body);font-weight:600;">Vorarlberger Nachrichten</strong> — erschienen am 6.&nbsp;August 2026, auch auf VOL.AT.
                 </div>
+                <!-- Klickfalle beseitigt (10.08.2026): Die Karte trug eine fett gesetzte Artikel-
+                     Ueberschrift und daneben stand eine optisch gleiche Karte MIT Button -- Besucher
+                     klickten die Ueberschrift an und nichts passierte (15,8 % tote Klicks). Statt die
+                     Karte nur stumpf zu machen, bekommt sie ein echtes Ziel: die gesammelten
+                     Veroeffentlichungen. Faengt genau die Leser auf, die aus dem Artikel kommen. -->
+                <a href="ueber-mich.html#fachpresse" data-funnel="presse-veroeffentlichungen" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--schild-blau);color:#fff;border-radius:8px;font-weight:600;font-size:0.92rem;text-decoration:none;align-self:flex-start;">
+                    Alle Veröffentlichungen ansehen
+                </a>
                 <!-- Sobald die Artikel-URL vorliegt: nachstehenden Button einkommentieren und URL einsetzen.
                      Volltext NICHT selbst hosten (Sonderdruck-Rechte beim Verlag) — nur verlinken.
                 <a href="VOLAT_ARTIKEL_URL" target="_blank" rel="noopener" data-funnel="presse-volat" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--schild-blau);color:#fff;border-radius:8px;font-weight:600;font-size:0.92rem;text-decoration:none;align-self:flex-start;">
@@ -1814,7 +1827,7 @@
                 <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:rgba(43,94,167,0.1);color:var(--schild-blau);margin-bottom:14px;">2 · bei Ihnen vor Ort</span>
                 <h3 style="font-size:1.12rem;color:var(--dunkelblau);margin-bottom:9px;">Wo genau liegt bei Ihnen das Geld?</h3>
                 <p style="color:var(--text-body);font-size:0.95rem;line-height:1.65;margin:0 0 12px;"><strong>Standortanalyse.</strong> Sie bekommen die Übersicht der Anwendungsfälle, die für Ihren Betrieb wirklich zählen — jeder mit einer Zahl in Euro pro Jahr. Dazu für jede Ihrer Anlagen die Antwort, ob Ihre Daten tragen. Ihren Festpreis bekommen Sie danach auf belastbarer Grundlage statt auf Verdacht — und die Übersicht gehört Ihnen, auch wenn Sie nicht weitermachen.</p>
-                <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund" style="font-size:0.88rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So sieht ein Befund aus (PDF) →</a>
+                <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-ablauf" style="font-size:0.88rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So sieht ein Befund aus (PDF) →</a>
             </article>
             <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:16px;padding:28px 24px;box-shadow:0 8px 28px rgba(43,94,167,0.14);">
                 <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px;background:var(--schild-blau);color:#fff;margin-bottom:14px;">3 · innerhalb einer Woche</span>

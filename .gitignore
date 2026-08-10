@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# Analyse-Zugaenge und gesammelte Kennzahlen -- gehoeren nicht ins Repo
+.env
+_analytics/
