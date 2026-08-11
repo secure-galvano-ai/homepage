@@ -361,3 +361,26 @@ img { max-width: 100%; height: auto; }
     .wa-fab { padding: 14px; right: 16px; bottom: 16px; }
     .wa-fab .wa-label { display: none; }
 }
+
+/* ===== Tap-Ziele auf dem Telefon (11.08.2026) =====
+   Gemessen: Die Beleg-Links (PDF, Video) sind 22 px hoch und damit unter der
+   44-px-Empfehlung. Ausgerechnet sie sind der funktionierende Teil des Trichters --
+   Belege werden laut Clarity rund fuenfmal haeufiger abgerufen als Termine gebucht --
+   und knapp 60 % der Besucher kommen mobil.
+   Die Links tragen ihren Unterstrich als Inline-`border-bottom`; mit zusaetzlichem
+   Innenabstand wuerde der Strich vom Text abruecken. Deshalb hier Rahmen weg und
+   stattdessen `text-decoration` -- optisch dasselbe, aber die Trefferflaeche waechst
+   auf 44 px. `!important` ist noetig, weil die Regel gegen Inline-Styles antritt. */
+@media (max-width: 760px) {
+    a[data-funnel^="pdf-"],
+    a[data-funnel^="video-"] {
+        display: inline-block;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-bottom: 0 !important;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    /* Hamburger war 40 px breit -- vier Pixel unter der Empfehlung. */
+    .nav-toggle { padding: 8px 10px; }
+}
