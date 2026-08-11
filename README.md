@@ -115,6 +115,14 @@
     Termin offen, Karte 2 durch die naechste Neuigkeit tauschen — eine sichtbar veraltete
     News-Sektion schadet mehr als keine. **Nach dem 30.09.2026 ist die Termin-Karte abgelaufen.**
 
+- [ ] **Bewusst offen: `docs/portrait_galvano_forum_2026.pdf`** (Entscheidung Stefan, 11.08.2026)
+  Der Referenten-Beitrag im Galvano Forum 2026 sagt im Text „Trusted-AI-**Zertifizierung** des
+  TUeV Austria“ und firmiert als „Stefan Maier **e.U.**“. Beides weicht von der sonst
+  durchgehaltenen Linie ab — korrekt sind **Modellpruefung** und die Firmierung ohne e.U.
+  Das Heft ist gedruckt, die gehostete Fassung bleibt vorerst verlinkt; der Widerspruch wird
+  bewusst getragen. **Nicht erneut als Befund melden.** Beim naechsten Nachdruck oder einer
+  Neuauflage des Beitrags mitkorrigieren.
+
 - [x] **Erster Optimierungslauf (2026-08-10)** — Grundlage: 28 Tage Clarity (95 Sitzungen) + GSC
   (47 Klicks, +422 % durch den VN-Bericht). Ablauf und Regeln ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md),
   monatlich per `/optimierung`.
