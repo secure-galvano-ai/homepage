@@ -14,7 +14,7 @@ Stellen sind mit 👤 markiert.
 
 | Quelle | Reichweite | Automatisierbar | Wofür |
 |---|---|---|---|
-| **Search Console API** (MCP) | 16 Monate, Suchanfrage/Seite/Gerät/Land, URL-Inspektion | ✅ vollständig | Wie Leute ankommen |
+| **Search Console** (Browser) | 16 Monate, Suchanfrage/Seite/Gerät/Land | ❌ bewusst manuell | Wie Leute ankommen — **nur 2–3× im Jahr nötig** |
 | **Clarity Data Export API** | **nur 1–3 Tage**, 10 Abfragen/Tag, max. 3 Dimensionen, 1000 Zeilen, keine Pagination | ⚠️ nur mit täglichem Sammler | Aggregierte Kennzahlen + Frustsignale (Anzahl) |
 | **Clarity Heatmaps / Aufzeichnungen** | 28 Tage in der Oberfläche | ❌ nicht über API | *Welches* Element tote Klicks auslöst |
 
@@ -35,7 +35,7 @@ mit dem höchsten Erkenntniswert — nicht wegrationalisieren.
 | Was | Wo | Erneuern |
 |---|---|---|
 | Clarity-API-Token | `.env` im Repo-Wurzelverzeichnis, Schlüssel `CLARITY_API_TOKEN` — **gitignored** | Clarity → Einstellungen → Datenexport → *Neues API-Token generieren* (nur Projektadmin) |
-| Google-OAuth (GSC) | `~/.gsc-mcp/` außerhalb des Repos | Bei „invalid_grant" neu autorisieren |
+| — (kein GSC-Zugang eingerichtet) | Entscheidung 11.08.2026: der API-Zugang lohnt den Aufwand nicht | — |
 | Clarity-Projekt-ID | `wql3vpgrxl` | — |
 | GSC-Property | `https://secure-galvano-ai.com/` | — |
 
@@ -55,29 +55,39 @@ ausschließlich aus der Umgebung bzw. `.env`.
 ## 3. Ablauf
 
 ### Laufend (automatisch, ohne Zutun)
-Geplante Aufgabe `\SecureGalvano\Clarity Daily Pull` ruft jeden Morgen
-`py homepage/_scripts/clarity_daily.py` auf und hängt den Tagesstand an
-`homepage/_analytics/clarity_history.jsonl` an (gitignored, Duplikate werden über
-`date`+`metric`+`dimensions` verworfen). Bei HTTP 429 bricht das Skript sauber ab —
-kein Retry, sonst ist das Tageskontingent weg.
+Geplante Aufgabe `\SecureGalvano\Clarity Daily Pull` (täglich 09:15, `StartWhenAvailable`,
+akkuunabhängig, nur bei angemeldetem Benutzer) ruft
+`pyw.exe _scripts/clarity_daily.py` auf — fensterlos, rund vier Sekunden, kein Dienst
+und kein Autostart. Der Lauf hängt **einen Tageswert** (`numOfDays=1`) an
+`_analytics/clarity_history.jsonl` an; der Dublettenschlüssel ist
+`Abfrage|abgedeckter Tag|Metrik`.
 
-### Monatlich — Claude allein
-1. `clarity_history.jsonl` einlesen, Vormonat gegen Vormonat davor stellen
-2. Über den GSC-MCP ziehen: Suchanfragen, Seiten, Geräte, jeweils Klicks/Impressionen/CTR/Position
-3. Markenanfragen (`secure galvano`, `galvano ai`, `stefan maier`) getrennt von Nicht-Marke auswerten — sonst überdeckt der Namensverkehr alles
-4. Funnel gegenrechnen: Sitzungen → Scroll 25/50/75 → PDF/Video → CTA-Klick, je Position
-5. Seiten ohne Conversion-Pfad prüfen (grep auf `data-funnel` je HTML-Datei)
-6. Abweichungen und Hypothesen in `_analytics/berichte/JJJJ-MM.md` schreiben
+**Warum Tagesfenster und nicht drei Tage:** Die API liefert **Summenwerte über das
+angefragte Fenster**, keine Tagesaufschlüsselung. Drei-Tage-Fenster überlappen sich
+täglich und lassen sich nicht zu Monatswerten addieren, ohne Sitzungen mehrfach zu
+zählen. Ebenso wichtig: Der Schlüssel enthält den **Tag**, nicht die Messwerte —
+sonst verschwände ein Tag, an dem dieselben Zahlen anfallen wie am Vortag, und bei
+Metriken, die meist 0 sind, wäre das der Regelfall.
 
-### Monatlich — 👤 Stefan (~15 Minuten)
-7. [Heatmaps](https://clarity.microsoft.com/projects/view/wql3vpgrxl/heatmaps) für `/` und `ueber-mich.html`, je Klick + Scroll, **Mobil und Desktop getrennt** (Mobilanteil liegt bei ~58 %)
-8. Unter *Einblicke → Tote Klicks* zwei Aufzeichnungen ansehen und notieren, **auf welches Element** geklickt wurde
-9. Terminanfragen aus Bookings + Mail-Eingang zählen — das ist die einzige Zahl, die zählt, und sie steht in keinem Analysewerkzeug
+**Lückenerkennung:** Fehlt der Vorvortag, holt der Lauf zusätzlich ein 3-Tage-Fenster
+nach und legt es getrennt mit `"luecke": true` ab — als Summenwert brauchbar, aber
+bewusst nicht mit Tageswerten summierbar. Mehr als zwei versäumte Tage sind endgültig
+verloren. Bei HTTP 429 bricht das Skript sauber ab, ohne Retry.
 
-### Monatlich — gemeinsam
-10. Claude schlägt maximal **drei** Änderungen vor, mit Begründung und erwarteter Wirkung
-11. 👤 Stefan gibt frei, Claude setzt um, Commit über `/commit`
-12. Änderung im Monatsbericht mit Datum vermerken — sonst ist im Folgemonat nicht zuordenbar, was gewirkt hat
+**Protokoll:** je Lauf eine Zeile in `_analytics/_sammler.log`.
+
+### Monatlich
+
+**Der Ablauf steht im Skill** [`.claude/skills/optimierung/SKILL.md`](../.claude/skills/optimierung/SKILL.md)
+und wird mit `/optimierung` gestartet. Er ist bewusst nur dort beschrieben — stünde er
+zusätzlich hier, würden die beiden Stände auseinanderdriften.
+
+Die Arbeitsteilung in einem Satz: Claude liest die Historie, rechnet den Funnel durch und
+schreibt den Bericht; 👤 Stefan liefert die drei Angaben, die in keiner Schnittstelle
+stehen — **Terminanfragen**, das Element hinter den toten Klicks, und die
+Heatmap-Auffälligkeiten mobil wie Desktop.
+
+Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 
 ---
 
@@ -91,7 +101,7 @@ kein Retry, sonst ist das Tageskontingent weg.
 | Sitzungen | Clarity | 95 (88 ohne localhost) | steigend |
 | Scroll ≥ 25 % | Clarity `scroll-25` | 55 % | > 70 % |
 | Tote Klicks | Clarity Einblicke | 15,8 % | < 5 % |
-| Nicht-Marken-Klicks | GSC | ~25 von 47 | steigend |
+| Nicht-Marken-Klicks | GSC, manuell | ~25 von 47 (Aug 2026) | steigend |
 
 **Vergleichswerte:** B2B-Websites konvertieren im Mittel bei 2,9 %; Seiten, deren einziges
 Angebot ein Gespräch ist, liegen bei 1,5–4 %; Seiten mit Selbstbedienungs-Angebot bei
@@ -117,10 +127,58 @@ folgt kein Stillstand, sondern eine andere Begründungspflicht:
 
 ## 6. Bekannte Fallstricke
 
-- **MCP lädt nur beim Sitzungsstart.** Nach jeder Änderung an `.mcp.json` eine neue Claude-Sitzung starten, sonst fehlt der Server kommentarlos.
-- **Unter Windows `node <cli.js>` statt `npx`** — der `npx.cmd`-Shim bricht die stdio-Pipes (`-32000`).
-- **`claude mcp list` „✓ Connected" trügt** — die CLI ist nicht die VSCode-Erweiterung.
+- **Der Sammler läuft fensterlos** (`pyw.exe`). Ein Fehlschlag ist deshalb **nur im Protokoll** `_analytics/_sammler.log` sichtbar. Vor jedem Monatslauf zuerst dort hineinsehen.
+- **Der Task braucht einen angemeldeten Benutzer.** Er ist akkuunabhängig und holt verpasste Läufe nach (`StartWhenAvailable`) — wer den Laptop mindestens alle drei Tage benutzt, hat eine lückenlose Reihe.
 - **Clarity-API: 429 bedeutet Kontingent aufgebraucht**, nicht Fehler. Kein Retry.
-- **Verpasste Tage sind endgültig weg.** Läuft der Sammler länger als drei Tage nicht, klafft eine Lücke in der Historie, die niemand mehr füllen kann.
+- **Mehr als zwei versäumte Tage sind endgültig weg.** Die Lückenerkennung reicht nur so weit wie die API — drei Tage.
 - **In GSC bei 404-Gruppen nicht „Behebung validieren" klicken** — Begründung in `README.md`, Abschnitt *Search Console / Indexierung*.
 - **`localhost`-Sitzungen aus den Clarity-Zahlen herausrechnen** — das sind eigene Tests, im August waren es 7 von 95.
+
+---
+
+## 7. Auslöser: Outlook-Serientermin
+
+Der Monatslauf hängt an einem **Outlook-Serientermin am ersten Werktag des Monats**, nicht
+an einer geplanten Aufgabe. Grund: Es ist eine *erinnernde*, keine *handelnde* Aufgabe —
+so hält es die Task-Registry im BD-Repo ausdrücklich fest
+(`areas/compliance/working/scheduler-tasks.md`). Angelegt am 11.08.2026.
+
+Bewusst der erste Werktag und nicht das Monatsende: Sonst fehlen die letzten Tage des
+Monats in der Auswertung.
+
+Der Termininhalt, zum Nachpflegen falls er verlorengeht:
+
+```
+HOMEPAGE-OPTIMIERUNG — Monatslauf (ca. 25 Min)
+
+1) VORBEREITEN (10 Min) — das kann nur ich, nicht Claude
+
+   Tote Klicks: zwei Aufzeichnungen ansehen.
+   Notieren: auf WELCHES Element wurde geklickt?
+   https://clarity.microsoft.com/projects/view/wql3vpgrxl/recordings
+
+   Heatmaps für / und ueber-mich.html, je Klick + Scroll.
+   WICHTIG: Mobil und Desktop getrennt umschalten (58 % kommen mobil).
+   https://clarity.microsoft.com/projects/view/wql3vpgrxl/heatmaps
+
+2) DIE EINE ZAHL (2 Min)
+
+   Terminanfragen im abgelaufenen Monat zählen — Bookings + Mail-Eingang.
+   Auch wenn es 0 ist: 0 ist ein Ergebnis, kein fehlender Wert.
+
+3) AUSWERTEN
+
+   Claude Code im Ordner Coding öffnen, eingeben:
+
+   /optimierung
+
+   Danach die Notizen aus 1) und die Zahl aus 2) durchgeben.
+   Ergebnis: Bericht unter homepage/_analytics/berichte/
+   plus maximal 3 Änderungsvorschläge.
+
+REGEL: Höchstens 3 Änderungen pro Monat. Mehr lässt sich im Folgemonat
+nicht mehr auseinanderhalten — dann weiß niemand, was gewirkt hat.
+
+WENN ETWAS KOMISCH AUSSIEHT: zuerst in homepage/_analytics/_sammler.log
+schauen. Dort steht je Tag eine Zeile. Fehlen Tage, war der Laptop aus.
+```

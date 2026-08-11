@@ -129,6 +129,44 @@
         }
         .story p:last-child { margin-bottom: 0; }
 
+        /* ===== WERDEGANGS-STRECKE ===== */
+        .werdegang {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin: 4px 0 32px;
+        }
+        .werdegang figure { margin: 0; }
+        .werdegang img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 539 / 659;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(27, 42, 74, 0.14);
+            display: block;
+        }
+        .werdegang figcaption {
+            margin-top: 10px;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            color: var(--text-light);
+            text-align: center;
+        }
+        .werdegang .jahr {
+            display: block;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--schild-blau);
+            margin-bottom: 4px;
+        }
+        /* Unter 700 px zwei Reihen statt vier Spalten -- vier nebeneinander werden auf
+           dem Telefon zu Briefmarken, und knapp 60 % der Besucher kommen mobil. */
+        @media (max-width: 700px) {
+            .werdegang { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        }
+
         .focus-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -467,6 +505,37 @@
 <section class="story">
     <div class="container story-inner">
         <h2>Vom Galvanikbecken in die KI-Entwicklung</h2>
+
+        <!-- Werdegangs-Strecke (11.08.2026), Bilder aus dem Demo-Day-Deck, Folie 2.
+             Vier echte Aufnahmen statt Behauptungen: Der Bogen Galvanik -> Physik ->
+             Prozesse -> Gruendung IST das Verkaufsargument ("ich kenne beide Seiten") und
+             wird als Bildstrecke in Sekunden erfasst, waehrend derselbe Inhalt als Text
+             nur ueberflogen wird. Bewusst UEBER dem Fliesstext und nicht anstelle des
+             Entmetallisierungs-Fotos weiter unten -- das bleibt mit seiner Bildunterschrift
+             das staerkste Einzelbild der Seite.
+             Stufe 3 heisst hier "Prozessoptimierung & Lean Management" und nicht wie auf
+             der Folie "IT-Prozessberater": Genau dieses Etikett soll die Positionierung
+             vermeiden (Spezialist statt Digitalisierungsberater, Akquise-Strategie 10.08.).
+             Die Kompetenz bleibt, das austauschbare Wort faellt weg. -->
+        <div class="werdegang">
+            <figure>
+                <img src="assets/img/werdegang-1-galvanik.jpg" alt="Stefan Maier im Chemikalienschutzanzug in der Entmetallisierung einer Galvanik" loading="lazy" decoding="async" width="539" height="659">
+                <figcaption><span class="jahr">2005</span>Lehre &amp; Meister<br>Oberflächentechnik</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/img/werdegang-2-physik.jpg" alt="Stefan Maier an der Tafel vor quantenmechanischen Gleichungen, Universität Wien" loading="lazy" decoding="async" width="539" height="659">
+                <figcaption><span class="jahr">2014</span>Physiker<br>MSc, Universität Wien</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/img/werdegang-3-prozess.jpg" alt="Porträt Stefan Maier aus der Zeit als Prozessoptimierer und Lean Manager" loading="lazy" decoding="async" width="539" height="659">
+                <figcaption><span class="jahr">2020</span>Prozessoptimierung<br>&amp; Lean Management</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/img/werdegang-4-gruender.jpg" alt="Porträt Stefan Maier als Gründer von secure galvano ai" loading="lazy" decoding="async" width="539" height="659">
+                <figcaption><span class="jahr">2025</span>Gründer<br>secure galvano ai</figcaption>
+            </figure>
+        </div>
+
         <p>Meine Karriere begann dort, wo es nach Säure riecht und Handschuhe Pflicht sind: in der Entmetallisierung einer Galvanik. Ich habe die Lehre zum Oberflächentechniker abgeschlossen, später die Meisterprüfung abgelegt und 15 Jahre direkt an Galvanikanlagen verbracht — von der Linie bis zur Verfahrenstechnik. Insgesamt sind es über 20 Jahre Branchenerfahrung.</p>
 
         <figure style="margin:24px auto 28px;max-width:360px;text-align:center;">
@@ -679,6 +748,7 @@
                 <li><a href="ueber-mich.html">Über mich</a></li>
                 <li><a href="docs/sicherheit-methoden-standards.pdf" target="_blank" rel="noopener">Sicherheit (PDF)</a></li>
                 <li><a href="forschung.html">Forschung</a></li>
+                <li><a href="sicherheit.html">Sicherheit</a></li>
                 <li><a href="impressum.html">Impressum</a></li>
                 <li><a href="datenschutz.html">Datenschutz</a></li>
                 <li><a href="#" class="cookie-settings">Cookie-Einstellungen</a></li>

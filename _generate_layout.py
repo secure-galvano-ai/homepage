@@ -50,6 +50,11 @@ FOOTER_LINKS = [
     ("Über mich", "ueber-mich.html", False),
     ("Sicherheit (PDF)", "docs/sicherheit-methoden-standards.pdf", True),
     ("Forschung", "forschung.html", False),
+    # Seite ist seit 11.08.2026 wieder indexiert: Compliance (NIS2 ab 10/2026, AI Act)
+    # ist im Verkauf ein echter Einwand und diese Seite die einzige Antwort darauf.
+    # Bewusst nur im Footer, nicht in der Hauptnavigation -- der Fokus-Umbau vom
+    # 30.07.2026 soll nicht wieder verwaessert werden.
+    ("Sicherheit", "sicherheit.html", False),
     ("Impressum", "impressum.html", False),
     ("Datenschutz", "datenschutz.html", False),
 ]

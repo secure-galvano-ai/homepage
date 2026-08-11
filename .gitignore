@@ -2,5 +2,7 @@ __pycache__/
 *.pyc
 
 # Analyse-Zugaenge und gesammelte Kennzahlen -- gehoeren nicht ins Repo
-.env
+# .env* statt .env: Editoren und Skripte legen Sicherungen wie .env.bak oder .env.save an,
+# die sonst durchs Raster fallen und mitcommittet werden koennten.
+.env*
 _analytics/
