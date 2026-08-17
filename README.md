@@ -7,161 +7,46 @@
 
 ---
 
-## Setup (erledigt)
+## Meilensteine
 
-- [x] GitHub Pages Repo + Deployment
-- [x] Custom Domain `secure-galvano-ai.com` verbunden
-- [x] DNS bei IONOS umgestellt (4x A-Record + CNAME)
-- [x] HTTPS erzwungen
-- [x] IONOS Zusatzartikel gekündigt (Domain Guard, Mail Business, SSL)
-- [x] IONOS WordPress-Vertrag läuft am **02.06.2026** aus, Domain bleibt
-- [x] Impressum + Datenschutz (ECG/DSGVO-konform)
-- [x] Gründer-Section mit Porträt + Bio
-- [x] Microsoft Bookings Kalender-Link
-- [x] LinkedIn-Profil verlinkt
-- [x] AWS Deep Tech Badge
-- [x] Favicon + Apple Touch Icon
-- [x] Open Graph Tags (Social Media Sharing)
-- [x] robots.txt + sitemap.xml
-- [x] Google Search Console verifiziert + Sitemap eingereicht
-- [x] WhatsApp-Floating-Button auf allen Pages (private Nummer aus CV)
-- [x] Nachweise als Sektion auf `ueber-mich.html` (16 Zertifikate, Lightbox); `nachweise.html` ist Redirect-Stub
-- [x] `ueber-mich.html` als vollständiges Profil + Bio + Nachweise (2026-05-02)
-- [x] 8-Wochen-Diagnose mit Festpreis 9.500 € netto (Briefing 2026-05-12)
-- [x] FAQ-Section, Pakete-Section, Ablauf-Section
-- [x] JSON-LD Structured Data (LocalBusiness, Person, Service, FAQPage)
-- [x] Galvano-Forum-2026-Portrait + Forschungsvorhaben-Präsentation als PDF-Downloads (`docs/`)
-- [x] **Microsoft Clarity, Opt-in-Consent** — `consent.js` laedt Clarity nur nach Zustimmung, Funnel-Events auf den CTAs, Widerruf via Footer-Link (2026-05-14)
-- [x] Trust-Bar mit echten Logos (aws Deep Tech + TRUSTIFAI by TÜV AUSTRIA) (2026-05-13)
-- [x] Cost-of-Inaction-Streifen, Datenfluss-Grafik, Fachpresse-Platzhalter (2026-05-13)
-- [x] **Self-Hosted Fonts** (Montserrat + Open Sans lokal, kein Google-Fonts-Request) (2026-05-13)
-- [x] `ausbildung.html`: Entscheider-/Geschäftsführungs-Zielgruppe + Förderhinweis ergänzt — Ausrichtung auf DGO-FA "Digitale Transformation und Innovation" (digitale Optimierung + Fördermöglichkeiten) (2026-05-24)
-- [x] `ausbildung.html`: als **Basis-Kurs** positioniert (Entwicklungsumgebung als Fundament, Aufbaustufen folgen) + Durchführung **ab 4 Teilnehmern** (Gruppe-Eckdaten + Pilot-Badge) (2026-05-24)
-- [x] `index.html`: schlanke "Zweiter Weg"-Brücke nach der Trust-Bar — holt proaktive "Digitalisierung-vorantreiben"-Betriebe ab (ohne akuten Schmerz) und leitet zu Praxiskurs + Folgewege, Hero bleibt schmerz-first (2026-05-24)
-- [x] `index.html`: "Zweiter Weg"-Streifen zur Sektion **Datendienstleistungen** (`#datendienste`) ausgebaut — "Data Scientist auf Zeit"-On-Ramp für Betriebe ohne strukturierte Datenbasis, mit "Auf Anfrage"-Badge + Mailto-Anfrage (kein neues Backend, reuse Bookings + mailto-Pattern) (2026-05-29)
-- [x] **Customer-Journey-Reorder (evidenzbasiert, B2B-CRO-Recherche)** (2026-05-29):
-  - Neue **3-Kachel-Leistungsübersicht** (`#leistungen`) direkt nach Trust-Bar — Self-Select-Onramp (Diagnose dominant, Daten/Praxiskurs dezent); Hero bleibt schmerz-first
-  - Hero-Sekundär-Button → "Leistungen ansehen ↓" (`#leistungen`, kein Duplikat zu Diagnose-Kachel, Scroll-Cue)
-  - **PAS-Reihenfolge:** 3 Symptome (Agitate) jetzt VOR Cost-of-Inaction
-  - **Datendienste-Vollblock** von oben nach unten (hinter Angebot) — konkurriert nicht mehr früh mit Haupt-Conversion
-  - **Mid-Scroll-CTA** ("Verfügbarkeit anfragen") an der Pull-Quote
-  - Versteckter **Kundenstimmen-/Referenz-Slot** in der Pull-Quote-Sektion (auskommentiert, aktivieren nach Pilotkunden-Freigabe)
-  - **Sticky-Mobil-CTA** (`#stickyCta`, erscheint ab 700px Scroll, nur ≤760px; WhatsApp-FAB weicht aus)
-  - **Funnel-Tracking** in `consent.js`: Kachel-Klicks (`data-funnel`) + Mid-Scroll-CTA + Scroll-Tiefe (25/50/75/100 %) als Clarity-Events (nur nach Consent)
-- [x] **Fokussierung (2026-07-02):** Seite auf den Kern-Funnel verschlankt.
-  - `ausbildung.html` + `sicherheit.html` **zurückgestellt** — `noindex`, raus aus Nav/Footer/Sitemap; Dateien bleiben erhalten und sind jederzeit reaktivierbar (Nav-`<li>` wieder einsetzen + Sitemap-Eintrag + `noindex` entfernen).
-  - Leistungen von 6 auf **3 Kern-Bausteine** reduziert (KI-Diagnose, Live-Monitoring, KPI-Dashboard) — Datenquelle `LEISTUNGEN` in `_generate_leistungen.py`, danach `py _generate_leistungen.py`.
-  - Sicherheits-Inhalt als **Corporate-PDF** `docs/sicherheit-methoden-standards.pdf` (Statement „Methoden & Standards"), verlinkt in der Trust-Bar (Startseite) und im Footer. Quelle/Build: `Desktop/sga_pdf_build/` (Pandoc + XeLaTeX via `templates/pdf-corporate/build_pdf.py`, kundentaugliches `_statement_template.tex`).
+Grundausstattung steht seit Mai 2026: GitHub Pages mit eigener Domain und erzwungenem HTTPS,
+Impressum/Datenschutz, Bookings-Termin, Open Graph, `robots.txt`/Sitemap, Search Console,
+JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 
-- [x] **Fokussierung auf EINE Botschaft (2026-07-30)** — ausgeloest durch 60 Tage Clarity-Daten
-  (104 Sitzungen, **0 Klicks** auf den Buchungs-CTA, 15 % erreichten den Abschluss-Bereich).
-  - **Neue Sektion `#ablauf` „So arbeiten wir zusammen"** — die sechsstufige Vertriebsleiter aus
-    `BD/areas/business-model.md` (Stand 29.07.), **ohne Preise**. Schliesst die Luecke, dass die
-    Website die **Standortanalyse** (Pflicht-Gate vor jedem Festpreis) gar nicht kannte und direkt
-    die 8-Wochen-Diagnose versprach. Ersetzt die Sektionen „Die Diagnose auf Ihren eigenen Daten"
-    und „Noch nicht so weit für einen Termin?" — beide gingen darin auf.
-  - **Faehigkeiten-Treppe verdichtet** — aus drei Karten wird eine Aussage plus kompakte
-    3-Schritt-Leiste. Zwei nummerierte Treppen auf einer Seite waren die groesste Redundanz.
-  - **Datenflut + Datenhoheit zusammengelegt** (waren zwei Sektionen, eine Botschaft).
-  - **Ergebnis: 9 Sektionen → 8, Seitenlaenge 9,8 → 7,2 Bildschirme (−27 %)**, Haupt-CTA von
-    85 % auf 75 % Scrolltiefe. Kein horizontaler Ueberlauf, keine Tap-Ziele < 44 px (mobil geprueft).
-  - **Ton durchgaengig auf Kundennutzen** (Vorgabe Stefan): im Ablauf-Block keine einzige Ich-Form
-    mehr. Aus „Ohne diesen Schritt nenne ich keinen Festpreis" wird „Ihren Festpreis bekommen Sie
-    danach auf belastbarer Grundlage statt auf Verdacht".
-  - **Erstgespraech 30 → 60 Minuten**, seitenweit angeglichen (auch `ueber-mich.html` + Bookings).
-  - **Diagnose: 8 Wochen → innerhalb einer Woche.** Der Ablauf-Block auf `leistungen.html` heisst
-    jetzt „Ablauf in zwei Schritten"; die alten Phasen bildeten die neue Leiter bereits ab
-    (Phase 1 „Verstehen" = Standortanalyse, Phase 2 „Auswerten" = Diagnose). **Der Produktname
-    bleibt „Diagnose"** — `business-model.md` legt das ausdruecklich fest; „Proof of Concept" ist
-    die Funktion, nicht der Kundenname (und Beraterjargon auf einer deutschen Seite).
-    ⚠ **`BD/areas/business-model.md` fuehrt Stufe 3 weiter mit 8 Wochen / 9.500 € — muss nachgezogen
-    werden**, sonst widersprechen sich Website und Angebotsvorlage.
-  - **Je Phase ein Beleg zum Selbstbedienen** statt nur „Termin buchen": Beispiel-Auswertung
-    (Stufe 2), Unternehmenspraesentation (Stufe 3), Sicherheits-PDF (Stufe 5). Grundlage:
-    Gartner via Vereigen Media — *75 % der B2B-Einkaeufer bevorzugen einen rep-free Kaufprozess*;
-    HubSpot — oben im Trichter gehoert Aufklaerung hin, das Beratungsgespraech ans Ende.
-  - **WhatsApp-FAB eingeklappt** (`base.css`) — der dauerhaft sichtbare ganze Satz konkurrierte mit
-    dem primaeren CTA; 358 px → 72 px, Beschriftung klappt bei Hover/Fokus auf. Kanal bleibt.
-  - **Vor-Ort-Tag entfernt** (Startseite + Leistungen) — als Produkt am 28.07. gestrichen, stand aber
-    noch direkt neben dem Haupt-CTA. Auf der Leistungsseite ersetzt durch den Hinweis auf die Standortanalyse.
-  - **Tracking differenziert** — bisher feuerten alle vier Buchungs-CTAs denselben Event-Namen, die
-    Position war nicht ablesbar. Jetzt je Position ein eigener: `cta-nav`, `cta-hero`, `cta-ablauf`,
-    `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`. Dazu neu: `pdf-<dateiname>`
-    je Download und `video-gestartet`. Ausserdem gefixt: nach „Cookie-Einstellungen → erneut
-    akzeptieren" wurden die Funnel-Listener nie gesetzt.
+| Datum | Umbau | Ergebnis |
+|---|---|---|
+| 29.05.2026 | Customer-Journey neu geordnet (PAS, 3-Kachel-Onramp, Sticky-Mobil-CTA, Funnel-Tracking) | — |
+| 02.07.2026 | **Fokussierung** — `ausbildung.html` + `sicherheit.html` zurueckgestellt, Leistungen 6 → 3 | — |
+| 30.07.2026 | **EINE Botschaft** — Sektion `#ablauf` mit der sechsstufigen Vertriebsleiter (ohne Preise), Redundanzen zusammengelegt | 9 → 8 Sektionen, Seitenlaenge −27 % |
+| 30.07.2026 | `leistungen.html` aufgeloest, alles auf die Startseite | Sitemap 6 → 5 URLs |
+| 10.08.2026 | Presse-/Aktuell-Sektion `#aktuell` nach der Trust-Bar | — |
+| 10.08.2026 | **Erster Optimierungslauf** — Messung repariert (jeder CTA war doppelt verdrahtet), zweiter Hero-Button ist jetzt ein Beleg statt eines Sprungankers | Ablauf ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md), monatlich per `/optimierung` |
+| 17.08.2026 | Presse-Karte verlinkt die frei lesbare WISTO-Fassung | tote Platzhalter weg |
 
-- [x] **Presse-/Aktuell-Sektion (2026-08-10)** — VN-/VOL.AT-Bericht vom 06.08.2026
-  („Alberschwender Ingenieur entwickelt Prüf-Software, die mit KI immer besser wird",
-  Andreas Scalet) eingebunden.
-  - **Neue Sektion `#aktuell` auf `index.html`**, direkt **nach der Trust-Bar** — bewusst hoch:
-    laut Clarity erreichen nur ~15 % den unteren Seitenbereich, eine News-Sektion im Fuss waere tot.
-    Zwei Karten: **Pressestimme** (Headline + Kurzzitat + Quelle) und **Termin** (KI Days Vorarlberg,
-    28.–30.09.2026, Forum Vorarlberg / Campus V Dornbirn) als Dringlichkeits-Anker mit
-    eigenem Funnel-Event `cta-aktuell-termin`; darunter das Knappheits-Zitat aus dem Artikel
-    („in der Tiefe statt in der Breite") — **fremdbelegt statt selbst behauptet**.
-  - **`ueber-mich.html`:** Sektion `#fachpresse` heisst jetzt „Presse & Veröffentlichungen",
-    Medienbericht als erste, volle Breite einnehmende Karte ueber den beiden Leuze-Fachartikeln.
-  - **Kein VOL.AT-Link, kein selbst gehosteter Volltext.** Der VOL.AT-Artikel liegt hinter der
-    Bezahlschranke — ein Button dorthin fuehrt Besucher gegen eine Paywall, das ist schlechter als
-    kein Button. Auch der Kurzlink aus dem gedruckten QR-Code (`vol.at/supzNZ`) endet nach dem
-    Anriss (nachgeprueft 17.08.2026). Der Volltext (auch als Scan oder nachgebautes PDF) darf
-    **nicht** selbst gehostet werden: Nachdruck-/Online-Rechte liegen bei Russmedia/VN, Zitatrecht
-    deckt nur Kurzzitate.
-  - **Button-Slot gefuellt am 17.08.2026 — mit der WISTO-Fassung, nicht mit VOL.AT.**
-    <https://www.wisto.at/aktuell/secure-galvani-ai/> (07.08.2026, „secure-galvano-ai: KI gegen
-    Ausschuss") ist frei lesbar, bringt den vollen Inhalt und haelt das Wording ein: „geprueft"
-    statt „zertifiziert", Erstkunde ungenannt. Funnel-Event `presse-wisto` in `index.html` und
-    `ueber-mich.html`. Der Tippfehler „galvani" gehoert zur URL der WISTO, nicht uns.
-    Kaeme spaeter eine Verlagsfreigabe fuer VOL.AT, ersetzt sie diesen Link — nicht stapeln.
-  - **Urheberrecht generell:** nur Kurzzitate + Quellenangabe. **Keine VN-Fotos** (©Fa/Demako, ©FA)
-    und **kein VOL.AT-Logo als Bild** — Quellen-Nennung als Text. Beim Nachpflegen beibehalten.
-  - **Pflegeregel:** max. 2 Karten in `#aktuell`, veraltete ersetzen statt stapeln. Ist kein
-    Termin offen, Karte 2 durch die naechste Neuigkeit tauschen — eine sichtbar veraltete
-    News-Sektion schadet mehr als keine. **Nach dem 30.09.2026 ist die Termin-Karte abgelaufen.**
+### Regeln, die daraus dauerhaft gelten
 
-- [ ] **Bewusst offen: `docs/portrait_galvano_forum_2026.pdf`** (Entscheidung Stefan, 11.08.2026)
-  Der Referenten-Beitrag im Galvano Forum 2026 sagt im Text „Trusted-AI-**Zertifizierung** des
-  TUeV Austria“ und firmiert als „Stefan Maier **e.U.**“. Beides weicht von der sonst
-  durchgehaltenen Linie ab — korrekt sind **Modellpruefung** und die Firmierung ohne e.U.
-  Das Heft ist gedruckt, die gehostete Fassung bleibt vorerst verlinkt; der Widerspruch wird
-  bewusst getragen. **Nicht erneut als Befund melden.** Beim naechsten Nachdruck oder einer
-  Neuauflage des Beitrags mitkorrigieren.
-
-- [x] **Erster Optimierungslauf (2026-08-10)** — Grundlage: 28 Tage Clarity (95 Sitzungen) + GSC
-  (47 Klicks, +422 % durch den VN-Bericht). Ablauf und Regeln ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md),
-  monatlich per `/optimierung`.
-  - **Messung repariert.** `consent.js` verdrahtete jeden Buchungs-/Mail-/WhatsApp-Link doppelt:
-    einmal generisch (`cta-erstgespraech`), einmal positionsgenau ueber `data-funnel`. Ein einzelner
-    Klick sah dadurch aus wie zwei, die Zahlen waren weder summierbar noch vergleichbar. Generische
-    Selektoren entfernt; Voraussetzung dafuer waren **7 bisher ungetrackte CTAs** (u. a. der
-    Abschluss-Button auf `ueber-mich.html`, die Forschungs-Mail, vier Links auf `sicherheit.html`).
-    Ebenso raus: das Inline-`onclick` `pdf_download_beispiel` auf `forschung.html` und die
-    PDF-Doppelbenennung (`a[href$=".pdf"]:not([data-funnel])`).
-  - **Zweiter Hero-Button ist jetzt ein Angebot statt eines Sprungankers** — Musterbefund-PDF
-    (`pdf-musterbefund-hero`). Der Verkehr kommt presse-/namensgetrieben, also in der
-    Orientierungsphase; 45 % der Sitzungen erreichen nicht einmal 25 % Scrolltiefe, der Beleg lag
-    vorher erst bei ~60 %. Belege wurden im Messzeitraum ~10-mal abgerufen, ein Termin einmal geklickt.
-  - **`forschung.html` hat einen Kunden-Pfad bekommen** — drittstaerkste Seite (17 Aufrufe), vorher
-    ohne jeden Ausgang fuer Betriebe; der vorhandene Mailto richtet sich an Forschungspartner.
-  - **Klickfalle in der Presse-Karte beseitigt** — fett gesetzte Artikel-Ueberschrift ohne Ziel neben
-    einer optisch gleichen Karte *mit* Button (15,8 % tote Klicks). Karte hat jetzt ein echtes Ziel
-    (`ueber-mich.html#fachpresse`). Der VOL.AT-Button bleibt auskommentiert, bis eine frei
-    zugaengliche URL vorliegt. *(Erledigt 17.08.2026 ueber den WISTO-Link — siehe oben.)*
-  - **Gruendungsdatum 01.05.2025** ergaenzt (Impressum + Werdegang) — wurde extern angefragt.
-  - **Sitemap-`lastmod`** auf den tatsaechlichen Stand gezogen.
-  - ~~⚠ `check_site.py` meldet zwei tote Verweise auf `VOLAT_ARTIKEL_URL`~~ — erledigt 17.08.2026,
-    die auskommentierten Platzhalter sind durch den WISTO-Link ersetzt.
-
-- [x] **Konsolidierung auf EINE Seite (2026-07-30, Entscheidung Stefan):** `leistungen.html`
-  aufgeloest, alles auf der Startseite. Nach dem Fokus-Umbau war der Grossteil ohnehin redundant —
-  die sechs Schritte deckten Ablauf und Folgewege ab, die Einwand-Kacheln vier der neun FAQ.
-  **Uebernommen wurde nur das Nicht-Redundante:** drei FAQ (Datenlage, uneindeutige Ursache,
-  mehrere Standorte) als eingeklapptes Accordion + Datenhoheit als fuenfte Kachel. Die drei
-  Demo-Videos haengen jetzt an den Schritten 3, 4 und 6. FAQPage-Schema von `leistungen.html`
-  nach `index.html` uebernommen (Rich-Result-Faehigkeit bleibt). Nav und Footer zeigen auf
-  `index.html#ablauf`, Sitemap 6 -> 5 URLs, `_generate_leistungen.py` stillgelegt.
-  **Kosten: 7,4 -> 7,8 Bildschirme** (+0,4 fuer eine ganze aufgenommene Seite, weil die FAQ
-  eingeklappt ist). Haupt-CTA bei 71 %.
+- **Presse (`#aktuell`): maximal zwei Karten, veraltete ersetzen statt stapeln.** Eine sichtbar
+  veraltete News-Sektion schadet mehr als keine. ⚠ **Die Termin-Karte (KI Days) ist nach dem
+  30.09.2026 abgelaufen** und muss dann getauscht werden.
+- **Urheberrecht:** nur Kurzzitate mit Quellenangabe. **Keine VN-Fotos, kein VOL.AT-Logo als Bild**,
+  kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
+  steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
+  Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
+- **Zurueckgestellte Seiten reaktivieren:** `ausbildung.html` und `sicherheit.html` existieren
+  weiter. Zum Wiederbeleben: Nav-`<li>` einsetzen, Sitemap-Eintrag ergaenzen, `noindex` entfernen.
+- **Tracking-Konvention:** je CTA-Position ein eigener Event-Name (`cta-nav`, `cta-hero`,
+  `cta-ablauf`, `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`), Downloads als
+  `pdf-<dateiname>`. **Keine generischen Selektoren** — die haben die Zahlen einmal verdoppelt.
+- **Bei Abweichungen zwischen Website und Angebotsvorlage gilt die Website** *(Stefan, 17.08.2026)*.
+  Konkret angewandt: Die Diagnose dauert **„innerhalb einer Woche"**, nicht acht Wochen —
+  `BD/areas/business-model.md` wurde am 17.08. an vier Stellen nachgezogen. Der Vor-Ort-Teil steckt
+  seit 30.07. in der vorgelagerten **Standortanalyse** (Stufe 2). Preis unveraendert 9.500 €.
+- **Produktname bleibt „Diagnose"**, nicht „Proof of Concept" — so in `BD/areas/business-model.md`
+  festgelegt.
+- **Bewusst getragener Widerspruch, nicht erneut melden** *(Stefan, 11.08.2026)*:
+  `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" und „Stefan Maier
+  **e.U.**" — beides weicht von der Linie ab (korrekt: *Modellpruefung*, Firmierung ohne e.U.).
+  Das Heft ist gedruckt; beim naechsten Nachdruck mitkorrigieren.
 
 ## Optional (noch offen)
 
@@ -308,7 +193,12 @@ zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL
 **Sitemap:** `lastmod` beim Deploy auf das tatsaechliche Aenderungsdatum ziehen
 (`git log -1 --format=%ad --date=short -- <datei>`) — veraltete Werte kosten Crawl-Prioritaet.
 
-## DNS-Konfiguration (IONOS)
+## DNS-Konfiguration (IONOS) — Soll-Stand beider Zonen
+
+**Verifiziert am 17.08.2026 gegen die autoritativen Nameserver.** Diese Tabellen sind die
+Wiederherstellungsvorlage: Weicht eine Zone davon ab, ist etwas passiert.
+
+### `secure-galvano-ai.com` (Website, GitHub Pages)
 
 | Typ | Name | Ziel |
 |-----|------|------|
@@ -316,14 +206,178 @@ zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL
 | **A** | `@` | `185.199.109.153` |
 | **A** | `@` | `185.199.110.153` |
 | **A** | `@` | `185.199.111.153` |
-| **CNAME** | `www` | `secure-galvano-ai.github.io` |
+| **A** | `www` | `185.199.111.153` *(seit 17.08.; vorher CNAME auf `secure-galvano-ai.github.io` — IONOS liess beides nicht gleichzeitig zu, funktional gleichwertig, 301 auf die Hauptdomain)* |
+| — | **AAAA** | **keiner.** Ein AAAA auf IONOS bricht HTTPS, siehe Vorfall unten |
+| **TXT** | `@` | `v=spf1 -all` |
+| **TXT** | `_dmarc` | `v=DMARC1; p=reject;` |
 
-## IONOS Vertragsstatus
+**Spoofing-Schutz seit 17.08.2026:** Von dieser Domain wird **nichts** versendet — alle Kontaktwege
+auf der Website sind `mailto:`-Links auf `@rvh.at`, das Hosting ist statisch, es gibt keinen
+serverseitigen Mailversand. Deshalb sagen SPF und DMARC hier kompromisslos „niemand darf in meinem
+Namen senden", und empfangende Server weisen Fälschungen ab. Der frühere `_dmarc`-CNAME auf
+`dmarc.ionos.de` (`p=none`) wurde dafür gelöscht — ein CNAME und ein TXT können nicht auf demselben
+Hostnamen stehen. **Muss zurückgedreht werden, falls jemals von `@secure-galvano-ai.com` gesendet
+werden soll.** Die MX-Einträge bleiben bewusst stehen; SPF regelt nur den Versand, nicht den Empfang.
 
-- **Vertrag 100185485** (WordPress Hosting Grow): Läuft am 02.06.2026 aus
-- **Zusatzartikel** (Domain Guard, Mail Business, SSL): Gekündigt
-- **Domain `secure-galvano-ai.com`**: Automatische Verlängerung aktiv (15.05.2026)
-- **Domain `rvh.at`**: Bleibt (Microsoft 365 Mail läuft darüber)
+### `rvh.at` (Mail, Microsoft 365)
+
+| Typ | Name | Ziel | Prio |
+|-----|------|------|------|
+| **MX** | `@` | `rvh-at.mail.protection.outlook.com` | **0** |
+| **TXT** | `@` | `v=spf1 include:_spf-eu.ionos.com include:spf.protection.outlook.com ~all` | — |
+| **TXT** | `_dmarc` | `v=DMARC1; p=none; rua=mailto:dmarc@rvh.at; fo=1` | — |
+| **CNAME** | `autodiscover` | `autodiscover.outlook.com` | — |
+| **CNAME** | `selector1._domainkey` | `selector1-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
+| **CNAME** | `selector2._domainkey` | `selector2-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
+
+DKIM ist seit 17.08.2026 aktiv (`Get-DkimSigningConfig -Identity rvh.at` → `Enabled True`,
+`Status Valid`). Versandtest über mail-tester.com am 17.08.2026: **9,5/10**.
+
+**Warum `rvh.at` anders behandelt wird als die Markendomain:** Hier laeuft produktiver Mailverkehr.
+Ein hartes `-all` / `p=reject` ohne Belege koennte legitime Mails abweisen — etwa von einem System,
+an das gerade niemand denkt. Deshalb steht DMARC bewusst auf `p=none` **mit `rua`**, die Berichte
+gehen an das freigegebene Postfach `dmarc@rvh.at` (angelegt 17.08.2026). Eskalationsplan:
+
+| Wann | Schritt |
+|---|---|
+| erledigt 17.08.2026 | `p=none` + `rua` — sammelt Belege, aendert nichts an der Zustellung |
+| nach 2–4 Wochen | Berichte auswerten. Sendet nur Microsoft 365, kann `include:_spf-eu.ionos.com` raus |
+| dann | `~all` → `-all` und `p=none` → `p=quarantine` |
+| nochmals 2–4 Wochen spaeter | `p=quarantine` → `p=reject` |
+
+Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC gilt schon als
+bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
+die DKIM-Signatur ueberlebt sie.
+
+#### Wiedervorlage — Outlook-Serientermin *(angelegt 17.08.2026)*
+
+Erinnernde Aufgabe mit Urteilsbedarf, deshalb Kalendertermin und **kein** Task-Scheduler-Eintrag.
+Serie: monatlich am zweiten Montag, **erster Termin 14.09.2026**, endet nach 3 Terminen
+(14.09. · 12.10. · 09.11.), Erinnerung 1 Tag vorher. Termintext hier hinterlegt, damit er einen
+Kalenderwechsel ueberlebt:
+
+```
+Betreff: DMARC rvh.at — Berichte pruefen und naechste Stufe setzen
+
+Berichte liegen im freigegebenen Postfach dmarc@rvh.at (XML-Anhaenge).
+
+SCHRITT 1 — Auswerten
+Welche Systeme senden unter rvh.at? Erwartet wird ausschliesslich
+Microsoft 365 (spf.protection.outlook.com).
+Taucht etwas Unbekanntes auf: NICHT verschaerfen, erst klaeren.
+
+SCHRITT 2 — Nur wenn Schritt 1 sauber ist, im IONOS-DNS setzen:
+  TXT @       v=spf1 include:spf.protection.outlook.com -all
+              (der IONOS-Include kann raus, wenn nichts darueber sendet)
+  TXT _dmarc  v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1
+
+SCHRITT 3 — Beim uebernaechsten Termin, wenn weiterhin nichts auffaellt:
+  TXT _dmarc  v=DMARC1; p=reject; rua=mailto:dmarc@rvh.at; fo=1
+
+PRUEFEN nach jeder Aenderung:
+  nslookup -type=TXT rvh.at ns1027.ui-dns.de
+  nslookup -type=TXT _dmarc.rvh.at ns1027.ui-dns.de
+  Danach eine Testmail ueber mail-tester.com, Ziel weiterhin >= 9/10.
+
+ABBRUCHKRITERIUM: Wenn nach einer Verschaerfung eine legitime Mail
+nicht ankommt, sofort eine Stufe zurueck.
+
+Hintergrund und Soll-Konfiguration beider Zonen:
+homepage/README.md, Abschnitt DNS-Konfiguration.
+```
+
+## IONOS — Vertrag, Zugang, Vorfall *(Stand 17.08.2026)*
+
+**Vertrag:** `100185485` (WordPress Hosting Grow) gekuendigt, am 08.06.2026 per Tarifwechsel in
+einen **reinen Domain-Vertrag** ueberfuehrt — keine Grundgebuehr, nur die jaehrliche Domaingebuehr.
+Zusatzartikel (Domain Guard, Mail Business, SSL) gekuendigt. `secure-galvano-ai.com` laeuft bis
+**15.05.2027** mit **automatischer Verlaengerung**; beide Domains bei IONOS registriert, Nameserver
+`ns*.ui-dns.*`. **Zahlungsmethode im Blick behalten** — fehlt sie, scheitert die Verlaengerung lautlos.
+
+### Wenn der Login nicht mehr geht
+
+Am 06.07.2026 wurde die Kontakt-Adresse auf `smaier@rvh.at` umgestellt. Seither meldet ein Login mit
+der alten Kennung *„Ihr IONOS Login wurde geloescht"* — **irrefuehrend, sagt nichts ueber den Bestand
+der Domains aus.** Weder die Kundennummer aus den ICANN-Mails noch der Domainname `secure-galvano-ai.com`
+werden akzeptiert; ueber `rvh.at` kommt man bis zur Identifikation.
+
+**Der Weg, der funktioniert:** telefonisch (**0721 170 555**) eine **„Kontozugangs-Wiederherstellung"**
+verlangen — **nicht** die „Umschreibung der Kundennummer", das ist der Prozess fuer einen
+Inhaberwechsel und hier falsch. Kein Formular unterschreiben, das nach Inhaberwechsel aussieht.
+Identifikationsmerkmale: Vertrag 100185485, Tarifwechsel 08.06.2026, beide Domainnamen,
+Kontaktadresse `smaier@rvh.at`. *(Kundennummer steht bewusst nicht im Repo, nur im Postfach.)*
+
+### Der Vorfall — und was daraus folgt
+
+Bei der Wiederherstellung des Zugangs fuehrte IONOS am 17.08. um 15:39–15:45 einen **„Domain-Umzug
+innerhalb Ihrer Kundennummer"** durch und setzte dabei **beide Zonen auf Standardwerte zurueck**:
+A/AAAA auf die IONOS-Standardseite, MX auf `mx00/mx01.ionos.de`, SPF ohne Outlook-Include,
+`autodiscover` auf IONOS, `www`-CNAME ersatzlos weg.
+
+Die Website meldete `ERR_SSL_PROTOCOL_ERROR`, spaeter 404. **Beim Mailverkehr gab es keine sichtbaren
+Symptome** — eingehende Post waere still zu IONOS gelaufen, sobald die gecachten MX-Werte ablaufen
+(TTL 3600 s). Das ist der gefaehrlichere Teil: Ein kaputtes Zertifikat sieht man, verlorene Antworten
+nicht.
+
+**Diagnose, in dieser Reihenfolge:**
+1. `nslookup -type=A/AAAA/MX <domain> <autoritativer NS>` — **nicht** ueber den lokalen Resolver
+   oder 8.8.8.8; deren Caches verschleiern den Zustand.
+2. `curl --resolve <domain>:443:<GitHub-IP> https://<domain>` — trennt DNS- von TLS-Problem.
+3. `gh api repos/secure-galvano-ai/homepage/pages` — zeigt, ob GitHub das Zertifikat noch fuehrt.
+   Es war durchgehend `approved`; der Fehler lag ausschliesslich im DNS.
+
+**Zwei Fallstricke der IONOS-Maske:** Eintraege tragen eine Spalte `Service` (`Default Site`, `Mail`).
+Einzelne Zeilen lassen sich dann nicht aendern — man deaktiviert den **ganzen Dienst**, wodurch alle
+zugehoerigen Zeilen verschwinden. Das Entfernen *eines* MX loescht also auch SPF, DMARC, DKIM und
+autodiscover; danach alles neu anlegen. Und ein neuer A-Eintrag auf `@` kann einen bestehenden
+`www`-CNAME verdraengen — IONOS meldet das im Bestaetigungsdialog, den man lesen muss.
+
+**Nach jeder IONOS-Vertrags- oder Kontoaktion beide Zonen pruefen** (Routine-Check unten). Die
+Verlagerung des DNS zu einem eigenen Anbieter wurde **geprueft und verworfen** *(Stefan, 17.08.2026)*:
+nicht guenstiger, nicht spuerbar schneller, nicht pflegeleichter (zwei Systeme statt einem). Der
+einzige Gewinn waere der Schutz vor genau diesem Reset — und dessen teurer Teil, die zweistuendige
+Diagnose, ist mit den Soll-Tabellen oben erledigt. **Neu bewerten, wenn IONOS erneut in die Zone
+eingreift**, dann mit einem EU-Anbieter (Hetzner DNS, deSEC) statt Cloudflare.
+
+## Systeme und Abhängigkeiten
+
+Wer hängt woran. Diese Übersicht existiert, weil am 17.08.2026 ein einziger DNS-Vorgang bei IONOS
+gleichzeitig Website und Mailempfang lahmgelegt hat — der Zusammenhang war nicht offensichtlich.
+
+| Baustein | Anbieter / Ort | Wichtige Fakten |
+|---|---|---|
+| **Domain-Registrierung** | IONOS SE | `secure-galvano-ai.com` läuft bis **15.05.2027**, **automatische Verlängerung aktiv**. `rvh.at` ebenfalls bei IONOS. Beide im selben Domain-Vertrag |
+| **DNS-Zonen** | IONOS (`ns*.ui-dns.*`) | Beide Zonen. **Einziger Single Point of Failure** — siehe Vorfall oben |
+| **Website-Hosting** | GitHub Pages | Repo `secure-galvano-ai/homepage`, Branch `main`, Root. Datei **`CNAME`** im Repo-Root enthält `secure-galvano-ai.com` — **nicht löschen**, sonst verliert Pages die Custom Domain |
+| **TLS-Zertifikat** | GitHub Pages (Let's Encrypt) | Automatisch, deckt apex **und** `www`, gültig bis **04.11.2026**, erneuert sich selbst. Status: `gh api repos/secure-galvano-ai/homepage/pages` |
+| **Mail** | Microsoft 365, Tenant **PhonixData** | Postfach `smaier@rvh.at`. Absenderadresse aller Geschäfts- und Akquisemails — **bleibt bewusst `@rvh.at`**, obwohl die Marke `secure-galvano-ai.com` lautet *(Entscheidung Stefan, 17.08.2026)* |
+| **Terminbuchung** | Microsoft Bookings | Läuft auf dem **rvh.at-Tenant**. Hängt damit am selben Microsoft-365-Konto wie die Mail |
+| **Analyse** | Microsoft Clarity | Projekt `wql3vpgrxl`, Opt-in |
+| **Indexierung** | Google Search Console | Property auf `secure-galvano-ai.com` — bei DNS-Ausfall meldet sie Crawl-Fehler |
+
+### Was bricht was
+
+| Ursache | Folge | Sichtbar? |
+|---|---|---|
+| A-Records auf `@` fehlen oder falsch | Website komplett unerreichbar | ja, sofort |
+| **AAAA-Eintrag vorhanden** (auf etwas anderes als GitHub) | HTTPS bricht für alle IPv6-Clients, `ERR_SSL_PROTOCOL_ERROR` | ja, aber nur für einen Teil der Besucher — leicht zu übersehen |
+| `CNAME`-Datei im Repo gelöscht | Pages verliert Custom Domain, Zertifikat wird ungültig | verzögert |
+| **MX von `rvh.at` falsch** | eingehende Mail geht verloren oder landet woanders | **nein** — sieht aus wie „keine Antwort" |
+| SPF/DKIM fehlen | ausgehende Mails landen im Spam, DMARC schlägt fehl | nein |
+| `autodiscover` falsch | Outlook-Neueinrichtung schlägt fehl, bestehende Clients laufen weiter | verzögert |
+| Microsoft-365-Konto gesperrt | Mail **und** Terminbuchung auf der Website gleichzeitig tot | ja |
+
+### Routine-Check
+
+Nach **jeder** Vertrags- oder Kontoänderung bei IONOS beide Zonen gegen die Soll-Tabellen oben
+prüfen — und zwar gegen den **autoritativen** Nameserver, nicht über den lokalen Resolver:
+
+```bash
+nslookup -type=A   secure-galvano-ai.com ns1093.ui-dns.com
+nslookup -type=AAAA secure-galvano-ai.com ns1093.ui-dns.com
+nslookup -type=MX  rvh.at ns1027.ui-dns.de
+nslookup -type=TXT rvh.at ns1027.ui-dns.de
+```
 
 ## Corporate Design Assets
 
@@ -362,11 +416,15 @@ vermeiden — stattdessen Token `var(--name)` nutzen.
 
 | Service | Zweck | Link |
 |---------|-------|------|
-| Microsoft Bookings | Erstgespräch buchen | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
+| Microsoft 365 | Mail `smaier@rvh.at`, Tenant **PhonixData** | `admin.microsoft.com` · DKIM: `security.microsoft.com` |
+| Microsoft Bookings | Erstgespräch buchen — **läuft auf dem rvh.at-Tenant** | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
 | Microsoft Clarity | Web-Analyse (Opt-in, Projekt `wql3vpgrxl`) | `clarity.microsoft.com` |
 | Google Search Console | SEO / Indexierung | `search.google.com/search-console` |
-| GitHub Pages | Hosting | `github.com/secure-galvano-ai/homepage/settings/pages` |
-| IONOS | Domain-Registrar | `my.ionos.de` |
+| GitHub Pages | Hosting + TLS-Zertifikat | `github.com/secure-galvano-ai/homepage/settings/pages` |
+| IONOS | **Domain-Registrar und DNS-Betreiber** — Login über Kundennummer, nicht über die Mailadresse | `my.ionos.de` · Service `0721 170 555` |
+
+> Alle Abhängigkeiten zwischen diesen Diensten stehen im Abschnitt
+> [Systeme und Abhängigkeiten](#systeme-und-abh%C3%A4ngigkeiten).
 
 ## Deployment
 
