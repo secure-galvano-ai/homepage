@@ -101,14 +101,18 @@
     („in der Tiefe statt in der Breite") — **fremdbelegt statt selbst behauptet**.
   - **`ueber-mich.html`:** Sektion `#fachpresse` heisst jetzt „Presse & Veröffentlichungen",
     Medienbericht als erste, volle Breite einnehmende Karte ueber den beiden Leuze-Fachartikeln.
-  - **Bewusst OHNE Link/PDF.** Der VOL.AT-Artikel liegt hinter der Bezahlschranke — ein Button
-    dorthin fuehrt Besucher gegen eine Paywall, das ist schlechter als kein Button. Der Volltext
-    (auch als Scan oder nachgebautes PDF) darf **nicht** selbst gehostet werden: Nachdruck-/
-    Online-Rechte liegen bei Russmedia/VN, Zitatrecht deckt nur Kurzzitate. Stattdessen
-    „Pressestimme"-Karte: Kurzzitat + Blattname + Autor + Datum. **Button-Slot liegt
-    auskommentiert im Code** (`index.html`, `ueber-mich.html`, Marker `VOLAT_ARTIKEL_URL`) —
-    einkommentieren, sobald eine frei zugaengliche URL oder eine schriftliche Verlagsfreigabe
-    vorliegt.
+  - **Kein VOL.AT-Link, kein selbst gehosteter Volltext.** Der VOL.AT-Artikel liegt hinter der
+    Bezahlschranke — ein Button dorthin fuehrt Besucher gegen eine Paywall, das ist schlechter als
+    kein Button. Auch der Kurzlink aus dem gedruckten QR-Code (`vol.at/supzNZ`) endet nach dem
+    Anriss (nachgeprueft 17.08.2026). Der Volltext (auch als Scan oder nachgebautes PDF) darf
+    **nicht** selbst gehostet werden: Nachdruck-/Online-Rechte liegen bei Russmedia/VN, Zitatrecht
+    deckt nur Kurzzitate.
+  - **Button-Slot gefuellt am 17.08.2026 — mit der WISTO-Fassung, nicht mit VOL.AT.**
+    <https://www.wisto.at/aktuell/secure-galvani-ai/> (07.08.2026, „secure-galvano-ai: KI gegen
+    Ausschuss") ist frei lesbar, bringt den vollen Inhalt und haelt das Wording ein: „geprueft"
+    statt „zertifiziert", Erstkunde ungenannt. Funnel-Event `presse-wisto` in `index.html` und
+    `ueber-mich.html`. Der Tippfehler „galvani" gehoert zur URL der WISTO, nicht uns.
+    Kaeme spaeter eine Verlagsfreigabe fuer VOL.AT, ersetzt sie diesen Link — nicht stapeln.
   - **Urheberrecht generell:** nur Kurzzitate + Quellenangabe. **Keine VN-Fotos** (©Fa/Demako, ©FA)
     und **kein VOL.AT-Logo als Bild** — Quellen-Nennung als Text. Beim Nachpflegen beibehalten.
   - **Pflegeregel:** max. 2 Karten in `#aktuell`, veraltete ersetzen statt stapeln. Ist kein
@@ -142,11 +146,11 @@
   - **Klickfalle in der Presse-Karte beseitigt** — fett gesetzte Artikel-Ueberschrift ohne Ziel neben
     einer optisch gleichen Karte *mit* Button (15,8 % tote Klicks). Karte hat jetzt ein echtes Ziel
     (`ueber-mich.html#fachpresse`). Der VOL.AT-Button bleibt auskommentiert, bis eine frei
-    zugaengliche URL vorliegt.
+    zugaengliche URL vorliegt. *(Erledigt 17.08.2026 ueber den WISTO-Link — siehe oben.)*
   - **Gruendungsdatum 01.05.2025** ergaenzt (Impressum + Werdegang) — wurde extern angefragt.
   - **Sitemap-`lastmod`** auf den tatsaechlichen Stand gezogen.
-  - ⚠ **`check_site.py` meldet zwei tote Verweise auf `VOLAT_ARTIKEL_URL`** — beide stehen in
-    HTML-Kommentaren, der Pruefer entfernt Kommentare nicht. Falscher Alarm, kein Defekt.
+  - ~~⚠ `check_site.py` meldet zwei tote Verweise auf `VOLAT_ARTIKEL_URL`~~ — erledigt 17.08.2026,
+    die auskommentierten Platzhalter sind durch den WISTO-Link ersetzt.
 
 - [x] **Konsolidierung auf EINE Seite (2026-07-30, Entscheidung Stefan):** `leistungen.html`
   aufgeloest, alles auf der Startseite. Nach dem Fokus-Umbau war der Grossteil ohnehin redundant —

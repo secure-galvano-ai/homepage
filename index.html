@@ -1716,15 +1716,19 @@
                      klickten die Ueberschrift an und nichts passierte (15,8 % tote Klicks). Statt die
                      Karte nur stumpf zu machen, bekommt sie ein echtes Ziel: die gesammelten
                      Veroeffentlichungen. Faengt genau die Leser auf, die aus dem Artikel kommen. -->
-                <a href="ueber-mich.html#fachpresse" data-funnel="presse-veroeffentlichungen" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--schild-blau);color:#fff;border-radius:8px;font-weight:600;font-size:0.92rem;text-decoration:none;align-self:flex-start;">
-                    Alle Veröffentlichungen ansehen
-                </a>
-                <!-- Sobald die Artikel-URL vorliegt: nachstehenden Button einkommentieren und URL einsetzen.
-                     Volltext NICHT selbst hosten (Sonderdruck-Rechte beim Verlag) — nur verlinken.
-                <a href="VOLAT_ARTIKEL_URL" target="_blank" rel="noopener" data-funnel="presse-volat" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--schild-blau);color:#fff;border-radius:8px;font-weight:600;font-size:0.92rem;text-decoration:none;align-self:flex-start;">
-                    Zum Bericht auf VOL.AT
-                </a>
-                -->
+                <!-- Button-Slot gefuellt (17.08.2026) — aber NICHT mit VOL.AT: der Kurzlink aus dem
+                     gedruckten QR-Code (vol.at/supzNZ) zeigt nur den Anriss, danach Paywall (geprueft
+                     17.08.2026). Verlinkt wird stattdessen die WISTO-Fassung: frei lesbar, voller
+                     Text, Wording geprueft („geprueft" statt „zertifiziert", Erstkunde ungenannt).
+                     Volltext bleibt ungehostet — Nachdruckrechte liegen bei Russmedia/VN. -->
+                <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+                    <a href="https://www.wisto.at/aktuell/secure-galvani-ai/" target="_blank" rel="noopener" data-funnel="presse-wisto" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--schild-blau);color:#fff;border-radius:8px;font-weight:600;font-size:0.92rem;text-decoration:none;">
+                        Porträt lesen (wisto.at)
+                    </a>
+                    <a href="ueber-mich.html#fachpresse" data-funnel="presse-veroeffentlichungen" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:#fff;color:var(--schild-blau);border:1px solid var(--schild-blau);border-radius:8px;font-weight:600;font-size:0.92rem;text-decoration:none;">
+                        Alle Veröffentlichungen
+                    </a>
+                </div>
                 <!-- /Button-Slot -->
             </article>
 
