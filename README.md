@@ -23,7 +23,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 10.08.2026 | **Erster Optimierungslauf** — Messung repariert (jeder CTA war doppelt verdrahtet), zweiter Hero-Button ist jetzt ein Beleg statt eines Sprungankers | Ablauf ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md), monatlich per `/optimierung` |
 | 17.08.2026 | Presse-Karte verlinkt die frei lesbare WISTO-Fassung | tote Platzhalter weg |
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
-| 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → erwartet < 0,05; Seitengewicht 997 → 467 KB |
+| 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
 
 ### Regeln, die daraus dauerhaft gelten
 
