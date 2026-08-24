@@ -178,6 +178,15 @@ HOMEPAGE-OPTIMIERUNG — Monatslauf (ca. 25 Min)
    WICHTIG: Mobil und Desktop getrennt umschalten (58 % kommen mobil).
    https://clarity.microsoft.com/projects/view/wql3vpgrxl/heatmaps
 
+   NUR im Januar, Mai und September zusaetzlich (2 Min):
+   Search Console -> Leistung -> letzte 28 Tage
+   Filter setzen: Suchanfrage enthaelt nicht "galvano"
+   Tabelle kopieren und Claude durchgeben.
+   https://search.google.com/search-console/performance/search-analytics?resource_id=https%3A%2F%2Fsecure-galvano-ai.com%2F
+   Warum nur dreimal im Jahr: der Verkehr ist presse- und netzwerkgetrieben,
+   Suchdaten aendern sich zu langsam fuer einen Monatsrhythmus. Ein API-Zugang
+   dafuer ist bewusst verworfen (Abschnitt 2).
+
 2) DIE EINE ZAHL (2 Min)
 
    Terminanfragen im abgelaufenen Monat zählen — Bookings + Mail-Eingang.
