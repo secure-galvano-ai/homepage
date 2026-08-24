@@ -17,6 +17,14 @@ Stellen sind mit 👤 markiert.
 | **Search Console** (Browser) | 16 Monate, Suchanfrage/Seite/Gerät/Land | ❌ bewusst manuell | Wie Leute ankommen — **nur 2–3× im Jahr nötig** |
 | **Clarity Data Export API** | **nur 1–3 Tage**, 10 Abfragen/Tag, max. 3 Dimensionen, 1000 Zeilen, keine Pagination | ⚠️ nur mit täglichem Sammler | Aggregierte Kennzahlen + Frustsignale (Anzahl) |
 | **Clarity Heatmaps / Aufzeichnungen** | 28 Tage in der Oberfläche | ❌ nicht über API | *Welches* Element tote Klicks auslöst |
+| **Clarity Custom Events** (`data-funnel`, `scroll-*`, `pdf-*`) | 28 Tage in der Oberfläche | ❌ **gar nicht über API** | CTA-Klicks je Position, Beleg-Abrufe, Scrollmarken |
+
+**Die Funnel-Events stehen in keiner Zeile der Historie** (geprüft 24.08.2026 über 517
+Zeilen). Die Live-Insights-API kennt neun feste Metriken und drei Dimensionen — Custom
+Events sind keine davon, unabhängig davon, was der Sammler anfragt. Wer die Zahl der
+CTA-Klicks braucht, liest sie in der Clarity-Oberfläche ab; automatisieren lässt sie sich
+nicht. Das ist eine Produktgrenze, kein Mangel am Sammler — nicht erneut als Fehler
+aufnehmen.
 
 **Die entscheidende Einschränkung:** Die Clarity-API liefert nur die letzten drei Tage.
 Wer einmal im Monat abfragt, hat 27 Tage unwiederbringlich verloren — die Daten sind über
@@ -35,7 +43,7 @@ mit dem höchsten Erkenntniswert — nicht wegrationalisieren.
 | Was | Wo | Erneuern |
 |---|---|---|
 | Clarity-API-Token | `.env` im Repo-Wurzelverzeichnis, Schlüssel `CLARITY_API_TOKEN` — **gitignored** | Clarity → Einstellungen → Datenexport → *Neues API-Token generieren* (nur Projektadmin) |
-| — (kein GSC-Zugang eingerichtet) | Entscheidung 11.08.2026: der API-Zugang lohnt den Aufwand nicht | — |
+| — (kein GSC-API-Zugang) | **Verworfen 11.08.2026, nicht erneut vorschlagen.** Der MCP-Server liegt fertig unter `~/.mcp-gsc/` (installiert 10.08.), es fehlt bewusst nur das Dienstkonto. Zwei Gründe: der Dienstkonto-Schlüssel wäre eine Zugangsdatei im Klartext auf der Platte und läuft `25_zugriffs-und-kryptographie.md` §3 zuwider („sämtliche Zugangsdaten im Tresor"); und er hinge am privaten Google-Konto, das über die Anthropic-SSO-Kopplung ohnehin schon geschäftskritisch ist. Gegenwert wären zwei erspartes Copy-Paste im Jahr. | — |
 | Clarity-Projekt-ID | `wql3vpgrxl` | — |
 | GSC-Property | `https://secure-galvano-ai.com/` | — |
 
@@ -93,15 +101,23 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 
 ## 4. Kennzahlen
 
-| Kennzahl | Woher | Aktuell (Juli/Aug 2026) | Richtung |
+| Kennzahl | Woher | Stand 10.–23.08.2026 (14 Tage) | Richtung |
 |---|---|---|---|
-| **Terminanfragen** | 👤 Bookings + Mail | ~0–1 | steigend |
-| CTA-Klicks je Position | Clarity `data-funnel` | 1 gesamt | steigend |
-| Beleg-Abrufe (PDF/Video) | Clarity `pdf-*`, `video-*` | ~10 | steigend |
-| Sitzungen | Clarity | 95 (88 ohne localhost) | steigend |
-| Scroll ≥ 25 % | Clarity `scroll-25` | 55 % | > 70 % |
-| Tote Klicks | Clarity Einblicke | 15,8 % | < 5 % |
-| Nicht-Marken-Klicks | GSC, manuell | ~25 von 47 (Aug 2026) | steigend |
+| **Terminanfragen** | 👤 Bookings + Mail | **0** | steigend |
+| Sitzungen | Clarity, ohne localhost | **24** (≈ 1,7/Tag) | steigend |
+| Ø Scrolltiefe | Clarity `ScrollDepth`, sitzungsgewichtet | **66,4 %** | > 70 % |
+| Tote Klicks | Clarity `DeadClickCount` | **1 von 32 Sitzungen ≈ 3 %** ✅ (war 15,8 %) | < 5 % |
+| Geräte | Clarity, ohne localhost | 10 mobil / 8 Desktop | — |
+| CTA-Klicks je Position | Clarity `data-funnel` | 👤 nur in der Oberfläche, **nicht über API** (§1) | steigend |
+| Beleg-Abrufe (PDF/Video) | Clarity `pdf-*`, `video-*` | 👤 dito | steigend |
+| Nicht-Marken-Klicks | 👤 GSC, manuell | ~25 von 47 (Aug 2026) | steigend |
+
+**Ein Monatsvergleich ist erstmals Anfang Oktober möglich** — die Historie beginnt am
+10.08.2026. Bis dahin sind alle Zahlen oben Ausgangswerte, keine Entwicklung.
+
+**Clarity ist Opt-in-gated.** Gezählt wird nur, wer im Banner „Akzeptieren" klickt. Jede
+Sitzungszahl hier ist eine Untergrenze unbekannter Größe; für Niveauvergleiche mit
+Branchenwerten taugt sie nicht, für den Verlauf gegen sich selbst schon.
 
 **Vergleichswerte:** B2B-Websites konvertieren im Mittel bei 2,9 %; Seiten, deren einziges
 Angebot ein Gespräch ist, liegen bei 1,5–4 %; Seiten mit Selbstbedienungs-Angebot bei
@@ -132,7 +148,8 @@ folgt kein Stillstand, sondern eine andere Begründungspflicht:
 - **Clarity-API: 429 bedeutet Kontingent aufgebraucht**, nicht Fehler. Kein Retry.
 - **Mehr als zwei versäumte Tage sind endgültig weg.** Die Lückenerkennung reicht nur so weit wie die API — drei Tage.
 - **In GSC bei 404-Gruppen nicht „Behebung validieren" klicken** — Begründung in `README.md`, Abschnitt *Search Console / Indexierung*.
-- **`localhost`-Sitzungen aus den Clarity-Zahlen herausrechnen** — das sind eigene Tests, im August waren es 7 von 95.
+- **`localhost`-Sitzungen aus den Clarity-Zahlen herausrechnen** — das sind eigene Tests, vom 10.–23.08. waren es 8 von 32. Sie sind fast alle Desktop und verzerren sonst den Geräte-Split ins Gegenteil.
+- **Die Historie ist gitignored und existiert nur einmal.** `_analytics/` liegt in keinem Repo, und was älter als drei Tage ist, gibt die API nicht mehr her — ein Plattenverlust löscht sie endgültig. Seit 24.08.2026 nimmt sie der monatliche `backup_coding_config.py` als `_daten/homepage-clarity_history.jsonl` mit. **Nicht aus dem Backup-Umfang entfernen**, auch wenn sie dort als einziger Nicht-Config-Eintrag auffällt — die Begründung steht im Docstring des Skripts.
 
 ---
 
