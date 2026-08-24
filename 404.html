@@ -11,6 +11,19 @@
          Relative Pfade wuerden dort ins Leere zeigen. -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Schriften vorladen. Ohne das starten sie erst, nachdem fonts.css geparst ist
+         (gemessen 2026-08-24: CSS bei 296 ms da, Schriften erst ab 381 ms, letzte bei
+         793 ms fertig). Der font-display:swap-Wechsel von Arial auf Montserrat/Open Sans
+         verschob dadurch den Hero -- CLS 0,153 bei 770 ms, Google-Grenze ist 0,1.
+         crossorigin ist Pflicht, auch bei eigener Domain: ohne das Attribut laedt der
+         Browser die Datei ein zweites Mal, weil Schriften immer im CORS-Modus geholt
+         werden und der Preload sonst nicht zugeordnet wird.
+         Nur die latin-Subsets -- latin-ext wird nur bei Sonderzeichen ueberhaupt geholt. -->
+    <link rel="preload" href="/fonts/Montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Montserrat-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Montserrat-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/OpenSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/OpenSans-600-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link href="/fonts/fonts.css" rel="stylesheet">
     <link href="/assets/css/base.css" rel="stylesheet">
     <style>

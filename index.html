@@ -19,6 +19,19 @@
     <meta property="og:locale" content="de_AT">
     <meta property="og:site_name" content="secure galvano ai">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Schriften vorladen. Ohne das starten sie erst, nachdem fonts.css geparst ist
+         (gemessen 2026-08-24: CSS bei 296 ms da, Schriften erst ab 381 ms, letzte bei
+         793 ms fertig). Der font-display:swap-Wechsel von Arial auf Montserrat/Open Sans
+         verschob dadurch den Hero -- CLS 0,153 bei 770 ms, Google-Grenze ist 0,1.
+         crossorigin ist Pflicht, auch bei eigener Domain: ohne das Attribut laedt der
+         Browser die Datei ein zweites Mal, weil Schriften immer im CORS-Modus geholt
+         werden und der Preload sonst nicht zugeordnet wird.
+         Nur die latin-Subsets -- latin-ext wird nur bei Sonderzeichen ueberhaupt geholt. -->
+    <link rel="preload" href="fonts/Montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-600-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link href="fonts/fonts.css" rel="stylesheet">
     <link href="assets/css/base.css" rel="stylesheet">
     <link href="assets/css/leistungen.css" rel="stylesheet">
@@ -1596,7 +1609,7 @@
                 <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:12px;letter-spacing:0.02em;">60 Minuten · unverbindlich · kostenlos</p>
             </div>
             <div class="hero-portrait">
-                <img src="assets/img/portrait.jpg" alt="Stefan Maier — Ihr Ansprechpartner">
+                <img src="assets/img/portrait.webp" alt="Stefan Maier — Ihr Ansprechpartner">
                 <div class="hero-portrait-label">Ihr Ansprechpartner</div>
                 <div class="hero-portrait-name">Stefan Maier</div>
                 <div class="hero-portrait-role">Galvanikmeister · Materialphysiker<br>Lean Manager</div>

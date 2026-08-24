@@ -23,6 +23,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 10.08.2026 | **Erster Optimierungslauf** — Messung repariert (jeder CTA war doppelt verdrahtet), zweiter Hero-Button ist jetzt ein Beleg statt eines Sprungankers | Ablauf ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md), monatlich per `/optimierung` |
 | 17.08.2026 | Presse-Karte verlinkt die frei lesbare WISTO-Fassung | tote Platzhalter weg |
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
+| 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → erwartet < 0,05; Seitengewicht 997 → 467 KB |
 
 ### Regeln, die daraus dauerhaft gelten
 
@@ -38,6 +39,13 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   Die eigentliche Kundensorge dahinter — „was, wenn der ausfällt?" — beantwortet ohnehin kein
   Teamfoto, sondern ein benannter Mechanismus (Haftpflicht, Doku beim Kunden, Software läuft
   ohne ihn). **Noch offen, empfohlen:** vier Zeilen „Ausfallsicherheit" bei `#angebot`.
+- **Neue Seite? Den `preload`-Block für die Schriften mitkopieren.** Ohne ihn starten die
+  Schriften erst, nachdem `fonts.css` geparst ist; der `font-display:swap`-Wechsel von Arial
+  auf Montserrat/Open Sans verschiebt dann den Seitenkopf. Auf der Startseite waren das
+  **CLS 0,153** bei einer Google-Grenze von 0,1 (gemessen 24.08.2026). Das `crossorigin` am
+  Preload-Link ist Pflicht, auch bei eigener Domain — fehlt es, lädt der Browser jede Schrift
+  ein zweites Mal. Prüfen mit `_scripts/check_site.py` und einem Blick ins Netzwerk-Protokoll:
+  jede `woff2` darf genau einmal auftauchen.
 - **Urheberrecht:** nur Kurzzitate mit Quellenangabe. **Keine VN-Fotos, kein VOL.AT-Logo als Bild**,
   kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine

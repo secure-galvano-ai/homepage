@@ -17,6 +17,19 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="author" content="Stefan Maier">
     <link rel="canonical" href="https://secure-galvano-ai.com/ueber-mich.html">
+    <!-- Schriften vorladen. Ohne das starten sie erst, nachdem fonts.css geparst ist
+         (gemessen 2026-08-24: CSS bei 296 ms da, Schriften erst ab 381 ms, letzte bei
+         793 ms fertig). Der font-display:swap-Wechsel von Arial auf Montserrat/Open Sans
+         verschob dadurch den Hero -- CLS 0,153 bei 770 ms, Google-Grenze ist 0,1.
+         crossorigin ist Pflicht, auch bei eigener Domain: ohne das Attribut laedt der
+         Browser die Datei ein zweites Mal, weil Schriften immer im CORS-Modus geholt
+         werden und der Preload sonst nicht zugeordnet wird.
+         Nur die latin-Subsets -- latin-ext wird nur bei Sonderzeichen ueberhaupt geholt. -->
+    <link rel="preload" href="fonts/Montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-600-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link href="fonts/fonts.css" rel="stylesheet">
     <link href="assets/css/base.css" rel="stylesheet">
     <style>
@@ -476,7 +489,7 @@
 <section class="page-hero">
     <div class="container">
         <div class="page-hero-grid">
-            <img src="assets/img/portrait.jpg" alt="Stefan Maier" class="page-hero-portrait">
+            <img src="assets/img/portrait.webp" alt="Stefan Maier" class="page-hero-portrait">
             <div>
                 <p class="label">Über mich</p>
                 <h1>Stefan Maier</h1>
