@@ -477,6 +477,37 @@ git push
 (HTML/CSS/Assets) — Commit-Signing ist nur für Code-Repos vorgesehen. Lokal per
 `git config commit.gpgsign false` deaktiviert; Commits laufen ohne Yubikey-PIN-Dialog.
 
+### Nach dem Push: Deploy bestätigen *(Regel seit 26.08.2026, Stefan)*
+
+`check_site.py` prüft die **Dateien vor** dem Push. Es kann prinzipiell nicht sehen, was
+danach live steht — und genau dort lag die Panne vom 02.07.2026: Der Build gelang, der
+**Deploy**-Job scheiterte GitHub-seitig, und die Seite blieb still auf dem alten Stand.
+Zwei Stunden Suche, weil lokal alles grün war.
+
+**Pflicht — ein Befehl, fünf Sekunden:**
+
+```bash
+cd homepage && gh run list --limit 1
+# erwartet: completed  success  pages build and deployment
+```
+
+Steht dort `failure` oder hängt der Lauf: **nicht neu pushen**, sondern die Anti-Patterns
+unten lesen. Ein zweiter Push auf denselben Fehler kostet nur Zeit.
+
+**Zusätzlich in den Browser — aber nur, wenn sich sichtbar etwas geändert hat**
+(Layout, CSS, Assets, Textbausteine, generierte Seiten). Dann rund eine Minute warten und
+die geänderte Seite **live** öffnen, nicht lokal:
+
+- `browser_navigate` auf `https://secure-galvano-ai.com/...` + `browser_snapshot` — ist die
+  Änderung da, stehen Navigation und Footer unverändert?
+- `browser_console_messages` — neue Fehler?
+- Bei Layout- und Designänderungen **ein Bildschirmfoto ansehen**. Der Strukturbaum zeigt
+  keine verrutschten Abstände, überlappenden Elemente oder falschen Farben.
+
+**Bei reinen Text- oder Doku-Änderungen entfällt die Browser-Runde** — dort findet sie
+nichts, was der Deploy-Status nicht schon sagt. **Das Ergebnis wird gemeldet**, auch wenn
+alles passt; eine stille Prüfung ist keine.
+
 ### GitHub Pages — bekannte Fallstricke (Anti-Patterns)
 
 *Aus der Deploy-Panne 2026-07-02 gelernt. Symptom war: Pages meldet `Page build failed`/`errored`, die Live-Seite bleibt aber (korrekt) auf dem letzten guten Stand. In ~2 h Debugging stellte sich heraus: **der `build`-Job gelingt praktisch immer — es scheitert nur der `deploy`-Job, und zwar GitHub-seitig.***
