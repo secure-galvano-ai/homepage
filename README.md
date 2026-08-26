@@ -50,8 +50,26 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
   Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
-- **Zurueckgestellte Seiten reaktivieren:** `ausbildung.html` und `sicherheit.html` existieren
-  weiter. Zum Wiederbeleben: Nav-`<li>` einsetzen, Sitemap-Eintrag ergaenzen, `noindex` entfernen.
+- **Kein Coaching-Baustein auf der Website** *(Stefan, 25.08.2026 — Frage geprueft und verneint)*.
+  Anlass war ein privates 1:1-KI-Coaching, das Spass gemacht hat. Es kommt trotzdem **nicht**
+  zurueck auf die Seite, aus drei Gruenden: (1) Der fruehere Baustein war **In-House-Coaching fuer
+  Galvanikbetriebe** (Fachkraefte und Lehrlinge schulen) — ein anderes Produkt als 1:1-Begleitung
+  einer Privatperson; ihn zu reaktivieren wuerde das Falsche bewerben. (2) Die Abschaltung war eine
+  **Messentscheidung**: 11 Einstiege in 60 Tagen auf `ausbildung.html`, gleichzeitig 104 Sitzungen
+  mit **0 Klicks** auf den Buchungs-CTA. Die Antwort darauf war *eine* Botschaft und drei statt
+  sechs Bausteine — ein vierter Weg verschlechtert genau diese Kennzahl. (3) Saeule 2 bleibt bis
+  2027 eingefroren (`BD/areas/business-model.md`). Der Kanal fuer die Energie aus solchen Sessions
+  ist die bezahlte Lehre (Digital Campus Vorarlberg, WIFI), nicht die Startseite. Projekt-Ablage
+  des Falls seit 26.08.2026 auf SharePoint:
+  `01_Business Development\02_Vertrieb\06_KI-Coaching Einzelpersonen\` (nicht mehr im BD-Repo).
+  **Neu bewerten,** wenn unaufgefordert
+  mehrere Anfragen von Privatpersonen kommen — dann eine eigene schlanke Seite, nicht der alte
+  Baustein im Galvanik-Funnel.
+- **Zurueckgestellte Seiten — Stand 25.08.2026:** `sicherheit.html` ist **wieder live**, in Nav und
+  Sitemap. `ausbildung.html` ist seit 30.07. ein **Redirect-Stub** auf die Startseite und bewusst
+  **ohne** `noindex` (sonst verarbeitet Google den Refresh nicht als Redirect). Zum Wiederbeleben
+  einer Seite: Inhalt zurueckholen (`git show feed14a:ausbildung.html`), Nav-Eintrag in
+  `_generate_layout.py`, Sitemap-Eintrag, Meta-Block samt `preload` der Schriften.
 - **Tracking-Konvention:** je CTA-Position ein eigener Event-Name (`cta-nav`, `cta-hero`,
   `cta-ablauf`, `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`), Downloads als
   `pdf-<dateiname>`. **Keine generischen Selektoren** — die haben die Zahlen einmal verdoppelt.
