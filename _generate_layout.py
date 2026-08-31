@@ -81,6 +81,9 @@ PAGES = {
     # Navigation bewusst -- sie ist Teil der Website, keine bezahlte Landingpage,
     # bei der man die Nav entfernen wuerde.
     "demo.html": "demo.html",
+    # Seit 31.08.2026 hier statt handgepflegt: die Seite hatte den Demo-Eintrag
+    # nicht mitbekommen, weil ihre Navigation als einzige nicht generiert wurde.
+    "sicherheit.html": None,
     "ueber-mich.html": "ueber-mich.html",
     "forschung.html": "forschung.html",
     "impressum.html": None,
