@@ -72,6 +72,10 @@ FOOTER_COPY = (
 PAGES = {
     "index.html": None,
     "leistungen.html": "leistungen.html",
+    # Landingpage fuer das Demo-Video: ein Zweck, ein CTA, kein Nav-Eintrag.
+    # Nav + Footer kommen trotzdem von hier -- der Footer traegt Impressum und
+    # Datenschutz und ist auf einer erreichbaren Seite Pflicht.
+    "demo.html": None,
     "ueber-mich.html": "ueber-mich.html",
     "forschung.html": "forschung.html",
     "impressum.html": None,

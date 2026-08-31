@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-08-26
+**Stand:** 2026-08-31
 
 ---
 
@@ -23,6 +23,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 10.08.2026 | **Erster Optimierungslauf** — Messung repariert (jeder CTA war doppelt verdrahtet), zweiter Hero-Button ist jetzt ein Beleg statt eines Sprungankers | Ablauf ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md), monatlich per `/optimierung` |
 | 17.08.2026 | Presse-Karte verlinkt die frei lesbare WISTO-Fassung | tote Platzhalter weg |
 | 31.08.2026 | **`leistungen.html` zurueckgeholt** — echte Seite mit der Standortanalyse als Schwerpunkt, neun Bausteinen und Abgrenzung; Hero mobil entzerrt, Consent-Banner kompakt | Sitemap 5 → 6 URLs; Anlass: 87 GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen |
+| 31.08.2026 | **`demo.html` angelegt** — Landingpage fuer das Demo-Video, ein Zweck und ein CTA, bis zur Aufnahme `noindex` und unverlinkt | § *Demo-Seite*; Platzierungsentscheidung in `BD/projects/demo-video-akquise/` |
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
 | 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
 
@@ -88,6 +89,8 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 ## Optional (noch offen)
 
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
+- [ ] **`demo.html` scharfschalten**, sobald das Demo-Video aufgenommen ist — die drei Schritte
+      stehen unten in § *Demo-Seite* und noch einmal als Kommentar in der Datei selbst.
 
 ---
 
@@ -112,6 +115,38 @@ bleibt im `<style>`-Block der jeweiligen Seite.
 zurueckgestellt (noindex, nicht in Nav/Sitemap) und tragen weiter ihr eigenes
 CSS. Zum Reaktivieren: in `_generate_layout.py` PAGES + NAV_LINKS ergaenzen,
 Marker in die Seite setzen, `py _generate_layout.py` laufen lassen.
+
+## Demo-Seite (`demo.html`) — angelegt 31.08.2026, noch nicht scharf
+
+**Zweck:** die einzige Landingpage der Seite im engeren Sinn — ein Zweck, ein Handlungsaufruf,
+keine Ablenkung. Sie traegt das Demo-Video der Anwendung und ist das Ziel, auf das Mail, Telefon
+und LinkedIn zeigen. Begruendung der Platzierung im ganzen Trichter:
+`Business Development/projects/demo-video-akquise/README.md`.
+
+**Warum sie noch nicht live wirkt:** Ohne Video waere sie eine leere Seite. Sie steht deshalb auf
+`noindex`, ist **nicht** in `sitemap.xml` und wird von **keiner** Seite verlinkt — hochgeladen ist
+sie trotzdem, damit nach der Aufnahme nur noch drei Handgriffe fehlen.
+
+**Scharfschalten, wenn die YouTube-ID vorliegt:**
+
+1. In `demo.html` den Block `<div class="demo-platzhalter">` loeschen, das darunter
+   auskommentierte `<iframe>` einsetzen und `VIDEO_ID` ersetzen. Video **nicht gelistet**,
+   Einbindung **immer** ueber `youtube-nocookie.com` — die Datenschutzerklaerung setzt das voraus.
+2. Im `<head>` die Zeile `<meta name="robots" content="noindex">` entfernen und `demo.html` in
+   `sitemap.xml` eintragen.
+3. Zwei Verweise setzen: auf der Startseite unter dem bestehenden Pitch-Video und in
+   `leistungen.html` bei `#standortanalyse`. Danach `py _scripts/check_site.py`, pushen und den
+   Deploy bestaetigen (§ *Nach dem Push*).
+
+**Das Startseiten-Video ist ein anderes** und bleibt, wo es ist: `index.html`, Sektion
+*Intro-Video (Pitch)*, YouTube-ID `lLgcKqhHOrU`, „Warum Galvaniken auf Daten statt Bauchgefuehl
+setzen" (2 Minuten). **Kein zweites Video auf die Startseite** — zwei Videos uebereinander teilen
+die Aufmerksamkeit; die Startseite bekommt einen Verweis auf `demo.html`, nicht das Video selbst.
+
+**Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, der Videostart meldet sich als
+`video-gestartet` (die Erkennung in `consent.js` nimmt das erste YouTube-iframe der Seite — auf
+`demo.html` gibt es genau eines, es ist nichts anzupassen). Eingehende Links aus Mail und LinkedIn
+bekommen UTM-Parameter, damit der Verkehr im Monatslauf trennbar bleibt.
 
 ## Qualitaetssicherung / Self-Check
 
@@ -146,6 +181,8 @@ homepage/
                            Schwerpunkt (#standortanalyse), neun Bausteine in fuenf Gruppen, Abgrenzung, Sticky-CTA.
                            Nav/Footer/WA-FAB/Sticky kommen aus _generate_layout.py. Kachel-Fassung bis 07/2026:
                            git show 78ce8c3:leistungen.html
+  demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA). Seit 31.08.2026 angelegt,
+                           bis zur Aufnahme noindex + nicht in der Sitemap + unverlinkt — § Demo-Seite.
   ausbildung.html          Redirect-Stub auf die Startseite (Praxiskurs = Saeule 2, bis 2027 eingefroren).
                            Kursinhalt reaktivieren: git show feed14a:ausbildung.html
   sicherheit.html          Compliance-Seite (seit 11.08.2026 wieder indexiert, in Sitemap und Footer, bewusst NICHT
