@@ -356,6 +356,7 @@
             border-radius: 8px;
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
             background: var(--weiss);
+            cursor: zoom-out;
         }
         .modal-caption {
             color: rgba(255, 255, 255, 0.9);
@@ -867,7 +868,14 @@
     document.getElementById('modalClose').addEventListener('click', closeModal);
     document.getElementById('modalPrev').addEventListener('click', (e) => { e.stopPropagation(); navigate(-1); });
     document.getElementById('modalNext').addEventListener('click', (e) => { e.stopPropagation(); navigate(1); });
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    // Tippen auf das Bild schliesst ebenfalls (31.08.2026). Belegt im Klick-Waermebild:
+    // #modalImage war mit 4 von 20 Tippvorgaengen der haeufigste tote Klick dieser Seite.
+    // Das Bild fuellt mobil bis zu 92vh -- wer schliessen will, trifft fast zwangslaeufig
+    // es statt des Hintergrunds, und dann passierte nichts. Prev/Next stoppen ihre
+    // Ereignisse bereits selbst, koennen hier also nicht mitschliessen.
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === modalImg) closeModal();
+    });
 
     document.addEventListener('keydown', (e) => {
         if (!modal.classList.contains('open')) return;
