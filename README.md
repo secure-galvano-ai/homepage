@@ -148,6 +148,10 @@ die Aufmerksamkeit; die Startseite bekommt einen Verweis auf `demo.html`, nicht 
 `demo.html` gibt es genau eines, es ist nichts anzupassen). Eingehende Links aus Mail und LinkedIn
 bekommen UTM-Parameter, damit der Verkehr im Monatslauf trennbar bleibt.
 
+## Aenderungsprozess
+
+Wie eine Aenderung an dieser Website ablaeuft — von den Zahlen ueber die vier Gates bis zur Deploy-Bestaetigung — steht in [`AENDERUNGSPROZESS.md`](AENDERUNGSPROZESS.md). Er setzt auf `AGENTS.md` §5 auf und ergaenzt nur, was eine Website zusaetzlich braucht. Der monatliche Messlauf steht in [`OPTIMIERUNG.md`](OPTIMIERUNG.md).
+
 ## Qualitaetssicherung / Self-Check
 
 **Bei groesseren Aenderungen an HTML/CSS/Layout IMMER vor dem Commit/Deploy:**

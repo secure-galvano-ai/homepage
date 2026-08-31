@@ -109,6 +109,8 @@ verloren. Bei HTTP 429 bricht das Skript sauber ab, ohne Retry.
 
 ### Monatlich
 
+> **Wie eine Aenderung ablaeuft, steht in [`AENDERUNGSPROZESS.md`](AENDERUNGSPROZESS.md)** *(seit 31.08.2026)*. Dieses Dokument hier fuehrt den **Messlauf** — was gemessen wird und welche Entscheidungsregeln gelten. Merksatz: hier steht, **was ist**; dort steht, **wie geaendert wird**.
+
 **Der Ablauf steht im Skill** [`.claude/skills/optimierung/SKILL.md`](../.claude/skills/optimierung/SKILL.md)
 und wird mit `/optimierung` gestartet. Er ist bewusst nur dort beschrieben — stünde er
 zusätzlich hier, würden die beiden Stände auseinanderdriften.
