@@ -215,10 +215,10 @@ homepage/
     _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full
     thumbs/                Grid-Thumbnails (16 Zertifikate)
     full/                  Lightbox-Originale
-  docs/
-    sicherheit-methoden-standards.pdf    Corporate-PDF Statement „Datensicherheit & Compliance" (ersetzt sicherheit.html)
-    portrait_galvano_forum_2026.pdf      Galvano-Forum-Referenten-Portrait
-    praesentation_forschungsvorhaben_2025-07.pdf  Forschungsvorhaben-Präsentation (Stand Juli 2025)
+  docs/                    Belege zum Verlinken und Mitschicken (Musterbefund, Flyer, Beispielauswertungen,
+                           Methoden-und-Standards, Meisterbrief, Fachartikel, Praesentationen). Bewusst KEINE
+                           Einzelliste hier -- sie driftet bei jedem neuen Beleg. Wo welcher verlinkt ist:
+                           grep -o "docs/[a-z0-9_-]*\.pdf" *.html
   fonts/
     fonts.css                Self-Hosted @font-face Definitionen (Montserrat + Open Sans, OFL)
     Montserrat-{400,600,700}-{latin,latin-ext}.woff2   6 WOFF2-Files
