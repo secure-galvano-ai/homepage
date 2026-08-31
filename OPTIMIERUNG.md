@@ -130,7 +130,7 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 | Sitzungen | Clarity-Dashboard, ohne localhost | **111** (≈ 4/Tag) | steigend |
 | Ø Scrolltiefe | Clarity, alle Seiten | **56,2 %** | > 70 % |
 | Startseite bis 100 % gelesen | Clarity-Heatmap, je Gerät | **Desktop 35 % · mobil 5 %** | mobil → > 20 % |
-| Tote Klicks | Clarity `DeadClickCount` | **6 von 111 ≈ 5,4 %** ⚠️ | < 5 % |
+| Tote Klicks | Clarity `DeadClickCount` | **6 von 111 ≈ 5,4 %** ⚠️ — Ursache  am 31.08. behoben; alle sechs Faelle vom 6.–10.08. | < 5 % |
 | Aktive Zeit | Clarity | 45 s von 1,5 min | — |
 | Geräte | Clarity | 59 mobil / 46 Desktop | — |
 | **CTA-Klicks je Position** | Clarity, Intelligente Ereignisse | **0** — alle Positionen | > 0 |
