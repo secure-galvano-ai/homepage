@@ -39,6 +39,10 @@ WHATSAPP_URL = (
 # (href, label) — the Erstgespraech-CTA is appended separately.
 NAV_LINKS = [
     ("leistungen.html", "Leistungen"),
+    # "Demo" steht bewusst an zweiter Stelle: Reihenfolge nach der Kaufentscheidung --
+    # was macht ihr, wie sieht das aus, wer seid ihr. Vier Eintraege plus CTA liegen im
+    # empfohlenen Rahmen von vier bis sechs (31.08.2026).
+    ("demo.html", "Demo"),
     ("ueber-mich.html", "Über mich"),
     ("forschung.html", "Forschung"),
 ]
@@ -47,6 +51,7 @@ NAV_LINKS = [
 FOOTER_LINKS = [
     ("Startseite", "index.html", False),
     ("Leistungen", "leistungen.html", False),
+    ("Demo", "demo.html", False),
     ("Über mich", "ueber-mich.html", False),
     ("Sicherheit (PDF)", "docs/sicherheit-methoden-standards.pdf", True),
     ("Forschung", "forschung.html", False),
@@ -72,10 +77,10 @@ FOOTER_COPY = (
 PAGES = {
     "index.html": None,
     "leistungen.html": "leistungen.html",
-    # Landingpage fuer das Demo-Video: ein Zweck, ein CTA, kein Nav-Eintrag.
-    # Nav + Footer kommen trotzdem von hier -- der Footer traegt Impressum und
-    # Datenschutz und ist auf einer erreichbaren Seite Pflicht.
-    "demo.html": None,
+    # Seit 31.08.2026 mit eigenem Nav-Eintrag (Stefan). Die Seite behaelt die
+    # Navigation bewusst -- sie ist Teil der Website, keine bezahlte Landingpage,
+    # bei der man die Nav entfernen wuerde.
+    "demo.html": "demo.html",
     "ueber-mich.html": "ueber-mich.html",
     "forschung.html": "forschung.html",
     "impressum.html": None,
