@@ -32,9 +32,32 @@ die API danach nicht mehr erreichbar. Deshalb läuft ein **täglicher Sammler**
 (`_scripts/clarity_daily.py`), der die Historie lokal aufbaut. Das ist keine Bequemlichkeit,
 sondern die einzige Möglichkeit, überhaupt an einen Monatsverlauf zu kommen.
 
-**Was dauerhaft manuell bleibt:** Heatmaps und Sitzungsaufzeichnungen. Die API kennt die
-*Anzahl* toter Klicks, nicht das *Element*. Das sind 👤 ~10 Minuten pro Monat und der Teil
-mit dem höchsten Erkenntniswert — nicht wegrationalisieren.
+**Was dauerhaft manuell bleibt:** Sitzungsaufzeichnungen. Die API kennt die *Anzahl* toter
+Klicks, nicht das *Element*, und im Klick-Wärmebild sind die Beschriftungen maskiert. Das
+sind 👤 ~5 Minuten pro Monat und der Teil mit dem höchsten Erkenntniswert — nicht
+wegrationalisieren.
+
+**Heatmaps und Ereignisliste holt Claude seit 31.08.2026 selbst** über den Browser (Ablauf
+im Skill, Schritt 2). Stefan meldet sich einmal je Lauf an, mehr nicht — bewusst **ohne**
+gespeicherte Sitzungsdatei, aus demselben Grund, aus dem der GSC-Dienstkonto-Schlüssel
+abgelehnt wurde.
+
+> ⚠️ **Die lokale Historie unterzählt** *(belegt 31.08.2026)*. Für 10.–30.08. stehen dort
+> 44 Sitzungen, das Dashboard nennt 111 für 28 Tage — für dasselbe Fenster wären rund 75 zu
+> erwarten. Dieselbe Richtung bei toten Klicks (1 gegen 6) und Google-Referrern (3 gegen 27).
+> **Mittelwerte stimmen** (Scrolltiefe 58,2 % gegen 56,2 %). **Arbeitshypothese, nicht
+> belegt:** `numOfDays=1` liefert den *laufenden* Tag bis zum Abruf um 09:15 statt des
+> zuletzt abgeschlossenen — dann wäre die Reihe zusätzlich um einen Tag falsch beschriftet.
+> Der Kommentar in `_scripts/clarity_daily.py:133` behauptet das Gegenteil ohne Beleg.
+> **Test:** Dashboard auf „Letzte 7 Tage" gegen die Summe der Tageswerte derselben Woche.
+> Bis dahin: Historie nur für Verhältnisse und Verlauf, jede *Anzahl* aus der Oberfläche.
+
+**LinkedIn gehört seit 31.08.2026 in denselben Monatslauf** — eigener Abschnitt, gemeinsame
+Schlussfolgerung. Die Zahlen kommen aus dem XLSX-Export über
+`Business Development/scripts/analyse_linkedin.py`, **nicht** über den Browser: automatisierter
+Zugriff verstößt dort gegen die Nutzungsbedingungen und riskiert das Konto. Gepflegt wird der
+Befund in `projects/linkedin-auftritt/README.md`; hier steht nur, ob ein Beitrag Verkehr auf
+die Seite gebracht hat.
 
 ---
 
@@ -101,19 +124,24 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 
 ## 4. Kennzahlen
 
-| Kennzahl | Woher | Stand 10.–23.08.2026 (14 Tage) | Richtung |
+| Kennzahl | Woher | Stand 03.–31.08.2026 (28 Tage) | Richtung |
 |---|---|---|---|
 | **Terminanfragen** | 👤 Bookings + Mail | **0** | steigend |
-| Sitzungen | Clarity, ohne localhost | **24** (≈ 1,7/Tag) | steigend |
-| Ø Scrolltiefe | Clarity `ScrollDepth`, sitzungsgewichtet | **66,4 %** | > 70 % |
-| Tote Klicks | Clarity `DeadClickCount` | **1 von 32 Sitzungen ≈ 3 %** ✅ (war 15,8 %) | < 5 % |
-| Geräte | Clarity, ohne localhost | 10 mobil / 8 Desktop | — |
-| CTA-Klicks je Position | Clarity `data-funnel` | 👤 nur in der Oberfläche, **nicht über API** (§1) | steigend |
-| Beleg-Abrufe (PDF/Video) | Clarity `pdf-*`, `video-*` | 👤 dito | steigend |
-| Nicht-Marken-Klicks | 👤 GSC, manuell | ~25 von 47 (Aug 2026) | steigend |
+| Sitzungen | Clarity-Dashboard, ohne localhost | **111** (≈ 4/Tag) | steigend |
+| Ø Scrolltiefe | Clarity, alle Seiten | **56,2 %** | > 70 % |
+| Startseite bis 100 % gelesen | Clarity-Heatmap, je Gerät | **Desktop 35 % · mobil 5 %** | mobil → > 20 % |
+| Tote Klicks | Clarity `DeadClickCount` | **6 von 111 ≈ 5,4 %** ⚠️ | < 5 % |
+| Aktive Zeit | Clarity | 45 s von 1,5 min | — |
+| Geräte | Clarity | 59 mobil / 46 Desktop | — |
+| **CTA-Klicks je Position** | Clarity, Intelligente Ereignisse | **0** — alle Positionen | > 0 |
+| Beleg-Abrufe (PDF/Video) | Clarity `pdf-*`, `video-*` | **18 PDF · 5 Video** | steigend |
+| Core Web Vitals | Clarity | 93/100 · LCP 0,44 s · INP 140 ms · CLS 0 | ✅ halten |
+| GSC Klicks | 👤 GSC, Export | **60** (+253 %) bei 317 Impressionen | steigend |
+| **Nicht-Marken-Klicks** | 👤 GSC, Export | **~3 von 60** (29 davon Markensuche) | steigend |
 
 **Ein Monatsvergleich ist erstmals Anfang Oktober möglich** — die Historie beginnt am
-10.08.2026. Bis dahin sind alle Zahlen oben Ausgangswerte, keine Entwicklung.
+10.08.2026. Bis dahin sind alle Zahlen oben Ausgangswerte, keine Entwicklung. **Die Werte
+stammen aus der Oberfläche, nicht aus der lokalen Historie** — Begründung im Kasten in §1.
 
 **Clarity ist Opt-in-gated.** Gezählt wird nur, wer im Banner „Akzeptieren" klickt. Jede
 Sitzungszahl hier ist eine Untergrenze unbekannter Größe; für Niveauvergleiche mit

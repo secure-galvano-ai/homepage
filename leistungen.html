@@ -2,27 +2,571 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=index.html#ablauf">
-    <link rel="canonical" href="https://secure-galvano-ai.com/">
-    <title>Leistungen — Weiterleitung · secure galvano ai</title>
-    <meta name="description" content="Die Leistungen stehen jetzt vollständig auf der Startseite — sechs Schritte von der ersten Frage bis zum laufenden Betrieb.">
-    <!-- Aufgeloest am 2026-07-30 (Entscheidung Stefan): alles auf EINE Seite, so kurz
-         und uebersichtlich wie moeglich. Der grosse Teil des Inhalts war nach dem
-         Startseiten-Umbau redundant -- die sechs Schritte deckten Ablauf und
-         Folgewege ab, die Einwand-Kacheln vier der neun FAQ. Uebernommen wurden nur
-         die drei Fragen, die nirgends sonst beantwortet waren, plus die Datenhoheit
-         als fuenfte Kachel; die drei Demo-Videos haengen jetzt an den Schritten 3, 4
-         und 6. Kein noindex: das wuerde die Verarbeitung als Redirect verhindern.
-         Vollstaendige Seite zum Nachlesen: git show 78ce8c3:leistungen.html -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software und Datenauswertung für Galvanikanlagen — secure galvano ai</title>
+    <meta name="description" content="Standortanalyse, Datenauswertung und Software für Galvanik- und Eloxalbetriebe. Ein halber Tag vor Ort zeigt, wo Ihr Einsparpotenzial liegt und ob Ihre Daten es tragen.">
+    <meta name="keywords" content="Galvanik Software, Software für Galvanikanlagen, Digitalisierung Galvanotechnik, Datenauswertung Galvanik, Standortanalyse Galvanik, Predictive Quality Oberflächentechnik, Eloxal Anlagendaten">
+    <link rel="canonical" href="https://secure-galvano-ai.com/leistungen.html">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="Software und Datenauswertung für Galvanikanlagen — secure galvano ai">
+    <meta property="og:description" content="Ein halber Tag vor Ort zeigt, wo Ihr Einsparpotenzial liegt — und ob Ihre Daten es tragen. Neun Bausteine von der Standortanalyse bis zum laufenden Betrieb.">
+    <meta property="og:image" content="https://secure-galvano-ai.com/assets/img/og-image.jpg">
+    <meta property="og:url" content="https://secure-galvano-ai.com/leistungen.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_AT">
+    <meta property="og:site_name" content="secure galvano ai">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Schriften vorladen. Ohne das starten sie erst, nachdem fonts.css geparst ist
+         (gemessen 2026-08-24: CSS bei 296 ms da, Schriften erst ab 381 ms, letzte bei
+         793 ms fertig). Der font-display:swap-Wechsel von Arial auf Montserrat/Open Sans
+         verschob dadurch den Hero -- CLS 0,153 bei 770 ms, Google-Grenze ist 0,1.
+         crossorigin ist Pflicht, auch bei eigener Domain: ohne das Attribut laedt der
+         Browser die Datei ein zweites Mal, weil Schriften immer im CORS-Modus geholt
+         werden und der Preload sonst nicht zugeordnet wird.
+         Nur die latin-Subsets -- latin-ext wird nur bei Sonderzeichen ueberhaupt geholt. -->
+    <link rel="preload" href="fonts/Montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="fonts/fonts.css" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 60px 24px; text-align: center; color: #1B2A4A; }
-        a { color: #2B5EA7; font-weight: 600; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --schild-blau: #2B5EA7;
+            --dunkelblau: #1B2A4A;
+            --logo-gruen: #3D8C3E;
+            --silber: #D4D8DC;
+            --hellgrau: #F5F7FA;
+            --weiss: #FFFFFF;
+            --cyan-akzent: #00D4FF;
+            --schild-blau-hover: #234d8c;
+            --text-body: #334155;
+            --text-light: #64748b;
+            --whatsapp-gruen: #25D366;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dunkelblau);
+            background: var(--weiss);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+        /* Nav */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--silber);
+            transition: box-shadow 0.3s;
+        }
+        .nav.scrolled { box-shadow: 0 2px 20px rgba(27, 42, 74, 0.08); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; }
+        .nav-logo img { height: 40px; width: auto; }
+        .nav-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--dunkelblau); }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-body);
+            transition: color 0.2s;
+            letter-spacing: 0.02em;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--schild-blau); }
+        .nav-cta {
+            background: var(--schild-blau);
+            color: var(--weiss) !important;
+            padding: 10px 24px;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--schild-blau-hover); transform: translateY(-1px); }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--dunkelblau); margin: 6px 0; transition: 0.3s; }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 140px 0 70px;
+            background: linear-gradient(165deg, var(--dunkelblau) 0%, #162240 60%, #1a3055 100%);
+            color: var(--weiss);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -15%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .page-hero-content { position: relative; z-index: 1; max-width: 760px; }
+        .page-hero .section-label {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--cyan-akzent);
+            margin-bottom: 16px;
+        }
+        .page-hero h1 {
+            font-size: clamp(1.9rem, 4vw, 2.6rem);
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+        .page-hero p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.75;
+        }
+
+        /* Intro */
+        .intro { padding: 70px 0 40px; }
+        .intro p {
+            font-size: 1.02rem;
+            color: var(--text-body);
+            line-height: 1.75;
+            max-width: 760px;
+            margin: 0 auto 18px;
+        }
+        .intro p.lead {
+            font-size: 1.1rem;
+            color: var(--dunkelblau);
+        }
+
+        /* Rahmenwerke */
+        .frameworks { padding: 30px 0 60px; }
+        .framework {
+            padding: 36px 0;
+            border-bottom: 1px solid var(--silber);
+        }
+        .framework:last-child { border-bottom: none; }
+        .framework-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+        .framework h3 {
+            font-size: 1.3rem;
+            color: var(--dunkelblau);
+            line-height: 1.3;
+        }
+        .framework-ref {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-light);
+            letter-spacing: 0.04em;
+        }
+        .framework p {
+            color: var(--text-body);
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+        .framework p:last-child { margin-bottom: 0; }
+        .framework-note {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            padding-top: 4px;
+        }
+        .framework-note a { color: var(--schild-blau); text-decoration: underline; }
+        .framework-note a:hover { color: var(--schild-blau-hover); }
+
+        /* Methodik */
+        .methodik {
+            background: var(--hellgrau);
+            padding: 60px 0;
+        }
+        .methodik-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .methodik h2 {
+            font-size: 1.5rem;
+            color: var(--dunkelblau);
+            margin-bottom: 18px;
+        }
+        .methodik p {
+            color: var(--text-body);
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+
+        /* CTA */
+        .cta-bottom {
+            padding: 70px 0;
+            background: var(--weiss);
+            text-align: center;
+        }
+        .cta-bottom h2 {
+            font-size: 1.6rem;
+            color: var(--dunkelblau);
+            margin-bottom: 14px;
+        }
+        .cta-bottom p {
+            color: var(--text-body);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 26px;
+            border-radius: 8px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: var(--schild-blau);
+            color: var(--weiss);
+        }
+        .btn-primary:hover { background: var(--schild-blau-hover); transform: translateY(-1px); }
+        .btn-outline {
+            background: var(--weiss);
+            color: var(--dunkelblau);
+            border: 1px solid var(--silber);
+        }
+        .btn-outline:hover { border-color: var(--schild-blau); color: var(--schild-blau); }
+
+        /* Footer */
+        .footer { background: var(--dunkelblau); color: rgba(255,255,255,0.7); padding: 40px 0; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+        .footer-logo { display: flex; align-items: center; gap: 12px; }
+        .footer-logo img { height: 32px; }
+        .footer-logo span { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; color: var(--weiss); }
+        .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { font-size: 0.88rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--weiss); }
+        .footer-copy { font-size: 0.8rem; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--weiss); padding: 24px; border-bottom: 1px solid var(--silber); box-shadow: 0 8px 30px rgba(0,0,0,0.1); z-index: 50; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .framework-head { flex-direction: column; gap: 6px; }
+        }
+        /* ===== WHATSAPP FLOATING BUTTON ===== */
+        .wa-fab {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 90;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--whatsapp-gruen);
+            color: var(--weiss);
+            padding: 14px 22px 14px 18px;
+            border-radius: 50px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.92rem;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .wa-fab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+        }
+        .wa-fab svg { flex-shrink: 0; }
+        @media (max-width: 680px) {
+            .wa-fab { padding: 14px; right: 16px; bottom: 16px; }
+            .wa-fab .wa-label { display: none; }
+        }
+
+        /* ===== LEISTUNGEN-SEITE ===== */
+        .schwerpunkt { padding: 78px 0; background: var(--weiss); }
+        .schwerpunkt-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 46px; align-items: start; }
+        .schritt-liste { list-style: none; counter-reset: s; }
+        .schritt-liste li { counter-increment: s; position: relative; padding-left: 46px; margin-bottom: 22px; }
+        .schritt-liste li::before {
+            content: counter(s); position: absolute; left: 0; top: -2px;
+            width: 30px; height: 30px; border-radius: 50%; background: var(--schild-blau);
+            color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-weight: 700;
+            font-size: 0.9rem; display: flex; align-items: center; justify-content: center;
+        }
+        .schritt-liste strong { display: block; color: var(--dunkelblau); font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 3px; }
+        .eckdaten { background: var(--hellgrau); border-radius: 14px; padding: 26px 28px; border: 1px solid var(--silber); }
+        .eckdaten h3 { font-size: 1.02rem; color: var(--dunkelblau); margin-bottom: 16px; font-family: 'Montserrat', Arial, sans-serif; }
+        .eckdaten dl { display: grid; grid-template-columns: auto 1fr; gap: 9px 14px; font-size: 0.93rem; }
+        .eckdaten dt { color: var(--schild-blau); font-weight: 600; white-space: nowrap; }
+        .eckdaten dd { color: var(--text-body); }
+        .eckdaten .eck-cta { display: block; margin-top: 20px; text-align: center; font-weight: 600;
+            color: var(--schild-blau); text-decoration: none; border: 1.5px solid var(--schild-blau);
+            border-radius: 8px; padding: 11px; font-size: 0.92rem; }
+        .bausteine { padding: 78px 0; background: var(--hellgrau); }
+        .baustein-gruppe { margin-bottom: 40px; }
+        .baustein-gruppe > h3 { font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--schild-blau); margin-bottom: 16px; font-family: 'Montserrat', Arial, sans-serif; }
+        .baustein-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px; }
+        .bcard { background: var(--weiss); border: 1px solid var(--silber); border-radius: 12px; padding: 22px 24px; }
+        .bcard h4 { font-size: 1.04rem; color: var(--dunkelblau); margin-bottom: 8px; font-family: 'Montserrat', Arial, sans-serif; }
+        .bcard p { font-size: 0.93rem; color: var(--text-body); line-height: 1.6; }
+        .abgrenzung { padding: 60px 0; background: var(--weiss); }
+        .abgrenzung-box { max-width: 780px; margin: 0 auto; border-left: 3px solid var(--logo-gruen);
+            padding: 4px 0 4px 24px; }
+        @media (max-width: 860px) {
+            .schwerpunkt-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
     </style>
+
+    <script src="assets/js/consent.js" defer></script>
 </head>
 <body>
-    <p>Die Leistungen stehen jetzt auf der Startseite.</p>
-    <p><a href="index.html#ablauf">Weiter zu den sechs Schritten &rarr;</a></p>
-    <script>window.location.replace('index.html#ablauf');</script>
+
+<!-- BEGIN nav -->
+<!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
+<nav class="nav" id="nav">
+    <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/img/logo.png" alt="secure galvano ai">
+            <span>secure galvano ai</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="leistungen.html" class="active">Leistungen</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="forschung.html">Forschung</a></li>
+            <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="nav-cta" data-funnel="cta-nav">Erstgespräch</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<!-- END nav -->
+
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <p class="section-label">Leistungen</p>
+            <h1>Software und Datenauswertung für Galvanikanlagen</h1>
+            <p>Die meisten Betriebe zeichnen längst genug auf, um Ausschuss früher zu erkennen — nur ausgewertet wird es nicht. Der Einstieg ist deshalb kein Software-Projekt, sondern ein halber Tag vor Ort: Er zeigt, wo bei Ihnen das größte Potenzial liegt und ob Ihre Daten es tragen. Alles Weitere entscheiden Sie danach, Schritt für Schritt und jeweils einzeln beauftragt.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SCHWERPUNKT: Standortanalyse. Bewusst der groesste Block der Seite --
+     sie ist das einzige Einstiegsprodukt, war auf der Startseite aber nur
+     Schritt 2 von sechs (Optimierungslauf 08/2026, Befund B). ===== -->
+<section class="schwerpunkt" id="standortanalyse">
+    <div class="container">
+        <p class="section-label">Der Einstieg</p>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Standortanalyse</h2>
+        <p class="lead" style="max-width:760px;margin-bottom:38px;">Ein halber Tag in Ihrem Betrieb, und Sie wissen, welche Anwendungsfälle sich für Sie rechnen — jeder mit einer Zahl in Euro pro Jahr — und bei welchen Ihrer Anlagen die Datenlage dafür ausreicht. Sie bekommen eine belastbare Grundlage statt einer Schätzung. Und die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
+
+        <div class="schwerpunkt-grid">
+            <div>
+                <ol class="schritt-liste">
+                    <li><strong>Vorgespräch online</strong>Wir klären vorab, welche Anlagen überhaupt in Frage kommen und wen Sie dazuholen sollten. So ist der Tag vor Ort keine Kennenlernrunde mehr.</li>
+                    <li><strong>Rundgang durch die Anlagen</strong>Anlage für Anlage nehmen wir vier Kriterien auf: was aufgezeichnet wird, in welcher Auflösung, wie zuverlässig — und was ein Fehler dort kostet.</li>
+                    <li><strong>Gespräche mit Ihren Leuten</strong>Je etwa eine Stunde mit Instandhaltung und Qualitätssicherung. Die beiden wissen, welche Störungen sich wiederholen und welche wirklich weh tun. Diese Information steht in keiner Datenbank.</li>
+                    <li><strong>Auswertung am selben Abend</strong>Solange die Eindrücke frisch sind. Aus Kriterien und Gesprächen entsteht das Potenzialbild.</li>
+                    <li><strong>Abschlussrunde</strong>Wir gehen das Ergebnis gemeinsam durch, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
+                </ol>
+            </div>
+
+            <aside class="eckdaten">
+                <h3>Auf einen Blick</h3>
+                <dl>
+                    <dt>Vor Ort</dt><dd>ein halber Tag</dd>
+                    <dt>Ihr Aufwand</dt><dd>Anlagenliste, zwei Ansprechpersonen für je rund eine Stunde — mehr nicht</dd>
+                    <dt>Eingriff</dt><dd>keiner. Keine Verkabelung, kein Eingriff in die Steuerung</dd>
+                    <dt>Ihre Daten</dt><dd>bleiben im Haus. In diesem Schritt verlässt kein Messwert Ihren Betrieb</dd>
+                    <dt>Sie erhalten</dt><dd>Potenzialbild mit Euro-Bewertung je Anwendungsfall, Datenbewertung je Anlage, schriftlicher Befund</dd>
+                    <dt>Danach</dt><dd>Sie entscheiden frei. Es folgt kein Automatismus</dd>
+                </dl>
+                <a class="eck-cta" href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-leistungen">So sieht ein fertiger Befund aus (PDF)</a>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DIE NEUN BAUSTEINE ===== -->
+<section class="bausteine" id="bausteine">
+    <div class="container">
+        <p class="section-label">Was daraus wachsen kann</p>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Neun Bausteine — Sie beauftragen einzeln</h2>
+        <p class="lead" style="max-width:760px;margin-bottom:40px;">Kein Paket und keine Plattform, die erst einmal aufgebaut werden muss. Jeder Baustein steht für sich, und keiner setzt voraus, dass Sie den nächsten auch nehmen.</p>
+
+        <div class="baustein-gruppe">
+            <h3>Verstehen</h3>
+            <div class="baustein-cards">
+                <article class="bcard">
+                    <h4>1 · Standortanalyse</h4>
+                    <p>Ein halber Tag vor Ort. Wo liegt Ihr größtes Potenzial, und tragen Ihre Daten es? Beschrieben im Abschnitt darüber.</p>
+                </article>
+                <article class="bcard">
+                    <h4>2 · Datenlandkarte</h4>
+                    <p>Welche Systeme zeichnen bei Ihnen was auf — Prozessleitsystem, Laborsoftware, Gleichrichter, Excel-Listen? Sie bekommen eine Übersicht, was zusammenpasst, was doppelt geführt wird und wo eine Lücke sitzt.</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="baustein-gruppe">
+            <h3>Beweisen</h3>
+            <div class="baustein-cards">
+                <article class="bcard">
+                    <h4>3 · Diagnose an Ihren Daten</h4>
+                    <p>Sie sehen an Ihren eigenen Messwerten, ob die Spur wirklich da ist — ohne Eingriff in den laufenden Betrieb. Am Ende steht ein ehrliches Ja oder Nein.</p>
+                </article>
+                <article class="bcard">
+                    <h4>4 · Anbindung über definierte Exporte</h4>
+                    <p>Statt einer Schnittstelle in Ihre Steuerung genügen vereinbarte Exporte aus den Systemen, die Sie ohnehin betreiben. Kein Datenplattform-Vorprojekt, keine Abhängigkeit von Ihrer IT-Roadmap.</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="baustein-gruppe">
+            <h3>Umsetzen</h3>
+            <div class="baustein-cards">
+                <article class="bcard">
+                    <h4>5 · Optimierungsprojekte</h4>
+                    <p>Aus dem Potenzialbild werden Projekte: Chemieeinsatz, Ressourcen- und Energieverbrauch, Automatisierungsgrad. Ich begleite sie fachlich von der Zieldefinition bis zur Wirkungskontrolle.</p>
+                </article>
+                <article class="bcard">
+                    <h4>6 · Ausschreibungen vorbereiten</h4>
+                    <p>Wenn Sensorik, Automatisierung oder ein IT-Dienstleister gebraucht wird: Ich formuliere die fachlichen Anforderungen und mache die Angebote vergleichbar. Sie beauftragen und verhandeln selbst.</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="baustein-gruppe">
+            <h3>Betreiben</h3>
+            <div class="baustein-cards">
+                <article class="bcard">
+                    <h4>7 · Laufende Überwachung</h4>
+                    <p>Auffälligkeiten werden erkannt, während die Ware noch bei Ihnen im Haus ist. Läuft lokal auf abgeschotteter Hardware, ohne Cloud-Upload. Abgerechnet je überwachter Anlage.</p>
+                </article>
+                <article class="bcard">
+                    <h4>8 · Berichte und Erfolgskontrolle</h4>
+                    <p>Auswertungen für Qualitätssicherung, Audits, Reklamationsgespräche und Förderanträge. Und die Antwort auf die Frage, ob die Maßnahme aus Baustein 5 tatsächlich gewirkt hat.</p>
+                </article>
+                <article class="bcard">
+                    <h4>9 · Dediziertes Prüfmodul</h4>
+                    <p>An der einen Stelle, an der ein Fehler das Haus nicht verlassen darf, ein eigens dafür entwickeltes Modul — abgestimmt auf Ihr Teil, Ihre Anlage, Ihren kritischen Fehler.</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="baustein-gruppe" style="margin-bottom:0;">
+            <h3>Befähigen</h3>
+            <div class="baustein-cards">
+                <article class="bcard">
+                    <h4>Zusätzlich · KI-Werkzeuge und Datenschutz</h4>
+                    <p>Welche KI-Werkzeuge sich in Ihrer Datenverarbeitung lohnen, welche Daten dabei wohin dürfen, und wie Sie das nachweisbar absichern. Konkrete Anwendungsfälle statt Grundsatzdebatte.</p>
+                </article>
+                <article class="bcard">
+                    <h4>Zusätzlich · Schulung Ihrer Fachleute</h4>
+                    <p>Ihre Mitarbeiterinnen und Mitarbeiter lernen, mit der automatisierten Datenverarbeitung selbst umzugehen — bis hin zu eigenen kleinen Auswertungen. Ziel ist, dass Sie mich dafür nicht brauchen.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABGRENZUNG — haelt die Positionierung (BD/projects/.../README.md) ===== -->
+<section class="abgrenzung">
+    <div class="container">
+        <div class="abgrenzung-box">
+            <h2 style="font-size:1.25rem;color:var(--dunkelblau);margin-bottom:12px;">Was ich nicht mache</h2>
+            <p style="color:var(--text-body);line-height:1.75;">Ich bin Galvanikmeister und Materialphysiker, kein allgemeiner Digitalisierungsberater. Fremde Gewerke führe ich nicht — ich benenne, was fachlich gebraucht wird, und verweise weiter. Ich verkaufe keine Hardware und verdiene an keiner Anschaffung mit. Und ich verkaufe kein Datenplattform-Vorprojekt als Voraussetzung: Der Nachweis läuft auf dem Datenstand, den Sie heute schon haben.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-bottom">
+    <div class="container">
+        <h2>Wo Sie stehen, klärt sich in einer Stunde</h2>
+        <p>Im Erstgespräch schildern Sie Ihre Situation und bekommen eine belastbare Einschätzung, ob sich der Aufwand für Ihren Betrieb überhaupt lohnt. Passt es nicht, wissen Sie das nach dieser Stunde — nicht nach drei Monaten. Für österreichische Betriebe können Förderungen die Kosten der späteren Schritte deutlich senken.</p>
+        <div class="cta-buttons">
+            <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-leistungen">
+                Kostenloses Erstgespräch buchen
+            </a>
+            <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-funnel="pdf-musterbefund-abschluss">
+                Beispiel-Befund ansehen
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<!-- BEGIN wa-fab -->
+<!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
+<a class="wa-fab" href="https://wa.me/4368181483538?text=Hallo%20Stefan%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20Leistungen." target="_blank" rel="noopener" data-funnel="cta-whatsapp-fab" aria-label="Per WhatsApp anfragen">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.005a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-label">Sprechen wir über Ihre Möglichkeiten</span>
+</a>
+<!-- END wa-fab -->
+
+<!-- ===== STICKY MOBILE CTA =====
+     Die Seite ist mobil ueber 7.000 px hoch. Ohne mitlaufenden CTA wiederholt sie
+     genau den Befund aus dem Optimierungslauf 08/2026: mobil erreichten 5 % der
+     Besucher das Seitenende, dort sassen die Termin-Knoepfe, Klicks waren 0. -->
+<!-- BEGIN sticky-cta -->
+<!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
+<div class="sticky-cta" id="stickyCta">
+    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" data-funnel="cta-sticky">Kostenloses Erstgespräch buchen</a>
+</div>
+<!-- END sticky-cta -->
+
+<!-- ===== FOOTER ===== -->
+<!-- BEGIN footer -->
+<!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="assets/img/logo.png" alt="secure galvano ai">
+                <span>secure galvano ai</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="ueber-mich.html">Über mich</a></li>
+                <li><a href="docs/sicherheit-methoden-standards.pdf" target="_blank" rel="noopener">Sicherheit (PDF)</a></li>
+                <li><a href="forschung.html">Forschung</a></li>
+                <li><a href="sicherheit.html">Sicherheit</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="#" class="cookie-settings">Cookie-Einstellungen</a></li>
+            </ul>
+            <p class="footer-copy">Hinweise zur Verarbeitung personenbezogener Daten finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>. &copy; 2025&ndash;2026 secure-galvano-ai</p>
+        </div>
+    </div>
+</footer>
+<!-- END footer -->
+
+<script src="assets/js/site.js" defer></script>
+
 </body>
 </html>

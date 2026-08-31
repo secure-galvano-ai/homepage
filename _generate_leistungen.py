@@ -1,8 +1,13 @@
-"""STILLGELEGT am 2026-07-30 -- leistungen.html ist nur noch ein Redirect-Stub.
+"""STILLGELEGT -- endgueltig abgeloest am 2026-08-31.
 
-Die Leistungsbausteine sind mit der Konsolidierung auf die Startseite in den
-Ablauf-Block (#ablauf) aufgegangen. Dieses Skript wuerde den Stub ueberschreiben.
-NICHT ausfuehren. Letzter Stand der erzeugten Seite: git show 78ce8c3:leistungen.html
+Seit 30.07.2026 stillgelegt (leistungen.html war ein Redirect-Stub). Am 31.08.2026
+ist leistungen.html als echte Seite zurueckgekehrt, aber HANDGESCHRIEBEN: sie fuehrt
+neun Bausteine mit der Standortanalyse als Schwerpunkt, waehrend die LEISTUNGEN-Liste
+hier nur drei kannte. Dieses Skript wuerde den neuen Inhalt ueberschreiben.
+
+NICHT AUSFUEHREN. Es steht nur noch als Herkunftsnachweis fuer die alte Kachel-Fassung
+(git show 78ce8c3:leistungen.html). Einzige Quelle fuer die Bausteine ist jetzt
+leistungen.html selbst; Nav und Footer kommen aus _generate_layout.py.
 """
 raise SystemExit(__doc__)
 

@@ -38,7 +38,7 @@ WHATSAPP_URL = (
 # --- Nav: one canonical link set; `active` per page highlights the current one -
 # (href, label) — the Erstgespraech-CTA is appended separately.
 NAV_LINKS = [
-    ("index.html#ablauf", "Leistungen"),
+    ("leistungen.html", "Leistungen"),
     ("ueber-mich.html", "Über mich"),
     ("forschung.html", "Forschung"),
 ]
@@ -46,7 +46,7 @@ NAV_LINKS = [
 # --- Footer: full cross-link set (label, href, new_tab) ----------------------
 FOOTER_LINKS = [
     ("Startseite", "index.html", False),
-    ("Leistungen", "index.html#ablauf", False),
+    ("Leistungen", "leistungen.html", False),
     ("Über mich", "ueber-mich.html", False),
     ("Sicherheit (PDF)", "docs/sicherheit-methoden-standards.pdf", True),
     ("Forschung", "forschung.html", False),
@@ -71,6 +71,7 @@ FOOTER_COPY = (
 # --- Pages that carry the layout markers; value = active nav href (or None) ---
 PAGES = {
     "index.html": None,
+    "leistungen.html": "leistungen.html",
     "ueber-mich.html": "ueber-mich.html",
     "forschung.html": "forschung.html",
     "impressum.html": None,
