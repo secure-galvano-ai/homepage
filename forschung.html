@@ -102,7 +102,9 @@
             letter-spacing: 0.04em;
             margin-bottom: 18px;
         }
-        .project-card h3 { font-size: 1.4rem; margin-bottom: 14px; color: var(--weiss); line-height: 1.3; }
+        /* Beide Ebenen: die erste Karte fuehrt eine h2 (Projekttitel unter der H1), die
+           zweite eine h3. Beide sollen gleich aussehen. */
+        .project-card h2, .project-card h3 { font-size: 1.4rem; margin-bottom: 14px; color: var(--weiss); line-height: 1.3; }
         .project-card > .project-card-inner > p { color: rgba(255,255,255,0.85); line-height: 1.75; }
         .project-meta {
             display: grid;
@@ -301,7 +303,7 @@
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     Förderprojekt aws — Laufzeit bis 31.08.2026
                 </span>
-                <h3>KI-gestützte Prozessoptimierung in der Galvanotechnik zugunsten der Umweltbilanz</h3>
+                <h2>KI-gestützte Prozessoptimierung in der Galvanotechnik zugunsten der Umweltbilanz</h2>
                 <p>Automatisierte Datenerfassung und branchenspezifische Machine-Learning-Modelle zur Reduktion von Chemikalien- und Metallverbrauch, Energiekosten, Wasserbedarf und Abfallmengen — bei gleichzeitig ESG-tauglicher Datenerfassung. Vorhersage von Prozessparametern, Qualitätsproblemen und Störfällen zur Entlastung verfahrenstechnischer Teams.</p>
                 <div class="project-meta">
                     <div class="project-meta-item">
