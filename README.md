@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-07-02
+**Stand:** 2026-08-26
 
 ---
 
@@ -22,6 +22,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 10.08.2026 | Presse-/Aktuell-Sektion `#aktuell` nach der Trust-Bar | — |
 | 10.08.2026 | **Erster Optimierungslauf** — Messung repariert (jeder CTA war doppelt verdrahtet), zweiter Hero-Button ist jetzt ein Beleg statt eines Sprungankers | Ablauf ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md), monatlich per `/optimierung` |
 | 17.08.2026 | Presse-Karte verlinkt die frei lesbare WISTO-Fassung | tote Platzhalter weg |
+| 31.08.2026 | **`leistungen.html` zurueckgeholt** — echte Seite mit der Standortanalyse als Schwerpunkt, neun Bausteinen und Abgrenzung; Hero mobil entzerrt, Consent-Banner kompakt | Sitemap 5 → 6 URLs; Anlass: 87 GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen |
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
 | 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
 
@@ -100,7 +101,7 @@ Seite dupliziert. Wer Farben, Nav oder Footer aendert, editiert **eine** Quelle:
 | Design-Tokens (Farben) + Reset + Typo + Container + Nav + Buttons + section-header + Footer + WA-FAB + Sticky-CTA + fade-up | `assets/css/base.css` | jede Seite (erstes CSS im `<head>`) |
 | Geteiltes Verhalten (Nav-Scroll, Mobile-Menue, fade-up) | `assets/js/site.js` | jede Seite (`defer`) |
 | Nav + Footer + WA-FAB + Sticky (HTML) | `_generate_layout.py` -> Marker `<!-- BEGIN/END nav -->` usw. | index, leistungen, ueber-mich, forschung, impressum, datenschutz |
-| Leistungs-Karten | `_generate_leistungen.py` -> Marker | leistungen.html |
+| ~~Leistungs-Karten~~ | `_generate_leistungen.py` **abgeloest 31.08.2026** — die Bausteine stehen handgeschrieben in `leistungen.html` (neun statt drei). Skript nicht ausfuehren | — |
 
 Die Markenfarben in `base.css :root` sind **kanonisch abgeleitet** aus
 `Business Development/areas/brand/corporate_design.md`. Aendern sich Markenfarben,
@@ -141,11 +142,14 @@ npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.htm
 ```
 homepage/
   index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Diagnose-Angebot ohne Preis (#angebot), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
-  leistungen.html          Redirect-Stub auf index.html#ablauf (aufgeloest 2026-07-30, alles auf EINE Seite).
-                           Vollstaendige Seite: git show 78ce8c3:leistungen.html
+  leistungen.html          Leistungsseite (seit 31.08.2026 wieder echt, handgeschrieben): Standortanalyse als
+                           Schwerpunkt (#standortanalyse), neun Bausteine in fuenf Gruppen, Abgrenzung, Sticky-CTA.
+                           Nav/Footer/WA-FAB/Sticky kommen aus _generate_layout.py. Kachel-Fassung bis 07/2026:
+                           git show 78ce8c3:leistungen.html
   ausbildung.html          Redirect-Stub auf die Startseite (Praxiskurs = Saeule 2, bis 2027 eingefroren).
                            Kursinhalt reaktivieren: git show feed14a:ausbildung.html
-  sicherheit.html          Zurueckgestellt (noindex, nicht in Nav/Sitemap) — ersetzt durch docs/sicherheit-methoden-standards.pdf
+  sicherheit.html          Compliance-Seite (seit 11.08.2026 wieder indexiert, in Sitemap und Footer, bewusst NICHT
+                           in der Hauptnavigation). Nav/Footer dort handgepflegt, nicht ueber _generate_layout.py.
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
   impressum/ stefan-maier/ kontakt/ trusted-ai/ data-analytics/

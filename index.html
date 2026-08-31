@@ -1539,7 +1539,13 @@
         }
 
         @media (max-width: 680px) {
-            .hero { padding: 130px 0 80px; }
+            /* Enger als am Desktop, damit der Haupt-CTA ueber das Consent-Banner rutscht.
+               Gemessen 31.08.2026 bei 390x844: Banner-Oberkante 714 px, Knopf lag bei
+               705-755 -- also verdeckt. Ohne diese ~50 px sieht ihn niemand, der das
+               Banner nicht wegklickt (rund die Haelfte der mobilen Besucher). */
+            .hero { padding: 104px 0 72px; }
+            .hero h1 { margin-bottom: 16px; }
+            .hero p { margin-bottom: 26px; font-size: 1.05rem; line-height: 1.6; }
             .hero-content { grid-template-columns: 1fr; gap: 32px; }
             .hero-portrait::before { width: 200px; height: 200px; top: -10px; }
             .hero-portrait > img { width: 180px; height: 180px; border-width: 4px; }

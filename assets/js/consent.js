@@ -122,7 +122,14 @@
             '.consent-btn:hover{opacity:0.85;}',
             '.consent-accept{background:#3D8C3E;color:#fff;}',
             '.consent-reject{background:rgba(255,255,255,0.15);color:#fff;}',
-            '@media(max-width:680px){.consent-banner{left:12px;right:90px;bottom:12px;max-width:none;}}'
+            // Mobil bewusst kompakt (31.08.2026): Auf 390x844 lag das Banner genau ueber
+            // dem Hero-CTA bei y=705 -- wer es nicht wegklickt, sieht den Hauptknopf nie.
+            // Nur Groesse, KEINE Textkuerzung: der Einwilligungstext bleibt wortgleich.
+            '@media(max-width:680px){.consent-banner{left:8px;right:76px;bottom:8px;max-width:none;',
+            'padding:10px 12px;font-size:0.72rem;line-height:1.4;border-radius:8px;}',
+            '.consent-banner p{margin:0 0 8px;}',
+            '.consent-actions{gap:8px;}',
+            '.consent-btn{padding:7px 10px;font-size:0.72rem;}}'
         ].join('');
         var style = document.createElement('style');
         style.textContent = css;
