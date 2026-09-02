@@ -26,6 +26,8 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 31.08.2026 | **`demo.html` angelegt** — Landingpage fuer das Demo-Video, ein Zweck und ein CTA, bis zur Aufnahme `noindex` und unverlinkt | § *Demo-Seite*; Platzierungsentscheidung in `BD/projects/demo-video-akquise/` |
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
 | 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
+| 02.09.2026 | **`demo.html` scharfgeschaltet** — Video `RStpqzz3r5g` eingebunden, Texte auf die Anwendung statt auf den Vor-Ort-Tag umgestellt, zwei Verweise gesetzt | § *Demo-Seite* |
+| 02.09.2026 | **„Ihre Daten bleiben bei Ihnen" → „Lokale Datenverarbeitung"** *(Stefan)* — Startseiten-H2, Vertrauenszeile auf `demo.html`, Baustein *Laufende Überwachung* auf `leistungen.html` | Wortlaut bleibt seitenübergreifend identisch |
 
 ### Regeln, die daraus dauerhaft gelten
 
@@ -89,8 +91,12 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 ## Optional (noch offen)
 
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
-- [ ] **`demo.html` scharfschalten**, sobald das Demo-Video aufgenommen ist — die drei Schritte
-      stehen unten in § *Demo-Seite* und noch einmal als Kommentar in der Datei selbst.
+- [ ] **UTM auf die eingehenden Links** setzen (Mailstufe 3, LinkedIn, Signatur) — die interne
+      Verlinkung bleibt bewusst ohne UTM, sonst zerlegt sie die Sitzung. § *Demo-Seite*.
+- [ ] **Konkurrieren die „Weiteren Aufnahmen" mit dem Hauptvideo?** Der erste der drei Links
+      auf `demo.html` heisst „Auffaelligkeiten an Prozessdaten erkennen" und verspricht damit
+      dasselbe wie das Hauptvideo darueber. Im naechsten Monatslauf gegen die Klickzahlen
+      pruefen und im Zweifel den Link streichen — eine Landingpage hat einen Zweck.
 
 ---
 
@@ -116,27 +122,34 @@ zurueckgestellt (noindex, nicht in Nav/Sitemap) und tragen weiter ihr eigenes
 CSS. Zum Reaktivieren: in `_generate_layout.py` PAGES + NAV_LINKS ergaenzen,
 Marker in die Seite setzen, `py _generate_layout.py` laufen lassen.
 
-## Demo-Seite (`demo.html`) — angelegt 31.08.2026, noch nicht scharf
+## Demo-Seite (`demo.html`) — scharf seit 02.09.2026
 
 **Zweck:** die einzige Landingpage der Seite im engeren Sinn — ein Zweck, ein Handlungsaufruf,
 keine Ablenkung. Sie traegt das Demo-Video der Anwendung und ist das Ziel, auf das Mail, Telefon
 und LinkedIn zeigen. Begruendung der Platzierung im ganzen Trichter:
 `Business Development/projects/demo-video-akquise/README.md`.
 
-**Warum sie noch nicht live wirkt:** Ohne Video waere sie eine leere Seite. Sie steht deshalb auf
-`noindex`, ist **nicht** in `sitemap.xml` und wird von **keiner** Seite verlinkt — hochgeladen ist
-sie trotzdem, damit nach der Aufnahme nur noch drei Handgriffe fehlen.
+**Was drauf ist:** YouTube-ID **`RStpqzz3r5g`** („Prozessdaten auswerten — die Anwendung im
+Ueberblick"), **4:51**, nicht gelistet, eingebunden ueber `youtube-nocookie.com` — kein Cookie vor
+Klick, die Datenschutzerklaerung setzt das voraus. `noindex` ist raus, die Seite steht in der
+`sitemap.xml`, und zwei Verweise zeigen darauf: Startseite unter dem Pitch-Video
+(`link-demo-startseite`) und `leistungen.html` in der Karte *Vorprojekt*
+(`cta-demo-vorprojekt`, stand dort schon seit 31.08.). **Nicht** in die Belegspalte bei
+`#standortanalyse` — die sammelt Belege zur *Standortanalyse*, das Video zeigt die *Anwendung*.
+Ein am 02.09. dort versuchsweise gesetzter dritter Verweis ist aus genau diesem Grund wieder
+raus: zwei Links auf dieselbe Seite konkurrieren miteinander, statt zu fuehren.
 
-**Scharfschalten, wenn die YouTube-ID vorliegt:**
+**Die Seite erzaehlt DIE ANWENDUNG, nicht den Vor-Ort-Tag** *(Stefan, 02.09.2026)*. Zwischen
+31.08. und 01.09. stand hier kurzzeitig die Standortanalyse-Fassung („So laeuft ein Tag
+Standortanalyse ab", Kartenwand, Rundgang) — das aufgenommene Video zeigt aber die Auswertung.
+**Dauerregel daraus: Seite und Video muessen dasselbe versprechen.** Wird das Video getauscht,
+wandern Ueberschrift, Vorspann, die drei Punkte *„Was Sie im Video sehen"*, `<title>`, die
+`og:`-Tags und die Laengenangabe **im selben Zug** mit. Die Laenge steht an vier Stellen:
+Hero-Label, Meta-Description und je einmal im Verweis auf Startseite und `leistungen.html`.
 
-1. In `demo.html` den Block `<div class="demo-platzhalter">` loeschen, das darunter
-   auskommentierte `<iframe>` einsetzen und `VIDEO_ID` ersetzen. Video **nicht gelistet**,
-   Einbindung **immer** ueber `youtube-nocookie.com` — die Datenschutzerklaerung setzt das voraus.
-2. Im `<head>` die Zeile `<meta name="robots" content="noindex">` entfernen und `demo.html` in
-   `sitemap.xml` eintragen.
-3. Zwei Verweise setzen: auf der Startseite unter dem bestehenden Pitch-Video und in
-   `leistungen.html` bei `#standortanalyse`. Danach `py _scripts/check_site.py`, pushen und den
-   Deploy bestaetigen (§ *Nach dem Push*).
+**Ein anderes Video einsetzen:** nur die ID im `<iframe>` tauschen, nie `youtube.com` statt
+`youtube-nocookie.com`. **Kein zweites Video auf diese Seite** — eine Landingpage, ein Zweck.
+Danach `py _scripts/check_site.py`, pushen und den Deploy bestaetigen (§ *Nach dem Push*).
 
 **Das Startseiten-Video ist ein anderes** und bleibt, wo es ist: `index.html`, Sektion
 *Intro-Video (Pitch)*, YouTube-ID `lLgcKqhHOrU`, „Warum Galvaniken auf Daten statt Bauchgefuehl
