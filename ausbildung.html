@@ -431,7 +431,7 @@
         .bildband figcaption { font-size: 0.82rem; color: var(--text-light); line-height: 1.55; padding: 12px 4px 0; }
 
         .nutzen { padding: 70px 0; background: var(--hellgrau); }
-        .nutzen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 34px; }
+        .nutzen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 24px; margin-top: 34px; }  /* 330px = zwei Spalten statt 3+1 bei vier Karten */
         .ncard { background: var(--weiss); border: 1px solid var(--silber); border-radius: 10px; padding: 26px 24px; }
         .ncard .ic { width: 42px; height: 42px; border-radius: 9px; background: rgba(43,94,167,0.09); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
         .ncard h3 { font-size: 1.02rem; margin-bottom: 9px; }
@@ -540,111 +540,16 @@
     <div class="container">
         <div class="page-hero-content">
             <div class="section-label">Aus- und Weiterbildung</div>
-            <h1>Ihre Leute kennen die Prozesse.<br>Mit KI-Agenten bauen sie sich die Auswertung dazu selbst.</h1>
+            <h1>Ihre Leute kennen die Prozesse.<br>Die Auswertung dazu bauen sie sich selbst.</h1>
             <p>In Ihren Anlagen läuft die Messtechnik längst mit — Ströme, Temperaturen, Zähler,
-               Prüfergebnisse. Nur fragt sie niemand. Wir übergeben ein agentisches KI-System und
-               den Entwicklungsprozess dazu: Damit bauen Ihre Fachkräfte eigene Auswertungen und
-               kleine Anwendungen — ohne Programmierkenntnisse und ohne dass Betriebsdaten das
-               Haus verlassen.</p>
+               Prüfergebnisse. Wir übergeben ein KI-System und den Arbeitsweg dazu: Damit bauen
+               Ihre Fachkräfte eigene Auswertungen — ohne Programmierkenntnisse und ohne dass
+               Betriebsdaten das Haus verlassen.</p>
         </div>
     </div>
 </section>
 
-<!-- ===== AUF EINEN BLICK ===== -->
-<section class="blick">
-    <div class="container">
-        <div class="blick-tab">
-            <div class="z"><div class="f">Was</div><div class="a">Ein <b>agentisches KI-System</b> plus der Entwicklungsprozess dazu. Ihre Fachkräfte bauen damit eigene Auswertungen und kleine Anwendungen — an Ihren eigenen Fragen.</div></div>
-            <div class="z"><div class="f">Für wen</div><div class="a">Verfahrenstechnik, Qualität, Instandhaltung. <b>Ohne Programmierkenntnisse.</b> Auch für Lehrlinge geeignet.</div></div>
-            <div class="z"><div class="f">Nutzen</div><div class="a">Fragen, die heute liegen bleiben, werden im Haus beantwortet — in Stunden statt in Projekten.</div></div>
-            <div class="z"><div class="f">Ablauf</div><div class="a">Vorführung, Einrichtung, Werkstatt, Begleitung. Jeder Schritt einzeln beendbar.</div></div>
-            <div class="z"><div class="f">Wo</div><div class="a">Online oder bei Ihnen im Betrieb. Geübt wird zuerst an Übungsdaten, danach an Ihren eigenen.</div></div>
-            <div class="z"><div class="f">Ergebnis</div><div class="a">Eine <b>lauffähige Anwendung, die Ihnen gehört</b> — samt Quellcode, Regelwerk und schriftlicher Datengrenze. Und die Fähigkeit, die nächste selbst zu bauen.</div></div>
-        </div>
-        <div class="vierwort"><span>Ansehen</span><span>Einrichten</span><span>Selber bauen</span><span>Weitermachen</span></div>
-    </div>
-</section>
-
-<!-- ===== EINSTIEG ===== -->
-<section class="intro">
-    <div class="container">
-        <div class="lead-intro">
-            <div class="section-label" style="color:var(--schild-blau);">Worum es geht</div>
-            <h2 style="font-size:1.7rem;margin-bottom:18px;">Der Wert liegt nicht mehr im Programmieren,
-                sondern im Beurteilen</h2>
-            <p>Eine Auswertung zu erzeugen, ist heute in Stunden möglich. Zu erkennen, ob sie stimmt,
-               ist die eigentliche Arbeit — und die kann niemand besser lernen als jemand, der Ihre
-               Prozesse kennt. Deshalb verkaufen wir hier keine fertige Software, sondern den
-               Prozess dahinter.</p>
-            <p>Unterrichtet wird genau der Arbeitsweg, den wir selbst verwenden: Regelwerk,
-               Entwicklungsablauf mit Rückkopplung, saubere Versionierung — und als eigener Baustein
-               die Frage, welche Daten ein Werkzeug überhaupt sehen darf. Am Ende steht nicht ein
-               Foliensatz, sondern ein lauffähiges Werkzeug, das Ihnen gehört.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== WAS SIE BEKOMMEN ===== -->
-<section class="produkt">
-    <div class="container">
-        <div class="section-label">Was Sie bekommen</div>
-        <h2 style="font-size:1.7rem;">Ein agentisches KI-System — und der Prozess, der es beherrschbar macht</h2>
-        <p>Ein KI-Agent ist kein Chatfenster. Er nimmt eine Aufgabe entgegen, arbeitet sie in
-           Schritten ab, prüft sein eigenes Ergebnis und legt es versioniert ab. Was ihn nützlich
-           oder gefährlich macht, ist nicht das Modell dahinter — es ist der Rahmen, in dem er
-           arbeiten darf.</p>
-        <div class="pgrid">
-            <div class="pcard">
-                <div class="nr">Baustein 1</div>
-                <h3>Das agentische System</h3>
-                <p>Eingerichtet auf Ihren Rechnern, mit Regelwerk und Zugriffsgrenzen. Ihre Leute
-                   beschreiben in normalem Deutsch, was sie sehen wollen — der Agent baut die
-                   Anwendung dazu.</p>
-                <p>Es entsteht echter Quellcode, kein Klickwerkzeug. Was gebaut wird, läuft
-                   danach ohne uns und ohne Abo weiter.</p>
-            </div>
-            <div class="pcard">
-                <div class="nr">Baustein 2</div>
-                <h3>Der Entwicklungsprozess</h3>
-                <p>Regelwerk, Ablauf mit Rückkopplung, Versionierung, Abnahmekriterium. Der Teil,
-                   der aus einem Zufallstreffer ein wiederholbares Ergebnis macht.</p>
-                <p>Dieser Prozess ist der eigentliche Gegenstand der Ausbildung — das System
-                   bedient sich in einer Woche, der Prozess trägt Jahre.</p>
-            </div>
-            <div class="pcard">
-                <div class="nr">Baustein 3</div>
-                <h3>Die Datengrenze</h3>
-                <p>Vor der ersten Zeile wird eingestuft: was ein Werkzeug sehen darf, was nur
-                   aufbereitet und was nie. Schriftlich, an Ihren eigenen Datenquellen.</p>
-                <p>Nicht die Daten wandern zum Werkzeug. Das Werkzeug entsteht, die Auswertung
-                   läuft bei Ihnen.</p>
-            </div>
-        </div>
-        <div class="herkunft">
-            <p><b>Woher der Prozess kommt.</b> Er ist nicht am Schreibtisch entstanden, sondern
-               abgeleitet aus dem, was in der Automobilzulieferung selbstverständlich ist:
-               definierte Freigabestufen, nachvollziehbare Änderungen, für jeden Stand ein
-               Nachweis. Genau das fehlt den meisten KI-Werkzeugen — und genau deshalb erzeugen
-               sie Ergebnisse, die hinterher niemand verantworten kann. Wer aus der
-               Serienfertigung kommt, erkennt den Ablauf sofort wieder.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== BILDBAND ===== -->
-<section class="bildband">
-    <div class="container">
-        <figure>
-            <img src="assets/img/techniker-monitoring.jpg"
-                 alt="Fachkraft in Arbeitskleidung vor zwei Bildschirmen mit Messkurven, im Hintergrund eine Galvanikanlage"
-                 width="1280" height="683" loading="lazy" decoding="async">
-            <figcaption>So sieht das Ziel aus: Die Auswertung steht neben der Anlage, und
-                bedient wird sie von jemandem, der den Prozess kennt. — Illustration.</figcaption>
-        </figure>
-    </div>
-</section>
-
-<!-- ===== NUTZEN ===== -->
+<!-- ===== NUTZEN — steht bewusst vor jeder Erklaerung ===== -->
 <section class="nutzen">
     <div class="container">
         <div class="section-label" style="color:var(--schild-blau);">Was Ihr Betrieb davon hat</div>
@@ -666,74 +571,46 @@
                 <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="13" rx="2"/><path d="M8.5 7V5.2A1.7 1.7 0 0 1 10.2 3.5h3.6A1.7 1.7 0 0 1 15.5 5.2V7"/><path d="M2.5 12.5h19"/></svg></div>
                 <h3>Werkzeuge, die Ihnen gehören</h3>
                 <p>Was im Kurs entsteht, bleibt bei Ihnen — samt Quellcode und Regelwerk. Keine
-                   Lizenz, keine Abhängigkeit, kein Wartungsvertrag als Bedingung.</p>
+                   Lizenz, kein Abo, kein Wartungsvertrag als Bedingung.</p>
             </div>
             <div class="ncard">
                 <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87"/><path d="M16.5 3.7a4 4 0 0 1 0 6.6"/></svg></div>
                 <h3>Nachwuchs, der bleibt</h3>
                 <p>Lehrlinge und junge Fachkräfte arbeiten mit Werkzeugen, die sie selbst gebaut
-                   haben. Das bindet stärker als jede Schulungsmaßnahme von der Stange.</p>
+                   haben. Das bindet stärker als jede Schulung von der Stange.</p>
             </div>
         </div>
+        <p style="margin-top:26px;font-size:0.95rem;line-height:1.75;color:var(--text-light);max-width:820px;">
+           Verkauft wird hier keine fertige Software, sondern der Arbeitsweg dahinter: Regelwerk,
+           Ablauf mit Rückkopplung, saubere Versionierung — und die Frage, welche Daten ein Werkzeug
+           überhaupt sehen darf. Am Ende steht ein lauffähiges Werkzeug, das Ihnen gehört.
+           Wie eine fertige Auswertung aussieht, zeigt das
+           <a href="demo.html" data-funnel="link-demo-ausbildung" style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">Video zur Anwendung</a> —
+           gebaut wird in der Werkstatt aber von Ihren Leuten.</p>
     </div>
 </section>
 
-<!-- ===== PROZESS ===== -->
-<section class="prozess">
+<!-- ===== BILDBAND ===== -->
+<section class="bildband">
     <div class="container">
-        <div class="section-label" style="color:var(--schild-blau);">Der Prozess</div>
-        <h2 style="font-size:1.7rem;">Drei Ebenen — und die Grenze dazwischen</h2>
-
-        <div class="ebene">
-            <div class="ebene-head"><span class="ebene-num">Ebene 1</span><h3>Entwicklung</h3></div>
-            <p>Ein Prompt allein erzeugt keinen tragfähigen Code. Tragfähig wird er durch zwei
-               Klammern und ein Rückgrat: ein Regelwerk, das den Rahmen setzt, einen Ablauf mit
-               Rückkopplung — und ein Repository, das jeden Stand nachvollziehbar hält.</p>
-            <div class="kette">
-                <div class="k">Anwender<span>stellt die Frage</span></div>
-                <div class="pfeil">&rarr;</div>
-                <div class="k">Regelwerk<span>setzt den Rahmen</span></div>
-                <div class="pfeil">&rarr;</div>
-                <div class="k">Ablauf mit Rückkopplung<span>bauen, prüfen, korrigieren</span></div>
-                <div class="pfeil">&rarr;</div>
-                <div class="k">Werkzeug<span>versioniert abgelegt</span></div>
-                <div class="pfeil">&rarr;</div>
-                <div class="k stark">Einsatz im Betrieb<span>Rollout und Nutzung</span></div>
-            </div>
-        </div>
-
-        <div class="ebene">
-            <div class="ebene-head"><span class="ebene-num">Ebene 2</span><h3>Daten — und zwar vor Ort</h3></div>
-            <p>Datenquellen und Sicherungen laufen über einen Aufbereitungsschritt, bevor
-               irgendetwas ausgewertet wird. Der Grundsatz dahinter ist der eigentliche Lehrinhalt:
-               nicht die Daten wandern zum Werkzeug, sondern das Werkzeug entsteht — und die
-               Auswertung läuft bei Ihnen.</p>
-            <div class="kette">
-                <div class="k">Datenquellen<span>Anlagensteuerung, Prüfmittel, Sicherungen</span></div>
-                <div class="pfeil">&rarr;</div>
-                <div class="k">Aufbereitung<span>Werte und Namen bleiben lokal</span></div>
-                <div class="pfeil">&rarr;</div>
-                <div class="k">Auswertung<span>Ergebnis entsteht im Haus</span></div>
-            </div>
-        </div>
-
-        <div class="ebene">
-            <div class="ebene-head"><span class="ebene-num">Ebene 3</span><h3>Begleitung nach Bedarf</h3></div>
-            <p>Vorführung und Einrichtung, dann die Werkstatt, danach Unterstützung dort, wo sie
-               gebraucht wird. Kein Paket, das Sie im Voraus kaufen müssen — die Stufen bauen
-               aufeinander auf, und Sie steigen aus, wann Sie wollen.</p>
-        </div>
+        <figure>
+            <img src="assets/img/techniker-monitoring.jpg"
+                 alt="Fachkraft in Arbeitskleidung vor zwei Bildschirmen mit Messkurven, im Hintergrund eine Galvanikanlage"
+                 width="1280" height="683" loading="lazy" decoding="async">
+            <figcaption>So sieht das Ziel aus: Die Auswertung steht neben der Anlage, und
+                bedient wird sie von jemandem, der den Prozess kennt. — Illustration.</figcaption>
+        </figure>
     </div>
 </section>
 
-<!-- ===== DATENGRENZE ===== -->
+<!-- ===== DREI STUFEN + DATENGRENZE ===== -->
 <section class="grenze">
     <div class="container">
-        <div class="section-label">Datenschutz, praktisch</div>
-        <h2 style="font-size:1.7rem;">Gelernt wird in drei Stufen — wie an der Anlage</h2>
+        <div class="section-label">Wie gelernt wird</div>
+        <h2 style="font-size:1.7rem;">In drei Stufen — wie an der Anlage</h2>
         <p>Niemand lässt einen Lehrling vom Becherglas direkt auf die Serienanlage. Für Daten gilt
-           dasselbe. Deshalb beginnt die Werkstatt an Übungsdaten und geht erst dann an Ihre
-           eigenen — Schritt für Schritt, mit einer klaren Grenze an jeder Stufe.</p>
+           dasselbe: Geübt wird zuerst an Übungsdaten, danach an Ihren eigenen — und nicht die Daten
+           wandern zum Werkzeug, sondern das Werkzeug entsteht bei Ihnen.</p>
         <div class="stufen-grid">
             <div class="scard">
                 <div class="st">Stufe 1</div>
@@ -746,23 +623,22 @@
                 <div class="st">Stufe 2</div>
                 <h3>Ihre eigenen Daten</h3>
                 <div class="sub">Vorher eingestuft, lokal ausgewertet</div>
-                <p>Echte Fragen, unkritische Fälle. Vorher wird sortiert: was ist offen, was ist
-                   intern, was ist Geschäftsgeheimnis. Erst dann wird gearbeitet.</p>
+                <p>Echte Fragen, unkritische Fälle. Vorher wird sortiert: was ist offen, was intern,
+                   was Geschäftsgeheimnis. Erst dann wird gearbeitet.</p>
             </div>
             <div class="scard">
                 <div class="st">Stufe 3</div>
                 <h3>Produktivbetrieb</h3>
                 <div class="sub">Ab hier begleiten wir</div>
                 <p>Wenn ein Ergebnis Entscheidungen trägt, zählt Verlässlichkeit: Prüfungen,
-                   Dokumentation, Software, die in zwei Jahren noch läuft. Das ist die andere Liga.</p>
+                   Dokumentation, Software, die in zwei Jahren noch läuft.</p>
             </div>
         </div>
         <div class="merksatz">
             <p><b>Der Satz, auf den es ankommt:</b> Ein Geschäftsgeheimnis verliert seinen Schutz
                bereits durch die Weitergabe ohne Vertraulichkeitsvereinbarung — ein tatsächlicher
-               Abfluss ist dafür nicht nötig. Wer eine Badanalyse in einen frei zugänglichen Dienst
-               lädt, hat sie sinngemäß an die Pinnwand gehängt. Deshalb steht die Einstufung im
-               Kurs vor der ersten Auswertung, nicht danach.</p>
+               Abfluss ist dafür nicht nötig. Deshalb steht die Einstufung im Kurs vor der ersten
+               Auswertung, nicht danach.</p>
         </div>
     </div>
 </section>
@@ -775,20 +651,16 @@
         <div class="beispiel-inner" style="margin-top:26px;">
             <div>
                 <p style="font-size:0.98rem;line-height:1.75;color:var(--text-body);">
-                    Für die Fachberufsschule ist nach genau diesem Prozess ein Lehrmittel zur
+                    Für die Fachberufsschule ist nach genau diesem Arbeitsweg ein Lehrmittel zur
                     Gefahrstofflagerung entstanden: Lehrlinge stellen Gebinde in einen virtuellen
                     Giftschrank, das Werkzeug prüft sofort Zusammenlagerung, Segment und Menge.
-                </p>
-                <p style="font-size:0.98rem;line-height:1.75;color:var(--text-body);margin-top:14px;">
-                    Der didaktische Kern ist eine Regel, nicht das Programm: Cyanid und Säure ergeben
+                    Der Kern ist eine Regel, nicht das Programm — Cyanid und Säure ergeben
                     Blausäure. Wer diese Meldung einmal selbst ausgelöst hat, vergisst sie nicht mehr.
-                    Fachwissen und Prüflogik sind bewusst getrennt — das Regelwerk kann eine Lehrkraft
-                    ohne Programmierkenntnisse lesen und korrigieren.
                 </p>
                 <p style="font-size:0.9rem;line-height:1.7;color:var(--text-light);margin-top:14px;">
                     Fachlich noch nicht abgenommen; die Rechtsgrundlagen sind mit Fundstelle und
-                    Abrufdatum dokumentiert. Wir zeigen das Werkzeug hier als Beispiel für den
-                    Arbeitsweg, nicht als fertiges Produkt.
+                    Abrufdatum dokumentiert. Gezeigt als Beispiel für den Arbeitsweg, nicht als
+                    fertiges Produkt.
                 </p>
             </div>
             <div class="zahlen">
@@ -805,8 +677,7 @@
                      width="1280" height="720" loading="lazy" decoding="async">
                 <figcaption>Der Lehrsatz in einem Bild: Ein Lehrling stellt Cyanidsalz und Beizsäure
                     zusammen ins Giftsegment, weil beide „zum Verzinken gehören“. Das Werkzeug
-                    meldet sofort, was daraus entsteht — mit Fundstelle. Wer diese Meldung einmal
-                    selbst ausgelöst hat, vergisst sie nicht mehr.</figcaption>
+                    meldet sofort, was daraus entsteht — mit Fundstelle.</figcaption>
             </figure>
         </div>
     </div>
@@ -842,29 +713,10 @@
             <div class="preis">nach Bedarf</div>
         </div>
         <p style="margin-top:22px;font-size:0.9rem;color:var(--text-light);line-height:1.7;max-width:820px;">
-            Es gibt ergänzend einen fertigen Arbeitsrahmen zu kaufen, in dem Regelwerk und
-            Datenschutz bereits eingebaut sind. Die Ausbildung funktioniert vollständig ohne ihn —
-            das ist Absicht, sonst wäre sie eine Verkaufsveranstaltung.
+            Der Arbeitsweg stammt aus der Automobilzulieferung: definierte Freigabestufen,
+            nachvollziehbare Änderungen, für jeden Stand ein Nachweis. Wer aus der Serienfertigung
+            kommt, erkennt ihn sofort wieder.
         </p>
-    </div>
-</section>
-
-<!-- ===== DOWNLOAD ===== -->
-<section class="download">
-    <div class="container">
-        <div class="dl-box">
-            <div>
-                <h3>Alles auf einer Seite</h3>
-                <p>Der Überblick als PDF: für wen es gedacht ist, was im Haus bleibt, wie die drei
-                   Stufen aufgebaut sind und was am Ende bei Ihnen liegt. Zum Weiterreichen an
-                   Geschäftsführung, Qualität oder Betriebsrat — ohne Anmeldung, ohne
-                   E-Mail-Adresse.</p>
-            </div>
-            <div>
-                <a class="btn btn-primary" href="docs/datenwerkstatt-ueberblick.pdf" target="_blank"
-                   rel="noopener" data-funnel="pdf-flyer-ausbildung">Überblick als PDF (1 Seite)</a>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -878,16 +730,15 @@
                 <h3>Passt gut, wenn …</h3>
                 <ul>
                     <li>in Ihren Anlagen Daten anfallen, die heute niemand ansieht</li>
-                    <li>Sie jemanden im Haus haben, der neugierig ist und die Prozesse kennt</li>
-                    <li>Sie Wert darauf legen, dass Betriebsdaten im Betrieb bleiben</li>
-                    <li>Sie Nachwuchs ausbilden und ihm etwas mitgeben wollen, das trägt</li>
+                    <li>jemand im Haus neugierig ist und die Prozesse kennt</li>
+                    <li>Betriebsdaten im Betrieb bleiben sollen</li>
                 </ul>
             </div>
             <div class="pbox nein">
                 <h3>Passt eher nicht, wenn …</h3>
                 <ul>
-                    <li>Sie ein fertiges System suchen, das ab morgen ohne Ihr Zutun läuft</li>
-                    <li>niemand im Haus Zeit hat, sich ein paar Tage damit zu befassen</li>
+                    <li>ein fertiges System gesucht wird, das ab morgen ohne Ihr Zutun läuft</li>
+                    <li>niemand ein paar Tage Zeit dafür hat</li>
                     <li>die Auswertung sofort produktionskritische Entscheidungen tragen soll —
                         dann ist die <a href="leistungen.html" data-funnel="link-leistungen-ausbildung"
                         style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">Standortanalyse</a>
@@ -909,7 +760,7 @@
             <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/" target="_blank" rel="noopener" class="btn btn-primary"
                data-funnel="cta-ausbildung">Termin für ein Erstgespräch</a>
             <a href="docs/datenwerkstatt-ueberblick.pdf" target="_blank" rel="noopener"
-               class="btn btn-outline" data-funnel="pdf-flyer-ausbildung-abschluss">Erst den Überblick lesen (PDF)</a>
+               class="btn btn-outline" data-funnel="pdf-flyer-ausbildung">Erst den Überblick lesen (PDF, 1 Seite)</a>
         </div>
         <!-- Beleg direkt neben der Handlungsaufforderung statt am Seitenende: Nachweise wirken
              dort, wo entschieden wird (Recherche 02.09.2026, projects/ausbildung-und-coaching-2026). -->
