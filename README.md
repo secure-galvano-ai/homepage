@@ -55,7 +55,8 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
   Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
 - **Aus- und Weiterbildung ist seit 02.09.2026 wieder auf der Website** — `ausbildung.html`
-  als eigene Seite, Nav-Eintrag „KI-Werkstatt". Grund ist die **Neuausrichtung des
+  als eigene Seite, Nav-Eintrag „Datenwerkstatt" (der naheliegende Name „KI-Werkstatt" ist in
+  Vorarlberg von der WKO belegt). Grund ist die **Neuausrichtung des
   Angebotsschwerpunkts** (Strategiegespraech 02.09.2026, `BD/projects/ausbildung-und-coaching-2026/`):
   verkauft wird die Befaehigung, nicht mehr nur die fertige Software. Damit ist der Beschluss
   vom 25.08. ueberholt — **die Messerkenntnis dahinter gilt aber weiter und hat den Aufbau
@@ -225,10 +226,13 @@ homepage/
                            git show 78ce8c3:leistungen.html
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA). Seit 31.08.2026 angelegt,
                            bis zur Aufnahme noindex + nicht in der Sitemap + unverlinkt — § Demo-Seite.
-  ausbildung.html          KI-Werkstatt — Aus- und Weiterbildung (seit 02.09.2026 neu aufgebaut, in Nav
-                           und Sitemap). Flyer dazu: docs/ki-werkstatt-ueberblick.pdf, gebaut aus
-                           BD/projects/ausbildung-und-coaching-2026/build_flyer_kiwerkstatt.py.
-                           Vorgaengerfassung des Kurses: git show feed14a:ausbildung.html
+  ausbildung.html          Datenwerkstatt — Aus- und Weiterbildung (seit 02.09.2026 neu aufgebaut, in Nav
+                           und Sitemap). Am 02.09. abends von 13 auf 8 Sektionen gekuerzt, Reihenfolge
+                           Nutzen -> Ablauf -> Beispiel -> Angebot. Flyer dazu:
+                           docs/datenwerkstatt-ueberblick.pdf, gebaut aus
+                           BD/projects/ausbildung-und-coaching-2026/build_flyer_datenwerkstatt.py.
+                           Vorgaengerfassungen: git show feed14a:ausbildung.html (Kurs 2026-07),
+                           git show 417588d:ausbildung.html (Langfassung vom 02.09.)
   sicherheit.html          Compliance-Seite (seit 11.08.2026 wieder indexiert, in Sitemap und Footer, bewusst NICHT
                            in der Hauptnavigation). Nav/Footer dort handgepflegt, nicht ueber _generate_layout.py.
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
