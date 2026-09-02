@@ -137,6 +137,8 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 | Geräte | Clarity | 59 mobil / 46 Desktop | — |
 | **CTA-Klicks je Position** | Clarity, Intelligente Ereignisse | **0** — alle Positionen | > 0 |
 | Beleg-Abrufe (PDF/Video) | Clarity `pdf-*`, `video-*` | **18 PDF · 5 Video** | steigend |
+| **Demo-Seite: Zulauf und Weiterweg** *(neu 02.09.2026)* | Clarity `link-*` und `cta-demo-seite` | **noch keine Historie** — die Seite trägt erst seit 02.09. ein Video | erstmals im Oktober-Lauf ablesbar |
+| **Video: mittlere Wiedergabedauer** *(neu 02.09.2026)* | 👤 YouTube Studio, Video `RStpqzz3r5g` | — | **< 2:00 heißt: Kurzfassung schneiden** (Länge ist 4:51, Zielmarke war 2–3 Min) |
 | Core Web Vitals | Clarity | 93/100 · LCP 0,44 s · INP 140 ms · CLS 0 | ✅ halten |
 | GSC Klicks | 👤 GSC, Export | **60** (+253 %) bei 317 Impressionen | steigend |
 | **Nicht-Marken-Klicks** | 👤 GSC, Export | **~3 von 60** (29 davon Markensuche) | steigend |
@@ -172,6 +174,13 @@ folgt kein Stillstand, sondern eine andere Begründungspflicht:
 ---
 
 ## 6. Bekannte Fallstricke
+
+> **localhost ist seit 02.09.2026 an der Quelle ausgeschlossen** — `consent.js` lädt Clarity
+> nicht mehr auf `localhost`, `127.0.0.1`, `::1` oder `*.local`. **Für Daten ab diesem Tag
+> entfällt das Herausrechnen.** In der Historie **davor** stecken lokale Sitzungen drin
+> (belegt: `127.0.0.1:8123` und `:8140` unter den beliebtesten Seiten) — dort weiter abziehen,
+> und Heatmaps und Aufzeichnungen aus dem August entsprechend vorsichtig lesen: die lassen sich
+> nicht bereinigen. Befund und Beleg: [`_analytics/berichte/2026-09.md`](_analytics/berichte/2026-09.md) §2.1.
 
 - **Der Sammler läuft fensterlos** (`pyw.exe`). Ein Fehlschlag ist deshalb **nur im Protokoll** `_analytics/_sammler.log` sichtbar. Vor jedem Monatslauf zuerst dort hineinsehen.
 - **Der Task braucht einen angemeldeten Benutzer.** Er ist akkuunabhängig und holt verpasste Läufe nach (`StartWhenAvailable`) — wer den Laptop mindestens alle drei Tage benutzt, hat eine lückenlose Reihe.

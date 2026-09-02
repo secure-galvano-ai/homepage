@@ -20,8 +20,21 @@
     // --- Microsoft Clarity laden + Sales-Funnel-Events auf den CTAs setzen ---
     var funnelVerdrahtet = false;
 
+    // Auf localhost NICHT laden (02.09.2026). Jede lokale Vorschau, die im Banner
+    // "Akzeptieren" klickt, landete sonst im Produktiv-Projekt: in der Historie stehen
+    // deshalb 127.0.0.1:8123 und :8140 unter den beliebtesten Seiten. Das verfaelscht
+    // Sitzungszahlen und fuellt Heatmaps und Aufzeichnungen mit Entwickler-Sitzungen.
+    // Der Messlauf sah bisher vor, sie hinterher herauszurechnen -- das ist fehleranfaellig
+    // und geht bei Heatmaps gar nicht. Die Funnel-Verdrahtung laeuft trotzdem, damit ein
+    // kaputter Marker lokal auffaellt (window.clarity fehlt dann einfach).
+    function istLokal() {
+        var h = location.hostname;
+        return h === 'localhost' || h === '127.0.0.1' || h === '::1' ||
+               h === '' || /\.local$/.test(h);
+    }
+
     function loadClarity() {
-        if (!window.clarity) {
+        if (!window.clarity && !istLokal()) {
             (function (c, l, a, r, i, t, y) {
                 c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
                 t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
@@ -77,15 +90,26 @@
     // Google-Skript messbar -- das wollen wir dem nocookie-Embed nicht antun.
     // Ersatz ohne Fremd-Request: Klickt jemand in das iframe, verliert das
     // Eltern-Dokument den Fokus und activeElement wird das iframe.
+    //
+    // Das Ereignis traegt seit 02.09.2026 den Namen des Videos aus data-video
+    // (-> 'video-pitch', 'video-anwendung'). Vorher hiess es auf JEDER Seite
+    // 'video-gestartet' -- damit liessen sich Startseiten-Pitch und Demo-Video in der
+    // Auswertung nicht auseinanderhalten, und genau das ist die Frage, fuer die das
+    // Demo-Video gedreht wurde. Ohne Attribut bleibt es beim alten Namen, damit eine
+    // neue Einbindung nicht stillschweigend ungemessen bleibt.
+    // ACHTUNG beim Vergleich mit aelteren Monaten: die Reihe 'video-gestartet' endet
+    // am 02.09.2026, die beiden neuen beginnen dort.
     function wireVideoInteraktion() {
         var video = document.querySelector('iframe[src*="youtube"]');
         if (!video) return;
+        var name = video.getAttribute('data-video');
+        var ereignis = name ? 'video-' + name : 'video-gestartet';
         var gemeldet = false;
         window.addEventListener('blur', function () {
             if (gemeldet) return;
             if (document.activeElement === video) {
                 gemeldet = true;
-                if (window.clarity) window.clarity('event', 'video-gestartet');
+                if (window.clarity) window.clarity('event', ereignis);
             }
         });
     }
