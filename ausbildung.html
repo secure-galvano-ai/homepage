@@ -265,6 +265,15 @@
             border: 1px solid var(--silber);
         }
         .btn-outline:hover { border-color: var(--schild-blau); color: var(--schild-blau); }
+        /* Einstiegsknoepfe im dunklen Hero — der zweite Weg muss dort hell umrandet sein,
+           btn-outline mit weissem Grund wuerde wie ein zweiter Hauptknopf wirken. */
+        .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+        .btn-hero-outline {
+            background: transparent;
+            color: var(--weiss);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+        }
+        .btn-hero-outline:hover { border-color: var(--cyan-akzent); color: var(--cyan-akzent); }
 
         /* Footer */
         .footer { background: var(--dunkelblau); color: rgba(255,255,255,0.7); padding: 40px 0; }
@@ -545,6 +554,17 @@
                Prüfergebnisse. Wir übergeben ein KI-System und den Arbeitsweg dazu: Damit bauen
                Ihre Fachkräfte eigene Auswertungen — ohne Programmierkenntnisse und ohne dass
                Betriebsdaten das Haus verlassen.</p>
+            <!-- Einstieg oben, weil der Verkehr hier aus Mails kommt: wer mit einer Frage
+                 ankommt, soll den kleinen Weg (PDF) finden, ohne die Seite durchscrollen zu
+                 muessen. Reihenfolge PDF vor Termin ist Absicht — in dieser Phase wird gelesen,
+                 nicht gebucht. -->
+            <div class="hero-cta">
+                <a href="docs/datenwerkstatt-ueberblick.pdf" target="_blank" rel="noopener"
+                   class="btn btn-primary" data-funnel="pdf-flyer-ausbildung-hero">Überblick auf einer Seite (PDF)</a>
+                <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/"
+                   target="_blank" rel="noopener" class="btn btn-hero-outline"
+                   data-funnel="cta-ausbildung-hero">Oder gleich ein Erstgespräch</a>
+            </div>
         </div>
     </div>
 </section>
@@ -638,7 +658,8 @@
             <p><b>Der Satz, auf den es ankommt:</b> Ein Geschäftsgeheimnis verliert seinen Schutz
                bereits durch die Weitergabe ohne Vertraulichkeitsvereinbarung — ein tatsächlicher
                Abfluss ist dafür nicht nötig. Deshalb steht die Einstufung im Kurs vor der ersten
-               Auswertung, nicht danach.</p>
+               Auswertung, nicht danach.
+               <a href="sicherheit.html" data-funnel="link-sicherheit-ausbildung" style="color:#8fc7ff;font-weight:600;border-bottom:1px solid rgba(143,199,255,0.4);">Welche Rahmenwerke dahinterstehen</a>.</p>
         </div>
     </div>
 </section>

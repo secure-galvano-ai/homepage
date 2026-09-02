@@ -153,7 +153,14 @@
             'padding:10px 12px;font-size:0.72rem;line-height:1.4;border-radius:8px;}',
             '.consent-banner p{margin:0 0 8px;}',
             '.consent-actions{gap:8px;}',
-            '.consent-btn{padding:7px 10px;font-size:0.72rem;}}'
+            '.consent-btn{padding:7px 10px;font-size:0.72rem;}}',
+            // Flache Fenster (02.09.2026): Auf 1366x768 -- der haeufigsten Laptop-Aufloesung --
+            // lag das Banner (y 613-752) genau ueber dem Hero-CTA (y 655-707), beide links.
+            // Derselbe Fehler wie mobil am 31.08., nur auf dem Notebook. Die Hero-Knoepfe stehen
+            // links, deshalb wandert das Banner hier nach rechts und ueber den WhatsApp-Knopf
+            // (der endet bei bottom 24px + 52px Hoehe). Text und Groesse bleiben unveraendert.
+            '@media(min-width:681px) and (max-height:860px){.consent-banner{left:auto;right:24px;',
+            'bottom:92px;max-width:400px;}}'
         ].join('');
         var style = document.createElement('style');
         style.textContent = css;
