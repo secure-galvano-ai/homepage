@@ -138,6 +138,8 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 | **CTA-Klicks je Position** | Clarity, Intelligente Ereignisse | **0** — alle Positionen | > 0 |
 | Beleg-Abrufe (PDF/Video) | Clarity `pdf-*`, `video-*` | **18 PDF · 5 Video** | steigend |
 | **Demo-Seite: Zulauf und Weiterweg** *(neu 02.09.2026)* | Clarity `link-*` und `cta-demo-seite` | **noch keine Historie** — die Seite trägt erst seit 02.09. ein Video | erstmals im Oktober-Lauf ablesbar |
+| **Demo-Einseiter: Weitergabe im Haus** *(neu 02.09.2026)* | Clarity `pdf-anwendung-demo` | **noch keine Historie** | erstmals im Oktober-Lauf ablesbar. Er misst etwas anderes als die übrigen `pdf-*`: nicht Interesse, sondern die Absicht, die Sache **intern weiterzureichen** — Abrufe ohne Terminanfrage sind hier kein Fehlschlag |
+| **Datenwerkstatt-Seite: trägt das Angebot?** *(neu 02.09.2026)* | Clarity: Aufrufe `ausbildung.html`, `pdf-flyer-ausbildung`, `cta-ausbildung` | **noch keine Historie** — Seite seit 02.09. live | Erfolgsmaß ist **nicht** die Abrufzahl, sondern **Anfragen mit Ausbildungsbezug: drei binnen zwölf Wochen**. Bei null Anfragen und ≥ 150 Aufrufen ist die Annahme widerlegt — Kriterium und Konsequenz in `BD/projects/ausbildung-und-coaching-2026/zyklus-und-experiment.md` |
 | **Video: mittlere Wiedergabedauer** *(neu 02.09.2026)* | 👤 YouTube Studio, Video `RStpqzz3r5g` | — | **< 2:00 heißt: Kurzfassung schneiden** (Länge ist 4:51, Zielmarke war 2–3 Min) |
 | Core Web Vitals | Clarity | 93/100 · LCP 0,44 s · INP 140 ms · CLS 0 | ✅ halten |
 | GSC Klicks | 👤 GSC, Export | **60** (+253 %) bei 317 Impressionen | steigend |
