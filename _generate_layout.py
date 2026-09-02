@@ -43,6 +43,14 @@ NAV_LINKS = [
     # was macht ihr, wie sieht das aus, wer seid ihr. Vier Eintraege plus CTA liegen im
     # empfohlenen Rahmen von vier bis sechs (31.08.2026).
     ("demo.html", "Demo"),
+    # Seit 02.09.2026 wieder in der Navigation (Stefan): das Ausbildungsangebot ist der neue
+    # Angebotsschwerpunkt. Label "Datenwerkstatt" -- der naheliegende Name "KI-Werkstatt" ist
+    # in derselben Region bereits belegt: die WKO Vorarlberg fuehrt unter diesem Namen ein
+    # eigenes Workshop-Programm fuer Vorarlberger KMU (geprueft 02.09.2026). Verwechslung mit
+    # einem Verbandsangebot waere doppelt schaedlich -- die WKO ist Netzwerk, kein Wettbewerber.
+    # "Daten" statt "KI" trifft zudem die Positionierung genauer. Fuenf Eintraege plus CTA
+    # liegen noch im empfohlenen Rahmen von vier bis sechs.
+    ("ausbildung.html", "Datenwerkstatt"),
     ("ueber-mich.html", "Über mich"),
     ("forschung.html", "Forschung"),
 ]
@@ -52,6 +60,7 @@ FOOTER_LINKS = [
     ("Startseite", "index.html", False),
     ("Leistungen", "leistungen.html", False),
     ("Demo", "demo.html", False),
+    ("Datenwerkstatt", "ausbildung.html", False),
     ("Über mich", "ueber-mich.html", False),
     ("Sicherheit (PDF)", "docs/sicherheit-methoden-standards.pdf", True),
     ("Forschung", "forschung.html", False),
@@ -84,6 +93,8 @@ PAGES = {
     # Seit 31.08.2026 hier statt handgepflegt: die Seite hatte den Demo-Eintrag
     # nicht mitbekommen, weil ihre Navigation als einzige nicht generiert wurde.
     "sicherheit.html": None,
+    # Neu aufgebaut am 02.09.2026 -- vorher ein Redirect-Stub auf die Startseite.
+    "ausbildung.html": "ausbildung.html",
     "ueber-mich.html": "ueber-mich.html",
     "forschung.html": "forschung.html",
     "impressum.html": None,

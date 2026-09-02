@@ -54,7 +54,18 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
   Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
-- **Kein Coaching-Baustein auf der Website** *(Stefan, 25.08.2026 — Frage geprueft und verneint)*.
+- **Aus- und Weiterbildung ist seit 02.09.2026 wieder auf der Website** — `ausbildung.html`
+  als eigene Seite, Nav-Eintrag „KI-Werkstatt". Grund ist die **Neuausrichtung des
+  Angebotsschwerpunkts** (Strategiegespraech 02.09.2026, `BD/projects/ausbildung-und-coaching-2026/`):
+  verkauft wird die Befaehigung, nicht mehr nur die fertige Software. Damit ist der Beschluss
+  vom 25.08. ueberholt — **die Messerkenntnis dahinter gilt aber weiter und hat den Aufbau
+  bestimmt:** 104 Sitzungen mit **0 Klicks** auf den Buchungs-CTA heisst, dass ein reiner
+  Termin-Aufruf auf dieser Seite nicht traegt. Deshalb steht jetzt ein **niederschwelliger
+  zweiter Weg** daneben (Ueberblick als PDF, ohne E-Mail-Gate), und die Seite hat eine
+  **Erfolgsdefinition mit Abbruchkriterium** statt einer Daumenprobe
+  (`BD/projects/ausbildung-und-coaching-2026/zyklus-und-experiment.md`). Der Absatz darunter
+  steht als Begruendung der damaligen Entscheidung — er ist Historie, nicht mehr die Regel.
+- ~~**Kein Coaching-Baustein auf der Website**~~ *(Stefan, 25.08.2026 — am 02.09.2026 abgeloest)*.
   Anlass war ein privates 1:1-KI-Coaching, das Spass gemacht hat. Es kommt trotzdem **nicht**
   zurueck auf die Seite, aus drei Gruenden: (1) Der fruehere Baustein war **In-House-Coaching fuer
   Galvanikbetriebe** (Fachkraefte und Lehrlinge schulen) — ein anderes Produkt als 1:1-Begleitung
@@ -69,11 +80,13 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   **Neu bewerten,** wenn unaufgefordert
   mehrere Anfragen von Privatpersonen kommen — dann eine eigene schlanke Seite, nicht der alte
   Baustein im Galvanik-Funnel.
-- **Zurueckgestellte Seiten — Stand 25.08.2026:** `sicherheit.html` ist **wieder live**, in Nav und
-  Sitemap. `ausbildung.html` ist seit 30.07. ein **Redirect-Stub** auf die Startseite und bewusst
-  **ohne** `noindex` (sonst verarbeitet Google den Refresh nicht als Redirect). Zum Wiederbeleben
-  einer Seite: Inhalt zurueckholen (`git show feed14a:ausbildung.html`), Nav-Eintrag in
-  `_generate_layout.py`, Sitemap-Eintrag, Meta-Block samt `preload` der Schriften.
+- **Zurueckgestellte Seiten — Stand 02.09.2026: es gibt keine mehr.** `sicherheit.html` ist seit
+  11.08. wieder live (Footer, Sitemap, bewusst nicht in der Hauptnavigation), `ausbildung.html`
+  seit 02.09. neu aufgebaut und in Nav und Sitemap. Der Weg fuer die naechste Wiederbelebung
+  bleibt derselbe: Nav-Eintrag in `_generate_layout.py`, Seite in `PAGES`, Sitemap-Eintrag,
+  Meta-Block samt `preload` der Schriften — danach `check_site.py` **und** `check_inhalt.py`.
+  Der zweite faengt zu lange Titel, zu lange Beschreibungen und fehlende Sitemap-Eintraege ab;
+  beim Aufbau am 02.09. sind alle drei tatsaechlich aufgetreten.
 - **Tracking-Konvention:** je CTA-Position ein eigener Event-Name (`cta-nav`, `cta-hero`,
   `cta-ablauf`, `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`), Downloads als
   `pdf-<dateiname>`. **Keine generischen Selektoren** — die haben die Zahlen einmal verdoppelt.
@@ -117,9 +130,10 @@ Die Markenfarben in `base.css :root` sind **kanonisch abgeleitet** aus
 wird NUR `base.css` editiert. Seiten-spezifisches CSS (Hero, einzelne Sektionen)
 bleibt im `<style>`-Block der jeweiligen Seite.
 
-**Nicht migriert (bewusst):** `ausbildung.html` + `sicherheit.html` sind
-zurueckgestellt (noindex, nicht in Nav/Sitemap) und tragen weiter ihr eigenes
-CSS. Zum Reaktivieren: in `_generate_layout.py` PAGES + NAV_LINKS ergaenzen,
+**Nicht migriert (bewusst):** `sicherheit.html` traegt weiter ihr eigenes CSS.
+`ausbildung.html` ist seit 02.09.2026 in `PAGES` und `NAV_LINKS` und bekommt Nav und Fuss
+generiert; ihr Seiten-CSS ist eine Kopie des Standes aus `leistungen.html` plus eigener
+Abschnitte. Zum Reaktivieren weiterer Seiten: in `_generate_layout.py` PAGES + NAV_LINKS ergaenzen,
 Marker in die Seite setzen, `py _generate_layout.py` laufen lassen.
 
 ## Demo-Seite (`demo.html`) — scharf seit 02.09.2026
@@ -155,6 +169,17 @@ Danach `py _scripts/check_site.py`, pushen und den Deploy bestaetigen (§ *Nach 
 *Intro-Video (Pitch)*, YouTube-ID `lLgcKqhHOrU`, „Warum Galvaniken auf Daten statt Bauchgefuehl
 setzen" (2 Minuten). **Kein zweites Video auf die Startseite** — zwei Videos uebereinander teilen
 die Aufmerksamkeit; die Startseite bekommt einen Verweis auf `demo.html`, nicht das Video selbst.
+
+**Der Einseiter zum Weiterleiten** *(02.09.2026)*: `docs/anwendung-ueberblick.pdf`, verlinkt
+**unter den drei Punkten** und bewusst **nicht** als dritter Nebenweg unter dem CTA — wer
+weiterreichen will, tut das direkt nach dem Inhalt, und dort konkurriert der Link nicht mit dem
+Buchungs-Knopf. Zielgruppe sind die Kollegen des Besuchers, die keine fuenf Minuten Video schauen:
+das Blatt muss deshalb **allein stehen** und traegt Video-Adresse, Kontakt und Ablauf selbst.
+Gebaut wird es von `BD/projects/demo-video-akquise/build_flyer_anwendung.py` (Inhalt und Layout
+stehen dort, **nie im PDF nachbessern**); der Build prueft Seitenzahl **und** Pflichtstellen, weil
+`overflow:hidden` Inhalt sonst lautlos abschneidet — genau das passierte beim ersten Lauf mit der
+Fusszeile. **Aendert sich das Video oder die Seite, aendert sich das Blatt mit** (dieselbe Regel
+wie oben: Seite und Video muessen dasselbe versprechen — das Blatt gehoert dazu).
 
 **Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, der Videostart meldet sich als
 `video-gestartet` (die Erkennung in `consent.js` nimmt das erste YouTube-iframe der Seite — auf
@@ -200,8 +225,10 @@ homepage/
                            git show 78ce8c3:leistungen.html
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA). Seit 31.08.2026 angelegt,
                            bis zur Aufnahme noindex + nicht in der Sitemap + unverlinkt — § Demo-Seite.
-  ausbildung.html          Redirect-Stub auf die Startseite (Praxiskurs = Saeule 2, bis 2027 eingefroren).
-                           Kursinhalt reaktivieren: git show feed14a:ausbildung.html
+  ausbildung.html          KI-Werkstatt — Aus- und Weiterbildung (seit 02.09.2026 neu aufgebaut, in Nav
+                           und Sitemap). Flyer dazu: docs/ki-werkstatt-ueberblick.pdf, gebaut aus
+                           BD/projects/ausbildung-und-coaching-2026/build_flyer_kiwerkstatt.py.
+                           Vorgaengerfassung des Kurses: git show feed14a:ausbildung.html
   sicherheit.html          Compliance-Seite (seit 11.08.2026 wieder indexiert, in Sitemap und Footer, bewusst NICHT
                            in der Hauptnavigation). Nav/Footer dort handgepflegt, nicht ueber _generate_layout.py.
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
@@ -262,7 +289,7 @@ meisten Eintraege sind **Soll-Zustand**, kein Defekt. Einordnung vor jeder Reakt
 | Meldung | Ursache | Zu tun |
 |---|---|---|
 | **Nicht gefunden (404)** | Alt-URLs der WordPress-Installation bei IONOS. Instanz ist mit dem Vertragsende **02.06.2026** weg. Kein Link im Repo zeigt darauf (`check_site.py` prueft das). | Zweiteilen: Alt-URL **mit** heutigem Pendant -> Redirect-Stub in `_generate_redirects.py` eintragen. Alt-URL **ohne** Pendant (tote PDFs, `/wp-*.php`-Bot-Scans) -> nichts tun, 404 ist der korrekte Endzustand. |
-| **Durch „noindex"-Tag ausgeschlossen** | `ausbildung.html`, `sicherheit.html` — bewusst zurueckgestellt (Fokussierung 2026-07-02). | Nichts. Reaktivierung siehe Setup-Abschnitt oben. |
+| **Durch „noindex"-Tag ausgeschlossen** | Derzeit keine Inhaltsseite. `sicherheit.html` ist seit 11.08.2026, `ausbildung.html` seit 02.09.2026 wieder indexiert — beide koennen im Bericht noch eine Weile hier auftauchen, bis Google neu crawlt. | Nichts. Bei `ausbildung.html` nach zwei Wochen pruefen und noetigenfalls einmalig „Indexierung beantragen". |
 | **Alternative Seite mit richtigem kanonischen Tag** | `/index.html` vs. `/` — Canonical zeigt korrekt auf `/`. | Nichts. |
 | **Gecrawlt / Gefunden – zurzeit nicht indexiert** | Googles Qualitaets-/Budget-Entscheidung, kein technischer Fehler. Einziger echter SEO-Hebel im Bericht. | Betroffene URL in der URL-Pruefung ansehen, Inhalt schaerfen (eigenstaendiger Text, interne Verlinkung), dann **„Indexierung beantragen"**. Nicht wiederholt beantragen. |
 
@@ -281,8 +308,8 @@ sichtbaren Link als No-JS-Fallback.
 **Kein `noindex` auf Redirect-Stubs.** `noindex` blockt die URL komplett aus der Suche
 und verhindert damit, dass Google den Refresh ueberhaupt als Redirect verarbeitet;
 zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL.
-`noindex` gehoert nur auf zurueckgestellte **Inhalts**seiten mit Self-Canonical
-(`ausbildung.html`, `sicherheit.html`).
+`noindex` gehoert nur auf zurueckgestellte **Inhalts**seiten mit Self-Canonical.
+Aktuell traegt es keine Seite ausser `demo.html` bis zur Videoaufnahme.
 
 **Sitemap:** `lastmod` beim Deploy auf das tatsaechliche Aenderungsdatum ziehen
 (`git log -1 --format=%ad --date=short -- <datei>`) — veraltete Werte kosten Crawl-Prioritaet.
