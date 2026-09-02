@@ -127,11 +127,40 @@ dem Cookie-Banner — im Screenshot nicht auffällig, in der Messung eindeutig:
 // Element gegen Banner, bei scrollY = 0
 const r = document.querySelector('[data-funnel="cta-hero"]').getBoundingClientRect();
 const b = document.querySelector('.consent-banner').getBoundingClientRect();
-r.bottom > b.top && r.top < b.bottom   // true = verdeckt
+// Seitliche Lage mitprüfen — sonst meldet der Test eine Überdeckung, die es nicht gibt
+r.bottom > b.top && r.top < b.bottom && r.left < b.right && r.right > b.left
 ```
 
-Pflicht bei jeder sichtbaren Änderung: **390 × 844 (mobil) und 1280 × 900 (Desktop)**,
-Seitenhöhe prüfen, jeden neuen Link einmal klicken, Anker anspringen lassen.
+Pflicht bei jeder sichtbaren Änderung: **390 × 844 (mobil), 1366 × 768 (Notebook) und
+1280 × 900 (Desktop)**, Seitenhöhe prüfen, jeden neuen Link einmal klicken, Anker anspringen
+lassen.
+
+**1366 × 768 ist seit 02.09.2026 Pflichtmaß** und hat sofort einen Treffer geliefert: Auf der
+Startseite lag der Haupt-CTA (y 655–707) vollständig hinter dem Einwilligungsbanner
+(y 613–752) — derselbe Fehler wie am 31.08. auf dem Handy, nur auf dem verbreitetsten
+Notebook-Format. **Das Banner klebt an `bottom`, der CTA an der Hero-Höhe: Je flacher das
+Fenster, desto sicherer treffen sie sich.** Ein hoher Desktop-Viewport zeigt das Problem nie.
+
+**Beim Prüfen den Browser-Cache bedenken:** `consent.js` wird gecacht, eine geänderte Regel
+wirkt im lokalen Test erst nach hartem Neuladen. Wer nur misst und nicht gegenprüft, hält eine
+wirksame Änderung für unwirksam — Gegenprobe ist `document.querySelectorAll('style')` auf die
+neue Regel oder ein `fetch` der Datei.
+
+### Gate 3b · Die Seite als Station einer Reise lesen *(neu 02.09.2026)*
+
+Eine Seite kann für sich stimmen und trotzdem an der falschen Stelle stehen. Vier Fragen, je
+Änderung in zwei Minuten beantwortbar:
+
+| Frage | Woran man scheitert |
+|---|---|
+| **Woher kommt der Besucher — Mail, Suche, Vortrag, Empfehlung?** | Aus einer Mail kommt jemand mit einer konkreten Frage. Findet er oben keinen Einstieg, scrollt er nicht bis zum CTA am Seitenende (Befund `ausbildung.html`, 02.09.2026) |
+| **Welche Frage hat er in dieser Phase — und beantwortet die Seite genau die?** | Orientierung braucht einen Beleg zum Mitnehmen (PDF), nicht sofort einen Termin. Deshalb steht auf der Datenwerkstatt-Seite **PDF vor Termin** |
+| **Gibt es mehr als eine sinnvolle Fortsetzung? Dann steht sie als Weiche da, nicht als Nachsatz** | Standortanalyse und Datenwerkstatt sind gleichwertige Antworten auf „wer macht es". Als Halbsatz angehängt verliert die zweite immer |
+| **Welche stille Frage bleibt offen?** | „Was passiert mit meinen Daten" ist bei Galvanikbetrieben die häufigste. Sie braucht einen Verweis dort, wo Daten zur Sprache kommen — nicht nur im Fußbereich |
+
+**Ein Weg pro Seite und Phase.** Zwei gleichrangige Links nebeneinander halbieren die
+Entscheidung; eine Weiche mit zwei benannten Wegen ist etwas anderes als zwei konkurrierende
+Knöpfe.
 
 ### Gate 4 · Konsistenz nach außen
 
