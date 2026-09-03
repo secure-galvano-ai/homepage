@@ -542,7 +542,8 @@ vermeiden — stattdessen Token `var(--name)` nutzen.
 | Service | Zweck | Link |
 |---------|-------|------|
 | Microsoft 365 | Mail `smaier@rvh.at`, Tenant **PhonixData** | `admin.microsoft.com` · DKIM: `security.microsoft.com` |
-| Microsoft Bookings | Erstgespräch buchen — **läuft auf dem rvh.at-Tenant** | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
+| Microsoft Bookings | Erstgespräch buchen (60 Min.) — **läuft auf dem rvh.at-Tenant** | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
+| Microsoft Bookings — **Kurzgespräch 30 Min.** *(neu 03.09.2026)* | Dienst-Direktlink für die Akquise, seit 03.09. auch auf der Buchungsseite sichtbar. Verwendungsregel: [`mailsequenz/README.md`](../Business%20Development/projects/akquise-strategie-h2-2026/mailsequenz/README.md) § *Buchungslinks* | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/j9sT4U4iQ0WwxD0oCfcdeg2` |
 | Microsoft Clarity | Web-Analyse (Opt-in, Projekt `wql3vpgrxl`) | `clarity.microsoft.com` |
 | Google Search Console | SEO / Indexierung | `search.google.com/search-console` |
 | GitHub Pages | Hosting + TLS-Zertifikat | `github.com/secure-galvano-ai/homepage/settings/pages` |
