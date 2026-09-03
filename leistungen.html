@@ -319,6 +319,10 @@
             font-size: 0.9rem; display: flex; align-items: center; justify-content: center;
         }
         .schritt-liste strong { display: block; color: var(--dunkelblau); font-family: 'Montserrat', Arial, sans-serif; margin-bottom: 3px; }
+        /* Hervorhebung INNERHALB des Schritttextes. Ohne diese Regel erbt sie das
+           display:block der Schritt-Ueberschrift und reisst den Satz auseinander
+           (Befund Sichtpruefung 03.09.2026). */
+        .schritt-liste strong.hebt { display: inline; color: inherit; font-family: inherit; margin: 0; }
         .schritt-liste .wo { font-size: 0.78rem; color: var(--schild-blau); font-weight: 600; letter-spacing: 0.03em; }
         .eckdaten { background: var(--hellgrau); border-radius: 14px; padding: 26px 28px; border: 1px solid var(--silber); position: sticky; top: 96px; }
         .eckdaten h3 { font-size: 1.02rem; color: var(--dunkelblau); margin-bottom: 16px; font-family: 'Montserrat', Arial, sans-serif; }
@@ -416,20 +420,29 @@
 <!-- ===== SCHWERPUNKT: Standortanalyse =====
      Stand nach der Konkretisierung vom 31.08.2026: ganzer Tag statt Halbtag, vier
      Online-Vorgespraeche, Groessenordnungen statt Euro-Zahl je Anwendungsfall.
-     Quelle: Standortanalyse_Umsetzung_2026-08-31.md §8. -->
+     Quelle: Standortanalyse_Umsetzung_2026-08-31.md §8.
+
+     Nachgezogen 03.09.2026 (Kapazitaetseinwand, competition.md §5.4): Der Aufwand steht
+     jetzt durchgehend aus KUNDENSICHT statt aus unserer. "EIN TAG" las sich als ganzer
+     Tag der Fuehrungskraefte -- es ist unser Tag, fuer den Kunden ein halber. Workshop
+     und Abschlussrunde sind beziffert, weil unbezifferter Aufwand immer zu gross
+     geschaetzt wird. Neu ist die Zeile "Terminplanung": nur EIN Termin verlangt mehrere
+     Personen gleichzeitig, Vorschlaege kommen von uns. Der fruehere Satz "wer die Termine
+     koordiniert -- das ist die eigentliche Huerde" ist raus: er stellte ein Defizit beim
+     Leser fest und kuendigte Arbeit an, statt sie abzunehmen (CLAUDE.md §1, Carnegie). -->
 <section class="schwerpunkt" id="standortanalyse">
     <div class="container">
         <p class="section-label">Der Einstieg</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Standortanalyse</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:38px;">Vorbereitet durch vier kurze Gespräche mit Ihren Fachbereichen, dann ein Tag bei Ihnen im Haus. Am Ende steht die Landkarte Ihres Standorts: welche Anlagen was liefern, wo die größten Hebel sitzen und in welcher Größenordnung. Die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
+        <p class="lead" style="max-width:780px;margin-bottom:38px;">Vier kurze Online-Gespräche mit Ihren Fachbereichen, dann ein Tag bei Ihnen im Haus — für Ihre Leute davon ein halber. Am Ende steht die Landkarte Ihres Standorts: welche Anlagen was liefern, wo die größten Hebel sitzen und in welcher Größenordnung. Die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
 
         <div class="schwerpunkt-grid">
             <div>
                 <ol class="schritt-liste">
-                    <li><span class="wo">ONLINE · KOSTENLOS</span><strong>Erstgespräch</strong>Worum es geht, was Sie erwarten, welche Anlagen in Frage kommen. Dabei klären wir auch, wer bei Ihnen die Termine koordiniert — das ist erfahrungsgemäß die eigentliche Hürde, nicht die Sache selbst.</li>
-                    <li><span class="wo">ONLINE · JE RUND 45 MINUTEN</span><strong>Vier Vorgespräche</strong>Mit Verfahrenstechnik, Instandhaltung, Qualität und Produktion — verteilbar über zwei Wochen. Ihre Leute schildern, was wiederkehrend Ärger macht. Diese Information steht in keiner Datenbank.</li>
-                    <li><span class="wo">BEI IHNEN · EIN TAG</span><strong>Vor-Ort-Tag</strong>Vormittags Rundgang mit einer Begleitperson: Anlagen, Steuerungen, Sensorik, Dosierung, was tatsächlich aufgezeichnet wird. Nachmittags Workshop mit Ihren Führungskräften an der Wand — Anlagen, Systeme und Potenziale werden gemeinsam sortiert.</li>
-                    <li><span class="wo">BEI IHNEN · TAGESENDE</span><strong>Abschlussrunde</strong>Wir gehen das Ergebnis gemeinsam durch und legen die Schwerpunkte fest, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
+                    <li><span class="wo">ONLINE · KOSTENLOS</span><strong>Erstgespräch</strong>Worum es geht, was Sie erwarten, welche Anlagen in Frage kommen. Sie nennen uns dabei nur, wer Ihre vier Fachbereiche vertritt — die Terminvorschläge kommen danach von uns.</li>
+                    <li><span class="wo">ONLINE · JE RUND 45 MINUTEN</span><strong>Vier Vorgespräche</strong>Mit Verfahrenstechnik, Instandhaltung, Qualität und Produktion. <strong class="hebt">Vier Einzeltermine, keine gemeinsame Runde</strong> — jeder wählt aus unseren Vorschlägen selbst, verteilbar über zwei Wochen. Ihre Leute schildern, was wiederkehrend Ärger macht; diese Information steht in keiner Datenbank.</li>
+                    <li><span class="wo">BEI IHNEN · FÜR SIE EIN HALBER TAG</span><strong>Vor-Ort-Tag</strong>Vormittags Rundgang mit einer Begleitperson: Anlagen, Steuerungen, Sensorik, Dosierung, was tatsächlich aufgezeichnet wird. Nachmittags zwei Stunden Workshop mit Ihren Führungskräften an der Wand — Anlagen, Systeme und Potenziale werden gemeinsam sortiert. <strong class="hebt">Das ist der einzige Termin, für den mehrere Ihrer Leute gleichzeitig Zeit brauchen.</strong></li>
+                    <li><span class="wo">BEI IHNEN · EINE STUNDE</span><strong>Abschlussrunde</strong>Direkt im Anschluss: Wir gehen das Ergebnis gemeinsam durch und legen die Schwerpunkte fest, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
                     <li><span class="wo">DANACH</span><strong>Schriftlicher Befund</strong>Standort-Landkarte, Datenampel je Anlage, Potenzialbild und eine klare Empfehlung, welcher nächste Schritt sich für Sie lohnt — oder ob keiner.</li>
                 </ol>
 
@@ -446,7 +459,8 @@
                      beantwortet nur, was die Schrittliste nicht sagt — Aufwand, Beteiligte,
                      Grenzen, Ergebnis. -->
                 <dl>
-                    <dt>Ihr Aufwand</dt><dd><strong>Je Person eine Stunde online</strong>, danach der gemeinsame Workshop vor Ort. Dazu Anlagenliste, Systemübersicht und ein Raum mit Pinnwand — <strong>keine Vorarbeit</strong></dd>
+                    <dt>Ihr Aufwand</dt><dd><strong>Je Person eine Stunde online, dazu ein halber Tag vor Ort.</strong> Anlagenliste, Systemübersicht, ein Raum mit Pinnwand — sonst keine Vorarbeit</dd>
+                    <dt>Terminplanung</dt><dd><strong>Nur ein Termin verlangt mehrere Personen gleichzeitig</strong> — der Nachmittag vor Ort. Alles davor läuft online und einzeln, die Vorschläge kommen von uns</dd>
                     <dt>Wer dabei ist</dt><dd>Fokus auf Produktion, Qualitätssicherung, Instandhaltung und Verfahrenstechnik</dd>
                     <dt>Kein Eingriff</dt><dd>keine Verkabelung, kein Zugriff auf Ihre Steuerung — und kein Messwert verlässt Ihren Betrieb</dd>
                     <dt>Anreise</dt><dd>im Umkreis von 250 km um Bregenz inklusive, darüber 1 € je zusätzlichem Kilometer</dd>
