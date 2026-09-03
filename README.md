@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-08-31
+**Stand:** 2026-09-03
 
 ---
 
@@ -26,6 +26,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 31.08.2026 | **`demo.html` angelegt** — Landingpage fuer das Demo-Video, ein Zweck und ein CTA, bis zur Aufnahme `noindex` und unverlinkt | § *Demo-Seite*; Platzierungsentscheidung in `BD/projects/demo-video-akquise/` |
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
 | 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
+| 03.09.2026 | **Schnellanalyse als Einstieg** (500 € netto), sechs Anwendungen und fünf Fragen auf `leistungen.html`; Leistung umbenannt in *Standortanalyse Daten- und KI-Potenziale*; neuer Einseiter *Leistungen im Überblick*; „kein Cloud-Upload“ ersetzt durch „Auswertung lokal, keine KI-Cloud, Übergabe verschlüsselt“ | Marktfragen des Kanalpartners eingearbeitet |
 | 02.09.2026 | **`demo.html` scharfgeschaltet** — Video `RStpqzz3r5g` eingebunden, Texte auf die Anwendung statt auf den Vor-Ort-Tag umgestellt, zwei Verweise gesetzt | § *Demo-Seite* |
 | 02.09.2026 | **„Ihre Daten bleiben bei Ihnen" → „Lokale Datenverarbeitung"** *(Stefan)* — Startseiten-H2, Vertrauenszeile auf `demo.html`, Baustein *Laufende Überwachung* auf `leistungen.html` | Wortlaut bleibt seitenübergreifend identisch |
 
@@ -221,7 +222,11 @@ npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.htm
 homepage/
   index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Diagnose-Angebot ohne Preis (#angebot), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
   leistungen.html          Leistungsseite (seit 31.08.2026 wieder echt, handgeschrieben): Standortanalyse als
-                           Schwerpunkt (#standortanalyse), neun Bausteine in fuenf Gruppen, Abgrenzung, Sticky-CTA.
+                           Schwerpunkt (#standortanalyse), Anwendungen, Portfolio, Abgrenzung, Sticky-CTA.
+                           Seit 03.09.2026: Sektion #schnellanalyse als kleiner Einstieg (500 EUR netto,
+                           eine Frage, ein Datenauszug, remote) VOR dem Schwerpunkt, sechs Anwendungen
+                           (#anwendungen) und fuenf Fragen (#fragen) mit FAQPage-Schema. Leistungsname
+                           seither "Standortanalyse Daten- und KI-Potenziale".
                            Nav/Footer/WA-FAB/Sticky kommen aus _generate_layout.py. Kachel-Fassung bis 07/2026:
                            git show 78ce8c3:leistungen.html
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA). Seit 31.08.2026 angelegt,
@@ -267,6 +272,16 @@ homepage/
                            Methoden-und-Standards, Meisterbrief, Fachartikel, Praesentationen). Bewusst KEINE
                            Einzelliste hier -- sie driftet bei jedem neuen Beleg. Wo welcher verlinkt ist:
                            grep -o "docs/[a-z0-9_-]*\.pdf" *.html
+                           Die fuenf erzeugten Einseiter kommen aus BD-Build-Skripten und werden NIE von
+                           Hand bearbeitet -- Aenderung immer im Skript, dann neu bauen:
+                             standortanalyse-flyer.pdf        BD/templates/flyer-corporate/build_flyer.py
+                             standortanalyse-musterbefund.pdf BD/templates/befund-corporate/build_befund.py
+                             leistungen-ueberblick.pdf        BD/templates/uebersicht-corporate/build_uebersicht.py
+                             datenwerkstatt-ueberblick.pdf    BD/projects/ausbildung-und-coaching-2026/build_flyer_datenwerkstatt.py
+                             anwendung-ueberblick.pdf         BD/projects/demo-video-akquise/build_flyer_anwendung.py
+                           Jedes Skript prueft Seitenzahl und Pflichtstellen selbst und bricht ab, wenn
+                           Inhalt verschluckt wird. leistungen-ueberblick.pdf ist das Blatt zum
+                           Weiterreichen: alle vier Wege nebeneinander, mit Aufwand und Preis.
   fonts/
     fonts.css                Self-Hosted @font-face Definitionen (Montserrat + Open Sans, OFL)
     Montserrat-{400,600,700}-{latin,latin-ext}.woff2   6 WOFF2-Files
