@@ -1902,8 +1902,10 @@
     </div>
 </section>
 
-<!-- ===== EINWAND-ABBAU — Datenflut + Datenhoheit (zusammengelegt) ===== -->
-<section style="padding:76px 0;background:var(--weiss);">
+<!-- ===== EINWAND-ABBAU — Datenflut + Datenhoheit (zusammengelegt) =====
+     id seit 03.09.2026: als Direktziel zum Verschicken, wenn jemand fragt,
+     wo die Daten verarbeitet werden. -->
+<section id="lokale-datenverarbeitung" style="padding:76px 0;background:var(--weiss);">
     <div class="container fade-up" style="max-width:920px;">
         <div class="section-header" style="margin-bottom:30px;">
             <p class="section-label">Ruhig, im Haus, ohne Risiko</p>
@@ -1916,6 +1918,24 @@
             <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Es reichen die <strong style="color:var(--dunkelblau);">Daten, die Sie ohnehin aufzeichnen</strong>. Energiearm, ohne Rechenzentrum.</div>
             <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">NDA</strong>, bevor auch nur ein Messwert Ihr Haus verlässt.</div>
             <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Ergebnisse gehören Ihnen</strong> — Bericht und Klick-Demo, voller Zugriff, kein Lock-in.</div>
+        </div>
+
+        <!-- Beleg zur ersten Kachel: die Maschine, auf der die Auswertung laeuft.
+             Foto vom 05.08.2026 (LinkedIn "Mehr KI-Leistung oder Daten im Haus?").
+             Der zweite Absatz haelt die Abgrenzung Entwicklungsrechner vs. Hosting
+             fest -- ohne sie entsteht der Eindruck, Kundendaten laegen hier dauerhaft.
+             Das war im LinkedIn-Beitrag die haeufigste Rueckfrage. -->
+        <div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;align-items:center;margin-top:30px;background:var(--hellgrau);border:1px solid var(--silber);border-radius:14px;padding:24px;">
+            <figure style="margin:0;">
+                <img src="assets/img/entwicklungsrechner.webp" width="1072" height="880" loading="lazy" decoding="async" alt="Stefan Maier neben der Workstation, auf der die Auswertung der Kundendaten läuft" style="width:100%;height:auto;border-radius:10px;display:block;">
+                <figcaption style="font-size:0.8rem;color:var(--text-light);margin-top:9px;line-height:1.5;">Der Entwicklungsrechner im eigenen Büro, August 2026.</figcaption>
+            </figure>
+            <div>
+                <h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.15rem;color:var(--dunkelblau);margin:0 0 12px;">Hier läuft die Auswertung Ihrer Daten</h3>
+                <p style="color:var(--text-body);font-size:0.94rem;line-height:1.65;margin:0 0 12px;">Eigene Hardware im eigenen Büro, aus dem Internet nicht erreichbar — kein fremdes Rechenzentrum, keine KI-Cloud. Übergeben wird verschlüsselt, gearbeitet wird unter Geheimhaltungsvereinbarung, und nach Projektende werden Ihre Daten auf Wunsch vollständig gelöscht, mit schriftlicher Bestätigung.</p>
+                <p style="color:var(--text-body);font-size:0.94rem;line-height:1.65;margin:0 0 14px;">Diese Maschine ist die Entwicklungsumgebung, kein Hosting-Angebot: Das fertige System läuft danach auf Ihrer eigenen Infrastruktur, mit einem Bruchteil dieser Rechenleistung. Aufwendig ist das Entwickeln, nicht der Betrieb.</p>
+                <a href="sicherheit.html" data-funnel="link-sicherheit-startseite" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Welche Prüfungen und Standards dahinterstehen</a>
+            </div>
         </div>
 
         <!-- Nur die drei Fragen, die weder die Kacheln oben noch die sechs Schritte
