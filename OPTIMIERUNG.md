@@ -146,6 +146,22 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 | GSC Klicks | 👤 GSC, Export | **60** (+253 %) bei 317 Impressionen | steigend |
 | **Nicht-Marken-Klicks** | 👤 GSC, Export | **~3 von 60** (29 davon Markensuche) | steigend |
 
+> **Beim nächsten Monatslauf zu erledigen: Messpunkte auf `leistungen.html` nachrüsten**
+> *(beschlossen 03.09.2026, Stefan)*. Am 03.09. sind dort ein Anwendungsfall, drei Fragen, drei
+> Abgrenzungssätze und zwei Portfolio-Bausteine dazugekommen — **ohne eigenen Messpunkt**.
+> Bewusst aufgeschoben, nicht vergessen: Bei 111 Sitzungen im Monat lieferte ein Klickereignis auf
+> eine einzelne Frage einstellige Zahlen, also Rauschen (§5). Zwei Dinge sind dann fällig:
+>
+> 1. **Scrollmarken für `leistungen.html`** — die Seite hat als einzige lange Seite **gar keine**,
+>    obwohl §1 `scroll-*` als Datenquelle führt. Sie ist mobil rund 17.000 px hoch; ohne Marke ist
+>    unbekannt, ob die Fragen-Sektion überhaupt erreicht wird. **Das ist die größere Lücke als die
+>    fehlenden Klickmarken** und die Voraussetzung dafür, dass diese überhaupt interpretierbar sind.
+> 2. **Ein Marker auf die Fragen-Sektion**, nicht acht einzelne. Ein zweiter auf die Frage
+>    *„Was ist, wenn eine Sonde falsch misst?"* nur, wenn das Kapitel gezielt beworben wird —
+>    per Direktlink auf `#fragen` aus einer Mail oder einem Vortrag.
+>
+> **Vorzuziehen ist beides, sobald die Sitzungen dauerhaft über ~300 im Monat liegen.**
+
 **Ein Monatsvergleich ist erstmals Anfang Oktober möglich** — die Historie beginnt am
 10.08.2026. Bis dahin sind alle Zahlen oben Ausgangswerte, keine Entwicklung. **Die Werte
 stammen aus der Oberfläche, nicht aus der lokalen Historie** — Begründung im Kasten in §1.
