@@ -45,7 +45,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   Abgebildeten. Vorbild ist das aws-Jurytermin-Foto auf `forschung.html` (17.08.2026).
   Die eigentliche Kundensorge dahinter — „was, wenn der ausfällt?" — beantwortet ohnehin kein
   Teamfoto, sondern ein benannter Mechanismus (Haftpflicht, Doku beim Kunden, Software läuft
-  ohne ihn). **Noch offen, empfohlen:** vier Zeilen „Ausfallsicherheit" bei `#angebot`.
+  ohne ihn). **Noch offen, empfohlen:** vier Zeilen „Ausfallsicherheit" bei `#ablauf`.
 - **Neue Seite? Den `preload`-Block für die Schriften mitkopieren.** Ohne ihn starten die
   Schriften erst, nachdem `fonts.css` geparst ist; der `font-display:swap`-Wechsel von Arial
   auf Montserrat/Open Sans verschiebt dann den Seitenkopf. Auf der Startseite waren das
@@ -222,7 +222,7 @@ npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.htm
 
 ```
 homepage/
-  index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Diagnose-Angebot ohne Preis (#angebot), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
+  index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Ablauf ohne Preis (#ablauf), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
   leistungen.html          Leistungsseite (seit 31.08.2026 wieder echt, handgeschrieben): Standortanalyse als
                            Schwerpunkt (#standortanalyse), Anwendungen, Portfolio, Abgrenzung, Sticky-CTA.
                            Seit 03.09.2026: Sektion #schnellanalyse als kleiner Einstieg (500 EUR netto,
