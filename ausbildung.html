@@ -476,6 +476,12 @@
         .kette .k.stark { background: var(--schild-blau); border-color: var(--schild-blau); color: var(--weiss); }
         .kette .k.stark span { color: rgba(255,255,255,0.8); }
         .kette .pfeil { align-self: center; color: var(--silber); font-size: 1.1rem; flex: 0 0 auto; }
+        /* Datenschutz-Block unter der Kette: drei Aussagen statt eines Fliesstextes, damit
+           Abstufung, Lokalbetrieb und Normbezug einzeln lesbar sind. */
+        .prozess .umfang-hinweis p { font-size: 0.95rem; line-height: 1.7; color: var(--text-light); }
+        .prozess .umfang-hinweis p + p { margin-top: 11px; }
+        .prozess .umfang-hinweis b { color: var(--dunkelblau); font-weight: 600; }
+        .prozess .umfang-hinweis a { color: var(--schild-blau); font-weight: 600; border-bottom: 1px solid rgba(43,94,167,0.35); }
 
         .grenze { padding: 70px 0; background: var(--dunkelblau); color: var(--weiss); }
         .grenze h2 { color: var(--weiss); }
@@ -616,9 +622,8 @@
             </div>
         </div>
         <p style="margin-top:26px;font-size:0.95rem;line-height:1.75;color:var(--text-light);max-width:820px;">
-           Verkauft wird hier keine fertige Software, sondern der Arbeitsweg dahinter: Regelwerk,
-           Ablauf mit Rückkopplung, saubere Versionierung — und die Frage, welche Daten ein Werkzeug
-           überhaupt sehen darf. Am Ende steht ein lauffähiges Werkzeug, das Ihnen gehört.
+           Verkauft wird hier keine fertige Software, sondern der Arbeitsweg dahinter — und am Ende
+           steht ein lauffähiges Werkzeug, das Ihnen gehört.
            Wie eine fertige Auswertung aussieht, zeigt das
            <a href="demo.html" data-funnel="link-demo-ausbildung" style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">Video zur Anwendung</a> —
            gebaut wird in der Werkstatt aber von Ihren Leuten.</p>
@@ -635,6 +640,56 @@
             <figcaption>So sieht das Ziel aus: Die Auswertung steht neben der Anlage, und
                 bedient wird sie von jemandem, der den Prozess kennt. — Illustration.</figcaption>
         </figure>
+    </div>
+</section>
+
+<!-- ===== DER ENTWICKLUNGSABLAUF =====
+     Steht seit 03.09.2026 wieder auf der Seite. Beim Halbieren am 02.09. (b950fa5) fiel die
+     Prozess-Sektion heraus -- damit stand der eigentliche Unterschied zum freien Prompten nur
+     noch in zwei grauen Fussnotensaetzen. Bewusst kuerzer als die alte Fassung: eine Kette,
+     ein Absatz davor, ein Beleg dahinter. -->
+<section class="prozess">
+    <div class="container">
+        <div class="section-label" style="color:var(--schild-blau);">Was den Unterschied macht</div>
+        <h2 style="font-size:1.7rem;">Gearbeitet wird nach einem festen Entwicklungsablauf</h2>
+        <p style="max-width:820px;">Eine KI schreibt ein Programm in zehn Minuten. Ob man dem
+           Ergebnis trauen kann, entscheidet nicht das Modell, sondern der Ablauf drumherum:
+           schriftliche Anforderung am Anfang, ein vorher vereinbartes Abnahmekriterium am Ende,
+           und jeder Stand dazwischen versioniert. Wer aus der Serienfertigung kommt, kennt das
+           als Lastenheft, Freigabestufe und Nachweis — hier gilt es für Software.</p>
+        <div class="ebene">
+            <div class="ebene-head">
+                <span class="ebene-num">Der Ablauf</span>
+                <h3>Fünf Schritte, bei jeder Auswertung dieselben</h3>
+            </div>
+            <p>Ihre Leute lernen nicht ein Werkzeug, sondern diese Reihenfolge. Sie trägt auch
+               die nächste Auswertung — und die übernächste, wenn das Werkzeug längst ein
+               anderes ist.</p>
+            <div class="kette">
+                <div class="k">Anforderung<span>schriftlich, in Ihren Worten</span></div>
+                <div class="pfeil">&rarr;</div>
+                <div class="k">Datengrenze<span>was das Werkzeug sehen darf</span></div>
+                <div class="pfeil">&rarr;</div>
+                <div class="k">Bauen<span>bauen, prüfen, korrigieren</span></div>
+                <div class="pfeil">&rarr;</div>
+                <div class="k">Abnahme<span>am vereinbarten Kriterium</span></div>
+                <div class="pfeil">&rarr;</div>
+                <div class="k stark">Freigabe<span>jeder Stand nachvollziehbar</span></div>
+            </div>
+        </div>
+        <div class="umfang-hinweis">
+            <p><b>Der Datenschutz steckt im Ablauf — als Schritt zwei, nicht als Formular am
+               Schluss.</b> Wie weit er geht, entscheiden Sie:</p>
+            <p><b>Abgestuft unkenntlich machen.</b> Anlagen- und Sensorbezeichnungen werden
+               ersetzt, so weit es der Fall verlangt — bis hin zu Platzhaltern, aus denen sich
+               Ihr Prozess nicht mehr ablesen lässt.</p>
+            <p><b>Bei hohen Anforderungen ganz lokal.</b> Dann läuft die gesamte Umgebung ohne
+               Internetverbindung auf Ihren Rechnern, und kein Wert verlässt das Haus.</p>
+            <p><b>Nach anerkannten Regeln, regelmäßig nachgezogen.</b> Die Vorgaben sind an
+               ISO/IEC 27001 orientiert und werden zyklisch überprüft und angepasst — es ist
+               derselbe Ablauf, nach dem hier die Software für den Produktivbetrieb entsteht.
+               <a href="sicherheit.html" data-funnel="link-sicherheit-prozess">Welche Prüfungen dabei laufen</a>.</p>
+        </div>
     </div>
 </section>
 
