@@ -275,6 +275,24 @@
         }
         .btn-hero-outline:hover { border-color: var(--cyan-akzent); color: var(--cyan-akzent); }
 
+
+        /* Fragen */
+        .fragen { padding: 66px 0; background: var(--weiss); }
+        .fragen-liste { max-width: 780px; margin-top: 26px; }
+        .frage { border-bottom: 1px solid var(--silber); padding: 4px 0; }
+        .frage summary { list-style: none; cursor: pointer; padding: 15px 0;
+                         font-family: 'Montserrat', Arial, sans-serif; font-weight: 600;
+                         font-size: 0.99rem; color: var(--dunkelblau); display: flex;
+                         justify-content: space-between; gap: 16px; }
+        .frage summary::-webkit-details-marker { display: none; }
+        .frage summary::after { content: '+'; font-weight: 400; font-size: 1.5rem; line-height: 1;
+                                color: var(--schild-blau); transition: transform .25s; flex-shrink: 0; }
+        .frage[open] summary::after { transform: rotate(45deg); }
+        .frage summary:hover { color: var(--schild-blau); }
+        .frage .antwort { padding: 0 0 16px; font-size: 0.93rem; line-height: 1.7; color: var(--text-body); }
+        .frage .antwort p { margin-bottom: 9px; }
+        .frage .antwort p:last-child { margin-bottom: 0; }
+
         /* Footer */
         .footer { background: var(--dunkelblau); color: rgba(255,255,255,0.7); padding: 40px 0; }
         .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
@@ -735,6 +753,61 @@
             nachvollziehbare Änderungen, für jeden Stand ein Nachweis. Wer aus der Serienfertigung
             kommt, erkennt ihn sofort wieder.
         </p>
+    </div>
+</section>
+
+
+<!-- ===== FRAGEN ===== -->
+<section class="fragen" id="fragen">
+    <div class="container">
+        <div class="section-label" style="color:var(--schild-blau);">Was zuerst gefragt wird</div>
+        <h2 style="font-size:1.7rem;">Vier Fragen, vier Antworten</h2>
+        <div class="fragen-liste">
+
+            <details class="frage">
+                <summary>Brauchen unsere Leute Programmierkenntnisse?</summary>
+                <div class="antwort">
+                    <p>Nein. Beschrieben wird in normalem Deutsch, was gesehen werden soll — den
+                       Rest baut das System. Gebraucht wird jemand, der Ihre Prozesse kennt und
+                       beurteilen kann, ob ein Ergebnis stimmt. Genau das können Ihre Fachkräfte,
+                       und genau das kann keine Software.</p>
+                </div>
+            </details>
+
+            <details class="frage">
+                <summary>Wie viel Zeit müssen wir einplanen?</summary>
+                <div class="antwort">
+                    <p>Die Vorführung dauert eine Stunde. Danach entscheiden Sie, ob es weitergeht —
+                       jeder Schritt ist einzeln beendbar, und Sie zahlen jeden einzeln.</p>
+                    <p>In der Werkstatt arbeiten Ihre Leute an einer eigenen Frage aus dem Betrieb.
+                       Der Nutzen entsteht dabei sofort: Am Ende steht eine Auswertung, die Sie
+                       vorher nicht hatten — nicht erst nach dem letzten Kurstag.</p>
+                </div>
+            </details>
+
+            <details class="frage">
+                <summary>Was bleibt bei uns, wenn Sie wieder weg sind?</summary>
+                <div class="antwort">
+                    <p>Die Anwendung, die Ihre Leute gebaut haben — samt Quellcode — und die
+                       Umgebung, in der sie entstanden ist, auf Ihren Rechnern. Dazu die
+                       schriftliche Datengrenze und der Arbeitsweg, mit dem die nächste Auswertung
+                       entsteht.</p>
+                    <p>Keine Lizenz, kein Abo, kein Wartungsvertrag als Bedingung.</p>
+                </div>
+            </details>
+
+            <details class="frage">
+                <summary>Verlassen dabei Betriebsdaten das Haus?</summary>
+                <div class="antwort">
+                    <p>Nein. Geübt wird zuerst an Übungsdaten, danach an Ihren eigenen — und die
+                       bleiben lokal. Vor der ersten echten Auswertung wird schriftlich eingestuft,
+                       welche Daten ein Werkzeug sehen darf, welche nur aufbereitet und welche nie.</p>
+                    <p>Das ist kein Formalismus: Ein Geschäftsgeheimnis verliert seinen Schutz
+                       bereits durch die Weitergabe ohne Vertraulichkeitsvereinbarung.</p>
+                </div>
+            </details>
+
+        </div>
     </div>
 </section>
 
