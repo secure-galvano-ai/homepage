@@ -70,6 +70,30 @@
         "@type": "Answer",
         "text": "Die Auswertung läuft lokal, ohne KI-Cloud und ohne Abo. Für die erste Demo stellen Sie freiwillig einen Auszug bereit — verschlüsselt übergeben, mit Vertraulichkeitsvereinbarung. Was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist, wenn eine Sonde falsch misst?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine verkrustete oder dekalibrierte Sonde meldet sich nicht als defekt — sie liefert weiter Werte, nur die falschen. Erkannt wird das über Messgrößen aus verschiedenen Quellen, die sich normalerweise gleichsinnig bewegen: Laufen sie auseinander, schlägt die Auswertung an und benennt die auffälligsten Messstellen des Tages als Prüf- und Kalibrierhinweis. Dafür braucht es keinen zusätzlichen Sensor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ersetzt das unsere Fachkräfte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Eine Überwachung ohne fachliche Aufsicht funktioniert nicht: Verkrustungen, mechanische Schäden und der Zustand einer Anlage zeigen sich beim Hingehen. Die Auswertung sagt, wo zuerst hinzusehen ist, und nimmt die Suche ab — die Beurteilung bleibt bei Ihrer Verfahrenstechnik und Instandhaltung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie sehen wir, ob eine Prüfung wirklich an der Anlage stattgefunden hat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indem beide Spuren getrennt erfasst und gegeneinander gerechnet werden: die Werte der Anlage auf der einen Seite, die manuelle Kontrollmessung auf der anderen, digital erfasst statt auf Papier. Überschreitet die Abweichung eine vereinbarte Schwelle, entsteht eine Meldung. Damit ist belegt, dass gemessen wurde — und dass die Sensorik zum selben Ergebnis kommt."
+      }
     }
   ]
 }
@@ -691,7 +715,7 @@
 <section class="anwendungen" id="anwendungen">
     <div class="container">
         <p class="section-label">Was daraus gebaut wird</p>
-        <h2>Sechs Anwendungen, die in Galvaniken immer wieder gebraucht werden</h2>
+        <h2>Sieben Anwendungen, die in Galvaniken immer wieder gebraucht werden</h2>
         <p class="anw-intro">Jede davon läuft auf Daten, die Ihre Anlagen heute schon schreiben —
            Steuerungsprotokolle, Sensorwerte, Schichtdickenmessungen, Sicherungsdateien. Welche für
            Sie zuerst lohnt, entscheidet der Befund.</p>
@@ -730,6 +754,18 @@
                    schwankt, ausgelöst durch gefahrene Chargen, Quadratmeter oder Durchflussmenge.
                    Diese Werte liegen meist schon vor. Betriebe sparen damit spürbar Wartungsaufwand,
                    weil gewartet wird, was Wartung braucht.</p>
+            </article>
+            <!-- Siebte Anwendung, 03.09.2026: die haeufigste Rueckfrage aus den
+                 Kundengespraechen des Kanalpartners. Eine driftende Sonde meldet sich
+                 nicht als defekt -- ohne diese Antwort steht die ganze Auswertung auf
+                 Werten, denen niemand widerspricht. -->
+            <article class="anw">
+                <h3>Die Sonde, die falsch misst</h3>
+                <p>Verkrustet, dekalibriert, beschädigt — die Sonde meldet sich nicht als defekt,
+                   sie liefert weiter Werte. Erkennbar wird das über Größen aus verschiedenen
+                   Quellen, die normalerweise gleich laufen: Driften sie auseinander, kommt der
+                   Hinweis, welche Messstellen heute zuerst zu prüfen sind. Ohne einen einzigen
+                   zusätzlichen Sensor.</p>
             </article>
             <article class="anw">
                 <h3>Der Nachweis, dass Ihre Maßnahmen greifen</h3>
@@ -800,6 +836,15 @@
                 Beauftragt und verhandelt wird von Ihnen.</li>
             <li><b>Datenlandkarte</b> — welche Systeme zeichnen bei Ihnen was auf, was wird doppelt
                 geführt, wo sitzt eine Lücke.</li>
+            <li><b>Wissen verfügbar machen</b> — Arbeitsanweisungen, Ansatzvorschriften und
+                Fachliteratur werden abfragbar: Wer eine Störung eingrenzen will, fragt in eigenen
+                Worten und bekommt die Stelle aus Ihren eigenen Unterlagen. Läuft auf Ihrem Server
+                oder in einem europäischen Datenraum — nicht auf einem Privatzugang. Hilft dort, wo
+                Erfahrung mit einzelnen Personen aus dem Haus geht.</li>
+            <li><b>Sollkurve statt Stichprobe</b> — für Standorte mit dichter Datenlage: Aus
+                Warendurchsatz, Amperestunden und Standzeit wird der erwartete Konzentrationsverlauf
+                eines Bades gerechnet und gegen die Analytik gestellt. Weicht er ab, wird gemeldet,
+                bevor die Charge auffällt.</li>
             <li><b>Laufender Betrieb</b> — die Auswertung läuft weiter, abgerechnet je überwachter
                 Anlage, auf Ihrer Hardware und ohne KI-Cloud. Modellpflege inklusive, damit die
                 Erkennung nicht mit der Zeit abdriftet.</li>
@@ -811,6 +856,19 @@
         <div class="abgrenzung-box">
             <h2 style="font-size:1.25rem;color:var(--dunkelblau);margin-bottom:12px;">Wo die Grenzen liegen</h2>
             <p style="color:var(--text-body);line-height:1.75;">Ihr Ansprechpartner ist Galvanikmeister und Materialphysiker — Sie müssen niemandem Ihren Prozess erklären, aber Sie bekommen auch keinen allgemeinen Digitalisierungsberater. Fremde Gewerke werden benannt und weiterverwiesen, nicht koordiniert. Hardware wird Ihnen keine verkauft, und an keiner Anschaffung wird mitverdient. Und Sie brauchen kein Datenplattform-Vorprojekt als Voraussetzung: Der Nachweis läuft auf dem Datenstand, den Sie heute schon haben.</p>
+            <!-- Drei Grenzen ergaenzt 03.09.2026: Reihenfolge, Umfang und Art der
+                 Massnahme. Alle drei schuetzen vor Projekten, die scheitern muessen --
+                 und trennen die Leistung von der klassischen Digitalisierungsberatung. -->
+            <p style="color:var(--text-body);line-height:1.75;margin-top:16px;">Drei Dinge, die
+                bewusst <b>nicht</b> zum Angebot gehören. <b>Eine Auswertung ist nicht der erste
+                Schritt:</b> Wo eine Dosierung noch von Hand nachgeschärft wird, gehört zuerst der
+                Regelkreis geschlossen — das nimmt den Großteil der Schwankung heraus, und erst
+                darüber lohnt eine Überwachung. <b>Es wird keine Datenplattform gebaut.</b> Ein
+                Datenlager kostet im Aufbau schnell sechsstellig und danach jedes Jahr weiter; was
+                die kleine Lösung für die zwei, drei teuersten Bäder kostet, steht daneben — und
+                meistens gewinnt sie. Und <b>Abstellmaßnahmen sind technisch, nicht organisatorisch:</b>
+                ein anderer Parameter im Rezept, mehr Durchfluss in der Spüle, langlebigere
+                Sensorik — statt einer weiteren Kontrolle, die jemand zusätzlich erledigen muss.</p>
             <!-- Wegweiser statt vierter Baustein: die Startseite behaelt EINE Botschaft
                  (Fokus-Umbau 30.07.2026). Wer schon hier ist, soll aber erfahren, dass es
                  den zweiten Weg gibt -- und umgekehrt verweist ausbildung.html hierher. -->
@@ -827,7 +885,7 @@
 <section class="fragen" id="fragen">
     <div class="container">
         <p class="section-label">Was zuerst gefragt wird</p>
-        <h2>Fünf Fragen, fünf Antworten</h2>
+        <h2>Acht Fragen, acht Antworten</h2>
         <div class="fragen-liste">
 
             <details class="frage">
@@ -891,6 +949,49 @@
                        finden. Was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt —
                        <a href="sicherheit.html" data-funnel="link-sicherheit-leistungen">welche
                        Rahmenwerke dahinterstehen</a>.</p>
+                </div>
+            </details>
+
+            <!-- Drei Fragen ergaenzt 03.09.2026 aus den Kundengespraechen des Kanalpartners.
+                 Sie kommen dort frueher als die fuenf oben und blieben bisher unbeantwortet. -->
+            <details class="frage">
+                <summary>Was ist, wenn eine Sonde falsch misst?</summary>
+                <div class="antwort">
+                    <p>Eine verkrustete oder dekalibrierte Sonde meldet sich nicht als defekt. Sie
+                       liefert weiter Werte — nur die falschen, und die Steuerung übernimmt sie
+                       widerspruchslos. Auffällig wird das oft erst über die Qualität, also spät.</p>
+                    <p>Erkennbar ist es früher: Es gibt Größen aus <b>verschiedenen Quellen</b>, die
+                       sich normalerweise gleichsinnig bewegen — Warendurchsatz und der Leitwert
+                       hinter der Spüle etwa. Laufen sie auseinander, schlägt die Auswertung an und
+                       benennt die auffälligsten Messstellen des Tages. Damit wissen Ihre Leute, wo
+                       eine Kontrollmessung oder eine Kalibrierung ansteht — <b>ohne einen einzigen
+                       zusätzlichen Sensor</b>.</p>
+                </div>
+            </details>
+
+            <details class="frage">
+                <summary>Ersetzt das unsere Fachkräfte?</summary>
+                <div class="antwort">
+                    <p>Nein — und eine Überwachung, die das verspricht, würde in der Galvanik nicht
+                       halten. Krusten, mechanische Schäden und der tatsächliche Zustand einer
+                       Anlage zeigen sich beim Hingehen, nicht in einer Zahlenreihe.</p>
+                    <p>Was die Auswertung abnimmt, ist das <b>Suchen</b>: Sie sagt, welche Stelle
+                       und welches Zeitfenster zuerst dran sind. Die Beurteilung bleibt bei Ihrer
+                       Verfahrenstechnik und Instandhaltung — und die gewinnt genau die Zeit zurück,
+                       die heute in die Fehlersuche geht.</p>
+                </div>
+            </details>
+
+            <details class="frage">
+                <summary>Wie sehen wir, ob eine Prüfung wirklich an der Anlage stattgefunden hat?</summary>
+                <div class="antwort">
+                    <p>Über zwei getrennte Spuren, die gegeneinander gerechnet werden: die Werte der
+                       Anlage auf der einen Seite, die manuelle Kontrollmessung auf der anderen —
+                       digital erfasst, per Handy direkt an der Anlage, statt auf einer Liste.</p>
+                    <p>Überschreitet die Abweichung eine mit Ihnen vereinbarte Schwelle, entsteht
+                       eine Meldung. Das belegt zweierlei auf einmal: <b>dass gemessen wurde</b> —
+                       und dass die Sensorik zum selben Ergebnis kommt. Für Audits ist damit
+                       dokumentiert, was sonst nur abgehakt ist.</p>
                 </div>
             </details>
 

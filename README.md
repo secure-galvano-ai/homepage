@@ -27,6 +27,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
 | 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
 | 03.09.2026 | **Schnellanalyse als Einstieg** (500 € netto), sechs Anwendungen und fünf Fragen auf `leistungen.html`; Leistung umbenannt in *Standortanalyse Daten- und KI-Potenziale*; neuer Einseiter *Leistungen im Überblick*; „kein Cloud-Upload“ ersetzt durch „Auswertung lokal, keine KI-Cloud, Übergabe verschlüsselt“ | Marktfragen des Kanalpartners eingearbeitet |
+| 03.09.2026 | **Sensorik-Block nachgezogen** *(zweite Runde desselben Tages)* — siebte Anwendung *Die Sonde, die falsch misst*, drei weitere Fragen (Sondendrift, „ersetzt das unsere Fachkräfte", Prüfnachweis an der Anlage), drei zusätzliche Grenzen in der Abgrenzung, zwei neue Portfolio-Bausteine | Quelle: `BD/conversations/2026/2026-09-03_waldemar-daubert-marktfragen-und-antworten.md` §7 |
 | 02.09.2026 | **`demo.html` scharfgeschaltet** — Video `RStpqzz3r5g` eingebunden, Texte auf die Anwendung statt auf den Vor-Ort-Tag umgestellt, zwei Verweise gesetzt | § *Demo-Seite* |
 | 02.09.2026 | **„Ihre Daten bleiben bei Ihnen" → „Lokale Datenverarbeitung"** *(Stefan)* — Startseiten-H2, Vertrauenszeile auf `demo.html`, Baustein *Laufende Überwachung* auf `leistungen.html` | Wortlaut bleibt seitenübergreifend identisch |
 
@@ -224,8 +225,8 @@ homepage/
   leistungen.html          Leistungsseite (seit 31.08.2026 wieder echt, handgeschrieben): Standortanalyse als
                            Schwerpunkt (#standortanalyse), Anwendungen, Portfolio, Abgrenzung, Sticky-CTA.
                            Seit 03.09.2026: Sektion #schnellanalyse als kleiner Einstieg (500 EUR netto,
-                           eine Frage, ein Datenauszug, remote) VOR dem Schwerpunkt, sechs Anwendungen
-                           (#anwendungen) und fuenf Fragen (#fragen) mit FAQPage-Schema. Leistungsname
+                           eine Frage, ein Datenauszug, remote) VOR dem Schwerpunkt, sieben Anwendungen
+                           (#anwendungen) und acht Fragen (#fragen) mit FAQPage-Schema. Leistungsname
                            seither "Standortanalyse Daten- und KI-Potenziale".
                            Nav/Footer/WA-FAB/Sticky kommen aus _generate_layout.py. Kachel-Fassung bis 07/2026:
                            git show 78ce8c3:leistungen.html
