@@ -141,6 +141,16 @@ Startseite lag der Haupt-CTA (y 655–707) vollständig hinter dem Einwilligungs
 Notebook-Format. **Das Banner klebt an `bottom`, der CTA an der Hero-Höhe: Je flacher das
 Fenster, desto sicherer treffen sie sich.** Ein hoher Desktop-Viewport zeigt das Problem nie.
 
+**Bannerkonflikte flächig prüfen, nicht je Seite** *(03.09.2026)*. Zwei Einzelfälle in drei
+Tagen (31.08. mobil, 02.09. auf 1366 × 768) waren dieselbe Ursache: Das Banner klebt unten
+links, die Hero-Knöpfe stehen links — sie treffen sich, sobald der Hero hoch genug ist. Eine
+Messung über **alle Seiten × alle Pflichtmaße** in einem Durchgang (Iframe je Größe, jedes
+`data-funnel`-Element gegen das Bannerrechteck) fand am 03.09. sofort **zwei weitere**, die
+niemand vermutet hatte: `cta-leistungen-hero` auf **1280 × 900 und 1440 × 900**. Beide lagen
+oberhalb der damaligen `max-height:860px`-Schranke. **Wer einen Bannerkonflikt findet, sucht
+die Klasse, nicht den nächsten Einzelfall** — die Lösung war eine Zeile statt einer dritten
+Sonderregel. **Den WhatsApp-Knopf mitmessen**, er ist das Ausweichziel.
+
 **Beim Prüfen den Browser-Cache bedenken:** `consent.js` wird gecacht, eine geänderte Regel
 wirkt im lokalen Test erst nach hartem Neuladen. Wer nur misst und nicht gegenprüft, hält eine
 wirksame Änderung für unwirksam — Gegenprobe ist `document.querySelectorAll('style')` auf die

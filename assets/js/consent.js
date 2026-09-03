@@ -154,12 +154,20 @@
             '.consent-banner p{margin:0 0 8px;}',
             '.consent-actions{gap:8px;}',
             '.consent-btn{padding:7px 10px;font-size:0.72rem;}}',
-            // Flache Fenster (02.09.2026): Auf 1366x768 -- der haeufigsten Laptop-Aufloesung --
-            // lag das Banner (y 613-752) genau ueber dem Hero-CTA (y 655-707), beide links.
-            // Derselbe Fehler wie mobil am 31.08., nur auf dem Notebook. Die Hero-Knoepfe stehen
-            // links, deshalb wandert das Banner hier nach rechts und ueber den WhatsApp-Knopf
-            // (der endet bei bottom 24px + 52px Hoehe). Text und Groesse bleiben unveraendert.
-            '@media(min-width:681px) and (max-height:860px){.consent-banner{left:auto;right:24px;',
+            // Desktop grundsaetzlich rechts ueber dem WhatsApp-Knopf (03.09.2026, war zuvor
+            // auf `max-height:860px` begrenzt). Die Hero-Knoepfe stehen links -- solange das
+            // Banner ebenfalls links unten klebt, treffen sich die beiden, sobald der Hero
+            // hoch genug ist. Das ist zweimal passiert: 1366x768 auf der Startseite (02.09.)
+            // und 1280x900 ebenfalls dort (gemessen 03.09.) -- letzteres lag ausserhalb der
+            // Hoehenschranke und blieb deshalb offen. Die Schranke abzuschaffen loest die
+            // ganze Klasse statt des naechsten Einzelfalls.
+            // Der WhatsApp-Knopf endet bei bottom 24px + 52px Hoehe, deshalb bottom:92px.
+            // MOBIL (<=680px) bleibt es beim Balken unten: dort ist seitlich kein Platz. Die
+            // Zweit-CTAs von index.html und ausbildung.html liegen dann in der Bannerzone --
+            // bewusst hingenommen, die HAUPT-Knoepfe sind auf beiden Seiten frei (gemessen
+            // 03.09.2026: Banner ab y 714, Hauptknopf endet 701 bzw. 702), und das Banner
+            // verschwindet nach der ersten Antwort.
+            '@media(min-width:681px){.consent-banner{left:auto;right:24px;',
             'bottom:92px;max-width:400px;}}'
         ].join('');
         var style = document.createElement('style');
