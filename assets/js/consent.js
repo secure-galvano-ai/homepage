@@ -149,11 +149,24 @@
             // Mobil bewusst kompakt (31.08.2026): Auf 390x844 lag das Banner genau ueber
             // dem Hero-CTA bei y=705 -- wer es nicht wegklickt, sieht den Hauptknopf nie.
             // Nur Groesse, KEINE Textkuerzung: der Einwilligungstext bleibt wortgleich.
-            '@media(max-width:680px){.consent-banner{left:8px;right:76px;bottom:8px;max-width:none;',
+            // 03.09.2026, zweite Runde: Der Platzhalter `right:76px` fuer den WhatsApp-Knopf
+            // zwang den Einwilligungstext in eine Zeile mehr -- das Banner begann dadurch bei
+            // y 698 statt der am selben Tag gemessenen 714, und auf ausbildung.html lag der
+            // HAUPT-Knopf (endet 702) darunter. Jetzt nimmt das Banner mobil die volle Breite
+            // und der WhatsApp-Knopf tritt so lange zurueck; er steht ohnehin genau in der
+            // Bannerzone und kommt nach der Antwort sofort wieder. Vier Pixel Abstand waren
+            // keine Loesung, sondern ein Zufall. Nachher gemessen auf 390x844: Banner wieder
+            // ab 714 (Hoehe 122 statt 138), Luft unter dem Hauptknopf +12 px auf
+            // ausbildung.html und +45 px auf der Startseite.
+            // ACHTUNG beim Nachmessen: Der Browser haelt diese Datei im Cache. Ohne
+            // fetch('assets/js/consent.js',{cache:'reload'}) misst man die alte Fassung und
+            // haelt eine wirksame Aenderung fuer wirkungslos -- genau das ist hier passiert.
+            '@media(max-width:680px){.consent-banner{left:8px;right:8px;bottom:8px;max-width:none;',
             'padding:10px 12px;font-size:0.72rem;line-height:1.4;border-radius:8px;}',
             '.consent-banner p{margin:0 0 8px;}',
             '.consent-actions{gap:8px;}',
-            '.consent-btn{padding:7px 10px;font-size:0.72rem;}}',
+            '.consent-btn{padding:7px 10px;font-size:0.72rem;}',
+            'html.consent-offen .wa-fab{display:none;}}',
             // Desktop grundsaetzlich rechts ueber dem WhatsApp-Knopf (03.09.2026, war zuvor
             // auf `max-height:860px` begrenzt). Die Hero-Knoepfe stehen links -- solange das
             // Banner ebenfalls links unten klebt, treffen sich die beiden, sobald der Hero
@@ -190,15 +203,22 @@
             '<button type="button" class="consent-btn consent-reject">Ablehnen</button>' +
             '</div>';
         document.body.appendChild(banner);
+        // Solange das Banner steht, tritt der WhatsApp-Knopf mobil zurueck (siehe CSS oben).
+        document.documentElement.classList.add('consent-offen');
+
+        function schliessen() {
+            banner.remove();
+            document.documentElement.classList.remove('consent-offen');
+        }
 
         banner.querySelector('.consent-accept').addEventListener('click', function () {
             setConsent('accepted');
-            banner.remove();
+            schliessen();
             loadClarity();
         });
         banner.querySelector('.consent-reject').addEventListener('click', function () {
             setConsent('rejected');
-            banner.remove();
+            schliessen();
         });
     }
 

@@ -561,22 +561,6 @@
     </div>
 </section>
 
-<!-- ===== SCHWERPUNKT: Standortanalyse =====
-     Stand nach der Konkretisierung vom 31.08.2026: ganzer Tag statt Halbtag, vier
-     Online-Vorgespraeche, Groessenordnungen statt Euro-Zahl je Anwendungsfall.
-     Quelle: Standortanalyse_Umsetzung_2026-08-31.md §8.
-
-     Nachgezogen 03.09.2026 (Kapazitaetseinwand, competition.md §5.4): Der Aufwand steht
-     jetzt durchgehend aus KUNDENSICHT statt aus unserer. "EIN TAG" las sich als ganzer
-     Tag der Fuehrungskraefte -- es ist unser Tag, fuer den Kunden ein halber. Workshop
-     und Abschlussrunde sind beziffert, weil unbezifferter Aufwand immer zu gross
-     geschaetzt wird. Neu ist die Zeile "Terminplanung": nur EIN Termin verlangt mehrere
-     Personen gleichzeitig, und Termine werden GEMEINSAM NACH DER VERFUEGBARKEIT DES
-     KUNDEN vereinbart (Stefan, 03.09.2026 -- "Terminvorschlaege kommen von uns" klang nach
-     Diktat und kehrte den Nutzen um: die Entlastung liegt darin, dass sich der Kunde nach
-     niemandem richten muss, nicht darin, dass wir bestimmen). Der fruehere Satz "wer die
-     Termine koordiniert -- das ist die eigentliche Huerde" ist raus: er stellte ein Defizit
-     beim Leser fest und kuendigte Arbeit an, statt sie abzunehmen (CLAUDE.md §1, Carnegie). -->
 <!-- ===== SCHNELLANALYSE — der kleine Einstieg, bewusst vor der Standortanalyse ===== -->
 <section class="schnell" id="schnellanalyse">
     <div class="container">
@@ -627,6 +611,22 @@
     </div>
 </section>
 
+<!-- ===== SCHWERPUNKT: Standortanalyse =====
+     Stand nach der Konkretisierung vom 31.08.2026: ganzer Tag statt Halbtag, vier
+     Online-Vorgespraeche, Groessenordnungen statt Euro-Zahl je Anwendungsfall.
+     Quelle: Standortanalyse_Umsetzung_2026-08-31.md §8.
+
+     Nachgezogen 03.09.2026 (Kapazitaetseinwand, competition.md §5.4): Der Aufwand steht
+     jetzt durchgehend aus KUNDENSICHT statt aus unserer. "EIN TAG" las sich als ganzer
+     Tag der Fuehrungskraefte -- es ist unser Tag, fuer den Kunden ein halber. Workshop
+     und Abschlussrunde sind beziffert, weil unbezifferter Aufwand immer zu gross
+     geschaetzt wird. Neu ist die Zeile "Terminplanung": nur EIN Termin verlangt mehrere
+     Personen gleichzeitig, und Termine werden GEMEINSAM NACH DER VERFUEGBARKEIT DES
+     KUNDEN vereinbart (Stefan, 03.09.2026 -- "Terminvorschlaege kommen von uns" klang nach
+     Diktat und kehrte den Nutzen um: die Entlastung liegt darin, dass sich der Kunde nach
+     niemandem richten muss, nicht darin, dass wir bestimmen). Der fruehere Satz "wer die
+     Termine koordiniert -- das ist die eigentliche Huerde" ist raus: er stellte ein Defizit
+     beim Leser fest und kuendigte Arbeit an, statt sie abzunehmen (CLAUDE.md §1, Carnegie). -->
 <section class="schwerpunkt" id="standortanalyse">
     <div class="container">
         <p class="section-label">Der Einstieg</p>
@@ -659,7 +659,7 @@
                     <dt>Ihr Aufwand</dt><dd><strong>Je Person eine Stunde online, dazu ein halber Tag vor Ort.</strong> Anlagenliste, Systemübersicht, ein Raum mit Pinnwand — sonst keine Vorarbeit</dd>
                     <dt>Terminplanung</dt><dd><strong>Nur ein Termin verlangt mehrere Personen gleichzeitig</strong> — der Nachmittag vor Ort. Alles davor läuft online und einzeln; jeder Termin wird gemeinsam nach der Verfügbarkeit Ihrer Leute vereinbart</dd>
                     <dt>Wer dabei ist</dt><dd>Fokus auf Produktion, Qualitätssicherung, Instandhaltung und Verfahrenstechnik</dd>
-                    <dt>Kein Eingriff</dt><dd>keine Verkabelung, kein Zugriff auf Ihre Steuerung — und kein Messwert verlässt Ihren Betrieb</dd>
+                    <dt>Kein Eingriff</dt><dd>keine Verkabelung, kein Zugriff auf Ihre Steuerung — und für die Analyse selbst verlässt kein Messwert Ihren Betrieb</dd>
                     <dt>Anreise</dt><dd>im Umkreis von 250 km um Bregenz inklusive, darüber 1 € je zusätzlichem Kilometer</dd>
                     <dt>Ergebnis</dt><dd>Standort-Landkarte, Datenampel je Anlage, Potenzialbild in vier Feldern, schriftlicher Befund</dd>
                     <dt>Danach</dt><dd>Sie entscheiden frei. Es folgt kein Automatismus</dd>
@@ -762,10 +762,10 @@
             <article class="anw">
                 <h3>Die Sonde, die falsch misst</h3>
                 <p>Verkrustet, dekalibriert, beschädigt — die Sonde meldet sich nicht als defekt,
-                   sie liefert weiter Werte. Erkennbar wird das über Größen aus verschiedenen
-                   Quellen, die normalerweise gleich laufen: Driften sie auseinander, kommt der
-                   Hinweis, welche Messstellen heute zuerst zu prüfen sind. Ohne einen einzigen
-                   zusätzlichen Sensor.</p>
+                   sie liefert weiter Werte. Die Auswertung benennt, welche Messstellen heute
+                   zuerst zu prüfen sind, ohne einen einzigen zusätzlichen Sensor.
+                   <a href="#fragen" style="color:var(--schild-blau);font-weight:600;">Woran das
+                   erkannt wird</a>.</p>
             </article>
             <article class="anw">
                 <h3>Der Nachweis, dass Ihre Maßnahmen greifen</h3>
@@ -881,7 +881,9 @@
     </div>
 </section>
 
-<!-- ===== FRAGEN — die fünf, die in Kundengesprächen zuerst kommen ===== -->
+<!-- ===== FRAGEN — die acht, die in Kundengesprächen zuerst kommen.
+     Stand 03.09.2026: fuenf aus den eigenen Gespraechen, drei aus denen des
+     Kanalpartners. Ueberschrift und Zahl hier immer gemeinsam nachziehen. ===== -->
 <section class="fragen" id="fragen">
     <div class="container">
         <p class="section-label">Was zuerst gefragt wird</p>

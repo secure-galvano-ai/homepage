@@ -151,10 +151,23 @@ oberhalb der damaligen `max-height:860px`-Schranke. **Wer einen Bannerkonflikt f
 die Klasse, nicht den nächsten Einzelfall** — die Lösung war eine Zeile statt einer dritten
 Sonderregel. **Den WhatsApp-Knopf mitmessen**, er ist das Ausweichziel.
 
-**Beim Prüfen den Browser-Cache bedenken:** `consent.js` wird gecacht, eine geänderte Regel
-wirkt im lokalen Test erst nach hartem Neuladen. Wer nur misst und nicht gegenprüft, hält eine
-wirksame Änderung für unwirksam — Gegenprobe ist `document.querySelectorAll('style')` auf die
-neue Regel oder ein `fetch` der Datei.
+**Die Bannermessung lügt auf zwei Arten — beide sind am 03.09.2026 hintereinander passiert:**
+
+1. **Gespeicherte Einwilligung.** Steht `cookie-consent` im `localStorage`, rendert das Banner
+   gar nicht, und die Messung meldet fröhlich „keine Konflikte". **Vor jeder Messrunde
+   `localStorage.removeItem('cookie-consent')`** — und im Ergebnis mitzählen, *wie oft* ein
+   Banner überhaupt gesehen wurde. Kommt diese Zahl nicht auf Seiten × Größen, war die Messung
+   blind.
+2. **Zwischengespeicherte `consent.js`.** Ein `fetch` der Datei zeigt den neuen Text, das
+   Iframe lädt trotzdem die alte Fassung aus dem HTTP-Cache — die wirksame Änderung sieht
+   wirkungslos aus. **`await fetch('assets/js/consent.js', {cache:'reload'})` vor der Messung**,
+   dann erst die Iframes bauen.
+
+**Und: Vier Pixel Abstand sind kein bestandener Test.** Am 03.09. stand der Hauptknopf auf
+`ausbildung.html` mit 4 px Luft unter dem Banner — beim nächsten Umbruch im Einwilligungstext
+war er darunter. Wo die Klasse gelöst ist, gehört ein Abstand hin, den ein Zeilenumbruch nicht
+auffrisst; Zielmarke ist der Hauptknopf **frei**, Zweit-CTAs dürfen mobil in der Bannerzone
+liegen (dokumentiert in `consent.js`).
 
 ### Gate 3b · Die Seite als Station einer Reise lesen *(neu 02.09.2026)*
 

@@ -163,6 +163,13 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 >
 > **Vorzuziehen ist beides, sobald die Sitzungen dauerhaft über ~300 im Monat liegen.**
 
+> ⚠️ **September 2026 trägt keine Wirkungszuordnung** *(Stefan, 03.09.2026)*. An diesem einen Tag
+> liefen fünf Änderungsrunden statt der drei erlaubten (§5 Regel 2) — Schnellanalyse, Sensorik-Block,
+> Beleg-Foto, Redundanzschnitt, Bannerfix. Das war eine bewusste Entscheidung zugunsten eines
+> sauberen Bestands. **Folge für den Oktober-Lauf:** Änderungen an Terminanfragen, Scrolltiefe und
+> CTA-Klicks lassen sich keiner einzelnen Maßnahme zuschreiben; der Monat zählt als **neuer
+> Ausgangswert**, nicht als Vergleich. Ab Oktober gilt die Dreierregel wieder.
+
 **Ein Monatsvergleich ist erstmals Anfang Oktober möglich** — die Historie beginnt am
 10.08.2026. Bis dahin sind alle Zahlen oben Ausgangswerte, keine Entwicklung. **Die Werte
 stammen aus der Oberfläche, nicht aus der lokalen Historie** — Begründung im Kasten in §1.

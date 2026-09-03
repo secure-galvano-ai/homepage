@@ -30,6 +30,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 03.09.2026 | **Sensorik-Block nachgezogen** *(zweite Runde desselben Tages)* — siebte Anwendung *Die Sonde, die falsch misst*, drei weitere Fragen (Sondendrift, „ersetzt das unsere Fachkräfte", Prüfnachweis an der Anlage), drei zusätzliche Grenzen in der Abgrenzung, zwei neue Portfolio-Bausteine | Quelle: `BD/conversations/2026/2026-09-03_waldemar-daubert-marktfragen-und-antworten.md` §7 |
 | 02.09.2026 | **`demo.html` scharfgeschaltet** — Video `RStpqzz3r5g` eingebunden, Texte auf die Anwendung statt auf den Vor-Ort-Tag umgestellt, zwei Verweise gesetzt | § *Demo-Seite* |
 | 02.09.2026 | **„Ihre Daten bleiben bei Ihnen" → „Lokale Datenverarbeitung"** *(Stefan)* — Startseiten-H2, Vertrauenszeile auf `demo.html`, Baustein *Laufende Überwachung* auf `leistungen.html` | Wortlaut bleibt seitenübergreifend identisch |
+| 03.09.2026 | **Redundanz- und Klarheitsdurchgang über alle Seiten** *(vierte und fünfte Runde desselben Tages, Auftrag Stefan)* — wortgleiche Dopplungen geschnitten (Startseite, `leistungen.html`, `ausbildung.html`), abgelöster Produktname *Diagnose* an vier Stellen nachgezogen, *Cybersecurity Act* → *Cyber Resilience Act*, aws-Förderprojekt als abgeschlossen gekennzeichnet, dritter Demo-Videolink gestrichen. Dazu ein echter Fund: auf 390 × 844 lag der **Haupt**knopf von `ausbildung.html` im Einwilligungsbanner | **Die Zuordnung im Oktober-Lauf ist für diesen Monat aufgegeben** (fünf Runden statt der erlaubten drei, §5 `OPTIMIERUNG.md`) — bewusste Entscheidung, damit der Bestand sauber ist. Bannerfix in `consent.js` |
 | 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
 
 ### Regeln, die daraus dauerhaft gelten
@@ -98,8 +99,12 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   Konkret angewandt: Die Diagnose dauert **„innerhalb einer Woche"**, nicht acht Wochen —
   `BD/areas/business-model.md` wurde am 17.08. an vier Stellen nachgezogen. Der Vor-Ort-Teil steckt
   seit 30.07. in der vorgelagerten **Standortanalyse** (Stufe 2). Preis unveraendert 9.500 €.
-- **Produktname bleibt „Diagnose"**, nicht „Proof of Concept" — so in `BD/areas/business-model.md`
-  festgelegt.
+- ~~**Produktname bleibt „Diagnose"**~~ — **überholt seit 31.08.2026**: Die Stufe heißt
+  **„Vorprojekt"** (`BD/areas/business-model.md` §*Leiter*, dort mit dem Vermerk „Homepage, Flyer
+  und Muster-Befund sind nachgezogen"). Der Nachzug war unvollständig — bis 03.09.2026 stand
+  „Diagnose" noch viermal auf `sicherheit.html` und `ueber-mich.html`, wo niemand nachsieht.
+  **Lehre daraus: Beim Umbenennen `grep` über *alle* Seiten laufen lassen, nicht nur über die,
+  die man gerade umbaut** — inklusive `<meta>`-Beschreibungen und `og:`-Tags.
 - **Bewusst getragener Widerspruch, nicht erneut melden** *(Stefan, 11.08.2026)*:
   `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" und „Stefan Maier
   **e.U.**" — beides weicht von der Linie ab (korrekt: *Modellpruefung*, Firmierung ohne e.U.).
@@ -241,7 +246,8 @@ homepage/
                            Vorgaengerfassungen: git show feed14a:ausbildung.html (Kurs 2026-07),
                            git show 417588d:ausbildung.html (Langfassung vom 02.09.)
   sicherheit.html          Compliance-Seite (seit 11.08.2026 wieder indexiert, in Sitemap und Footer, bewusst NICHT
-                           in der Hauptnavigation). Nav/Footer dort handgepflegt, nicht ueber _generate_layout.py.
+                           in der Hauptnavigation). Nav/Footer kommen seit 31.08.2026 aus _generate_layout.py
+                           (PAGES-Eintrag mit None = kein eigener Nav-Punkt); nur das Seiten-CSS ist noch eigen.
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
   impressum/ stefan-maier/ kontakt/ trusted-ai/ data-analytics/
