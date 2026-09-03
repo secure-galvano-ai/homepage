@@ -68,7 +68,7 @@
       "name": "Was passiert mit unseren Daten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sie bleiben im Haus. Ausgewertet wird lokal, ohne Cloud-Upload und ohne Abo. Für die erste Demo stellen Sie freiwillig einen Auszug bereit, mit Vertraulichkeitsvereinbarung. Was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt."
+        "text": "Die Auswertung läuft lokal, ohne KI-Cloud und ohne Abo. Für die erste Demo stellen Sie freiwillig einen Auszug bereit — verschlüsselt übergeben, mit Vertraulichkeitsvereinbarung. Was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt."
       }
     }
   ]
@@ -343,6 +343,39 @@
         .baust-liste b { color: var(--dunkelblau); font-weight: 600; }
         .baust-liste a { color: var(--schild-blau); font-weight: 600; border-bottom: 1px solid rgba(43,94,167,.35); }
 
+
+        /* Schnellanalyse */
+        .schnell { padding: 70px 0 66px; background: var(--weiss); }
+        .schnell-lead { max-width: 800px; color: var(--text-body); line-height: 1.75; margin-bottom: 26px; }
+        .schnell-box { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+                       gap: 26px; align-items: start; }
+        .schnell-schritte { list-style: none; counter-reset: s; }
+        .schnell-schritte li { counter-increment: s; position: relative; padding-left: 34px;
+                               margin-bottom: 15px; font-size: 0.95rem; line-height: 1.7;
+                               color: var(--text-body); }
+        .schnell-schritte li::before { content: counter(s); position: absolute; left: 0; top: 1px;
+                                       width: 23px; height: 23px; border-radius: 50%;
+                                       background: var(--schild-blau); color: #fff;
+                                       font-family: 'Montserrat', Arial, sans-serif; font-weight: 700;
+                                       font-size: 0.76rem; display: flex; align-items: center;
+                                       justify-content: center; }
+        .schnell-schritte b { color: var(--dunkelblau); font-weight: 600; }
+        .schnell-fakten { background: var(--hellgrau); border: 1px solid var(--silber);
+                          border-radius: 14px; padding: 20px 22px; }
+        .schnell-fakten .fakt { padding: 9px 0; border-bottom: 1px solid var(--silber); }
+        .schnell-fakten .fakt:last-child { border-bottom: none; }
+        .schnell-fakten span { display: block; font-family: 'Montserrat', Arial, sans-serif;
+                               font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+                               text-transform: uppercase; color: var(--schild-blau); margin-bottom: 3px; }
+        .schnell-fakten b { color: var(--dunkelblau); font-size: 0.95rem; font-weight: 600; }
+        .schnell-fakten .preis b { font-size: 1.12rem; }
+        .schnell-abgrenzung { margin-top: 24px; max-width: 840px; font-size: 0.93rem;
+                              line-height: 1.7; color: var(--text-light); }
+        .schnell-abgrenzung b { color: var(--dunkelblau); font-weight: 600; }
+        .schnell-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+        .schnell-hinweis { margin-top: 12px; font-size: 0.88rem; color: var(--text-light); }
+        @media (max-width: 820px) { .schnell-box { grid-template-columns: 1fr; } }
+
         /* Footer */
         .footer { background: var(--dunkelblau); color: rgba(255,255,255,0.7); padding: 40px 0; }
         .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
@@ -520,6 +553,56 @@
      niemandem richten muss, nicht darin, dass wir bestimmen). Der fruehere Satz "wer die
      Termine koordiniert -- das ist die eigentliche Huerde" ist raus: er stellte ein Defizit
      beim Leser fest und kuendigte Arbeit an, statt sie abzunehmen (CLAUDE.md §1, Carnegie). -->
+<!-- ===== SCHNELLANALYSE — der kleine Einstieg, bewusst vor der Standortanalyse ===== -->
+<section class="schnell" id="schnellanalyse">
+    <div class="container">
+        <p class="section-label">Der schnelle Weg</p>
+        <h2>Schnellanalyse — wenn Sie die Daten schon haben</h2>
+        <p class="schnell-lead">Manchmal ist die Lage klar: Sie wissen, welche Datei die Antwort
+           enthält, und Sie wissen, welche Frage Sie stellen wollen. Dann braucht es keinen Tag vor
+           Ort. Sie bekommen die Auswertung dazu — mit einer Anwendung, in der Sie das Ergebnis
+           selbst durchklicken können.</p>
+
+        <div class="schnell-box">
+            <ol class="schnell-schritte">
+                <li><b>Kurzgespräch, 30 Minuten online.</b> Sie schildern die Frage und was Sie an
+                    Daten haben. Wir sagen Ihnen ehrlich, ob sie sich damit beantworten lässt.</li>
+                <li><b>Vertraulichkeitsvereinbarung.</b> Unterschrieben, bevor eine einzige Datei
+                    den Besitzer wechselt — und Sie geben nur den Auszug frei, den Sie freigeben
+                    wollen.</li>
+                <li><b>Auswertung.</b> Ihre Daten werden aufbereitet und ausgewertet; die Analyse
+                    läuft lokal, ohne KI-Cloud.</li>
+                <li><b>Ergebnis per Mail.</b> Die Auswertung und eine Anwendung zum Durchklicken —
+                    Ihre Daten, Ihr Ergebnis, weiterverwendbar im Haus.</li>
+            </ol>
+            <aside class="schnell-fakten">
+                <div class="fakt"><span>Umfang</span><b>eine Frage, ein Datenauszug</b></div>
+                <div class="fakt"><span>Wo</span><b>vollständig aus der Ferne</b></div>
+                <div class="fakt"><span>Ihr Aufwand</span><b>30 Minuten plus Datenexport</b></div>
+                <div class="fakt preis"><span>Pauschal</span><b>500 € netto</b></div>
+            </aside>
+        </div>
+
+        <p class="schnell-abgrenzung"><b>Wann die Standortanalyse der bessere Weg ist:</b> wenn noch
+           offen ist, <i>welche</i> Frage die teuerste ist, oder wenn es um mehrere Anlagen und
+           Bereiche geht. Dann lohnt der Tag vor Ort mit der Landkarte über den ganzen Standort —
+           beschrieben gleich unten. Die Schnellanalyse ist der Weg für eine konkrete Frage, nicht
+           der kleine Bruder der Standortanalyse.</p>
+
+        <div class="schnell-cta">
+            <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/j9sT4U4iQ0WwxD0oCfcdeg2"
+               target="_blank" rel="noopener" class="btn btn-primary"
+               data-funnel="cta-schnellanalyse-30">Kurzgespräch buchen (30 Min)</a>
+            <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/"
+               target="_blank" rel="noopener" class="btn btn-outline"
+               data-funnel="cta-schnellanalyse-60">Beide Formate ansehen</a>
+        </div>
+        <p class="schnell-hinweis">Beide Termine sind kostenlos und unverbindlich: dreißig Minuten
+           für eine konkrete Frage, eine Stunde, wenn Sie weiter ausholen wollen. Der zweite Knopf
+           führt auf die Buchungsseite, wo beide nebeneinander stehen.</p>
+    </div>
+</section>
+
 <section class="schwerpunkt" id="standortanalyse">
     <div class="container">
         <p class="section-label">Der Einstieg</p>
@@ -718,7 +801,7 @@
             <li><b>Datenlandkarte</b> — welche Systeme zeichnen bei Ihnen was auf, was wird doppelt
                 geführt, wo sitzt eine Lücke.</li>
             <li><b>Laufender Betrieb</b> — die Auswertung läuft weiter, abgerechnet je überwachter
-                Anlage, auf Ihrer Hardware und ohne Cloud-Upload. Modellpflege inklusive, damit die
+                Anlage, auf Ihrer Hardware und ohne KI-Cloud. Modellpflege inklusive, damit die
                 Erkennung nicht mit der Zeit abdriftet.</li>
         </ul>
     </div>
@@ -801,9 +884,9 @@
             <details class="frage">
                 <summary>Was passiert mit unseren Daten?</summary>
                 <div class="antwort">
-                    <p>Sie bleiben im Haus. Ausgewertet wird lokal, es gibt keinen Cloud-Upload und
-                       kein Abo. Für die erste Demo stellen Sie freiwillig einen Auszug bereit —
-                       mit Vertraulichkeitsvereinbarung, und nur den Auszug, den Sie freigeben.</p>
+                    <p>Die Auswertung läuft lokal bei Ihnen — keine KI-Cloud, kein Abo. Für die
+                       erste Demo stellen Sie freiwillig einen Auszug bereit: nur den, den Sie
+                       freigeben, verschlüsselt übergeben und mit Vertraulichkeitsvereinbarung.</p>
                     <p>Rezepturen und Prozessparameter werden nicht gebraucht, um Auffälligkeiten zu
                        finden. Was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt —
                        <a href="sicherheit.html" data-funnel="link-sicherheit-leistungen">welche
