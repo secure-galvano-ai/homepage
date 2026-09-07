@@ -149,7 +149,8 @@ Messung über **alle Seiten × alle Pflichtmaße** in einem Durchgang (Iframe je
 niemand vermutet hatte: `cta-leistungen-hero` auf **1280 × 900 und 1440 × 900**. Beide lagen
 oberhalb der damaligen `max-height:860px`-Schranke. **Wer einen Bannerkonflikt findet, sucht
 die Klasse, nicht den nächsten Einzelfall** — die Lösung war eine Zeile statt einer dritten
-Sonderregel. **Den WhatsApp-Knopf mitmessen**, er ist das Ausweichziel.
+Sonderregel. *(Der Satz „den WhatsApp-Knopf mitmessen" ist am 07.09.2026 entfallen — der Knopf
+existiert nicht mehr, siehe `README.md` § WhatsApp-Kontakt.)*
 
 **Die Bannermessung lügt auf zwei Arten — beide sind am 03.09.2026 hintereinander passiert:**
 

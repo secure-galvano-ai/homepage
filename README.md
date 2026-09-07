@@ -684,6 +684,17 @@ py credentials/_generate_credentials.py
 Quelle: `Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`.
 Metadaten (Titel, Untertitel, Kategorie pro Seite) sind in `credentials/_generate_credentials.py` definiert — Reihenfolge dort ändern, Seiten 6-28 des PDFs werden zu 23 JPG-Paaren (Seite 28: WKO-Workshop NISG 2026, ergänzt 05/2026).
 
-## WhatsApp-Kontakt
+## WhatsApp-Kontakt — abgeschaltet seit 07.09.2026
 
-Floating-Button unten rechts auf jeder Page, verlinkt auf `wa.me/4368181483538` mit voreingestelltem Greeting. Funktioniert mit normaler WhatsApp-App **und** WhatsApp Business — keine separate Konfiguration nötig.
+Der Floating-Button unten rechts ist **entfernt** (Stefan): Er trug die private Mobilnummer im
+Klartext auf jeder Seite, damit maschinell abgreifbar — Folge waren laufende Phishing-Anfragen von
+unbekannten Nummern. Mit derselben Änderung ist `telephone` aus dem Schema.org-Block der Startseite
+raus; **eine Telefonnummer steht damit nirgends mehr auf der Website.** Rechtlich unbedenklich:
+§ 5 ECG verlangt eine schnelle elektronische Kontaktaufnahme, die E-Mail-Adresse im Impressum
+erfüllt das.
+
+Mechanik: `_generate_layout.py` rendert den `wa-fab`-Block leer, die Marker bleiben in den Seiten
+stehen. Wer den Knopf zurückholen will, setzt `render_wa_fab()` wieder auf die Link-Fassung — die
+Nummer liegt bewusst nicht mehr im Repo. `.wa-fab`-CSS in `assets/css/base.css` und die
+Positionierungslogik in `consent.js` bleiben ungenutzt liegen. Kontaktweg ist jetzt
+Erstgespräch-Buchung + mailto.
