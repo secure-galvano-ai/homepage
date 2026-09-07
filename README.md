@@ -23,7 +23,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 10.08.2026 | **Erster Optimierungslauf** — Messung repariert (jeder CTA war doppelt verdrahtet), zweiter Hero-Button ist jetzt ein Beleg statt eines Sprungankers | Ablauf ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md), monatlich per `/optimierung` |
 | 17.08.2026 | Presse-Karte verlinkt die frei lesbare WISTO-Fassung | tote Platzhalter weg |
 | 31.08.2026 | **`leistungen.html` zurueckgeholt** — echte Seite mit der Standortanalyse als Schwerpunkt, neun Bausteinen und Abgrenzung; Hero mobil entzerrt, Consent-Banner kompakt | Sitemap 5 → 6 URLs; Anlass: 87 GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen |
-| 31.08.2026 | **`demo.html` angelegt** — Landingpage fuer das Demo-Video, ein Zweck und ein CTA, bis zur Aufnahme `noindex` und unverlinkt | § *Demo-Seite*; Platzierungsentscheidung in `BD/projects/demo-video-akquise/` |
+| 31.08.2026 | **`demo.html` angelegt** — Landingpage fuer das Demo-Video, ein Zweck und ein CTA, bis zur Aufnahme `noindex` und unverlinkt | § *Demo-Seite*; Platzierungsentscheidung auf SharePoint (`Videos & Podcasts/20260901_Demo Video Hompage/`) |
 | 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
 | 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
 | 03.09.2026 | **Schnellanalyse als Einstieg** (500 € netto), sechs Anwendungen und fünf Fragen auf `leistungen.html`; Leistung umbenannt in *Standortanalyse Daten- und KI-Potenziale*; neuer Einseiter *Leistungen im Überblick*; „kein Cloud-Upload“ ersetzt durch „Auswertung lokal, keine KI-Cloud, Übergabe verschlüsselt“ | Marktfragen des Kanalpartners eingearbeitet |
@@ -149,8 +149,9 @@ Marker in die Seite setzen, `py _generate_layout.py` laufen lassen.
 
 **Zweck:** die einzige Landingpage der Seite im engeren Sinn — ein Zweck, ein Handlungsaufruf,
 keine Ablenkung. Sie traegt das Demo-Video der Anwendung und ist das Ziel, auf das Mail, Telefon
-und LinkedIn zeigen. Begruendung der Platzierung im ganzen Trichter:
-`Business Development/projects/demo-video-akquise/README.md`.
+und LinkedIn zeigen. Begruendung der Platzierung im ganzen Trichter: SharePoint
+`…/06_Praesentationsmaterialien/Videos & Podcasts/20260901_Demo Video Hompage/00_LIESMICH_Platzierung-und-Funnelbefund.md`
+(das BD-Projekt `projects/demo-video-akquise/` ist am 07.09.2026 aufgeloest).
 
 **Was drauf ist:** YouTube-ID **`RStpqzz3r5g`** („Prozessdaten auswerten — die Anwendung im
 Ueberblick"), **4:51**, nicht gelistet, eingebunden ueber `youtube-nocookie.com` — kein Cookie vor
@@ -184,7 +185,7 @@ die Aufmerksamkeit; die Startseite bekommt einen Verweis auf `demo.html`, nicht 
 weiterreichen will, tut das direkt nach dem Inhalt, und dort konkurriert der Link nicht mit dem
 Buchungs-Knopf. Zielgruppe sind die Kollegen des Besuchers, die keine fuenf Minuten Video schauen:
 das Blatt muss deshalb **allein stehen** und traegt Video-Adresse, Kontakt und Ablauf selbst.
-Gebaut wird es von `BD/projects/demo-video-akquise/build_flyer_anwendung.py` (Inhalt und Layout
+Gebaut wird es von `BD/templates/flyer-corporate/build_flyer_anwendung.py` (Inhalt und Layout
 stehen dort, **nie im PDF nachbessern**); der Build prueft Seitenzahl **und** Pflichtstellen, weil
 `overflow:hidden` Inhalt sonst lautlos abschneidet — genau das passierte beim ersten Lauf mit der
 Fusszeile. **Aendert sich das Video oder die Seite, aendert sich das Blatt mit** (dieselbe Regel
@@ -286,7 +287,7 @@ homepage/
                              standortanalyse-musterbefund.pdf BD/templates/befund-corporate/build_befund.py
                              leistungen-ueberblick.pdf        BD/templates/uebersicht-corporate/build_uebersicht.py
                              datenwerkstatt-ueberblick.pdf    BD/projects/ausbildung-und-coaching-2026/build_flyer_datenwerkstatt.py
-                             anwendung-ueberblick.pdf         BD/projects/demo-video-akquise/build_flyer_anwendung.py
+                             anwendung-ueberblick.pdf         BD/templates/flyer-corporate/build_flyer_anwendung.py
                            Jedes Skript prueft Seitenzahl und Pflichtstellen selbst und bricht ab, wenn
                            Inhalt verschluckt wird. leistungen-ueberblick.pdf ist das Blatt zum
                            Weiterreichen: alle vier Wege nebeneinander, mit Aufwand und Preis.

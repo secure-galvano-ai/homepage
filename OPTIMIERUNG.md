@@ -56,8 +56,9 @@ abgelehnt wurde.
 Schlussfolgerung. Die Zahlen kommen aus dem XLSX-Export über
 `Business Development/scripts/analyse_linkedin.py`, **nicht** über den Browser: automatisierter
 Zugriff verstößt dort gegen die Nutzungsbedingungen und riskiert das Konto. Gepflegt wird der
-Befund in `projects/linkedin-auftritt/README.md`; hier steht nur, ob ein Beitrag Verkehr auf
-die Seite gebracht hat.
+Befund seit 07.09.2026 auf SharePoint unter `01_LinkedIn/00_LIESMICH_Reichweite-und-Serie.md`
+(das BD-Projekt `projects/linkedin-auftritt/` ist aufgeloest); hier steht nur, ob ein Beitrag
+Verkehr auf die Seite gebracht hat.
 
 ---
 
