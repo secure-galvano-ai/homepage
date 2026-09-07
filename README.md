@@ -411,8 +411,11 @@ Betreff: DMARC rvh.at — Berichte pruefen und naechste Stufe setzen
 Berichte liegen im freigegebenen Postfach dmarc@rvh.at (XML-Anhaenge).
 
 SCHRITT 1 — Auswerten
-Welche Systeme senden unter rvh.at? Erwartet wird ausschliesslich
-Microsoft 365 (spf.protection.outlook.com).
+Anhaenge aus dmarc@rvh.at in einen Ordner speichern, dann:
+  py "Business Development/areas/compliance/scripts/dmarc_auswerten.py" <ordner>
+Das Skript fasst alle Berichte zusammen, loest die sendenden IPs auf und
+gibt ein Votum. Erwartet wird ausschliesslich Microsoft 365
+(spf.protection.outlook.com).
 Taucht etwas Unbekanntes auf: NICHT verschaerfen, erst klaeren.
 
 SCHRITT 2 — Nur wenn Schritt 1 sauber ist, im IONOS-DNS setzen:
