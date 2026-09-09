@@ -31,6 +31,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 02.09.2026 | **`demo.html` scharfgeschaltet** — Video `RStpqzz3r5g` eingebunden, Texte auf die Anwendung statt auf den Vor-Ort-Tag umgestellt, zwei Verweise gesetzt | § *Demo-Seite* |
 | 02.09.2026 | **„Ihre Daten bleiben bei Ihnen" → „Lokale Datenverarbeitung"** *(Stefan)* — Startseiten-H2, Vertrauenszeile auf `demo.html`, Baustein *Laufende Überwachung* auf `leistungen.html` | Wortlaut bleibt seitenübergreifend identisch |
 | 03.09.2026 | **Redundanz- und Klarheitsdurchgang über alle Seiten** *(vierte und fünfte Runde desselben Tages, Auftrag Stefan)* — wortgleiche Dopplungen geschnitten (Startseite, `leistungen.html`, `ausbildung.html`), abgelöster Produktname *Diagnose* an vier Stellen nachgezogen, *Cybersecurity Act* → *Cyber Resilience Act*, aws-Förderprojekt als abgeschlossen gekennzeichnet, dritter Demo-Videolink gestrichen. Dazu ein echter Fund: auf 390 × 844 lag der **Haupt**knopf von `ausbildung.html` im Einwilligungsbanner | **Die Zuordnung im Oktober-Lauf ist für diesen Monat aufgegeben** (fünf Runden statt der erlaubten drei, §5 `OPTIMIERUNG.md`) — bewusste Entscheidung, damit der Bestand sauber ist. Bannerfix in `consent.js` |
+| 09.09.2026 | **Zweiter Demo-Videolink gestrichen** *(Stefan)* — „Überwachung im laufenden Betrieb" (`lWJQq0x2_1c`) ergab zusammen mit dem Hauptvideo das vollständige Bild des Funktionsumfangs. Abschnitt heißt jetzt *Weitere Aufnahme* (Singular), „Auswertungen und Berichte" bleibt bewusst stehen. Die Videos selbst bleiben bestehen und werden weiter gezielt im Gespräch verschickt | Anlass: Prüfung des Video-Transkripts auf Preisgabe. Zwei Folgepunkte unter *Optional*: Neuvertonung von vier Stellen, Beleglage zu „technisch ausgereift" |
 | 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
 
 ### Regeln, die daraus dauerhaft gelten
@@ -115,10 +116,17 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
 - [ ] **UTM auf die eingehenden Links** setzen (Mailstufe 3, LinkedIn, Signatur) — die interne
       Verlinkung bleibt bewusst ohne UTM, sonst zerlegt sie die Sitzung. § *Demo-Seite*.
-- [ ] **Konkurrieren die „Weiteren Aufnahmen" mit dem Hauptvideo?** Der erste der drei Links
-      auf `demo.html` heisst „Auffaelligkeiten an Prozessdaten erkennen" und verspricht damit
-      dasselbe wie das Hauptvideo darueber. Im naechsten Monatslauf gegen die Klickzahlen
-      pruefen und im Zweifel den Link streichen — eine Landingpage hat einen Zweck.
+- [ ] **Demo-Video neu vertonen** *(entschieden 09.09.2026)* — vier Stellen im Ton von
+      `RStpqzz3r5g`, Bildspur bleibt: (1) 1:24 der Trainingsweg ueber das Ishikawa-Ergebnis,
+      (2) 0:53 „Backupdateien aus Anlagensteuerung/MES/X-Ray/Labor" als Integrationsweg,
+      (3) 2:32 „fast keine dieser Fehler stimmen mit dem Anomaliescore ueberein" — klingt wie
+      eine Einschraenkung, ist der Nutzen, (4) 4:22 der Preis „1.500 € netto" fuer die
+      Standortanalyse, der auf der Seite bewusst nirgends steht (dort hat nur die
+      Schnellanalyse einen). Danach neu hochladen und **nur die ID im `<iframe>` tauschen**
+      (§ *Demo-Seite*). Bis dahin bleibt das Video online — eine tote Landingpage kostet mehr.
+- [ ] **Deckt der Inspektionsbericht „technisch ausgereift"?** So sagt es das Video bei 4:14.
+      Die Modellpruefung ergab *Low Risk* — eine Risiko-, keine Reifegradaussage. Wenn der
+      Wortlaut nicht belegt ist, faellt der Satz beim Neuvertonen mit weg.
 
 ---
 
