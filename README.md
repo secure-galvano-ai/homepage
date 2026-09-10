@@ -99,7 +99,10 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 - **Bei Abweichungen zwischen Website und Angebotsvorlage gilt die Website** *(Stefan, 17.08.2026)*.
   Konkret angewandt: Die Diagnose dauert **„innerhalb einer Woche"**, nicht acht Wochen —
   `BD/areas/business-model.md` wurde am 17.08. an vier Stellen nachgezogen. Der Vor-Ort-Teil steckt
-  seit 30.07. in der vorgelagerten **Standortanalyse** (Stufe 2). Preis unveraendert 9.500 €.
+  seit 30.07. in der vorgelagerten **Standortanalyse** (Stufe 2). **Der Preis ist seit 10.09.2026
+  neu gefasst: 5.000 € je einzelnem Anwendungsfall** statt 9.500 € fuer ein Paket aus ein bis drei
+  Faellen. Kanonisch `BD/areas/preise.yaml`, ausgegeben mit
+  `py "Business Development/scripts/preise.py"`.
 - ~~**Produktname bleibt „Diagnose"**~~ — **überholt seit 31.08.2026**: Die Stufe heißt
   **„Vorprojekt"** (`BD/areas/business-model.md` §*Leiter*, dort mit dem Vermerk „Homepage, Flyer
   und Muster-Befund sind nachgezogen"). Der Nachzug war unvollständig — bis 03.09.2026 stand
