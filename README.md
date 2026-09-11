@@ -203,9 +203,54 @@ Fusszeile. **Aendert sich das Video oder die Seite, aendert sich das Blatt mit**
 wie oben: Seite und Video muessen dasselbe versprechen — das Blatt gehoert dazu).
 
 **Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, der Videostart meldet sich als
-`video-gestartet` (die Erkennung in `consent.js` nimmt das erste YouTube-iframe der Seite — auf
-`demo.html` gibt es genau eines, es ist nichts anzupassen). Eingehende Links aus Mail und LinkedIn
-bekommen UTM-Parameter, damit der Verkehr im Monatslauf trennbar bleibt.
+**`video-anwendung`** (aus `data-video="anwendung"` am iframe; die Erkennung in `consent.js` nimmt
+das erste YouTube-iframe der Seite — auf `demo.html` gibt es genau eines, es ist nichts
+anzupassen). *Bis 11.09.2026 stand hier `video-gestartet` — das war der Name vor der Umstellung
+am 02.09.2026 und damit veraltet.* Eingehende Links aus Mail und LinkedIn bekommen
+UTM-Parameter, damit der Verkehr im Monatslauf trennbar bleibt.
+
+## Datenwerkstatt-Seite (`ausbildung.html`) — Video und Zielgruppe *(11.09.2026)*
+
+**Zielgruppe steht in der Kennzeile:** *„Weiterbildung fuer kleine Betriebe"*. Der Hero setzte
+bis 11.09.2026 laufende Messtechnik voraus („In Ihren Anlagen laeuft die Messtechnik laengst
+mit") und nannte die Begleitung nicht — beides ging an der Zielgruppe vorbei. **Dauerregel:
+Auf dieser Seite ist die manuelle Erfassung der gleichwertige Fall**, nicht der Sonderfall;
+wer hier Text aendert, prueft beide Wege (Steuerung *und* Badbuch von Hand) und nennt das
+Coaching als Teil des Angebots. Derselbe Satz steht im Flyer (§ Gate 4 unten).
+
+**Was drauf ist:** YouTube-ID **`-btKYAPGAqw`**, eingebunden ueber `youtube-nocookie.com`,
+**direkt unter dem Hero** — vor der Nutzenliste, weil ein Besucher aus einer Mail zuerst sehen
+will, wovon die Rede ist. Inhalt: das Badbuch aus
+`BD/projects/ausbildung-und-coaching-2026/badbuch-demo/` (nachgestellter Verlauf, keine
+Betriebsdaten, kein Lieferantenname). Der Videostart meldet sich als **`video-badbuch`**
+(`data-video="badbuch"`). Ersetzt hat es die Illustration `assets/img/techniker-monitoring.jpg`
+— **die Bilddatei liegt weiter in `assets/img/`** und ist seit 11.09.2026 auf keiner Seite mehr
+eingebunden.
+
+**OFFEN:** Der Titel auf YouTube lautet *„Digitale Badkare mit KI Aufbauen"* (Tippfehler,
+Grossschreibung mitten im Satz). Das `title`-Attribut am iframe traegt schon die richtige
+Fassung; **nachziehen in YouTube Studio**, sonst versprechen Seite und Video nicht dasselbe.
+
+**Es bleibt EIN Video auf dieser Seite.** `consent.js` greift das erste YouTube-iframe; ein
+zweites waere in der Messung unsichtbar und teilte die Aufmerksamkeit. Der Verweis auf
+`demo.html` bleibt bewusst ein **Nebensatz** in der Nutzen-Sektion (`link-demo-ausbildung`):
+das Video hier zeigt ein **selbstgebautes** Werkzeug, `demo.html` die **fertige** Software.
+
+**Der Style-Block der Seite ist am 11.09.2026 um rund 10 kB gekuerzt worden.** Er war aus
+`sicherheit.html`/`leistungen.html` kopiert und trug Regeln fuer Bausteine, die es auf dieser
+Seite nie gab (`.produkt`, `.frameworks`, `.methodik`, `.eckdaten`, `.felder`, `.danach`,
+`.blick`, `.download`, `.goldzeile` und weitere). Jede Klasse war vorher gegen Rumpf,
+`_generate_layout.py`, `consent.js`, `site.js` und `base.css` geprueft; die Geometrie aller
+123 Elemente wurde vor und nach dem Ausbau gemessen und ist identisch (Seitenhoehe 7598 px).
+**Wer hier eine Regel ergaenzt:** nur, wenn die Klasse auf DIESER Seite vorkommt — Gemeinsames
+gehoert nach `assets/css/base.css`. *Noch drin und bewusst gelassen: `.wa-fab`/`.wa-label` —
+sie gehoeren zum abgeschalteten WhatsApp-Knopf und stehen auf allen Seiten gleich (§ WhatsApp).*
+
+**Die Hero-Laenge ist eine Messgroesse.** Waechst der Hero, rutscht der Hauptknopf mobil hinter
+das Einwilligungsbanner — die Klasse ist in `consent.js` dokumentiert und am 11.09.2026 erneut
+eingetreten: der erste Entwurf des neuen Heros lag **60 px** unter dem Bannerrand. Nach jeder
+Textaenderung im Hero auf **390 × 844** nachmessen, nicht ansehen. Stand nach der Korrektur:
+Hauptknopf endet bei y 672, Banner ab 713 — **41 px Luft** (vorher dokumentiert: 12 px).
 
 ## Aenderungsprozess
 
