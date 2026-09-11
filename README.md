@@ -227,9 +227,20 @@ Betriebsdaten, kein Lieferantenname). Der Videostart meldet sich als **`video-ba
 — **die Bilddatei liegt weiter in `assets/img/`** und ist seit 11.09.2026 auf keiner Seite mehr
 eingebunden.
 
-**OFFEN:** Der Titel auf YouTube lautet *„Digitale Badkare mit KI Aufbauen"* (Tippfehler,
-Grossschreibung mitten im Satz). Das `title`-Attribut am iframe traegt schon die richtige
-Fassung; **nachziehen in YouTube Studio**, sonst versprechen Seite und Video nicht dasselbe.
+**Titel wortgleich halten:** Der YouTube-Titel lautet *„Digitale Badkarte mit KI aufbauen"*
+(geprueft 11.09.2026 ueber `https://www.youtube.com/oembed?url=…`), das `title`-Attribut am
+iframe ebenso. Wird er in YouTube Studio geaendert, wandert er hier mit — Seite und Video
+muessen dasselbe versprechen.
+
+> ⛔ **Gesperrter Fachbegriff: „Regelkarte"** *(Stefan, 11.09.2026)*. Er liegt zu nah an einem
+> Begriff eines Betriebs, fuer den Stefan gearbeitet hat, und darf **auf der ganzen Website
+> nicht vorkommen** — auch nicht in `alt`, `title`, Meta-Angaben oder im HTML-Kommentar (der
+> Quelltext ist oeffentlich; deshalb steht die Regel hier und nicht in der Seite). Statt
+> dessen: *„die Kurve mit den Grenzen"*, *„der Verlauf"*. Betroffen war der Vorspann des
+> Badbuch-Videos und das `title`-Attribut des iframes, beide am 11.09.2026 bereinigt.
+> **Nicht betroffen** sind die Demo `Badbuch.html` und die Projektdoku im BD-Repo — beide
+> sind nicht oeffentlich. Wird die Demo verschickt, ist das Stefans Entscheidung.
+> Gegenprobe: `grep -rn "Regelkarte" *.html` muss leer bleiben.
 
 **Es bleibt EIN Video auf dieser Seite.** `consent.js` greift das erste YouTube-iframe; ein
 zweites waere in der Messung unsichtbar und teilte die Aufmerksamkeit. Der Verweis auf
