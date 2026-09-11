@@ -433,10 +433,14 @@
                  Was hier NICHT mehr steht, weil es weiter unten schon viermal steht:
                  dass keine Betriebsdaten das Haus verlassen (Nutzenkarte 2, Ablauf,
                  Drei Stufen, FAQ). -->
+            <!-- "ohne Abo" ist am 11.09.2026 wieder raus (Stefan): Die Entwicklungsumgebung
+                 kann per Lizenz vermietet werden, und die eingesetzte KI braucht selbst ein
+                 Abonnement. Die Zusage waere also nicht zu halten. Sie stand zu dem Zeitpunkt
+                 an drei Stellen -- Hero, Nutzenkarte 3 und Flyer -- und ist ueberall
+                 korrigiert. **Nicht neu einfuehren**, solange das Lizenzmodell offen ist. -->
             <p>Ob die Werte aus der Steuerung kommen oder von Hand ins Badbuch — auswerten
                lässt sich beides. Ihre Fachkräfte bauen das Werkzeug dazu selbst und werden
-               dabei begleitet: ohne Programmierkenntnisse, ohne neue Anlagentechnik,
-               ohne Abo.</p>
+               dabei begleitet: ohne Programmierkenntnisse und ohne neue Anlagentechnik.</p>
             <!-- Einstieg oben, PDF vor Termin. -->
             <div class="hero-cta">
                 <a href="docs/datenwerkstatt-ueberblick.pdf" target="_blank" rel="noopener"
@@ -471,11 +475,14 @@
     <div class="container">
         <div class="section-label" style="color:var(--schild-blau);">Woran sich das zeigen lässt</div>
         <h2 style="font-size:1.7rem;">Ein Badbuch, das mitrechnet</h2>
+        <!-- 11.09.2026 (Stefan): "eine einzige Datei, kein Server und keine Installation" ist
+             raus. Das beschrieb den Demostand, nicht das Angebot -- eine spaetere Fassung darf
+             durchaus installiert werden und einen Server haben. Auf einer Angebotsseite waere
+             die Zusage also eine Selbstfessel. Ausserdem gekuerzt: weniger ist mehr. -->
         <p style="max-width:820px;margin:12px 0 22px;font-size:0.98rem;line-height:1.75;color:var(--text-body);">
            Die Analysenwerte werden eingetragen wie bisher — von Hand, Bad für Bad. Daraus
-           entstehen die Regelkarte, die Meldung beim Überschreiten einer Grenze und der
-           Dosiervorschlag in Litern. Neun Zonen einer Vorbehandlungslinie, eine einzige Datei,
-           kein Server und keine Installation.</p>
+           entstehen die Regelkarte, die Grenzwertmeldung und der Dosiervorschlag in Litern,
+           über neun Zonen einer Vorbehandlungslinie.</p>
         <figure>
             <div class="buehne">
                 <!-- OFFEN auf der YouTube-Seite (11.09.2026): der dortige Titel lautet
@@ -522,8 +529,9 @@
             <div class="ncard">
                 <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="13" rx="2"/><path d="M8.5 7V5.2A1.7 1.7 0 0 1 10.2 3.5h3.6A1.7 1.7 0 0 1 15.5 5.2V7"/><path d="M2.5 12.5h19"/></svg></div>
                 <h3>Werkzeuge, die Ihnen gehören</h3>
-                <p>Was im Kurs entsteht, bleibt bei Ihnen — samt Quellcode und Regelwerk. Keine
-                   Lizenz, kein Abo, kein Wartungsvertrag als Bedingung.</p>
+                <p>Was im Kurs entsteht, bleibt bei Ihnen — samt Quellcode und Regelwerk, ohne
+                   Wartungsvertrag als Bedingung. Was an Lizenzen für Umgebung und KI nötig ist,
+                   steht vorher auf dem Tisch.</p>
             </div>
             <div class="ncard">
                 <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-1.6a4 4 0 0 0-3-3.87"/><path d="M16.5 3.7a4 4 0 0 1 0 6.6"/></svg></div>
@@ -579,51 +587,64 @@
                 <div class="k stark">Freigabe<span>jeder Stand nachvollziehbar</span></div>
             </div>
         </div>
+        <!-- Konsolidiert 11.09.2026 (Stefan): Hier standen vier Absaetze zur Datengrenze,
+             und im dunklen Block darunter noch einmal dieselbe Aussage. Geblieben ist hier
+             der Verweis auf Schritt zwei der Kette -- dorthin gehoert er, sonst verliert die
+             Kette ihre Begruendung. Die drei Abstufungen stehen jetzt EINMAL, im Block
+             darunter. Der Marker bleibt hier, damit die Messreihe nicht bricht. -->
         <div class="umfang-hinweis">
             <p><b>Der Datenschutz steckt im Ablauf — als Schritt zwei, nicht als Formular am
-               Schluss.</b> Wie weit er geht, entscheiden Sie:</p>
-            <p><b>Abgestuft unkenntlich machen.</b> Anlagen- und Sensorbezeichnungen werden
-               ersetzt, so weit es der Fall verlangt — bis hin zu Platzhaltern, aus denen sich
-               Ihr Prozess nicht mehr ablesen lässt.</p>
-            <p><b>Bei hohen Anforderungen ganz lokal.</b> Dann läuft die gesamte Umgebung ohne
-               Internetverbindung auf Ihren Rechnern, und kein Wert verlässt das Haus.</p>
-            <p><b>Nach anerkannten Regeln, regelmäßig nachgezogen.</b> Die Vorgaben sind an
-               ISO/IEC 27001 orientiert und werden zyklisch überprüft und angepasst — es ist
-               derselbe Ablauf, nach dem hier die Software für den Produktivbetrieb entsteht.
+               Schluss.</b> Wie weit er geht, entscheiden Sie; die drei Abstufungen stehen
+               gleich darunter.
                <a href="sicherheit.html" data-funnel="link-sicherheit-prozess">Welche Prüfungen dabei laufen</a>.</p>
         </div>
     </div>
 </section>
 
-<!-- ===== DREI STUFEN + DATENGRENZE ===== -->
+<!-- ===== DIE DATENGRENZE =====
+     Bis 11.09.2026 stand hier die dritte Leiter der Seite ("In drei Stufen — wie an der
+     Anlage": Uebungsdaten, eigene Daten, Produktivbetrieb). Sie war eine Naheinstellung auf
+     die Schritte 3 und 4 der Angebotsliste weiter unten und sagte nichts, was dort nicht
+     schon stand -- drei Leitern (5 + 3 + 4 Schritte) auf einer Seite sind eine zu viel.
+     Geblieben ist der Platz und die Kachelform; hineingezogen sind die drei Abstufungen des
+     Datenschutzes, die vorher als Absatzblock im Ablauf darueber standen. Damit steht die
+     Datengrenze EINMAL ausfuehrlich (hier), einmal als Kettenglied (Ablauf) und einmal als
+     Frage (FAQ) -- jedes Mal mit anderem Zweck.
+     Die Lernstufen selbst sind nicht verloren: sie stehen als Zeile im Schritt "Werkstatt". -->
 <section class="grenze">
     <div class="container">
-        <div class="section-label">Wie gelernt wird</div>
-        <h2 style="font-size:1.7rem;">In drei Stufen — wie an der Anlage</h2>
-        <p>Niemand lässt einen Lehrling vom Becherglas direkt auf die Serienanlage. Für Daten gilt
-           dasselbe: Geübt wird zuerst an Übungsdaten, danach an Ihren eigenen — und nicht die Daten
-           wandern zum Werkzeug, sondern das Werkzeug entsteht bei Ihnen.</p>
+        <!-- Ueberschrift 11.09.2026 auf zwei Woerter gekuerzt (Stefan); der Zusatz
+             "Sie entscheiden, wie eng sie liegt" steht jetzt als Halbsatz im Absatz.
+             Erster Satz neu: der Schutz der Daten ist hier Schulungsinhalt, nicht Beiwerk. -->
+        <div class="section-label">Wie weit der Schutz geht</div>
+        <h2 style="font-size:1.7rem;">Die Datengrenze</h2>
+        <p>Der sichere Umgang damit wird mitgeschult: Ihre Leute lernen, welche Angaben ein
+           Werkzeug sehen darf und welche nicht — das schützt die Daten im Alltag zuverlässiger
+           als eine Vorschrift im Ordner. Nicht die Daten wandern zum Werkzeug, sondern das
+           Werkzeug entsteht bei Ihnen. Wie eng die Grenze liegt, entscheiden Sie — in drei
+           Abstufungen.</p>
         <div class="stufen-grid">
             <div class="scard">
-                <div class="st">Stufe 1</div>
-                <h3>Übungsdaten</h3>
-                <div class="sub">Erfundene Werte, echte Struktur</div>
-                <p>Hier darf etwas schiefgehen — es sind Versuchsteile. Ihre Leute lernen die
-                   Bewegung, ohne dass ein einziger Betriebswert im Spiel ist.</p>
+                <div class="st">Abstufung 1</div>
+                <h3>Unkenntlich machen</h3>
+                <div class="sub">So weit, wie der Fall es verlangt</div>
+                <p>Anlagen- und Sensorbezeichnungen werden ersetzt — bis hin zu Platzhaltern,
+                   aus denen sich Ihr Prozess nicht mehr ablesen lässt.</p>
             </div>
             <div class="scard">
-                <div class="st">Stufe 2</div>
-                <h3>Ihre eigenen Daten</h3>
-                <div class="sub">Vorher eingestuft, lokal ausgewertet</div>
-                <p>Echte Fragen, unkritische Fälle. Vorher wird sortiert: was ist offen, was intern,
-                   was Geschäftsgeheimnis. Erst dann wird gearbeitet.</p>
+                <div class="st">Abstufung 2</div>
+                <h3>Ganz lokal</h3>
+                <div class="sub">Bei hohen Anforderungen</div>
+                <p>Dann läuft die gesamte Umgebung ohne Internetverbindung auf Ihren
+                   Rechnern, und kein Wert verlässt das Haus.</p>
             </div>
             <div class="scard">
-                <div class="st">Stufe 3</div>
-                <h3>Produktivbetrieb</h3>
-                <div class="sub">Ab hier begleiten wir</div>
-                <p>Wenn ein Ergebnis Entscheidungen trägt, zählt Verlässlichkeit: Prüfungen,
-                   Dokumentation, Software, die in zwei Jahren noch läuft.</p>
+                <div class="st">Abstufung 3</div>
+                <h3>Nach anerkannten Regeln</h3>
+                <div class="sub">Regelmäßig nachgezogen</div>
+                <p>Die Vorgaben sind an ISO/IEC 27001 orientiert und werden zyklisch
+                   überprüft — derselbe Ablauf, nach dem hier Software für den
+                   Produktivbetrieb entsteht.</p>
             </div>
         </div>
         <div class="merksatz">
@@ -687,30 +708,37 @@
         <p style="max-width:820px;font-size:0.97rem;line-height:1.75;color:var(--text-body);margin-top:12px;">
            Der Aufwand bei Ihnen bleibt klein: eine Stunde zum Anfang, danach Einheiten von einer
            halben Stunde. Aufhören lässt sich nach jedem Schritt, ohne Begründung.</p>
+        <!-- Preisspalte 11.09.2026 (Stefan): Vorher standen hier "unverbindlich", "Fixpreis",
+             "nach Aufwand", "nach Bedarf". Das widersprach der Ansprache, die den Weg bis zur
+             Klickdemo als kostenlos beschreibt -- wer beides liest, findet zwei Angebote.
+             Jetzt einheitlich "auf Anfrage": Die Seite nennt weiterhin keine Preiszahlen
+             (Regel im README), und was im Einzelfall gilt, wird im Gespraech geklaert.
+             Der erste Schritt bleibt ausdruecklich "kostenlos" -- das ist keine Preisangabe,
+             sondern die Einstiegshuerde, und sie steht auch im Sticky-CTA. -->
         <div class="acard">
             <div class="n">1</div>
             <div><h3>Vorführung</h3><p>Eine Stunde am echten Arbeitsplatz, online. Danach wissen Sie,
                 ob das zu Ihrem Betrieb passt — und was es nicht kann.</p></div>
-            <div class="preis">unverbindlich</div>
+            <div class="preis">kostenlos</div>
         </div>
         <div class="acard">
             <div class="n">2</div>
             <div><h3>Einrichtung</h3><p>Werkzeuge, Zugänge, Regelwerk und die Datengrenze. Am Ende
                 steht ein Arbeitsplatz, an dem sicher gearbeitet werden kann.</p></div>
-            <div class="preis">Fixpreis</div>
+            <div class="preis">auf Anfrage</div>
         </div>
         <div class="acard">
             <div class="n">3</div>
             <div><h3>Werkstatt</h3><p>Ihre Leute bauen ihre erste Auswertung — erst an Übungsdaten,
                 dann an einer echten Frage aus Ihrem Betrieb. Und lernen, das Ergebnis zu prüfen.
                 In halbstündigen Sitzungen, damit die Produktion weiterläuft.</p></div>
-            <div class="preis">nach Aufwand</div>
+            <div class="preis">auf Anfrage</div>
         </div>
         <div class="acard">
             <div class="n">4</div>
             <div><h3>Begleitung</h3><p>Wenn aus dem Versuch Produktion wird. Dann zählt
                 Verlässlichkeit statt Tempo — und wir schauen mit drauf.</p></div>
-            <div class="preis">nach Bedarf</div>
+            <div class="preis">auf Anfrage</div>
         </div>
     </div>
 </section>
@@ -736,8 +764,9 @@
             <details class="frage">
                 <summary>Wie viel Zeit müssen wir einplanen?</summary>
                 <div class="antwort">
-                    <p>Die Vorführung dauert eine Stunde. Danach entscheiden Sie, ob es weitergeht —
-                       jeder Schritt ist einzeln beendbar, und Sie zahlen jeden einzeln.</p>
+                    <p>Die Vorführung dauert eine Stunde und kostet nichts. Danach entscheiden
+                       Sie, ob es weitergeht — jeder Schritt ist einzeln beendbar und wird
+                       einzeln abgerechnet.</p>
                     <p>In der Werkstatt arbeiten Ihre Leute an einer eigenen Frage aus dem Betrieb.
                        Der Nutzen entsteht dabei sofort: Am Ende steht eine Auswertung, die Sie
                        vorher nicht hatten — nicht erst nach dem letzten Kurstag.</p>
