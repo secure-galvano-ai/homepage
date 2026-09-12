@@ -221,7 +221,7 @@ Coaching als Teil des Angebots. Derselbe Satz steht im Flyer (§ Gate 4 unten).
 **Was drauf ist:** YouTube-ID **`-btKYAPGAqw`**, eingebunden ueber `youtube-nocookie.com`,
 **direkt unter dem Hero** — vor der Nutzenliste, weil ein Besucher aus einer Mail zuerst sehen
 will, wovon die Rede ist. Inhalt: das Badbuch aus
-`BD/projects/ausbildung-und-coaching-2026/badbuch-demo/` (nachgestellter Verlauf, keine
+`lehrmittel/demos/badbuch/` (bis 12.09.2026 im BD-Repo; nachgestellter Verlauf, keine
 Betriebsdaten, kein Lieferantenname). Der Videostart meldet sich als **`video-badbuch`**
 (`data-video="badbuch"`). Ersetzt hat es die Illustration `assets/img/techniker-monitoring.jpg`
 — **die Bilddatei liegt weiter in `assets/img/`** und ist seit 11.09.2026 auf keiner Seite mehr
