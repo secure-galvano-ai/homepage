@@ -261,7 +261,18 @@ sie gehoeren zum abgeschalteten WhatsApp-Knopf und stehen auf allen Seiten gleic
 das Einwilligungsbanner — die Klasse ist in `consent.js` dokumentiert und am 11.09.2026 erneut
 eingetreten: der erste Entwurf des neuen Heros lag **60 px** unter dem Bannerrand. Nach jeder
 Textaenderung im Hero auf **390 × 844** nachmessen, nicht ansehen. Stand nach der Korrektur:
-Hauptknopf endet bei y 672, Banner ab 713 — **41 px Luft** (vorher dokumentiert: 12 px).
+Hauptknopf endet bei y 643, Banner ab 714 — **71 px Luft** *(gemessen 13.09.2026; davor
+41 px am 11.09., davor 12 px)*. Der Zugewinn kommt aus der Kuerzung des Hero-Absatzes an
+diesem Tag: „Ihre Fachkraefte bauen das Werkzeug dazu selbst und werden dabei begleitet"
+sagte dasselbe wie die neue Schlagzeile ein zweites Mal und ist auf „Ihre Fachkraefte werden
+dabei begleitet" zusammengezogen.
+
+> **Wortwahl im Hero ist seit 13.09.2026 gebunden** *(Stefan)*: **gebaut werden Werkzeuge,
+> nicht Auswertungen.** Die Auswertung ist das Ergebnis, das Werkzeug der Gegenstand. Betroffen
+> waren Schlagzeile, beide `meta`-Beschreibungen und der Schritt *Werkstatt*; die Stellen, an
+> denen „Auswertung" die Taetigkeit meint („bei jeder Auswertung dieselben", „bevor die erste
+> Auswertung laeuft"), sind **richtig und bleiben**. Dieselbe Unterscheidung gilt fuer LinkedIn
+> und den Flyer.
 
 ## Aenderungsprozess
 
