@@ -233,12 +233,21 @@ iframe ebenso. Wird er in YouTube Studio geaendert, wandert er hier mit — Seit
 muessen dasselbe versprechen.
 
 > ⛔ **Gesperrter Fachbegriff: „Regelkarte"** *(Stefan, 11.09.2026)*. Er liegt zu nah an einem
-> Begriff eines Betriebs, fuer den Stefan gearbeitet hat, und darf **auf der ganzen Website
-> nicht vorkommen** — auch nicht in `alt`, `title`, Meta-Angaben oder im HTML-Kommentar (der
+> Begriff eines Betriebs, fuer den Stefan gearbeitet hat, und darf **auf keinem oeffentlichen
+> Kanal vorkommen** — auch nicht in `alt`, `title`, Meta-Angaben oder im HTML-Kommentar (der
 > Quelltext ist oeffentlich; deshalb steht die Regel hier und nicht in der Seite). Statt
-> dessen: *„die Kurve mit den Grenzen"*, *„der Verlauf"*. Betroffen war der Vorspann des
-> Badbuch-Videos und das `title`-Attribut des iframes, beide am 11.09.2026 bereinigt.
-> **Nicht betroffen** sind die Demo `Badbuch.html` und die Projektdoku im BD-Repo — beide
+> dessen: *„die Kurve mit den Grenzen"*, *„der Verlauf"*, *„Verlaufskurve"*. Betroffen war der
+> Vorspann des Badbuch-Videos und das `title`-Attribut des iframes, beide am 11.09.2026
+> bereinigt.
+>
+> **Die Sperre gilt dem Leser, nicht dieser Website** *(praezisiert 13.09.2026)*. Sie stand hier
+> als „auf der ganzen Website" und war damit missverstaendlich: Beim LinkedIn-Beitrag vom
+> 17.09.2026 musste erst hergeleitet werden, dass sie fuer ein oeffentliches Beitragsbild
+> genauso gilt. **Sie gilt ueberall, wo Fremde mitlesen** — LinkedIn, Flyer, Vortragsfolie,
+> Video, Bildunterschrift. Das Bau-Skript des Beitragsbildes maskiert den Begriff deshalb auf
+> einer Kopie der Demo und bricht ab, wenn er stehen bleibt.
+>
+> **Nicht betroffen** sind die Demo `Badbuch.html` selbst und die Projektdoku im BD-Repo — beide
 > sind nicht oeffentlich. Wird die Demo verschickt, ist das Stefans Entscheidung.
 > Gegenprobe: `grep -rn "Regelkarte" *.html` muss leer bleiben.
 
