@@ -337,6 +337,13 @@
         .anw { background: var(--hellgrau); border: 1px solid var(--silber); border-radius: 14px; padding: 22px 22px 20px; }
         .anw h3 { font-size: 1.02rem; color: var(--dunkelblau); margin-bottom: 8px; }
         .anw p { font-size: 0.93rem; line-height: 1.65; color: var(--text-body); }
+        /* Sieben Karten in zwei Spalten lassen die Zelle rechts unten leer -- ein weisses
+           Loch von rund 485x195 px unter "Die Sonde, die falsch misst" (Sichtpruefung
+           14.09.2026). Die letzte Karte laeuft deshalb ueber beide Spalten. Der Fliesstext
+           bleibt dabei auf Lesebreite begrenzt, sonst stehen dort 120 Zeichen in einer
+           Zeile. Bei einer Spalte (schmal) ist 1/-1 wirkungslos -- kein Sonderfall noetig. */
+        .anw:last-child { grid-column: 1 / -1; }
+        .anw:last-child p { max-width: 62ch; }
         .anw-fuss { margin-top: 24px; max-width: 820px; font-size: 0.93rem; line-height: 1.7; color: var(--text-light); }
         .anw-fuss b { color: var(--dunkelblau); font-weight: 600; }
 
