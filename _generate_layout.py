@@ -1,10 +1,15 @@
 """Render the shared layout chrome (nav, footer, WhatsApp-FAB, Sticky-CTA) from
 one source into every page.
 
-Single source of truth = the data below (NAV_LINKS, FOOTER_LINKS, the FAB/Sticky
-constants). Running this script rewrites the marked regions on each page in
-PAGES, so nav and footer can never drift apart again. The output is committed as
+Single source of truth = the data below (NAV_LINKS, FOOTER_LINKS, BOOKING_URL, the
+FAB/Sticky constants). Running this script rewrites the marked regions on each page
+in PAGES, so nav and footer can never drift apart again. The output is committed as
 plain HTML -> stays crawlable and works without JavaScript.
+
+BOOKING_URL wirkt ueber die Marker hinaus: `sync_booking_links` zieht JEDEN
+Buchungslink der Seite nach, auch die CTAs mitten im Inhalt. Ein Dienstwechsel in
+Bookings ist damit eine Zeile hier plus ein Lauf -- nicht mehr 23 Fundstellen in
+neun Dateien.
 
 Usage:
     py _generate_layout.py
@@ -184,9 +189,29 @@ def inject(text: str, marker: str, inner_html: str) -> str:
     return pattern.sub(replacement, text)
 
 
+# Jeder Buchungslink auf der Website -- auch die CTAs mitten im Seiteninhalt, die
+# ausserhalb der Marker-Bereiche stehen. Vorher stand die URL an 23 Stellen in neun
+# Dateien; ein Dienstwechsel war damit eine Suchen-und-Ersetzen-Aktion, bei der genau
+# eine vergessene Stelle den Besucher auf einen toten oder falschen Dienst schickt
+# (belegt 14.09.2026). Jetzt gilt: BOOKING_URL ist die einzige Pflegestelle, der Lauf
+# zieht den Rest nach. Bewusst KEIN JavaScript zur Laufzeit -- die Links muessen
+# crawlbar bleiben und ohne JS funktionieren.
+BOOKING_LINK_RE = re.compile(
+    r'href="https://outlook\.office\.com/book/DatenintegrationKIEntwicklung@rvh\.at[^"]*"'
+)
+
+
+def sync_booking_links(text: str) -> tuple[str, int]:
+    """Point every Bookings link at BOOKING_URL. Returns (text, changed_count)."""
+    ziel = f'href="{BOOKING_URL}"'
+    treffer = [m for m in BOOKING_LINK_RE.finditer(text) if m.group(0) != ziel]
+    return BOOKING_LINK_RE.sub(ziel, text), len(treffer)
+
+
 def main() -> None:
     print(f"Rendering shared layout into up to {len(PAGES)} pages...")
     updated, skipped = 0, []
+    links_fixed = 0
     for filename, active in PAGES.items():
         path = ROOT / filename
         if not path.exists():
@@ -205,12 +230,14 @@ def main() -> None:
             text = inject(text, "wa-fab", render_wa_fab())
         if "<!-- BEGIN sticky-cta -->" in text:
             text = inject(text, "sticky-cta", render_sticky_cta())
+        text, n_links = sync_booking_links(text)
+        links_fixed += n_links
         path.write_text(text, encoding="utf-8")
-        print(f"  updated {filename}")
+        print(f"  updated {filename}" + (f" ({n_links} Buchungslinks nachgezogen)" if n_links else ""))
         updated += 1
     if skipped:
         print(f"  skipped (no markers yet): {', '.join(skipped)}")
-    print(f"Done. {updated} updated, {len(skipped)} skipped.")
+    print(f"Done. {updated} updated, {len(skipped)} skipped, {links_fixed} Buchungslinks nachgezogen.")
 
 
 if __name__ == "__main__":
