@@ -477,9 +477,20 @@ gehen an das freigegebene Postfach `dmarc@rvh.at` (angelegt 17.08.2026). Eskalat
 | Wann | Schritt |
 |---|---|
 | erledigt 17.08.2026 | `p=none` + `rua` — sammelt Belege, aendert nichts an der Zustellung |
-| nach 2–4 Wochen | Berichte auswerten. Sendet nur Microsoft 365, kann `include:_spf-eu.ionos.com` raus |
+| **offen, jetzt 12.10.2026** | Berichte auswerten. Sendet nur Microsoft 365, kann `include:_spf-eu.ionos.com` raus |
 | dann | `~all` → `-all` und `p=none` → `p=quarantine` |
 | nochmals 2–4 Wochen spaeter | `p=quarantine` → `p=reject` |
+
+**Stand 14.09.2026 — der erste Serientermin ist ohne Verschaerfung verstrichen, und das ist richtig
+so.** Schritt 1 kam nicht zustande: Die Berichte liegen ausschliesslich in `dmarc@rvh.at`, das
+Postfach haengt nicht im Outlook-Profil, und der Zugriff ueber Vollzugriff scheitert (dreimal
+derselbe Fehler). Das DNS steht damit unveraendert auf `~all` / `p=none`, gegengeprueft gegen
+`ns1027.ui-dns.de`. **Ohne Belege wird nicht verschaerft** — das ist der Plan, nicht seine Verletzung.
+
+**Daraus die Vorabfrage fuer den 12.10.:** Hat `smaier@rvh.at` ueberhaupt Vollzugriff auf
+`dmarc@rvh.at`? Wenn nicht, scheitert Schritt 1 nicht an der Auswertung, sondern schon am
+Speichern der Anhaenge — dann ist zuerst die Berechtigung zu setzen. Deshalb steht sie unten als
+Schritt 0 im Termintext.
 
 Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC gilt schon als
 bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
@@ -496,6 +507,11 @@ Kalenderwechsel ueberlebt:
 Betreff: DMARC rvh.at — Berichte pruefen und naechste Stufe setzen
 
 Berichte liegen im freigegebenen Postfach dmarc@rvh.at (XML-Anhaenge).
+
+SCHRITT 0 — Komme ich an das Postfach? (neu 14.09.2026)
+In OWA "anderes Postfach oeffnen" -> dmarc@rvh.at. Geht das nicht, fehlt
+der Vollzugriff; dann erst die Berechtigung setzen, sonst scheitert
+Schritt 1 schon am Speichern der Anhaenge. 30 Sekunden.
 
 SCHRITT 1 — Auswerten
 Anhaenge aus dmarc@rvh.at in einen Ordner speichern, dann:
