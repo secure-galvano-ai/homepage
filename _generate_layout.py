@@ -29,7 +29,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 
-BOOKING_URL = "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/"
+# Dienst-Direktlink statt Sammel-Buchungsseite (14.09.2026): Auf dem Buchungskalender
+# liegen zwei Dienste. Die Sammelseite zwingt den Besucher damit zu einer Auswahl
+# zwischen zwei fast gleichen Terminen -- der Direktlink fuehrt ihn ohne Umweg in den
+# einen, der gepflegt wird. Herkunft: Bookings -> Dienste -> Dienstbuchungsseite.
+# Den Anhang "?ismsaljsauthenabled" beim Kopieren abschneiden, er stammt aus der
+# angemeldeten Sitzung und gehoert nicht in einen oeffentlichen Link.
+BOOKING_URL = (
+    "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at"
+    "/s/DdIPgTj7-0ymr6eHc38SQg2"
+)
 # WhatsApp-FAB abgeschaltet am 07.09.2026 (Stefan): der Button trug die private
 # Mobilnummer im Klartext auf jeder Seite -- maschinell abgreifbar und seither
 # Quelle laufender Phishing-Anfragen von unbekannten Nummern. Die Marker bleiben in

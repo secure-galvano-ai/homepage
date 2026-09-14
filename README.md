@@ -656,8 +656,9 @@ vermeiden — stattdessen Token `var(--name)` nutzen.
 | Service | Zweck | Link |
 |---------|-------|------|
 | Microsoft 365 | Mail `smaier@rvh.at`, Tenant **PhonixData** | `admin.microsoft.com` · DKIM: `security.microsoft.com` |
-| Microsoft Bookings | Erstgespräch buchen (60 Min.) — **läuft auf dem rvh.at-Tenant** | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
-| Microsoft Bookings — **Kurzgespräch 30 Min.** *(neu 03.09.2026)* | Dienst-Direktlink für die Akquise, seit 03.09. auch auf der Buchungsseite sichtbar. Verwendungsregel: [`mailsequenz/README.md`](../Business%20Development/projects/akquise-strategie-h2-2026/mailsequenz/README.md) § *Buchungslinks* | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/j9sT4U4iQ0WwxD0oCfcdeg2` |
+| Microsoft Bookings — **der Link der Website** *(umgestellt 14.09.2026)* | Erstgespräch buchen, **30 Min.** — läuft auf dem rvh.at-Tenant. Dienst `secure galvano ai - unverbindliches Erstgespräch`. Gepflegt wird in `_generate_layout.py` die Konstante `BOOKING_URL` | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2` |
+| Microsoft Bookings — Sammel-Buchungsseite | Zeigt **alle sichtbaren Dienste zur Auswahl**. Deshalb seit 14.09.2026 **nicht mehr auf der Website**: Auf dem Kalender liegen zwei Dienste, und eine Auswahl zwischen zwei fast gleichen Terminen kostet Buchungen. Wieder verwendbar, sobald nur noch ein Dienst sichtbar ist | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
+| Microsoft Bookings — Kurzgespräch 30 Min. *(03.09.2026, abgelöst)* | Erster Akquise-Dienst, **1:N-Gruppendienst** — deshalb fehlten Name und Mailadresse des Buchenden im Outlook-Termin und Fremde konnten in denselben Slot buchen. Nicht gelöscht, weil der Termin vom 14.09. daran hängt. Der Typ 1:1/1:N wird beim Anlegen festgelegt und ist danach **nicht änderbar** | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/j9sT4U4iQ0WwxD0oCfcdeg2` |
 | Microsoft Clarity | Web-Analyse (Opt-in, Projekt `wql3vpgrxl`) | `clarity.microsoft.com` |
 | Google Search Console | SEO / Indexierung | `search.google.com/search-console` |
 | GitHub Pages | Hosting + TLS-Zertifikat | `github.com/secure-galvano-ai/homepage/settings/pages` |
