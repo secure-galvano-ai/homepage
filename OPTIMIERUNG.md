@@ -188,6 +188,14 @@ Dashboard** und sind mit 👤 markiert — sie sind nicht im Export enthalten.
 | Impressionen / 7 Tage 👤 | 780 (**−27 %**) | **Diagnose, kein Ziel** — der Wochenwert misst, was gepostet wurde, nicht was daraus wurde. Nie danach steuern |
 | Verkehr von LinkedIn auf die Seite | erstmals im Oktober-Lauf trennbar (UTM seit 15.09.) | — |
 
+> **Nur diese Tabelle wird monatlich nachgezogen — sonst keine Stelle** *(15.09.2026)*. Dieselben
+> Zahlen stehen mit Absicht auch in `brand/messaging.md` § 5b, `marketing.md` und der
+> `verwertungskalkulation.md` — dort aber **als datierter Befund**, nicht als laufender Wert.
+> Ein Befund mit Stand-Datum bleibt dauerhaft richtig und braucht keine Pflege; er beschreibt,
+> was damals gemessen wurde. **Wer ihn trotzdem nachzieht, erzeugt genau die Drift, die er
+> verhindern will.** Aktualisiert wird hier — und nur, wenn sich die Aussage ändert, wandert eine
+> neue datierte Zeile in die anderen Dokumente.
+
 > **Die Dashboard-Prozente vergleichen uneinheitliche Zeiträume.** „299 Profilbesuche in 90 Tagen,
 > +219 % gegenüber den 7 vorausgegangenen Tagen" ist so, wie LinkedIn es anzeigt — Bezugsgröße und
 > Fenster passen nicht zusammen. **Als Richtungsangabe brauchbar, nicht als Messwert**; belastbar
