@@ -60,6 +60,25 @@ Befund seit 07.09.2026 auf SharePoint unter `01_LinkedIn/00_LIESMICH_Reichweite-
 (das BD-Projekt `projects/linkedin-auftritt/` ist aufgeloest); hier steht nur, ob ein Beitrag
 Verkehr auf die Seite gebracht hat.
 
+> **Rhythmus entschieden am 15.09.2026: monatlich, in diesem Lauf — kein zweiter Termin.**
+> Vorher stand im Beitragsprozess „bei Bedarf, etwa vierteljährlich". Das war richtig, solange
+> Content Zweitverwertung war; seit dem 02.09.2026 ist er der Motor, und ein Kanal, der den
+> Umsatz tragen soll, wird nicht dreimal im Jahr angesehen. **Monatlich ist zugleich die
+> Obergrenze des Sinnvollen** — bei vier bis acht Beiträgen im Monat ist ein kürzerer Takt
+> Rauschen (§5), und die 7-Tage-Werte des Dashboards zeigen genau das.
+>
+> **Was Stefan bleibt: der Export selbst** (2 Minuten, verlangt eine angemeldete Sitzung) und
+> die vier Dashboard-Zahlen, die im Export fehlen. **Alles danach übernimmt ein Befehl:**
+> ```
+> py "Business Development/scripts/linkedin_abholen.py"
+> ```
+> Er holt die Datei aus dem Download-Ordner, benennt sie nach der Ablagekonvention, legt sie
+> neben die alten Exporte auf SharePoint, fährt die Auswertung und räumt das Original weg.
+> **Kein Task Scheduler** — an 29 von 30 Tagen gäbe es nichts abzuholen.
+>
+> **Zusätzlich, außer der Reihe:** nach **drei** ausgespielten Teilen einer neuen Serie
+> (Beitragsprozess §7 Nr. 4). Das ist der Punkt, an dem sich Nachbessern noch lohnt.
+
 ---
 
 ## 2. Zugänge und Geheimnisse
@@ -164,7 +183,9 @@ Dashboard** und sind mit 👤 markiert — sie sind nicht im Export enthalten.
 | Neue Follower je Monat | **65–84** | ≥ 60 |
 | Engagement-Rate | **2,4 %** (Jahreswert 2,6 %) | ≥ 2,5 % |
 | **Zielkonten im Publikum** | **Collini 5 % · SurTec 5 %** | halten — das ist der eigentliche Zweck des Kanals |
+| **Kommentare unter fremden Beiträgen** 👤 | **2 / Woche** | **≥ 1 / Woche** — LinkedIn selbst nennt bis zu **3× mehr Profilaufrufe** für wöchentliches Kommentieren; im Export nicht enthalten, nur im Wochenfortschritt sichtbar |
 | In Suchen erschienen 👤 | 51 (±0 %) | steigend |
+| Impressionen / 7 Tage 👤 | 780 (**−27 %**) | **Diagnose, kein Ziel** — der Wochenwert misst, was gepostet wurde, nicht was daraus wurde. Nie danach steuern |
 | Verkehr von LinkedIn auf die Seite | erstmals im Oktober-Lauf trennbar (UTM seit 15.09.) | — |
 
 > **Die Dashboard-Prozente vergleichen uneinheitliche Zeiträume.** „299 Profilbesuche in 90 Tagen,
@@ -278,6 +299,14 @@ HOMEPAGE-OPTIMIERUNG — Monatslauf (ca. 25 Min)
    Warum nur dreimal im Jahr: der Verkehr ist presse- und netzwerkgetrieben,
    Suchdaten aendern sich zu langsam fuer einen Monatsrhythmus. Ein API-Zugang
    dafuer ist bewusst verworfen (Abschnitt 2).
+
+   LINKEDIN — Export ziehen (2 Min, seit 15.09.2026 fester Bestandteil):
+   https://www.linkedin.com/analytics/creator/content/
+   Zeitraum auf 365 Tage, oben rechts "Exportieren". Datei im Download-Ordner liegen lassen.
+   Danach auf der Uebersichtsseite vier Zahlen abschreiben, die im Export FEHLEN:
+   Profilbesucher 90 Tage, Impressionen 7 Tage, "in Suchen erschienen",
+   Kommentare aus dem Woechentlichen Fortschritt.
+   Ablegen und auswerten macht Claude in Schritt 3 mit einem Befehl.
 
 2) DIE EINE ZAHL (2 Min)
 
