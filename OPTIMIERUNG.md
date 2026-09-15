@@ -149,6 +149,29 @@ Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
 | GSC Klicks | 👤 GSC, Export | **60** (+253 %) bei 317 Impressionen | steigend |
 | **Nicht-Marken-Klicks** | 👤 GSC, Export | **~3 von 60** (29 davon Markensuche) | steigend |
 
+### LinkedIn *(neu 15.09.2026 — §1 führt den Kanal seit 31.08., Kennzahlen fehlten)*
+
+Quelle für alle Zeilen: XLSX-Export → `Business Development/scripts/analyse_linkedin.py`,
+Befund unter `01_LinkedIn/Analytics-Exporte/` auf SharePoint. **Zwei Werte stehen nur im
+Dashboard** und sind mit 👤 markiert — sie sind nicht im Export enthalten.
+
+| Kennzahl | Stand 18.06.–15.09.2026 (90 Tage) | Richtung |
+|---|---|---|
+| **Profilbesuche / 90 Tage** 👤 | **299 (+219 %)** | **die Leitzahl** — wer das Profil öffnet, prüft die Person. Der Schritt unmittelbar vor dem Anruf |
+| **Impressionen je Beitrag, Anlassbeitrag** | **511** (Median, stabil seit 12 Monaten) | ≥ 500 halten |
+| **Impressionen je Beitrag, Serienbeitrag** | **199** (166 und 232) | **→ 400.** Darunter trägt die Serie den Kanal nicht, sie verdünnt ihn |
+| Beiträge je Monat | **5** (Aug und Sept) | 4–8; unter 4 drosselt die Verteilung, über 8 fällt die Wirkung je Beitrag |
+| Neue Follower je Monat | **65–84** | ≥ 60 |
+| Engagement-Rate | **2,4 %** (Jahreswert 2,6 %) | ≥ 2,5 % |
+| **Zielkonten im Publikum** | **Collini 5 % · SurTec 5 %** | halten — das ist der eigentliche Zweck des Kanals |
+| In Suchen erschienen 👤 | 51 (±0 %) | steigend |
+| Verkehr von LinkedIn auf die Seite | erstmals im Oktober-Lauf trennbar (UTM seit 15.09.) | — |
+
+> **Die Dashboard-Prozente vergleichen uneinheitliche Zeiträume.** „299 Profilbesuche in 90 Tagen,
+> +219 % gegenüber den 7 vorausgegangenen Tagen" ist so, wie LinkedIn es anzeigt — Bezugsgröße und
+> Fenster passen nicht zusammen. **Als Richtungsangabe brauchbar, nicht als Messwert**; belastbar
+> ist nur der Vergleich zweier Exporte.
+
 > **Beim nächsten Monatslauf zu erledigen: Messpunkte auf `leistungen.html` nachrüsten**
 > *(beschlossen 03.09.2026, Stefan)*. Am 03.09. sind dort ein Anwendungsfall, drei Fragen, drei
 > Abgrenzungssätze und zwei Portfolio-Bausteine dazugekommen — **ohne eigenen Messpunkt**.
@@ -199,6 +222,7 @@ folgt kein Stillstand, sondern eine andere Begründungspflicht:
 4. **Nichts hinter Formulare sperren.** Belege werden derzeit fünfmal häufiger abgerufen als Termine gebucht — das ist der funktionierende Teil des Trichters.
 5. **Marken- und Nicht-Marken-Verkehr immer getrennt bewerten.** Der Verkehr ist presse- und netzwerkgetrieben; ohne diese Trennung feiert man einen Zeitungsartikel als SEO-Erfolg.
 6. **Ein Anstieg nach einem Presse- oder Messetermin ist keine Optimierungswirkung.** Erst der Sockel danach zählt.
+7. **Auf LinkedIn Anlass- und Serienbeiträge nie gemeinsam mitteln** *(neu 15.09.2026)*. Dasselbe Muster wie Regel 5: Die beiden Sorten liegen um den Faktor 2,5 auseinander (511 gegen 199), und ihr Mischungsverhältnis schwankt von Monat zu Monat. Ein gemeinsamer Median zeigt deshalb Bewegungen an, die es nicht gibt — im September sah es nach einem Reichweiteneinbruch von 555 auf 386 aus, während die Anlassbeiträge punktgenau ihr Niveau hielten. **Wer beide Werte nicht getrennt hat, hat keine Aussage.**
 
 ---
 
