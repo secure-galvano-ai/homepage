@@ -127,6 +127,32 @@ verloren. Bei HTTP 429 bricht das Skript sauber ab, ohne Retry.
 
 **Protokoll:** je Lauf eine Zeile in `_analytics/_sammler.log`.
 
+### Wöchentlich *(neu 18.09.2026)*
+
+Geplante Aufgabe `\SecureGalvano\Homepage Wochenbericht` (montags 09:20, fünf Minuten nach
+dem Tages-Pull, damit der Sonntag schon in der Historie steht) rechnet die abgelaufene
+Kalenderwoche aus der **bereits vorhandenen** Historie: `_scripts/wochenbericht.py`.
+**Kein API-Aufruf** — der Bericht lässt sich beliebig oft und für jede vergangene Woche neu
+rechnen (`py _scripts/wochenbericht.py --woche 2026-W37`). Die vorgeschaltete Aktion
+`youtube_abrufe.py` holt die Video-Zählerstände, sonst stünde in der Video-Tabelle dauerhaft
+„Erststand" statt eines Wochenzuwachses.
+
+**Ablage:** `_analytics/wochen/<JJJJ>-W<NN>.md` (Langfassung) und `Desktop\HOMEPAGE-WOCHE.md`
+(zwölf Zeilen, wird jede Woche überschrieben).
+
+> **Der Wochenbericht entscheidet nichts — er überwacht.** Bei rund 20 Sitzungen je Woche ist
+> jede Differenz zur Vorwoche Rauschen; §5 sagt das schon für Monatswerte, und ein Wochenwert
+> ist ein Viertel davon. Der Bericht schreibt diese Warnung selbst in seine erste Zeile,
+> solange er unter 30 Sitzungen liegt. **Was er kann und der Monatslauf zu spät sieht:**
+> Sammler-Lücken (über die API nach drei Tagen endgültig verloren), einen Ausreißertag, der
+> noch eine Erklärung hat, und einen neu auftauchenden externen Verweis. **Trendgröße ist der
+> rollierende Vierwochenwert**, nicht die einzelne Woche.
+
+**Zwei Dinge rechnet er bewusst anders als die Rohdaten:** `/` und `/index.html` werden als
+eine Seite gezählt, und Verweise von der eigenen Domain stehen getrennt als *interne
+Seitenwechsel* — ungetrennt sähe eine Woche ohne jeden externen Zulauf gut besucht aus.
+Drei-Tage-Fenster aus Lückenläufen bleiben außen vor, weil sie sich überlappen.
+
 ### Monatlich
 
 > **Wie eine Aenderung ablaeuft, steht in [`AENDERUNGSPROZESS.md`](AENDERUNGSPROZESS.md)** *(seit 31.08.2026)*. Dieses Dokument hier fuehrt den **Messlauf** — was gemessen wird und welche Entscheidungsregeln gelten. Merksatz: hier steht, **was ist**; dort steht, **wie geaendert wird**.
