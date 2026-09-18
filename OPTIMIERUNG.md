@@ -140,6 +140,11 @@ rechnen (`py _scripts/wochenbericht.py --woche 2026-W37`). Die vorgeschaltete Ak
 **Ablage:** `_analytics/wochen/<JJJJ>-W<NN>.md` (Langfassung) und `Desktop\HOMEPAGE-WOCHE.md`
 (zwölf Zeilen, wird jede Woche überschrieben).
 
+**Für die Frage „wird es mehr?“:** `py _scripts/wochenbericht.py --gesamt` schreibt
+`_analytics/wochen/GESAMTVERLAUF.md` — alle gemessenen Wochen, die stärksten Einzeltage mit
+ihrem Anteil am Gesamtverkehr, und jeder externe Verweis seit Beginn der Historie.
+**Die Antwort auf die Verkehrsfrage steht damit trotzdem nur zur Hälfte da** (siehe Kasten).
+
 > **Der Wochenbericht entscheidet nichts — er überwacht.** Bei rund 20 Sitzungen je Woche ist
 > jede Differenz zur Vorwoche Rauschen; §5 sagt das schon für Monatswerte, und ein Wochenwert
 > ist ein Viertel davon. Der Bericht schreibt diese Warnung selbst in seine erste Zeile,

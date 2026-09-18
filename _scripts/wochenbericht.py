@@ -14,6 +14,7 @@ Vierwochenwert, nicht die einzelne Woche. Entschieden wird weiter im Monatslauf.
 Aufruf:
     py _scripts/wochenbericht.py                  # zuletzt abgeschlossene Woche
     py _scripts/wochenbericht.py --woche 2026-W37 # bestimmte Kalenderwoche
+    py _scripts/wochenbericht.py --gesamt         # alle gemessenen Wochen auf einmal
     py _scripts/wochenbericht.py --keine-kurzfassung
 
 Ablage: `_analytics/wochen/<JJJJ>-W<NN>.md` (Langfassung, gitignored wie die Historie)
@@ -497,6 +498,91 @@ def kurzfassung_bauen(w: dict, v: dict, schnitt: float, pfad: Path) -> str:
     return "\n".join(z)
 
 
+def gesamtuebersicht(daten: dict) -> str:
+    """Alle gemessenen Wochen auf einmal -- fuer die Frage „wird es mehr?".
+
+    Bewusst als eigener Aufruf (`--gesamt`) und nicht im Wochenbericht: Dort wuerde die
+    Tabelle mit jeder Woche laenger und die Kurzfassung erschlagen. Hier steht sie, wenn
+    man sie braucht.
+    """
+    wochen: dict[tuple[int, int], list[int]] = defaultdict(lambda: [0, 0])
+    tagesbeste: list[tuple[int, str]] = []
+    verweise: dict[str, int] = defaultdict(int)
+    tage_leer = tage_gesamt = 0
+
+    for tag, abfragen in daten.items():
+        gesamt = abfragen.get("gesamt", {})
+        traffic = (gesamt.get("Traffic") or [{}])[0]
+        sitzungen = int(zahl(traffic.get("totalSessionCount")))
+        jahr, kw, _ = date.fromisoformat(tag).isocalendar()
+        wochen[(jahr, kw)][0] += sitzungen
+        wochen[(jahr, kw)][1] += 1
+        tagesbeste.append((sitzungen, tag))
+        tage_gesamt += 1
+        tage_leer += 1 if sitzungen == 0 else 0
+        for zeile in gesamt.get("ReferrerUrl") or []:
+            name = str(zeile.get("name") or "")
+            if name and EIGENE_DOMAIN not in name and not any(h in name for h in LOKALE_HOSTS):
+                verweise[name] += int(zahl(zeile.get("sessionsCount")))
+
+    if not wochen:
+        return "Keine Tageswerte in der Historie.\n"
+
+    z: list[str] = []
+    a = z.append
+    tage = sorted(daten)
+    summe = sum(w[0] for w in wochen.values())
+    a(f"# Homepage — Gesamtverlauf {tage[0]} bis {tage[-1]}")
+    a("")
+    a(f"*Erzeugt am {date.today():%d.%m.%Y}. {tage_gesamt} gemessene Tage, "
+      f"**{summe} Sitzungen**, an {tage_leer} Tagen kam niemand.*")
+    a("")
+    a("| Woche | Zeitraum | Sitzungen | Ø/Tag | Tage |")
+    a("|---|---|---|---|---|")
+    for (jahr, kw) in sorted(wochen):
+        anzahl, tage_erfasst = wochen[(jahr, kw)]
+        montag, sonntag = woche_grenzen(jahr, kw)
+        schnitt = anzahl / tage_erfasst if tage_erfasst else 0
+        a(f"| {jahr}-W{kw:02d} | {montag:%d.%m.}–{sonntag:%d.%m.} | {anzahl} | "
+          f"{schnitt:.1f} | {tage_erfasst}/7 |")
+    a("")
+
+    # Einzelne Tage tragen bei dieser Menge ganze Wochen. Wer sie nicht kennt, liest
+    # einen Veroeffentlichungstag als Wachstum.
+    tagesbeste.sort(reverse=True)
+    a("**Stärkste Einzeltage:** " + " · ".join(
+        f"{tag} ({anzahl})" for anzahl, tag in tagesbeste[:3]))
+    anteil = sum(anzahl for anzahl, _ in tagesbeste[:3]) / summe * 100 if summe else 0
+    a("")
+    a(f"Diese drei Tage allein tragen **{anteil:.0f} %** aller Sitzungen. Ein Anstieg, der "
+      "auf solchen Tagen steht, ist ein Veröffentlichungs- oder Presseeffekt und keine "
+      "Optimierungswirkung (`OPTIMIERUNG.md` §5 Regel 6) — erst der Sockel danach zählt.")
+    a("")
+
+    a("## Externe Verweise über den gesamten Zeitraum")
+    a("")
+    if verweise:
+        a("| Quelle | Sitzungen |")
+        a("|---|---|")
+        for quelle, anzahl in sorted(verweise.items(), key=lambda p: -p[1]):
+            a(f"| {quelle} | {anzahl} |")
+        a("")
+        a(f"**Zusammen {sum(verweise.values())} von {summe} Sitzungen.** Alles Übrige wurde "
+          "direkt aufgerufen oder war ein interner Seitenwechsel.")
+    else:
+        a("**Keine.** Jede gemessene Sitzung kam direkt oder über einen internen Wechsel.")
+    a("")
+    a("> ⚠️ **Diese Zahlen beantworten die Frage „haben wir mehr Verkehr“ nicht allein.** "
+      "Clarity zählt nur, wer im Banner „Akzeptieren“ klickt, und die lokale Historie "
+      "untererfasst zusätzlich (`OPTIMIERUNG.md` §1). Belegt: Der GSC-Export für August nannte "
+      "**60 Suchklicks**, während hier für denselben Zeitraum sechs Google-Verweise stehen. "
+      "**Für Verkehrsmengen ist die Search Console die Quelle**, nicht diese Tabelle — sie "
+      "zählt ohne Einwilligung und reicht 16 Monate zurück. Hier steht der *Verlauf gegen sich "
+      "selbst*, und dafür taugt es.")
+    a("")
+    return "\n".join(z)
+
+
 def protokollieren(text: str) -> None:
     """Eine Zeile ans Lauf-Protokoll. Darf den Lauf nie zum Scheitern bringen."""
     try:
@@ -525,6 +611,15 @@ def main() -> None:
         jahr, kw = letzte_abgeschlossene_woche(date.today())
 
     daten = historie_lesen()
+
+    if "--gesamt" in argumente:
+        BERICHTE.mkdir(parents=True, exist_ok=True)
+        ziel = BERICHTE / "GESAMTVERLAUF.md"
+        ziel.write_text(gesamtuebersicht(daten), encoding="utf-8")
+        print(f"Gesamtverlauf ueber {len(daten)} Tage -> {ziel.relative_to(ROOT)}")
+        protokollieren(f"Gesamtverlauf ueber {len(daten)} Tage")
+        return
+
     diese = woche_rechnen(daten, jahr, kw)
     vorige = woche_rechnen(daten, *vorwoche(jahr, kw))
 
