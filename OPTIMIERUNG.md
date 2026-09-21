@@ -1,8 +1,8 @@
 # Monatlicher Optimierungs-Prozess
 
 Ziel: **Terminanfragen erhöhen.** Alles andere (Klicks, Impressionen, Scrolltiefe) ist
-Diagnose, kein Ziel. Rhythmus: **einmal im Monat, am ersten Werktag**, für den abgelaufenen
-Kalendermonat.
+Diagnose, kein Ziel. Rhythmus: **einmal im Monat, am zweiten Werktag**, für den abgelaufenen
+Kalendermonat — als **Block 3 des Monatslaufs** (§7).
 
 Der Prozess ist so geschnitten, dass Claude ihn weitgehend allein fährt. Stefan wird nur
 dort gebraucht, wo Anmeldung, Freigabe oder ein menschliches Urteil nötig ist — diese
@@ -171,7 +171,7 @@ schreibt den Bericht; 👤 Stefan liefert die drei Angaben, die in keiner Schnit
 stehen — **Terminanfragen**, das Element hinter den toten Klicks, und die
 Heatmap-Auffälligkeiten mobil wie Desktop.
 
-Auslöser ist ein Outlook-Serientermin, erster Werktag im Monat (§7).
+Auslöser ist der Monatslauf am zweiten Werktag des Monats (§7).
 
 ---
 
@@ -305,20 +305,31 @@ folgt kein Stillstand, sondern eine andere Begründungspflicht:
 
 ---
 
-## 7. Auslöser: Outlook-Serientermin
+## 7. Auslöser: Block 3 des Monatslaufs
 
-Der Monatslauf hängt an einem **Outlook-Serientermin am ersten Werktag des Monats**, nicht
-an einer geplanten Aufgabe. Grund: Es ist eine *erinnernde*, keine *handelnde* Aufgabe —
-so hält es die Task-Registry im BD-Repo ausdrücklich fest
-(`areas/compliance/working/scheduler-tasks.md`). Angelegt am 11.08.2026.
+Der Lauf hat seit **21.09.2026 keinen eigenen Serientermin mehr**. Er ist **Block 3** des
+Outlook-Serientermins *„Monatslauf — Buchhaltung, Liquidität, Homepage, Sicherheit"*,
+**2. Werktag des Monats, 09:00–12:00**; dort sind sechs monatliche Erinnerungen auf zwei
+zusammengelegt worden *(Stefan, 21.09.2026)*. Reihenfolge und Übergänge stehen im Skill
+`.claude/skills/monatslauf/SKILL.md`, der Termintext kanonisch in
+`business-development/areas/buchhaltung/ARBEITSANWEISUNG.md` (Anhang *Termintexte*).
 
-Bewusst der erste Werktag und nicht das Monatsende: Sonst fehlen die letzten Tage des
-Monats in der Auswertung.
+Unverändert: Es ist eine *erinnernde*, keine *handelnde* Aufgabe — deshalb Kalendertermin und
+**kein** Eintrag in der Task-Registry (`areas/compliance/working/scheduler-tasks.md`).
 
-Der Termininhalt, zum Nachpflegen falls er verlorengeht:
+**Zweiter Werktag, nicht Monatsende** — sonst fehlen die letzten Tage des Monats in der
+Auswertung. *(Diese Datei nannte bis 21.09.2026 den **ersten** Werktag; der Kalendereintrag
+stand tatsächlich schon immer auf dem zweiten — Serienmuster „2. Wochentag Mo–Fr". Am Zeitraum
+ändert das nichts, der Vormonat ist an beiden Tagen vollständig.)*
+
+**Ein Prompt startet alles:** `/monatslauf` fährt die vier Blöcke der Reihe nach. Wird nur
+dieser Teil nachgeholt, tut es `/optimierung` allein.
+
+Der Teil des Termintextes, der diesen Block betrifft — zum Nachpflegen, falls er verlorengeht
+(vollständig steht er in der SOP im BD-Repo):
 
 ```
-HOMEPAGE-OPTIMIERUNG — Monatslauf (ca. 25 Min)
+HOMEPAGE-OPTIMIERUNG — Block 3 des Monatslaufs (ca. 25 Min)
 
 1) VORBEREITEN (10 Min) — das kann nur ich, nicht Claude
 
@@ -352,11 +363,12 @@ HOMEPAGE-OPTIMIERUNG — Monatslauf (ca. 25 Min)
    Terminanfragen im abgelaufenen Monat zählen — Bookings + Mail-Eingang.
    Auch wenn es 0 ist: 0 ist ein Ergebnis, kein fehlender Wert.
 
-3) AUSWERTEN
+3) AUSWERTEN — im Monatslauf läuft dieser Block automatisch mit
 
    Claude Code im Ordner Coding öffnen, eingeben:
 
-   /optimierung
+   /monatslauf     (alle vier Blöcke des Vormittags)
+   /optimierung    (nur diesen Block, wenn er nachgeholt wird)
 
    Danach die Notizen aus 1) und die Zahl aus 2) durchgeben.
    Ergebnis: Bericht unter homepage/_analytics/berichte/

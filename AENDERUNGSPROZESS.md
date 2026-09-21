@@ -35,7 +35,7 @@ liefert die Befunde, dieser Prozess setzt sie um. Merksatz: `OPTIMIERUNG.md` = w
  LinkedIn
 ```
 
-**Eine Runde je Monat**, ausgelöst vom Serientermin am ersten Werktag. Dazwischen laufen
+**Eine Runde je Monat**, ausgelöst vom Monatslauf am zweiten Werktag ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §7). Dazwischen laufen
 nur Änderungen, die aus einem belegten Befund kommen oder die ein Produkt nachziehen
 (dann gilt §*Konsistenz nach außen* unten).
 

@@ -548,12 +548,14 @@ Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC 
 bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
 die DKIM-Signatur ueberlebt sie.
 
-#### Wiedervorlage — Outlook-Serientermin *(angelegt 17.08.2026)*
+#### Wiedervorlage — Teilschritt im Monatslauf *(angelegt 17.08.2026, umgezogen 21.09.2026)*
 
 Erinnernde Aufgabe mit Urteilsbedarf, deshalb Kalendertermin und **kein** Task-Scheduler-Eintrag.
-Serie: monatlich am zweiten Montag, **erster Termin 14.09.2026**, endet nach 3 Terminen
-(14.09. · 12.10. · 09.11.), Erinnerung 1 Tag vorher. Termintext hier hinterlegt, damit er einen
-Kalenderwechsel ueberlebt:
+Bis 21.09.2026 ein eigener Serientermin am zweiten Montag (14.09. · 12.10. · 09.11.); seither
+**Teilschritt von Block 4 des Monatslaufs** (2. Werktag, Skill `/monatslauf`) — zusammen mit dem
+Sicherheits-Monatslauf, an dem er ohnehin hing. **Er faellt ersatzlos weg, sobald `p=reject`
+steht**; dann hier und im Skill streichen, statt ihn als toten Punkt mitzuschleppen. Der Ablauf
+bleibt unveraendert und ist hier hinterlegt, damit er einen Kalenderwechsel ueberlebt:
 
 ```
 Betreff: DMARC rvh.at — Berichte pruefen und naechste Stufe setzen
