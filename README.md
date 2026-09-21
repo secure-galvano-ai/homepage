@@ -457,14 +457,28 @@ werden soll.** Die MX-Einträge bleiben bewusst stehen; SPF regelt nur den Versa
 
 ### `rvh.at` (Mail, Microsoft 365)
 
+**Vollstaendig erfasst am 22.09.2026** — vorher fehlten vier Eintraege in dieser Tabelle (A, AAAA,
+`_dep_ws_mutex`, `_domainconnect`). Als Wiederherstellungsvorlage taugt sie nur vollstaendig; eine
+Liste, die vier von zehn Eintraegen verschweigt, laesst beim Wiederaufbau genau die Luecken, die
+niemand vermutet.
+
 | Typ | Name | Ziel | Prio |
 |-----|------|------|------|
 | **MX** | `@` | `rvh-at.mail.protection.outlook.com` | **0** |
-| **TXT** | `@` | `v=spf1 include:_spf-eu.ionos.com include:spf.protection.outlook.com ~all` | — |
+| **TXT** | `@` | `v=spf1 include:spf.protection.outlook.com -all` *(bis 22.09.2026: mit `include:_spf-eu.ionos.com` und `~all`)* | — |
 | **TXT** | `_dmarc` | `v=DMARC1; p=none; rua=mailto:dmarc@rvh.at; fo=1` | — |
 | **CNAME** | `autodiscover` | `autodiscover.outlook.com` | — |
 | **CNAME** | `selector1._domainkey` | `selector1-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
 | **CNAME** | `selector2._domainkey` | `selector2-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
+| **A** | `@` | `217.160.0.44` (IONOS) — traegt die alte Website | — |
+| **AAAA** | `@` | `2001:8d8:100f:f000::200` | — |
+| **TXT** | `_dep_ws_mutex` | `662c36c6d49d5b61323ce2e6d3ba421a7ef3…` — IONOS-intern, **Finger weg** | — |
+| **CNAME** | `_domainconnect` | `_domainconnect.ionos.com` — IONOS-Einrichtungsautomatik | — |
+
+*Zum AAAA-Eintrag:* Bei der Markendomain ist ein AAAA der Grund fuer einen HTTPS-Ausfall gewesen
+(Vorfall unten), hier steht einer. Er stoert aktuell nicht, weil auf `rvh.at` ohnehin kein
+Zertifikat liegt und die Seite nur ueber HTTP antwortet (geprueft 22.09.2026). **Wer hier je
+HTTPS aktiviert, prueft zuerst diesen Eintrag** — sonst wiederholt sich der Vorfall.
 
 DKIM ist seit 17.08.2026 aktiv (`Get-DkimSigningConfig -Identity rvh.at` → `Enabled True`,
 `Status Valid`). Versandtest über mail-tester.com am 17.08.2026: **9,5/10**.
