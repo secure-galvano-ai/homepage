@@ -457,7 +457,7 @@ werden soll.** Die MX-Einträge bleiben bewusst stehen; SPF regelt nur den Versa
 
 ### `rvh.at` (Mail, Microsoft 365)
 
-**Vollstaendig erfasst am 22.09.2026** — vorher fehlten vier Eintraege in dieser Tabelle (A, AAAA,
+**Vollstaendig erfasst am 21.09.2026** — vorher fehlten vier Eintraege in dieser Tabelle (A, AAAA,
 `_dep_ws_mutex`, `_domainconnect`). Als Wiederherstellungsvorlage taugt sie nur vollstaendig; eine
 Liste, die vier von zehn Eintraegen verschweigt, laesst beim Wiederaufbau genau die Luecken, die
 niemand vermutet.
@@ -465,8 +465,8 @@ niemand vermutet.
 | Typ | Name | Ziel | Prio |
 |-----|------|------|------|
 | **MX** | `@` | `rvh-at.mail.protection.outlook.com` | **0** |
-| **TXT** | `@` | `v=spf1 include:spf.protection.outlook.com -all` *(gesetzt 22.09.2026; davor mit `include:_spf-eu.ionos.com` und `~all`)* | — |
-| **TXT** | `_dmarc` | `v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1` *(gesetzt 22.09.2026; davor `p=none`)* | — |
+| **TXT** | `@` | `v=spf1 include:spf.protection.outlook.com -all` *(gesetzt 21.09.2026; davor mit `include:_spf-eu.ionos.com` und `~all`)* | — |
+| **TXT** | `_dmarc` | `v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1` *(gesetzt 21.09.2026; davor `p=none`)* | — |
 | **CNAME** | `autodiscover` | `autodiscover.outlook.com` | — |
 | **CNAME** | `selector1._domainkey` | `selector1-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
 | **CNAME** | `selector2._domainkey` | `selector2-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
@@ -477,7 +477,7 @@ niemand vermutet.
 
 *Zum AAAA-Eintrag:* Bei der Markendomain ist ein AAAA der Grund fuer einen HTTPS-Ausfall gewesen
 (Vorfall unten), hier steht einer. Er stoert aktuell nicht, weil auf `rvh.at` ohnehin kein
-Zertifikat liegt und die Seite nur ueber HTTP antwortet (geprueft 22.09.2026). **Wer hier je
+Zertifikat liegt und die Seite nur ueber HTTP antwortet (geprueft 21.09.2026). **Wer hier je
 HTTPS aktiviert, prueft zuerst diesen Eintrag** — sonst wiederholt sich der Vorfall.
 
 DKIM ist seit 17.08.2026 aktiv (`Get-DkimSigningConfig -Identity rvh.at` → `Enabled True`,
@@ -491,8 +491,8 @@ gehen an das freigegebene Postfach `dmarc@rvh.at` (angelegt 17.08.2026). Eskalat
 | Wann | Schritt |
 |---|---|
 | erledigt 17.08.2026 | `p=none` + `rua` — sammelt Belege, aendert nichts an der Zustellung |
-| erledigt 22.09.2026 | Berichte ausgewertet (37 Stueck). Nur Microsoft 365 sendet, `include:_spf-eu.ionos.com` raus |
-| erledigt 22.09.2026 | `~all` → `-all` und `p=none` → `p=quarantine` |
+| erledigt 21.09.2026 | Berichte ausgewertet (37 Stueck). Nur Microsoft 365 sendet, `include:_spf-eu.ionos.com` raus |
+| erledigt 21.09.2026 | `~all` → `-all` und `p=none` → `p=quarantine` |
 | **offen, Ausloeser statt Termin** | `p=quarantine` → `p=reject`, wenn 2–4 Wochen lang nichts auffaellt |
 
 **Stand 14.09.2026 — der erste Serientermin ist ohne Verschaerfung verstrichen, und das ist richtig
@@ -524,10 +524,10 @@ zuerst schlicht wiederholen.
 daran war der 14.09. gescheitert. Einmalige Zustimmung zu `Mail.Read.Shared` ist erteilt, der
 Token liegt im Cache des Mailversands.
 
-*Nachtrag 22.09.2026:* Der Zugriff ging am Morgen darauf **ohne jeden Eingriff** — es war die
+*Nachtrag 21.09.2026:* Der Zugriff ging am Morgen darauf **ohne jeden Eingriff** — es war die
 Propagierung, wie vermutet. Gut, dass nichts umgestellt wurde.
 
-### Schritt 1 ausgewertet — 22.09.2026
+### Schritt 1 ausgewertet — 21.09.2026
 
 **37 Berichte, 101 gemeldete Nachrichten, kein einziger Faelschungsversuch.** 94 Nachrichten
 stammen von Microsoft 365 und bestehen DMARC. Die beiden auffaelligen Quellen sind beide
@@ -541,7 +541,7 @@ zugeordnet und harmlos:
 **Damit ist die Kernfrage des Plans beantwortet: IONOS sendet nichts.** Der Include
 `_spf-eu.ionos.com` taucht in keinem Bericht auf und kann raus.
 
-**Schritt 2 — gesetzt am 22.09.2026.** Der SPF-Eintrag auf `@` lautet jetzt
+**Schritt 2 — gesetzt am 21.09.2026.** Der SPF-Eintrag auf `@` lautet jetzt
 `v=spf1 include:spf.protection.outlook.com -all`; der IONOS-Include ist raus, `~all` ist zu
 `-all` geworden. Gegen beide autoritativen Nameserver geprueft. Begruendung fuer den Wegfall des
 Includes: Er gab **7 IPv4- und 2 IPv6-Bereiche** von IONOS-Shared-Mailservern frei — jeder
@@ -552,7 +552,7 @@ Nach der Aenderung verbraucht der SPF **1 von 10** erlaubten DNS-Lookups.
 Blocklist. Der einzige Hinweis war „nicht vollstaendig berechtigt" — das war das damals noch
 gesetzte `p=none`; mit Schritt 3 unten entfaellt auch er.
 
-⚠ **Zwei Fallstricke im IONOS-Panel, beide am 22.09.2026 belegt:**
+⚠ **Zwei Fallstricke im IONOS-Panel, beide am 21.09.2026 belegt:**
 
 1. **Panel ist `my.ionos.de`** — die `.at`-Varianten (`my.ionos.at`, `login.ionos.at`) existieren
    **nicht**, das Kundenkonto liegt zentral auf `.de`.
@@ -564,7 +564,7 @@ gesetzte `p=none`; mit Schritt 3 unten entfaellt auch er.
    an**; Bearbeiten fuehrt in eine Sackgasse. Anlass: Der DMARC-Wert war versehentlich durch
    einen SPF-Wert ersetzt worden, DMARC war dadurch rund eine Stunde ausser Kraft.
 
-**Schritt 3 — `p=quarantine` gesetzt am 22.09.2026** (Entscheidung Stefan). Der Eintrag lautet
+**Schritt 3 — `p=quarantine` gesetzt am 21.09.2026** (Entscheidung Stefan). Der Eintrag lautet
 jetzt `v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1`, geprueft gegen `ns1065.ui-dns.de`
 und `ns1093.ui-dns.com`.
 
@@ -580,7 +580,7 @@ bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht
 die DKIM-Signatur ueberlebt sie.
 
 **Naechster und letzter Schritt: `p=reject`.** Ausloeser, kein Termin — beim Monatslauf-Block 4.
-**Das Kriterium ist ein Zustellbeleg, keine Frist** *(praezisiert 22.09.2026)*: Ist seit der
+**Das Kriterium ist ein Zustellbeleg, keine Frist** *(praezisiert 21.09.2026)*: Ist seit der
 Umstellung mindestens **eine Mail an `aws.at` gegangen und angekommen**? Erst dann setzen.
 
 Der Grund steht oben: Das Gateway der Foerderstelle bricht die DKIM-Signatur und ist damit der
@@ -603,7 +603,7 @@ bleibt unveraendert und ist hier hinterlegt, damit er einen Kalenderwechsel uebe
 ```
 Betreff: DMARC rvh.at — Berichte pruefen und letzte Stufe setzen
 
-Stand 22.09.2026: SPF steht auf -all ohne IONOS-Include, DMARC auf
+Stand 21.09.2026: SPF steht auf -all ohne IONOS-Include, DMARC auf
 p=quarantine. Offen ist nur noch p=reject.
 
 SCHRITT 1 — Auswerten
@@ -617,7 +617,7 @@ harmlos sind das aws-Gateway eu.cloud-sec-av.com und Wix/SendGrid.
 Taucht etwas anderes auf: NICHT verschaerfen, erst klaeren.
 
 SCHRITT 2 — Das Kriterium ist ein Zustellbeleg, keine Frist:
-Ist seit dem 22.09.2026 mindestens eine Mail an aws.at gegangen UND
+Ist seit dem 21.09.2026 mindestens eine Mail an aws.at gegangen UND
 angekommen? Nur dann im IONOS-DNS setzen:
   TXT _dmarc  v=DMARC1; p=reject; rua=mailto:dmarc@rvh.at; fo=1
 Sonst verschieben. Grund: Das aws-Gateway bricht die DKIM-Signatur, das
@@ -627,7 +627,7 @@ wurde. Ging keine Mail an aws, ist der Befund leer, nicht gut.
 Danach faellt dieser Teilschritt ersatzlos weg — hier und im Skill
 /monatslauf streichen.
 
-PRUEFEN nach jeder Aenderung (autoritative NS, Stand 22.09.2026):
+PRUEFEN nach jeder Aenderung (autoritative NS, Stand 21.09.2026):
   nslookup -type=TXT rvh.at ns1065.ui-dns.de
   nslookup -type=TXT _dmarc.rvh.at ns1093.ui-dns.com
   Die Panel-Anzeige ist KEIN Beleg, sie hinkt minutenlang nach.
