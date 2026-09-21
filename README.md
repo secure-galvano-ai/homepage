@@ -492,6 +492,30 @@ derselbe Fehler). Das DNS steht damit unveraendert auf `~all` / `p=none`, gegeng
 Speichern der Anhaenge — dann ist zuerst die Berechtigung zu setzen. Deshalb steht sie unten als
 Schritt 0 im Termintext.
 
+**Stand 21.09.2026 — Schritt 0 ist erledigt, die Vorabfrage ist beantwortet: Der Vollzugriff
+hat tatsaechlich gefehlt.** Er ist gesetzt und gegengeprueft; im Postfach liegen **50 Elemente,
+2,07 MB**, es gibt also Berichte. Damit ist der Grund beseitigt, an dem der 14.09. gescheitert
+ist. **Am DNS wurde nichts geaendert** — `p=none` / `~all`, am selben Tag gegen die
+Nameserver geprueft.
+
+*Was noch offen war, als der Abend endete:* Der Zugriff auf das Postfach wirkt noch nicht.
+Sowohl Graph (404 auf jeden Ordner) als auch Outlook (Postfach nicht im Profil trotz
+AutoMapping) sahen es eine Stunde nach dem Setzen noch nicht — **das ist Propagierung, kein
+Fehler**; Microsoft nennt dafuer Zeiten bis zu mehreren Stunden. Beim naechsten Versuch also
+zuerst schlicht wiederholen.
+
+*Neu und dauerhaft:* Das Holen der Anhaenge ist kein Handgriff in Outlook mehr, sondern
+[`areas/compliance/scripts/dmarc_berichte_holen.py`](../Business%20Development/areas/compliance/scripts/dmarc_berichte_holen.py)
+— es liest ueber MS Graph und braucht das Postfach deshalb **nicht** im Outlook-Profil. Genau
+daran war der 14.09. gescheitert. Einmalige Zustimmung zu `Mail.Read.Shared` ist erteilt, der
+Token liegt im Cache des Mailversands.
+
+*Falls es weiterhin nicht geht:* Dann ist der Postfachtyp zu pruefen (`Get-Mailbox` →
+`RecipientTypeDetails`). Ein **freigegebenes** Postfach waere fuer diesen Zweck das richtige
+Konstrukt — keine Lizenz, keine Anmeldung, delegierter Zugriff moeglich. Umgestellt wurde am
+21.09. **bewusst nichts**: Die Vermutung, das deaktivierte Konto sei die Ursache, liess sich in
+Microsofts Fehlersuche nicht belegen, und ein Eingriff ohne Beleg waere geraten gewesen.
+
 Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC gilt schon als
 bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
 die DKIM-Signatur ueberlebt sie.
