@@ -579,10 +579,17 @@ Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC 
 bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
 die DKIM-Signatur ueberlebt sie.
 
-**Naechster und letzter Schritt: `p=reject`.** Ausloeser, kein Termin — beim Monatslauf-Block 4,
-wenn seit dem 22.09.2026 zwei bis vier Wochen lang nichts Auffaelliges in den Berichten steht und
-insbesondere keine Zustellklage aus der Foerderkommunikation kam. Danach faellt die Wiedervorlage
-ersatzlos weg.
+**Naechster und letzter Schritt: `p=reject`.** Ausloeser, kein Termin — beim Monatslauf-Block 4.
+**Das Kriterium ist ein Zustellbeleg, keine Frist** *(praezisiert 22.09.2026)*: Ist seit der
+Umstellung mindestens **eine Mail an `aws.at` gegangen und angekommen**? Erst dann setzen.
+
+Der Grund steht oben: Das Gateway der Foerderstelle bricht die DKIM-Signatur und ist damit der
+einzige bekannte Fall, der bei `p=reject` abgewiesen wuerde. **Saubere Berichte belegen ihn
+nicht** — sie zeigen nur, was gesendet wurde. Ging in dem Monat keine Mail an aws, ist der Befund
+leer und nicht gut; dann verschieben. Eine Wartefrist von zwei bis vier Wochen war die frueher
+hier genannte Faustregel und ist als Kriterium schwaecher: Zeit allein erzeugt den Testfall nicht.
+
+Danach faellt die Wiedervorlage ersatzlos weg.
 
 #### Wiedervorlage — Teilschritt im Monatslauf *(angelegt 17.08.2026, umgezogen 21.09.2026)*
 
@@ -609,9 +616,14 @@ Erwartet wird Microsoft 365 (spf.protection.outlook.com); bekannt und
 harmlos sind das aws-Gateway eu.cloud-sec-av.com und Wix/SendGrid.
 Taucht etwas anderes auf: NICHT verschaerfen, erst klaeren.
 
-SCHRITT 2 — Nur wenn Schritt 1 sauber ist und seit dem 22.09.2026
-mindestens zwei Wochen ohne Zustellklage vergangen sind, im IONOS-DNS:
+SCHRITT 2 — Das Kriterium ist ein Zustellbeleg, keine Frist:
+Ist seit dem 22.09.2026 mindestens eine Mail an aws.at gegangen UND
+angekommen? Nur dann im IONOS-DNS setzen:
   TXT _dmarc  v=DMARC1; p=reject; rua=mailto:dmarc@rvh.at; fo=1
+Sonst verschieben. Grund: Das aws-Gateway bricht die DKIM-Signatur, das
+ist der einzige bekannte Fall, der bei p=reject abgewiesen wuerde —
+und saubere Berichte belegen ihn NICHT, sie zeigen nur, was gesendet
+wurde. Ging keine Mail an aws, ist der Befund leer, nicht gut.
 Danach faellt dieser Teilschritt ersatzlos weg — hier und im Skill
 /monatslauf streichen.
 
