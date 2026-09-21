@@ -510,11 +510,39 @@ zuerst schlicht wiederholen.
 daran war der 14.09. gescheitert. Einmalige Zustimmung zu `Mail.Read.Shared` ist erteilt, der
 Token liegt im Cache des Mailversands.
 
-*Falls es weiterhin nicht geht:* Dann ist der Postfachtyp zu pruefen (`Get-Mailbox` →
-`RecipientTypeDetails`). Ein **freigegebenes** Postfach waere fuer diesen Zweck das richtige
-Konstrukt — keine Lizenz, keine Anmeldung, delegierter Zugriff moeglich. Umgestellt wurde am
-21.09. **bewusst nichts**: Die Vermutung, das deaktivierte Konto sei die Ursache, liess sich in
-Microsofts Fehlersuche nicht belegen, und ein Eingriff ohne Beleg waere geraten gewesen.
+*Nachtrag 22.09.2026:* Der Zugriff ging am Morgen darauf **ohne jeden Eingriff** — es war die
+Propagierung, wie vermutet. Gut, dass nichts umgestellt wurde.
+
+### Schritt 1 ausgewertet — 22.09.2026
+
+**37 Berichte, 101 gemeldete Nachrichten, kein einziger Faelschungsversuch.** 94 Nachrichten
+stammen von Microsoft 365 und bestehen DMARC. Die beiden auffaelligen Quellen sind beide
+zugeordnet und harmlos:
+
+| Quelle | Nachrichten | Erklaerung |
+|---|---|---|
+| `52.212.19.177` (`eu.cloud-sec-av.com`) | 6 | **Mail-Gateway der Foerderstelle aws.at.** An allen drei Berichtstagen (21.08., 14.09., 16.09.) war `aws.at` unter den Empfaengern, am 16.09. ausschliesslich — zwei gesendete Mails, zwei gemeldete Nachrichten. Das Gateway veraendert die Mail beim Scannen, deshalb bricht die DKIM-Signatur mit **unserem** Selector `selector1`. |
+| `149.72.126.203` (`o48.sg.ascendbywix.com`) | 1 | **Kontaktformular ueber Wix/SendGrid.** Am 06.09. wurde gar keine Mail versendet; der Empfaenger `karrierequer.com` nutzt Google Workspace, daher der Bericht von google.com. DKIM und SPF bestanden — aber fuer `wixemails.com`, nicht fuer `rvh.at`. |
+
+**Damit ist die Kernfrage des Plans beantwortet: IONOS sendet nichts.** Der Include
+`_spf-eu.ionos.com` taucht in keinem Bericht auf und kann raus.
+
+**Schritt 2 — vorbereitet, noch nicht gesetzt.** Am 22.09.2026 hatte IONOS eine Stoerung; eine
+DNS-Aenderung waehrend einer Anbieterstoerung kann halb greifen. Zu aendern ist genau **ein**
+TXT-Eintrag auf `@` der Zone `rvh.at`:
+
+```
+alt:  v=spf1 include:_spf-eu.ionos.com include:spf.protection.outlook.com ~all
+neu:  v=spf1 include:spf.protection.outlook.com -all
+```
+
+Panel: **`my.ionos.de`** — die `.at`-Varianten (`my.ionos.at`, `login.ionos.at`) existieren
+**nicht**, das Kundenkonto liegt zentral auf `.de`.
+
+**`p=none` bleibt vorerst stehen** — und zwar mit Grund: Genau die Mails an **aws.at** wuerden bei
+`p=quarantine` im Spam der Foerderstelle landen koennen, weil deren Gateway die Signatur bricht.
+Bei laufender Foerderkommunikation ist das der teuerste denkbare Zeitpunkt. **Ausloeser fuer
+`p=quarantine`:** von aws steht nichts Wichtiges mehr aus.
 
 Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC gilt schon als
 bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
