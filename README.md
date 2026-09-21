@@ -466,7 +466,7 @@ niemand vermutet.
 |-----|------|------|------|
 | **MX** | `@` | `rvh-at.mail.protection.outlook.com` | **0** |
 | **TXT** | `@` | `v=spf1 include:spf.protection.outlook.com -all` *(gesetzt 22.09.2026; davor mit `include:_spf-eu.ionos.com` und `~all`)* | — |
-| **TXT** | `_dmarc` | `v=DMARC1; p=none; rua=mailto:dmarc@rvh.at; fo=1` | — |
+| **TXT** | `_dmarc` | `v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1` *(gesetzt 22.09.2026; davor `p=none`)* | — |
 | **CNAME** | `autodiscover` | `autodiscover.outlook.com` | — |
 | **CNAME** | `selector1._domainkey` | `selector1-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
 | **CNAME** | `selector2._domainkey` | `selector2-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
@@ -485,15 +485,15 @@ DKIM ist seit 17.08.2026 aktiv (`Get-DkimSigningConfig -Identity rvh.at` → `En
 
 **Warum `rvh.at` anders behandelt wird als die Markendomain:** Hier laeuft produktiver Mailverkehr.
 Ein hartes `-all` / `p=reject` ohne Belege koennte legitime Mails abweisen — etwa von einem System,
-an das gerade niemand denkt. Deshalb steht DMARC bewusst auf `p=none` **mit `rua`**, die Berichte
+an das gerade niemand denkt. Deshalb lief DMARC zuerst auf `p=none` **mit `rua`**, die Berichte
 gehen an das freigegebene Postfach `dmarc@rvh.at` (angelegt 17.08.2026). Eskalationsplan:
 
 | Wann | Schritt |
 |---|---|
 | erledigt 17.08.2026 | `p=none` + `rua` — sammelt Belege, aendert nichts an der Zustellung |
-| **offen, jetzt 12.10.2026** | Berichte auswerten. Sendet nur Microsoft 365, kann `include:_spf-eu.ionos.com` raus |
-| dann | `~all` → `-all` und `p=none` → `p=quarantine` |
-| nochmals 2–4 Wochen spaeter | `p=quarantine` → `p=reject` |
+| erledigt 22.09.2026 | Berichte ausgewertet (37 Stueck). Nur Microsoft 365 sendet, `include:_spf-eu.ionos.com` raus |
+| erledigt 22.09.2026 | `~all` → `-all` und `p=none` → `p=quarantine` |
+| **offen, Ausloeser statt Termin** | `p=quarantine` → `p=reject`, wenn 2–4 Wochen lang nichts auffaellt |
 
 **Stand 14.09.2026 — der erste Serientermin ist ohne Verschaerfung verstrichen, und das ist richtig
 so.** Schritt 1 kam nicht zustande: Die Berichte liegen ausschliesslich in `dmarc@rvh.at`, das
@@ -549,8 +549,8 @@ IONOS-Kunde dort haette unter `rvh.at` senden und SPF bestehen koennen. Genutzt 
 Nach der Aenderung verbraucht der SPF **1 von 10** erlaubten DNS-Lookups.
 
 **Zustelltest danach: 10/10 bei mail-tester.com** (vorher 9,5). SpamAssassin sauber, keine
-Blocklist. Die einzige verbliebene Abwertung ist der Hinweis „nicht vollstaendig berechtigt" —
-das ist `p=none`, also die bewusst getragene Entscheidung, nicht ein Fehler.
+Blocklist. Der einzige Hinweis war „nicht vollstaendig berechtigt" — das war das damals noch
+gesetzte `p=none`; mit Schritt 3 unten entfaellt auch er.
 
 ⚠ **Zwei Fallstricke im IONOS-Panel, beide am 22.09.2026 belegt:**
 
@@ -564,14 +564,25 @@ das ist `p=none`, also die bewusst getragene Entscheidung, nicht ein Fehler.
    an**; Bearbeiten fuehrt in eine Sackgasse. Anlass: Der DMARC-Wert war versehentlich durch
    einen SPF-Wert ersetzt worden, DMARC war dadurch rund eine Stunde ausser Kraft.
 
-**`p=none` bleibt vorerst stehen** — und zwar mit Grund: Genau die Mails an **aws.at** wuerden bei
-`p=quarantine` im Spam der Foerderstelle landen koennen, weil deren Gateway die Signatur bricht.
-Bei laufender Foerderkommunikation ist das der teuerste denkbare Zeitpunkt. **Ausloeser fuer
-`p=quarantine`:** von aws steht nichts Wichtiges mehr aus.
+**Schritt 3 — `p=quarantine` gesetzt am 22.09.2026** (Entscheidung Stefan). Der Eintrag lautet
+jetzt `v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1`, geprueft gegen `ns1065.ui-dns.de`
+und `ns1093.ui-dns.com`.
+
+Mein Vorbehalt dagegen war die Foerderkommunikation: Das Gateway von **aws.at**
+(`eu.cloud-sec-av.com`) bricht die DKIM-Signatur beim Scannen, solche Mails koennten bei
+`p=quarantine` im Spam der Foerderstelle landen. Stefan hat das abgewogen und entschieden — die
+Belege tragen: In 37 Berichten mit 101 Nachrichten gab es **keinen einzigen** Faelschungsversuch,
+und jede auffaellige Quelle ist zugeordnet. **Restrisiko, bewusst getragen:** Geht doch eine
+Mail an aws verloren, ist die Gegenmassnahme eine Zeile im Panel zurueck auf `p=none`.
 
 Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC gilt schon als
 bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
 die DKIM-Signatur ueberlebt sie.
+
+**Naechster und letzter Schritt: `p=reject`.** Ausloeser, kein Termin — beim Monatslauf-Block 4,
+wenn seit dem 22.09.2026 zwei bis vier Wochen lang nichts Auffaelliges in den Berichten steht und
+insbesondere keine Zustellklage aus der Foerderkommunikation kam. Danach faellt die Wiedervorlage
+ersatzlos weg.
 
 #### Wiedervorlage — Teilschritt im Monatslauf *(angelegt 17.08.2026, umgezogen 21.09.2026)*
 
@@ -583,34 +594,31 @@ steht**; dann hier und im Skill streichen, statt ihn als toten Punkt mitzuschlep
 bleibt unveraendert und ist hier hinterlegt, damit er einen Kalenderwechsel ueberlebt:
 
 ```
-Betreff: DMARC rvh.at — Berichte pruefen und naechste Stufe setzen
+Betreff: DMARC rvh.at — Berichte pruefen und letzte Stufe setzen
 
-Berichte liegen im freigegebenen Postfach dmarc@rvh.at (XML-Anhaenge).
-
-SCHRITT 0 — Komme ich an das Postfach? (neu 14.09.2026)
-In OWA "anderes Postfach oeffnen" -> dmarc@rvh.at. Geht das nicht, fehlt
-der Vollzugriff; dann erst die Berechtigung setzen, sonst scheitert
-Schritt 1 schon am Speichern der Anhaenge. 30 Sekunden.
+Stand 22.09.2026: SPF steht auf -all ohne IONOS-Include, DMARC auf
+p=quarantine. Offen ist nur noch p=reject.
 
 SCHRITT 1 — Auswerten
-Anhaenge aus dmarc@rvh.at in einen Ordner speichern, dann:
+  py "Business Development/areas/compliance/scripts/dmarc_berichte_holen.py"
   py "Business Development/areas/compliance/scripts/dmarc_auswerten.py" <ordner>
-Das Skript fasst alle Berichte zusammen, loest die sendenden IPs auf und
-gibt ein Votum. Erwartet wird ausschliesslich Microsoft 365
-(spf.protection.outlook.com).
-Taucht etwas Unbekanntes auf: NICHT verschaerfen, erst klaeren.
+Das erste Skript holt die Anhaenge ueber MS Graph aus dmarc@rvh.at (das
+Postfach muss dafuer NICHT im Outlook-Profil haengen), das zweite fasst
+alle Berichte zusammen, loest die sendenden IPs auf und gibt ein Votum.
+Erwartet wird Microsoft 365 (spf.protection.outlook.com); bekannt und
+harmlos sind das aws-Gateway eu.cloud-sec-av.com und Wix/SendGrid.
+Taucht etwas anderes auf: NICHT verschaerfen, erst klaeren.
 
-SCHRITT 2 — Nur wenn Schritt 1 sauber ist, im IONOS-DNS setzen:
-  TXT @       v=spf1 include:spf.protection.outlook.com -all
-              (der IONOS-Include kann raus, wenn nichts darueber sendet)
-  TXT _dmarc  v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1
-
-SCHRITT 3 — Beim uebernaechsten Termin, wenn weiterhin nichts auffaellt:
+SCHRITT 2 — Nur wenn Schritt 1 sauber ist und seit dem 22.09.2026
+mindestens zwei Wochen ohne Zustellklage vergangen sind, im IONOS-DNS:
   TXT _dmarc  v=DMARC1; p=reject; rua=mailto:dmarc@rvh.at; fo=1
+Danach faellt dieser Teilschritt ersatzlos weg — hier und im Skill
+/monatslauf streichen.
 
-PRUEFEN nach jeder Aenderung:
-  nslookup -type=TXT rvh.at ns1027.ui-dns.de
-  nslookup -type=TXT _dmarc.rvh.at ns1027.ui-dns.de
+PRUEFEN nach jeder Aenderung (autoritative NS, Stand 22.09.2026):
+  nslookup -type=TXT rvh.at ns1065.ui-dns.de
+  nslookup -type=TXT _dmarc.rvh.at ns1093.ui-dns.com
+  Die Panel-Anzeige ist KEIN Beleg, sie hinkt minutenlang nach.
   Danach eine Testmail ueber mail-tester.com, Ziel weiterhin >= 9/10.
 
 ABBRUCHKRITERIUM: Wenn nach einer Verschaerfung eine legitime Mail
