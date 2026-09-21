@@ -465,7 +465,7 @@ niemand vermutet.
 | Typ | Name | Ziel | Prio |
 |-----|------|------|------|
 | **MX** | `@` | `rvh-at.mail.protection.outlook.com` | **0** |
-| **TXT** | `@` | `v=spf1 include:spf.protection.outlook.com -all` *(bis 22.09.2026: mit `include:_spf-eu.ionos.com` und `~all`)* | — |
+| **TXT** | `@` | `v=spf1 include:spf.protection.outlook.com -all` *(gesetzt 22.09.2026; davor mit `include:_spf-eu.ionos.com` und `~all`)* | — |
 | **TXT** | `_dmarc` | `v=DMARC1; p=none; rua=mailto:dmarc@rvh.at; fo=1` | — |
 | **CNAME** | `autodiscover` | `autodiscover.outlook.com` | — |
 | **CNAME** | `selector1._domainkey` | `selector1-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
@@ -541,17 +541,28 @@ zugeordnet und harmlos:
 **Damit ist die Kernfrage des Plans beantwortet: IONOS sendet nichts.** Der Include
 `_spf-eu.ionos.com` taucht in keinem Bericht auf und kann raus.
 
-**Schritt 2 — vorbereitet, noch nicht gesetzt.** Am 22.09.2026 hatte IONOS eine Stoerung; eine
-DNS-Aenderung waehrend einer Anbieterstoerung kann halb greifen. Zu aendern ist genau **ein**
-TXT-Eintrag auf `@` der Zone `rvh.at`:
+**Schritt 2 — gesetzt am 22.09.2026.** Der SPF-Eintrag auf `@` lautet jetzt
+`v=spf1 include:spf.protection.outlook.com -all`; der IONOS-Include ist raus, `~all` ist zu
+`-all` geworden. Gegen beide autoritativen Nameserver geprueft. Begruendung fuer den Wegfall des
+Includes: Er gab **7 IPv4- und 2 IPv6-Bereiche** von IONOS-Shared-Mailservern frei — jeder
+IONOS-Kunde dort haette unter `rvh.at` senden und SPF bestehen koennen. Genutzt hat das nichts.
+Nach der Aenderung verbraucht der SPF **1 von 10** erlaubten DNS-Lookups.
 
-```
-alt:  v=spf1 include:_spf-eu.ionos.com include:spf.protection.outlook.com ~all
-neu:  v=spf1 include:spf.protection.outlook.com -all
-```
+**Zustelltest danach: 10/10 bei mail-tester.com** (vorher 9,5). SpamAssassin sauber, keine
+Blocklist. Die einzige verbliebene Abwertung ist der Hinweis „nicht vollstaendig berechtigt" —
+das ist `p=none`, also die bewusst getragene Entscheidung, nicht ein Fehler.
 
-Panel: **`my.ionos.de`** — die `.at`-Varianten (`my.ionos.at`, `login.ionos.at`) existieren
-**nicht**, das Kundenkonto liegt zentral auf `.de`.
+⚠ **Zwei Fallstricke im IONOS-Panel, beide am 22.09.2026 belegt:**
+
+1. **Panel ist `my.ionos.de`** — die `.at`-Varianten (`my.ionos.at`, `login.ionos.at`) existieren
+   **nicht**, das Kundenkonto liegt zentral auf `.de`.
+2. **IONOS fuehrt SPF und DMARC als getrennte Record-Typen**, obwohl beides TXT ist. Ein Record,
+   der als SPF angelegt wurde, nimmt **keinen** DMARC-Wert an: Das Formular antwortet mit „Der
+   Wert ist nicht gueltig. Ein Fehler wurde im folgenden Teil gefunden: v=DMARC1;" — und zwar
+   erst nach dem Speichern, ohne dass die Liste sich aendert. Wer einen Wert in die falsche Zeile
+   getragen hat, **loescht den Record und legt ihn ueber „Record hinzufuegen → DMARC (TXT)" neu
+   an**; Bearbeiten fuehrt in eine Sackgasse. Anlass: Der DMARC-Wert war versehentlich durch
+   einen SPF-Wert ersetzt worden, DMARC war dadurch rund eine Stunde ausser Kraft.
 
 **`p=none` bleibt vorerst stehen** — und zwar mit Grund: Genau die Mails an **aws.at** wuerden bei
 `p=quarantine` im Spam der Foerderstelle landen koennen, weil deren Gateway die Signatur bricht.
