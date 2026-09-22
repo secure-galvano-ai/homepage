@@ -318,10 +318,12 @@ homepage/
   index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Ablauf ohne Preis (#ablauf), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
   leistungen.html          Leistungsseite (seit 31.08.2026 wieder echt, handgeschrieben): Standortanalyse als
                            Schwerpunkt (#standortanalyse), Anwendungen, Portfolio, Abgrenzung, Sticky-CTA.
-                           Seit 03.09.2026: Sektion #schnellanalyse als kleiner Einstieg (500 EUR netto,
-                           eine Frage, ein Datenauszug, remote) VOR dem Schwerpunkt, sieben Anwendungen
-                           (#anwendungen) und acht Fragen (#fragen) mit FAQPage-Schema. Leistungsname
-                           seither "Standortanalyse Daten- und KI-Potenziale".
+                           Sieben Anwendungen (#anwendungen) und acht Fragen (#fragen) mit
+                           FAQPage-Schema, Leistungsname "Standortanalyse Daten- und KI-Potenziale".
+                           Die Sektion #schnellanalyse (500 EUR) ist am 10.09.2026 mit dem Angebot
+                           entfallen (Commit 09c9059); an ihrer Stelle steht #datenanalyse -- derselbe
+                           Einstiegspreis, nur der kuerzere Weg. Seit 23.09.2026 haengen in beiden
+                           Abschnitten Blanko-Angebote als PDF (docs/angebot-*-muster.pdf).
                            Nav/Footer/WA-FAB/Sticky kommen aus _generate_layout.py. Kachel-Fassung bis 07/2026:
                            git show 78ce8c3:leistungen.html
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA). Seit 31.08.2026 angelegt,
@@ -368,13 +370,22 @@ homepage/
                            Methoden-und-Standards, Meisterbrief, Fachartikel, Praesentationen). Bewusst KEINE
                            Einzelliste hier -- sie driftet bei jedem neuen Beleg. Wo welcher verlinkt ist:
                            grep -o "docs/[a-z0-9_-]*\.pdf" *.html
-                           Die fuenf erzeugten Einseiter kommen aus BD-Build-Skripten und werden NIE von
+                           Die erzeugten PDFs kommen aus BD-Build-Skripten und werden NIE von
                            Hand bearbeitet -- Aenderung immer im Skript, dann neu bauen:
                              standortanalyse-flyer.pdf        BD/templates/flyer-corporate/build_flyer.py
                              standortanalyse-musterbefund.pdf BD/templates/befund-corporate/build_befund.py
                              leistungen-ueberblick.pdf        BD/templates/uebersicht-corporate/build_uebersicht.py
                              datenwerkstatt-ueberblick.pdf    BD/projects/ausbildung-und-coaching-2026/build_flyer_datenwerkstatt.py
                              anwendung-ueberblick.pdf         BD/templates/flyer-corporate/build_flyer_anwendung.py
+                             nda-muster.pdf                   BD/scripts/nda_pdf.py
+                             angebot-standortanalyse-muster.pdf   BD/scripts/angebot_muster.py
+                             angebot-schnelldiagnose-muster.pdf   (beide aus demselben Lauf)
+                           Die zwei Angebots-Muster sind dasselbe Dokument, das ein Kunde verbindlich
+                           bekommt, im Muster-Modus gebaut: ohne Empfaenger, Nummer, Datum, IBAN und
+                           Unterschrift, mit Ausfuellfeldern und Muster-Vermerk im Fuss. Die Pruefung
+                           im Generator laeuft dort UMGEKEHRT und schlaegt an, wenn eine dieser
+                           Angaben doch im PDF steht -- Begruendung im Docstring von
+                           BD/scripts/angebot_bauen.py.
                            Jedes Skript prueft Seitenzahl und Pflichtstellen selbst und bricht ab, wenn
                            Inhalt verschluckt wird. leistungen-ueberblick.pdf ist das Blatt zum
                            Weiterreichen: alle vier Wege nebeneinander, mit Aufwand und Preis.
