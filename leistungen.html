@@ -572,7 +572,7 @@
             <div>
                 <ol class="schritt-liste">
                     <li><span class="wo">ONLINE · KOSTENLOS</span><strong>Erstgespräch</strong>Worum es geht, was Sie erwarten, welche Anlagen in Frage kommen. Sie nennen uns dabei nur, wer Ihre Fachbereiche vertritt — die Termine vereinbaren wir danach gemeinsam nach deren Verfügbarkeit.</li>
-                    <li><span class="wo">VOR DEM ERSTEN DATENAUSTAUSCH</span><strong>NDA</strong>Beidseitig, drei Jahre Geheimhaltung — unterschrieben, bevor eine einzige Datei Ihr Haus verlässt. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-leistungen" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Vorab lesen (PDF)</a></li>
+                    <li><span class="wo">VOR DEM ERSTEN DATENAUSTAUSCH</span><strong>NDA</strong>Beidseitig, drei Jahre Geheimhaltung — verbindlich, bevor eine einzige Datei Ihr Haus verlässt. Beim Einstieg ist sie im Angebot enthalten, auf Wunsch zusätzlich als eigene Vereinbarung. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-leistungen" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Vorab lesen (PDF)</a></li>
                     <li><span class="wo">ONLINE · JE RUND 45 MINUTEN</span><strong>Vier bis sechs Vorgespräche</strong>Mit Verfahrenstechnik, Instandhaltung, Qualität und Produktion; bei Bedarf zusätzlich Betriebsleitung und IT. <strong class="hebt">Einzeltermine, keine gemeinsame Runde</strong> — jeder wird einzeln nach der Verfügbarkeit des Beteiligten vereinbart, verteilbar über zwei Wochen. Ihre Leute schildern, was wiederkehrend Ärger macht; diese Information steht in keiner Datenbank.</li>
                     <li><span class="wo">VOR ORT ODER PER VIDEO · FÜR SIE EIN HALBER TAG</span><strong>Rundgang und Workshop</strong>Zuerst der Rundgang mit einer Begleitperson: Anlagen, Steuerungen, Sensorik, Dosierung, was tatsächlich aufgezeichnet wird. Danach zwei Stunden Workshop mit Ihren Führungskräften — Anlagen, Systeme und Potenziale werden gemeinsam sortiert. <strong class="hebt">Das ist der einzige Termin, für den mehrere Ihrer Leute gleichzeitig Zeit brauchen.</strong> Bei weiter Anreise läuft der Rundgang als begleitete Videoführung, der Workshop am gemeinsamen Board — das Ergebnis ist dasselbe.</li>
                     <li><span class="wo">DIREKT IM ANSCHLUSS · EINE STUNDE</span><strong>Abschlussrunde</strong>Wir gehen das Ergebnis gemeinsam durch und legen die Schwerpunkte fest, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
@@ -603,6 +603,12 @@
                 </dl>
                 <a class="eck-cta" href="docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-leistungen">Alles auf einer Seite (PDF)</a>
                 <a class="eck-cta" style="margin-top:10px;" href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-leistungen">So sieht ein fertiger Befund aus (PDF)</a>
+                <!-- Blanko-Angebot, neu 23.09.2026. Dasselbe Dokument, das Sie als
+                     verbindliches Angebot bekommen, nur ohne Empfaenger, Nummer, Datum,
+                     Bankverbindung und Unterschrift. Gebaut ueber
+                     BD/scripts/angebot_muster.py aus der Angebotsvorlage -- nicht von
+                     Hand nachbauen, sonst laufen Muster und Angebot auseinander. -->
+                <a class="eck-cta" style="margin-top:10px;" href="docs/angebot-standortanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-standortanalyse">Blanko-Angebot zum Ausfüllen (PDF)</a>
                 <!-- KEIN Verweis auf demo.html hier: die Belegspalte sammelt Belege zur
                      STANDORTANALYSE, das Video zeigt die ANWENDUNG. Der Verweis steht
                      weiter unten in der Karte "Vorprojekt" — genau dort, wo der Text
@@ -632,7 +638,11 @@
             </div>
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Geheimhaltung</h3>
-                <p style="font-size:0.92rem;">Beidseitig, unterschrieben bevor eine einzige Datei Ihr Haus verlässt. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-datenanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Muster lesen</a></p>
+                <!-- 23.09.2026: „im Angebot enthalten" ergaenzt. Das Angebot traegt die
+                     Vertraulichkeit seit AG 2026-004 als eigenen Absatz, damit vor dem Auftrag
+                     nichts unterschrieben werden muss. Ohne diesen Halbsatz widersprechen sich
+                     Seite und Angebot, das direkt darunter zum Download steht. -->
+                <p style="font-size:0.92rem;">Beidseitig und verbindlich, bevor eine einzige Datei Ihr Haus verlässt — im Angebot enthalten, auf Wunsch zusätzlich als eigene Vereinbarung. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-datenanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Muster lesen</a></p>
             </div>
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Datenklärung</h3>
@@ -658,6 +668,7 @@
         </div>
 
         <a class="btn btn-primary" href="docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-datenanalyse-leistungen">Ablauf auf einer Seite (PDF)</a>
+        <a class="btn btn-outline" style="margin-left:10px;" href="docs/angebot-schnelldiagnose-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-schnelldiagnose">Blanko-Angebot zum Ausfüllen (PDF)</a>
     </div>
 </section>
 
