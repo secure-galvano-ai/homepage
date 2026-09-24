@@ -318,9 +318,7 @@ Unverändert: Es ist eine *erinnernde*, keine *handelnde* Aufgabe — deshalb Ka
 **kein** Eintrag in der Task-Registry (`areas/compliance/working/scheduler-tasks.md`).
 
 **Zweiter Werktag, nicht Monatsende** — sonst fehlen die letzten Tage des Monats in der
-Auswertung. *(Diese Datei nannte bis 21.09.2026 den **ersten** Werktag; der Kalendereintrag
-stand tatsächlich schon immer auf dem zweiten — Serienmuster „2. Wochentag Mo–Fr". Am Zeitraum
-ändert das nichts, der Vormonat ist an beiden Tagen vollständig.)*
+Auswertung.
 
 **Ein Prompt startet alles:** `/monatslauf` fährt die vier Blöcke der Reihe nach. Wird nur
 dieser Teil nachgeholt, tut es `/optimierung` allein.
