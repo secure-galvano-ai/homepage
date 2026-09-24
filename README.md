@@ -103,6 +103,10 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   neu gefasst: 5.000 € je einzelnem Anwendungsfall** statt 9.500 € fuer ein Paket aus ein bis drei
   Faellen. Kanonisch `BD/areas/preise.yaml`, ausgegeben mit
   `py "Business Development/scripts/preise.py"`.
+- **Anschrift, Buchungslink, Telefon, UID und Gruendungsdatum kommen aus `BD/areas/stammdaten.yaml`**
+  *(seit 24.09.2026)*. Die Seiten sind statisches HTML und lesen die Datei nicht selbst —
+  `py "Business Development/scripts/check_konsistenz.py"` meldet jede Seite, die eine abgeloeste
+  Fassung traegt (alte Anschrift, Sammel-Buchungsseite, falsches Gruendungsdatum).
 - ~~**Produktname bleibt „Diagnose"**~~ — **überholt seit 31.08.2026**: Die Stufe heißt
   **„Vorprojekt"** (`BD/areas/business-model.md` §*Leiter*, dort mit dem Vermerk „Homepage, Flyer
   und Muster-Befund sind nachgezogen"). Der Nachzug war unvollständig — bis 03.09.2026 stand

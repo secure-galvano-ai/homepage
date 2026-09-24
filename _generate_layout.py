@@ -40,9 +40,11 @@ ROOT = Path(__file__).parent
 # einen, der gepflegt wird. Herkunft: Bookings -> Dienste -> Dienstbuchungsseite.
 # Den Anhang "?ismsaljsauthenabled" beim Kopieren abschneiden, er stammt aus der
 # angemeldeten Sitzung und gehoert nicht in einen oeffentlichen Link.
+# Massgeblich ist `Business Development/areas/stammdaten.yaml` (kontakt.buchung); der
+# Konsistenzpruefer dort meldet jede abweichende Fassung in diesem Repo (seit 24.09.2026).
 BOOKING_URL = (
-    "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at"
-    "/s/DdIPgTj7-0ymr6eHc38SQg2"
+    "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/"
+    "DdIPgTj7-0ymr6eHc38SQg2"
 )
 # WhatsApp-FAB abgeschaltet am 07.09.2026 (Stefan): der Button trug die private
 # Mobilnummer im Klartext auf jeder Seite -- maschinell abgreifbar und seither
