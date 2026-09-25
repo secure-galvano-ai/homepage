@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-09-03
+**Stand:** 2026-09-25
 
 ---
 
@@ -32,10 +32,15 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 02.09.2026 | **„Ihre Daten bleiben bei Ihnen" → „Lokale Datenverarbeitung"** *(Stefan)* — Startseiten-H2, Vertrauenszeile auf `demo.html`, Baustein *Laufende Überwachung* auf `leistungen.html` | Wortlaut bleibt seitenübergreifend identisch |
 | 03.09.2026 | **Redundanz- und Klarheitsdurchgang über alle Seiten** *(vierte und fünfte Runde desselben Tages, Auftrag Stefan)* — wortgleiche Dopplungen geschnitten (Startseite, `leistungen.html`, `ausbildung.html`), abgelöster Produktname *Diagnose* an vier Stellen nachgezogen, *Cybersecurity Act* → *Cyber Resilience Act*, aws-Förderprojekt als abgeschlossen gekennzeichnet, dritter Demo-Videolink gestrichen. Dazu ein echter Fund: auf 390 × 844 lag der **Haupt**knopf von `ausbildung.html` im Einwilligungsbanner | **Die Zuordnung im Oktober-Lauf ist für diesen Monat aufgegeben** (fünf Runden statt der erlaubten drei, §5 `OPTIMIERUNG.md`) — bewusste Entscheidung, damit der Bestand sauber ist. Bannerfix in `consent.js` |
 | 09.09.2026 | **Zweiter Demo-Videolink gestrichen** *(Stefan)* — „Überwachung im laufenden Betrieb" (`lWJQq0x2_1c`) ergab zusammen mit dem Hauptvideo das vollständige Bild des Funktionsumfangs. Abschnitt heißt jetzt *Weitere Aufnahme* (Singular), „Auswertungen und Berichte" bleibt bewusst stehen. Die Videos selbst bleiben bestehen und werden weiter gezielt im Gespräch verschickt | Anlass: Prüfung des Video-Transkripts auf Preisgabe. Zwei Folgepunkte unter *Optional*: Neuvertonung von vier Stellen, Beleglage zu „technisch ausgereift" |
+| 25.09.2026 | **FFG-Projekt auf `forschung.html`** *(Stefan)* — neue erste Karte zum Kleinprojekt „ML Galvanik": Titel, zwei Sätze Fragestellung, Programm, Status, Laufzeit. Bewusst **ohne Verfahren** (was gemacht wird, nicht wie) und ohne Datengeber. Die Präsentation des aws-Vorhabens (PDF, Stand 07/2025) ist samt Datei entfernt | FFG-Logo auf der Startseite erst mit der Förderzusage — Regel unten |
 | 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
 
 ### Regeln, die daraus dauerhaft gelten
 
+- **Förderlogos erst mit dem Förderungsvertrag** *(Stefan, 25.09.2026)*. Ein Logo in der
+  Trust-Bar liest sich als „gefördert durch", egal was daneben steht. Solange ein Ansuchen in
+  Begutachtung ist, steht es nur als Text auf `forschung.html` mit ehrlichem Status. Offen:
+  FFG-Logo, Wiedervorlage in `BD/projects/ffg-kleinprojekt-2026/README.md` § *Termine*.
 - **Presse (`#aktuell`): maximal zwei Karten, veraltete ersetzen statt stapeln.** Eine sichtbar
   veraltete News-Sektion schadet mehr als keine. ⚠ **Die Termin-Karte (KI Days) ist nach dem
   30.09.2026 abgelaufen** und muss dann getauscht werden.
