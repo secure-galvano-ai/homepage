@@ -119,9 +119,15 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   **Lehre daraus: Beim Umbenennen `grep` über *alle* Seiten laufen lassen, nicht nur über die,
   die man gerade umbaut** — inklusive `<meta>`-Beschreibungen und `og:`-Tags.
 - **Bewusst getragener Widerspruch, nicht erneut melden** *(Stefan, 11.08.2026)*:
-  `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" und „Stefan Maier
-  **e.U.**" — beides weicht von der Linie ab (korrekt: *Modellpruefung*, Firmierung ohne e.U.).
-  Das Heft ist gedruckt; beim naechsten Nachdruck mitkorrigieren.
+  `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" — weicht von der
+  Linie ab (korrekt: *Modellpruefung*). Das Heft ist gedruckt; beim naechsten Nachdruck
+  mitkorrigieren.
+- **Kontaktblock im Portraet nachgesetzt** *(Stefan, 25.09.2026)*: „Stefan Maier e.U." und die
+  Alberschwender Postleitzahl stehen in der Homepage-Kopie als „Stefan Maier / AT-6960 Buch". Eine
+  Quelle gibt es nicht (InDesign-Seite des Verlags) — die Zeilen wurden im PDF getauscht, in der
+  eingebetteten Univers LT Std Light Condensed; deren Teilsatz hatte keine 9, sie ist die um 180°
+  gedrehte 6 (fontTools). Sonst ist die Seite pixelgleich mit dem Original, das unveraendert unter
+  `01_Außenauftritt/02_Veranstaltungen/20260618_Galvano Forum SWISSGALVANIK/01_Anbahnung/` liegt.
 
 ## Optional (noch offen)
 
