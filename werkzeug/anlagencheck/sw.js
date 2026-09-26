@@ -16,7 +16,7 @@
    und beim Aktivieren wird jeder andere weggeraeumt. */
 "use strict";
 
-const LAGER = "anlagencheck-39275995dcb4";
+const LAGER = "anlagencheck-64f3976cc908";
 const SEITE = "./";
 
 self.addEventListener("install", (e) => {
