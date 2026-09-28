@@ -140,8 +140,8 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
       (2) 0:53 „Backupdateien aus Anlagensteuerung/MES/X-Ray/Labor" als Integrationsweg,
       (3) 2:32 „fast keine dieser Fehler stimmen mit dem Anomaliescore ueberein" — klingt wie
       eine Einschraenkung, ist der Nutzen, (4) 4:22 der Preis „1.500 € netto" fuer die
-      Standortanalyse, der auf der Seite bewusst nirgends steht (dort hat nur die
-      Schnellanalyse einen). Danach neu hochladen und **nur die ID im `<iframe>` tauschen**
+      Standortanalyse — seit 10.09.2026 steht er auch auf der Startseite (`#ablauf`), der
+      Punkt ist damit kein Widerspruch mehr, nur noch ein Grund fuer die Neuvertonung. Danach neu hochladen und **nur die ID im `<iframe>` tauschen**
       (§ *Demo-Seite*). Bis dahin bleibt das Video online — eine tote Landingpage kostet mehr.
 - [ ] **Deckt der Inspektionsbericht „technisch ausgereift"?** So sagt es das Video bei 4:14.
       Die Modellpruefung ergab *Low Risk* — eine Risiko-, keine Reifegradaussage. Wenn der
