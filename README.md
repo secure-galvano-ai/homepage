@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-09-25
+**Stand:** 2026-09-28
 
 ---
 
@@ -34,6 +34,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 09.09.2026 | **Zweiter Demo-Videolink gestrichen** *(Stefan)* — „Überwachung im laufenden Betrieb" (`lWJQq0x2_1c`) ergab zusammen mit dem Hauptvideo das vollständige Bild des Funktionsumfangs. Abschnitt heißt jetzt *Weitere Aufnahme* (Singular), „Auswertungen und Berichte" bleibt bewusst stehen. Die Videos selbst bleiben bestehen und werden weiter gezielt im Gespräch verschickt | Anlass: Prüfung des Video-Transkripts auf Preisgabe. Zwei Folgepunkte unter *Optional*: Neuvertonung von vier Stellen, Beleglage zu „technisch ausgereift" |
 | 25.09.2026 | **FFG-Projekt auf `forschung.html`** *(Stefan)* — neue erste Karte zum Kleinprojekt „ML Galvanik": Titel, zwei Sätze Fragestellung, Programm, Status, Laufzeit. Bewusst **ohne Verfahren** (was gemacht wird, nicht wie) und ohne Datengeber. Die Präsentation des aws-Vorhabens (PDF, Stand 07/2025) ist samt Datei entfernt | FFG-Logo auf der Startseite erst mit der Förderzusage — Regel unten |
 | 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
+| 28.09.2026 | **Belege vor das Pitch-Video** *(Stefan)* — TÜV-Kacheln und Logoleiste sind ein Abschnitt `#belege` direkt unter dem Hero; mobil Kacheln nebeneinander, Logos im 2×2-Raster. Kein Text geändert | Anlass: Clarity August 111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen — `BD/projects/akquise-strategie-h2-2026/benchmark-werchota.md` §4 Nr. 4. Wirkung im November-Lauf ablesen (CTA-Klicks, mobile Scrolltiefe) |
 
 ### Regeln, die daraus dauerhaft gelten
 
@@ -330,7 +331,7 @@ npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.htm
 
 ```
 homepage/
-  index.html               Predictive-Quality-Landing (ein roter Faden, KEINE Preise): Hero, Gruender-Stimme, Proof (TUeV/8-von-10), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Ablauf ohne Preis (#ablauf), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
+  index.html               Predictive-Quality-Landing (ein roter Faden): Hero, Belegstreifen direkt darunter (#belege: TUeV/8-von-10 + Logoleiste, seit 28.09.2026 VOR dem Video), Pitch-Video, Aktuell (#aktuell), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Ablauf (#ablauf) mit Preisen nur fuer die Einstiegsstufen (Standortanalyse 1.500 EUR, Vorprojekt 5.000 EUR netto, seit 10.09.2026; Umsetzung und Betreuung ohne Preis), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
   leistungen.html          Leistungsseite (seit 31.08.2026 wieder echt, handgeschrieben): Standortanalyse als
                            Schwerpunkt (#standortanalyse), Anwendungen, Portfolio, Abgrenzung, Sticky-CTA.
                            Sieben Anwendungen (#anwendungen) und acht Fragen (#fragen) mit

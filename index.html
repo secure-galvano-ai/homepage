@@ -411,6 +411,19 @@
             font-weight: 600;
         }
 
+        /* ===== BELEGE — Pruefzahlen + Logoleiste als EIN Streifen unter dem Hero ===== */
+        .belege { background: var(--weiss); padding: 56px 0 0; }
+        .belege-inner { max-width: 900px; text-align: center; }
+        .belege h2 { font-size: clamp(1.4rem, 2.6vw, 2rem); color: var(--dunkelblau); margin-bottom: 16px; }
+        .belege-lead { color: var(--text-body); font-size: 1.05rem; line-height: 1.7; max-width: 760px; margin: 0 auto 18px; }
+        .belege-frage { color: var(--text-body); font-size: 1rem; line-height: 1.7; max-width: 720px; margin: 0 auto 24px; }
+        .belege-kacheln { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
+        .belege-kachel { background: var(--hellgrau); border-radius: 14px; padding: 26px 20px; }
+        .belege-zahl { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.9rem; color: var(--schild-blau); line-height: 1; margin-bottom: 8px; }
+        .belege-zahl-gruen { color: var(--logo-gruen); }
+        .belege-text { font-size: 0.92rem; color: var(--text-body); line-height: 1.5; }
+        .belege .trust-bar { padding: 36px 0 40px; }
+
 
         /* ===== SERVICES ===== */
         .services {
@@ -1555,6 +1568,21 @@
             .hero-buttons { flex-direction: column; }
             .hero-buttons .btn { text-align: center; justify-content: center; }
             .trust-items { gap: 24px; }
+            /* Belegstreifen mobil unter einer Bildschirmhoehe halten (28.09.2026):
+               Kacheln nebeneinander, Logos als 2x2-Raster mit Text darunter. */
+            .belege { padding-top: 40px; }
+            .belege h2 { font-size: 1.25rem; margin-bottom: 12px; }
+            .belege-lead { font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px; }
+            .belege-frage { font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
+            .belege-kacheln { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .belege-kachel { padding: 16px 10px; }
+            .belege-zahl { font-size: 1.45rem; }
+            .belege-text { font-size: 0.8rem; line-height: 1.4; }
+            .belege .trust-bar { padding: 24px 0 28px; }
+            .belege .trust-items { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 12px; align-items: start; }
+            .belege .trust-item { flex-direction: column; justify-self: center; text-align: center; gap: 6px; font-size: 0.78rem; line-height: 1.35; }
+            .belege .trust-item img { height: 34px; }
+            .belege .trust-item img.logo-startupv { height: 28px; }
         }
     </style>
     <noscript><style>.fade-up{opacity:1;transform:none;}</style></noscript>
@@ -1643,6 +1671,56 @@
     </div>
 </section>
 
+<!-- ===== BELEGE — Glaubwuerdigkeit vor Emotion, direkt unter dem Hero =====
+     Seit 28.09.2026 VOR dem Pitch-Video (vorher darunter): Clarity August 111 Sitzungen,
+     0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen -- die TUeV-Zahlen
+     sah mobil kaum jemand. Pruefzahlen und Logoleiste sind EIN Streifen; mobil stehen die
+     Kacheln nebeneinander und die Logos im 2x2-Raster, damit vor dem Video keine zwei
+     Bildschirmhoehen Belege liegen (CSS .belege). Anlass:
+     BD/projects/akquise-strategie-h2-2026/benchmark-werchota.md §4 Nr. 4. -->
+<section class="belege" id="belege">
+    <div class="container fade-up belege-inner">
+        <p class="section-label">Warum Sie das ernst nehmen können</p>
+        <h2>Unabhängig geprüft — nachvollziehbar statt Blackbox</h2>
+        <p class="belege-lead">Das Verfahren wurde <strong>unabhängig von TÜV AUSTRIA geprüft</strong> (Trusted AI, Modellprüfung 2026). Zu jeder Meldung sehen Sie, welche Sensoren dahinterstecken und warum sie auffällig geworden ist.</p>
+        <p class="belege-frage">Die entscheidende Frage bei jedem KI-System: Findet es die eine echte Auffälligkeit — oder erzeugt es überwiegend Fehlalarme? Die Prüfung gibt die Antwort:</p>
+        <div class="belege-kacheln">
+            <div class="belege-kachel">
+                <div class="belege-zahl">8 von 10</div>
+                <div class="belege-text">echte Fehler in der TÜV-Prüfung erkannt</div>
+            </div>
+            <div class="belege-kachel">
+                <div class="belege-zahl belege-zahl-gruen">unter 5&nbsp;%</div>
+                <div class="belege-text">Fehlalarme in der Prüfung — die Meldungen bleiben überprüfbar</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logoleiste als Teil des Streifens -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <img src="assets/img/aws.png" alt="aws Austria Wirtschaftsservice" >
+                    Gefördert durch aws Deep Tech
+                </div>
+                <div class="trust-item">
+                    <img src="assets/img/startup-vorarlberg.svg" class="logo-startupv" alt="Startup Vorarlberg" >
+                    Programm Startup Vorarlberg
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C6 2 3 5 3 8.5C3 14 10 18 10 18S17 14 17 8.5C17 5 14 2 10 2Z" stroke="#2B5EA7" stroke-width="1.5" fill="none"/><path d="M7.5 9.5L9.5 11.5L13 7.5" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Über 20 Jahre Galvanotechnik
+                </div>
+                <a href="docs/sicherheit-methoden-standards.pdf" target="_blank" rel="noopener" class="trust-item" style="text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px dotted rgba(0,0,0,0.15);" title="Datensicherheit &amp; Compliance (PDF): EU AI Act · NIS2 · IEC 62443 · DSGVO · TÜV Trusted AI">
+                    <img src="assets/img/trustifai.png" alt="TRUSTIFAI by TÜV AUSTRIA Group" >
+                    Geprüft &middot; EU AI Act · NIS2 (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== INTRO-VIDEO (Pitch) ===== -->
 <section style="padding:56px 0;background:var(--hellgrau);border-bottom:1px solid var(--silber);">
     <div class="container fade-up" style="max-width:860px;text-align:center;">
@@ -1667,52 +1745,9 @@
     </div>
 </section>
 
-<!-- ===== PROOF EARLY — Glaubwuerdigkeit vor Emotion ===== -->
-<section style="padding:56px 0 44px;background:var(--weiss);">
-    <div class="container fade-up" style="max-width:900px;">
-        <p class="section-label" style="text-align:center;">Warum Sie das ernst nehmen können</p>
-        <h2 style="text-align:center;font-size:clamp(1.4rem,2.6vw,2rem);color:var(--dunkelblau);margin-bottom:16px;">Unabhängig geprüft — nachvollziehbar statt Blackbox</h2>
-        <p style="text-align:center;color:var(--text-body);font-size:1.05rem;line-height:1.7;max-width:760px;margin:0 auto 30px;">Das Verfahren wurde <strong>unabhängig von TÜV AUSTRIA geprüft</strong> (Trusted AI, Modellprüfung 2026). Zu jeder Meldung sehen Sie, welche Sensoren dahinterstecken und warum sie auffällig geworden ist.</p>
-        <p style="text-align:center;color:var(--text-body);font-size:1rem;line-height:1.7;max-width:720px;margin:0 auto 28px;">Die entscheidende Frage bei jedem KI-System: Findet es die eine echte Auffälligkeit — oder erzeugt es überwiegend Fehlalarme? Die Prüfung gibt die Antwort:</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;text-align:center;">
-            <div style="background:var(--hellgrau);border-radius:14px;padding:26px 20px;">
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--schild-blau);line-height:1;margin-bottom:8px;">8 von 10</div>
-                <div style="font-size:0.92rem;color:var(--text-body);line-height:1.5;">echte Fehler in der TÜV-Prüfung erkannt</div>
-            </div>
-            <div style="background:var(--hellgrau);border-radius:14px;padding:26px 20px;">
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.9rem;color:var(--logo-gruen);line-height:1;margin-bottom:8px;">unter 5&nbsp;%</div>
-                <div style="font-size:0.92rem;color:var(--text-body);line-height:1.5;">Fehlalarme in der Prüfung — die Meldungen bleiben überprüfbar</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== TRUST BAR ===== -->
-<div class="trust-bar">
-    <div class="container">
-        <div class="trust-items">
-            <div class="trust-item">
-                <img src="assets/img/aws.png" alt="aws Austria Wirtschaftsservice" >
-                Gefördert durch aws Deep Tech
-            </div>
-            <div class="trust-item">
-                <img src="assets/img/startup-vorarlberg.svg" class="logo-startupv" alt="Startup Vorarlberg" >
-                Programm Startup Vorarlberg
-            </div>
-            <div class="trust-item">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C6 2 3 5 3 8.5C3 14 10 18 10 18S17 14 17 8.5C17 5 14 2 10 2Z" stroke="#2B5EA7" stroke-width="1.5" fill="none"/><path d="M7.5 9.5L9.5 11.5L13 7.5" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Über 20 Jahre Galvanotechnik
-            </div>
-            <a href="docs/sicherheit-methoden-standards.pdf" target="_blank" rel="noopener" class="trust-item" style="text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px dotted rgba(0,0,0,0.15);" title="Datensicherheit &amp; Compliance (PDF): EU AI Act · NIS2 · IEC 62443 · DSGVO · TÜV Trusted AI">
-                <img src="assets/img/trustifai.png" alt="TRUSTIFAI by TÜV AUSTRIA Group" >
-                Geprüft &middot; EU AI Act · NIS2 (PDF)
-            </a>
-        </div>
-    </div>
-</div>
-
 <!-- ===== AKTUELL — Presse + Termin =====
-     Platzierung bewusst HOCH (direkt nach der Trust-Bar): Clarity zeigt, dass nur ~15 %
+     Platzierung bewusst HOCH (direkt nach dem Pitch-Video; seit 28.09.2026 stehen die
+     Belege ueber dem Video): Clarity zeigt, dass nur ~15 %
      den unteren Seitenbereich erreichen — eine News-Sektion im Fuss waere faktisch tot.
      Urheberrecht: NUR Kurzzitate + Quellenangabe + Link. Keine VN-Fotos uebernehmen
      (©Fa/Demako, ©FA), kein VOL.AT-Logo als Bild — Quellen-Nennung als Text genuegt.
@@ -1845,7 +1880,10 @@
 </section>
 
 <!-- ===== ABLAUF =====
-     Bewusst ohne Preise: der Kunde soll den WEG verstehen, verhandelt wird im Gespraech. -->
+     Preise stehen nur an den Einstiegsstufen: Standortanalyse 1.500 EUR und Vorprojekt
+     5.000 EUR netto (seit 10.09.2026, Quelle BD/areas/preise.yaml). Umsetzung und
+     Betreuung bleiben ohne Preis -- sie werden nach Aufwand kalkuliert und im Gespraech
+     vereinbart. -->
 <!-- ===== ABLAUF — die Treppe, bewusst kurz =====
      Die Startseite zeigt, DASS es einen Weg gibt; erklaert wird er auf
      leistungen.html. Vorher standen beide Erklaerungen nebeneinander
