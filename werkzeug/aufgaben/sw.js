@@ -14,7 +14,7 @@
    Fassung weiterleben. */
 "use strict";
 
-const LAGER = "aufgaben-519bde2f47c7";
+const LAGER = "aufgaben-ca9f80572224";
 const SEITE = "./";
 
 self.addEventListener("install", (e) => {
