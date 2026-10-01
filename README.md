@@ -34,7 +34,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 09.09.2026 | **Zweiter Demo-Videolink gestrichen** *(Stefan)* — „Überwachung im laufenden Betrieb" (`lWJQq0x2_1c`) ergab zusammen mit dem Hauptvideo das vollständige Bild des Funktionsumfangs. Abschnitt heißt jetzt *Weitere Aufnahme* (Singular), „Auswertungen und Berichte" bleibt bewusst stehen. Die Videos selbst bleiben bestehen und werden weiter gezielt im Gespräch verschickt | Anlass: Prüfung des Video-Transkripts auf Preisgabe. Zwei Folgepunkte unter *Optional*: Neuvertonung von vier Stellen, Beleglage zu „technisch ausgereift" |
 | 25.09.2026 | **FFG-Projekt auf `forschung.html`** *(Stefan)* — neue erste Karte zum Kleinprojekt „ML Galvanik": Titel, zwei Sätze Fragestellung, Programm, Status, Laufzeit. Bewusst **ohne Verfahren** (was gemacht wird, nicht wie) und ohne Datengeber. Die Präsentation des aws-Vorhabens (PDF, Stand 07/2025) ist samt Datei entfernt | FFG-Logo auf der Startseite erst mit der Förderzusage — Regel unten |
 | 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
-| 28.09.2026 | **Belege vor das Pitch-Video** *(Stefan)* — TÜV-Kacheln und Logoleiste sind ein Abschnitt `#belege` direkt unter dem Hero; mobil Kacheln nebeneinander, Logos im 2×2-Raster. Kein Text geändert | Anlass: Clarity August 111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen — `BD/projects/akquise-strategie-h2-2026/benchmark-werchota.md` §4 Nr. 4. Wirkung im November-Lauf ablesen (CTA-Klicks, mobile Scrolltiefe) |
+| 28.09.2026 | **Belege vor das Pitch-Video** *(Stefan)* — TÜV-Kacheln und Logoleiste sind ein Abschnitt `#belege` direkt unter dem Hero; mobil Kacheln nebeneinander, Logos im 2×2-Raster. Kein Text geändert | Anlass: Clarity August 111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen — `BD/archive/akquise-strategie-h2-2026-in-areas-2026-10/benchmark-werchota.md` §4 Nr. 4. Wirkung im November-Lauf ablesen (CTA-Klicks, mobile Scrolltiefe) |
 
 ### Regeln, die daraus dauerhaft gelten
 
@@ -68,14 +68,14 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 - **Aus- und Weiterbildung ist seit 02.09.2026 wieder auf der Website** — `ausbildung.html`
   als eigene Seite, Nav-Eintrag „Datenwerkstatt" (der naheliegende Name „KI-Werkstatt" ist in
   Vorarlberg von der WKO belegt). Grund ist die **Neuausrichtung des
-  Angebotsschwerpunkts** (Strategiegespraech 02.09.2026, `BD/projects/ausbildung-und-coaching-2026/`):
+  Angebotsschwerpunkts** (Strategiegespraech 02.09.2026, `BD/areas/coaching-und-ausbildung/`):
   verkauft wird die Befaehigung, nicht mehr nur die fertige Software. Damit ist der Beschluss
   vom 25.08. ueberholt — **die Messerkenntnis dahinter gilt aber weiter und hat den Aufbau
   bestimmt:** 104 Sitzungen mit **0 Klicks** auf den Buchungs-CTA heisst, dass ein reiner
   Termin-Aufruf auf dieser Seite nicht traegt. Deshalb steht jetzt ein **niederschwelliger
   zweiter Weg** daneben (Ueberblick als PDF, ohne E-Mail-Gate), und die Seite hat eine
   **Erfolgsdefinition mit Abbruchkriterium** statt einer Daumenprobe
-  (`BD/projects/ausbildung-und-coaching-2026/zyklus-und-experiment.md`). Der Absatz darunter
+  (`BD/areas/coaching-und-ausbildung/README.md` § Experiment). Der Absatz darunter
   steht als Begruendung der damaligen Entscheidung — er ist Historie, nicht mehr die Regel.
 - ~~**Kein Coaching-Baustein auf der Website**~~ *(Stefan, 25.08.2026 — am 02.09.2026 abgeloest)*.
   Anlass war ein privates 1:1-KI-Coaching, das Spass gemacht hat. Es kommt trotzdem **nicht**
@@ -348,7 +348,7 @@ homepage/
                            und Sitemap). Am 02.09. abends von 13 auf 8 Sektionen gekuerzt, Reihenfolge
                            Nutzen -> Ablauf -> Beispiel -> Angebot. Flyer dazu:
                            docs/datenwerkstatt-ueberblick.pdf, gebaut aus
-                           BD/projects/ausbildung-und-coaching-2026/build_flyer_datenwerkstatt.py.
+                           BD/areas/coaching-und-ausbildung/build_flyer_datenwerkstatt.py.
                            Vorgaengerfassungen: git show feed14a:ausbildung.html (Kurs 2026-07),
                            git show 417588d:ausbildung.html (Langfassung vom 02.09.)
   sicherheit.html          Compliance-Seite (seit 11.08.2026 wieder indexiert, in Sitemap und Footer, bewusst NICHT
@@ -391,7 +391,7 @@ homepage/
                              standortanalyse-flyer.pdf        BD/templates/flyer-corporate/build_flyer.py
                              standortanalyse-musterbefund.pdf BD/templates/befund-corporate/build_befund.py
                              leistungen-ueberblick.pdf        BD/templates/uebersicht-corporate/build_uebersicht.py
-                             datenwerkstatt-ueberblick.pdf    BD/projects/ausbildung-und-coaching-2026/build_flyer_datenwerkstatt.py
+                             datenwerkstatt-ueberblick.pdf    BD/areas/coaching-und-ausbildung/build_flyer_datenwerkstatt.py
                              anwendung-ueberblick.pdf         BD/templates/flyer-corporate/build_flyer_anwendung.py
                              nda-muster.pdf                   BD/scripts/nda_pdf.py
                              angebot-standortanalyse-muster.pdf   BD/scripts/angebot_muster.py
@@ -750,7 +750,7 @@ vermeiden — stattdessen Token `var(--name)` nutzen.
 |---------|-------|------|
 | Microsoft 365 | Mail `smaier@rvh.at`, Tenant **PhonixData** | `admin.microsoft.com` · DKIM: `security.microsoft.com` |
 | Microsoft Bookings — **der Link der Website** *(umgestellt 14.09.2026)* | Erstgespräch buchen, **30 Min.**, buchbar Mo 13–17, Di/Mi 9–19, Do 9–14 *(eigene Zeiten im Dienst, Stefan 01.10.2026)* — läuft auf dem rvh.at-Tenant. Dienst `secure galvano ai - unverbindliches Erstgespräch`. Gepflegt wird in `_generate_layout.py` die Konstante `BOOKING_URL` | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2` |
-| Microsoft Bookings — **Arbeitstermin Coaching** *(30.09.2026)* | Arbeitstermine zu einem gegengezeichneten Coaching-Angebot, **2 Std.**, Teams, ohne Preis, Pflichtfeld Unternehmen, eigene Planungsrichtlinie (Erinnerung 1 Tag vorher, keine Nachfass-Mail). **Nie auf der Website verlinken** — der Link steht nur im Angebot (`stammdaten.buchung_coaching`, Begründung in `BD/projects/ausbildung-und-coaching-2026/README.md`) | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/WguGbyr1pUWQxZrPA0ISQA2` |
+| Microsoft Bookings — **Arbeitstermin Coaching** *(30.09.2026)* | Arbeitstermine zu einem gegengezeichneten Coaching-Angebot, **2 Std.**, Teams, ohne Preis, Pflichtfeld Unternehmen, eigene Planungsrichtlinie (Erinnerung 1 Tag vorher, keine Nachfass-Mail). **Nie auf der Website verlinken** — der Link steht nur im Angebot (`stammdaten.buchung_coaching`, Begründung in `BD/areas/coaching-und-ausbildung/README.md` § Angebot und Ablauf) | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/WguGbyr1pUWQxZrPA0ISQA2` |
 | Microsoft Bookings — Sammel-Buchungsseite | Zeigt **alle sichtbaren Dienste zur Auswahl** — seit 30.09.2026 Erstgespräch **und** Arbeitstermin Coaching. Der Coaching-Dienst muss sichtbar bleiben: **Bookings sperrt einen ausgeblendeten Dienst auch über seinen Direktlink** („Wir bieten im Moment keine Dienste … an", geprüft 30.09.2026). **Die Website verlinkt deshalb nur den Dienst-Direktlink des Erstgesprächs** — der zeigt nur diesen einen Dienst (geprüft ohne Anmeldung, 30.09.2026) | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
 | Microsoft Bookings — Kurzgespräch 30 Min. *(03.09.2026, abgelöst · seit 21.09.2026 ausgeblendet)* | Erster Akquise-Dienst, **1:N-Gruppendienst** — deshalb fehlten Name und Mailadresse des Buchenden im Outlook-Termin und Fremde konnten in denselben Slot buchen. **Ausgeblendet, nicht gelöscht**, weil der Termin vom 14.09. daran hängt; der Direktlink führt seitdem ins Leere. Der Typ 1:1/1:N wird beim Anlegen festgelegt und ist danach **nicht änderbar** | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/j9sT4U4iQ0WwxD0oCfcdeg2` |
 | Microsoft Clarity | Web-Analyse (Opt-in, Projekt `wql3vpgrxl`) | `clarity.microsoft.com` |
