@@ -520,7 +520,7 @@ gehen an das freigegebene Postfach `dmarc@rvh.at` (angelegt 17.08.2026). Eskalat
 | erledigt 17.08.2026 | `p=none` + `rua` — sammelt Belege, aendert nichts an der Zustellung |
 | erledigt 21.09.2026 | Berichte ausgewertet (37 Stueck). Nur Microsoft 365 sendet, `include:_spf-eu.ionos.com` raus |
 | erledigt 21.09.2026 | `~all` → `-all` und `p=none` → `p=quarantine` |
-| **offen, Ausloeser statt Termin** | `p=quarantine` → `p=reject`, wenn 2–4 Wochen lang nichts auffaellt |
+| entschieden 01.10.2026 | `p=reject` gestrichen — das aws-Gateway bricht DKIM, Endstand bleibt `p=quarantine` |
 
 **Stand 14.09.2026 — der erste Serientermin ist ohne Verschaerfung verstrichen, und das ist richtig
 so.** Schritt 1 kam nicht zustande: Die Berichte liegen ausschliesslich in `dmarc@rvh.at`, das
@@ -606,66 +606,17 @@ Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC 
 bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
 die DKIM-Signatur ueberlebt sie.
 
-**Naechster und letzter Schritt: `p=reject`.** Ausloeser, kein Termin — beim Monatslauf-Block 4.
-**Das Kriterium ist ein Zustellbeleg, keine Frist** *(praezisiert 21.09.2026)*: Ist seit der
-Umstellung mindestens **eine Mail an `aws.at` gegangen und angekommen**? Erst dann setzen.
+**Endstand: `p=quarantine`, `p=reject` ist gestrichen** *(Stefan, 01.10.2026)*. Die Berichte vom
+22.09. bis 30.09.2026 zeigen **jede** Mail an `aws.at` (vier Stueck) ueber das aws-Gateway
+`eu.cloud-sec-av.com` mit DKIM und SPF `fail` und `disposition=quarantine` beim Empfaenger. Sie
+kamen an — die Antworten liegen vor —, aber nur, weil Quarantaene dort Junk heisst; bei `reject`
+wuerden sie abgewiesen. Der Fehler sitzt im Gateway der Foerderstelle und ist von hier nicht zu
+beheben. **Neu aufgreifen nur, wenn ein Bericht aws-Mails mit `disposition=none` zeigt** (dann hat
+aws das Gateway umgestellt). Die monatliche Wiedervorlage im Monatslauf entfaellt.
 
-Der Grund steht oben: Das Gateway der Foerderstelle bricht die DKIM-Signatur und ist damit der
-einzige bekannte Fall, der bei `p=reject` abgewiesen wuerde. **Saubere Berichte belegen ihn
-nicht** — sie zeigen nur, was gesendet wurde. Ging in dem Monat keine Mail an aws, ist der Befund
-leer und nicht gut; dann verschieben. Eine Wartefrist von zwei bis vier Wochen war die frueher
-hier genannte Faustregel und ist als Kriterium schwaecher: Zeit allein erzeugt den Testfall nicht.
-
-Danach faellt die Wiedervorlage ersatzlos weg.
-
-#### Wiedervorlage — Teilschritt im Monatslauf *(angelegt 17.08.2026, umgezogen 21.09.2026)*
-
-Erinnernde Aufgabe mit Urteilsbedarf, deshalb Kalendertermin und **kein** Task-Scheduler-Eintrag.
-Bis 21.09.2026 ein eigener Serientermin am zweiten Montag (14.09. · 12.10. · 09.11.); seither
-**Teilschritt von Block 4 des Monatslaufs** (2. Werktag, Skill `/monatslauf`) — zusammen mit dem
-Sicherheits-Monatslauf, an dem er ohnehin hing. **Er faellt ersatzlos weg, sobald `p=reject`
-steht**; dann hier und im Skill streichen, statt ihn als toten Punkt mitzuschleppen. Der Ablauf
-bleibt unveraendert und ist hier hinterlegt, damit er einen Kalenderwechsel ueberlebt:
-
-```
-Betreff: DMARC rvh.at — Berichte pruefen und letzte Stufe setzen
-
-Stand 21.09.2026: SPF steht auf -all ohne IONOS-Include, DMARC auf
-p=quarantine. Offen ist nur noch p=reject.
-
-SCHRITT 1 — Auswerten
-  py "Business Development/areas/compliance/scripts/dmarc_berichte_holen.py"
-  py "Business Development/areas/compliance/scripts/dmarc_auswerten.py" <ordner>
-Das erste Skript holt die Anhaenge ueber MS Graph aus dmarc@rvh.at (das
-Postfach muss dafuer NICHT im Outlook-Profil haengen), das zweite fasst
-alle Berichte zusammen, loest die sendenden IPs auf und gibt ein Votum.
-Erwartet wird Microsoft 365 (spf.protection.outlook.com); bekannt und
-harmlos sind das aws-Gateway eu.cloud-sec-av.com und Wix/SendGrid.
-Taucht etwas anderes auf: NICHT verschaerfen, erst klaeren.
-
-SCHRITT 2 — Das Kriterium ist ein Zustellbeleg, keine Frist:
-Ist seit dem 21.09.2026 mindestens eine Mail an aws.at gegangen UND
-angekommen? Nur dann im IONOS-DNS setzen:
-  TXT _dmarc  v=DMARC1; p=reject; rua=mailto:dmarc@rvh.at; fo=1
-Sonst verschieben. Grund: Das aws-Gateway bricht die DKIM-Signatur, das
-ist der einzige bekannte Fall, der bei p=reject abgewiesen wuerde —
-und saubere Berichte belegen ihn NICHT, sie zeigen nur, was gesendet
-wurde. Ging keine Mail an aws, ist der Befund leer, nicht gut.
-Danach faellt dieser Teilschritt ersatzlos weg — hier und im Skill
-/monatslauf streichen.
-
-PRUEFEN nach jeder Aenderung (autoritative NS, Stand 21.09.2026):
-  nslookup -type=TXT rvh.at ns1065.ui-dns.de
-  nslookup -type=TXT _dmarc.rvh.at ns1093.ui-dns.com
-  Die Panel-Anzeige ist KEIN Beleg, sie hinkt minutenlang nach.
-  Danach eine Testmail ueber mail-tester.com, Ziel weiterhin >= 9/10.
-
-ABBRUCHKRITERIUM: Wenn nach einer Verschaerfung eine legitime Mail
-nicht ankommt, sofort eine Stufe zurueck.
-
-Hintergrund und Soll-Konfiguration beider Zonen:
-homepage/README.md, Abschnitt DNS-Konfiguration.
-```
+Zum Pruefen nach einer DNS-Aenderung gegen die autoritativen Nameserver, nicht gegen das Panel:
+`nslookup -type=TXT _dmarc.rvh.at ns1093.ui-dns.com`. Berichte bei Bedarf mit
+`dmarc_berichte_holen.py` und `dmarc_auswerten.py` (`Business Development/areas/compliance/scripts/`).
 
 ## IONOS — Vertrag, Zugang, Vorfall *(Stand 17.08.2026)*
 
