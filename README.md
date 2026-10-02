@@ -413,6 +413,7 @@ homepage/
   favicon.ico              Browser-Tab Icon (Root — Browser-Konvention)
   apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
   CNAME                    Custom Domain Config
+  _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung (seit 02.10.2026) — nie docs/ eintragen
   robots.txt               Crawler-Erlaubnis
   sitemap.xml              Google Sitemap (5 URLs)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
