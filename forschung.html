@@ -223,6 +223,86 @@
         }
         .research-mail:hover { background: var(--schild-blau-hover); transform: translateY(-2px); }
 
+        /* aws-Projekt: Ergebnis und Dank an die Mitwirkenden */
+        .aws-abschluss {
+            background: var(--weiss);
+            border: 1px solid var(--silber);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 48px;
+        }
+        .aws-abschluss h3 { font-size: 1.25rem; color: var(--dunkelblau); margin-bottom: 10px; }
+        .aws-lead { color: var(--text-light); line-height: 1.7; max-width: 760px; margin-bottom: 28px; }
+        .aws-ergebnisse {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 44px;
+        }
+        .aws-ergebnis {
+            background: var(--hellgrau);
+            border-top: 3px solid var(--schild-blau);
+            border-radius: 12px;
+            padding: 20px 20px 22px;
+        }
+        .aws-ergebnis:last-child { border-top-color: var(--logo-gruen); }
+        .aws-zeit {
+            display: block;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--schild-blau);
+            margin-bottom: 8px;
+        }
+        .aws-ergebnis h4 { font-size: 0.98rem; color: var(--dunkelblau); margin-bottom: 6px; line-height: 1.35; }
+        .aws-ergebnis p { font-size: 0.86rem; color: var(--text-light); line-height: 1.6; }
+
+        .dank { border-top: 1px solid var(--silber); padding-top: 40px; text-align: center; }
+        .dank .aws-lead { margin: 0 auto 32px; }
+        .dank-liste {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .dank-person { width: 190px; display: flex; flex-direction: column; align-items: center; }
+        .dank-foto {
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--weiss);
+            box-shadow: 0 0 0 2px var(--silber), 0 8px 20px rgba(27, 42, 74, 0.12);
+            margin-bottom: 14px;
+        }
+        .dank-monogramm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--schild-blau), var(--dunkelblau));
+            color: var(--weiss);
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+        .dank-name { font-family: 'Montserrat', Arial, sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--dunkelblau); line-height: 1.3; }
+        a.dank-name:hover { color: var(--schild-blau); text-decoration: underline; }
+        .dank-rolle { font-size: 0.82rem; color: var(--text-light); line-height: 1.45; margin-top: 4px; }
+        .dank-gruppe {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin: 40px 0 20px;
+        }
+
         /* Footer */
         .footer { background: var(--dunkelblau); color: rgba(255,255,255,0.7); padding: 40px 0; }
         .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
@@ -252,7 +332,13 @@
             }
             .research-grid { grid-template-columns: 1fr; }
             .project-meta { grid-template-columns: 1fr; }
+            .aws-abschluss { padding: 28px 22px; }
+            .aws-ergebnisse { grid-template-columns: repeat(2, 1fr); }
+            .dank-person { width: 130px; }
             .footer-inner { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 520px) {
+            .aws-ergebnisse { grid-template-columns: 1fr; }
         }
 
     </style>
@@ -351,10 +437,101 @@
             </div>
         </div>
 
-        <!-- Foto zum Foerderantrag (17.08.2026): dokumentiert den Anlass, nicht eine
-             Unternehmensstruktur. Bewusst KEINE Team-Ueberschrift und keine Rollen-Kacheln --
-             die Firmierung ist ein Einzelunternehmen, eine Strukturbehauptung waere irrefuehrend.
-             Bildfreigabe der abgebildeten Personen liegt vor (Stefan, 17.08.2026). -->
+        <!-- Ergebnis und Dank zum aws-Projekt (Stefan, 02.10.2026). Quelle: Erfahrungsbericht zum
+             aws-Abschlussevent am 01.10.2026, Folien 3, 4, 5, 10 und 12. Pilotbetrieb weder genannt
+             noch umschrieben; immer "Modellpruefung", nie "Zertifizierung".
+             Dank statt Team-Ueberschrift: Mitwirkende als Personen mit ihrem Beitrag, nicht als
+             Belegschaft -- die Firmierung ist ein Einzelunternehmen. Pruefung und Foerderung stehen
+             getrennt, damit die TUeV-Pruefung nicht als Teamarbeit gelesen wird.
+             Fotos aus der Vortragsfolie ohne Einzelfreigabe: Stefans Entscheidung, Risiko bewusst
+             getragen. Meldet sich jemand, die Karte sofort entfernen. Verena Becker ohne Foto, weil
+             die Folie nur ein Gruppenbild zeigt und die Zuordnung offen ist. Bilder in
+             assets/img/dank/ sind neu kodiert, ohne Kamera-Metadaten. -->
+        <div class="aws-abschluss">
+            <h3>Was in 15 Monaten entstanden ist</h3>
+            <p class="aws-lead">Entstanden ist <strong>Predictive Quality</strong>: Aus vorhandenen Prozessdaten wird der Qualitätszustand jeder Charge berechnet — damit ein Betrieb reagieren kann, bevor ein größerer Schaden entsteht. Vorgestellt beim Abschlussevent der aws am 1.&nbsp;Oktober&nbsp;2026.</p>
+            <div class="aws-ergebnisse">
+                <div class="aws-ergebnis">
+                    <span class="aws-zeit">06/2025</span>
+                    <h4>Start auf simulierten Daten</h4>
+                    <p>Digitaler Zwilling einer Galvanikanlage und ein erster Prototyp.</p>
+                </div>
+                <div class="aws-ergebnis">
+                    <span class="aws-zeit">12/2025</span>
+                    <h4>An einer realen Anlage</h4>
+                    <p>Anomalieerkennung an den Prozessdaten einer laufenden Galvanikanlage.</p>
+                </div>
+                <div class="aws-ergebnis">
+                    <span class="aws-zeit">03–05/2026</span>
+                    <h4>Im Betrieb bewertet</h4>
+                    <p>Zwei Fachleute im Betrieb haben die Meldungen beurteilt.</p>
+                </div>
+                <div class="aws-ergebnis">
+                    <span class="aws-zeit">06/2026</span>
+                    <h4>Modellprüfung abgeschlossen</h4>
+                    <p>TÜV AUSTRIA Trusted AI, 02.06.2026. Einstufung nach EU AI Act: Low Risk.</p>
+                </div>
+            </div>
+
+            <div class="dank">
+                <h3>Danke an die Menschen, die das ermöglicht haben</h3>
+                <p class="aws-lead">Ein Projekt wie dieses trägt niemand allein. Diese Menschen haben mitgedacht, mitgearbeitet, geprüft und begleitet.</p>
+                <ul class="dank-liste">
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/maier-brigitte.jpg" alt="Brigitte Maier" width="112" height="112" loading="lazy">
+                        <span class="dank-name">Brigitte Maier</span>
+                        <span class="dank-rolle">Strategie &amp; Business Development</span>
+                    </li>
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/basic.jpg" alt="Sandra Basic" width="112" height="112" loading="lazy">
+                        <span class="dank-name">Sandra Basic</span>
+                        <span class="dank-rolle">Finance &amp; HR</span>
+                    </li>
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/kraft.jpg" alt="Fabian Kraft" width="112" height="112" loading="lazy">
+                        <span class="dank-name">Fabian Kraft</span>
+                        <span class="dank-rolle">Data Engineering</span>
+                    </li>
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/paulmichl.jpg" alt="Jürgen Paulmichl" width="112" height="112" loading="lazy">
+                        <a class="dank-name" href="https://www.linkedin.com/in/mmst-j%C3%BCrgen-paulmichl-bsc-ma/" target="_blank" rel="noopener">Jürgen Paulmichl</a>
+                        <span class="dank-rolle">Data Security</span>
+                    </li>
+                    <li class="dank-person">
+                        <span class="dank-foto dank-monogramm" aria-hidden="true">VB</span>
+                        <a class="dank-name" href="https://www.linkedin.com/in/verena-becker-457598243/" target="_blank" rel="noopener">Verena Becker</a>
+                        <span class="dank-rolle">Cybersicherheit, NIS</span>
+                    </li>
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/bors.jpg" alt="Jenny Bors" width="112" height="112" loading="lazy">
+                        <a class="dank-name" href="https://www.linkedin.com/in/jenny-bors-254435180/" target="_blank" rel="noopener">Jenny Bors, BSc</a>
+                        <span class="dank-rolle">Innovationsschutz &amp; IP&#8209;Management</span>
+                    </li>
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/knecht-kleber.jpg" alt="Christine Knecht-Kleber" width="112" height="112" loading="lazy">
+                        <span class="dank-name">Christine Knecht-Kleber</span>
+                        <span class="dank-rolle">Recht</span>
+                    </li>
+                </ul>
+                <p class="dank-gruppe">Prüfung und Förderung</p>
+                <ul class="dank-liste">
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/brune.jpg" alt="Barbara Brune" width="112" height="112" loading="lazy">
+                        <a class="dank-name" href="https://www.linkedin.com/in/barbara-b-9b4096202/" target="_blank" rel="noopener">Barbara Brune</a>
+                        <span class="dank-rolle">Statistik &amp; Data Science, TÜV&nbsp;AUSTRIA</span>
+                    </li>
+                    <li class="dank-person">
+                        <img class="dank-foto" src="assets/img/dank/weinmuellner.jpg" alt="Dr. Regina Weinmüllner" width="112" height="112" loading="lazy">
+                        <span class="dank-name">Dr. Regina Weinmüllner</span>
+                        <span class="dank-rolle">Förderbetreuung, aws</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Foto zum Foerderantrag (17.08.2026): dokumentiert den Anlass. Bildfreigabe der
+             abgebildeten Personen liegt vor (Stefan, 17.08.2026). Keine Team-Ueberschrift
+             (Einzelunternehmen) -- der Dank an die Mitwirkenden steht im Block darueber. -->
         <figure style="margin:0 0 48px;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:20px;">
             <img src="assets/img/aws-jury-2025.jpg" alt="Stefan Maier mit Sandra Basic und Brigitte Maier beim aws-Jurytermin in Wien" loading="lazy" style="display:block;width:100%;max-width:620px;margin:0 auto;border-radius:10px;">
             <figcaption style="max-width:620px;margin:16px auto 0;font-size:0.88rem;color:var(--text-light);line-height:1.65;text-align:center;">
