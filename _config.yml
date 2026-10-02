@@ -1,0 +1,11 @@
+# GitHub Pages baut diese Seite mit Jekyll. Ohne diese Datei lieferte es auch die
+# Repo-Dokumentation im Root aus: README.md roh und OPTIMIERUNG.md als HTML (belegt 01.10.2026),
+# mit internen Betriebsdetails darin. Hier nur, was nicht live gehoert.
+#
+# NICHT docs/ eintragen: dort liegen die PDFs, auf die die Seiten verlinken. docs/_src/ und alle
+# _generate_*.py blendet Jekyll wegen des Unterstrichs ohnehin aus.
+# Weiterhin KEINE .nojekyll anlegen (README, Fallstricke Deployment Nr. 5).
+exclude:
+  - README.md
+  - OPTIMIERUNG.md
+  - AENDERUNGSPROZESS.md
