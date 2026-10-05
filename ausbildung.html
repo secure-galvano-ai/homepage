@@ -377,8 +377,25 @@
         .pbox li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 2px; background: var(--logo-gruen); }
         .pbox.nein li::before { background: var(--silber); }
 
+        /* In Zusammenarbeit mit */
+        .zusammenarbeit { padding: 8px 0 56px; }
+        .zusammenarbeit-karte {
+            display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: center;
+            background: var(--weiss); border: 1px solid var(--silber); border-radius: 16px;
+            padding: 28px 32px; margin-top: 22px;
+        }
+        .zusammenarbeit-karte img { width: 100%; max-width: 260px; height: auto; }
+        .zusammenarbeit-karte p { font-size: 0.95rem; line-height: 1.7; color: var(--text-body); }
+        .zusammenarbeit-karte .link {
+            display: inline-block; margin-top: 12px; font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600; font-size: 0.9rem; color: var(--schild-blau);
+        }
+        .zusammenarbeit-karte .link:hover { text-decoration: underline; }
+
         @media (max-width: 860px) {
             .beispiel-inner, .passt-grid { grid-template-columns: 1fr; gap: 26px; }
+            .zusammenarbeit-karte { grid-template-columns: 1fr; gap: 18px; text-align: center; padding: 24px 22px; }
+            .zusammenarbeit-karte img { margin: 0 auto; max-width: 220px; }
             .acard { grid-template-columns: 44px 1fr; }
             .acard .preis { grid-column: 2; text-align: left; }
             .kette .pfeil { display: none; }
@@ -702,6 +719,26 @@
                     zusammen ins Giftsegment, weil beide „zum Verzinken gehören“. Das Werkzeug
                     meldet sofort, was daraus entsteht — mit Fundstelle.</figcaption>
             </figure>
+        </div>
+    </div>
+</section>
+
+<!-- ===== IN ZUSAMMENARBEIT MIT (05.10.2026) =====
+     Gegenseitige Verlinkung; Logo vom Partner selbst geliefert, verkleinert und ohne Metadaten.
+     Steht hinter dem Lernwerkzeug-Beispiel, weil es dasselbe Thema ist: Lernen in der Galvanik. -->
+<section class="zusammenarbeit" id="zusammenarbeit">
+    <div class="container">
+        <div class="section-label" style="color:var(--schild-blau);">In Zusammenarbeit mit</div>
+        <div class="zusammenarbeit-karte">
+            <a href="https://galvanocalc.app/" target="_blank" rel="noopener">
+                <img src="assets/img/kooperation/galvanocalc.png" alt="GalvanoCalc &amp; Learn" width="260" height="98" loading="lazy">
+            </a>
+            <div>
+                <p><strong>GalvanoCalc &amp; Learn</strong> ist eine kostenlose Lern- und Arbeitsplattform
+                    für die Galvanotechnik, entwickelt von Timo Leuthold. Wer Grundlagen festigen oder im
+                    Betriebsalltag schnell etwas nachrechnen will, findet dort einen guten Einstieg.</p>
+                <a class="link" href="https://galvanocalc.app/" target="_blank" rel="noopener">Zu GalvanoCalc &amp; Learn →</a>
+            </div>
         </div>
     </div>
 </section>
