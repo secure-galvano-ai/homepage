@@ -18,7 +18,7 @@ Aufruf:
     py _scripts/wochenbericht.py --keine-kurzfassung
 
 Ablage: `_analytics/wochen/<JJJJ>-W<NN>.md` (Langfassung, gitignored wie die Historie)
-und `~/Desktop/HOMEPAGE-WOCHE.md` (Kurzfassung, wird jede Woche ueberschrieben).
+und `_analytics/wochen/AKTUELL.md` (Kurzfassung, wird jede Woche ueberschrieben).
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ HISTORY = ROOT / "_analytics" / "clarity_history.jsonl"
 YT_HISTORY = ROOT / "_analytics" / "youtube_history.jsonl"
 BERICHTE = ROOT / "_analytics" / "wochen"
 PROTOKOLL = ROOT / "_analytics" / "_wochenbericht.log"
-KURZFASSUNG = Path.home() / "Desktop" / "HOMEPAGE-WOCHE.md"
+KURZFASSUNG = BERICHTE / "AKTUELL.md"
 
 # Unterhalb dieser Wochensumme wird jede Differenz zur Vorwoche als Rauschen markiert.
 # Herleitung: OPTIMIERUNG.md §5 -- bei ~90 Sitzungen im Monat ist kein Vergleich
@@ -461,7 +461,7 @@ def bericht_bauen(w: dict, v: dict, vier_wochen: list[dict], videos: list[dict])
 
 
 def kurzfassung_bauen(w: dict, v: dict, schnitt: float, pfad: Path) -> str:
-    """Zwölf Zeilen für den Desktop. Alles Weitere steht in der Langfassung."""
+    """Zwölf Zeilen zum schnellen Lesen. Alles Weitere steht in der Langfassung."""
     z: list[str] = []
     a = z.append
     a(f"# Homepage — Woche {w['jahr']}-W{w['kw']:02d} ({w['von']:%d.%m.}–{w['bis']:%d.%m.})")
@@ -641,7 +641,7 @@ def main() -> None:
             KURZFASSUNG.write_text(
                 kurzfassung_bauen(diese, vorige, schnitt, ziel), encoding="utf-8"
             )
-        except OSError as fehler:  # Desktop kann umgezogen sein -- kein Grund zum Abbruch
+        except OSError as fehler:  # Kurzfassung ist Beiwerk -- kein Grund zum Abbruch
             protokollieren(f"Kurzfassung nicht geschrieben: {fehler}")
 
     meldung = (

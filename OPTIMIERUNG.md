@@ -137,7 +137,7 @@ rechnen (`py _scripts/wochenbericht.py --woche 2026-W37`). Die vorgeschaltete Ak
 `youtube_abrufe.py` holt die Video-Zählerstände, sonst stünde in der Video-Tabelle dauerhaft
 „Erststand" statt eines Wochenzuwachses.
 
-**Ablage:** `_analytics/wochen/<JJJJ>-W<NN>.md` (Langfassung) und `Desktop\HOMEPAGE-WOCHE.md`
+**Ablage:** `_analytics/wochen/<JJJJ>-W<NN>.md` (Langfassung) und `_analytics/wochen/AKTUELL.md`
 (zwölf Zeilen, wird jede Woche überschrieben).
 
 **Für die Frage „wird es mehr?“:** `py _scripts/wochenbericht.py --gesamt` schreibt
