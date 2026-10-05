@@ -36,6 +36,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
 | 28.09.2026 | **Belege vor das Pitch-Video** *(Stefan)* — TÜV-Kacheln und Logoleiste sind ein Abschnitt `#belege` direkt unter dem Hero; mobil Kacheln nebeneinander, Logos im 2×2-Raster. Kein Text geändert | Anlass: Clarity August 111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen — `BD/archive/akquise-strategie-h2-2026-in-areas-2026-10/benchmark-werchota.md` §4 Nr. 4. Wirkung im November-Lauf ablesen (CTA-Klicks, mobile Scrolltiefe) |
 | 02.10.2026 | **Bestand statt Austausch** *(Stefan: „Homepage bitte anpassen")* — neuer Abschnitt `#bestand` „Ihre Anlage muss nicht neu sein" nach dem Dreischritt; auf `leistungen.html` „Keine Nachrüstung" als Fähigkeit statt Aufwand gefasst („Ihre Anlage, wie sie ist"); Weiche *Selbst können* trägt den Eigentumssatz der Datenwerkstatt. **Das sind die drei Änderungen des Oktobers** | Anlass: Kernbotschaften neu geordnet (`BD/areas/brand/messaging.md` §4a): auswerten, was schon aufgezeichnet wird, und Werkzeuge im Eigentum des Betriebs nach vorn. Neuer Marker `link-standortanalyse-bestand`, Wirkung im November-Lauf (`OPTIMIERUNG.md` §4) |
+| 05.10.2026 | **„In Zusammenarbeit mit" auf `ausbildung.html`** *(Stefan)* — Block mit Partnerlogo, zwei Sätzen und Link nach dem Lernwerkzeug-Beispiel; gegenseitige Verlinkung | Kein Optimierungsschritt, zählt nicht zu den drei des Oktobers; Regel *Kooperationen* unten |
 
 ### Regeln, die daraus dauerhaft gelten
 
@@ -43,6 +44,13 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   Trust-Bar liest sich als „gefördert durch", egal was daneben steht. Solange ein Ansuchen in
   Begutachtung ist, steht es nur als Text auf `forschung.html` mit ehrlichem Status. Offen:
   FFG-Logo, Wiedervorlage in `BD/projects/ffg-kleinprojekt-2026/README.md` § *Termine*.
+- **Kooperationen stehen dort, wo ihr Thema steht — nicht auf der Startseite** *(Stefan,
+  05.10.2026)*. Eine gegenseitige Verlinkung bekommt einen Block „In Zusammenarbeit mit" auf der
+  passenden Unterseite (Lernplattform → `ausbildung.html`). **Ein Logostreifen auf der
+  Startseite erst ab drei Partnern** — ein einzelnes Logo dort wirkt dünn und stört die eine
+  Botschaft. Logo nur vom Partner selbst, verkleinert und ohne Metadaten nach
+  `assets/img/kooperation/`. Keine Partner-Begründung in Kommentaren oder Commits (Repo ist
+  öffentlich).
 - **Presse (`#aktuell`): maximal zwei Karten, veraltete ersetzen statt stapeln.** Eine sichtbar
   veraltete News-Sektion schadet mehr als keine. ⚠ **Die Termin-Karte (KI Days) ist nach dem
   30.09.2026 abgelaufen** und muss dann getauscht werden.
