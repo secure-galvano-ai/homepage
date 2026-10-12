@@ -9,7 +9,7 @@
 <div class="page-hero-content">
 <p class="section-label">Datensicherheit &amp; Compliance</p>
 <h1>Sechs Rahmenwerke, die für Galvanikbetriebe relevant sind</h1>
-<p>OEM-Kunden in der Automobilindustrie verlangen zunehmend Nachweise zur Datensicherheit ihrer Lieferanten. Ab Oktober 2026 greift in Österreich das NISG (NIS-2-Umsetzung), in Deutschland das NIS2UmsuCG; die Schweiz regelt Meldepflichten eigenständig über das Informationssicherheitsgesetz. Diese Seite zeigt, welche Rahmenwerke für die Standortanalyse, das Vorprojekt und ein späteres Live-System adressiert wurden und wie die Umsetzung konkret aussieht.</p>
+<p>OEM-Kunden in der Automobilindustrie verlangen zunehmend Nachweise zur Datensicherheit ihrer Lieferanten. In Deutschland gilt seit Dezember 2025 das NIS2UmsuCG, in Österreich greift ab Oktober 2026 das NISG (NIS-2-Umsetzung); die Schweiz regelt Meldepflichten eigenständig über das Informationssicherheitsgesetz. Diese Seite zeigt, welche Rahmenwerke für die Standortanalyse, das Vorprojekt und ein späteres Live-System adressiert wurden und wie die Umsetzung konkret aussieht.</p>
 </div>
 </div>
 </section>
@@ -39,7 +39,7 @@
 <h2>EU Cyber Resilience Act (VO 2024/2847)</h2>
 <span class="framework-ref">Meldepflichten ab 11.09.2026 · Vollanwendung 11.12.2027</span>
 </div>
-<p>Der Cyber Resilience Act fokussiert auf sichere Entwicklungsprozesse und Lieferketten-Security. Jede Code-Änderung läuft durch sieben automatisierte Prüfungen (unter anderem statische Codeanalyse, Abhängigkeitsprüfung und Lizenz-Check), Commits werden kryptografisch mit einem Hardware-Token (Yubikey) signiert, Änderungen sind über die gesamte Historie nachvollziehbar. Für kritische Sicherheitsupdates wird die Reaktionsfrist im Wartungsvertrag vereinbart.</p>
+<p>Der Cyber Resilience Act fokussiert auf sichere Entwicklungsprozesse und Lieferketten-Security. Jede Code-Änderung läuft durch sieben automatisierte Prüfungen (unter anderem statische Codeanalyse, Abhängigkeitsprüfung und Lizenz-Check), Release-Stände werden kryptografisch mit einem Hardware-Token signiert, jede Änderung ist mit Autor und Zeitpunkt über die gesamte Historie nachvollziehbar. Für kritische Sicherheitsupdates wird die Reaktionsfrist im Wartungsvertrag vereinbart.</p>
 </article>
 <article class="framework">
 <div class="framework-head">
@@ -51,7 +51,7 @@
 <article class="framework">
 <div class="framework-head">
 <h2>IEC 62443-3-3</h2>
-<span class="framework-ref">Industrial Control Systems Security · Edition 2024</span>
+<span class="framework-ref">Industrial Control Systems Security · Ausgabe 2013</span>
 </div>
 <p>IEC 62443 ist der zentrale Standard für Cybersecurity in industriellen Steuerungssystemen. Ein wichtiges Prinzip ist der einseitige Datenfluss: Daten dürfen von der Anlage zur Auswertung fließen, niemals zurück. So kann ein kompromittiertes Auswertungssystem über diesen Weg nicht in den Produktionsprozess eingreifen. Diese Trennung ist in der Architektur fest verankert — die Auswertung läuft auf einem abgeschotteten lokalen System mit ausschließlich lesendem Zugriff. Keine Schreibrechte auf SPS, Bad-Steuerung oder Anlagentechnik. Das ist nicht nur eine technische Maßnahme, sondern auch eine vertragliche Zusage.</p>
 </article>

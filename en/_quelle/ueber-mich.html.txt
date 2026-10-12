@@ -53,7 +53,7 @@ Die Kompetenz bleibt, das austauschbare Wort faellt weg. -->
 </figure>
 <figure>
 <img src="assets/img/werdegang-2-physik.jpg" alt="Stefan Maier an der Tafel vor quantenmechanischen Gleichungen, Universität Wien" loading="lazy" decoding="async" width="539" height="659">
-<figcaption><span class="jahr">2014</span>Physiker<br>MSc, Universität Wien</figcaption>
+<figcaption><span class="jahr">2016</span>Physiker<br>MSc, Universität Wien</figcaption>
 </figure>
 <figure>
 <img src="assets/img/werdegang-3-prozess.jpg" alt="Porträt Stefan Maier aus der Zeit als Prozessoptimierer und Lean Manager" loading="lazy" decoding="async" width="539" height="659">
@@ -246,7 +246,7 @@ const CERTIFICATES = [
 { slug: "04-msc-masterarbeit", title: "Beurteilung Masterarbeit", subtitle: "High Pressure Torsion auf CoCrFeMnNi High-Entropy-Alloy", year: "2016", category: "akademisch" },
 { slug: "06-lehrbrief-oberflaechentechniker", title: "Lehrbrief Oberflächentechniker", subtitle: "WKO Vorarlberg", year: "2006", category: "galvanik" },
 { slug: "07-meisterpruefung", title: "Meisterprüfung Oberflächentechnik", subtitle: "WKO Kärnten", year: "2009", category: "galvanik" },
-{ slug: "18-nisg-2026-wko", title: "Workshop NISG 2026 / NIS-2", subtitle: "Wirtschaftskammer Vorarlberg, Sparte Information &amp; Consulting — Cybersicherheit, Governance, Lieferketten-Sicherheit", year: "2026", category: "management" },
+{ slug: "18-nisg-2026-wko", title: "Workshop NISG 2026 / NIS-2", subtitle: "Wirtschaftskammer Vorarlberg, Sparte Information & Consulting — Cybersicherheit, Governance, Lieferketten-Sicherheit", year: "2026", category: "management" },
 { slug: "08-senior-process-manager", title: "Senior Process Manager (SPüK)", subtitle: "WIFI / Quality Austria", year: "2017", category: "management" },
 { slug: "09-itil-foundation", title: "ITIL Foundation IT Service Management", subtitle: "APMG International / AXELOS", year: "2017", category: "management" },
 { slug: "10-projektmanagement-pmi", title: "Projektmanagement nach PMI®", subtitle: "EFS Unternehmensberatung", year: "2016", category: "management" },

@@ -86,7 +86,9 @@ FOOTER_LINKS = [
     ("Demo", "demo.html", False),
     ("Datenwerkstatt", "ausbildung.html", False),
     ("Über mich", "ueber-mich.html", False),
-    ("Sicherheit (PDF)", "docs/sicherheit-methoden-standards.pdf", True),
+    # "Sicherheit (PDF)" entfernt am 12.10.2026: Das PDF hatte keine Quelle mehr und trug
+    # zwei ueberholte Aussagen (Commit-Signatur, NIS2-Frist DE). sicherheit.html ist die
+    # gepflegte Fassung desselben Inhalts.
     ("Forschung", "forschung.html", False),
     # Seite ist seit 11.08.2026 wieder indexiert: Compliance (NIS2 ab 10/2026, AI Act)
     # ist im Verkauf ein echter Einwand und diese Seite die einzige Antwort darauf.
