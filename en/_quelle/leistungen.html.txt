@@ -93,7 +93,7 @@ Preise kanonisch in areas/preise.yaml. -->
 <span style="color:var(--silber);">›</span>
 <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-hero" style="color:var(--text-light);text-decoration:none;">NDA</a>
 <span style="color:var(--silber);">›</span>
-<strong style="color:var(--dunkelblau);background:rgba(43,94,167,0.1);padding:3px 10px;border-radius:50px;">Standortanalyse 1.500 € netto</strong>
+<strong style="color:var(--weiss);background:rgba(255,255,255,0.14);padding:3px 10px;border-radius:50px;">Standortanalyse 1.500 € netto</strong>
 <span style="color:var(--silber);">›</span>
 <a href="#danach" data-funnel="link-vorprojekt-hero" style="color:var(--text-light);text-decoration:none;">Vorprojekt <span style="opacity:.75;">5.000 € netto</span></a>
 <span style="color:var(--silber);">›</span>

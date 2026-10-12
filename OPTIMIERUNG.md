@@ -14,7 +14,7 @@ Stellen sind mit 👤 markiert.
 
 | Quelle | Reichweite | Automatisierbar | Wofür |
 |---|---|---|---|
-| **Search Console** (Browser) | 16 Monate, Suchanfrage/Seite/Gerät/Land | ❌ bewusst manuell | Wie Leute ankommen — **nur 2–3× im Jahr nötig** |
+| **Search Console** (Browser) | 16 Monate, Suchanfrage/Seite/Gerät/Land | ❌ bewusst manuell | Wie Leute ankommen — **nur 2–3× im Jahr nötig**; der Sitemap-Check („Zuletzt gelesen") dagegen **monatlich** (Skill `/optimierung` Schritt 3, seit 12.10.2026) |
 | **Clarity Data Export API** | **nur 1–3 Tage**, 10 Abfragen/Tag, max. 3 Dimensionen, 1000 Zeilen, keine Pagination | ⚠️ nur mit täglichem Sammler | Aggregierte Kennzahlen + Frustsignale (Anzahl) |
 | **Clarity Heatmaps / Aufzeichnungen** | 28 Tage in der Oberfläche | ❌ nicht über API | *Welches* Element tote Klicks auslöst |
 | **Clarity Custom Events** (`data-funnel`, `scroll-*`, `pdf-*`) | 28 Tage in der Oberfläche | ❌ **gar nicht über API** | CTA-Klicks je Position, Beleg-Abrufe, Scrollmarken |
