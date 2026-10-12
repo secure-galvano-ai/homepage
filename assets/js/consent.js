@@ -193,14 +193,21 @@
         var banner = document.createElement('div');
         banner.className = 'consent-banner';
         banner.setAttribute('role', 'region');
-        banner.setAttribute('aria-label', 'Cookie-Zustimmung');
-        banner.innerHTML =
-            '<p>Wir nutzen <strong>Microsoft Clarity</strong> zur anonymen Analyse der Nutzung ' +
-            '(Heatmaps, Klick-Verhalten, Sitzungsaufzeichnungen). Das hilft uns, die Seite zu ' +
-            'verbessern. Details: <a href="datenschutz.html">Datenschutz</a>.</p>' +
+        // Englische Seiten liegen unter en/ (seit 12.10.2026): eigener Text, und der
+        // Verweis muss eine Ebene hoeher zeigen -- die Datenschutzerklaerung gibt es nur
+        // deutsch. Inhaltlich derselbe Einwilligungstext.
+        var en = document.documentElement.lang === 'en';
+        banner.setAttribute('aria-label', en ? 'Cookie consent' : 'Cookie-Zustimmung');
+        banner.innerHTML = (en
+            ? '<p>We use <strong>Microsoft Clarity</strong> to analyze anonymously how the site ' +
+              'is used (heatmaps, clicks, session recordings). This helps us improve the site. ' +
+              'Details: <a href="../datenschutz.html">privacy policy</a> (in German).</p>'
+            : '<p>Wir nutzen <strong>Microsoft Clarity</strong> zur anonymen Analyse der Nutzung ' +
+              '(Heatmaps, Klick-Verhalten, Sitzungsaufzeichnungen). Das hilft uns, die Seite zu ' +
+              'verbessern. Details: <a href="datenschutz.html">Datenschutz</a>.</p>') +
             '<div class="consent-actions">' +
-            '<button type="button" class="consent-btn consent-accept">Akzeptieren</button>' +
-            '<button type="button" class="consent-btn consent-reject">Ablehnen</button>' +
+            '<button type="button" class="consent-btn consent-accept">' + (en ? 'Accept' : 'Akzeptieren') + '</button>' +
+            '<button type="button" class="consent-btn consent-reject">' + (en ? 'Decline' : 'Ablehnen') + '</button>' +
             '</div>';
         document.body.appendChild(banner);
         // Solange das Banner steht, tritt der WhatsApp-Knopf mobil zurueck (siehe CSS oben).

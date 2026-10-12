@@ -1,0 +1,340 @@
+<title>Über mich — Stefan Maier · secure galvano ai</title>
+<meta name="description" content="Stefan Maier — Galvanikmeister, Materialphysiker (MSc), Lean Manager und KI-Entwickler. Werdegang, Motivation und Qualifikationen aus über 20 Jahren Praxis.">
+<meta property="og:title" content="Über mich — Stefan Maier · secure galvano ai">
+<meta property="og:description" content="Vom Galvanikbecken in die KI-Entwicklung — über 20 Jahre Praxis, Materialphysik (MSc mit Auszeichnung), Lean Manager, dokumentierte Nachweise.">
+<body>
+<!-- ===== HERO ===== -->
+<section class="page-hero">
+<div class="container">
+<div class="page-hero-grid">
+<img src="assets/img/portrait.webp" alt="Stefan Maier" class="page-hero-portrait">
+<div>
+<p class="label">Über mich</p>
+<h1>Stefan Maier</h1>
+<p class="role">Galvanikmeister mit Materialphysik-Hintergrund — heute KI-Diagnostiker für Galvanikbetriebe</p>
+<p class="lead">Über 20 Jahre Praxis am Galvanikbecken, ein Materialphysik-Studium dazu und die Erfahrung, KI-Systeme so zu bauen, dass sie in der Produktion tatsächlich genutzt werden. Hier finden Sie meinen Werdegang und die belegten Stationen meiner Laufbahn.</p>
+<div class="page-hero-links">
+<a href="https://www.linkedin.com/in/stefan-maier-bb0b73100" target="_blank" rel="noopener">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+LinkedIn Profil
+</a>
+<a href="docs/portrait_galvano_forum_2026.pdf" target="_blank" rel="noopener">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+Referenten-Portrait (PDF)
+</a>
+<a href="#nachweise">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+Direkt zu den Nachweisen
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== STORY ===== -->
+<section class="story">
+<div class="container story-inner">
+<h2>Vom Galvanikbecken in die KI-Entwicklung</h2>
+<!-- Werdegangs-Strecke (11.08.2026), Bilder aus dem Demo-Day-Deck, Folie 2.
+Vier echte Aufnahmen statt Behauptungen: Der Bogen Galvanik -> Physik ->
+Prozesse -> Gruendung IST das Verkaufsargument ("ich kenne beide Seiten") und
+wird als Bildstrecke in Sekunden erfasst, waehrend derselbe Inhalt als Text
+nur ueberflogen wird. Bewusst UEBER dem Fliesstext und nicht anstelle des
+Entmetallisierungs-Fotos weiter unten -- das bleibt mit seiner Bildunterschrift
+das staerkste Einzelbild der Seite.
+Stufe 3 heisst hier "Prozessoptimierung & Lean Management" und nicht wie auf
+der Folie "IT-Prozessberater": Genau dieses Etikett soll die Positionierung
+vermeiden (Spezialist statt Digitalisierungsberater, Akquise-Strategie 10.08.).
+Die Kompetenz bleibt, das austauschbare Wort faellt weg. -->
+<div class="werdegang">
+<figure>
+<img src="assets/img/werdegang-1-galvanik.jpg" alt="Stefan Maier im Chemikalienschutzanzug in der Entmetallisierung einer Galvanik" loading="lazy" decoding="async" width="539" height="659">
+<figcaption><span class="jahr">2005</span>Lehre &amp; Meister<br>Oberflächentechnik</figcaption>
+</figure>
+<figure>
+<img src="assets/img/werdegang-2-physik.jpg" alt="Stefan Maier an der Tafel vor quantenmechanischen Gleichungen, Universität Wien" loading="lazy" decoding="async" width="539" height="659">
+<figcaption><span class="jahr">2014</span>Physiker<br>MSc, Universität Wien</figcaption>
+</figure>
+<figure>
+<img src="assets/img/werdegang-3-prozess.jpg" alt="Porträt Stefan Maier aus der Zeit als Prozessoptimierer und Lean Manager" loading="lazy" decoding="async" width="539" height="659">
+<figcaption><span class="jahr">2020</span>Prozessoptimierung<br>&amp; Lean Management</figcaption>
+</figure>
+<figure>
+<img src="assets/img/werdegang-4-gruender.jpg" alt="Porträt Stefan Maier als Gründer von secure galvano ai" loading="lazy" decoding="async" width="539" height="659">
+<figcaption><span class="jahr">2025</span>Gründer<br>secure galvano ai</figcaption>
+</figure>
+</div>
+<p>Meine Karriere begann dort, wo es nach Säure riecht und Handschuhe Pflicht sind: in der Entmetallisierung einer Galvanik. Ich habe die Lehre zum Oberflächentechniker abgeschlossen, später die Meisterprüfung abgelegt und 15 Jahre direkt an Galvanikanlagen verbracht — von der Linie bis zur Verfahrenstechnik. Insgesamt sind es über 20 Jahre Branchenerfahrung.</p>
+<figure style="margin:24px auto 28px;max-width:360px;text-align:center;">
+<img src="assets/img/stefan-entmetallisierung.jpg" alt="Stefan Maier Anfang der 2000er in der Entmetallisierung einer Galvanik, im Chemikalienschutzanzug an der Galvanikwanne" width="760" height="1145" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;box-shadow:0 12px 28px rgba(27,42,74,0.18);">
+<figcaption style="margin-top:10px;font-size:0.84rem;color:#64748b;line-height:1.5;">Anfang der 2000er, in der Entmetallisierung. Schon damals derselbe Wunsch: alle Prozessdaten an einem Ort — statt Aufzeichnungen aus mehreren Quellen zusammenzusuchen, um einem Qualitätsproblem auf den Grund zu gehen.</figcaption>
+</figure>
+<p>Ich weiß, wie es sich anfühlt, wenn ein Bad kippt oder eine Reklamation eintrifft und man in der Ursachenanalyse den Überblick über hunderte Einzelwerte verliert. Dieses Wissen ist in die Auswertungslogik eingeflossen: eine priorisierte Liste mit Handlungsempfehlungen je Auswertungslauf, die Ihrem Team hilft, Aufgaben zu planen und Abweichungen zu erkennen, bevor daraus Ausschuss wird.</p>
+<p>Parallel habe ich an der Universität Wien Physik studiert — MSc Umweltphysik mit Schwerpunkt Materialphysik, Notenschnitt 1,1, mit Auszeichnung. Die Masterarbeit über High Pressure Torsion auf High-Entropy-Alloys hat mich gelehrt, wie man aus Messdaten reproduzierbare Ergebnisse ableitet — eine Disziplin, die im Produktionsalltag selten formalisiert ist.</p>
+<p>Dazu kam eine Lean-Management-Ausbildung als methodischer Hintergrund für strukturierte Ursachenanalyse. Praxis, Physik und Methodik greifen in jeder Auswertung ineinander.</p>
+<p>Am 1. Juni 2025 habe ich daraus ein eigenes Unternehmen gegründet — bewusst spezialisiert auf eine einzige Branche statt auf Digitalisierung im Allgemeinen.</p>
+<p>Heute verbinde ich diese drei Welten in KI-Systemen für die Galvanotechnik, die lokal laufen, nachvollziehbare Ergebnisse liefern und sich im Erstgespräch ohne Vorkenntnisse nachvollziehen lassen. Ich kenne beide Seiten — den Anlagenbetrieb und die Auswertung der Prozessdaten — und die Methodik, die beides verbindet. Für ein KI-Projekt in einer Fabrik müssen sonst mehrere Abteilungen zusammenarbeiten — und genau diese Abstimmung ist meist der Engpass, nicht die Technik. Ich kann eine Idee vormittags an der Anlage mit dem Anlagenfahrer besprechen und sie nachmittags als lauffähige Demo mit der Produktionsleitung durchgehen.</p>
+<!-- Gegen den Eindruck einer Ein-Personen-Firma (Stefan, 02.10.2026): ein Satz mit Verweis
+statt einer zweiten Namensliste -- die Personen stehen genau einmal, im Dank auf der
+Forschungsseite. Kein "Team", kein "Partner": die Firmierung ist ein Einzelunternehmen. -->
+<p>Allein arbeite ich dabei nicht. Sie haben einen Ansprechpartner, und hinter ihm stehen erfahrene Fachleute für Recht, Steuern, Daten- und Cybersicherheit sowie Schutzrechte — dieselben, die schon das erste Projekt mitgetragen haben. <a href="forschung.html#dank">Wer daran mitgewirkt hat&nbsp;→</a></p>
+<h3>Was mich antreibt</h3>
+<p>Galvanikbetrieben helfen, mit weniger Ressourcen mehr zu erreichen. Die Branche steht unter Druck — Energiekosten, Chemikalienpreise, ESG-Anforderungen, Fachkräftemangel. KI ist hier kein Selbstzweck, sondern ein Werkzeug, das nur bei passendem Einsatz Nutzen bringt.</p>
+<div class="focus-grid">
+<div class="focus-item">
+<h4>Praxis vor Hype</h4>
+<p>Lösungen müssen am Becken funktionieren, nicht nur in der Demo. Vor Ort einsetzbar, an das eigene Team übergebbar, datenschutzkonform.</p>
+</div>
+<div class="focus-item">
+<h4>Methodik vor Magie</h4>
+<p>Reproduzierbare Modelle, erklärbare Entscheidungen. Modellprüfung durch TÜV AUSTRIA Trusted AI (TRUSTIFAI) erfolgreich abgeschlossen.</p>
+</div>
+<div class="focus-item">
+<h4>Nachhaltigkeit vor Wachstum</h4>
+<p>Weniger Chemikalien, weniger Energie, weniger Wasser, weniger Ausschuss — als Zielgrößen, die im Projekt gemessen und dokumentiert werden.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== CREDENTIALS ===== -->
+<main class="credentials" id="nachweise">
+<div class="container">
+<div class="credentials-intro">
+<p class="label">Nachweise & Qualifikationen</p>
+<h2>Belegte Stationen aus über 20 Jahren Laufbahn</h2>
+<p>Vom Lehrbrief Oberflächentechniker über die Meisterprüfung bis zum Master of Science Umweltphysik (Schwerpunkt Materialphysik, mit Auszeichnung) — die formalen Diplome, Lehrbriefe und Zertifikate als Originale. Ein Klick auf eine Karte öffnet das Dokument in voller Auflösung.</p>
+</div>
+<!-- MODELLPRÜFUNG -->
+<section class="category">
+<div class="category-header">
+<h3>Modellprüfung &amp; Trusted AI</h3>
+<p>Inspektion des Anomalieerkennungs-Systems nach dem TÜV AUSTRIA AI Inspection Framework (TRUSTIFAI) — mit Auditgespräch und Live-Demonstration des Modells. Auszug aus dem Management Summary des Inspektionsberichts.</p>
+</div>
+<div class="grid" data-category="modellpruefung"></div>
+</section>
+<!-- AKADEMISCH -->
+<section class="category">
+<div class="category-header">
+<h3>Akademische Ausbildung</h3>
+<p>Universität Wien — Masterstudium Physik mit Schwerpunkt Materialphysik &amp; Umweltphysik.</p>
+</div>
+<div class="grid" data-category="akademisch"></div>
+</section>
+<!-- GALVANIK -->
+<section class="category">
+<div class="category-header">
+<h3>Galvanik &amp; Oberflächentechnik</h3>
+<p>Lehrbrief Oberflächentechniker und Meisterbrief im Original.</p>
+</div>
+<div class="grid" data-category="galvanik"></div>
+</section>
+<!-- MANAGEMENT -->
+<section class="category">
+<div class="category-header">
+<h3>Management &amp; Methodik</h3>
+<p>Process Management, IT Service Management, klassisches und agiles Projektmanagement, Wertstrom-Methodik.</p>
+</div>
+<div class="grid" data-category="management"></div>
+</section>
+<!-- WEITERBILDUNG -->
+<section class="category">
+<div class="category-header">
+<h3>Persönliche Weiterbildung</h3>
+<p>Ergänzende Ausbildungen — Coaching, Beratungspsychologie und persönliche Entwicklung.</p>
+</div>
+<div class="grid" data-category="weiterbildung"></div>
+</section>
+</div>
+</main>
+<!-- ===== VERÖFFENTLICHUNGEN / FACHPRESSE ===== -->
+<section id="fachpresse" style="padding:64px 0;background:#FFFFFF;border-top:1px solid #E0E5EC;">
+<div class="container" style="max-width:920px;">
+<p style="text-align:center;font-family:'Montserrat',Arial,sans-serif;font-weight:700;letter-spacing:0.12em;font-size:0.78rem;color:#2B5EA7;text-transform:uppercase;margin-bottom:20px;">Presse &amp; Veröffentlichungen</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;">
+<!-- Medienbericht: Urheberrecht — nur Kurzzitat + Quelle + Link, keine VN-Fotos, kein VOL.AT-Logo -->
+<div style="display:flex;flex-direction:column;gap:14px;padding:24px 26px;background:#F4F6F9;border:1px solid #E0E5EC;border-radius:12px;grid-column:1/-1;">
+<div style="display:flex;align-items:center;gap:16px;">
+<div style="width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#2B5EA7 0%,#1B2A4A 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(27,42,74,0.18);">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9h4"/><line x1="10" y1="7" x2="18" y2="7"/><line x1="10" y1="11" x2="18" y2="11"/><line x1="10" y1="15" x2="14" y2="15"/></svg>
+</div>
+<div>
+<span style="display:inline-block;font-size:0.66rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#3D8C3E;">Pressestimme · 6. August 2026</span>
+<div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;color:#1B2A4A;font-size:1rem;line-height:1.3;">„Alberschwender Ingenieur entwickelt Prüf-Software, die mit KI immer besser wird“</div>
+</div>
+</div>
+<p style="color:#64748b;font-size:0.9rem;line-height:1.55;margin:0;flex:1;"><em>Vorarlberger Nachrichten · VOL.AT</em> — Porträt über die KI-gestützte Prüfsoftware für die Galvanik, den abgeschlossenen ersten Pilotauftrag und die Frage, warum Einzelwerte im grünen Bereich trotzdem zu Qualitätsproblemen führen können.</p>
+<div style="padding-top:14px;border-top:1px solid #E0E5EC;font-size:0.82rem;color:#64748b;line-height:1.5;">
+Bericht von Andreas Scalet, <strong style="color:#334155;font-weight:600;">Vorarlberger Nachrichten</strong> — erschienen am 6.&nbsp;August 2026, auch auf VOL.AT. Die WISTO hat das Porträt zusätzlich auf wisto.at veröffentlicht.
+</div>
+<!-- Button-Slot gefuellt (17.08.2026) mit der WISTO-Fassung — VOL.AT bleibt aussen
+vor (Paywall nach dem Anriss, geprueft 17.08.2026). Volltext NICHT selbst hosten
+(Nachdruckrechte beim Verlag) — nur verlinken. -->
+<a href="https://www.wisto.at/aktuell/secure-galvani-ai/" target="_blank" rel="noopener" data-funnel="presse-wisto" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#2B5EA7;color:#fff;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;align-self:flex-start;">
+Porträt lesen (wisto.at)
+</a>
+<!-- /Button-Slot -->
+</div>
+<!-- Artikel 1: erschienen -->
+<div style="display:flex;flex-direction:column;gap:14px;padding:24px 26px;background:#F4F6F9;border:1px solid #E0E5EC;border-radius:12px;">
+<div style="display:flex;align-items:center;gap:16px;">
+<div style="width:52px;height:66px;border-radius:6px;background:linear-gradient(135deg,#2B5EA7 0%,#1B2A4A 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(27,42,74,0.18);">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12v16H4z"/><path d="M16 8h4v12h-4"/><line x1="7" y1="8" x2="13" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
+</div>
+<div>
+<span style="display:inline-block;font-size:0.66rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#3D8C3E;">Erschienen</span>
+<div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;color:#1B2A4A;font-size:1rem;line-height:1.3;">Vertrauenswürdige KI in der Galvanotechnik</div>
+</div>
+</div>
+<p style="color:#64748b;font-size:0.9rem;line-height:1.55;margin:0;flex:1;">Fachzeitschrift <em>Galvanotechnik</em> — KI-gestützte Anomalieerkennung, nachvollziehbar und prüfbar.</p>
+<a href="docs/fachartikel_leuze_vertrauenswuerdige_ki.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#2B5EA7;color:#fff;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;align-self:flex-start;transition:background 0.2s;" onmouseover="this.style.background='#1B2A4A';" onmouseout="this.style.background='#2B5EA7';">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+Fachartikel (PDF)
+</a>
+</div>
+<!-- Artikel 2: in Vorbereitung -->
+<div style="display:flex;flex-direction:column;gap:14px;padding:24px 26px;background:#F4F6F9;border:1px dashed #B9C2CE;border-radius:12px;">
+<div style="display:flex;align-items:center;gap:16px;">
+<div style="width:52px;height:66px;border-radius:6px;background:#fff;border:1px solid #E0E5EC;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5EA7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12v16H4z"/><path d="M16 8h4v12h-4"/><line x1="7" y1="8" x2="13" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
+</div>
+<div>
+<span style="display:inline-block;font-size:0.66rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#64748b;">In Vorbereitung</span>
+<div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;color:#1B2A4A;font-size:1rem;line-height:1.3;">Lehrlinge mit KI in der Datenauswertung schulen</div>
+</div>
+</div>
+<p style="color:#64748b;font-size:0.9rem;line-height:1.55;margin:0;flex:1;">Wie Fachkräfte und Lehrlinge mit modernen KI-Werkzeugen lernen, Prozessdaten selbst auszuwerten — Praxisbericht, demnächst in <em>Galvanotechnik</em>.</p>
+<a href="mailto:smaier@rvh.at?subject=Benachrichtigung%3A%20Leuze-Fachartikel%20KI-Schulung&amp;body=Hallo%20Stefan%2C%0A%0Abitte%20informieren%20Sie%20mich%2C%20wenn%20der%20Fachartikel%20zur%20KI-gest%C3%BCtzten%20Schulung%20erscheint.%0A%0AVielen%20Dank%21" data-funnel="mail-leuze-artikel" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#fff;color:#2B5EA7;border:1px solid #2B5EA7;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;align-self:flex-start;transition:all 0.2s;" onmouseover="this.style.background='#2B5EA7';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#2B5EA7';">
+Bei Erscheinen benachrichtigen
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== LIGHTBOX MODAL ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalCaption">
+<div class="modal-inner">
+<button class="modal-close" id="modalClose" aria-label="Schließen">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+</button>
+<button class="modal-prev" id="modalPrev" aria-label="Vorheriger Nachweis">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+<button class="modal-next" id="modalNext" aria-label="Nächster Nachweis">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+</button>
+<img class="modal-image" id="modalImage" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+<div class="modal-caption" id="modalCaption">
+<strong id="modalTitle"></strong>
+<span id="modalSubtitle"></span>
+<span class="counter" id="modalCounter"></span>
+</div>
+</div>
+</div>
+<!-- ===== CTA ===== -->
+<section class="cta-bottom">
+<div class="container">
+<h2>Reden wir über Ihre Möglichkeiten</h2>
+<p>30 Minuten kostenloses Erstgespräch. Sie schildern, was klemmt — Sie erfahren, was machbar ist.</p>
+<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn" data-funnel="cta-uebermich-abschluss">Erstgespräch buchen</a>
+</div>
+</section>
+<script>
+const CERTIFICATES = [
+{ slug: "19-tuev-inspektionsbericht", title: "Inspektionsbericht — Management Summary", subtitle: "TÜV AUSTRIA TRUSTIFAI — ML-gestützte Anomalieerkennung an stromzuführenden Elementen galvanischer Prozesse", year: "2026", category: "modellpruefung" },
+{ slug: "02-msc-bescheid", title: "Master of Science — Verleihungsurkunde", subtitle: "Universität Wien", year: "2016", category: "akademisch" },
+{ slug: "03-msc-abschluss", title: "Master Abschlusszeugnis", subtitle: "Universität Wien — Notenschnitt 1,1, mit Auszeichnung bestanden", year: "2016", category: "akademisch" },
+{ slug: "04-msc-masterarbeit", title: "Beurteilung Masterarbeit", subtitle: "High Pressure Torsion auf CoCrFeMnNi High-Entropy-Alloy", year: "2016", category: "akademisch" },
+{ slug: "06-lehrbrief-oberflaechentechniker", title: "Lehrbrief Oberflächentechniker", subtitle: "WKO Vorarlberg", year: "2006", category: "galvanik" },
+{ slug: "07-meisterpruefung", title: "Meisterprüfung Oberflächentechnik", subtitle: "WKO Kärnten", year: "2009", category: "galvanik" },
+{ slug: "18-nisg-2026-wko", title: "Workshop NISG 2026 / NIS-2", subtitle: "Wirtschaftskammer Vorarlberg, Sparte Information &amp; Consulting — Cybersicherheit, Governance, Lieferketten-Sicherheit", year: "2026", category: "management" },
+{ slug: "08-senior-process-manager", title: "Senior Process Manager (SPüK)", subtitle: "WIFI / Quality Austria", year: "2017", category: "management" },
+{ slug: "09-itil-foundation", title: "ITIL Foundation IT Service Management", subtitle: "APMG International / AXELOS", year: "2017", category: "management" },
+{ slug: "10-projektmanagement-pmi", title: "Projektmanagement nach PMI®", subtitle: "EFS Unternehmensberatung", year: "2016", category: "management" },
+{ slug: "11-scrum", title: "SCRUM Schulung", subtitle: "EFS Unternehmensberatung", year: "2017", category: "management" },
+{ slug: "12-wertstrom-workshop", title: "Wertstrom-Expertenworkshop", subtitle: "IPAL Institute for Productivity and applied Leadership", year: "2023", category: "management" },
+{ slug: "13-lehrbrief-industriekaufmann", title: "Lehrbrief Industriekaufmann", subtitle: "WKO Vorarlberg — mit Auszeichnung", year: "2006", category: "management" },
+{ slug: "14-ausbildertraining", title: "Zeugnis Ausbildertraining", subtitle: "Lernlabor, Prüfungsort Hohenems", year: "2008", category: "management" },
+{ slug: "15-sicherheitsvertrauensperson", title: "Sicherheitstechnisches Seminar", subtitle: "AUVA Salzburg — Sicherheitsvertrauensperson", year: "2007", category: "management" },
+{ slug: "16-psychologischer-berater", title: "Psychologischer Berater / Personal Coach", subtitle: "Hamburger Akademie für Fernstudien", year: "2018", category: "weiterbildung" },
+{ slug: "17-channel-ausbildung", title: "Channel-Ausbildung", subtitle: "Rhiannon Augenthaler", year: "2024", category: "weiterbildung" }
+];
+function escape(str) {
+return String(str).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+document.querySelectorAll('.grid[data-category]').forEach(grid => {
+const cat = grid.dataset.category;
+const items = CERTIFICATES.filter(c => c.category === cat);
+grid.innerHTML = items.map(c => `
+<article class="card" data-slug="${escape(c.slug)}" tabindex="0" role="button" aria-label="${escape(c.title)} öffnen">
+<div class="card-thumb">
+<img src="credentials/thumbs/${escape(c.slug)}.jpg" alt="${escape(c.title)}" loading="lazy">
+</div>
+<div class="card-body">
+<h3 class="card-title">${escape(c.title)}</h3>
+<p class="card-subtitle">${escape(c.subtitle)}</p>
+<span class="card-year">${escape(c.year)}</span>
+</div>
+</article>
+`).join('');
+});
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalSubtitle = document.getElementById('modalSubtitle');
+const modalCounter = document.getElementById('modalCounter');
+let currentIndex = -1;
+function openModal(slug) {
+currentIndex = CERTIFICATES.findIndex(c => c.slug === slug);
+if (currentIndex < 0) return;
+renderModal();
+modal.classList.add('open');
+document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+modal.classList.remove('open');
+document.body.style.overflow = '';
+currentIndex = -1;
+}
+function renderModal() {
+const c = CERTIFICATES[currentIndex];
+modalImg.src = `credentials/full/${c.slug}.jpg`;
+modalImg.alt = c.title;
+modalTitle.textContent = c.title;
+modalSubtitle.textContent = c.subtitle + ' · ' + c.year;
+modalCounter.textContent = `${currentIndex + 1} / ${CERTIFICATES.length}`;
+}
+function navigate(delta) {
+if (currentIndex < 0) return;
+currentIndex = (currentIndex + delta + CERTIFICATES.length) % CERTIFICATES.length;
+renderModal();
+}
+document.querySelectorAll('.card').forEach(card => {
+card.addEventListener('click', () => openModal(card.dataset.slug));
+card.addEventListener('keydown', (e) => {
+if (e.key === 'Enter' || e.key === ' ') {
+e.preventDefault();
+openModal(card.dataset.slug);
+}
+});
+});
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('modalPrev').addEventListener('click', (e) => { e.stopPropagation(); navigate(-1); });
+document.getElementById('modalNext').addEventListener('click', (e) => { e.stopPropagation(); navigate(1); });
+// Tippen auf das Bild schliesst ebenfalls (31.08.2026). Belegt im Klick-Waermebild:
+// #modalImage war mit 4 von 20 Tippvorgaengen der haeufigste tote Klick dieser Seite.
+// Das Bild fuellt mobil bis zu 92vh -- wer schliessen will, trifft fast zwangslaeufig
+// es statt des Hintergrunds, und dann passierte nichts. Prev/Next stoppen ihre
+// Ereignisse bereits selbst, koennen hier also nicht mitschliessen.
+modal.addEventListener('click', (e) => {
+if (e.target === modal || e.target === modalImg) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+if (!modal.classList.contains('open')) return;
+if (e.key === 'Escape') closeModal();
+else if (e.key === 'ArrowLeft') navigate(-1);
+else if (e.key === 'ArrowRight') navigate(1);
+});
+// Nav-Scroll + Mobile-Menue -> assets/js/site.js
+</script>
+</body>
+</html>

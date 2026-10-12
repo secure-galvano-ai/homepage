@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-09-28
+**Stand:** 2026-10-12
 
 ---
 
@@ -36,6 +36,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
 | 28.09.2026 | **Belege vor das Pitch-Video** *(Stefan)* — TÜV-Kacheln und Logoleiste sind ein Abschnitt `#belege` direkt unter dem Hero; mobil Kacheln nebeneinander, Logos im 2×2-Raster. Kein Text geändert | Anlass: Clarity August 111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen — `BD/archive/akquise-strategie-h2-2026-in-areas-2026-10/benchmark-werchota.md` §4 Nr. 4. Wirkung im November-Lauf ablesen (CTA-Klicks, mobile Scrolltiefe) |
 | 02.10.2026 | **Bestand statt Austausch** *(Stefan: „Homepage bitte anpassen")* — neuer Abschnitt `#bestand` „Ihre Anlage muss nicht neu sein" nach dem Dreischritt; auf `leistungen.html` „Keine Nachrüstung" als Fähigkeit statt Aufwand gefasst („Ihre Anlage, wie sie ist"); Weiche *Selbst können* trägt den Eigentumssatz der Datenwerkstatt. **Das sind die drei Änderungen des Oktobers** | Anlass: Kernbotschaften neu geordnet (`BD/areas/brand/messaging.md` §4a): auswerten, was schon aufgezeichnet wird, und Werkzeuge im Eigentum des Betriebs nach vorn. Neuer Marker `link-standortanalyse-bestand`, Wirkung im November-Lauf (`OPTIMIERUNG.md` §4) |
+| 12.10.2026 | **Englische Fassung unter `/en/`** *(Stefan: internationaler Auftritt, US-Markt)* — Startseite, Leistungen, Profil, Sicherheit; DE/EN-Schalter in der Nav, `hreflang` auf beiden Seiten jedes Paars, Hinweis für Browser ohne Deutsch, Cookie-Banner zweisprachig. Nebenbei: Nav auf allen Seiten 24 px Abstand, Menü bis 1100 px (vorher ragte sie auf Startseite/Profil/Forschung zwischen 690 und 860 px aus dem Fenster) | § *Englische Fassung*. Zählt nicht zu den drei Optimierungsschritten des Oktobers |
 | 05.10.2026 | **„In Zusammenarbeit mit" auf `ausbildung.html`** *(Stefan)* — Block mit Partnerlogo, zwei Sätzen und Link nach dem Lernwerkzeug-Beispiel; gegenseitige Verlinkung | Kein Optimierungsschritt, zählt nicht zu den drei des Oktobers; Regel *Kooperationen* unten |
 
 ### Regeln, die daraus dauerhaft gelten
@@ -180,6 +181,67 @@ bleibt im `<style>`-Block der jeweiligen Seite.
 generiert; ihr Seiten-CSS ist eine Kopie des Standes aus `leistungen.html` plus eigener
 Abschnitte. Zum Reaktivieren weiterer Seiten: in `_generate_layout.py` PAGES + NAV_LINKS ergaenzen,
 Marker in die Seite setzen, `py _generate_layout.py` laufen lassen.
+
+## Englische Fassung (`en/`) — seit 12.10.2026
+
+**Zweck:** US-Besucher (und alle ohne Deutsch) mit demselben Argument erreichen *(Stefan,
+12.10.2026)*. Übersetzt sind die vier Seiten, die einen Erstkontakt tragen:
+
+| Deutsch | Englisch |
+|---|---|
+| `index.html` | `en/index.html` |
+| `leistungen.html` | `en/services.html` |
+| `ueber-mich.html` | `en/about.html` |
+| `sicherheit.html` | `en/security.html` |
+
+Die Liste steht **genau einmal**, in `PAIRS` in `_generate_layout.py`. Demo, Datenwerkstatt
+und Forschung bleiben deutsch — Videos und Unterlagen dort sind deutsch. Impressum und
+Datenschutz bleiben deutsch und sind aus dem englischen Fuß mit „(German)“ verlinkt;
+deutsche PDFs und Videos tragen auf den englischen Seiten „(PDF, German)“ bzw. „Video in German.“
+
+**Was automatisch passiert** (`py _generate_layout.py`): englische Nav und Fuß, der
+DE/EN-Schalter (`lang-en`/`lang-de`), die `hreflang`-Paare im Kopf beider Seiten (x-default =
+Deutsch) und das **CSS**: Der erste `<style>`-Block der deutschen Seite wird 1:1 in den
+Marker `styles` der englischen kopiert. **Layout-Änderungen auf der deutschen Seite wandern
+damit ohne Zutun mit** — den Generator laufen lassen genügt.
+
+**Was nicht automatisch passiert, ist der Text — dafür gibt es die Prüfung.**
+`_scripts/check_englisch.py` hält unter `en/_quelle/` fest, auf welchem deutschen Stand jede
+Übersetzung beruht (Kopf-Metadaten, JSON-LD und Seiteninhalt ohne generierte Blöcke). Weicht
+die deutsche Seite ab, meldet sie die geänderten Zeilen als Diff. Sie läuft an drei Stellen:
+
+1. in `check_site.py` (Gate 1 vor jedem Deploy, Exit 1),
+2. als **pre-commit** dieses Repos (`py _scripts/check_englisch.py --hook-installieren`; der
+   Hook liegt nicht im Repo, nach einem neuen Klon einmal ausführen),
+3. täglich im Code-Wächter (`Englisch  homepage`).
+
+**Regel: Wer eine deutsche Seite mit englischem Gegenstück ändert, zieht die englische im selben
+Commit nach** — die gemeldeten Zeilen übersetzen, dann
+`py _scripts/check_englisch.py --bestaetigen <deutsche-seite>.html`. Bestätigen ohne
+Nachziehen hebelt die Kontrolle aus. Zusätzlich vergleicht die Prüfung Abschnitte,
+Überschriften und Funnel-Marker beider Seiten — ein beim Nachziehen verlorener Abschnitt fällt
+auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert hat, nicht, ob die
+Übersetzung gut ist.
+
+**Konventionen für englische Seiten:**
+- Gleiche `id`s und Klassen wie die deutsche Seite (CSS und Anker hängen daran); Verweise auf
+  gemeinsame Dateien mit `../`.
+- **Jeder Funnel-Marker endet auf `-en`**, `data-video` ebenso — sonst mischt Clarity beide
+  Sprachen (`OPTIMIERUNG.md` §4).
+- Glossar: Modellprüfung = *model audit* (nie *certification/certified*), Standortanalyse =
+  *Site Assessment*, Vorprojekt = *Feasibility Project*, Erstgespräch = *intro call*,
+  Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
+  „Regelkarte“ ist auch als *control chart* gesperrt (die Prüfung schlägt an).
+- Was nur für Österreich gilt (Förderprogramme), entfällt auf Englisch. Preise als
+  „€1,500 net (excl. VAT)“.
+- Englische FAQ-Knoten im JSON-LD tragen eigene `@id`s unter `/en/`.
+
+**Der Hinweis für Browser ohne Deutsch** (`site.js`): fest positioniert, einmal je Sitzung,
+nur auf deutschen Seiten, die den Sprachschalter tragen. **Bewusst keine automatische
+Umleitung** — Google rät davon ab, der Crawler käme sonst nicht mehr an die deutschen Seiten.
+Auf `leistungen.html` und `sicherheit.html` (eigenes CSS) bringt das Skript seinen Stil selbst
+mit; `sicherheit.html` lädt `site.js` nicht (eigenes Menü-Skript — beide zusammen schalten das
+Menü doppelt und es öffnet nicht, gemessen 12.10.2026), dort erscheint der Hinweis also nicht.
 
 ## Demo-Seite (`demo.html`) — scharf seit 02.09.2026
 
@@ -365,6 +427,11 @@ homepage/
                            (PAGES-Eintrag mit None = kein eigener Nav-Punkt); nur das Seiten-CSS ist noch eigen.
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
+  en/                      Englische Fassung (seit 12.10.2026): index, services, about, security.
+                           Nav/Fuss/hreflang/CSS kommen aus _generate_layout.py, der Text ist
+                           Handarbeit. en/_quelle/ = deutscher Stand je Uebersetzung fuer
+                           check_englisch.py (Jekyll liefert es wegen des Unterstrichs nicht aus).
+                           § Englische Fassung.
   impressum/ stefan-maier/ kontakt/ trusted-ai/ data-analytics/
                            Redirect-Stubs auf die WordPress-Alt-URLs — generiert aus _generate_redirects.py,
                            nicht von Hand editieren. Nur Pfade mit echtem Nachfolger; tote PDFs bleiben 404.
@@ -423,7 +490,7 @@ homepage/
   CNAME                    Custom Domain Config
   _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung (seit 02.10.2026) — nie docs/ eintragen
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (5 URLs)
+  sitemap.xml              Google Sitemap (13 URLs, davon 4 englisch -- Stand 12.10.2026)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
   _generate_leistungen.py  STILLGELEGT (Ziel ist nur noch ein Redirect-Stub) — bricht bewusst beim Aufruf ab
   README.md                Diese Datei

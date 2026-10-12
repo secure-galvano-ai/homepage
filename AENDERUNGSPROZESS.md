@@ -100,6 +100,11 @@ py _scripts/check_site.py       # Dateien, Links, Assets
 py _scripts/check_inhalt.py     # Metadaten, Überschriften, Marker, Dubletten, Sitemap
 ```
 
+`check_site.py` prüft seit 12.10.2026 zusätzlich die **englische Fassung** gegen die deutsche
+(`check_englisch.py`): Wer eine deutsche Seite mit englischem Gegenstück ändert, zieht die
+englische im selben Commit nach — sonst Exit 1 mit den geänderten Zeilen als Diff. Der
+pre-commit des Repos tut dasselbe. Ablauf und Glossar: `README.md` § *Englische Fassung*.
+
 `check_inhalt.py` bricht ab bei: doppelten Titeln oder Descriptions, fehlendem canonical,
 mehr als einer H1, doppelt vergebenen Funnel-Markern, einem CTA ohne Marker, toten
 Ankern, Seiten außerhalb der Sitemap. Als Hinweis meldet es Längen außerhalb der

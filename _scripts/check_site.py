@@ -146,7 +146,10 @@ def main() -> int:
     else:
         # Root-Seiten + die Redirect-Stubs aus _generate_redirects.py, damit ein
         # totes Redirect-Ziel genauso auffliegt wie ein toter interner Link.
-        pages = sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("*/index.html"))
+        # Seit 12.10.2026 dazu die englische Fassung unter en/ (en/index.html steckt
+        # schon im zweiten Muster, deshalb ueber eine Menge).
+        pages = sorted(set(ROOT.glob("*.html")) | set(ROOT.glob("*/index.html"))
+                       | set(ROOT.glob("en/*.html")))
 
     for path in pages:
         page = path.relative_to(ROOT).as_posix()
@@ -165,14 +168,10 @@ def main() -> int:
             err(page, f"undefiniertes Token {u}")
 
         # layout markers + generator sync
-        if gen and page in gen.PAGES:
-            active = gen.PAGES[page]
-            for name, want in [("nav", gen.render_nav(active)),
-                               ("footer", gen.render_footer()),
-                               ("wa-fab", gen.render_wa_fab()),
-                               ("sticky-cta", gen.render_sticky_cta())]:
+        if gen and (page in gen.PAGES or page in gen.PAGES_EN):
+            for name, want in gen.expected_blocks(page).items():
                 have = marker_content(html, name)
-                required = name in ("nav", "footer")
+                required = name in gen.REQUIRED
                 if have is None:
                     if required:
                         err(page, f"Marker '{name}' fehlt")
@@ -193,9 +192,12 @@ def main() -> int:
             # Root-absolute Pfade (/assets/...) zeigen auf die Site-Wurzel, nicht
             # auf das Laufwerk -- 404.html braucht sie, weil GitHub Pages sie fuer
             # beliebig tiefe Alt-URLs ausliefert.
+            # Relative Pfade gelten ab dem Ordner der Seite, nicht ab der Wurzel --
+            # en/services.html verweist mit ../assets/ auf die gemeinsamen Dateien.
             if rel.startswith("/"):
-                rel = rel.lstrip("/") or "index.html"
-            target = (ROOT / rel).resolve()
+                target = (ROOT / (rel.lstrip("/") or "index.html")).resolve()
+            else:
+                target = (path.parent / rel).resolve()
             if not target.exists():
                 err(page, f"toter Verweis: {ref}")
 
@@ -206,6 +208,14 @@ def main() -> int:
         visible = re.sub(r"<[^>]+>", " ", visible)
         for m in TRANSLIT_BAD.finditer(visible):
             warn(page, f"moegliche Transliteration: '{m.group(0)}'")
+
+    # Englische Fassung gegen die deutsche (seit 12.10.2026). Hier eingebunden, damit
+    # Gate 1 sie nicht vergessen kann -- Einzelheiten in check_englisch.py.
+    if not args:
+        sys.path.insert(0, str(ROOT / "_scripts"))
+        import check_englisch
+        for befund in check_englisch.pruefe():
+            err("en/", befund)
 
     print(f"check_site: {len(pages)} Seiten geprueft")
     for line in warns:

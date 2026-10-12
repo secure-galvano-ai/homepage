@@ -43,12 +43,15 @@ def seiten() -> tuple[dict[str, str], list[str]]:
     """Liefert {Dateiname: Inhalt} der echten Seiten und die Liste der Weiterleitungen."""
     echt: dict[str, str] = {}
     stubs: list[str] = []
-    for p in sorted(ROOT.glob("*.html")):
+    # Seit 12.10.2026 mit der englischen Fassung unter en/ -- Schluessel ist deshalb der
+    # Pfad relativ zur Wurzel, sonst ueberschriebe en/index.html die deutsche Startseite.
+    for p in sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("en/*.html")):
         t = p.read_text(encoding="utf-8")
+        name = p.relative_to(ROOT).as_posix()
         if 'http-equiv="refresh"' in t:
-            stubs.append(p.name)
+            stubs.append(name)
         else:
-            echt[p.name] = t
+            echt[name] = t
     return echt, stubs
 
 
@@ -172,10 +175,11 @@ def pruefe(nur_seo: bool = False) -> tuple[list[str], list[str]]:
     for name in echt:
         if name == "404.html":
             continue
-        if not (name in in_sm or (name == "index.html" and "" in in_sm)):
+        ordner_url = name[: -len("index.html")] if name.endswith("index.html") else None
+        if not (name in in_sm or ordner_url in in_sm):
             kritisch.append(f"{name}: fehlt in der sitemap.xml")
     for u in in_sm:
-        if u and u not in echt:
+        if u and u not in echt and u + "index.html" not in echt:
             kritisch.append(f"sitemap.xml verweist auf {u!r} - keine echte Seite")
 
     return kritisch, hinweise

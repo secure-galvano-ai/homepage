@@ -43,6 +43,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://secure-galvano-ai.com/en/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://secure-galvano-ai.com/en/services.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://secure-galvano-ai.com/en/about.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://secure-galvano-ai.com/en/security.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://secure-galvano-ai.com/impressum.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>yearly</changefreq>

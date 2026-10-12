@@ -22,6 +22,12 @@ Bring a page into the set  -> add the four marker pairs to its <body>, list it i
     <!-- BEGIN sticky-cta -->     <!-- END sticky-cta -->
     <!-- BEGIN footer -->         <!-- END footer -->
 
+English pages (en/, since 2026-10-12) get the same chrome in English plus two
+head blocks: `hreflang` (language pairs for Google, also on the German partner)
+and `styles` (the German page's <style> block, copied 1:1 so the layout never
+drifts). Which German page belongs to which English page: PAIRS. Whether the
+English TEXT still matches the German one is checked by _scripts/check_englisch.py.
+
 Never edit the HTML between the markers by hand -- it is overwritten on the next
 run. Styling for all of it lives in assets/css/base.css, behaviour in
 assets/js/site.js.
@@ -119,24 +125,86 @@ PAGES = {
     "datenschutz.html": None,
 }
 
+# --- Englische Fassung (Stefan, 12.10.2026: internationaler Auftritt, US-Markt) ---
+# Nur die Seiten, die einen US-Besucher tragen: Startseite, Leistungen, Profil,
+# Sicherheit. Demo, Datenwerkstatt und Forschung bleiben deutsch -- Videos und
+# Unterlagen dort sind deutsch, eine englische Huelle um deutschen Inhalt waere
+# ein leeres Versprechen. Impressum/Datenschutz bleiben deutsch und werden aus dem
+# englischen Fuss mit "(German)" verlinkt.
+# Kanonische Liste der Paare; check_englisch.py und check_site.py lesen sie von hier.
+SITE = "https://secure-galvano-ai.com/"
+PAIRS = {  # deutsche Seite -> englische Seite
+    "index.html": "en/index.html",
+    "leistungen.html": "en/services.html",
+    "ueber-mich.html": "en/about.html",
+    "sicherheit.html": "en/security.html",
+}
+DE_OF = {en: de for de, en in PAIRS.items()}
 
-def render_nav(active: str | None) -> str:
+NAV_LINKS_EN = [
+    ("services.html", "Services"),
+    ("about.html", "About"),
+]
+FOOTER_LINKS_EN = [
+    ("Home", "index.html", False),
+    ("Services", "services.html", False),
+    ("About", "about.html", False),
+    ("Security", "security.html", False),
+    ("Legal notice (German)", "../impressum.html", False),
+    ("Privacy policy (German)", "../datenschutz.html", False),
+]
+FOOTER_COPY_EN = (
+    "How personal data is processed is described in the "
+    '<a href="../datenschutz.html">privacy policy</a> (in German). '
+    "&copy; 2025&ndash;2026 secure-galvano-ai"
+)
+PAGES_EN = {
+    "en/index.html": None,
+    "en/services.html": "services.html",
+    "en/about.html": "about.html",
+    "en/security.html": None,
+}
+
+
+def is_en(page: str) -> bool:
+    return page.startswith("en/")
+
+
+def page_url(page: str) -> str:
+    """Oeffentliche URL einer Seite -- index.html ohne Dateinamen, wie im canonical."""
+    return SITE + (page[: -len("index.html")] if page.endswith("index.html") else page)
+
+
+def render_nav(active: str | None, page: str = "index.html") -> str:
+    en = is_en(page)
     items = []
-    for href, label in NAV_LINKS:
+    for href, label in NAV_LINKS_EN if en else NAV_LINKS:
         cls = ' class="active"' if href == active else ""
         items.append(f'            <li><a href="{href}"{cls}>{label}</a></li>')
+    # Sprachwechsel: auf das Gegenstueck, sonst auf die andere Startseite. Eigener
+    # Marker, damit im Monatslauf sichtbar wird, wie viele wechseln.
+    if en:
+        items.append(f'            <li><a href="../{DE_OF.get(page, "index.html")}" class="nav-lang" '
+                     'hreflang="de" lang="de" data-funnel="lang-de">DE</a></li>')
+    else:
+        items.append(f'            <li><a href="{PAIRS.get(page, "en/index.html")}" class="nav-lang" '
+                     'hreflang="en" lang="en" data-funnel="lang-en">EN</a></li>')
     links = "\n".join(items)
+    up = "../" if en else ""
+    cta = "Book a call" if en else "Erstgespräch"
+    marker = "cta-nav-en" if en else "cta-nav"
+    menu = "Menu" if en else "Menü"
     return f"""<nav class="nav" id="nav">
     <div class="container nav-inner">
         <a href="index.html" class="nav-logo">
-            <img src="assets/img/logo.png" alt="secure galvano ai">
+            <img src="{up}assets/img/logo.png" alt="secure galvano ai">
             <span>secure galvano ai</span>
         </a>
         <ul class="nav-links" id="navLinks">
 {links}
-            <li><a href="{BOOKING_URL}" target="_blank" rel="noopener" class="nav-cta" data-funnel="cta-nav">Erstgespräch</a></li>
+            <li><a href="{BOOKING_URL}" target="_blank" rel="noopener" class="nav-cta" data-funnel="{marker}">{cta}</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+        <button class="nav-toggle" id="navToggle" aria-label="{menu}" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -148,35 +216,90 @@ def render_wa_fab() -> str:
     return "<!-- WhatsApp-Kontakt deaktiviert (07.09.2026) -->"
 
 
-def render_sticky_cta() -> str:
+def render_sticky_cta(page: str = "index.html") -> str:
+    if is_en(page):
+        label, marker = "Book a free intro call", "cta-sticky-en"
+    else:
+        label, marker = "Kostenloses Erstgespräch buchen", "cta-sticky"
     return f"""<div class="sticky-cta" id="stickyCta">
-    <a href="{BOOKING_URL}" target="_blank" rel="noopener" data-funnel="cta-sticky">Kostenloses Erstgespräch buchen</a>
+    <a href="{BOOKING_URL}" target="_blank" rel="noopener" data-funnel="{marker}">{label}</a>
 </div>"""
 
 
-def render_footer() -> str:
+def render_footer(page: str = "index.html") -> str:
+    en = is_en(page)
     items = []
-    for label, href, new_tab in FOOTER_LINKS:
+    for label, href, new_tab in FOOTER_LINKS_EN if en else FOOTER_LINKS:
         attrs = ' target="_blank" rel="noopener"' if new_tab else ""
         items.append(f'                <li><a href="{href}"{attrs}>{label}</a></li>')
-    items.append(
-        '                <li><a href="#" class="cookie-settings">Cookie-Einstellungen</a></li>'
-    )
+    cookie = "Cookie settings" if en else "Cookie-Einstellungen"
+    items.append(f'                <li><a href="#" class="cookie-settings">{cookie}</a></li>')
     links = "\n".join(items)
+    up = "../" if en else ""
+    copy = FOOTER_COPY_EN if en else FOOTER_COPY
     return f"""<footer class="footer">
     <div class="container">
         <div class="footer-inner">
             <div class="footer-logo">
-                <img src="assets/img/logo.png" alt="secure galvano ai">
+                <img src="{up}assets/img/logo.png" alt="secure galvano ai">
                 <span>secure galvano ai</span>
             </div>
             <ul class="footer-links">
 {links}
             </ul>
-            <p class="footer-copy">{FOOTER_COPY}</p>
+            <p class="footer-copy">{copy}</p>
         </div>
     </div>
 </footer>"""
+
+
+def render_hreflang(page: str) -> str:
+    """Sprachpaar fuer Google. x-default zeigt auf Deutsch: die Firma sitzt in
+    Oesterreich, wer keine passende Sprache hat, landet auf der Hauptfassung."""
+    de = DE_OF.get(page, page)
+    en = PAIRS[de]
+    return (f'    <link rel="alternate" hreflang="de" href="{page_url(de)}">\n'
+            f'    <link rel="alternate" hreflang="en" href="{page_url(en)}">\n'
+            f'    <link rel="alternate" hreflang="x-default" href="{page_url(de)}">')
+
+
+STYLE_RE = re.compile(r"<style>.*?</style>", re.DOTALL)
+
+
+def render_styles(page: str) -> str:
+    """Der erste <style>-Block im Kopf der deutschen Seite, unveraendert.
+
+    Die Seiten tragen ihr CSS inline (CLS/LCP, README § Core Web Vitals). Eine Kopie
+    von Hand liefe beim ersten Umbau auseinander -- so zieht jeder Lauf sie nach.
+    """
+    de_text = (ROOT / DE_OF[page]).read_text(encoding="utf-8")
+    head = de_text[: de_text.index("</head>")]
+    m = STYLE_RE.search(head)
+    if not m:
+        raise SystemExit(f"Kein <style>-Block in {DE_OF[page]}")
+    return "    " + m.group(0)
+
+
+def expected_blocks(page: str) -> dict[str, str]:
+    """Alle Bloecke, die der Generator in `page` schreibt. check_site.py prueft dagegen."""
+    active = PAGES_EN[page] if is_en(page) else PAGES.get(page)
+    blocks = {
+        "nav": render_nav(active, page),
+        "footer": render_footer(page),
+        "wa-fab": render_wa_fab(),
+        "sticky-cta": render_sticky_cta(page),
+    }
+    if page in PAIRS or page in DE_OF:
+        blocks["hreflang"] = render_hreflang(page)
+    if is_en(page):
+        blocks["styles"] = render_styles(page)
+    return blocks
+
+
+# Pflichtbloecke: fehlen sie, bricht der Lauf ab. Die uebrigen nur, wo die Seite den
+# Marker traegt (der Sticky-CTA z. B. steht nur auf einzelnen Seiten). hreflang und
+# styles liefert expected_blocks() ohnehin nur fuer Seiten, die sie haben muessen.
+REQUIRED = ("nav", "footer", "hreflang", "styles")
 
 
 def inject(text: str, marker: str, inner_html: str) -> str:
@@ -211,10 +334,11 @@ def sync_booking_links(text: str) -> tuple[str, int]:
 
 
 def main() -> None:
-    print(f"Rendering shared layout into up to {len(PAGES)} pages...")
+    pages = list(PAGES) + list(PAGES_EN)
+    print(f"Rendering shared layout into up to {len(pages)} pages...")
     updated, skipped = 0, []
     links_fixed = 0
-    for filename, active in PAGES.items():
+    for filename in pages:
         path = ROOT / filename
         if not path.exists():
             raise SystemExit(f"Page not found: {filename}")
@@ -224,14 +348,9 @@ def main() -> None:
         if "<!-- BEGIN nav -->" not in text:
             skipped.append(filename)
             continue
-        # nav + footer are on every page; wa-fab + sticky-cta only where the page
-        # actually carries that marker (the Sticky-CTA e. g. is start-page-only).
-        text = inject(text, "nav", render_nav(active))
-        text = inject(text, "footer", render_footer())
-        if "<!-- BEGIN wa-fab -->" in text:
-            text = inject(text, "wa-fab", render_wa_fab())
-        if "<!-- BEGIN sticky-cta -->" in text:
-            text = inject(text, "sticky-cta", render_sticky_cta())
+        for marker, html in expected_blocks(filename).items():
+            if marker in REQUIRED or f"<!-- BEGIN {marker} -->" in text:
+                text = inject(text, marker, html)
         text, n_links = sync_booking_links(text)
         links_fixed += n_links
         path.write_text(text, encoding="utf-8")

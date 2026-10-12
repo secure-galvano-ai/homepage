@@ -99,6 +99,18 @@
             box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
             text-decoration: none;
         }
+        /* Navigation einheitlich (12.10.2026, gleiche Werte wie base.css). Steht am Ende,
+           damit es die Nav-Regeln dieser Seite weiter oben sicher uebersteuert. Anlass: Mit
+           dem EN-Link stiess die Nav zwischen 900 und 1366 px an das Logo. */
+        .nav-links { gap: 24px; }
+        .nav-links a.nav-lang { font-size: 0.78rem; letter-spacing: 0.06em; border: 1px solid var(--silber); border-radius: 4px; padding: 3px 7px; }
+        @media (max-width: 1100px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0;
+                              background: var(--weiss); padding: 24px; border-bottom: 1px solid var(--silber);
+                              box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); z-index: 50; }
+        }
     </style>
 
     <script src="assets/js/consent.js" defer></script>
@@ -120,6 +132,7 @@
             <li><a href="ausbildung.html">Datenwerkstatt</a></li>
             <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="forschung.html">Forschung</a></li>
+            <li><a href="en/index.html" class="nav-lang" hreflang="en" lang="en" data-funnel="lang-en">EN</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="nav-cta" data-funnel="cta-nav">Erstgespräch</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">

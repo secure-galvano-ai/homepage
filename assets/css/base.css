@@ -106,7 +106,7 @@ img { max-width: 100%; height: auto; }
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px; /* 32 -> 24 am 12.10.2026: Platz fuer den EN-Link */
     list-style: none;
 }
 
@@ -122,6 +122,7 @@ img { max-width: 100%; height: auto; }
 .nav-links a:hover,
 .nav-links a.active { color: var(--schild-blau); }
 
+
 .nav-cta {
     background: var(--schild-blau);
     color: var(--weiss) !important;
@@ -134,6 +135,18 @@ img { max-width: 100%; height: auto; }
     background: var(--schild-blau-hover);
     transform: translateY(-1px);
 }
+
+/* Sprachwechsel DE/EN (12.10.2026) -- leiser als die uebrigen Eintraege, er ist ein
+   Werkzeug, kein Ziel. */
+.nav-links a.nav-lang {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    color: var(--text-muted, #6b7280);
+    border: 1px solid var(--silber);
+    border-radius: 4px;
+    padding: 3px 7px;
+}
+.nav-links a.nav-lang:hover { color: var(--schild-blau); border-color: var(--schild-blau); }
 
 /* Mobile-Menue-Toggle */
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
@@ -343,7 +356,13 @@ img { max-width: 100%; height: auto; }
     body.sticky-active .wa-fab { bottom: 88px; }
 }
 
-@media (max-width: 680px) {
+/* Menue-Umschaltung bei 1100 px statt 680 px (12.10.2026). Gemessen: Auf Startseite,
+   Profil und Forschung ragte die Nav zwischen 690 und 860 px Breite rechts aus dem
+   Fenster (Ende bei 792 px auf 690 px Breite), der EN-Link schob sie auf 860 px.
+   Bis 1100 px reicht der Platz fuer sechs Eintraege plus Knopf nicht (gemessen auf
+   allen Seiten); Seiten mit eigenem Nav-CSS tragen denselben Wert am Ende ihres
+   Style-Blocks. */
+@media (max-width: 1100px) {
     .nav-links { display: none; }
     .nav-toggle { display: block; }
     .nav-links.open {
@@ -358,6 +377,9 @@ img { max-width: 100%; height: auto; }
         border-bottom: 1px solid var(--silber);
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     }
+}
+
+@media (max-width: 680px) {
     .wa-fab { padding: 14px; right: 16px; bottom: 16px; }
     .wa-fab .wa-label { display: none; }
 }
