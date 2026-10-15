@@ -3,49 +3,36 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-10-12
+**Stand:** 2026-10-15
 
 ---
 
-## Meilensteine
+## Stand der Website
 
 Grundausstattung steht seit Mai 2026: GitHub Pages mit eigener Domain und erzwungenem HTTPS,
 Impressum/Datenschutz, Bookings-Termin, Open Graph, `robots.txt`/Sitemap, Search Console,
-JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
+JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent. Aufbau der einzelnen Seiten:
+§ *Projektstruktur*. Der Änderungsverlauf steht im `git log`, die Wirkung jeder Änderung im
+Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimierung`).
 
-| Datum | Umbau | Ergebnis |
-|---|---|---|
-| 29.05.2026 | Customer-Journey neu geordnet (PAS, 3-Kachel-Onramp, Sticky-Mobil-CTA, Funnel-Tracking) | — |
-| 02.07.2026 | **Fokussierung** — `ausbildung.html` + `sicherheit.html` zurueckgestellt, Leistungen 6 → 3 | — |
-| 30.07.2026 | **EINE Botschaft** — Sektion `#ablauf` mit der sechsstufigen Vertriebsleiter (ohne Preise), Redundanzen zusammengelegt | 9 → 8 Sektionen, Seitenlaenge −27 % |
-| 30.07.2026 | `leistungen.html` aufgeloest, alles auf die Startseite | Sitemap 6 → 5 URLs |
-| 10.08.2026 | Presse-/Aktuell-Sektion `#aktuell` nach der Trust-Bar | — |
-| 10.08.2026 | **Erster Optimierungslauf** — Messung repariert (jeder CTA war doppelt verdrahtet), zweiter Hero-Button ist jetzt ein Beleg statt eines Sprungankers | Ablauf ab jetzt in [`OPTIMIERUNG.md`](OPTIMIERUNG.md), monatlich per `/optimierung` |
-| 17.08.2026 | Presse-Karte verlinkt die frei lesbare WISTO-Fassung | tote Platzhalter weg |
-| 31.08.2026 | **`leistungen.html` zurueckgeholt** — echte Seite mit der Standortanalyse als Schwerpunkt, neun Bausteinen und Abgrenzung; Hero mobil entzerrt, Consent-Banner kompakt | Sitemap 5 → 6 URLs; Anlass: 87 GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen |
-| 31.08.2026 | **`demo.html` angelegt** — Landingpage fuer das Demo-Video, ein Zweck und ein CTA, bis zur Aufnahme `noindex` und unverlinkt | § *Demo-Seite*; Platzierungsentscheidung auf SharePoint (`Videos & Podcasts/20260901_Demo Video Hompage/`) |
-| 17.08.2026 | Foto vom aws-Jurytermin (April 2025) auf `forschung.html`, unter dem Förderprojekt | Anlassfoto statt Team-Sektion — siehe Regel unten |
-| 24.08.2026 | **Core Web Vitals** — Schriften per `preload` vorgezogen, Hero-Portrait als WebP | CLS 0,153 → **0**, Seitengewicht 997 → 467 KB, LCP 1404 → 1268 ms (live nachgemessen) |
-| 03.09.2026 | **Schnellanalyse als Einstieg** (500 € netto), sechs Anwendungen und fünf Fragen auf `leistungen.html`; Leistung umbenannt in *Standortanalyse Daten- und KI-Potenziale*; neuer Einseiter *Leistungen im Überblick*; „kein Cloud-Upload“ ersetzt durch „Auswertung lokal, keine KI-Cloud, Übergabe verschlüsselt“ | Marktfragen des Kanalpartners eingearbeitet |
-| 03.09.2026 | **Sensorik-Block nachgezogen** *(zweite Runde desselben Tages)* — siebte Anwendung *Die Sonde, die falsch misst*, drei weitere Fragen (Sondendrift, „ersetzt das unsere Fachkräfte", Prüfnachweis an der Anlage), drei zusätzliche Grenzen in der Abgrenzung, zwei neue Portfolio-Bausteine | Quelle: `BD/conversations/2026/2026-09-03_waldemar-daubert-marktfragen-und-antworten.md` §7 |
-| 02.09.2026 | **`demo.html` scharfgeschaltet** — Video `RStpqzz3r5g` eingebunden, Texte auf die Anwendung statt auf den Vor-Ort-Tag umgestellt, zwei Verweise gesetzt | § *Demo-Seite* |
-| 02.09.2026 | **„Ihre Daten bleiben bei Ihnen" → „Lokale Datenverarbeitung"** *(Stefan)* — Startseiten-H2, Vertrauenszeile auf `demo.html`, Baustein *Laufende Überwachung* auf `leistungen.html` | Wortlaut bleibt seitenübergreifend identisch |
-| 03.09.2026 | **Redundanz- und Klarheitsdurchgang über alle Seiten** *(vierte und fünfte Runde desselben Tages, Auftrag Stefan)* — wortgleiche Dopplungen geschnitten (Startseite, `leistungen.html`, `ausbildung.html`), abgelöster Produktname *Diagnose* an vier Stellen nachgezogen, *Cybersecurity Act* → *Cyber Resilience Act*, aws-Förderprojekt als abgeschlossen gekennzeichnet, dritter Demo-Videolink gestrichen. Dazu ein echter Fund: auf 390 × 844 lag der **Haupt**knopf von `ausbildung.html` im Einwilligungsbanner | **Die Zuordnung im Oktober-Lauf ist für diesen Monat aufgegeben** (fünf Runden statt der erlaubten drei, §5 `OPTIMIERUNG.md`) — bewusste Entscheidung, damit der Bestand sauber ist. Bannerfix in `consent.js` |
-| 09.09.2026 | **Zweiter Demo-Videolink gestrichen** *(Stefan)* — „Überwachung im laufenden Betrieb" (`lWJQq0x2_1c`) ergab zusammen mit dem Hauptvideo das vollständige Bild des Funktionsumfangs. Abschnitt heißt jetzt *Weitere Aufnahme* (Singular), „Auswertungen und Berichte" bleibt bewusst stehen. Die Videos selbst bleiben bestehen und werden weiter gezielt im Gespräch verschickt | Anlass: Prüfung des Video-Transkripts auf Preisgabe. Zwei Folgepunkte unter *Optional*: Neuvertonung von vier Stellen, Beleglage zu „technisch ausgereift" |
-| 25.09.2026 | **FFG-Projekt auf `forschung.html`** *(Stefan)* — neue erste Karte zum Kleinprojekt „ML Galvanik": Titel, zwei Sätze Fragestellung, Programm, Status, Laufzeit. Bewusst **ohne Verfahren** (was gemacht wird, nicht wie) und ohne Datengeber. Die Präsentation des aws-Vorhabens (PDF, Stand 07/2025) ist samt Datei entfernt | FFG-Logo auf der Startseite erst mit der Förderzusage — Regel unten |
-| 03.09.2026 | **Beleg-Foto in `#lokale-datenverarbeitung`** *(dritte Runde desselben Tages)* — der Entwicklungsrechner mit Gesicht daneben, dazu die Abgrenzung *Entwicklungsumgebung ≠ Hosting* und der erste Verweis von der Startseite auf `sicherheit.html` (`link-sicherheit-startseite`). Bild: `assets/img/entwicklungsrechner.webp`, 57 KB, `loading="lazy"` | Quelle: LinkedIn-Beitrag 05.08.2026 *Mehr KI-Leistung oder Daten im Haus?* (SharePoint `01_LinkedIn/2026/2026-08-05_…`). Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* mitgezogen, sichtbarer Text **und** FAQ-Schema |
-| 28.09.2026 | **Belege vor das Pitch-Video** *(Stefan)* — TÜV-Kacheln und Logoleiste sind ein Abschnitt `#belege` direkt unter dem Hero; mobil Kacheln nebeneinander, Logos im 2×2-Raster. Kein Text geändert | Anlass: Clarity August 111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen — `BD/archive/akquise-strategie-h2-2026-in-areas-2026-10/benchmark-werchota.md` §4 Nr. 4. Wirkung im November-Lauf ablesen (CTA-Klicks, mobile Scrolltiefe) |
-| 02.10.2026 | **Bestand statt Austausch** *(Stefan: „Homepage bitte anpassen")* — neuer Abschnitt `#bestand` „Ihre Anlage muss nicht neu sein" nach dem Dreischritt; auf `leistungen.html` „Keine Nachrüstung" als Fähigkeit statt Aufwand gefasst („Ihre Anlage, wie sie ist"); Weiche *Selbst können* trägt den Eigentumssatz der Datenwerkstatt. **Das sind die drei Änderungen des Oktobers** | Anlass: Kernbotschaften neu geordnet (`BD/areas/brand/messaging.md` §4a): auswerten, was schon aufgezeichnet wird, und Werkzeuge im Eigentum des Betriebs nach vorn. Neuer Marker `link-standortanalyse-bestand`, Wirkung im November-Lauf (`OPTIMIERUNG.md` §4) |
-| 12.10.2026 | **Englische Fassung unter `/en/`** *(Stefan: internationaler Auftritt, US-Markt)* — Startseite, Leistungen, Profil, Sicherheit; DE/EN-Schalter in der Nav, `hreflang` auf beiden Seiten jedes Paars, Hinweis für Browser ohne Deutsch, Cookie-Banner zweisprachig. Nebenbei: Nav auf allen Seiten 24 px Abstand, Menü bis 1100 px (vorher ragte sie auf Startseite/Profil/Forschung zwischen 690 und 860 px aus dem Fenster) | § *Englische Fassung*. Zählt nicht zu den drei Optimierungsschritten des Oktobers |
-| 05.10.2026 | **„In Zusammenarbeit mit" auf `ausbildung.html`** *(Stefan)* — Block mit Partnerlogo, zwei Sätzen und Link nach dem Lernwerkzeug-Beispiel; gegenseitige Verlinkung | Kein Optimierungsschritt, zählt nicht zu den drei des Oktobers; Regel *Kooperationen* unten |
-| 15.10.2026 | **Unternehmenspräsentation ausgetauscht** *(Stefan, Freigabe für Upload erteilt)* — zum Download lag noch der Demo-Day-Foliensatz vom 17.07.2026 (13 Seiten). Jetzt der aktuelle Industrie-Pitch, 17 Seiten, ohne Golden-Ticket-Folie, letzte Seite Kontakt mit Buchungslink; die englische Seite bekommt erstmals eine **englische** Fassung (`company-presentation_…`) statt des deutschen PDFs. Dabei nachgezogen: Einsparpotenzial **60.000–90.000 €** statt 60.000–130.000 € auf vier Seiten — die Oberkante ist seit 15.09.2026 abgelöst (`BD/areas/preise.yaml` § `abgeloest`) | Erzeuger und Folienauswahl: `00_LIESMICH.md` des Pitch-Deck-Ordners auf SharePoint, § *Zwei abgeleitete Fassungen*. Kein Optimierungsschritt |
+**Offen in der Wirkungsmessung (November-Lauf):**
+- **`#belege` direkt unter dem Hero, vor dem Pitch-Video** *(Stefan, 28.09.2026)* — TÜV-Kacheln
+  und Logoleiste, mobil Kacheln nebeneinander, Logos im 2×2-Raster. Anlass: Clarity August
+  111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen
+  (`BD/archive/akquise-strategie-h2-2026-in-areas-2026-10/benchmark-werchota.md` §4 Nr. 4).
+  Ablesen: CTA-Klicks, mobile Scrolltiefe.
+- **`#bestand` „Ihre Anlage muss nicht neu sein"** *(Stefan, 02.10.2026)* — mit „Ihre Anlage, wie
+  sie ist" auf `leistungen.html` und dem Eigentumssatz in der Weiche *Selbst können* die drei
+  Änderungen des Oktobers; Marker `link-standortanalyse-bestand` (`OPTIMIERUNG.md` §4).
 
-### Regeln, die daraus dauerhaft gelten
+### Regeln, die dauerhaft gelten
 
 - **Förderlogos erst mit dem Förderungsvertrag** *(Stefan, 25.09.2026)*. Ein Logo in der
   Trust-Bar liest sich als „gefördert durch", egal was daneben steht. Solange ein Ansuchen in
-  Begutachtung ist, steht es nur als Text auf `forschung.html` mit ehrlichem Status. Offen:
-  FFG-Logo, Wiedervorlage in `BD/projects/ffg-kleinprojekt-2026/README.md` § *Termine*.
+  Begutachtung ist, steht es nur als Text auf `forschung.html` mit ehrlichem Status — dort ist
+  das FFG-Kleinprojekt „ML Galvanik" bewusst **ohne Verfahren** (was gemacht wird, nicht wie) und
+  ohne Datengeber beschrieben. Offen: FFG-Logo, Wiedervorlage in
+  `BD/projects/ffg-kleinprojekt-2026/README.md` § *Termine*.
 - **Kooperationen stehen dort, wo ihr Thema steht — nicht auf der Startseite** *(Stefan,
   05.10.2026)*. Eine gegenseitige Verlinkung bekommt einen Block „In Zusammenarbeit mit" auf der
   passenden Unterseite (Lernplattform → `ausbildung.html`). **Ein Logostreifen auf der
@@ -54,8 +41,8 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   `assets/img/kooperation/`. Keine Partner-Begründung in Kommentaren oder Commits (Repo ist
   öffentlich).
 - **Presse (`#aktuell`): maximal zwei Karten, veraltete ersetzen statt stapeln.** Eine sichtbar
-  veraltete News-Sektion schadet mehr als keine. ⚠ **Die Termin-Karte (KI Days) ist nach dem
-  30.09.2026 abgelaufen** und muss dann getauscht werden.
+  veraltete News-Sektion schadet mehr als keine. Eine Termin-Karte wird nach dem Termin getauscht
+  (KI Days: seit 06.10.2026 Rückblick statt Ankündigung).
 - **Keine Team-Sektion, keine Rollen-Kacheln, kein „wir".** Die Firmierung ist ein
   Einzelunternehmen — eine dargestellte Unternehmensstruktur wäre eine Irreführung über die
   Identität des Vertragspartners (Linie OLG München 6 U 1888/13 zur vorgetäuschten größeren
@@ -65,10 +52,18 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   Die eigentliche Kundensorge dahinter — „was, wenn der ausfällt?" — beantwortet ohnehin kein
   Teamfoto, sondern ein benannter Mechanismus (Haftpflicht, Doku beim Kunden, Software läuft
   ohne ihn). **Noch offen, empfohlen:** vier Zeilen „Ausfallsicherheit" bei `#ablauf`.
+- **„Lokale Datenverarbeitung", nicht „Ihre Daten bleiben bei Ihnen"** *(Stefan, 02.09.2026)* —
+  der Wortlaut ist seitenübergreifend identisch: Startseiten-H2, Vertrauenszeile auf `demo.html`,
+  Baustein *Laufende Überwachung* auf `leistungen.html`. Das Beleg-Foto in
+  `#lokale-datenverarbeitung` (Entwicklungsrechner, Abgrenzung *Entwicklungsumgebung ≠ Hosting*)
+  hat sein Gegenstück auf `leistungen.html` § *Was passiert mit unseren Daten?* — dort sichtbarer
+  Text **und** FAQ-Schema gemeinsam ändern. Begriff nach außen: „Auswertung lokal, keine
+  KI-Cloud, Übergabe verschlüsselt" (statt „kein Cloud-Upload", 03.09.2026).
 - **Neue Seite? Den `preload`-Block für die Schriften mitkopieren.** Ohne ihn starten die
   Schriften erst, nachdem `fonts.css` geparst ist; der `font-display:swap`-Wechsel von Arial
   auf Montserrat/Open Sans verschiebt dann den Seitenkopf. Auf der Startseite waren das
-  **CLS 0,153** bei einer Google-Grenze von 0,1 (gemessen 24.08.2026). Das `crossorigin` am
+  **CLS 0,153** bei einer Google-Grenze von 0,1 (gemessen 24.08.2026; mit Preload und
+  WebP-Portrait: CLS 0, Seitengewicht 997 → 467 KB). Das `crossorigin` am
   Preload-Link ist Pflicht, auch bei eigener Domain — fehlt es, lädt der Browser jede Schrift
   ein zweites Mal. Prüfen mit `_scripts/check_site.py` und einem Blick ins Netzwerk-Protokoll:
   jede `woff2` darf genau einmal auftauchen.
@@ -76,60 +71,38 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
   kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
   Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
-- **Aus- und Weiterbildung ist seit 02.09.2026 wieder auf der Website** — `ausbildung.html`
-  als eigene Seite, Nav-Eintrag „Datenwerkstatt" (der naheliegende Name „KI-Werkstatt" ist in
-  Vorarlberg von der WKO belegt). Grund ist die **Neuausrichtung des
-  Angebotsschwerpunkts** (Strategiegespraech 02.09.2026, `BD/areas/coaching-und-ausbildung/`):
-  verkauft wird die Befaehigung, nicht mehr nur die fertige Software. Damit ist der Beschluss
-  vom 25.08. ueberholt — **die Messerkenntnis dahinter gilt aber weiter und hat den Aufbau
-  bestimmt:** 104 Sitzungen mit **0 Klicks** auf den Buchungs-CTA heisst, dass ein reiner
-  Termin-Aufruf auf dieser Seite nicht traegt. Deshalb steht jetzt ein **niederschwelliger
-  zweiter Weg** daneben (Ueberblick als PDF, ohne E-Mail-Gate), und die Seite hat eine
-  **Erfolgsdefinition mit Abbruchkriterium** statt einer Daumenprobe
-  (`BD/areas/coaching-und-ausbildung/README.md` § Experiment). Der Absatz darunter
-  steht als Begruendung der damaligen Entscheidung — er ist Historie, nicht mehr die Regel.
-- ~~**Kein Coaching-Baustein auf der Website**~~ *(Stefan, 25.08.2026 — am 02.09.2026 abgeloest)*.
-  Anlass war ein privates 1:1-KI-Coaching, das Spass gemacht hat. Es kommt trotzdem **nicht**
-  zurueck auf die Seite, aus drei Gruenden: (1) Der fruehere Baustein war **In-House-Coaching fuer
-  Galvanikbetriebe** (Fachkraefte und Lehrlinge schulen) — ein anderes Produkt als 1:1-Begleitung
-  einer Privatperson; ihn zu reaktivieren wuerde das Falsche bewerben. (2) Die Abschaltung war eine
-  **Messentscheidung**: 11 Einstiege in 60 Tagen auf `ausbildung.html`, gleichzeitig 104 Sitzungen
-  mit **0 Klicks** auf den Buchungs-CTA. Die Antwort darauf war *eine* Botschaft und drei statt
-  sechs Bausteine — ein vierter Weg verschlechtert genau diese Kennzahl. (3) Saeule 2 bleibt bis
-  2027 eingefroren (`BD/areas/business-model.md`). Der Kanal fuer die Energie aus solchen Sessions
-  ist die bezahlte Lehre (Digital Campus Vorarlberg, WIFI), nicht die Startseite. Projekt-Ablage
-  des Falls seit 26.08.2026 auf SharePoint:
-  `01_Business Development\02_Vertrieb\06_KI-Coaching Einzelpersonen\` (nicht mehr im BD-Repo).
-  **Neu bewerten,** wenn unaufgefordert
-  mehrere Anfragen von Privatpersonen kommen — dann eine eigene schlanke Seite, nicht der alte
-  Baustein im Galvanik-Funnel.
-- **Zurueckgestellte Seiten — Stand 02.09.2026: es gibt keine mehr.** `sicherheit.html` ist seit
-  11.08. wieder live (Footer, Sitemap, bewusst nicht in der Hauptnavigation), `ausbildung.html`
-  seit 02.09. neu aufgebaut und in Nav und Sitemap. Der Weg fuer die naechste Wiederbelebung
-  bleibt derselbe: Nav-Eintrag in `_generate_layout.py`, Seite in `PAGES`, Sitemap-Eintrag,
-  Meta-Block samt `preload` der Schriften — danach `check_site.py` **und** `check_inhalt.py`.
-  Der zweite faengt zu lange Titel, zu lange Beschreibungen und fehlende Sitemap-Eintraege ab;
-  beim Aufbau am 02.09. sind alle drei tatsaechlich aufgetreten.
+- **Aus- und Weiterbildung steht seit 02.09.2026 auf der Website** — `ausbildung.html`, Nav-Eintrag
+  „Datenwerkstatt" (der naheliegende Name „KI-Werkstatt" ist in Vorarlberg von der WKO belegt).
+  Grund ist die **Neuausrichtung des Angebotsschwerpunkts** (Strategiegespraech 02.09.2026,
+  `BD/areas/coaching-und-ausbildung/`): verkauft wird die Befaehigung, nicht mehr nur die fertige
+  Software. **Die Messerkenntnis, die vorher gegen die Seite sprach, hat ihren Aufbau bestimmt:**
+  104 Sitzungen mit **0 Klicks** auf den Buchungs-CTA heisst, dass ein reiner Termin-Aufruf auf
+  dieser Seite nicht traegt. Deshalb steht ein **niederschwelliger zweiter Weg** daneben
+  (Ueberblick als PDF, ohne E-Mail-Gate), und die Seite hat eine **Erfolgsdefinition mit
+  Abbruchkriterium** statt einer Daumenprobe (`BD/areas/coaching-und-ausbildung/README.md`
+  § Experiment). Der fruehere Beschluss „kein Coaching-Baustein" (25.08.2026) ist damit abgeloest;
+  die Fallakte zum 1:1-Coaching liegt auf SharePoint
+  `01_Business Development\02_Vertrieb\06_KI-Coaching Einzelpersonen\`.
 - **Tracking-Konvention:** je CTA-Position ein eigener Event-Name (`cta-nav`, `cta-hero`,
   `cta-ablauf`, `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`), Downloads als
-  `pdf-<dateiname>`. **Keine generischen Selektoren** — die haben die Zahlen einmal verdoppelt.
+  `pdf-<dateiname>`. **Keine generischen Selektoren** — die haben die Zahlen einmal verdoppelt
+  (erster Optimierungslauf 10.08.2026: jeder CTA war doppelt verdrahtet).
 - **Bei Abweichungen zwischen Website und Angebotsvorlage gilt die Website** *(Stefan, 17.08.2026)*.
   Konkret angewandt: Die Diagnose dauert **„innerhalb einer Woche"**, nicht acht Wochen —
-  `BD/areas/business-model.md` wurde am 17.08. an vier Stellen nachgezogen. Der Vor-Ort-Teil steckt
-  seit 30.07. in der vorgelagerten **Standortanalyse** (Stufe 2). **Der Preis ist seit 10.09.2026
-  neu gefasst: 5.000 € je einzelnem Anwendungsfall** statt 9.500 € fuer ein Paket aus ein bis drei
-  Faellen. Kanonisch `BD/areas/preise.yaml`, ausgegeben mit
-  `py "Business Development/scripts/preise.py"`.
+  `BD/areas/business-model.md` wurde am 17.08. nachgezogen. Der Vor-Ort-Teil steckt in der
+  vorgelagerten **Standortanalyse** (Stufe 2). Preise kanonisch in `BD/areas/preise.yaml`,
+  ausgegeben mit `py "Business Development/scripts/preise.py"`.
 - **Anschrift, Buchungslink, Telefon, UID und Gruendungsdatum kommen aus `BD/areas/stammdaten.yaml`**
   *(seit 24.09.2026)*. Die Seiten sind statisches HTML und lesen die Datei nicht selbst —
   `py "Business Development/scripts/check_konsistenz.py"` meldet jede Seite, die eine abgeloeste
   Fassung traegt (alte Anschrift, Sammel-Buchungsseite, falsches Gruendungsdatum).
-- ~~**Produktname bleibt „Diagnose"**~~ — **überholt seit 31.08.2026**: Die Stufe heißt
-  **„Vorprojekt"** (`BD/areas/business-model.md` §*Leiter*, dort mit dem Vermerk „Homepage, Flyer
-  und Muster-Befund sind nachgezogen"). Der Nachzug war unvollständig — bis 03.09.2026 stand
-  „Diagnose" noch viermal auf `sicherheit.html` und `ueber-mich.html`, wo niemand nachsieht.
-  **Lehre daraus: Beim Umbenennen `grep` über *alle* Seiten laufen lassen, nicht nur über die,
-  die man gerade umbaut** — inklusive `<meta>`-Beschreibungen und `og:`-Tags.
+- **Beim Umbenennen oder Nachziehen einer Zahl `grep` über *alle* Seiten laufen lassen, nicht nur
+  über die, die man gerade umbaut** — inklusive `<meta>`-Beschreibungen, `og:`-Tags und `en/`.
+  Anlass: Die Stufe heißt seit 31.08.2026 **„Vorprojekt"** statt „Diagnose"
+  (`BD/areas/business-model.md` §*Leiter*); bis 03.09.2026 stand „Diagnose" noch viermal auf
+  `sicherheit.html` und `ueber-mich.html`, wo niemand nachsieht. Dasselbe beim Einsparpotenzial:
+  **60.000–90.000 €**, die Oberkante 130.000 € ist seit 15.09.2026 abgelöst
+  (`BD/areas/preise.yaml` § `abgeloest`) und stand bis 15.10.2026 noch auf vier Seiten.
 - **Bewusst getragener Widerspruch, nicht erneut melden** *(Stefan, 11.08.2026)*:
   `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" — weicht von der
   Linie ab (korrekt: *Modellpruefung*). Das Heft ist gedruckt; beim naechsten Nachdruck
@@ -151,9 +124,9 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
       (2) 0:53 „Backupdateien aus Anlagensteuerung/MES/X-Ray/Labor" als Integrationsweg,
       (3) 2:32 „fast keine dieser Fehler stimmen mit dem Anomaliescore ueberein" — klingt wie
       eine Einschraenkung, ist der Nutzen, (4) 4:22 der Preis „1.500 € netto" fuer die
-      Standortanalyse — seit 10.09.2026 steht er auch auf der Startseite (`#ablauf`), der
-      Punkt ist damit kein Widerspruch mehr, nur noch ein Grund fuer die Neuvertonung. Danach neu hochladen und **nur die ID im `<iframe>` tauschen**
-      (§ *Demo-Seite*). Bis dahin bleibt das Video online — eine tote Landingpage kostet mehr.
+      Standortanalyse (steht inzwischen auch auf der Startseite, kein Widerspruch mehr). Danach
+      neu hochladen und **nur die ID im `<iframe>` tauschen** (§ *Demo-Seite*). Bis dahin bleibt
+      das Video online — eine tote Landingpage kostet mehr.
 - [ ] **Deckt der Inspektionsbericht „technisch ausgereift"?** So sagt es das Video bei 4:14.
       Die Modellpruefung ergab *Low Risk* — eine Risiko-, keine Reifegradaussage. Wenn der
       Wortlaut nicht belegt ist, faellt der Satz beim Neuvertonen mit weg.
@@ -168,20 +141,27 @@ Seite dupliziert. Wer Farben, Nav oder Footer aendert, editiert **eine** Quelle:
 | Baustein | Single Source | Wird genutzt von |
 |----------|---------------|------------------|
 | Design-Tokens (Farben) + Reset + Typo + Container + Nav + Buttons + section-header + Footer + WA-FAB + Sticky-CTA + fade-up | `assets/css/base.css` | jede Seite (erstes CSS im `<head>`) |
-| Geteiltes Verhalten (Nav-Scroll, Mobile-Menue, fade-up) | `assets/js/site.js` | jede Seite (`defer`) |
-| Nav + Footer + WA-FAB + Sticky (HTML) | `_generate_layout.py` -> Marker `<!-- BEGIN/END nav -->` usw. | index, leistungen, ueber-mich, forschung, impressum, datenschutz |
-| ~~Leistungs-Karten~~ | `_generate_leistungen.py` **abgeloest 31.08.2026** — die Bausteine stehen handgeschrieben in `leistungen.html` (neun statt drei). Skript nicht ausfuehren | — |
+| Geteiltes Verhalten (Nav-Scroll, Mobile-Menue, fade-up, Sprachhinweis) | `assets/js/site.js` | jede Inhaltsseite (`defer`) ausser `sicherheit.html` und `en/security.html` (eigenes Menü-Skript, § *Englische Fassung*) |
+| Nav + Footer + WA-FAB + Sticky (HTML), `hreflang`, CSS der englischen Seiten | `_generate_layout.py` -> Marker `<!-- BEGIN/END nav -->` usw. | alle Seiten in `PAGES` und `PAIRS` |
 
 Die Markenfarben in `base.css :root` sind **kanonisch abgeleitet** aus
 `Business Development/areas/brand/corporate_design.md`. Aendern sich Markenfarben,
-wird NUR `base.css` editiert. Seiten-spezifisches CSS (Hero, einzelne Sektionen)
-bleibt im `<style>`-Block der jeweiligen Seite.
+wird NUR `base.css` editiert. Ad-hoc-Hex im Seiten-CSS vermeiden — stattdessen Token
+`var(--name)` nutzen. Seiten-spezifisches CSS (Hero, einzelne Sektionen) bleibt im
+`<style>`-Block der jeweiligen Seite. Schriften: Montserrat (Headlines) und Open Sans (Body),
+**self-hosted** in `fonts/` (OFL), eingebunden über `fonts/fonts.css` — kein Google-Fonts-Request.
 
 **Nicht migriert (bewusst):** `sicherheit.html` traegt weiter ihr eigenes CSS.
-`ausbildung.html` ist seit 02.09.2026 in `PAGES` und `NAV_LINKS` und bekommt Nav und Fuss
-generiert; ihr Seiten-CSS ist eine Kopie des Standes aus `leistungen.html` plus eigener
-Abschnitte. Zum Reaktivieren weiterer Seiten: in `_generate_layout.py` PAGES + NAV_LINKS ergaenzen,
-Marker in die Seite setzen, `py _generate_layout.py` laufen lassen.
+`ausbildung.html` bekommt Nav und Fuss generiert; ihr Seiten-CSS ist eine Kopie des Standes aus
+`leistungen.html` plus eigener Abschnitte. Die Leistungsbausteine auf `leistungen.html` sind
+handgeschrieben; `_generate_leistungen.py` ist stillgelegt und bricht beim Aufruf ab.
+
+**Eine Seite (wieder) aufnehmen:** Nav-Eintrag in `NAV_LINKS`, Seite in `PAGES`
+(`_generate_layout.py`), Marker in die Seite setzen, Sitemap-Eintrag, Meta-Block samt
+`preload` der Schriften — dann `py _generate_layout.py`, `check_site.py` **und**
+`check_inhalt.py`. Der zweite faengt zu lange Titel, zu lange Beschreibungen und fehlende
+Sitemap-Eintraege ab; beim Aufbau von `ausbildung.html` am 02.09.2026 sind alle drei
+tatsaechlich aufgetreten.
 
 ## Englische Fassung (`en/`) — seit 12.10.2026
 
@@ -236,6 +216,8 @@ auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert ha
 - Was nur für Österreich gilt (Förderprogramme), entfällt auf Englisch. Preise als
   „€1,500 net (excl. VAT)“.
 - Englische FAQ-Knoten im JSON-LD tragen eigene `@id`s unter `/en/`.
+- Die Unternehmenspräsentation gibt es auf Englisch als eigenes PDF (`company-presentation_…`),
+  nicht das deutsche.
 
 **Der Hinweis für Browser ohne Deutsch** (`site.js`): fest positioniert, einmal je Sitzung,
 nur auf deutschen Seiten, die den Sprachschalter tragen. **Bewusst keine automatische
@@ -244,23 +226,25 @@ Auf `leistungen.html` und `sicherheit.html` (eigenes CSS) bringt das Skript sein
 mit; `sicherheit.html` lädt `site.js` nicht (eigenes Menü-Skript — beide zusammen schalten das
 Menü doppelt und es öffnet nicht, gemessen 12.10.2026), dort erscheint der Hinweis also nicht.
 
-## Demo-Seite (`demo.html`) — scharf seit 02.09.2026
+## Demo-Seite (`demo.html`)
 
 **Zweck:** die einzige Landingpage der Seite im engeren Sinn — ein Zweck, ein Handlungsaufruf,
 keine Ablenkung. Sie traegt das Demo-Video der Anwendung und ist das Ziel, auf das Mail, Telefon
 und LinkedIn zeigen. Begruendung der Platzierung im ganzen Trichter: SharePoint
-`…/06_Praesentationsmaterialien/Videos & Podcasts/20260901_Demo Video Hompage/00_LIESMICH_Platzierung-und-Funnelbefund.md`
-(das BD-Projekt `projects/demo-video-akquise/` ist am 07.09.2026 aufgeloest).
+`…/06_Praesentationsmaterialien/Videos & Podcasts/20260901_Demo Video Hompage/00_LIESMICH_Platzierung-und-Funnelbefund.md`.
 
 **Was drauf ist:** YouTube-ID **`RStpqzz3r5g`** („Prozessdaten auswerten — die Anwendung im
 Ueberblick"), **4:51**, nicht gelistet, eingebunden ueber `youtube-nocookie.com` — kein Cookie vor
-Klick, die Datenschutzerklaerung setzt das voraus. `noindex` ist raus, die Seite steht in der
-`sitemap.xml`, und zwei Verweise zeigen darauf: Startseite unter dem Pitch-Video
-(`link-demo-startseite`) und `leistungen.html` in der Karte *Vorprojekt*
-(`cta-demo-vorprojekt`, stand dort schon seit 31.08.). **Nicht** in die Belegspalte bei
-`#standortanalyse` — die sammelt Belege zur *Standortanalyse*, das Video zeigt die *Anwendung*.
-Ein am 02.09. dort versuchsweise gesetzter dritter Verweis ist aus genau diesem Grund wieder
-raus: zwei Links auf dieselbe Seite konkurrieren miteinander, statt zu fuehren.
+Klick, die Datenschutzerklaerung setzt das voraus. Die Seite ist indexiert und steht in der
+`sitemap.xml`; zwei Verweise zeigen darauf: Startseite unter dem Pitch-Video
+(`link-demo-startseite`) und `leistungen.html` in der Karte *Vorprojekt* (`cta-demo-vorprojekt`).
+**Nicht** in die Belegspalte bei `#standortanalyse` — die sammelt Belege zur *Standortanalyse*,
+das Video zeigt die *Anwendung*. Ein am 02.09.2026 dort versuchsweise gesetzter dritter Verweis
+ist aus genau diesem Grund wieder raus: zwei Links auf dieselbe Seite konkurrieren miteinander,
+statt zu fuehren. Ebenso gestrichen *(Stefan, 09.09.2026)*: der zweite Videolink „Überwachung im
+laufenden Betrieb" (`lWJQq0x2_1c`) — mit dem Hauptvideo ergab er das vollständige Bild des
+Funktionsumfangs; unter *Weitere Aufnahme* bleibt nur „Auswertungen und Berichte". Die Videos
+selbst bleiben bestehen und werden gezielt im Gespräch verschickt.
 
 **Die Seite erzaehlt DIE ANWENDUNG, nicht den Vor-Ort-Tag** *(Stefan, 02.09.2026)*. Zwischen
 31.08. und 01.09. stand hier kurzzeitig die Standortanalyse-Fassung („So laeuft ein Tag
@@ -293,9 +277,8 @@ wie oben: Seite und Video muessen dasselbe versprechen — das Blatt gehoert daz
 **Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, der Videostart meldet sich als
 **`video-anwendung`** (aus `data-video="anwendung"` am iframe; die Erkennung in `consent.js` nimmt
 das erste YouTube-iframe der Seite — auf `demo.html` gibt es genau eines, es ist nichts
-anzupassen). *Bis 11.09.2026 stand hier `video-gestartet` — das war der Name vor der Umstellung
-am 02.09.2026 und damit veraltet.* Eingehende Links aus Mail und LinkedIn bekommen
-UTM-Parameter, damit der Verkehr im Monatslauf trennbar bleibt.
+anzupassen). Eingehende Links aus Mail und LinkedIn bekommen UTM-Parameter, damit der Verkehr im
+Monatslauf trennbar bleibt.
 
 ## Datenwerkstatt-Seite (`ausbildung.html`) — Video und Zielgruppe *(11.09.2026)*
 
@@ -304,16 +287,15 @@ bis 11.09.2026 laufende Messtechnik voraus („In Ihren Anlagen laeuft die Messt
 mit") und nannte die Begleitung nicht — beides ging an der Zielgruppe vorbei. **Dauerregel:
 Auf dieser Seite ist die manuelle Erfassung der gleichwertige Fall**, nicht der Sonderfall;
 wer hier Text aendert, prueft beide Wege (Steuerung *und* Badbuch von Hand) und nennt das
-Coaching als Teil des Angebots. Derselbe Satz steht im Flyer (§ Gate 4 unten).
+Coaching als Teil des Angebots. Derselbe Satz steht im Flyer (`AENDERUNGSPROZESS.md` Gate 4).
 
 **Was drauf ist:** YouTube-ID **`-btKYAPGAqw`**, eingebunden ueber `youtube-nocookie.com`,
 **direkt unter dem Hero** — vor der Nutzenliste, weil ein Besucher aus einer Mail zuerst sehen
-will, wovon die Rede ist. Inhalt: das Badbuch aus
-`lehrmittel/demos/badbuch/` (bis 12.09.2026 im BD-Repo; nachgestellter Verlauf, keine
-Betriebsdaten, kein Lieferantenname). Der Videostart meldet sich als **`video-badbuch`**
-(`data-video="badbuch"`). Ersetzt hat es die Illustration `assets/img/techniker-monitoring.jpg`
-— **die Bilddatei liegt weiter in `assets/img/`** und ist seit 11.09.2026 auf keiner Seite mehr
-eingebunden.
+will, wovon die Rede ist. Inhalt: das Badbuch aus `lehrmittel/demos/badbuch/` (nachgestellter
+Verlauf, keine Betriebsdaten, kein Lieferantenname). Der Videostart meldet sich als
+**`video-badbuch`** (`data-video="badbuch"`). Die fruehere Illustration
+`assets/img/techniker-monitoring.jpg` liegt weiter in `assets/img/`, ist aber seit 11.09.2026
+auf keiner Seite mehr eingebunden.
 
 **Titel wortgleich halten:** Der YouTube-Titel lautet *„Digitale Badkarte mit KI aufbauen"*
 (geprueft 11.09.2026 ueber `https://www.youtube.com/oembed?url=…`), das `title`-Attribut am
@@ -328,11 +310,10 @@ muessen dasselbe versprechen.
 > Vorspann des Badbuch-Videos und das `title`-Attribut des iframes, beide am 11.09.2026
 > bereinigt.
 >
-> **Die Sperre gilt dem Leser, nicht dieser Website** *(praezisiert 13.09.2026)*. Sie stand hier
-> als „auf der ganzen Website" und war damit missverstaendlich: Beim LinkedIn-Beitrag vom
-> 17.09.2026 musste erst hergeleitet werden, dass sie fuer ein oeffentliches Beitragsbild
-> genauso gilt. **Sie gilt ueberall, wo Fremde mitlesen** — LinkedIn, Flyer, Vortragsfolie,
-> Video, Bildunterschrift. Das Bau-Skript des Beitragsbildes maskiert den Begriff deshalb auf
+> **Die Sperre gilt dem Leser, nicht dieser Website** *(praezisiert 13.09.2026)* — **ueberall, wo
+> Fremde mitlesen**: LinkedIn, Flyer, Vortragsfolie, Video, Bildunterschrift. Anlass: Beim
+> LinkedIn-Beitrag vom 17.09.2026 musste erst hergeleitet werden, dass sie fuer ein oeffentliches
+> Beitragsbild genauso gilt. Das Bau-Skript des Beitragsbildes maskiert den Begriff deshalb auf
 > einer Kopie der Demo und bricht ab, wenn er stehen bleibt.
 >
 > **Nicht betroffen** sind die Demo `Badbuch.html` selbst und die Projektdoku im BD-Repo — beide
@@ -344,25 +325,19 @@ zweites waere in der Messung unsichtbar und teilte die Aufmerksamkeit. Der Verwe
 `demo.html` bleibt bewusst ein **Nebensatz** in der Nutzen-Sektion (`link-demo-ausbildung`):
 das Video hier zeigt ein **selbstgebautes** Werkzeug, `demo.html` die **fertige** Software.
 
-**Der Style-Block der Seite ist am 11.09.2026 um rund 10 kB gekuerzt worden.** Er war aus
-`sicherheit.html`/`leistungen.html` kopiert und trug Regeln fuer Bausteine, die es auf dieser
-Seite nie gab (`.produkt`, `.frameworks`, `.methodik`, `.eckdaten`, `.felder`, `.danach`,
-`.blick`, `.download`, `.goldzeile` und weitere). Jede Klasse war vorher gegen Rumpf,
-`_generate_layout.py`, `consent.js`, `site.js` und `base.css` geprueft; die Geometrie aller
-123 Elemente wurde vor und nach dem Ausbau gemessen und ist identisch (Seitenhoehe 7598 px).
-**Wer hier eine Regel ergaenzt:** nur, wenn die Klasse auf DIESER Seite vorkommt — Gemeinsames
-gehoert nach `assets/css/base.css`. *Noch drin und bewusst gelassen: `.wa-fab`/`.wa-label` —
-sie gehoeren zum abgeschalteten WhatsApp-Knopf und stehen auf allen Seiten gleich (§ WhatsApp).*
+**Im Style-Block nur Klassen, die auf DIESER Seite vorkommen** — Gemeinsames gehoert nach
+`assets/css/base.css`. Anlass: Der Block war aus `sicherheit.html`/`leistungen.html` kopiert und
+trug rund 10 kB Regeln fuer Bausteine, die es hier nie gab; am 11.09.2026 ausgebaut, jede Klasse
+vorher gegen Rumpf, `_generate_layout.py`, `consent.js`, `site.js` und `base.css` geprueft, die
+Geometrie aller Elemente vor und nach dem Ausbau identisch. *Bewusst gelassen: `.wa-fab`/`.wa-label`
+— sie gehoeren zum abgeschalteten WhatsApp-Knopf und stehen auf allen Seiten gleich
+(§ WhatsApp).*
 
 **Die Hero-Laenge ist eine Messgroesse.** Waechst der Hero, rutscht der Hauptknopf mobil hinter
 das Einwilligungsbanner — die Klasse ist in `consent.js` dokumentiert und am 11.09.2026 erneut
 eingetreten: der erste Entwurf des neuen Heros lag **60 px** unter dem Bannerrand. Nach jeder
-Textaenderung im Hero auf **390 × 844** nachmessen, nicht ansehen. Stand nach der Korrektur:
-Hauptknopf endet bei y 643, Banner ab 714 — **71 px Luft** *(gemessen 13.09.2026; davor
-41 px am 11.09., davor 12 px)*. Der Zugewinn kommt aus der Kuerzung des Hero-Absatzes an
-diesem Tag: „Ihre Fachkraefte bauen das Werkzeug dazu selbst und werden dabei begleitet"
-sagte dasselbe wie die neue Schlagzeile ein zweites Mal und ist auf „Ihre Fachkraefte werden
-dabei begleitet" zusammengezogen.
+Textaenderung im Hero auf **390 × 844** nachmessen, nicht ansehen. Stand: Hauptknopf endet bei
+y 643, Banner ab 714 — **71 px Luft** *(gemessen 13.09.2026)*.
 
 > **Wortwahl im Hero ist seit 13.09.2026 gebunden** *(Stefan)*: **gebaut werden Werkzeuge,
 > nicht Auswertungen.** Die Auswertung ist das Ergebnis, das Werkzeug der Gegenstand. Betroffen
@@ -389,50 +364,49 @@ py _scripts/check_site.py        # Self-Check (0 Fehler = grün)
 tinycss2) und prueft je Seite: HTML wohlgeformt, CSS parst sauber, alle
 `var(--token)` aufloesbar, Layout-Marker vorhanden **und in Sync mit dem
 Generator**, interne Links/Assets existieren, keine Transliterations-Reste im
-Sichttext. Exit 1 bei Fehlern -> nicht deployen.
+Sichttext, englische Fassung auf deutschem Stand. Exit 1 bei Fehlern -> nicht deployen.
+`check_inhalt.py` (Metadaten, Marker, Sitemap) steht in `AENDERUNGSPROZESS.md` Gate 1.
 
 Optionaler zweiter/dritter Validator (Node, kein Java noetig), als unabhaengiger
 Gegencheck bei groesseren Umbauten:
 
 ```bash
 npx --yes htmlhint *.html
-npx --yes html-validate index.html leistungen.html ueber-mich.html forschung.html impressum.html datenschutz.html
+npx --yes html-validate *.html en/*.html
 ```
 
 ## Projektstruktur
 
 ```
 homepage/
-  index.html               Predictive-Quality-Landing (ein roter Faden): Hero, Belegstreifen direkt darunter (#belege: TUeV/8-von-10 + Logoleiste, seit 28.09.2026 VOR dem Video), Pitch-Video, Aktuell (#aktuell), Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts), Bestand statt Austausch (#bestand, seit 02.10.2026: „Ihre Anlage muss nicht neu sein"), Ablauf (#ablauf) mit Preisen nur fuer die Einstiegsstufen (Standortanalyse 1.500 EUR, Vorprojekt 5.000 EUR netto, seit 10.09.2026; Umsetzung und Betreuung ohne Preis), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung), Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten mehr.
-  leistungen.html          Leistungsseite (seit 31.08.2026 wieder echt, handgeschrieben): Standortanalyse als
-                           Schwerpunkt (#standortanalyse), Anwendungen, Portfolio, Abgrenzung, Sticky-CTA.
-                           Sieben Anwendungen (#anwendungen) und acht Fragen (#fragen) mit
-                           FAQPage-Schema, Leistungsname "Standortanalyse Daten- und KI-Potenziale".
-                           Die Sektion #schnellanalyse (500 EUR) ist am 10.09.2026 mit dem Angebot
-                           entfallen (Commit 09c9059); an ihrer Stelle steht #datenanalyse -- derselbe
-                           Einstiegspreis, nur der kuerzere Weg. Seit 23.09.2026 haengen in beiden
-                           Abschnitten Blanko-Angebote als PDF (docs/angebot-*-muster.pdf).
-                           Nav/Footer/WA-FAB/Sticky kommen aus _generate_layout.py. Kachel-Fassung bis 07/2026:
-                           git show 78ce8c3:leistungen.html
-  demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA). Seit 31.08.2026 angelegt,
-                           bis zur Aufnahme noindex + nicht in der Sitemap + unverlinkt — § Demo-Seite.
-  ausbildung.html          Datenwerkstatt — Aus- und Weiterbildung (seit 02.09.2026 neu aufgebaut, in Nav
-                           und Sitemap). Am 02.09. abends von 13 auf 8 Sektionen gekuerzt, Reihenfolge
-                           Nutzen -> Ablauf -> Beispiel -> Angebot. Flyer dazu:
-                           docs/datenwerkstatt-ueberblick.pdf, gebaut aus
-                           BD/areas/coaching-und-ausbildung/build_flyer_datenwerkstatt.py.
-                           Vorgaengerfassungen: git show feed14a:ausbildung.html (Kurs 2026-07),
-                           git show 417588d:ausbildung.html (Langfassung vom 02.09.)
-  sicherheit.html          Compliance-Seite (seit 11.08.2026 wieder indexiert, in Sitemap und Footer, bewusst NICHT
-                           in der Hauptnavigation). Nav/Footer kommen seit 31.08.2026 aus _generate_layout.py
-                           (PAGES-Eintrag mit None = kein eigener Nav-Punkt); nur das Seiten-CSS ist noch eigen.
+  index.html               Predictive-Quality-Landing (ein roter Faden): Hero, Belegstreifen #belege
+                           (TUeV/8-von-10 + Logoleiste, VOR dem Video), Pitch-Video, Aktuell (#aktuell),
+                           Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts),
+                           Bestand statt Austausch (#bestand), Ablauf (#ablauf) mit Preisen nur fuer die
+                           Einstiegsstufen (Standortanalyse, Vorprojekt; Umsetzung und Betreuung ohne
+                           Preis), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung),
+                           Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten.
+  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt
+                           (#standortanalyse), #datenanalyse (kuerzerer Weg, derselbe Einstiegspreis),
+                           sieben Anwendungen (#anwendungen), Fragen (#fragen) mit FAQPage-Schema,
+                           Portfolio, Abgrenzung, Sticky-CTA. In #standortanalyse und #datenanalyse
+                           Blanko-Angebote als PDF (docs/angebot-*-muster.pdf). Seit 31.08.2026 wieder
+                           eigene Seite -- Anlass: 87 GSC-Impressionen auf eine Weiterleitung, 0 Klicks
+                           auf kommerzielle Suchanfragen.
+  demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
+  ausbildung.html          Datenwerkstatt — Aus- und Weiterbildung, Reihenfolge Nutzen -> Ablauf ->
+                           Beispiel -> Angebot, Block „In Zusammenarbeit mit". Flyer dazu:
+                           docs/datenwerkstatt-ueberblick.pdf — § Datenwerkstatt-Seite.
+  forschung.html           Forschungsprojekte (FFG-Kleinprojekt, aws), aws-Jurytermin-Foto.
+  sicherheit.html          Compliance-Seite (indexiert, in Sitemap und Footer, bewusst NICHT in der
+                           Hauptnavigation). Nav/Footer aus _generate_layout.py (PAGES-Eintrag mit
+                           None = kein eigener Nav-Punkt); nur das Seiten-CSS ist noch eigen.
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
-  en/                      Englische Fassung (seit 12.10.2026): index, services, about, security.
-                           Nav/Fuss/hreflang/CSS kommen aus _generate_layout.py, der Text ist
-                           Handarbeit. en/_quelle/ = deutscher Stand je Uebersetzung fuer
-                           check_englisch.py (Jekyll liefert es wegen des Unterstrichs nicht aus).
-                           § Englische Fassung.
+  en/                      Englische Fassung: index, services, about, security. Nav/Fuss/hreflang/CSS
+                           aus _generate_layout.py, der Text ist Handarbeit. en/_quelle/ = deutscher
+                           Stand je Uebersetzung fuer check_englisch.py (Jekyll liefert es wegen des
+                           Unterstrichs nicht aus). § Englische Fassung.
   impressum/ stefan-maier/ kontakt/ trusted-ai/ data-analytics/
                            Redirect-Stubs auf die WordPress-Alt-URLs — generiert aus _generate_redirects.py,
                            nicht von Hand editieren. Nur Pfade mit echtem Nachfolger; tote PDFs bleiben 404.
@@ -443,26 +417,28 @@ homepage/
                            auch fuer tiefe Pfade wie /wp-content/uploads/... ausliefert. Ohne Layout-Marker
                            (Generator erzeugt relative hrefs) und ohne JS.
   assets/
-    img/                   Bild-Assets: logo, portrait, aws, trustifai, og-image,
-                           techniker-monitoring, stefan-entmetallisierung-2006
+    img/                   Bild-Assets (Bestand: ls assets/img); Partnerlogos in kooperation/
     css/
-      base.css             SINGLE SOURCE: Tokens + Reset + Typo + Container + Nav + Buttons + section-header + Footer + WA-FAB + Sticky + fade-up (jede Seite bindet es als erstes CSS ein)
-      leistungen.css       Geteilte Komponenten-CSS für die Leistungsbausteine (Karten + Mail-Button); genutzt von leistungen.html
+      base.css             SINGLE SOURCE (§ Architektur) — jede Seite bindet es als erstes CSS ein
+      leistungen.css       Komponenten-CSS für die Leistungsbausteine (Karten + Mail-Button)
     js/
       consent.js           Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
-      site.js              Geteiltes Verhalten: Nav-Scroll-Schatten, Mobile-Menue-Toggle, fade-up-Scroll-Animation
-  _scripts/
-    check_site.py          Self-Check (HTML/CSS/Tokens/Marker-Sync/Links/Transliteration) — vor jedem Deploy laufen lassen
+      site.js              Geteiltes Verhalten (§ Architektur)
+  _scripts/                check_site.py (vor jedem Deploy), check_inhalt.py, check_englisch.py;
+                           Messung (clarity_daily.py, youtube_abrufe.py, wochenbericht.py) -> OPTIMIERUNG.md
+  _doku/                   Betriebsdoku, die nicht ausgeliefert wird (Unterstrich) — infrastruktur.md
   _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
   _generate_redirects.py   Generator: Redirect-Stubs fuer WordPress-Alt-URLs (REDIRECTS-Dict = einzige Quelle)
+  _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
+  _generate_leistungen.py  STILLGELEGT — bricht bewusst beim Aufruf ab
   credentials/
-    _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full
-    thumbs/                Grid-Thumbnails (16 Zertifikate)
-    full/                  Lightbox-Originale
+    _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full (§ Deployment)
+    thumbs/ full/          Grid-Thumbnails und Lightbox-Originale
   docs/                    Belege zum Verlinken und Mitschicken (Musterbefund, Flyer, Beispielauswertungen,
                            Methoden-und-Standards, Meisterbrief, Fachartikel, Praesentationen). Bewusst KEINE
                            Einzelliste hier -- sie driftet bei jedem neuen Beleg. Wo welcher verlinkt ist:
                            grep -o "docs/[a-z0-9_-]*\.pdf" *.html
+                           Wird von Jekyll ausgeliefert -- hier nur, was oeffentlich sein darf.
                            Die erzeugten PDFs kommen aus BD-Build-Skripten und werden NIE von
                            Hand bearbeitet -- Aenderung immer im Skript, dann neu bauen:
                              standortanalyse-flyer.pdf        BD/templates/flyer-corporate/build_flyer.py
@@ -490,18 +466,13 @@ homepage/
                            Jedes Skript prueft Seitenzahl und Pflichtstellen selbst und bricht ab, wenn
                            Inhalt verschluckt wird. leistungen-ueberblick.pdf ist das Blatt zum
                            Weiterreichen: alle vier Wege nebeneinander, mit Aufwand und Preis.
-  fonts/
-    fonts.css                Self-Hosted @font-face Definitionen (Montserrat + Open Sans, OFL)
-    Montserrat-{400,600,700}-{latin,latin-ext}.woff2   6 WOFF2-Files
-    OpenSans-{300,400,600}-{latin,latin-ext}.woff2     6 WOFF2-Files
+  fonts/                   fonts.css + Montserrat/Open Sans als WOFF2 (latin, latin-ext), OFL
   favicon.ico              Browser-Tab Icon (Root — Browser-Konvention)
   apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
-  CNAME                    Custom Domain Config
-  _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung (seit 02.10.2026) — nie docs/ eintragen
+  CNAME                    Custom Domain Config — nicht löschen (_doku/infrastruktur.md)
+  _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung — nie docs/ eintragen
   robots.txt               Crawler-Erlaubnis
   sitemap.xml              Google Sitemap (13 URLs, davon 4 englisch -- Stand 12.10.2026)
-  _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
-  _generate_leistungen.py  STILLGELEGT (Ziel ist nur noch ein Redirect-Stub) — bricht bewusst beim Aufruf ab
   README.md                Diese Datei
 ```
 
@@ -517,7 +488,7 @@ meisten Eintraege sind **Soll-Zustand**, kein Defekt. Einordnung vor jeder Reakt
 | Meldung | Ursache | Zu tun |
 |---|---|---|
 | **Nicht gefunden (404)** | Alt-URLs der WordPress-Installation bei IONOS. Instanz ist mit dem Vertragsende **02.06.2026** weg. Kein Link im Repo zeigt darauf (`check_site.py` prueft das). | Zweiteilen: Alt-URL **mit** heutigem Pendant -> Redirect-Stub in `_generate_redirects.py` eintragen. Alt-URL **ohne** Pendant (tote PDFs, `/wp-*.php`-Bot-Scans) -> nichts tun, 404 ist der korrekte Endzustand. |
-| **Durch „noindex"-Tag ausgeschlossen** | Derzeit keine Inhaltsseite. `sicherheit.html` ist seit 11.08.2026, `ausbildung.html` seit 02.09.2026 wieder indexiert — beide koennen im Bericht noch eine Weile hier auftauchen, bis Google neu crawlt. | Nichts. Bei `ausbildung.html` nach zwei Wochen pruefen und noetigenfalls einmalig „Indexierung beantragen". |
+| **Durch „noindex"-Tag ausgeschlossen** | Keine Inhaltsseite der Website traegt `noindex`. Frueher zurueckgestellte Seiten koennen noch eine Weile hier auftauchen, bis Google neu crawlt. | Nichts. Haengt eine Seite nach Wochen noch hier, einmalig „Indexierung beantragen". |
 | **Alternative Seite mit richtigem kanonischen Tag** | `/index.html` vs. `/` — Canonical zeigt korrekt auf `/`. | Nichts. |
 | **Gecrawlt / Gefunden – zurzeit nicht indexiert** | Googles Qualitaets-/Budget-Entscheidung, kein technischer Fehler. Einziger echter SEO-Hebel im Bericht. | Betroffene URL in der URL-Pruefung ansehen, Inhalt schaerfen (eigenstaendiger Text, interne Verlinkung), dann **„Indexierung beantragen"**. Nicht wiederholt beantragen. |
 
@@ -537,265 +508,16 @@ sichtbaren Link als No-JS-Fallback.
 und verhindert damit, dass Google den Refresh ueberhaupt als Redirect verarbeitet;
 zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL.
 `noindex` gehoert nur auf zurueckgestellte **Inhalts**seiten mit Self-Canonical.
-Aktuell traegt es keine Seite ausser `demo.html` bis zur Videoaufnahme.
 
 **Sitemap:** `lastmod` beim Deploy auf das tatsaechliche Aenderungsdatum ziehen
 (`git log -1 --format=%ad --date=short -- <datei>`) — veraltete Werte kosten Crawl-Prioritaet.
 
-## DNS-Konfiguration (IONOS) — Soll-Stand beider Zonen
+## DNS-Konfiguration, IONOS und Systemabhängigkeiten
 
-**Verifiziert am 17.08.2026 gegen die autoritativen Nameserver.** Diese Tabellen sind die
-Wiederherstellungsvorlage: Weicht eine Zone davon ab, ist etwas passiert.
-
-### `secure-galvano-ai.com` (Website, GitHub Pages)
-
-| Typ | Name | Ziel |
-|-----|------|------|
-| **A** | `@` | `185.199.108.153` |
-| **A** | `@` | `185.199.109.153` |
-| **A** | `@` | `185.199.110.153` |
-| **A** | `@` | `185.199.111.153` |
-| **A** | `www` | `185.199.111.153` *(seit 17.08.; vorher CNAME auf `secure-galvano-ai.github.io` — IONOS liess beides nicht gleichzeitig zu, funktional gleichwertig, 301 auf die Hauptdomain)* |
-| — | **AAAA** | **keiner.** Ein AAAA auf IONOS bricht HTTPS, siehe Vorfall unten |
-| **TXT** | `@` | `v=spf1 -all` |
-| **TXT** | `_dmarc` | `v=DMARC1; p=reject;` |
-
-**Spoofing-Schutz seit 17.08.2026:** Von dieser Domain wird **nichts** versendet — alle Kontaktwege
-auf der Website sind `mailto:`-Links auf `@rvh.at`, das Hosting ist statisch, es gibt keinen
-serverseitigen Mailversand. Deshalb sagen SPF und DMARC hier kompromisslos „niemand darf in meinem
-Namen senden", und empfangende Server weisen Fälschungen ab. Der frühere `_dmarc`-CNAME auf
-`dmarc.ionos.de` (`p=none`) wurde dafür gelöscht — ein CNAME und ein TXT können nicht auf demselben
-Hostnamen stehen. **Muss zurückgedreht werden, falls jemals von `@secure-galvano-ai.com` gesendet
-werden soll.** Die MX-Einträge bleiben bewusst stehen; SPF regelt nur den Versand, nicht den Empfang.
-
-### `rvh.at` (Mail, Microsoft 365)
-
-**Vollstaendig erfasst am 21.09.2026** — vorher fehlten vier Eintraege in dieser Tabelle (A, AAAA,
-`_dep_ws_mutex`, `_domainconnect`). Als Wiederherstellungsvorlage taugt sie nur vollstaendig; eine
-Liste, die vier von zehn Eintraegen verschweigt, laesst beim Wiederaufbau genau die Luecken, die
-niemand vermutet.
-
-| Typ | Name | Ziel | Prio |
-|-----|------|------|------|
-| **MX** | `@` | `rvh-at.mail.protection.outlook.com` | **0** |
-| **TXT** | `@` | `v=spf1 include:spf.protection.outlook.com -all` *(gesetzt 21.09.2026; davor mit `include:_spf-eu.ionos.com` und `~all`)* | — |
-| **TXT** | `_dmarc` | `v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1` *(gesetzt 21.09.2026; davor `p=none`)* | — |
-| **CNAME** | `autodiscover` | `autodiscover.outlook.com` | — |
-| **CNAME** | `selector1._domainkey` | `selector1-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
-| **CNAME** | `selector2._domainkey` | `selector2-rvh-at._domainkey.phonixdata.a-v1.dkim.mail.microsoft` | — |
-| **A** | `@` | `217.160.0.44` (IONOS) — traegt die alte Website | — |
-| **AAAA** | `@` | `2001:8d8:100f:f000::200` | — |
-| **TXT** | `_dep_ws_mutex` | `662c36c6d49d5b61323ce2e6d3ba421a7ef3…` — IONOS-intern, **Finger weg** | — |
-| **CNAME** | `_domainconnect` | `_domainconnect.ionos.com` — IONOS-Einrichtungsautomatik | — |
-
-*Zum AAAA-Eintrag:* Bei der Markendomain ist ein AAAA der Grund fuer einen HTTPS-Ausfall gewesen
-(Vorfall unten), hier steht einer. Er stoert aktuell nicht, weil auf `rvh.at` ohnehin kein
-Zertifikat liegt und die Seite nur ueber HTTP antwortet (geprueft 21.09.2026). **Wer hier je
-HTTPS aktiviert, prueft zuerst diesen Eintrag** — sonst wiederholt sich der Vorfall.
-
-DKIM ist seit 17.08.2026 aktiv (`Get-DkimSigningConfig -Identity rvh.at` → `Enabled True`,
-`Status Valid`). Versandtest über mail-tester.com am 17.08.2026: **9,5/10**.
-
-**Warum `rvh.at` anders behandelt wird als die Markendomain:** Hier laeuft produktiver Mailverkehr.
-Ein hartes `-all` / `p=reject` ohne Belege koennte legitime Mails abweisen — etwa von einem System,
-an das gerade niemand denkt. Deshalb lief DMARC zuerst auf `p=none` **mit `rua`**, die Berichte
-gehen an das freigegebene Postfach `dmarc@rvh.at` (angelegt 17.08.2026). Eskalationsplan:
-
-| Wann | Schritt |
-|---|---|
-| erledigt 17.08.2026 | `p=none` + `rua` — sammelt Belege, aendert nichts an der Zustellung |
-| erledigt 21.09.2026 | Berichte ausgewertet (37 Stueck). Nur Microsoft 365 sendet, `include:_spf-eu.ionos.com` raus |
-| erledigt 21.09.2026 | `~all` → `-all` und `p=none` → `p=quarantine` |
-| entschieden 01.10.2026 | `p=reject` gestrichen — das aws-Gateway bricht DKIM, Endstand bleibt `p=quarantine` |
-
-**Stand 14.09.2026 — der erste Serientermin ist ohne Verschaerfung verstrichen, und das ist richtig
-so.** Schritt 1 kam nicht zustande: Die Berichte liegen ausschliesslich in `dmarc@rvh.at`, das
-Postfach haengt nicht im Outlook-Profil, und der Zugriff ueber Vollzugriff scheitert (dreimal
-derselbe Fehler). Das DNS steht damit unveraendert auf `~all` / `p=none`, gegengeprueft gegen
-`ns1027.ui-dns.de`. **Ohne Belege wird nicht verschaerft** — das ist der Plan, nicht seine Verletzung.
-
-**Daraus die Vorabfrage fuer den 12.10.:** Hat `smaier@rvh.at` ueberhaupt Vollzugriff auf
-`dmarc@rvh.at`? Wenn nicht, scheitert Schritt 1 nicht an der Auswertung, sondern schon am
-Speichern der Anhaenge — dann ist zuerst die Berechtigung zu setzen. Deshalb steht sie unten als
-Schritt 0 im Termintext.
-
-**Stand 21.09.2026 — Schritt 0 ist erledigt, die Vorabfrage ist beantwortet: Der Vollzugriff
-hat tatsaechlich gefehlt.** Er ist gesetzt und gegengeprueft; im Postfach liegen **50 Elemente,
-2,07 MB**, es gibt also Berichte. Damit ist der Grund beseitigt, an dem der 14.09. gescheitert
-ist. **Am DNS wurde nichts geaendert** — `p=none` / `~all`, am selben Tag gegen die
-Nameserver geprueft.
-
-*Was noch offen war, als der Abend endete:* Der Zugriff auf das Postfach wirkt noch nicht.
-Sowohl Graph (404 auf jeden Ordner) als auch Outlook (Postfach nicht im Profil trotz
-AutoMapping) sahen es eine Stunde nach dem Setzen noch nicht — **das ist Propagierung, kein
-Fehler**; Microsoft nennt dafuer Zeiten bis zu mehreren Stunden. Beim naechsten Versuch also
-zuerst schlicht wiederholen.
-
-*Neu und dauerhaft:* Das Holen der Anhaenge ist kein Handgriff in Outlook mehr, sondern
-[`areas/compliance/scripts/dmarc_berichte_holen.py`](../Business%20Development/areas/compliance/scripts/dmarc_berichte_holen.py)
-— es liest ueber MS Graph und braucht das Postfach deshalb **nicht** im Outlook-Profil. Genau
-daran war der 14.09. gescheitert. Einmalige Zustimmung zu `Mail.Read.Shared` ist erteilt, der
-Token liegt im Cache des Mailversands.
-
-*Nachtrag 21.09.2026:* Der Zugriff ging am Morgen darauf **ohne jeden Eingriff** — es war die
-Propagierung, wie vermutet. Gut, dass nichts umgestellt wurde.
-
-### Schritt 1 ausgewertet — 21.09.2026
-
-**37 Berichte, 101 gemeldete Nachrichten, kein einziger Faelschungsversuch.** 94 Nachrichten
-stammen von Microsoft 365 und bestehen DMARC. Die beiden auffaelligen Quellen sind beide
-zugeordnet und harmlos:
-
-| Quelle | Nachrichten | Erklaerung |
-|---|---|---|
-| `52.212.19.177` (`eu.cloud-sec-av.com`) | 6 | **Mail-Gateway der Foerderstelle aws.at.** An allen drei Berichtstagen (21.08., 14.09., 16.09.) war `aws.at` unter den Empfaengern, am 16.09. ausschliesslich — zwei gesendete Mails, zwei gemeldete Nachrichten. Das Gateway veraendert die Mail beim Scannen, deshalb bricht die DKIM-Signatur mit **unserem** Selector `selector1`. |
-| `149.72.126.203` (`o48.sg.ascendbywix.com`) | 1 | **Kontaktformular ueber Wix/SendGrid.** Am 06.09. wurde gar keine Mail versendet; der Empfaenger `karrierequer.com` nutzt Google Workspace, daher der Bericht von google.com. DKIM und SPF bestanden — aber fuer `wixemails.com`, nicht fuer `rvh.at`. |
-
-**Damit ist die Kernfrage des Plans beantwortet: IONOS sendet nichts.** Der Include
-`_spf-eu.ionos.com` taucht in keinem Bericht auf und kann raus.
-
-**Schritt 2 — gesetzt am 21.09.2026.** Der SPF-Eintrag auf `@` lautet jetzt
-`v=spf1 include:spf.protection.outlook.com -all`; der IONOS-Include ist raus, `~all` ist zu
-`-all` geworden. Gegen beide autoritativen Nameserver geprueft. Begruendung fuer den Wegfall des
-Includes: Er gab **7 IPv4- und 2 IPv6-Bereiche** von IONOS-Shared-Mailservern frei — jeder
-IONOS-Kunde dort haette unter `rvh.at` senden und SPF bestehen koennen. Genutzt hat das nichts.
-Nach der Aenderung verbraucht der SPF **1 von 10** erlaubten DNS-Lookups.
-
-**Zustelltest danach: 10/10 bei mail-tester.com** (vorher 9,5). SpamAssassin sauber, keine
-Blocklist. Der einzige Hinweis war „nicht vollstaendig berechtigt" — das war das damals noch
-gesetzte `p=none`; mit Schritt 3 unten entfaellt auch er.
-
-⚠ **Zwei Fallstricke im IONOS-Panel, beide am 21.09.2026 belegt:**
-
-1. **Panel ist `my.ionos.de`** — die `.at`-Varianten (`my.ionos.at`, `login.ionos.at`) existieren
-   **nicht**, das Kundenkonto liegt zentral auf `.de`.
-2. **IONOS fuehrt SPF und DMARC als getrennte Record-Typen**, obwohl beides TXT ist. Ein Record,
-   der als SPF angelegt wurde, nimmt **keinen** DMARC-Wert an: Das Formular antwortet mit „Der
-   Wert ist nicht gueltig. Ein Fehler wurde im folgenden Teil gefunden: v=DMARC1;" — und zwar
-   erst nach dem Speichern, ohne dass die Liste sich aendert. Wer einen Wert in die falsche Zeile
-   getragen hat, **loescht den Record und legt ihn ueber „Record hinzufuegen → DMARC (TXT)" neu
-   an**; Bearbeiten fuehrt in eine Sackgasse. Anlass: Der DMARC-Wert war versehentlich durch
-   einen SPF-Wert ersetzt worden, DMARC war dadurch rund eine Stunde ausser Kraft.
-
-**Schritt 3 — `p=quarantine` gesetzt am 21.09.2026** (Entscheidung Stefan). Der Eintrag lautet
-jetzt `v=DMARC1; p=quarantine; rua=mailto:dmarc@rvh.at; fo=1`, geprueft gegen `ns1065.ui-dns.de`
-und `ns1093.ui-dns.com`.
-
-Mein Vorbehalt dagegen war die Foerderkommunikation: Das Gateway von **aws.at**
-(`eu.cloud-sec-av.com`) bricht die DKIM-Signatur beim Scannen, solche Mails koennten bei
-`p=quarantine` im Spam der Foerderstelle landen. Stefan hat das abgewogen und entschieden — die
-Belege tragen: In 37 Berichten mit 101 Nachrichten gab es **keinen einzigen** Faelschungsversuch,
-und jede auffaellige Quelle ist zugeordnet. **Restrisiko, bewusst getragen:** Geht doch eine
-Mail an aws verloren, ist die Gegenmassnahme eine Zeile im Panel zurueck auf `p=none`.
-
-Das Schaerfen ist seit dem 17.08. deutlich sicherer, weil DKIM aktiv ist: DMARC gilt schon als
-bestanden, wenn **entweder** SPF **oder** DKIM passt. Bei Weiterleitungen bricht SPF regelmaessig,
-die DKIM-Signatur ueberlebt sie.
-
-**Endstand: `p=quarantine`, `p=reject` ist gestrichen** *(Stefan, 01.10.2026)*. Die Berichte vom
-22.09. bis 30.09.2026 zeigen **jede** Mail an `aws.at` (vier Stueck) ueber das aws-Gateway
-`eu.cloud-sec-av.com` mit DKIM und SPF `fail` und `disposition=quarantine` beim Empfaenger. Sie
-kamen an — die Antworten liegen vor —, aber nur, weil Quarantaene dort Junk heisst; bei `reject`
-wuerden sie abgewiesen. Der Fehler sitzt im Gateway der Foerderstelle und ist von hier nicht zu
-beheben. **Neu aufgreifen nur, wenn ein Bericht aws-Mails mit `disposition=none` zeigt** (dann hat
-aws das Gateway umgestellt). Die monatliche Wiedervorlage im Monatslauf entfaellt.
-
-Zum Pruefen nach einer DNS-Aenderung gegen die autoritativen Nameserver, nicht gegen das Panel:
-`nslookup -type=TXT _dmarc.rvh.at ns1093.ui-dns.com`. Berichte bei Bedarf mit
-`dmarc_berichte_holen.py` und `dmarc_auswerten.py` (`Business Development/areas/compliance/scripts/`).
-
-## IONOS — Vertrag, Zugang, Vorfall *(Stand 17.08.2026)*
-
-**Vertrag:** `100185485` (WordPress Hosting Grow) gekuendigt, am 08.06.2026 per Tarifwechsel in
-einen **reinen Domain-Vertrag** ueberfuehrt — keine Grundgebuehr, nur die jaehrliche Domaingebuehr.
-Zusatzartikel (Domain Guard, Mail Business, SSL) gekuendigt. `secure-galvano-ai.com` laeuft bis
-**15.05.2027** mit **automatischer Verlaengerung**; beide Domains bei IONOS registriert, Nameserver
-`ns*.ui-dns.*`. **Zahlungsmethode im Blick behalten** — fehlt sie, scheitert die Verlaengerung lautlos.
-
-### Wenn der Login nicht mehr geht
-
-Am 06.07.2026 wurde die Kontakt-Adresse auf `smaier@rvh.at` umgestellt. Seither meldet ein Login mit
-der alten Kennung *„Ihr IONOS Login wurde geloescht"* — **irrefuehrend, sagt nichts ueber den Bestand
-der Domains aus.** Weder die Kundennummer aus den ICANN-Mails noch der Domainname `secure-galvano-ai.com`
-werden akzeptiert; ueber `rvh.at` kommt man bis zur Identifikation.
-
-**Der Weg, der funktioniert:** telefonisch (**0721 170 555**) eine **„Kontozugangs-Wiederherstellung"**
-verlangen — **nicht** die „Umschreibung der Kundennummer", das ist der Prozess fuer einen
-Inhaberwechsel und hier falsch. Kein Formular unterschreiben, das nach Inhaberwechsel aussieht.
-Identifikationsmerkmale: Vertrag 100185485, Tarifwechsel 08.06.2026, beide Domainnamen,
-Kontaktadresse `smaier@rvh.at`. *(Kundennummer steht bewusst nicht im Repo, nur im Postfach.)*
-
-### Der Vorfall — und was daraus folgt
-
-Bei der Wiederherstellung des Zugangs fuehrte IONOS am 17.08. um 15:39–15:45 einen **„Domain-Umzug
-innerhalb Ihrer Kundennummer"** durch und setzte dabei **beide Zonen auf Standardwerte zurueck**:
-A/AAAA auf die IONOS-Standardseite, MX auf `mx00/mx01.ionos.de`, SPF ohne Outlook-Include,
-`autodiscover` auf IONOS, `www`-CNAME ersatzlos weg.
-
-Die Website meldete `ERR_SSL_PROTOCOL_ERROR`, spaeter 404. **Beim Mailverkehr gab es keine sichtbaren
-Symptome** — eingehende Post waere still zu IONOS gelaufen, sobald die gecachten MX-Werte ablaufen
-(TTL 3600 s). Das ist der gefaehrlichere Teil: Ein kaputtes Zertifikat sieht man, verlorene Antworten
-nicht.
-
-**Diagnose, in dieser Reihenfolge:**
-1. `nslookup -type=A/AAAA/MX <domain> <autoritativer NS>` — **nicht** ueber den lokalen Resolver
-   oder 8.8.8.8; deren Caches verschleiern den Zustand.
-2. `curl --resolve <domain>:443:<GitHub-IP> https://<domain>` — trennt DNS- von TLS-Problem.
-3. `gh api repos/secure-galvano-ai/homepage/pages` — zeigt, ob GitHub das Zertifikat noch fuehrt.
-   Es war durchgehend `approved`; der Fehler lag ausschliesslich im DNS.
-
-**Zwei Fallstricke der IONOS-Maske:** Eintraege tragen eine Spalte `Service` (`Default Site`, `Mail`).
-Einzelne Zeilen lassen sich dann nicht aendern — man deaktiviert den **ganzen Dienst**, wodurch alle
-zugehoerigen Zeilen verschwinden. Das Entfernen *eines* MX loescht also auch SPF, DMARC, DKIM und
-autodiscover; danach alles neu anlegen. Und ein neuer A-Eintrag auf `@` kann einen bestehenden
-`www`-CNAME verdraengen — IONOS meldet das im Bestaetigungsdialog, den man lesen muss.
-
-**Nach jeder IONOS-Vertrags- oder Kontoaktion beide Zonen pruefen** (Routine-Check unten). Die
-Verlagerung des DNS zu einem eigenen Anbieter wurde **geprueft und verworfen** *(Stefan, 17.08.2026)*:
-nicht guenstiger, nicht spuerbar schneller, nicht pflegeleichter (zwei Systeme statt einem). Der
-einzige Gewinn waere der Schutz vor genau diesem Reset — und dessen teurer Teil, die zweistuendige
-Diagnose, ist mit den Soll-Tabellen oben erledigt. **Neu bewerten, wenn IONOS erneut in die Zone
-eingreift**, dann mit einem EU-Anbieter (Hetzner DNS, deSEC) statt Cloudflare.
-
-## Systeme und Abhängigkeiten
-
-Wer hängt woran. Diese Übersicht existiert, weil am 17.08.2026 ein einziger DNS-Vorgang bei IONOS
-gleichzeitig Website und Mailempfang lahmgelegt hat — der Zusammenhang war nicht offensichtlich.
-
-| Baustein | Anbieter / Ort | Wichtige Fakten |
-|---|---|---|
-| **Domain-Registrierung** | IONOS SE | `secure-galvano-ai.com` läuft bis **15.05.2027**, **automatische Verlängerung aktiv**. `rvh.at` ebenfalls bei IONOS. Beide im selben Domain-Vertrag |
-| **DNS-Zonen** | IONOS (`ns*.ui-dns.*`) | Beide Zonen. **Einziger Single Point of Failure** — siehe Vorfall oben |
-| **Website-Hosting** | GitHub Pages | Repo `secure-galvano-ai/homepage`, Branch `main`, Root. Datei **`CNAME`** im Repo-Root enthält `secure-galvano-ai.com` — **nicht löschen**, sonst verliert Pages die Custom Domain |
-| **TLS-Zertifikat** | GitHub Pages (Let's Encrypt) | Automatisch, deckt apex **und** `www`, gültig bis **04.11.2026**, erneuert sich selbst. Status: `gh api repos/secure-galvano-ai/homepage/pages` |
-| **Mail** | Microsoft 365, Tenant **PhonixData** | Postfach `smaier@rvh.at`. Absenderadresse aller Geschäfts- und Akquisemails — **bleibt bewusst `@rvh.at`**, obwohl die Marke `secure-galvano-ai.com` lautet *(Entscheidung Stefan, 17.08.2026)* |
-| **Terminbuchung** | Microsoft Bookings | Läuft auf dem **rvh.at-Tenant**. Hängt damit am selben Microsoft-365-Konto wie die Mail |
-| **Analyse** | Microsoft Clarity | Projekt `wql3vpgrxl`, Opt-in |
-| **Indexierung** | Google Search Console | Property auf `secure-galvano-ai.com` — bei DNS-Ausfall meldet sie Crawl-Fehler |
-
-### Was bricht was
-
-| Ursache | Folge | Sichtbar? |
-|---|---|---|
-| A-Records auf `@` fehlen oder falsch | Website komplett unerreichbar | ja, sofort |
-| **AAAA-Eintrag vorhanden** (auf etwas anderes als GitHub) | HTTPS bricht für alle IPv6-Clients, `ERR_SSL_PROTOCOL_ERROR` | ja, aber nur für einen Teil der Besucher — leicht zu übersehen |
-| `CNAME`-Datei im Repo gelöscht | Pages verliert Custom Domain, Zertifikat wird ungültig | verzögert |
-| **MX von `rvh.at` falsch** | eingehende Mail geht verloren oder landet woanders | **nein** — sieht aus wie „keine Antwort" |
-| SPF/DKIM fehlen | ausgehende Mails landen im Spam, DMARC schlägt fehl | nein |
-| `autodiscover` falsch | Outlook-Neueinrichtung schlägt fehl, bestehende Clients laufen weiter | verzögert |
-| Microsoft-365-Konto gesperrt | Mail **und** Terminbuchung auf der Website gleichzeitig tot | ja |
-
-### Routine-Check
-
-Nach **jeder** Vertrags- oder Kontoänderung bei IONOS beide Zonen gegen die Soll-Tabellen oben
-prüfen — und zwar gegen den **autoritativen** Nameserver, nicht über den lokalen Resolver:
-
-```bash
-nslookup -type=A   secure-galvano-ai.com ns1093.ui-dns.com
-nslookup -type=AAAA secure-galvano-ai.com ns1093.ui-dns.com
-nslookup -type=MX  rvh.at ns1027.ui-dns.de
-nslookup -type=TXT rvh.at ns1027.ui-dns.de
-```
+Ausgelagert nach [`_doku/infrastruktur.md`](_doku/infrastruktur.md) *(15.10.2026)*: Soll-Stand
+beider Zonen (`secure-galvano-ai.com`, `rvh.at`), Endstand der Absenderauthentifizierung
+(`p=quarantine`, warum kein `p=reject`), IONOS-Vertrag, Login-Wiederherstellung, der Vorfall vom
+17.08.2026, „Was bricht was" und der Routine-Check nach jeder IONOS-Aktion.
 
 ## Corporate Design Assets
 
@@ -807,28 +529,7 @@ nslookup -type=TXT rvh.at ns1027.ui-dns.de
 | **Corporate Design Doku** | `brand/corporate_design.md` |
 | **Canva Workflow** | `brand/canva_workflow.md` |
 
-### Farben
-
-**Single Source: `assets/css/base.css :root`** (kanonisch aus `corporate_design.md`).
-Farbe ändern = nur dort editieren, gilt sofort site-weit. Ad-hoc-Hex im Seiten-CSS
-vermeiden — stattdessen Token `var(--name)` nutzen.
-
-| Farbe | Token / Hex | Verwendung |
-|-------|-----|------------|
-| Schild-Blau | `--schild-blau` `#2B5EA7` | Primär — Headlines, Buttons |
-| Dunkelblau | `--dunkelblau` `#1B2A4A` | Hintergründe, Text |
-| Logo-Grün | `--logo-gruen` `#3D8C3E` | Akzent — Checkmarks, Erfolg |
-| Silber | `--silber` `#D4D8DC` | Trennlinien, dezente Flächen |
-| Hellgrau | `--hellgrau` `#F5F7FA` | Sektions-Hintergrund |
-| Cyan | `--cyan-akzent` `#00D4FF` | Tech-Akzent (sparsam) |
-| (abgeleitet) | `--schild-blau-hover` `--dunkelblau-mid` `--dunkelblau-deep` `--blau-tint` `--text-body` `--text-light` | Hover, Verläufe, Footer-BG, Fließtext |
-
-### Fonts
-
-- **Headlines:** Montserrat (Bold/SemiBold) — **lokal self-hosted** in `fonts/` (OFL-lizenziert)
-- **Body:** Open Sans (Regular/Light) — **lokal self-hosted** in `fonts/` (OFL-lizenziert)
-- **Fallback:** Arial
-- Einbindung in jeder Page über `<link href="fonts/fonts.css" rel="stylesheet">` — kein Google-Fonts-Request, DSGVO-freundlich
+Farben und Schriften der Website: § *Architektur* (Tokens in `assets/css/base.css :root`).
 
 ## Externe Services
 
@@ -845,8 +546,8 @@ vermeiden — stattdessen Token `var(--name)` nutzen.
 | GitHub Pages | Hosting + TLS-Zertifikat | `github.com/secure-galvano-ai/homepage/settings/pages` |
 | IONOS | **Domain-Registrar und DNS-Betreiber** — Login über Kundennummer, nicht über die Mailadresse | `my.ionos.de` · Service `0721 170 555` |
 
-> Alle Abhängigkeiten zwischen diesen Diensten stehen im Abschnitt
-> [Systeme und Abhängigkeiten](#systeme-und-abh%C3%A4ngigkeiten).
+> Alle Abhängigkeiten zwischen diesen Diensten stehen in
+> [`_doku/infrastruktur.md`](_doku/infrastruktur.md) § *Systeme und Abhängigkeiten*.
 
 ## Deployment
 
@@ -854,7 +555,7 @@ Push auf `main` → GitHub Pages deployed automatisch (~1 Min).
 
 ```bash
 cd homepage
-git add -A
+git add <nur die eigenen Dateien>   # nie -A, fremde Arbeit bleibt draussen (AGENTS.md §5)
 git commit -m "Beschreibung"
 git push
 ```
@@ -904,7 +605,7 @@ alles passt; eine stille Prüfung ist keine.
    gh api "repos/secure-galvano-ai/homepage/actions/runs/$RID/jobs" --jq '.jobs[] | "\(.name): \(.conclusion)"'
    gh run view "$RID" --log-failed | tail -30
    ```
-   - `deploy` + `Deployment cancelled` → **Concurrency** (Punkt 2).
+   - `deploy` + `Deployment cancelled` → **Concurrency** (Punkt 3).
    - `deploy` + `Timeout reached, aborting!` → **Pages-Backend-Timeout** (GitHub-seitig, transient) → abwarten + EINMAL neu deployen.
    - `deploy` + `HttpError: No server is currently available` (503) → **Zombie-Queue** (Punkt 2).
 2. **Zombie-Queue: Run steht ewig auf `queued` und lässt sich nicht canceln → `POST /pages/builds`.**
@@ -917,7 +618,7 @@ alles passt; eine stille Prüfung ist keine.
    gh api --method POST repos/secure-galvano-ai/homepage/pages/builds
    sleep 150 && gh api repos/secure-galvano-ai/homepage/pages/builds/latest --jq '.status'
    ```
-   **Abgrenzung zu Punkt 2:** Läuft ein Deploy noch oder wartet er regulär → Finger weg, jeder
+   **Abgrenzung zu Punkt 3:** Läuft ein Deploy noch oder wartet er regulär → Finger weg, jeder
    Trigger cancelt ihn. Hängt er als Zombie (`queued`, nicht cancelbar, > 30 Min) → genau dieser
    POST ist der Ausweg. `githubstatus.com` meldete dabei durchgehend „operational", taugt also
    nicht als Entscheidungsgrundlage.
@@ -932,26 +633,16 @@ cd homepage
 py _generate_assets.py
 ```
 
-Leistungsbausteine ändern/ergänzen (Karten auf `leistungen.html` + Teaser auf `index.html`):
-```bash
-cd homepage
-# 1. Baustein in der LEISTUNGEN-Liste in _generate_leistungen.py bearbeiten
-# 2. Neu rendern:
-py _generate_leistungen.py
-```
-**Eine Datenquelle:** die `LEISTUNGEN`-Liste in `_generate_leistungen.py`. Der
-Generator schreibt statisches HTML zwischen die `<!-- BEGIN/END leistungen:* -->`
--Marker (crawlbar, kein JS nötig). Das HTML zwischen den Markern **nicht von Hand
-bearbeiten** — es wird beim nächsten Lauf überschrieben. Kategorie-Chips (`data-cat`)
-sind gesetzt, ein Filter lässt sich später ohne Datenänderung ergänzen.
-
 Nachweise neu rendern (wenn das Quell-PDF aktualisiert wird):
 ```bash
 cd homepage
 py credentials/_generate_credentials.py
 ```
 Quelle: `Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`.
-Metadaten (Titel, Untertitel, Kategorie pro Seite) sind in `credentials/_generate_credentials.py` definiert — Reihenfolge dort ändern, Seiten 6-28 des PDFs werden zu 23 JPG-Paaren (Seite 28: WKO-Workshop NISG 2026, ergänzt 05/2026).
+Seitenauswahl und Metadaten (Titel, Untertitel, Kategorie pro Seite) stehen in
+`credentials/_generate_credentials.py` — Reihenfolge dort ändern. Schwärzungen (Liste
+`REDAKTIONEN`) gehören in den Erzeuger, nicht ins fertige Bild (`CLAUDE.md` §1 *Was öffentlich
+gestellt wird*).
 
 ## WhatsApp-Kontakt — abgeschaltet seit 07.09.2026
 
