@@ -38,6 +38,7 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent.
 | 02.10.2026 | **Bestand statt Austausch** *(Stefan: „Homepage bitte anpassen")* — neuer Abschnitt `#bestand` „Ihre Anlage muss nicht neu sein" nach dem Dreischritt; auf `leistungen.html` „Keine Nachrüstung" als Fähigkeit statt Aufwand gefasst („Ihre Anlage, wie sie ist"); Weiche *Selbst können* trägt den Eigentumssatz der Datenwerkstatt. **Das sind die drei Änderungen des Oktobers** | Anlass: Kernbotschaften neu geordnet (`BD/areas/brand/messaging.md` §4a): auswerten, was schon aufgezeichnet wird, und Werkzeuge im Eigentum des Betriebs nach vorn. Neuer Marker `link-standortanalyse-bestand`, Wirkung im November-Lauf (`OPTIMIERUNG.md` §4) |
 | 12.10.2026 | **Englische Fassung unter `/en/`** *(Stefan: internationaler Auftritt, US-Markt)* — Startseite, Leistungen, Profil, Sicherheit; DE/EN-Schalter in der Nav, `hreflang` auf beiden Seiten jedes Paars, Hinweis für Browser ohne Deutsch, Cookie-Banner zweisprachig. Nebenbei: Nav auf allen Seiten 24 px Abstand, Menü bis 1100 px (vorher ragte sie auf Startseite/Profil/Forschung zwischen 690 und 860 px aus dem Fenster) | § *Englische Fassung*. Zählt nicht zu den drei Optimierungsschritten des Oktobers |
 | 05.10.2026 | **„In Zusammenarbeit mit" auf `ausbildung.html`** *(Stefan)* — Block mit Partnerlogo, zwei Sätzen und Link nach dem Lernwerkzeug-Beispiel; gegenseitige Verlinkung | Kein Optimierungsschritt, zählt nicht zu den drei des Oktobers; Regel *Kooperationen* unten |
+| 15.10.2026 | **Unternehmenspräsentation ausgetauscht** *(Stefan, Freigabe für Upload erteilt)* — zum Download lag noch der Demo-Day-Foliensatz vom 17.07.2026 (13 Seiten). Jetzt der aktuelle Industrie-Pitch, 17 Seiten, ohne Golden-Ticket-Folie, letzte Seite Kontakt mit Buchungslink; die englische Seite bekommt erstmals eine **englische** Fassung (`company-presentation_…`) statt des deutschen PDFs. Dabei nachgezogen: Einsparpotenzial **60.000–90.000 €** statt 60.000–130.000 € auf vier Seiten — die Oberkante ist seit 15.09.2026 abgelöst (`BD/areas/preise.yaml` § `abgeloest`) | Erzeuger und Folienauswahl: `00_LIESMICH.md` des Pitch-Deck-Ordners auf SharePoint, § *Zwei abgeleitete Fassungen*. Kein Optimierungsschritt |
 
 ### Regeln, die daraus dauerhaft gelten
 
@@ -472,6 +473,14 @@ homepage/
                              nda-muster.pdf                   BD/scripts/nda_pdf.py
                              angebot-standortanalyse-muster.pdf   BD/scripts/angebot_muster.py
                              angebot-schnelldiagnose-muster.pdf   (beide aus demselben Lauf)
+                             unternehmenspraesentation_secure-galvano-ai.pdf  (deutsch)
+                             company-presentation_secure-galvano-ai.pdf       (englisch)
+                               Beide aus dem Pitch-Deck-Master auf SharePoint, NICHT aus einem
+                               BD-Skript: 01_Aussenauftritt/06_Praesentationsmaterialien/
+                               Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py. Ablauf, Auswahl
+                               der Folien und Begruendung im 00_LIESMICH.md desselben Ordners
+                               (Abschnitt "Zwei abgeleitete Fassungen"). Dateinamen NICHT aendern
+                               -- consent.js bildet das Clarity-Ereignis aus dem Dateinamen.
                            Die zwei Angebots-Muster sind dasselbe Dokument, das ein Kunde verbindlich
                            bekommt, im Muster-Modus gebaut: ohne Empfaenger, Nummer, Datum, IBAN und
                            Unterschrift, mit Ausfuellfeldern und Muster-Vermerk im Fuss. Die Pruefung
