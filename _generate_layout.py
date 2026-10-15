@@ -9,7 +9,7 @@ plain HTML -> stays crawlable and works without JavaScript.
 BOOKING_URL wirkt ueber die Marker hinaus: `sync_booking_links` zieht JEDEN
 Buchungslink der Seite nach, auch die CTAs mitten im Inhalt. Ein Dienstwechsel in
 Bookings ist damit eine Zeile hier plus ein Lauf -- nicht mehr 23 Fundstellen in
-neun Dateien.
+neun Dateien. Die Seiten unter en/ bekommen BOOKING_URL_EN (eigener englischer Dienst).
 
 Usage:
     py _generate_layout.py
@@ -51,6 +51,15 @@ ROOT = Path(__file__).parent
 BOOKING_URL = (
     "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/"
     "DdIPgTj7-0ymr6eHc38SQg2"
+)
+# Englische Seiten buchen einen eigenen Dienst (15.10.2026, Stefan): Bookings richtet sich
+# nicht nach der Browsersprache, sondern nach der Sprache des Dienstes -- Oberflaeche,
+# Bestaetigungsmail und Fragen kaemen sonst deutsch. Dienst `secure galvano ai - free intro
+# call`, Sprache English (United States), sonst eine Kopie des Erstgespraechs.
+# Massgeblich `stammdaten.yaml` (kontakt.buchung_en).
+BOOKING_URL_EN = (
+    "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/"
+    "ZivH8iyBokGAiByKXkWuqA2"
 )
 # WhatsApp-FAB abgeschaltet am 07.09.2026 (Stefan): der Button trug die private
 # Mobilnummer im Klartext auf jeder Seite -- maschinell abgreifbar und seither
@@ -172,6 +181,10 @@ def is_en(page: str) -> bool:
     return page.startswith("en/")
 
 
+def booking_url(page: str) -> str:
+    return BOOKING_URL_EN if is_en(page) else BOOKING_URL
+
+
 def page_url(page: str) -> str:
     """Oeffentliche URL einer Seite -- index.html ohne Dateinamen, wie im canonical."""
     return SITE + (page[: -len("index.html")] if page.endswith("index.html") else page)
@@ -204,7 +217,7 @@ def render_nav(active: str | None, page: str = "index.html") -> str:
         </a>
         <ul class="nav-links" id="navLinks">
 {links}
-            <li><a href="{BOOKING_URL}" target="_blank" rel="noopener" class="nav-cta" data-funnel="{marker}">{cta}</a></li>
+            <li><a href="{booking_url(page)}" target="_blank" rel="noopener" class="nav-cta" data-funnel="{marker}">{cta}</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="{menu}" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -224,7 +237,7 @@ def render_sticky_cta(page: str = "index.html") -> str:
     else:
         label, marker = "Kostenloses Erstgespräch buchen", "cta-sticky"
     return f"""<div class="sticky-cta" id="stickyCta">
-    <a href="{BOOKING_URL}" target="_blank" rel="noopener" data-funnel="{marker}">{label}</a>
+    <a href="{booking_url(page)}" target="_blank" rel="noopener" data-funnel="{marker}">{label}</a>
 </div>"""
 
 
@@ -328,9 +341,9 @@ BOOKING_LINK_RE = re.compile(
 )
 
 
-def sync_booking_links(text: str) -> tuple[str, int]:
-    """Point every Bookings link at BOOKING_URL. Returns (text, changed_count)."""
-    ziel = f'href="{BOOKING_URL}"'
+def sync_booking_links(text: str, url: str = BOOKING_URL) -> tuple[str, int]:
+    """Point every Bookings link at `url`. Returns (text, changed_count)."""
+    ziel = f'href="{url}"'
     treffer = [m for m in BOOKING_LINK_RE.finditer(text) if m.group(0) != ziel]
     return BOOKING_LINK_RE.sub(ziel, text), len(treffer)
 
@@ -353,7 +366,7 @@ def main() -> None:
         for marker, html in expected_blocks(filename).items():
             if marker in REQUIRED or f"<!-- BEGIN {marker} -->" in text:
                 text = inject(text, marker, html)
-        text, n_links = sync_booking_links(text)
+        text, n_links = sync_booking_links(text, booking_url(filename))
         links_fixed += n_links
         path.write_text(text, encoding="utf-8")
         print(f"  updated {filename}" + (f" ({n_links} Buchungslinks nachgezogen)" if n_links else ""))
