@@ -70,12 +70,27 @@ def quelltext(de_html: str) -> str:
     return "\n".join(z for z in zeilen if z) + "\n"
 
 
+# Links auf rein deutschsprachiges Material zaehlen nicht mit: Die englische Fassung laesst
+# Produktblaetter, Beispiel-Befunde, Musterangebote, Demo und Datenwerkstatt bewusst weg
+# (Stefan, 21.10.2026: deutsche Unterlagen auf der englischen Seite wirken unprofessionell).
+NUR_DEUTSCH = re.compile(r'href="[^"]*(?:\.pdf|demo\.html|ausbildung\.html)(?:#[^"]*)?"')
+
+
+def _funnel_marker(rumpf: str) -> int:
+    """Zaehlt data-funnel-Marker ohne die auf rein deutschsprachiges Material."""
+    gesamt = len(re.findall(r"data-funnel=", rumpf))
+    deutsch = sum(1 for tag in re.findall(r"<a\b[^>]*data-funnel=[^>]*>", rumpf)
+                  if NUR_DEUTSCH.search(tag))
+    return gesamt - deutsch
+
+
 def struktur(html: str) -> dict[str, int]:
     rumpf = _ohne_generiertes(html[html.index("<body"):])
     zaehler = collections.Counter()
     for name, muster in (("Abschnitte", r"<section\b"), ("h1", r"<h1\b"), ("h2", r"<h2\b"),
-                         ("h3", r"<h3\b"), ("Funnel-Marker", r"data-funnel=")):
+                         ("h3", r"<h3\b")):
         zaehler[name] = len(re.findall(muster, rumpf))
+    zaehler["Funnel-Marker"] = _funnel_marker(rumpf)
     return dict(zaehler)
 
 
