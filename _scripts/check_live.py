@@ -33,6 +33,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 GERAETE = {"Bildschirm": (1440, 900, False), "Handy": (390, 844, True)}
 GESPERRT_ERWARTET = {("outlook.office.com/book", 417), ("linkedin.com", 999)}
+# Konsolenmeldungen eingebetteter Fremddienste, die keine Fehler der Seite sind (YouTube fragt
+# sporadisch die Compute-Pressure-API ab; belegt 21.10.2026 auf demo.html und en/).
+KONSOLE_RAUSCHEN = ("compute-pressure",)
 _status: dict[str, object] = {}
 
 
@@ -81,7 +84,8 @@ def main() -> int:
                 ueber = page.evaluate("document.documentElement.scrollWidth - document.documentElement.clientWidth")
                 if ueber > 2:
                     befunde.append(f"{geraet} {pfad}: seitliches Verrutschen um {ueber} px")
-                befunde += [f"{geraet} {pfad}: Konsole: {f[:160]}" for f in fehler]
+                befunde += [f"{geraet} {pfad}: Konsole: {f[:160]}" for f in fehler
+                            if not any(r in f for r in KONSOLE_RAUSCHEN)]
                 if mobil and page.evaluate("!!document.getElementById('ablauf')"):
                     top = page.evaluate("document.getElementById('ablauf').getBoundingClientRect().top + scrollY")
                     kennzahlen.append(f"Handy {pfad}: Angebote nach {top / h:.1f} Bildschirmen")
