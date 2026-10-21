@@ -47,6 +47,11 @@ SHORTLINKS = {
         "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2",
         "Terminbuchung",
     ),
+    # Homepage-Links in LinkedIn-Beitraegen: ohne Kennung ist LinkedIn-Verkehr in Clarity nicht
+    # von Direktaufrufen zu trennen (15.09.-20.10.2026: keine einzige LinkedIn-Sitzung erkennbar).
+    # `linkedin_einplanen.py` haelt einen Beitrag mit nacktem Domainlink an.
+    "li": ("/?utm_source=linkedin&utm_medium=beitrag", "Startseite"),
+    "en/li": ("/en/?utm_source=linkedin&utm_medium=beitrag", "Startseite"),
 }
 
 SHORTLINK_TEMPLATE = """<!DOCTYPE html>
