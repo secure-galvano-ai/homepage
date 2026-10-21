@@ -620,8 +620,6 @@
     </div>
 </nav>
 <!-- END nav -->
-<!-- VORSCHAU-BANNER: vor dem Livegang entfernen -->
-<div style="background:#FFF4D6;color:#6B4E00;text-align:center;font-size:14px;padding:8px;position:relative;z-index:5;">Vorschau 21.10.2026, nur lokal, nicht online</div>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -642,19 +640,12 @@
                 <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">Für <strong style="color:#fff;">Galvanik- und Eloxalbetriebe mit mehreren Anlagen</strong> — an einem Standort oder über mehrere Werke hinweg. Einstieg ab 1.500 € netto.</p>
                 <div class="hero-buttons">
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero">Kostenloses Erstgespräch</a>
-                    <!-- Zweiter Hero-Button ist bewusst ein Angebot, kein Sprunganker (10.08.2026):
-                         Der Verkehr kommt presse- und namensgetrieben an, also in der Orientierungs-
-                         phase. Dort wirkt neben dem 30-Minuten-Termin ein Beleg zum Mitnehmen. Der
-                         Musterbefund lag vorher weit unten, wo ihn kaum jemand erreicht. -->
-                    <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-funnel="pdf-musterbefund-hero">Beispiel-Befund ansehen</a>
+                    <!-- Zweiter Hero-Button fuehrt seit 21.10.2026 zu den vier Angebotskacheln: Beispiel-
+                         Befund, Produktblatt und Musterangebot haengen dort je Angebot. Vorher fuehrte er
+                         direkt zum Musterbefund der Standortanalyse (Beleg zum Mitnehmen, 10.08.2026). -->
+                    <a href="#ablauf" class="btn btn-outline" data-funnel="cta-angebote-hero">Angebote und Preise</a>
                 </div>
                 <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:12px;letter-spacing:0.02em;">30 Minuten · unverbindlich · kostenlos</p>
-                <!-- Dritter Weg, bewusst ohne Termin und ohne Formular (Optimierungslauf 08/2026):
-                     der Weg ueber ein Dokument wird genutzt, der ueber den Termin kaum. Position
-                     im Hero, weil mobil nur ein kleiner Teil bis weiter unten liest. -->
-                <p style="font-size:0.92rem;margin-top:18px;">
-                    <a href="#ablauf" data-funnel="cta-angebote-hero" style="color:var(--cyan-akzent);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(0,212,255,0.4);padding-bottom:2px;">Die vier Angebote mit Preisen ansehen ↓</a>
-                </p>
             </div>
             <div class="hero-portrait">
                 <img src="assets/img/portrait.webp" alt="Stefan Maier — Ihr Ansprechpartner">
@@ -970,13 +961,6 @@
             <h2 style="color:var(--dunkelblau);">Wo Ihre Daten verarbeitet werden</h2>
             <p>Aus <strong>mehreren hundert Messpunkten</strong> und einer <strong>halben Million Signalen</strong> bleibt, was zählt — die wenigen Meldungen mit echter Ursache. Die Entscheidung bleibt bei Ihrem Techniker: Die KI liefert die Spur, entschieden wird bei Ihnen.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Kein KI-Dienst sieht Ihre Messwerte</strong> — ausgewertet auf unseren eigenen Rechnern, Übergabe verschlüsselt.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Kein Eingriff</strong> in die Anlage, keine neue Verkabelung.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Es reichen die <strong style="color:var(--dunkelblau);">Daten, die Sie ohnehin aufzeichnen</strong> — kein zusätzlicher Messaufwand.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">NDA</strong>, bevor auch nur ein Messwert Ihr Haus verlässt.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Ergebnisse gehören Ihnen</strong> — Bericht und Klick-Demo, voller Zugriff, kein Lock-in.</div>
-        </div>
 
         <!-- Wie die Daten laufen, in drei Schritten (seit 19.10.2026, ersetzt den Abschnitt zur verkauften Workstation). Wortlaut deckungsgleich mit dem Angebotsabsatz VERTRAULICHKEIT in BD/scripts/angebot_bauen.py. -->
         <div class="fade-up" style="margin-top:30px;background:var(--hellgrau);border:1px solid var(--silber);border-radius:14px;padding:26px 24px;">
@@ -986,7 +970,7 @@
                 <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.6"/><path d="M1.5 20h21"/><rect x="9.4" y="9.2" width="5.2" height="4.2" rx="0.8"/><path d="M10.5 9.2V8a1.5 1.5 0 0 1 3 0v1.2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 2</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Ausgewertet bei uns</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Ihre Messwerte werden ausschließlich auf unseren eigenen, verschlüsselten Rechnern ausgewertet. Kein KI-Dienst sieht sie.</p></div>
                 <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3v-3l5 3V5h3v5h2V5h3v16z"/><path d="M2 21h20"/><path d="M7 17.5h2M12 17.5h2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 3</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Betrieben bei Ihnen</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Das fertige Werkzeug läuft auf Ihrer Infrastruktur, ohne Internetverbindung.</p></div>
             </div>
-            <p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:18px 0 0;text-align:center;">Nach Projektende werden Ihre Daten auf Wunsch vollständig gelöscht, mit schriftlicher Bestätigung. <a href="sicherheit.html" data-funnel="link-sicherheit-startseite" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Welche Prüfungen und Standards dahinterstehen</a></p>
+            <p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:18px 0 0;text-align:center;">Die Ergebnisse gehören Ihnen, ohne Bindung an uns. Nach Projektende werden Ihre Daten auf Wunsch vollständig gelöscht, mit schriftlicher Bestätigung. <a href="sicherheit.html" data-funnel="link-sicherheit-startseite" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Welche Prüfungen und Standards dahinterstehen</a></p>
         </div>
 
         <!-- Nur die drei Fragen, die weder die Kacheln oben noch die sechs Schritte
