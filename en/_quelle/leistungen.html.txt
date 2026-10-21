@@ -1,8 +1,8 @@
 <title>Standortanalyse Daten- und KI-Potenziale · secure galvano ai</title>
-<meta name="description" content="Ein Tag im Werk, vor Ort oder per Video: wo Einsparpotenziale und lohnende KI-Anwendungsfälle liegen — und welche Ihrer Galvanikanlagen die Daten dafür liefern.">
+<meta name="description" content="Datenanbindung, Datenampel je Anlage und die Fehlerbilder mit Potenzial: ob die Daten Ihrer Galvanikanlagen für Auswertungen tragen — und wo das Geld liegt.">
 <meta name="keywords" content="Galvanik Software, Software für Galvanikanlagen, Digitalisierung Galvanotechnik, Standortanalyse Galvanik, Datenauswertung Oberflächentechnik, KI Galvanik, Potenzialanalyse Galvanotechnik">
 <meta property="og:title" content="Standortanalyse Daten- und KI-Potenziale — secure galvano ai">
-<meta property="og:description" content="Ein Tag im Werk — vor Ort oder per Video, vorbereitet durch kurze Gespräche mit Ihren Fachbereichen. Danach wissen Sie, wo Geld liegt und ob Ihre Daten es hergeben.">
+<meta property="og:description" content="Kurze Gespräche mit Ihren Fachbereichen und die Anbindung Ihrer Datenquellen. Danach wissen Sie, ob Ihre Daten tragen und bei welchen Fehlerbildern das Geld liegt.">
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -83,7 +83,7 @@
 <p class="section-label">Leistungen</p>
 <h1>Standortanalyse Daten- und KI-Potenziale</h1>
 <p class="goldzeile">Erst wissen, wo das Gold liegt. Dann schürfen.</p>
-<p>Die meisten Galvanikbetriebe zeichnen längst genug auf, um Fehler früher zu erkennen — ausgewertet wird es nicht. Der Einstieg ist deshalb kein Software-Projekt, sondern ein Tag im Werk — vor Ort oder per Video. Danach wissen Sie, wo Einsparpotenziale und lohnende KI-Anwendungsfälle liegen — und welche Ihrer Anlagen die Daten dafür liefern.</p>
+<p>Die meisten Galvanikbetriebe zeichnen längst genug auf, um Fehler früher zu erkennen — ausgewertet wird es nicht. Der Einstieg ist deshalb kein Software-Projekt, sondern ein Blick in Ihre Daten. Danach wissen Sie, ob sie für Auswertungen tragen, bei welchen Fehlerbildern das Geld liegt — und welche Ihrer Anlagen die Daten dafür liefern.</p>
 <!-- Orientierungsstreifen statt einer zweiten Ablauf-Sektion (10.09.2026):
 Der Weg steht auf der Startseite. Hier braucht es keine Wiederholung,
 sondern die Antwort auf "wo bin ich gerade und was kostet der Rest".
@@ -95,7 +95,7 @@ Preise kanonisch in areas/preise.yaml. -->
 <span style="color:var(--silber);">›</span>
 <strong style="color:var(--weiss);background:rgba(255,255,255,0.14);padding:3px 10px;border-radius:50px;">Standortanalyse 1.500 € netto</strong>
 <span style="color:var(--silber);">›</span>
-<a href="#danach" data-funnel="link-vorprojekt-hero" style="color:var(--text-light);text-decoration:none;">Vorprojekt <span style="opacity:.75;">5.000 € netto</span></a>
+<a href="#datenanalyse" data-funnel="link-vorprojekt-hero" style="color:var(--text-light);text-decoration:none;">Analyse je Fehlerbild <span style="opacity:.75;">5.000 € netto</span></a>
 <span style="color:var(--silber);">›</span>
 <a href="#danach" data-funnel="link-umsetzung-hero" style="color:var(--text-light);text-decoration:none;">Umsetzung <span style="opacity:.75;">nach Aufwand</span></a>
 </nav>
@@ -110,6 +110,9 @@ Webshop). Der Hinweis kostet eine Zeile und schliesst das. -->
 </div>
 </section>
 <!-- ===== SCHWERPUNKT: Standortanalyse =====
+Zuschnitt seit 21.10.2026 (Stefan, Leiter in BD/areas/preise.yaml): Anbindung der
+Datenquellen, Datenampel je Anlage, Liste der Fehlerbilder mit Potenzial; der Tag vor
+Ort mit Rundgang ist optional.
 Stand nach der Konkretisierung vom 31.08.2026: ganzer Tag statt Halbtag, vier
 Online-Vorgespraeche, Groessenordnungen statt Euro-Zahl je Anwendungsfall.
 Quelle: Standortanalyse_Umsetzung_2026-08-31.md §8.
@@ -128,16 +131,17 @@ beim Leser fest und kuendigte Arbeit an, statt sie abzunehmen (CLAUDE.md §1, Ca
 <div class="container">
 <p class="section-label">Der Einstieg</p>
 <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Standortanalyse</h2>
-<p class="lead" style="max-width:780px;margin-bottom:38px;">Vier bis sechs kurze Online-Gespräche mit Ihren Fachbereichen, dann ein Tag im Werk — vor Ort oder per Video, wie es Ihnen passt. Für Ihre Leute ist das zusammen rund ein halber Tag. Am Ende steht die Landkarte Ihres Standorts: welche Anlagen was liefern, wo die größten Hebel sitzen und in welcher Größenordnung. Die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
+<p class="lead" style="max-width:780px;margin-bottom:38px;">Vier bis sechs kurze Online-Gespräche mit Ihren Fachbereichen und die Anbindung Ihrer Datenquellen. Ein Tag vor Ort ist möglich, aber kein Muss. Am Ende wissen Sie, ob Ihre Daten für Auswertungen tragen, welche Anlagen was liefern und bei welchen Fehlerbildern das Geld liegt — in welcher Größenordnung. Die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
 <div class="schwerpunkt-grid">
 <div>
 <ol class="schritt-liste">
 <li><span class="wo">ONLINE · KOSTENLOS</span><strong>Erstgespräch</strong>Worum es geht, was Sie erwarten, welche Anlagen in Frage kommen. Sie nennen uns dabei nur, wer Ihre Fachbereiche vertritt — die Termine vereinbaren wir danach gemeinsam nach deren Verfügbarkeit.</li>
 <li><span class="wo">VOR DEM ERSTEN DATENAUSTAUSCH</span><strong>NDA</strong>Beidseitig, drei Jahre Geheimhaltung — verbindlich, bevor eine einzige Datei Ihr Haus verlässt. Beim Einstieg ist sie im Angebot enthalten, auf Wunsch zusätzlich als eigene Vereinbarung. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-leistungen" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Vorab lesen (PDF)</a></li>
 <li><span class="wo">ONLINE · JE RUND 45 MINUTEN</span><strong>Vier bis sechs Vorgespräche</strong>Mit Verfahrenstechnik, Instandhaltung, Qualität und Produktion; bei Bedarf zusätzlich Betriebsleitung und IT. <strong class="hebt">Einzeltermine, keine gemeinsame Runde</strong> — jeder wird einzeln nach der Verfügbarkeit des Beteiligten vereinbart, verteilbar über zwei Wochen. Ihre Leute schildern, was wiederkehrend Ärger macht; diese Information steht in keiner Datenbank.</li>
-<li><span class="wo">VOR ORT ODER PER VIDEO · FÜR SIE EIN HALBER TAG</span><strong>Rundgang und Workshop</strong>Zuerst der Rundgang mit einer Begleitperson: Anlagen, Steuerungen, Sensorik, Dosierung, was tatsächlich aufgezeichnet wird. Danach zwei Stunden Workshop mit Ihren Führungskräften — Anlagen, Systeme und Potenziale werden gemeinsam sortiert. <strong class="hebt">Das ist der einzige Termin, für den mehrere Ihrer Leute gleichzeitig Zeit brauchen.</strong> Bei weiter Anreise läuft der Rundgang als begleitete Videoführung, der Workshop am gemeinsamen Board — das Ergebnis ist dasselbe.</li>
-<li><span class="wo">DIREKT IM ANSCHLUSS · EINE STUNDE</span><strong>Abschlussrunde</strong>Wir gehen das Ergebnis gemeinsam durch und legen die Schwerpunkte fest, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
-<li><span class="wo">DANACH</span><strong>Schriftlicher Befund</strong>Standort-Landkarte, Datenampel je Anlage, Potenzialbild und eine klare Empfehlung, welcher nächste Schritt sich für Sie lohnt — oder ob keiner.</li>
+<li><span class="wo">ONLINE · MIT IHRER IT</span><strong>Anbindung der Datenquellen</strong>Gemeinsam mit Ihrer IT binden wir die Datenbank bzw. die Datenquellen an — Steuerung, Labor, Qualitätsdaten. Daran zeigt sich, was tatsächlich aufgezeichnet wird und ob es für Auswertungen trägt.</li>
+<li><span class="wo">AUF WUNSCH · VOR ORT</span><strong>Tag vor Ort mit Rundgang</strong>Wenn Sie es möchten, kommen wir ins Werk: Anlagen, Steuerungen, Sensorik und Dosierung im Rundgang, die Fehlerbilder mit Ihren Führungskräften sortiert. Ohne diesen Tag ist das Ergebnis dasselbe.</li>
+<li><span class="wo">ONLINE · EINE STUNDE</span><strong>Abschlussrunde</strong>Wir gehen das Ergebnis gemeinsam durch und legen die Schwerpunkte fest, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
+<li><span class="wo">DANACH</span><strong>Schriftlicher Befund</strong>Datenampel je Anlage, die Liste der Fehlerbilder mit Potenzial und eine klare Empfehlung, welches Fehlerbild sich zuerst lohnt — oder ob keines.</li>
 </ol>
 <div class="umfang-hinweis">
 <strong style="color:var(--dunkelblau);">Ob fünf Anlagen oder zwanzig — der Preis bleibt derselbe.</strong><br>
@@ -151,13 +155,13 @@ In die Übersicht kommen <strong>alle</strong> Ihre Anlagen. In die Tiefe gehen 
 beantwortet nur, was die Schrittliste nicht sagt — Aufwand, Beteiligte,
 Grenzen, Ergebnis. -->
 <dl>
-<dt>Ihr Aufwand</dt><dd><strong>Je Person eine Stunde online, dazu ein halber Tag für Rundgang und Workshop.</strong> Anlagenliste, Systemübersicht, ein Raum mit Pinnwand oder ein geteiltes Board — sonst keine Vorarbeit</dd>
-<dt>Terminplanung</dt><dd><strong>Nur ein Termin verlangt mehrere Personen gleichzeitig</strong> — Rundgang und Workshop. Alles davor läuft online und einzeln; jeder Termin wird gemeinsam nach der Verfügbarkeit Ihrer Leute vereinbart</dd>
+<dt>Ihr Aufwand</dt><dd><strong>Je Person eine Stunde online, dazu ein Termin mit Ihrer IT.</strong> Anlagenliste und Systemübersicht — sonst keine Vorarbeit</dd>
+<dt>Terminplanung</dt><dd><strong>Nur die Abschlussrunde verlangt mehrere Personen gleichzeitig.</strong> Alles davor läuft online und einzeln; jeder Termin wird gemeinsam nach der Verfügbarkeit Ihrer Leute vereinbart</dd>
 <dt>Wer dabei ist</dt><dd>Fokus auf Produktion, Qualitätssicherung, Instandhaltung und Verfahrenstechnik</dd>
 <dt>Ihre Anlage, wie sie ist</dt><dd><strong>Ausgewertet wird, was heute schon aufgezeichnet wird</strong> — aus Steuerung, Sensorik, Labor oder Badbuch, auch bei älteren Anlagen und aus verschiedenen Quellen. Keine neue Sensorik, keine Kameras</dd>
-<dt>Kein Eingriff</dt><dd>Ihre Steuerung bleibt unverändert: keine Verkabelung, kein Zugriff, kein Umbau — und kein KI-Dienst sieht Ihre Messwerte</dd>
-<dt>Vor Ort oder remote</dt><dd>Sie entscheiden. <strong>Remote fallen keine Anreisekosten an</strong>; vor Ort ist der Umkreis von 250 km um Bregenz inklusive, darüber 1 € je zusätzlichem Kilometer</dd>
-<dt>Ergebnis</dt><dd>Standort-Landkarte, Datenampel je Anlage, Potenzialbild in vier Feldern, schriftlicher Befund</dd>
+<dt>Kein Eingriff</dt><dd>Ihre Steuerung bleibt unverändert: keine Verkabelung, kein Umbau — und kein KI-Dienst sieht Ihre Messwerte</dd>
+<dt>Tag vor Ort</dt><dd>Optional, Sie entscheiden. Der Umkreis von 250 km um Bregenz ist inklusive, darüber 1 € je zusätzlichem Kilometer</dd>
+<dt>Ergebnis</dt><dd>Datenampel je Anlage, Liste der Fehlerbilder mit Potenzial, schriftlicher Befund</dd>
 <dt>Danach</dt><dd>Sie entscheiden frei. Es folgt kein Automatismus</dd>
 </dl>
 <a class="eck-cta" href="docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-leistungen">Alles auf einer Seite (PDF)</a>
@@ -170,60 +174,54 @@ Hand nachbauen, sonst laufen Muster und Angebot auseinander. -->
 <a class="eck-cta" style="margin-top:10px;" href="docs/angebot-standortanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-standortanalyse">Blanko-Angebot zum Ausfüllen (PDF)</a>
 <!-- KEIN Verweis auf demo.html hier: die Belegspalte sammelt Belege zur
 STANDORTANALYSE, das Video zeigt die ANWENDUNG. Der Verweis steht
-weiter unten in der Karte "Vorprojekt" — genau dort, wo der Text
+weiter unten bei "Wie es weitergeht" — genau dort, wo der Text
 "erst hier sehen Sie die Auswertung selbst arbeiten" verspricht. -->
 </aside>
 </div>
 </div>
 </section>
-<!-- ===== ABKUERZUNG: DATENANALYSE =====
-Neu 14.09.2026. Anlass ist der erste Inbound-Lead: ein Betrieb mit vorhandener
-SQL-Datenbank, klarer Fragestellung und eigener IT. Fuer den ist die Standortanalyse
-oben ein Umweg -- Vorgespraeche und Werksrundgang erheben, was er laengst weiss.
-Bewusst KEIN zweites Produkt und KEIN zweiter Preis: derselbe Einstiegspreis, nur ein
-kuerzerer Weg. Wer es als eigenes Angebot liest, hat die Absicht verfehlt. Details und
-Ablauf im PDF; der Abschnitt bleibt deshalb kurz. -->
+<!-- ===== STUFE 3: ANALYSE JE FEHLERBILD =====
+Seit 21.10.2026 (Stefan): ersetzt den "kurzen Weg" zum Preis der Standortanalyse (die
+Schnelldiagnose ist in dieser Stufe aufgegangen). Intern heisst die Stufe Proof of
+Concept, kundenseitig "Analyse je Fehlerbild". id und Funnel-Marker bleiben, damit
+Anker und Clarity-Reihen weiterlaufen. Preis: BD/areas/preise.yaml leiter.poc. -->
 <section id="datenanalyse" style="padding:56px 0;background:#fff;border-top:1px solid var(--silber);">
 <div class="container">
-<p class="section-label">Der kurze Weg</p>
-<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Wenn Ihre Daten schon vorliegen</h2>
-<p class="lead" style="max-width:780px;margin-bottom:30px;">Zeichnen Steuerung und Qualitätssicherung bei Ihnen ohnehin auf und wissen Sie, welche Frage Sie beantwortet haben wollen? Dann braucht es keine Bestandsaufnahme im Werk. Wir gehen direkt an die Auswertung — <strong>zum selben Preis wie die Standortanalyse</strong>, es ist derselbe Einstieg ohne Umweg.</p>
+<p class="section-label">Der nächste Schritt</p>
+<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Analyse je Fehlerbild</h2>
+<p class="lead" style="max-width:780px;margin-bottom:30px;">Woran liegt dieses Fehlerbild — und was ist zuerst zu prüfen? Für ein Fehlerbild aus der Standortanalyse legen wir Ihre Prozessdaten neben das Wissen Ihrer Leute. <strong>5.000 € netto je Fehlerbild</strong>, weitere Fehlerbilder jederzeit zusätzlich.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
 <div>
-<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Erstgespräch</h3>
-<p style="font-size:0.92rem;">30 Minuten, kostenlos. Welche Frage soll beantwortet werden — und liegen die Daten dafür vor.</p>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Fehlerbild wählen</h3>
+<p style="font-size:0.92rem;">Aus der Liste der Standortanalyse — nach Potenzial und Datenlage.</p>
 </div>
 <div>
-<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Geheimhaltung</h3>
-<!-- 23.09.2026: „im Angebot enthalten" ergaenzt. Das Angebot traegt die
-Vertraulichkeit seit AG 2026-004 als eigenen Absatz, damit vor dem Auftrag
-nichts unterschrieben werden muss. Ohne diesen Halbsatz widersprechen sich
-Seite und Angebot, das direkt darunter zum Download steht. -->
-<p style="font-size:0.92rem;">Beidseitig und verbindlich, bevor eine einzige Datei Ihr Haus verlässt — im Angebot enthalten, auf Wunsch zusätzlich als eigene Vereinbarung. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-datenanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Muster lesen</a></p>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Datengrundlage</h3>
+<p style="font-size:0.92rem;">Die Daten sind aus der Standortanalyse angebunden; bei Bedarf kommt ein ergänzender Auszug dazu, abgestimmt mit Ihrer IT.</p>
 </div>
 <div>
-<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Datenklärung</h3>
-<p style="font-size:0.92rem;">Ein Termin mit Ihrer IT am Bildschirm: welche Tabellen, welcher Zeitraum, welches Format. Meist eine Stunde.</p>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Gespräche</h3>
+<p style="font-size:0.92rem;">Bei Bedarf je 45 Minuten mit Verfahrenstechnik, Instandhaltung und Qualitätssicherung — was der Betrieb beobachtet, steht in keiner Datenbank.</p>
 </div>
 <div>
-<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">4 · Übergabe</h3>
-<p style="font-size:0.92rem;">Über eine Ablage, die <strong>Sie</strong> bereitstellen. Die Daten bleiben in Ihrer Hand, den Zugang entziehen Sie jederzeit.</p>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">4 · Auswertung</h3>
+<p style="font-size:0.92rem;">Rund drei Wochen: Soll gegen Ist, Verläufe um die Fehlerzeitpunkte, das Auswertewerkzeug erstmals an Ihren Daten.</p>
 </div>
 <div>
-<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">5 · Auswertung</h3>
-<p style="font-size:0.92rem;">Rund drei Wochen: Soll gegen Ist, Abweichungen markiert und mit dem Qualitätsergebnis verknüpft.</p>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">5 · Befund</h3>
+<p style="font-size:0.92rem;">Ursache-Wirkungs-Diagramm nach Ishikawa, die Datenauswertungen dazu und eine begründete Reihenfolge, was zuerst zu prüfen ist.</p>
 </div>
 <div>
-<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">6 · Nachbesprechung</h3>
-<p style="font-size:0.92rem;">Befund, Größenordnung des Potenzials — und wo Ihre Daten heute nicht ausreichen.</p>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">6 · Zum Durchklicken</h3>
+<p style="font-size:0.92rem;">Die Auswertung Ihrer Daten interaktiv, im Browser ohne Installation und ohne Internetverbindung.</p>
 </div>
 </div>
 <div class="umfang-hinweis" style="margin-bottom:24px;">
 <strong style="color:var(--dunkelblau);">Ergebnisoffen — und das ist so gemeint.</strong><br>
-Zeigt die Auswertung keinen belastbaren Zusammenhang, wissen Sie danach, woran es liegt. Ist dagegen noch offen, welche Ihrer Anlagen überhaupt auswertbare Daten liefern, ist die <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> der bessere Einstieg.
+Lässt sich die Ursache aus Daten und Gesprächen nicht eingrenzen, sagt der Befund, welche Angabe oder Messung dafür fehlt. Voraussetzung ist eine abgeschlossene <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> — sie klärt vorher, ob Ihre Daten tragen.
 </div>
 <a class="btn btn-primary" href="docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-datenanalyse-leistungen">Ablauf auf einer Seite (PDF)</a>
-<a class="btn btn-outline" style="margin-left:10px;" href="docs/angebot-schnelldiagnose-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-schnelldiagnose">Blanko-Angebot zum Ausfüllen (PDF)</a>
+<a class="btn btn-outline" style="margin-left:10px;" href="docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-fehlerbild">Blanko-Angebot zum Ausfüllen (PDF)</a>
 </div>
 </section>
 <!-- ===== DIE VIER POTENZIALFELDER ===== -->
@@ -339,9 +337,9 @@ dahinter.</p>
 Groessere Analyse). Sie waren der Hauptgrund, warum der Ablauf verzweigt
 wirkte - der Prozess laeuft jetzt als ein Strang, die drei moeglichen
 Ausgaenge stehen als Satz. Entscheidung Stefan, 10.09.2026. -->
-<p class="lead" style="max-width:820px;margin-top:6px;">Drei Wege sind möglich, und welcher es wird, steht am Ende des Tages fest — gemeinsam in der Abschlussrunde, bevor irgendetwas zu Papier gebracht wird:</p>
+<p class="lead" style="max-width:820px;margin-top:6px;">Drei Wege sind möglich, und welcher es wird, steht am Ende fest — gemeinsam in der Abschlussrunde, bevor irgendetwas zu Papier gebracht wird:</p>
 <ul style="max-width:820px;margin:16px 0 0;padding-left:0;list-style:none;">
-<li style="position:relative;padding-left:22px;margin-bottom:11px;color:var(--text-body);font-size:1rem;line-height:1.7;"><span style="position:absolute;left:0;top:0;color:var(--schild-blau);font-weight:700;">·</span><strong style="color:var(--dunkelblau);">Das Vorprojekt</strong>, wenn die Daten tragen — ein ausgewählter Anwendungsfall an Ihren echten Daten, bis ein belegter Nachweis steht. Erst hier entstehen belastbare Zahlen, und <strong>spätestens jetzt holen wir Ihre IT dazu</strong>. <a href="demo.html" data-funnel="cta-demo-vorprojekt" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">▶ Die Anwendung in Aktion ansehen</a></li>
+<li style="position:relative;padding-left:22px;margin-bottom:11px;color:var(--text-body);font-size:1rem;line-height:1.7;"><span style="position:absolute;left:0;top:0;color:var(--schild-blau);font-weight:700;">·</span><strong style="color:var(--dunkelblau);">Die Analyse je Fehlerbild</strong>, wenn die Daten tragen — ein Fehlerbild aus Ihrer Liste, an Ihren echten Daten, bis Ursache und Prüfreihenfolge belegt sind. Hier sehen Sie das Auswertewerkzeug erstmals an Ihren Daten arbeiten. <a href="demo.html" data-funnel="cta-demo-vorprojekt" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">▶ Die Anwendung in Aktion ansehen</a></li>
 <li style="position:relative;padding-left:22px;margin-bottom:11px;color:var(--text-body);font-size:1rem;line-height:1.7;"><span style="position:absolute;left:0;top:0;color:var(--schild-blau);font-weight:700;">·</span><strong style="color:var(--dunkelblau);">Ein Fahrplan</strong>, wenn die Daten noch nicht tragen — was Ihr Standort braucht, um die Datenverfügbarkeit zu erhöhen, in welcher Reihenfolge. Kein Ersatzangebot, sondern das, was vorher dran ist.</li>
 <li style="position:relative;padding-left:22px;color:var(--text-body);font-size:1rem;line-height:1.7;"><span style="position:absolute;left:0;top:0;color:var(--schild-blau);font-weight:700;">·</span><strong style="color:var(--dunkelblau);">Ein breiterer Rahmen</strong>, wenn das Thema über die Anlagen hinausgeht — mit Bereichsgesprächen, Workshops und einer bewerteten Prioritätenliste für Ihre Leitung.</li>
 </ul>

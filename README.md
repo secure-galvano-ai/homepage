@@ -98,7 +98,7 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Fassung traegt (alte Anschrift, Sammel-Buchungsseite, falsches Gruendungsdatum).
 - **Beim Umbenennen oder Nachziehen einer Zahl `grep` über *alle* Seiten laufen lassen, nicht nur
   über die, die man gerade umbaut** — inklusive `<meta>`-Beschreibungen, `og:`-Tags und `en/`.
-  Anlass: Die Stufe heißt seit 31.08.2026 **„Vorprojekt"** statt „Diagnose"
+  Anlass: Die Stufe hieß ab 31.08.2026 **„Vorprojekt"** statt „Diagnose" (seit 21.10.2026 „Analyse je Fehlerbild")
   (`BD/areas/business-model.md` §*Leiter*); bis 03.09.2026 stand „Diagnose" noch viermal auf
   `sicherheit.html` und `ueber-mich.html`, wo niemand nachsieht. Dasselbe beim Einsparpotenzial:
   **60.000–90.000 €**, die Oberkante 130.000 € ist seit 15.09.2026 abgelöst
@@ -210,7 +210,7 @@ auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert ha
 - **Jeder Funnel-Marker endet auf `-en`**, `data-video` ebenso — sonst mischt Clarity beide
   Sprachen (`OPTIMIERUNG.md` §4).
 - Glossar: Modellprüfung = *model audit* (nie *certification/certified*), Standortanalyse =
-  *Site Assessment*, Vorprojekt = *Feasibility Project*, Erstgespräch = *intro call*,
+  *Site Assessment*, Analyse je Fehlerbild = *Defect Analysis* (bis 20.10.2026 Vorprojekt = *Feasibility Project*), Erstgespräch = *intro call*,
   Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
   „Regelkarte“ ist auch als *control chart* gesperrt (die Prüfung schlägt an).
 - Was nur für Österreich gilt (Förderprogramme), entfällt auf Englisch. Preise als
@@ -381,11 +381,11 @@ homepage/
                            (TUeV/8-von-10 + Logoleiste, VOR dem Video), Pitch-Video, Aktuell (#aktuell),
                            Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts),
                            Bestand statt Austausch (#bestand), Ablauf (#ablauf) mit Preisen nur fuer die
-                           Einstiegsstufen (Standortanalyse, Vorprojekt; Umsetzung und Betreuung ohne
+                           Einstiegsstufen (Standortanalyse, Analyse je Fehlerbild; Umsetzung und Betreuung ohne
                            Preis), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung),
                            Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten.
   leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt
-                           (#standortanalyse), #datenanalyse (kuerzerer Weg, derselbe Einstiegspreis),
+                           (#standortanalyse), #datenanalyse (seit 21.10.2026 Stufe 3 „Analyse je Fehlerbild“),
                            sieben Anwendungen (#anwendungen), Fragen (#fragen) mit FAQPage-Schema,
                            Portfolio, Abgrenzung, Sticky-CTA. In #standortanalyse und #datenanalyse
                            Blanko-Angebote als PDF (docs/angebot-*-muster.pdf). Seit 31.08.2026 wieder
@@ -444,7 +444,7 @@ homepage/
                              anwendung-ueberblick.pdf         BD/templates/flyer-corporate/build_flyer_anwendung.py
                              nda-muster.pdf                   BD/scripts/nda_pdf.py
                              angebot-standortanalyse-muster.pdf   BD/scripts/angebot_muster.py
-                             angebot-schnelldiagnose-muster.pdf   (beide aus demselben Lauf)
+                             angebot-analyse-fehlerbild-muster.pdf (beide aus demselben Lauf)
                              unternehmenspraesentation_secure-galvano-ai.pdf  (deutsch)
                              company-presentation_secure-galvano-ai.pdf       (englisch)
                                Beide aus dem Pitch-Deck-Master auf SharePoint, NICHT aus einem
