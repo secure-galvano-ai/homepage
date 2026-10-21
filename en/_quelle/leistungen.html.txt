@@ -196,6 +196,7 @@ Warum ein Fehlerbild auftritt, klärt der nächste Schritt, die <a href="#analys
 <div style="display:flex;flex-wrap:wrap;gap:10px;">
 <a class="btn btn-primary" href="docs/erstanalyse-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-erstanalyse-leistungen">Überblick auf einer Seite (PDF)</a>
 <a class="btn btn-outline" href="docs/erstanalyse-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-erstanalyse-befund-leistungen">Beispiel-Befund (PDF)</a>
+<a class="btn btn-outline" href="docs/angebot-erstanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-erstanalyse">Blanko-Angebot (PDF)</a>
 </div>
 </div>
 </section>
@@ -268,6 +269,7 @@ weitere.ki_setup_check. -->
 Wir arbeiten in Ihrer Umgebung. Danach auf Wunsch die <a href="ausbildung.html" data-funnel="link-ausbildung-leistungen" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Datenwerkstatt</a> für Ihr Team, als Angebot auf Anfrage. Lizenzen buchen Sie direkt beim Anbieter.
 </div>
 <a class="btn btn-primary" href="docs/ki-setup-check-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-kisetup-leistungen">Überblick auf einer Seite (PDF)</a>
+<a class="btn btn-outline" href="docs/angebot-ki-setup-check-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-kisetup">Blanko-Angebot (PDF)</a>
 </div>
 </section>
 <!-- ===== WIE ES WEITERGEHT: Begleitung und Betreuung =====

@@ -460,7 +460,8 @@ homepage/
                              anwendung-ueberblick.pdf         BD/templates/flyer-corporate/build_flyer_anwendung.py
                              nda-muster.pdf                   BD/scripts/nda_pdf.py
                              angebot-standortanalyse-muster.pdf   BD/scripts/angebot_muster.py
-                             angebot-analyse-fehlerbild-muster.pdf (beide aus demselben Lauf)
+                             angebot-analyse-fehlerbild-muster.pdf, angebot-erstanalyse-muster.pdf,
+                             angebot-ki-setup-check-muster.pdf (alle vier aus demselben Lauf)
                              unternehmenspraesentation_secure-galvano-ai.pdf  (deutsch)
                              company-presentation_secure-galvano-ai.pdf       (englisch)
                                Beide aus dem Pitch-Deck-Master auf SharePoint, NICHT aus einem
