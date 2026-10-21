@@ -45,7 +45,7 @@
           "@id": "https://secure-galvano-ai.com/#business",
           "name": "secure galvano ai",
           "alternateName": "Stefan Maier — AI for Electroplating",
-          "description": "AI potential and data analysis for plating shops: finds the cause behind scrap and customer complaints in the line data you already have, before the parts reach your customer. Analyzed locally — no AI service sees your readings. Independently audited by TÜV AUSTRIA Trusted AI (model audit).",
+          "description": "AI potential and data analysis for plating shops: finds the cause behind scrap and customer complaints in the line data you already have, before the parts reach your customer. Analyzed on our own computers — no AI service sees your readings. Independently audited by TÜV AUSTRIA Trusted AI (model audit).",
           "url": "https://secure-galvano-ai.com/",
           "logo": "https://secure-galvano-ai.com/assets/img/logo.png",
           "image": "https://secure-galvano-ai.com/assets/img/og-image.jpg",
@@ -135,7 +135,7 @@
             {
               "@type": "Question",
               "name": "We have several sites. How does that work?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It starts at one site — that one carries the analysis. Every additional site costs significantly less, because the method is in place and nothing has to be developed from scratch. Billing is per monitored line, and you decide site by site." }
+              "acceptedAnswer": { "@type": "Answer", "text": "It starts at one site — that one carries the analysis. At every additional site the method is already in place, so things move faster there. The analyses are billed per site or per defect pattern, ongoing support later per monitored line. You decide site by site." }
             }
           ]
         }
@@ -625,18 +625,20 @@
                     <span class="dot"></span>
                     TÜV AUSTRIA Trusted AI · Model audit completed
                 </div>
-                <h1>The defect is already in your data. <span class="accent">You just can't see it.</span></h1>
-                <p>Out of hundreds of thousands of readings per day, a ten-minute anomaly goes unnoticed — and ends up as a complaint from your customer. The trace is in the data you already have. You see it before it gets expensive.</p>
+                <!-- Since 21.10.2026: the page sells four offers -- potential, data check, root-cause
+                     analysis and the secure use of AI. The former headline "The defect is already in
+                     your data" covered only the root-cause analysis; it lives on in the paragraph below. -->
+                <h1>Secure AI for surface finishing. <span class="accent">Benefits you can measure.</span></h1>
+                <p>We find the causes of your defect patterns in the data your line already records, show where automation pays off — and set up AI so that your readings stay protected.</p>
                 <!-- Target group defined by number of lines, not by company size. -->
-                <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">For <strong style="color:#fff;">electroplating and anodizing shops with multiple lines</strong> — at one site or across several plants.</p>
+                <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">For <strong style="color:#fff;">electroplating and anodizing shops with multiple lines</strong> — at one site or across several plants. Starting at €1,500 net (excl. VAT).</p>
                 <div class="hero-buttons">
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero-en">Book a free intro call</a>
-                    <a href="../docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-funnel="pdf-musterbefund-hero-en">See a sample report (PDF, German)</a>
+                    <!-- Second hero button leads to the four offer cards (since 21.10.2026): sample
+                         report, product sheet and sample quote sit there for each offer. -->
+                    <a href="#ablauf" class="btn btn-outline" data-funnel="cta-angebote-hero-en">Offers and prices</a>
                 </div>
                 <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:12px;letter-spacing:0.02em;">30 minutes · no obligation · free</p>
-                <p style="font-size:0.92rem;margin-top:18px;">
-                    <a href="services.html" data-funnel="cta-leistungen-hero-en" style="color:var(--cyan-akzent);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(0,212,255,0.4);padding-bottom:2px;">See what's possible first — all services at a glance →</a>
-                </p>
             </div>
             <div class="hero-portrait">
                 <img src="../assets/img/portrait.webp" alt="Stefan Maier — your contact">
@@ -702,6 +704,170 @@
     </div>
 </section>
 
+<!-- ===== OFFERS — four cards, expandable (proposal 21.10.2026) =====
+     Replaces the former process strip. id stays "ablauf" because other pages link to it.
+     Counterpart of the offer cards on the German home page -- same order, same markers. -->
+<style>
+  .angebote-karten { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
+  .angebot-spalte { display:flex; flex-direction:column; gap:10px; }
+  .angebot-belege { font-size:.86rem; line-height:1.8; padding:0 6px; }
+  .angebot-belege a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+  .angebot-belege a::before { content:"→ "; color:var(--logo-gruen); border:0; }
+  .angebot-karte { background:var(--weiss); border:1px solid var(--silber); border-radius:16px; box-shadow:0 6px 22px rgba(27,42,74,.08); transition:box-shadow .2s, border-color .2s; }
+  .angebot-karte:hover { box-shadow:0 10px 30px rgba(27,42,74,.16); }
+  .angebot-karte[open] { border-color:var(--schild-blau); }
+  .angebot-karte > summary { list-style:none; cursor:pointer; padding:24px 22px 22px; }
+  .angebot-karte > summary::-webkit-details-marker { display:none; }
+  .angebot-stufe { display:inline-block; font-family:'Montserrat',Arial,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 11px; border-radius:50px; background:rgba(43,94,167,.1); color:var(--schild-blau); }
+  .angebot-karte.neu .angebot-stufe { background:rgba(61,140,62,.12); color:var(--logo-gruen); }
+  .angebot-karte h3 { font-family:'Montserrat',Arial,sans-serif; font-size:1.22rem; color:var(--dunkelblau); margin:12px 0 8px; min-height:2.5em; display:flex; align-items:flex-end; }
+  .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; min-height:4.6em; }
+  .angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; min-height:7.6em; }
+  .angebot-preis { font-family:'Montserrat',Arial,sans-serif; font-size:1.3rem; font-weight:700; color:var(--dunkelblau); }
+  .angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; min-height:2.6em; }
+  .angebot-inhalt .btn { white-space:nowrap; font-size:.92rem; padding:12px 20px; }
+  #ablauf { scroll-margin-top:84px; }
+  .angebot-mehr { display:inline-block; margin-top:16px; font-weight:600; color:var(--schild-blau); font-size:.95rem; }
+  .angebot-mehr::after { content:" ▾"; }
+  .angebot-karte[open] .angebot-mehr::after { content:" ▴"; }
+  .angebot-mehr .zu { display:none; }
+  .angebot-karte[open] .angebot-mehr .zu { display:inline; }
+  .angebot-karte[open] .angebot-mehr .auf { display:none; }
+  .angebot-inhalt { padding:0 22px 22px; border-top:1px solid var(--hellgrau); }
+  .angebot-inhalt ul { padding-left:20px; margin:16px 0; }
+  .angebot-inhalt li { margin:9px 0; color:var(--text-body); font-size:.93rem; line-height:1.55; }
+  .angebot-inhalt li::marker { color:var(--logo-gruen); }
+  .angebot-unterlagen { font-size:.88rem; margin:0 0 16px; line-height:1.9; }
+  .angebot-unterlagen a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+  @media (max-width:1180px) { .angebote-karten { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } .angebot-frage, .angebot-fuer, .angebot-karte h3, .angebot-preis small { min-height:0; } }
+</style>
+<section id="ablauf" style="padding:64px 0 72px;background:var(--hellgrau);">
+    <div class="container">
+        <div class="section-header fade-up" style="margin-bottom:30px;">
+            <p class="section-label">Our offers</p>
+            <h2 style="color:var(--dunkelblau);">Four offers — each at a fixed price.</h2>
+            <p>You start with the Site Assessment, or with the Initial Data Check if your data is already available. Both lead to the Defect Analysis. You order each stage on its own. Before that comes a free 30-minute intro call.</p>
+        </div>
+
+        <div class="angebote-karten">
+            <div class="angebot-spalte fade-up">
+                <details class="angebot-karte">
+                    <summary>
+                        <span class="angebot-stufe">Uncover potential</span>
+                        <h3>Site Assessment</h3>
+                        <p class="angebot-frage">What can your data support, and where do automation and AI pay off?</p>
+                        <p class="angebot-fuer">For shops whose data is scattered, or who want to know where automation and AI pay off.</p>
+                        <div class="angebot-preis">€1,500 net<small>excl. VAT · per site, regardless of the number of lines</small></div>
+                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
+                    </summary>
+                    <div class="angebot-inhalt">
+                        <ul>
+                            <li>Short online meetings with your departments</li>
+                            <li>Connection of your data sources, together with your IT team</li>
+                            <li>A data traffic light for each line and the defect patterns where the money is</li>
+                            <li>Automation potential and AI use cases in your processes, ranked by benefit</li>
+                            <li>A day on site with a plant tour, if you wish</li>
+                        </ul>
+                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort-en">Book an intro call</a>
+                    </div>
+                </details>
+                <p class="angebot-belege">
+                    <a href="../docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-standort-en">Product sheet (PDF, German)</a><br>
+                    <a href="../docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-standort-en">Sample report (PDF, German)</a><br>
+                    <a href="../docs/angebot-standortanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-standort-karte-en">Sample quote (PDF, German)</a><br>
+                    <a href="services.html#standortanalyse" data-funnel="link-standortanalyse-karte-en">Process and effort in detail</a>
+                </p>
+            </div>
+            <div class="angebot-spalte fade-up">
+                <details class="angebot-karte">
+                    <summary>
+                        <span class="angebot-stufe">Data already collected</span>
+                        <h3>Initial Data Check</h3>
+                        <p class="angebot-frage">Can your existing data be analyzed, and where are the gaps?</p>
+                        <p class="angebot-fuer">For shops that have already collected their data, for example as an export from the controls or a database.</p>
+                        <div class="angebot-preis">€1,500 net<small>excl. VAT · per existing data set</small></div>
+                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
+                    </summary>
+                    <div class="angebot-inhalt">
+                        <ul>
+                            <li>You provide the data you already have, once the NDA is signed</li>
+                            <li>Check for completeness, timeline and gaps</li>
+                            <li>A data traffic light for each line: what supports analysis and what doesn't</li>
+                            <li>A recommendation on where to start, or what to retrofit</li>
+                        </ul>
+                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse-en">Book an intro call</a>
+                    </div>
+                </details>
+                <p class="angebot-belege">
+                    <a href="../docs/erstanalyse-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-erstanalyse-en">Product sheet (PDF, German)</a><br>
+                    <a href="../docs/erstanalyse-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-erstanalyse-en">Sample report (PDF, German)</a><br>
+                    <a href="../docs/beispiel-anlagendaten.pdf" target="_blank" rel="noopener" data-funnel="pdf-anlagendaten-erstanalyse-en">What line data contains (PDF, German)</a>
+                </p>
+            </div>
+            <div class="angebot-spalte fade-up">
+                <details class="angebot-karte">
+                    <summary>
+                        <span class="angebot-stufe">If the data supports it</span>
+                        <h3>Defect Analysis</h3>
+                        <p class="angebot-frage">What are the causes of a selected defect pattern?</p>
+                        <p class="angebot-fuer">For shops with a recurring defect pattern and data that has proven reliable.</p>
+                        <div class="angebot-preis">€5,000 net<small>excl. VAT · per defect pattern, using the data you already have</small></div>
+                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
+                    </summary>
+                    <div class="angebot-inhalt">
+                        <ul>
+                            <li>Cause-and-effect diagram with the supporting analyses</li>
+                            <li>A reasoned order of checks for your team</li>
+                            <li>An interactive report that runs without installation and without internet</li>
+                            <li>A clear statement on whether implementation pays off — no intervention in production</li>
+                        </ul>
+                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-fehlerbild-en">Book an intro call</a>
+                    </div>
+                </details>
+                <p class="angebot-belege">
+                    <a href="../docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-fehlerbild-en">Product sheet (PDF, German)</a><br>
+                    <a href="../docs/fehlerbild-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-fehlerbild-en">Sample report (PDF, German)</a><br>
+                    <a href="../demo.html" data-funnel="link-demo-karte-en">What the analysis looks like (in German)</a><br>
+                    <a href="../docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-fehlerbild-karte-en">Sample quote (PDF, German)</a>
+                </p>
+            </div>
+            <div class="angebot-spalte fade-up">
+                <details class="angebot-karte neu">
+                    <summary>
+                        <span class="angebot-stufe">New</span>
+                        <h3>AI Setup Check</h3>
+                        <p class="angebot-frage">Your team analyzes its own data — set up in line with GDPR and the EU AI Act.</p>
+                        <p class="angebot-fuer">For specialists who want to build analyses of their process and quality data themselves, without programming.</p>
+                        <div class="angebot-preis">€1,500 net<small>excl. VAT · trial setup for 1 to 3 people</small></div>
+                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
+                    </summary>
+                    <div class="angebot-inhalt">
+                        <ul>
+                            <li>Setup of the AI workspace with approvals and a written data boundary, agreed with your IT team</li>
+                            <li>No AI sees your readings: tools are built on synthetic sample data with the same structure, then run at your site on the real data</li>
+                            <li>Two analyses from your daily work, built together — for inspection records or the bath log, for example</li>
+                            <li>Usage rules and training in line with the EU AI Act</li>
+                            <li>Four weeks to try it out, with support when questions come up</li>
+                            <li>Afterwards, if you wish: the Data Workshop for your team, quoted on request. You book licenses directly with the provider.</li>
+                        </ul>
+                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-kisetup-en">Book an intro call</a>
+                    </div>
+                </details>
+                <p class="angebot-belege">
+                    <a href="../docs/ki-setup-check-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-kisetup-en">Product sheet (PDF, German)</a><br>
+                    <a href="../ausbildung.html" data-funnel="link-datenwerkstatt-karte-en">Next: the Data Workshop for your team (in German)</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="fade-up" style="text-align:center;margin-top:30px;">
+            <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">For the three analyses, we analyze your data on our own computers — before a single file leaves your building, we sign a mutual NDA. For the AI Setup Check, we work in your environment; no data is handed over to us. <a href="../docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Read the NDA in advance (PDF, German)</a></p>
+            <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:16px auto 0;max-width:700px;"><strong style="color:var(--dunkelblau);">And after that?</strong> We support your team in resolving the defects, at a fixed price per project, agreed before you commit. Across energy, water, anode metal, chemicals and disposal, the savings potential per line and year is on the order of €60,000 to €90,000. <a href="services.html#danach" data-funnel="link-danach-ablauf-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">What happens next</a></p>
+        </div>
+    </div>
+</section>
+
 <!-- ===== INTRO VIDEO (Pitch) ===== -->
 <section style="padding:56px 0;background:var(--hellgrau);border-bottom:1px solid var(--silber);">
     <div class="container fade-up" style="max-width:860px;text-align:center;">
@@ -725,7 +891,82 @@
     </div>
 </section>
 
-<!-- ===== NEWS — press and event ===== -->
+<!-- ===== THE PATH — root cause -> live -> early warning ===== -->
+<section id="so-funktionierts" style="padding:72px 0;background:var(--weiss);">
+    <div class="container" style="max-width:900px;">
+        <div class="section-header fade-up" style="margin-bottom:28px;">
+            <p class="section-label">The goal</p>
+            <h2 style="color:var(--dunkelblau);">Step in before the scrap is made.</h2>
+            <p>One path, not a toolkit. It starts by finding the cause in the data you already have — and ends where you react before a deviation even occurs. The industry calls this <strong>Predictive Quality</strong>.</p>
+        </div>
+        <div class="fade-up" style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:12px;margin-bottom:26px;">
+            <span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">1 · Find the cause</strong><br>In the data you already record. No intervention in production.</span>
+            <span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">2 · See it live</strong><br>Spot anomalies while the parts are still in your shop.</span>
+            <span style="flex:1 1 210px;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);box-shadow:0 6px 20px rgba(43,94,167,0.12);"><strong style="color:var(--schild-blau);">3 · React ahead of time</strong><br>Ahead of the disturbance instead of behind it — before any scrap is made.</span>
+        </div>
+        <p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 18px;">Your monitoring checks each reading on its own: temperature too high, alarm. That is exactly where it fails in the expensive cases. Because often <strong>every single value is in the green</strong> — and the combination is still wrong. The current a little lower, the bath a little cooler, the parts in a little longer. Unremarkable on their own, a defect together. That interplay is what we read.</p>
+        <p class="fade-up" style="font-style:italic;font-size:1.02rem;color:var(--schild-blau);line-height:1.6;border-left:3px solid var(--schild-blau);padding-left:18px;margin:0 0 22px;">“Not: something is wrong somewhere. But: at this point on the line, in this time window — look there first.”</p>
+        <p class="fade-up" style="font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:18px 22px;margin:0;"><strong style="color:var(--text-body);">What this means for you:</strong> How far it goes in your case depends on your data. The Site Assessment or the Initial Data Check shows what your data can support.</p>
+    </div>
+</section>
+
+<!-- ===== OLDER LINES TOO ===== -->
+<section id="bestand" style="padding:64px 0;background:var(--weiss);border-top:1px solid var(--silber);">
+    <div class="container" style="max-width:900px;">
+        <div class="section-header fade-up" style="margin-bottom:24px;">
+            <p class="section-label">Older lines too</p>
+            <h2 style="color:var(--dunkelblau);">Your line doesn't have to be new.</h2>
+            <p>Whether your values come from the controls, from the rectifier or by hand from the bath log — we analyze what is already being recorded today. Even on a line that has been running for twenty years, where every source writes its own format.</p>
+        </div>
+        <div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:22px;">
+            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Read as it is</strong><br>Rectifier archives, alarm messages, lab values, bath log — no new sensors.</span>
+            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Put on one timeline</strong><br>Different sources in one picture, without needing the maker of your controls to get involved.</span>
+            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">No retrofit</strong><br>No wiring, no access to the controls, no downtime.</span>
+        </div>
+        <p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 14px;">Analyze what is there first, then decide where to invest. That way, before a modernization, you know which line it pays off on — and which it doesn't.</p>
+        <a class="fade-up" href="services.html#standortanalyse" data-funnel="link-standortanalyse-bestand-en" style="font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">How the Site Assessment reads your existing setup</a>
+    </div>
+</section>
+
+<!-- ===== OBJECTIONS — data volume and data ownership.
+     id is a direct link target for questions about where the data is processed. -->
+<section id="lokale-datenverarbeitung" style="padding:76px 0;background:var(--weiss);">
+    <div class="container fade-up" style="max-width:920px;">
+        <div class="section-header" style="margin-bottom:30px;">
+            <p class="section-label">Your data stays protected</p>
+            <h2 style="color:var(--dunkelblau);">Where your data is processed</h2>
+            <p>Out of <strong>several hundred measuring points</strong> and <strong>half a million signals</strong>, what remains is what matters — the few alerts with a real cause. The decision stays with your engineer: the AI points to the lead, the call is yours.</p>
+        </div>
+        <!-- How the data flows, in three steps (since 19.10.2026, replaces the section on the sold workstation). -->
+        <div class="fade-up" style="margin-top:30px;background:var(--hellgrau);border:1px solid var(--silber);border-radius:14px;padding:26px 24px;">
+            <h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.15rem;color:var(--dunkelblau);margin:0 0 18px;text-align:center;">How we work with your data during the analyses</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
+                <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 2.2" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8v-13"/><path d="M4.5 12c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Step 1</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Built on synthetic data</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">We build your analysis on a test plant with the same structure as your plant data, but without a single real value.</p></div>
+                <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.6"/><path d="M1.5 20h21"/><rect x="9.4" y="9.2" width="5.2" height="4.2" rx="0.8"/><path d="M10.5 9.2V8a1.5 1.5 0 0 1 3 0v1.2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Step 2</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Analyzed on our side</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Your readings are analyzed exclusively on our own encrypted computers. No AI service sees them.</p></div>
+                <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3v-3l5 3V5h3v5h2V5h3v16z"/><path d="M2 21h20"/><path d="M7 17.5h2M12 17.5h2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Step 3</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Run at your site</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">The finished tool runs on your infrastructure, without an internet connection.</p></div>
+            </div>
+            <p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:18px 0 0;text-align:center;">The results belong to you, with no ties to us. After the project ends, your data is fully deleted on request, with written confirmation. <a href="security.html" data-funnel="link-sicherheit-startseite-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">The audits and standards behind it</a></p>
+        </div>
+
+        <!-- Only the three questions the tiles above don't already answer. -->
+        <div class="fade-up" style="max-width:760px;margin:34px auto 0;">
+            <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
+                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">What data do you need — and what if our data isn't ideal?</summary>
+                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">What you already record: sensor logs, SCADA history, Excel records, lab reports, customer complaint reports. 3–12 months of history is a good start. Gaps, mixed formats and time offsets are the rule, not the exception — that gets cleaned up. Where your data can't answer a question, you get a clear statement saying so.</p>
+            </details>
+            <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
+                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">What if the cause can't be pinned down clearly?</summary>
+                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Usually the main causes become clearly visible. In the difficult cases you still get a solid interim result: which hypotheses the data supports and which are ruled out, plus a proposal for the targeted additional measurement that settles the open question. Either way, you have more clarity than before.</p>
+            </details>
+            <details class="faq-item" style="border-top:1px solid var(--silber);border-bottom:1px solid var(--silber);padding:16px 0;">
+                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">We have several sites. How does that work?</summary>
+                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">It starts at one site — that one carries the analysis. At every additional site the method is already in place, so things move faster there. The analyses are billed per site or per defect pattern, ongoing support later per monitored line. You decide site by site.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NEWS — press and event (moved below the data section on 21.10.2026; the offers now sit at the top) ===== -->
 <section id="aktuell" style="padding:72px 0;background:var(--weiss);border-bottom:1px solid var(--silber);">
     <div class="container fade-up" style="max-width:1000px;">
         <p class="section-label" style="text-align:center;">News</p>
@@ -780,7 +1021,7 @@
                     </div>
                     <p style="margin:0;flex:1;color:rgba(255,255,255,0.82);font-size:0.96rem;line-height:1.6;">On stage at KI Days: how existing process data turns into a root cause analysis — and why the method from electroplating carries over to any kind of manufacturing.</p>
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" data-funnel="cta-aktuell-kidays-en" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--cyan-akzent);color:var(--dunkelblau);border-radius:8px;font-weight:700;font-size:0.92rem;text-decoration:none;align-self:flex-start;">
-                        15 minutes on your data
+                        30 minutes on your data
                     </a>
                     <p style="margin:0;font-size:0.75rem;color:rgba(255,255,255,0.5);">Photo: Mike Siblik / KI Days Vorarlberg</p>
                 </div>
@@ -793,173 +1034,6 @@
             <p style="margin:0 0 10px;color:var(--dunkelblau);font-size:1.05rem;line-height:1.65;font-style:italic;">“In the medium term, the start-up wants to work with just a few companies this way — deliberately in depth rather than in breadth.”</p>
             <p style="margin:0 0 14px;font-size:0.82rem;color:var(--text-light);">Vorarlberger Nachrichten &middot; VOL.AT, August 6, 2026</p>
             <p style="margin:0;color:var(--text-body);font-size:0.96rem;line-height:1.65;">That is the working model: a plating shop grows over decades. Together with the shop, we anchor the software where it brings the most value and extend it line by line. That only works with a few shops at a time.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== THE PAIN POINT ===== -->
-<section style="padding:80px 0;background:var(--hellgrau);">
-    <div class="container fade-up" style="max-width:820px;text-align:center;">
-        <p class="section-label">A moment many plating shops know</p>
-        <h2 style="font-size:clamp(1.5rem,2.8vw,2.2rem);color:var(--dunkelblau);margin-bottom:20px;">The customer complaint arrives — and nobody knows what caused it</h2>
-        <p style="color:var(--text-body);font-size:1.1rem;line-height:1.75;max-width:720px;margin:0 auto 36px;">The suspect batch has long since shipped by the time anyone notices the deviation — and what it costs only becomes clear when it is too late. The pattern was in your measurement data all along.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;max-width:760px;margin:0 auto;">
-            <div style="background:#fff;border:1px solid var(--silber);border-radius:14px;padding:24px 18px;">
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.5rem;color:var(--dunkelblau);line-height:1.1;margin-bottom:6px;">5 figures</div>
-                <div style="font-size:0.88rem;color:var(--text-light);line-height:1.5;">One customer complaint</div>
-            </div>
-            <div style="background:#fff;border:1px solid var(--silber);border-radius:14px;padding:24px 18px;">
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.5rem;color:var(--dunkelblau);line-height:1.1;margin-bottom:6px;">6 figures</div>
-                <div style="font-size:0.88rem;color:var(--text-light);line-height:1.5;">One lost key account</div>
-            </div>
-            <div style="background:#fff;border:1px solid var(--silber);border-radius:14px;padding:24px 18px;">
-                <div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.5rem;color:var(--schild-blau);line-height:1.1;margin-bottom:6px;">7 figures</div>
-                <div style="font-size:0.88rem;color:var(--text-light);line-height:1.5;">One recall</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== THE PATH — root cause -> live -> early warning ===== -->
-<section id="so-funktionierts" style="padding:72px 0;background:var(--weiss);">
-    <div class="container" style="max-width:900px;">
-        <div class="section-header fade-up" style="margin-bottom:28px;">
-            <p class="section-label">The goal</p>
-            <h2 style="color:var(--dunkelblau);">Step in before the scrap is made.</h2>
-            <p>One path, not a toolkit. It starts by finding the cause in the data you already have — and ends where you react before a deviation even occurs. The industry calls this <strong>Predictive Quality</strong>.</p>
-        </div>
-        <div class="fade-up" style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:12px;margin-bottom:26px;">
-            <span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">1 · Find the cause</strong><br>In the data you already record. No intervention in production.</span>
-            <span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">2 · See it live</strong><br>Spot anomalies while the parts are still in your shop.</span>
-            <span style="flex:1 1 210px;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);box-shadow:0 6px 20px rgba(43,94,167,0.12);"><strong style="color:var(--schild-blau);">3 · React ahead of time</strong><br>Ahead of the disturbance instead of behind it — before any scrap is made.</span>
-        </div>
-        <p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 18px;">Your monitoring checks each reading on its own: temperature too high, alarm. That is exactly where it fails in the expensive cases. Because often <strong>every single value is in the green</strong> — and the combination is still wrong. The current a little lower, the bath a little cooler, the parts in a little longer. Unremarkable on their own, a defect together. That interplay is what we read.</p>
-        <p class="fade-up" style="font-style:italic;font-size:1.02rem;color:var(--schild-blau);line-height:1.6;border-left:3px solid var(--schild-blau);padding-left:18px;margin:0 0 22px;">“Not: something is wrong somewhere. But: at this point on the line, in this time window — look there first.”</p>
-        <p class="fade-up" style="font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:18px 22px;margin:0;"><strong style="color:var(--text-body);">What this means for you:</strong> How far it goes in your case depends on your data. The Site Assessment shows what your data can support.</p>
-    </div>
-</section>
-
-<!-- ===== OLDER LINES TOO ===== -->
-<section id="bestand" style="padding:64px 0;background:var(--weiss);border-top:1px solid var(--silber);">
-    <div class="container" style="max-width:900px;">
-        <div class="section-header fade-up" style="margin-bottom:24px;">
-            <p class="section-label">Older lines too</p>
-            <h2 style="color:var(--dunkelblau);">Your line doesn't have to be new.</h2>
-            <p>Whether your values come from the controls, from the rectifier or by hand from the bath log — we analyze what is already being recorded today. Even on a line that has been running for twenty years, where every source writes its own format.</p>
-        </div>
-        <div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:22px;">
-            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Read as it is</strong><br>Rectifier archives, alarm messages, lab values, bath log — no new sensors.</span>
-            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Put on one timeline</strong><br>Different sources in one picture, without needing the maker of your controls to get involved.</span>
-            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">No retrofit</strong><br>No wiring, no access to the controls, no downtime.</span>
-        </div>
-        <p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 14px;">Analyze what is there first, then decide where to invest. That way, before a modernization, you know which line it pays off on — and which it doesn't.</p>
-        <a class="fade-up" href="services.html#standortanalyse" data-funnel="link-standortanalyse-bestand-en" style="font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">How the Site Assessment reads your existing setup</a>
-    </div>
-</section>
-
-<!-- ===== PROCESS — the steps, kept short; details on services.html ===== -->
-<section id="ablauf" style="padding:80px 0;background:var(--hellgrau);">
-    <div class="container">
-        <div class="section-header fade-up">
-            <p class="section-label">How we work together</p>
-            <h2 style="color:var(--dunkelblau);">Two stages to a clear finding — you know up front what each one costs.</h2>
-            <p>Fixed price, fixed result, no commitment: you order each stage on its own and decide again after each one. The intro call before it costs you nothing.</p>
-        </div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;align-items:stretch;">
-            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);">Before you start · free</span>
-                <h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Intro call</h3>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">30 minutes. You describe your situation and get an honest assessment — even if it says the numbers don't work yet.</p>
-                <p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">free <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">30 minutes</span></p>
-            </article>
-            <article class="fade-up" style="display:flex;flex-direction:column;background:transparent;border:1px dashed var(--silber);border-radius:16px;padding:24px 20px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.07);color:var(--text-light);">Before any data moves</span>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:7px;">NDA</h3>
-                <p style="color:var(--text-body);font-size:0.89rem;line-height:1.6;margin:0 0 12px;">Signed before a single file leaves your building — mutual, three years of confidentiality. Your readings do not go through any outside AI service.</p>
-                <p style="margin:auto 0 0;font-size:0.85rem;"><a href="../docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Read our NDA in advance (PDF, German)</a></p>
-            </article>
-            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Stage 1 · day on site optional</span>
-                <h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Site Assessment</h3>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">We connect your data sources and show whether the data holds up: a data traffic light for each line and the defect patterns where the money is.</p>
-                <p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">€1,500 net (excl. VAT) <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">per site</span></p>
-            </article>
-            <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-                <span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Stage 2 · if the data supports it</span>
-                <h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Defect Analysis</h3>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">What causes a defect pattern and what to check first — with a cause-and-effect diagram and an interactive report. More defect patterns can be added at any time.</p>
-                <p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">€5,000 net (excl. VAT) <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">per defect pattern</span></p>
-            </article>
-        </div>
-
-        <div class="fade-up" style="text-align:center;margin-top:32px;">
-            <a href="services.html#standortanalyse" data-funnel="cta-standortanalyse-ablauf-en" style="font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Process, effort and results in detail</a>
-            <a href="../docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-ablauf-en" style="display:inline-block;margin-left:22px;font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Sample report (PDF, German)</a>
-            <div style="margin-top:26px;">
-                <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-ablauf-en" style="font-size:1.02rem;padding:15px 36px;">Start with the intro call</a>
-                <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:20px auto 0;max-width:660px;"><strong style="color:var(--dunkelblau);">And after that?</strong> Stage 3 is <strong>Guided Defect Resolution</strong>: we support your team in a structured way until the defect patterns are resolved — at a fixed price per project, agreed before you commit. Monitoring software can be integrated if you wish. <strong>The target is annual savings of three to four times the investment.</strong> For reference: across energy, water, anode metal, chemicals and disposal, the savings potential per line and year is on the order of €60,000 to €90,000. <a href="services.html#danach" data-funnel="link-danach-ablauf-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">What happens next</a></p>
-            </div>
-        </div>
-
-        <!-- Fork: have it done or build the skills in-house. -->
-        <div class="fade-up" style="max-width:900px;margin:44px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;">
-            <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:22px 22px 20px;">
-                <h3 style="font-size:1.02rem;color:var(--dunkelblau);margin-bottom:8px;">Have it done</h3>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin-bottom:12px;">You want to know what is in your data without putting in your own time. We analyze, you get the findings.</p>
-                <a href="services.html#standortanalyse" data-funnel="link-standortanalyse-weiche-en" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">View the Site Assessment</a>
-            </div>
-            <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:22px 22px 20px;">
-                <h3 style="font-size:1.02rem;color:var(--dunkelblau);margin-bottom:8px;">Do it in-house</h3>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin-bottom:12px;">Your specialists build their own analysis tools — with AI support, no programming skills needed. What they build belongs to your company, source code included, and your people keep developing it.</p>
-                <a href="../ausbildung.html" data-funnel="link-datenwerkstatt-startseite-en" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">View the Data Workshop (in German)</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== OBJECTIONS — data volume and data ownership.
-     id is a direct link target for questions about where the data is processed. -->
-<section id="lokale-datenverarbeitung" style="padding:76px 0;background:var(--weiss);">
-    <div class="container fade-up" style="max-width:920px;">
-        <div class="section-header" style="margin-bottom:30px;">
-            <p class="section-label">Calm, in-house, no risk</p>
-            <h2 style="color:var(--dunkelblau);">On-premises data processing</h2>
-            <p>Out of <strong>several hundred measuring points</strong> and <strong>half a million signals</strong>, what remains is what matters — the few alerts with a real cause. The decision stays with your engineer: the AI points to the lead, the call is yours.</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Analyzed locally</strong> — no AI service sees your readings, encrypted handover.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">No intervention</strong> in the line, no new wiring.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> The <strong style="color:var(--dunkelblau);">data you already record</strong> is enough — no extra measuring effort.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">NDA</strong> before a single reading leaves your building.</div>
-            <div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">The results belong to you</strong> — report and click-through demo, full access, no lock-in.</div>
-        </div>
-
-        <!-- How the data flows, in three steps (since 19.10.2026, replaces the section on the sold workstation). -->
-        <div class="fade-up" style="margin-top:30px;background:var(--hellgrau);border:1px solid var(--silber);border-radius:14px;padding:26px 24px;">
-            <h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.15rem;color:var(--dunkelblau);margin:0 0 18px;text-align:center;">How we work with your data</h3>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
-                <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 2.2" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8v-13"/><path d="M4.5 12c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Step 1</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Built on synthetic data</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">We build your analysis on a test plant with the same structure as your plant data, but without a single real value.</p></div>
-                <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.6"/><path d="M1.5 20h21"/><rect x="9.4" y="9.2" width="5.2" height="4.2" rx="0.8"/><path d="M10.5 9.2V8a1.5 1.5 0 0 1 3 0v1.2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Step 2</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Analyzed on our side</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Your readings are analyzed exclusively on our own encrypted computers. No AI service sees them.</p></div>
-                <div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3v-3l5 3V5h3v5h2V5h3v16z"/><path d="M2 21h20"/><path d="M7 17.5h2M12 17.5h2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Step 3</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Run at your site</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">The finished tool runs on your infrastructure, without an internet connection.</p></div>
-            </div>
-            <p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:18px 0 0;text-align:center;">After the project ends, your data is fully deleted on request, with written confirmation. <a href="security.html" data-funnel="link-sicherheit-startseite-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">The audits and standards behind it</a></p>
-        </div>
-
-        <!-- Only the three questions the tiles above don't already answer. -->
-        <div class="fade-up" style="max-width:760px;margin:34px auto 0;">
-            <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
-                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">What data do you need — and what if our data isn't ideal?</summary>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">What you already record: sensor logs, SCADA history, Excel records, lab reports, customer complaint reports. 3–12 months of history is a good start. Gaps, mixed formats and time offsets are the rule, not the exception — that gets cleaned up. Where your data can't answer a question, you get a clear statement saying so.</p>
-            </details>
-            <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
-                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">What if the cause can't be pinned down clearly?</summary>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Usually the main causes become clearly visible. In the difficult cases you still get a solid interim result: which hypotheses the data supports and which are ruled out, plus a proposal for the targeted additional measurement that settles the open question. Either way, you have more clarity than before.</p>
-            </details>
-            <details class="faq-item" style="border-top:1px solid var(--silber);border-bottom:1px solid var(--silber);padding:16px 0;">
-                <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">We have several sites. How does that work?</summary>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">It starts at one site — that one carries the analysis. Every additional site costs significantly less, because the method is in place and nothing has to be developed from scratch. Billing is per monitored line, and you decide site by site.</p>
-            </details>
         </div>
     </div>
 </section>

@@ -12,7 +12,7 @@
 "@id": "https://secure-galvano-ai.com/#business",
 "name": "secure galvano ai",
 "alternateName": "Stefan Maier — KI für Galvanotechnik",
-"description": "KI-Potenziale und Datenauswertung für Galvanikbetriebe: findet die Ursache hinter Ausschuss und Reklamationen in den vorhandenen Anlagendaten, bevor die Ware beim Kunden landet. Lokal ausgewertet — kein KI-Dienst sieht Ihre Messwerte. Unabhängig geprüft von TÜV AUSTRIA Trusted AI (Modellprüfung).",
+"description": "KI-Potenziale und Datenauswertung für Galvanikbetriebe: findet die Ursache hinter Ausschuss und Reklamationen in den vorhandenen Anlagendaten, bevor die Ware beim Kunden landet. Ausgewertet auf eigenen Rechnern — kein KI-Dienst sieht Ihre Messwerte. Unabhängig geprüft von TÜV AUSTRIA Trusted AI (Modellprüfung).",
 "url": "https://secure-galvano-ai.com/",
 "logo": "https://secure-galvano-ai.com/assets/img/logo.png",
 "image": "https://secure-galvano-ai.com/assets/img/og-image.jpg",
@@ -101,7 +101,7 @@
 {
 "@type": "Question",
 "name": "Wir haben mehrere Standorte. Wie läuft das?",
-"acceptedAnswer": { "@type": "Answer", "text": "Es beginnt an einem Standort — der trägt die Analyse. Jeder weitere ist danach deutlich günstiger, weil die Methode steht und nichts neu entwickelt werden muss. Abgerechnet wird je überwachter Anlage, und Sie entscheiden Standort für Standort neu." }
+"acceptedAnswer": { "@type": "Answer", "text": "Es beginnt an einem Standort — der trägt die Analyse. An jedem weiteren steht die Methode schon, deshalb geht es dort schneller. Die Analysen rechnen wir je Standort bzw. je Fehlerbild ab, die spätere Betreuung je überwachter Anlage. Sie entscheiden Standort für Standort neu." }
 }
 ]
 }
@@ -118,29 +118,25 @@
 <span class="dot"></span>
 TÜV AUSTRIA Trusted AI · Modellprüfung abgeschlossen
 </div>
-<h1>Der Fehler steckt schon in Ihren Daten. <span class="accent">Sie sehen ihn nur nicht.</span></h1>
-<p>Aus hunderttausenden Messwerten pro Tag bleibt eine Auffälligkeit von zehn Minuten unentdeckt — und landet als Reklamation bei Ihrem Kunden. Diese Spur liegt in Ihren vorhandenen Daten. Sie sehen sie, bevor sie teuer wird.</p>
+<!-- Seit 21.10.2026 (Stefan): Die Seite verkauft vier Angebote -- Potenziale, Datenpruefung,
+Ursachenanalyse und den sicheren Einsatz von KI. Der fruehere Kopf "Der Fehler steckt
+schon in Ihren Daten" trug nur die Ursachenanalyse; er lebt im Absatz darunter weiter. -->
+<h1>Sichere KI für die Oberflächentechnik. <span class="accent">Mit Nutzen, den Sie messen.</span></h1>
+<p>Wir finden die Ursachen Ihrer Fehlerbilder in den Daten, die Ihre Anlage schon aufzeichnet, zeigen, wo sich Automatisierung lohnt — und richten KI so ein, dass Ihre Messwerte geschützt bleiben.</p>
 <!-- Zielgruppe klar benennen, aber ueber die ANLAGENZAHL statt ueber
 Betriebsgroesse: das ist laut business-model.md der echte Filter, und
 es schliesst den Einzelstandort (Sekundaer-Zielgruppe) nicht aus.
 "Galvanik- und Eloxalbetriebe" = galvanische + anodische Verfahren
 in Branchensprache -- also genau die mit Bestromungskennlinie. -->
-<p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">Für <strong style="color:#fff;">Galvanik- und Eloxalbetriebe mit mehreren Anlagen</strong> — an einem Standort oder über mehrere Werke hinweg.</p>
+<p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">Für <strong style="color:#fff;">Galvanik- und Eloxalbetriebe mit mehreren Anlagen</strong> — an einem Standort oder über mehrere Werke hinweg. Einstieg ab 1.500 € netto.</p>
 <div class="hero-buttons">
 <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero">Kostenloses Erstgespräch</a>
-<!-- Zweiter Hero-Button ist bewusst ein Angebot, kein Sprunganker (10.08.2026):
-Der Verkehr kommt presse- und namensgetrieben an, also in der Orientierungs-
-phase. Dort wirkt neben dem 30-Minuten-Termin ein Beleg zum Mitnehmen. Der
-Musterbefund lag vorher weit unten, wo ihn kaum jemand erreicht. -->
-<a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-funnel="pdf-musterbefund-hero">Beispiel-Befund ansehen</a>
+<!-- Zweiter Hero-Button fuehrt seit 21.10.2026 zu den vier Angebotskacheln: Beispiel-
+Befund, Produktblatt und Musterangebot haengen dort je Angebot. Vorher fuehrte er
+direkt zum Musterbefund der Standortanalyse (Beleg zum Mitnehmen, 10.08.2026). -->
+<a href="#ablauf" class="btn btn-outline" data-funnel="cta-angebote-hero">Angebote und Preise</a>
 </div>
 <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:12px;letter-spacing:0.02em;">30 Minuten · unverbindlich · kostenlos</p>
-<!-- Dritter Weg, bewusst ohne Termin und ohne Formular (Optimierungslauf 08/2026):
-der Weg ueber ein Dokument wird genutzt, der ueber den Termin kaum. Position
-im Hero, weil mobil nur ein kleiner Teil bis weiter unten liest. -->
-<p style="font-size:0.92rem;margin-top:18px;">
-<a href="leistungen.html" data-funnel="cta-leistungen-hero" style="color:var(--cyan-akzent);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(0,212,255,0.4);padding-bottom:2px;">Erst ansehen, was möglich ist — alle Leistungen im Überblick →</a>
-</p>
 </div>
 <div class="hero-portrait">
 <img src="assets/img/portrait.webp" alt="Stefan Maier — Ihr Ansprechpartner">
@@ -207,6 +203,170 @@ Geprüft &middot; EU AI Act · NIS2
 </div>
 </div>
 </section>
+<!-- ===== ANGEBOTE — vier Karten, aufklappbar (Vorschlag 21.10.2026) =====
+Ersetzt den frueheren Ablauf-Strang. id bleibt "ablauf", weil forschung.html und
+leistungen.html darauf verlinken. Preise: BD/areas/preise.yaml (Erstanalyse und
+KI-Setup-Check dort noch `intern`, Staffelpreise sind Vorschlag). Jede Karte traegt die
+Unterlagen, die vorher im Ablauf und im Hero standen, damit nichts verloren geht. -->
+<style>
+.angebote-karten { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
+.angebot-spalte { display:flex; flex-direction:column; gap:10px; }
+.angebot-belege { font-size:.86rem; line-height:1.8; padding:0 6px; }
+.angebot-belege a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+.angebot-belege a::before { content:"→ "; color:var(--logo-gruen); border:0; }
+.angebot-karte { background:var(--weiss); border:1px solid var(--silber); border-radius:16px; box-shadow:0 6px 22px rgba(27,42,74,.08); transition:box-shadow .2s, border-color .2s; }
+.angebot-karte:hover { box-shadow:0 10px 30px rgba(27,42,74,.16); }
+.angebot-karte[open] { border-color:var(--schild-blau); }
+.angebot-karte > summary { list-style:none; cursor:pointer; padding:24px 22px 22px; }
+.angebot-karte > summary::-webkit-details-marker { display:none; }
+.angebot-stufe { display:inline-block; font-family:'Montserrat',Arial,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 11px; border-radius:50px; background:rgba(43,94,167,.1); color:var(--schild-blau); }
+.angebot-karte.neu .angebot-stufe { background:rgba(61,140,62,.12); color:var(--logo-gruen); }
+.angebot-karte h3 { font-family:'Montserrat',Arial,sans-serif; font-size:1.22rem; color:var(--dunkelblau); margin:12px 0 8px; min-height:2.5em; display:flex; align-items:flex-end; }
+.angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; min-height:4.6em; }
+.angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; min-height:7.6em; }
+.angebot-preis { font-family:'Montserrat',Arial,sans-serif; font-size:1.3rem; font-weight:700; color:var(--dunkelblau); }
+.angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; min-height:2.6em; }
+.angebot-inhalt .btn { white-space:nowrap; font-size:.92rem; padding:12px 20px; }
+#ablauf { scroll-margin-top:84px; }
+.angebot-mehr { display:inline-block; margin-top:16px; font-weight:600; color:var(--schild-blau); font-size:.95rem; }
+.angebot-mehr::after { content:" ▾"; }
+.angebot-karte[open] .angebot-mehr::after { content:" ▴"; }
+.angebot-mehr .zu { display:none; }
+.angebot-karte[open] .angebot-mehr .zu { display:inline; }
+.angebot-karte[open] .angebot-mehr .auf { display:none; }
+.angebot-inhalt { padding:0 22px 22px; border-top:1px solid var(--hellgrau); }
+.angebot-inhalt ul { padding-left:20px; margin:16px 0; }
+.angebot-inhalt li { margin:9px 0; color:var(--text-body); font-size:.93rem; line-height:1.55; }
+.angebot-inhalt li::marker { color:var(--logo-gruen); }
+.angebot-unterlagen { font-size:.88rem; margin:0 0 16px; line-height:1.9; }
+.angebot-unterlagen a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+@media (max-width:1180px) { .angebote-karten { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } .angebot-frage, .angebot-fuer, .angebot-karte h3, .angebot-preis small { min-height:0; } }
+</style>
+<section id="ablauf" style="padding:64px 0 72px;background:var(--hellgrau);">
+<div class="container">
+<div class="section-header fade-up" style="margin-bottom:30px;">
+<p class="section-label">Unsere Angebote</p>
+<h2 style="color:var(--dunkelblau);">Vier Angebote — jedes zum Festpreis.</h2>
+<p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Daten schon vorliegen. Beide führen zur Analyse je Fehlerbild. Jede Stufe beauftragen Sie einzeln. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
+</div>
+<div class="angebote-karten">
+<div class="angebot-spalte fade-up">
+<details class="angebot-karte">
+<summary>
+<span class="angebot-stufe">Potenziale erschließen</span>
+<h3>Standortanalyse</h3>
+<p class="angebot-frage">Was tragen Ihre Daten, und wo lohnen sich Automatisierung und KI?</p>
+<p class="angebot-fuer">Für Betriebe, deren Daten verstreut liegen oder die wissen wollen, wo sich Automatisierung und KI lohnen.</p>
+<div class="angebot-preis">1.500 € netto<small>je Standort, unabhängig von der Anlagenzahl</small></div>
+<span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
+</summary>
+<div class="angebot-inhalt">
+<ul>
+<li>Kurze Online-Gespräche mit Ihren Fachbereichen</li>
+<li>Anbindung Ihrer Datenquellen, gemeinsam mit Ihrer IT</li>
+<li>Datenampel je Anlage und die Fehlerbilder, bei denen das Geld liegt</li>
+<li>Automatisierungspotenziale und KI-Anwendungsfälle in Ihren Abläufen, nach Nutzen sortiert</li>
+<li>Tag vor Ort mit Rundgang auf Wunsch</li>
+</ul>
+<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort">Erstgespräch buchen</a>
+</div>
+</details>
+<p class="angebot-belege">
+<a href="docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-standort">Produktblatt (PDF)</a><br>
+<a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-standort">Beispiel-Befund (PDF)</a><br>
+<a href="docs/angebot-standortanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-standort-karte">Musterangebot (PDF)</a><br>
+<a href="leistungen.html#standortanalyse" data-funnel="link-standortanalyse-karte">Ablauf und Aufwand im Detail</a>
+</p>
+</div>
+<div class="angebot-spalte fade-up">
+<details class="angebot-karte">
+<summary>
+<span class="angebot-stufe">Daten liegen vor</span>
+<h3>Erstanalyse</h3>
+<p class="angebot-frage">Sind Ihre vorhandenen Daten auswertbar, und wo sind Lücken?</p>
+<p class="angebot-fuer">Für Betriebe, die ihre Daten schon gesammelt haben, etwa als Export aus Steuerung oder Datenbank.</p>
+<div class="angebot-preis">1.500 € netto<small>je vorliegendem Datenbestand</small></div>
+<span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
+</summary>
+<div class="angebot-inhalt">
+<ul>
+<li>Sie stellen uns die vorhandenen Daten bereit, nach unterschriebener NDA</li>
+<li>Prüfung auf Vollständigkeit, Zeitachse und Lücken</li>
+<li>Datenampel je Anlage: Was trägt für Auswertungen, was nicht</li>
+<li>Empfehlung, womit Sie anfangen, oder was nachzurüsten ist</li>
+</ul>
+<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse">Erstgespräch buchen</a>
+</div>
+</details>
+<p class="angebot-belege">
+<a href="docs/erstanalyse-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-erstanalyse">Produktblatt (PDF)</a><br>
+<a href="docs/erstanalyse-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-erstanalyse">Beispiel-Befund (PDF)</a><br>
+<a href="docs/beispiel-anlagendaten.pdf" target="_blank" rel="noopener" data-funnel="pdf-anlagendaten-erstanalyse">Was in Anlagendaten steckt (PDF)</a>
+</p>
+</div>
+<div class="angebot-spalte fade-up">
+<details class="angebot-karte">
+<summary>
+<span class="angebot-stufe">Wenn die Daten tragen</span>
+<h3>Analyse je Fehlerbild</h3>
+<p class="angebot-frage">Was sind die Ursachen für ein ausgewähltes Fehlerbild?</p>
+<p class="angebot-fuer">Für Betriebe mit einem wiederkehrenden Fehlerbild und Daten, die sich als tragfähig erwiesen haben.</p>
+<div class="angebot-preis">5.000 € netto<small>je Fehlerbild, an Ihren vorhandenen Daten</small></div>
+<span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
+</summary>
+<div class="angebot-inhalt">
+<ul>
+<li>Ursache-Wirkungs-Diagramm mit den Auswertungen dazu</li>
+<li>Begründete Prüfreihenfolge für Ihr Team</li>
+<li>Auswertung zum Durchklicken, läuft ohne Installation und ohne Internet</li>
+<li>Klare Aussage, ob sich eine Umsetzung lohnt — kein Eingriff in den Betrieb</li>
+</ul>
+<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-fehlerbild">Erstgespräch buchen</a>
+</div>
+</details>
+<p class="angebot-belege">
+<a href="docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-fehlerbild">Produktblatt (PDF)</a><br>
+<a href="docs/fehlerbild-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-fehlerbild">Beispiel-Befund (PDF)</a><br>
+<a href="demo.html" data-funnel="link-demo-karte">So sieht die Auswertung aus</a><br>
+<a href="docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-fehlerbild-karte">Musterangebot (PDF)</a>
+</p>
+</div>
+<div class="angebot-spalte fade-up">
+<details class="angebot-karte neu">
+<summary>
+<span class="angebot-stufe">Neu</span>
+<h3>KI-Setup-Check</h3>
+<p class="angebot-frage">Ihre Leute werten Ihre Daten selbst aus — datenschutzgerecht und nach EU-KI-Verordnung eingerichtet.</p>
+<p class="angebot-fuer">Für Fachkräfte, die Auswertungen ihrer Prozess- und Qualitätsdaten selbst bauen wollen, ohne zu programmieren.</p>
+<div class="angebot-preis">1.500 € netto<small>Probe-Setup für 1 bis 3 Personen</small></div>
+<span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
+</summary>
+<div class="angebot-inhalt">
+<ul>
+<li>Einrichtung der KI-Arbeitsumgebung mit Freigaben und schriftlicher Datengrenze, abgestimmt mit Ihrer IT</li>
+<li>Ihre Messwerte sieht keine KI: Werkzeuge entstehen an künstlichen Beispieldaten mit derselben Struktur und laufen danach bei Ihnen auf den echten Daten</li>
+<li>Zwei Auswertungen aus Ihrem Alltag gemeinsam gebaut — etwa für Prüfprotokolle oder das Badbuch</li>
+<li>Regeln für den Umgang und Schulung nach EU-KI-Verordnung</li>
+<li>Vier Wochen zum Ausprobieren, mit Begleitung bei Fragen</li>
+<li>Danach auf Wunsch: die Datenwerkstatt für Ihr Team, als Angebot auf Anfrage. Lizenzen buchen Sie direkt beim Anbieter.</li>
+</ul>
+<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-kisetup">Erstgespräch buchen</a>
+</div>
+</details>
+<p class="angebot-belege">
+<a href="docs/ki-setup-check-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-kisetup">Produktblatt (PDF)</a><br>
+<a href="ausbildung.html" data-funnel="link-datenwerkstatt-karte">Danach: die Datenwerkstatt für Ihr Team</a>
+</p>
+</div>
+</div>
+<div class="fade-up" style="text-align:center;margin-top:30px;">
+<p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">Für die drei Analysen werten wir Ihre Daten auf unseren eigenen Rechnern aus — bevor eine Datei Ihr Haus verlässt, unterschreiben wir eine beidseitige NDA. Beim KI-Setup-Check arbeiten wir in Ihrer Umgebung, eine Übergabe von Daten an uns gibt es nicht. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">NDA vorab lesen (PDF)</a></p>
+<p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:16px auto 0;max-width:700px;"><strong style="color:var(--dunkelblau);">Und danach?</strong> Wir begleiten Ihr Team bei der Fehlerbehebung, zum Festpreis je Projekt, vereinbart, bevor Sie zusagen. Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von 60.000 bis 90.000 €. <a href="leistungen.html#danach" data-funnel="link-danach-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Wie es weitergeht</a></p>
+<p style="color:var(--text-light);font-size:0.9rem;margin-top:12px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten der späteren Schritte deutlich senken.</p>
+</div>
+</div>
+</section>
 <!-- ===== INTRO-VIDEO (Pitch) ===== -->
 <section style="padding:56px 0;background:var(--hellgrau);border-bottom:1px solid var(--silber);">
 <div class="container fade-up" style="max-width:860px;text-align:center;">
@@ -230,8 +390,85 @@ Lieber die Anwendung selbst sehen?
 </p>
 </div>
 </section>
+<!-- ===== ROTER FADEN — Fehlersuche -> Live -> Frueherkennung ===== -->
+<section id="so-funktionierts" style="padding:72px 0;background:var(--weiss);">
+<div class="container" style="max-width:900px;">
+<div class="section-header fade-up" style="margin-bottom:28px;">
+<p class="section-label">Das Ziel</p>
+<h2 style="color:var(--dunkelblau);">Eingreifen, bevor der Ausschuss entsteht.</h2>
+<p>Ein Weg, kein Baukasten. Er beginnt damit, die Ursache in Ihren vorhandenen Daten zu finden — und endet dort, wo Sie reagieren, bevor eine Abweichung entsteht. Fachleute nennen das <strong>Predictive Quality</strong>.</p>
+</div>
+<div class="fade-up" style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:12px;margin-bottom:26px;">
+<span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">1 · Ursache finden</strong><br>In den Daten, die Sie ohnehin aufzeichnen. Kein Eingriff in den Betrieb.</span>
+<span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">2 · Live sehen</strong><br>Auffälligkeiten erkennen, während die Ware noch bei Ihnen im Haus ist.</span>
+<span style="flex:1 1 210px;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);box-shadow:0 6px 20px rgba(43,94,167,0.12);"><strong style="color:var(--schild-blau);">3 · Vorher reagieren</strong><br>Der Störung voraus statt hinterher — bevor Ausschuss überhaupt entsteht.</span>
+</div>
+<p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 18px;">Ihre Überwachung bewertet jeden Messwert einzeln: Temperatur zu hoch, Alarm. Genau daran scheitert sie bei den teuren Fällen. Denn oft liegt <strong>jeder einzelne Wert im grünen Bereich</strong> — und trotzdem stimmt die Kombination nicht. Der Strom etwas niedriger, das Bad etwas kühler, die Ware ein wenig länger drin. Einzeln unauffällig, zusammen ein Fehler. Genau dieses Zusammenspiel lesen wir.</p>
+<p class="fade-up" style="font-style:italic;font-size:1.02rem;color:var(--schild-blau);line-height:1.6;border-left:3px solid var(--schild-blau);padding-left:18px;margin:0 0 22px;">„Nicht: irgendwo stimmt etwas nicht. Sondern: an dieser Stelle der Anlage, in diesem Zeitfenster — schauen Sie dort zuerst."</p>
+<p class="fade-up" style="font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:18px 22px;margin:0;"><strong style="color:var(--text-body);">Was das für Sie heißt:</strong> Wie weit es bei Ihnen geht, entscheiden Ihre Daten. Die Standort- oder Erstanalyse zeigt, was Ihre Datenlage trägt.</p>
+</div>
+</section>
+<!-- ===== AUCH FUER AELTERE ANLAGEN (02.10.2026) =====
+Ausgewertet wird der Bestand, auch bei alten Anlagen und aus verschiedenen Quellen,
+ohne Eingriff in die Steuerung. NICHT "aus jeder Steuerung" schreiben -- jedes neue
+Format braucht einen Leser. Wortlaut: BD areas/brand/messaging.md §4a.
+Weiss mit Linie oben, weil davor und danach die Hintergruende schon wechseln. -->
+<section id="bestand" style="padding:64px 0;background:var(--weiss);border-top:1px solid var(--silber);">
+<div class="container" style="max-width:900px;">
+<div class="section-header fade-up" style="margin-bottom:24px;">
+<p class="section-label">Auch für ältere Anlagen</p>
+<h2 style="color:var(--dunkelblau);">Ihre Anlage muss nicht neu sein.</h2>
+<p>Ob Ihre Werte aus der Steuerung kommen, aus dem Gleichrichter oder von Hand aus dem Badbuch — ausgewertet wird, was heute schon aufgezeichnet wird. Auch an einer Linie, die seit zwanzig Jahren läuft und deren Quellen jede ihr eigenes Format schreiben.</p>
+</div>
+<div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:22px;">
+<span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Gelesen, wie es vorliegt</strong><br>Archive der Gleichrichter, Alarmmeldungen, Laborwerte, Badbuch — ohne neue Sensorik.</span>
+<span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Auf eine Zeitachse gebracht</strong><br>Verschiedene Quellen in einem Bild, ohne dass der Hersteller Ihrer Steuerung mitwirken muss.</span>
+<span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Ohne Umbau</strong><br>Keine Verkabelung, kein Zugriff auf die Steuerung, kein Stillstand.</span>
+</div>
+<p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 14px;">Erst auswerten, was da ist, dann entscheiden, wo investiert wird. So wissen Sie vor einer Modernisierung, an welcher Linie sie sich lohnt — und an welcher nicht.</p>
+<a class="fade-up" href="leistungen.html#standortanalyse" data-funnel="link-standortanalyse-bestand" style="font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So liest die Standortanalyse Ihren Bestand</a>
+</div>
+</section>
+<!-- ===== EINWAND-ABBAU — Datenflut + Datenhoheit (zusammengelegt) =====
+id seit 03.09.2026: als Direktziel zum Verschicken, wenn jemand fragt,
+wo die Daten verarbeitet werden. -->
+<section id="lokale-datenverarbeitung" style="padding:76px 0;background:var(--weiss);">
+<div class="container fade-up" style="max-width:920px;">
+<div class="section-header" style="margin-bottom:30px;">
+<p class="section-label">Ihre Daten bleiben geschützt</p>
+<h2 style="color:var(--dunkelblau);">Wo Ihre Daten verarbeitet werden</h2>
+<p>Aus <strong>mehreren hundert Messpunkten</strong> und einer <strong>halben Million Signalen</strong> bleibt, was zählt — die wenigen Meldungen mit echter Ursache. Die Entscheidung bleibt bei Ihrem Techniker: Die KI liefert die Spur, entschieden wird bei Ihnen.</p>
+</div>
+<!-- Wie die Daten laufen, in drei Schritten (seit 19.10.2026, ersetzt den Abschnitt zur verkauften Workstation). Wortlaut deckungsgleich mit dem Angebotsabsatz VERTRAULICHKEIT in BD/scripts/angebot_bauen.py. -->
+<div class="fade-up" style="margin-top:30px;background:var(--hellgrau);border:1px solid var(--silber);border-radius:14px;padding:26px 24px;">
+<h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.15rem;color:var(--dunkelblau);margin:0 0 18px;text-align:center;">So arbeiten wir bei den Analysen mit Ihren Daten</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
+<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 2.2" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8v-13"/><path d="M4.5 12c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 1</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Entwickelt an künstlichen Daten</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Wir bauen Ihre Auswertung an einer Testanlage mit derselben Struktur wie Ihre Anlagendaten, aber ohne einen einzigen echten Wert.</p></div>
+<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.6"/><path d="M1.5 20h21"/><rect x="9.4" y="9.2" width="5.2" height="4.2" rx="0.8"/><path d="M10.5 9.2V8a1.5 1.5 0 0 1 3 0v1.2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 2</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Ausgewertet bei uns</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Ihre Messwerte werden ausschließlich auf unseren eigenen, verschlüsselten Rechnern ausgewertet. Kein KI-Dienst sieht sie.</p></div>
+<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3v-3l5 3V5h3v5h2V5h3v16z"/><path d="M2 21h20"/><path d="M7 17.5h2M12 17.5h2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 3</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Betrieben bei Ihnen</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Das fertige Werkzeug läuft auf Ihrer Infrastruktur, ohne Internetverbindung.</p></div>
+</div>
+<p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:18px 0 0;text-align:center;">Die Ergebnisse gehören Ihnen, ohne Bindung an uns. Nach Projektende werden Ihre Daten auf Wunsch vollständig gelöscht, mit schriftlicher Bestätigung. <a href="sicherheit.html" data-funnel="link-sicherheit-startseite" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Welche Prüfungen und Standards dahinterstehen</a></p>
+</div>
+<!-- Nur die drei Fragen, die weder die Kacheln oben noch die sechs Schritte
+schon beantworten. Alles andere aus der frueheren FAQ war redundant. -->
+<div class="fade-up" style="max-width:760px;margin:34px auto 0;">
+<details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
+<summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Welche Daten brauchen Sie — und was, wenn unsere Datenlage nicht ideal ist?</summary>
+<p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Excel-Aufzeichnungen, Laborprotokolle, Reklamationsberichte. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage eine Frage nicht beantwortet, erhalten Sie dazu eine klare Aussage.</p>
+</details>
+<details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
+<summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Was, wenn die Ursache nicht eindeutig zu finden ist?</summary>
+<p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Meistens werden die Hauptursachen klar sichtbar. In den schwierigen Fällen erhalten Sie trotzdem ein belastbares Zwischenergebnis: welche Hypothesen die Daten stützen und welche ausgeschlossen sind, plus den Vorschlag, welche gezielte Zusatzmessung die offene Frage klärt. Sie haben in jedem Fall mehr Klarheit als vorher.</p>
+</details>
+<details class="faq-item" style="border-top:1px solid var(--silber);border-bottom:1px solid var(--silber);padding:16px 0;">
+<summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Wir haben mehrere Standorte. Wie läuft das?</summary>
+<p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Es beginnt an einem Standort — der trägt die Analyse. An jedem weiteren steht die Methode schon, deshalb geht es dort schneller. Die Analysen rechnen wir je Standort bzw. je Fehlerbild ab, die spätere Betreuung je überwachter Anlage. Sie entscheiden Standort für Standort neu.</p>
+</details>
+</div>
+</div>
+</section>
 <!-- ===== AKTUELL — Presse + Termin =====
-Platzierung bewusst HOCH (direkt nach dem Pitch-Video; seit 28.09.2026 stehen die
+Vorschlag 21.10.2026: nach unten verschoben, die Angebote stehen jetzt oben. Frueher: Platzierung bewusst HOCH (direkt nach dem Pitch-Video; seit 28.09.2026 stehen die
 Belege ueber dem Video): nur ein kleiner Teil der Besucher erreicht den unteren
 Seitenbereich — eine News-Sektion im Fuss waere faktisch tot.
 Urheberrecht: NUR Kurzzitate + Quellenangabe + Link. Keine VN-Fotos uebernehmen
@@ -302,7 +539,7 @@ Rückblick
 </div>
 <p style="margin:0;flex:1;color:rgba(255,255,255,0.82);font-size:0.96rem;line-height:1.6;">Auf der Bühne der KI Days: wie aus vorhandenen Prozessdaten eine Ursachenanalyse wird — und warum sich die Methode aus der Galvanik auf jede Fertigung übertragen lässt.</p>
 <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" data-funnel="cta-aktuell-kidays" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--cyan-akzent);color:var(--dunkelblau);border-radius:8px;font-weight:700;font-size:0.92rem;text-decoration:none;align-self:flex-start;">
-15 Minuten zu Ihren Daten
+30 Minuten zu Ihren Daten
 </a>
 <p style="margin:0;font-size:0.75rem;color:rgba(255,255,255,0.5);">Foto: Mike Siblik / KI Days Vorarlberg</p>
 </div>
@@ -313,182 +550,6 @@ Rückblick
 <p style="margin:0 0 10px;color:var(--dunkelblau);font-size:1.05rem;line-height:1.65;font-style:italic;">„Mittelfristig wolle das Start-up auf diesem Weg einige wenige Betriebe begleiten — bewusst in der Tiefe statt in der Breite.“</p>
 <p style="margin:0 0 14px;font-size:0.82rem;color:var(--text-light);">Vorarlberger Nachrichten &middot; VOL.AT, 6. August 2026</p>
 <p style="margin:0;color:var(--text-body);font-size:0.96rem;line-height:1.65;">Das ist das Arbeitsmodell: Eine Galvanik wächst über Jahrzehnte — wir verankern die Software gemeinsam mit dem Betrieb dort, wo sie den größten Nutzen bringt, und erweitern sie von Anlage zu Anlage. Das geht nur mit wenigen Betrieben gleichzeitig.</p>
-</div>
-</div>
-</section>
-<!-- ===== AGITATE — der Schmerz-Moment ===== -->
-<section style="padding:80px 0;background:var(--hellgrau);">
-<div class="container fade-up" style="max-width:820px;text-align:center;">
-<p class="section-label">Ein Moment, den viele Galvanikbetriebe kennen</p>
-<h2 style="font-size:clamp(1.5rem,2.8vw,2.2rem);color:var(--dunkelblau);margin-bottom:20px;">Die Reklamation kommt — und niemand weiß, woran es lag</h2>
-<p style="color:var(--text-body);font-size:1.1rem;line-height:1.75;max-width:720px;margin:0 auto 36px;">Die auffällige Charge ist längst ausgeliefert, bevor die Abweichung auffällt — und was sie kostet, sehen Sie erst, wenn es zu spät ist. Das Muster war die ganze Zeit in Ihren Messdaten.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;max-width:760px;margin:0 auto;">
-<div style="background:#fff;border:1px solid var(--silber);border-radius:14px;padding:24px 18px;">
-<div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.5rem;color:var(--dunkelblau);line-height:1.1;margin-bottom:6px;">5-stellig</div>
-<div style="font-size:0.88rem;color:var(--text-light);line-height:1.5;">Eine Reklamation</div>
-</div>
-<div style="background:#fff;border:1px solid var(--silber);border-radius:14px;padding:24px 18px;">
-<div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.5rem;color:var(--dunkelblau);line-height:1.1;margin-bottom:6px;">6-stellig</div>
-<div style="font-size:0.88rem;color:var(--text-light);line-height:1.5;">Ein verlorener Hauptkunde</div>
-</div>
-<div style="background:#fff;border:1px solid var(--silber);border-radius:14px;padding:24px 18px;">
-<div style="font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:1.5rem;color:var(--schild-blau);line-height:1.1;margin-bottom:6px;">7-stellig</div>
-<div style="font-size:0.88rem;color:var(--text-light);line-height:1.5;">Eine Rückholaktion</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== ROTER FADEN — Fehlersuche -> Live -> Frueherkennung ===== -->
-<section id="so-funktionierts" style="padding:72px 0;background:var(--weiss);">
-<div class="container" style="max-width:900px;">
-<div class="section-header fade-up" style="margin-bottom:28px;">
-<p class="section-label">Das Ziel</p>
-<h2 style="color:var(--dunkelblau);">Eingreifen, bevor der Ausschuss entsteht.</h2>
-<p>Ein Weg, kein Baukasten. Er beginnt damit, die Ursache in Ihren vorhandenen Daten zu finden — und endet dort, wo Sie reagieren, bevor eine Abweichung entsteht. Fachleute nennen das <strong>Predictive Quality</strong>.</p>
-</div>
-<div class="fade-up" style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:12px;margin-bottom:26px;">
-<span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">1 · Ursache finden</strong><br>In den Daten, die Sie ohnehin aufzeichnen. Kein Eingriff in den Betrieb.</span>
-<span style="flex:1 1 210px;background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">2 · Live sehen</strong><br>Auffälligkeiten erkennen, während die Ware noch bei Ihnen im Haus ist.</span>
-<span style="flex:1 1 210px;background:var(--weiss);border:2px solid var(--schild-blau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);box-shadow:0 6px 20px rgba(43,94,167,0.12);"><strong style="color:var(--schild-blau);">3 · Vorher reagieren</strong><br>Der Störung voraus statt hinterher — bevor Ausschuss überhaupt entsteht.</span>
-</div>
-<p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 18px;">Ihre Überwachung bewertet jeden Messwert einzeln: Temperatur zu hoch, Alarm. Genau daran scheitert sie bei den teuren Fällen. Denn oft liegt <strong>jeder einzelne Wert im grünen Bereich</strong> — und trotzdem stimmt die Kombination nicht. Der Strom etwas niedriger, das Bad etwas kühler, die Ware ein wenig länger drin. Einzeln unauffällig, zusammen ein Fehler. Genau dieses Zusammenspiel lesen wir.</p>
-<p class="fade-up" style="font-style:italic;font-size:1.02rem;color:var(--schild-blau);line-height:1.6;border-left:3px solid var(--schild-blau);padding-left:18px;margin:0 0 22px;">„Nicht: irgendwo stimmt etwas nicht. Sondern: an dieser Stelle der Anlage, in diesem Zeitfenster — schauen Sie dort zuerst."</p>
-<p class="fade-up" style="font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:18px 22px;margin:0;"><strong style="color:var(--text-body);">Was das für Sie heißt:</strong> Wie weit es bei Ihnen geht, entscheiden Ihre Daten. Die Standortanalyse zeigt, was Ihre Datenlage trägt.</p>
-</div>
-</section>
-<!-- ===== AUCH FUER AELTERE ANLAGEN (02.10.2026) =====
-Ausgewertet wird der Bestand, auch bei alten Anlagen und aus verschiedenen Quellen,
-ohne Eingriff in die Steuerung. NICHT "aus jeder Steuerung" schreiben -- jedes neue
-Format braucht einen Leser. Wortlaut: BD areas/brand/messaging.md §4a.
-Weiss mit Linie oben, weil davor und danach die Hintergruende schon wechseln. -->
-<section id="bestand" style="padding:64px 0;background:var(--weiss);border-top:1px solid var(--silber);">
-<div class="container" style="max-width:900px;">
-<div class="section-header fade-up" style="margin-bottom:24px;">
-<p class="section-label">Auch für ältere Anlagen</p>
-<h2 style="color:var(--dunkelblau);">Ihre Anlage muss nicht neu sein.</h2>
-<p>Ob Ihre Werte aus der Steuerung kommen, aus dem Gleichrichter oder von Hand aus dem Badbuch — ausgewertet wird, was heute schon aufgezeichnet wird. Auch an einer Linie, die seit zwanzig Jahren läuft und deren Quellen jede ihr eigenes Format schreiben.</p>
-</div>
-<div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:22px;">
-<span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Gelesen, wie es vorliegt</strong><br>Archive der Gleichrichter, Alarmmeldungen, Laborwerte, Badbuch — ohne neue Sensorik.</span>
-<span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Auf eine Zeitachse gebracht</strong><br>Verschiedene Quellen in einem Bild, ohne dass der Hersteller Ihrer Steuerung mitwirken muss.</span>
-<span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Ohne Umbau</strong><br>Keine Verkabelung, kein Zugriff auf die Steuerung, kein Stillstand.</span>
-</div>
-<p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 14px;">Erst auswerten, was da ist, dann entscheiden, wo investiert wird. So wissen Sie vor einer Modernisierung, an welcher Linie sie sich lohnt — und an welcher nicht.</p>
-<a class="fade-up" href="leistungen.html#standortanalyse" data-funnel="link-standortanalyse-bestand" style="font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So liest die Standortanalyse Ihren Bestand</a>
-</div>
-</section>
-<!-- ===== ABLAUF =====
-Preise stehen nur an den Einstiegsstufen: Standortanalyse 1.500 EUR und Analyse je
-Fehlerbild 5.000 EUR netto (Leiter seit 21.10.2026, Quelle BD/areas/preise.yaml). Das
-Erstgespraech steht vorab und ohne Nummer. Stufe 3 (Begleitung der Fehlerbehebung, Festpreis
-je Projekt) und die Betreuung bleiben hier ohne Preis -- vereinbart im Gespraech. -->
-<!-- ===== ABLAUF — die Treppe, bewusst kurz =====
-Die Startseite zeigt, DASS es einen Weg gibt; erklaert wird er auf
-leistungen.html. Vorher standen beide Erklaerungen nebeneinander
-(227 Woerter hier, derselbe Inhalt dort) -- gekuerzt am 31.08.2026. -->
-<section id="ablauf" style="padding:80px 0;background:var(--hellgrau);">
-<div class="container">
-<div class="section-header fade-up">
-<p class="section-label">So arbeiten wir zusammen</p>
-<h2 style="color:var(--dunkelblau);">Zwei Stufen bis zum Befund — Sie wissen vorher, was jede kostet.</h2>
-<p>Fester Preis, festes Ergebnis, keine Bindung: Sie beauftragen jede Stufe einzeln und entscheiden danach neu. Das Erstgespräch davor kostet Sie nichts.</p>
-</div>
-<!-- Ein Strang statt drei Karten plus drei Ergebniskarten (Stefan, 10.09.2026):
-Der Ablauf laeuft linear bis zur Analyse je Fehlerbild, danach oeffnet er sich.
-Die NDA ist bewusst schmaler und ohne Preis - sie wird nicht gekauft,
-beruhigt aber genau dort, wo Daten ins Spiel kommen. Preise: areas/preise.yaml. -->
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;align-items:stretch;">
-<article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);">Vorab · kostenlos</span>
-<h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Erstgespräch</h3>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">30 Minuten. Sie schildern Ihre Situation, Sie bekommen eine ehrliche Einschätzung — auch wenn sie lautet, dass es sich noch nicht rechnet.</p>
-<p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">kostenlos <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">30 Minuten</span></p>
-</article>
-<article class="fade-up" style="display:flex;flex-direction:column;background:transparent;border:1px dashed var(--silber);border-radius:16px;padding:24px 20px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.07);color:var(--text-light);">Bevor Daten fließen</span>
-<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:7px;">NDA</h3>
-<p style="color:var(--text-body);font-size:0.89rem;line-height:1.6;margin:0 0 12px;">Unterschrieben, bevor eine einzige Datei Ihr Haus verlässt — beidseitig, drei Jahre Geheimhaltung. Ihre Messwerte gehen durch keinen externen KI-Dienst.</p>
-<p style="margin:auto 0 0;font-size:0.85rem;"><a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Unsere NDA vorab lesen (PDF)</a></p>
-</article>
-<article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Stufe 1 · Tag vor Ort optional</span>
-<h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Standortanalyse</h3>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">Wir binden Ihre Datenquellen an und zeigen, ob die Daten tragen: Datenampel je Anlage und die Fehlerbilder, bei denen das Geld liegt.</p>
-<p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">1.500 € netto <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">je Standort</span></p>
-</article>
-<article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Stufe 2 · wenn die Daten tragen</span>
-<h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Analyse je Fehlerbild</h3>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">Woran ein Fehlerbild liegt und was zuerst zu prüfen ist — mit Ishikawa-Befund und Auswertung zum Durchklicken. Weitere Fehlerbilder jederzeit zusätzlich.</p>
-<p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">5.000 € netto <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">je Fehlerbild</span></p>
-</article>
-</div>
-<div class="fade-up" style="text-align:center;margin-top:32px;">
-<a href="leistungen.html#standortanalyse" data-funnel="cta-standortanalyse-ablauf" style="font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Ablauf, Aufwand und Ergebnis im Detail</a>
-<a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-ablauf" style="display:inline-block;margin-left:22px;font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Beispiel-Befund (PDF)</a>
-<div style="margin-top:26px;">
-<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-ablauf" style="font-size:1.02rem;padding:15px 36px;">Mit dem Erstgespräch beginnen</a>
-<p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:20px auto 0;max-width:660px;"><strong style="color:var(--dunkelblau);">Und danach?</strong> Stufe 3 ist die <strong>Begleitung der Fehlerbehebung</strong>: Wir begleiten Ihr Team strukturiert, bis die Fehlerbilder behoben sind — zum Festpreis je Projekt, vereinbart, bevor Sie zusagen. Auf Wunsch binden wir eine Monitoring-Software ein. <strong>Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr.</strong> Zur Einordnung: Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von 60.000 bis 90.000 €. <a href="leistungen.html#danach" data-funnel="link-danach-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Wie es weitergeht</a></p>
-<p style="color:var(--text-light);font-size:0.9rem;margin-top:14px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten der späteren Schritte deutlich senken.</p>
-</div>
-</div>
-<!-- Weiche: machen lassen oder selbst koennen. -->
-<div class="fade-up" style="max-width:900px;margin:44px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;">
-<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:22px 22px 20px;">
-<h3 style="font-size:1.02rem;color:var(--dunkelblau);margin-bottom:8px;">Machen lassen</h3>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin-bottom:12px;">Sie wollen wissen, was in Ihren Daten steckt, ohne selbst Zeit hineinzustecken. Wir werten aus, Sie bekommen den Befund.</p>
-<a href="leistungen.html#standortanalyse" data-funnel="link-standortanalyse-weiche" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Standortanalyse ansehen</a>
-</div>
-<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:22px 22px 20px;">
-<h3 style="font-size:1.02rem;color:var(--dunkelblau);margin-bottom:8px;">Selbst können</h3>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin-bottom:12px;">Ihre Fachkräfte bauen sich die Werkzeuge zur Auswertung selbst — mit KI-Unterstützung, ohne Programmierkenntnisse. Was entsteht, gehört Ihrem Betrieb, samt Quellcode, und Ihre Leute entwickeln es weiter.</p>
-<a href="ausbildung.html" data-funnel="link-datenwerkstatt-startseite" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Datenwerkstatt ansehen</a>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== EINWAND-ABBAU — Datenflut + Datenhoheit (zusammengelegt) =====
-id seit 03.09.2026: als Direktziel zum Verschicken, wenn jemand fragt,
-wo die Daten verarbeitet werden. -->
-<section id="lokale-datenverarbeitung" style="padding:76px 0;background:var(--weiss);">
-<div class="container fade-up" style="max-width:920px;">
-<div class="section-header" style="margin-bottom:30px;">
-<p class="section-label">Ruhig, im Haus, ohne Risiko</p>
-<h2 style="color:var(--dunkelblau);">Lokale Datenverarbeitung</h2>
-<p>Aus <strong>mehreren hundert Messpunkten</strong> und einer <strong>halben Million Signalen</strong> bleibt, was zählt — die wenigen Meldungen mit echter Ursache. Die Entscheidung bleibt bei Ihrem Techniker: Die KI liefert die Spur, entschieden wird bei Ihnen.</p>
-</div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
-<div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Lokal ausgewertet</strong> — kein KI-Dienst sieht Ihre Messwerte, Übergabe verschlüsselt.</div>
-<div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Kein Eingriff</strong> in die Anlage, keine neue Verkabelung.</div>
-<div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> Es reichen die <strong style="color:var(--dunkelblau);">Daten, die Sie ohnehin aufzeichnen</strong> — kein zusätzlicher Messaufwand.</div>
-<div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">NDA</strong>, bevor auch nur ein Messwert Ihr Haus verlässt.</div>
-<div style="background:var(--hellgrau);border-radius:12px;padding:22px 20px;"><span style="color:var(--logo-gruen);font-weight:700;">✓</span> <strong style="color:var(--dunkelblau);">Ergebnisse gehören Ihnen</strong> — Bericht und Klick-Demo, voller Zugriff, kein Lock-in.</div>
-</div>
-<!-- Wie die Daten laufen, in drei Schritten (seit 19.10.2026, ersetzt den Abschnitt zur verkauften Workstation). Wortlaut deckungsgleich mit dem Angebotsabsatz VERTRAULICHKEIT in BD/scripts/angebot_bauen.py. -->
-<div class="fade-up" style="margin-top:30px;background:var(--hellgrau);border:1px solid var(--silber);border-radius:14px;padding:26px 24px;">
-<h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.15rem;color:var(--dunkelblau);margin:0 0 18px;text-align:center;">So arbeiten wir mit Ihren Daten</h3>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;">
-<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 2.2" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8v-13"/><path d="M4.5 12c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 1</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Entwickelt an künstlichen Daten</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Wir bauen Ihre Auswertung an einer Testanlage mit derselben Struktur wie Ihre Anlagendaten, aber ohne einen einzigen echten Wert.</p></div>
-<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.6"/><path d="M1.5 20h21"/><rect x="9.4" y="9.2" width="5.2" height="4.2" rx="0.8"/><path d="M10.5 9.2V8a1.5 1.5 0 0 1 3 0v1.2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 2</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Ausgewertet bei uns</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Ihre Messwerte werden ausschließlich auf unseren eigenen, verschlüsselten Rechnern ausgewertet. Kein KI-Dienst sieht sie.</p></div>
-<div style="background:var(--weiss);border:1px solid var(--silber);border-radius:14px;padding:22px 20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(43,94,167,0.1);color:var(--schild-blau);flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3v-3l5 3V5h3v5h2V5h3v16z"/><path d="M2 21h20"/><path d="M7 17.5h2M12 17.5h2"/></svg></span><span style="font-family:'Montserrat',Arial,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);">Schritt 3</span></div><h4 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.02rem;color:var(--dunkelblau);margin:0 0 6px;">Betrieben bei Ihnen</h4><p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:0;">Das fertige Werkzeug läuft auf Ihrer Infrastruktur, ohne Internetverbindung.</p></div>
-</div>
-<p style="color:var(--text-body);font-size:0.92rem;line-height:1.6;margin:18px 0 0;text-align:center;">Nach Projektende werden Ihre Daten auf Wunsch vollständig gelöscht, mit schriftlicher Bestätigung. <a href="sicherheit.html" data-funnel="link-sicherheit-startseite" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Welche Prüfungen und Standards dahinterstehen</a></p>
-</div>
-<!-- Nur die drei Fragen, die weder die Kacheln oben noch die sechs Schritte
-schon beantworten. Alles andere aus der frueheren FAQ war redundant. -->
-<div class="fade-up" style="max-width:760px;margin:34px auto 0;">
-<details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
-<summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Welche Daten brauchen Sie — und was, wenn unsere Datenlage nicht ideal ist?</summary>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Excel-Aufzeichnungen, Laborprotokolle, Reklamationsberichte. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage eine Frage nicht beantwortet, erhalten Sie dazu eine klare Aussage.</p>
-</details>
-<details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
-<summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Was, wenn die Ursache nicht eindeutig zu finden ist?</summary>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Meistens werden die Hauptursachen klar sichtbar. In den schwierigen Fällen erhalten Sie trotzdem ein belastbares Zwischenergebnis: welche Hypothesen die Daten stützen und welche ausgeschlossen sind, plus den Vorschlag, welche gezielte Zusatzmessung die offene Frage klärt. Sie haben in jedem Fall mehr Klarheit als vorher.</p>
-</details>
-<details class="faq-item" style="border-top:1px solid var(--silber);border-bottom:1px solid var(--silber);padding:16px 0;">
-<summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Wir haben mehrere Standorte. Wie läuft das?</summary>
-<p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Es beginnt an einem Standort — der trägt die Analyse. Jeder weitere ist danach deutlich günstiger, weil die Methode steht und nichts neu entwickelt werden muss. Abgerechnet wird je überwachter Anlage, und Sie entscheiden Standort für Standort neu.</p>
-</details>
 </div>
 </div>
 </section>
