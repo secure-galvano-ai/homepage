@@ -563,7 +563,8 @@
             .hero-portrait-label { margin-top: 14px; font-size: 0.68rem; }
             .hero-portrait-name { font-size: 0.98rem; }
             .hero-portrait-role { font-size: 0.78rem; }
-            .hero h1 { font-size: clamp(1.6rem, 7vw, 2.3rem); hyphens: auto; word-break: break-word; }
+            /* Keine automatische Silbentrennung (21.10.2026): sie trennte "Ober-flächentechnik" und "Nut-zen". */
+            .hero h1 { font-size: clamp(1.5rem, 6.6vw, 2.3rem); hyphens: manual; overflow-wrap: break-word; }
             .hero-buttons { flex-direction: column; }
             .hero-buttons .btn { text-align: center; justify-content: center; }
             .trust-items { gap: 24px; }
