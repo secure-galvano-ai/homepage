@@ -1,8 +1,8 @@
-<title>Standortanalyse Daten- und KI-Potenziale · secure galvano ai</title>
-<meta name="description" content="Datenanbindung, Datenampel je Anlage und die Fehlerbilder mit Potenzial: ob die Daten Ihrer Galvanikanlagen für Auswertungen tragen — und wo das Geld liegt.">
+<title>Leistungen und Preise für Galvanikbetriebe · secure galvano ai</title>
+<meta name="description" content="Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Setup-Check zum Festpreis: ob Ihre Galvanikdaten tragen, woran Fehler liegen, wo das Geld liegt.">
 <meta name="keywords" content="Galvanik Software, Software für Galvanikanlagen, Digitalisierung Galvanotechnik, Standortanalyse Galvanik, Datenauswertung Oberflächentechnik, KI Galvanik, Potenzialanalyse Galvanotechnik">
-<meta property="og:title" content="Standortanalyse Daten- und KI-Potenziale — secure galvano ai">
-<meta property="og:description" content="Kurze Gespräche mit Ihren Fachbereichen und die Anbindung Ihrer Datenquellen. Danach wissen Sie, ob Ihre Daten tragen und bei welchen Fehlerbildern das Geld liegt.">
+<meta property="og:title" content="Leistungen und Preise — secure galvano ai">
+<meta property="og:description" content="Vier Angebote zum Festpreis: Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Setup-Check. Danach wissen Sie, ob Ihre Daten tragen und wo das Geld liegt.">
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -46,7 +46,7 @@
 "name": "Was passiert mit unseren Daten?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Das fertige System läuft bei Ihnen im Haus, ohne Cloud und ohne Abo. Für die erste Demo stellen Sie freiwillig einen Auszug bereit — verschlüsselt übergeben, mit Vertraulichkeitsvereinbarung. Ihre Messwerte werden ausschließlich auf unseren eigenen Rechnern ausgewertet. Kein KI-Dienst sieht sie. Was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt."
+"text": "Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Setup-Check gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Eine Anwendung, die danach im Betrieb weiterläuft, steht bei Ihnen im Haus, ohne Cloud."
 }
 },
 {
@@ -81,24 +81,21 @@
 <div class="container">
 <div class="page-hero-content">
 <p class="section-label">Leistungen</p>
-<h1>Standortanalyse Daten- und KI-Potenziale</h1>
+<h1>Vier Einstiegsangebote, jedes zum Festpreis</h1>
 <p class="goldzeile">Erst wissen, wo das Gold liegt. Dann schürfen.</p>
-<p>Die meisten Galvanikbetriebe zeichnen längst genug auf, um Fehler früher zu erkennen — ausgewertet wird es nicht. Der Einstieg ist deshalb kein Software-Projekt, sondern ein Blick in Ihre Daten. Danach wissen Sie, ob sie für Auswertungen tragen, bei welchen Fehlerbildern das Geld liegt — und welche Ihrer Anlagen die Daten dafür liefern.</p>
-<!-- Orientierungsstreifen statt einer zweiten Ablauf-Sektion (10.09.2026):
-Der Weg steht auf der Startseite. Hier braucht es keine Wiederholung,
-sondern die Antwort auf "wo bin ich gerade und was kostet der Rest".
-Preise kanonisch in areas/preise.yaml. -->
-<nav aria-label="Wo diese Leistung im Ablauf steht" style="margin-top:26px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;font-size:0.88rem;">
-<a href="index.html#ablauf" data-funnel="link-ablauf-hero" style="color:var(--text-light);text-decoration:none;">Erstgespräch <span style="opacity:.75;">kostenlos</span></a>
-<span style="color:var(--silber);">›</span>
-<a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-hero" style="color:var(--text-light);text-decoration:none;">NDA</a>
-<span style="color:var(--silber);">›</span>
-<strong style="color:var(--weiss);background:rgba(255,255,255,0.14);padding:3px 10px;border-radius:50px;">Standortanalyse 1.500 € netto</strong>
-<span style="color:var(--silber);">›</span>
-<a href="#datenanalyse" data-funnel="link-vorprojekt-hero" style="color:var(--text-light);text-decoration:none;">Analyse je Fehlerbild <span style="opacity:.75;">5.000 € netto</span></a>
-<span style="color:var(--silber);">›</span>
-<a href="#danach" data-funnel="link-umsetzung-hero" style="color:var(--text-light);text-decoration:none;">Begleitung der Fehlerbehebung <span style="opacity:.75;">Festpreis je Projekt</span></a>
+<p>Die meisten Galvanikbetriebe zeichnen längst genug auf, um Fehler früher zu erkennen — ausgewertet wird es nicht. Der Einstieg ist die Standortanalyse — oder die Erstanalyse, wenn Ihre Daten schon gesammelt sind; danach geht es um die Ursachen einzelner Fehlerbilder. Sollen Ihre Fachkräfte selbst auswerten, beginnen Sie mit dem KI-Setup-Check.</p>
+<!-- Angebotsleiter (21.10.2026): dieselben vier Angebote in derselben Reihenfolge
+wie die Kacheln auf der Startseite (index.html#ablauf). Begleitung und
+Betreuung stehen bewusst ohne Betrag darunter. Preise kanonisch in
+areas/preise.yaml. Die Funnel-Marker link-vorprojekt-hero und
+link-umsetzung-hero bleiben, damit die Clarity-Reihen weiterlaufen. -->
+<nav aria-label="Die Angebote im Überblick" style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;">
+<a href="#standortanalyse" data-funnel="link-standortanalyse-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Daten erschließen</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Standortanalyse</strong><span style="font-size:0.86rem;opacity:.82;">1.500 € netto je Standort</span></a>
+<a href="#erstanalyse" data-funnel="link-erstanalyse-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Daten liegen vor</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Erstanalyse</strong><span style="font-size:0.86rem;opacity:.82;">1.500 € netto je Datenbestand</span></a>
+<a href="#analyse-je-fehlerbild" data-funnel="link-vorprojekt-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Ursachen finden</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Analyse je Fehlerbild</strong><span style="font-size:0.86rem;opacity:.82;">5.000 € netto je Fehlerbild</span></a>
+<a href="#ki-setup-check" data-funnel="link-kisetup-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Ihr Team wertet aus</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">KI-Setup-Check</strong><span style="font-size:0.86rem;opacity:.82;">1.500 € netto, 1 bis 3 Personen</span></a>
 </nav>
+<p style="margin-top:14px;font-size:0.9rem;color:rgba(255,255,255,0.78);">Davor: ein <a href="index.html#ablauf" data-funnel="link-ablauf-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">kostenloses Erstgespräch</a> von 30 Minuten. Danach: die <a href="#danach" data-funnel="link-umsetzung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Begleitung der Fehlerbehebung</a>, Festpreis je Projekt, und die <a href="#betreuung" data-funnel="link-betreuung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Betreuung je Anlage</a>.</p>
 <!-- 23.09.2026: „netto" ergaenzt und der B2B-Hinweis darunter. Die Seite nannte
 1.500 € und 5.000 € ohne Zusatz, waehrend index.html und die Angebots-PDFs
 „netto" sagen. Das PrAG verlangt Bruttopreise nur gegenueber Konsumenten,
@@ -110,28 +107,17 @@ Webshop). Der Hinweis kostet eine Zeile und schliesst das. -->
 </div>
 </section>
 <!-- ===== SCHWERPUNKT: Standortanalyse =====
-Zuschnitt seit 21.10.2026 (Stefan, Leiter in BD/areas/preise.yaml): Anbindung der
-Datenquellen, Datenampel je Anlage, Liste der Fehlerbilder mit Potenzial; der Tag vor
-Ort mit Rundgang ist optional.
-Stand nach der Konkretisierung vom 31.08.2026: ganzer Tag statt Halbtag, vier
-Online-Vorgespraeche, Groessenordnungen statt Euro-Zahl je Anwendungsfall.
-Quelle: Standortanalyse_Umsetzung_2026-08-31.md §8.
-Nachgezogen 03.09.2026 (Kapazitaetseinwand, competition.md §5.4): Der Aufwand steht
-jetzt durchgehend aus KUNDENSICHT statt aus unserer. "EIN TAG" las sich als ganzer
-Tag der Fuehrungskraefte -- es ist unser Tag, fuer den Kunden ein halber. Workshop
-und Abschlussrunde sind beziffert, weil unbezifferter Aufwand immer zu gross
-geschaetzt wird. Neu ist die Zeile "Terminplanung": nur EIN Termin verlangt mehrere
-Personen gleichzeitig, und Termine werden GEMEINSAM NACH DER VERFUEGBARKEIT DES
-KUNDEN vereinbart (Stefan, 03.09.2026 -- "Terminvorschlaege kommen von uns" klang nach
-Diktat und kehrte den Nutzen um: die Entlastung liegt darin, dass sich der Kunde nach
-niemandem richten muss, nicht darin, dass wir bestimmen). Der fruehere Satz "wer die
-Termine koordiniert -- das ist die eigentliche Huerde" ist raus: er stellte ein Defizit
-beim Leser fest und kuendigte Arbeit an, statt sie abzunehmen (CLAUDE.md §1, Carnegie). -->
+Zuschnitt seit 21.10.2026 (Leiter in BD/areas/preise.yaml): Anbindung der
+Datenquellen, Datenampel je Anlage, Fehlerbilder mit Potenzial und dazu die
+Automatisierungs- und KI-Potenziale; der Tag vor Ort mit Rundgang ist optional.
+Aufwand steht durchgehend aus Kundensicht und beziffert, weil unbezifferter Aufwand
+immer zu gross geschaetzt wird. Termine werden gemeinsam nach der Verfuegbarkeit des
+Kunden vereinbart (03.09.2026). -->
 <section class="schwerpunkt" id="standortanalyse">
 <div class="container">
-<p class="section-label">Der Einstieg</p>
+<p class="section-label">Einstieg · Daten erschließen</p>
 <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Standortanalyse</h2>
-<p class="lead" style="max-width:780px;margin-bottom:38px;">Vier bis sechs kurze Online-Gespräche mit Ihren Fachbereichen und die Anbindung Ihrer Datenquellen. Ein Tag vor Ort ist möglich, aber kein Muss. Am Ende wissen Sie, ob Ihre Daten für Auswertungen tragen, welche Anlagen was liefern und bei welchen Fehlerbildern das Geld liegt — in welcher Größenordnung. Die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
+<p class="lead" style="max-width:780px;margin-bottom:38px;">Vier bis sechs kurze Online-Gespräche mit Ihren Fachbereichen und die Anbindung Ihrer Datenquellen. Am Ende wissen Sie, ob Ihre Daten für Auswertungen tragen, bei welchen Fehlerbildern das Geld liegt — und wo sich Automatisierung und KI in Ihren Abläufen lohnen, etwa wenn Aufträge und Angebotsunterlagen automatisch eingelesen werden. <strong>1.500 € netto je Standort</strong>, unabhängig von der Anlagenzahl. Die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
 <div class="schwerpunkt-grid">
 <div>
 <ol class="schritt-liste">
@@ -141,7 +127,7 @@ beim Leser fest und kuendigte Arbeit an, statt sie abzunehmen (CLAUDE.md §1, Ca
 <li><span class="wo">ONLINE · MIT IHRER IT</span><strong>Anbindung der Datenquellen</strong>Gemeinsam mit Ihrer IT binden wir die Datenbank bzw. die Datenquellen an — Steuerung, Labor, Qualitätsdaten. Daran zeigt sich, was tatsächlich aufgezeichnet wird und ob es für Auswertungen trägt.</li>
 <li><span class="wo">AUF WUNSCH · VOR ORT</span><strong>Tag vor Ort mit Rundgang</strong>Wenn Sie es möchten, kommen wir ins Werk: Anlagen, Steuerungen, Sensorik und Dosierung im Rundgang, die Fehlerbilder mit Ihren Führungskräften sortiert. Ohne diesen Tag ist das Ergebnis dasselbe.</li>
 <li><span class="wo">ONLINE · EINE STUNDE</span><strong>Abschlussrunde</strong>Wir gehen das Ergebnis gemeinsam durch und legen die Schwerpunkte fest, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
-<li><span class="wo">DANACH</span><strong>Schriftlicher Befund</strong>Datenampel je Anlage, die Liste der Fehlerbilder mit Potenzial und eine klare Empfehlung, welches Fehlerbild sich zuerst lohnt — oder ob keines.</li>
+<li><span class="wo">DANACH</span><strong>Schriftlicher Befund</strong>Datenampel je Anlage, die Liste der Fehlerbilder mit Potenzial, die Automatisierungs- und KI-Potenziale nach Nutzen sortiert und eine klare Empfehlung, womit Sie anfangen — oder ob es sich noch nicht lohnt.</li>
 </ol>
 <div class="umfang-hinweis">
 <strong style="color:var(--dunkelblau);">Ob fünf Anlagen oder zwanzig — der Preis bleibt derselbe.</strong><br>
@@ -161,7 +147,7 @@ Grenzen, Ergebnis. -->
 <dt>Ihre Anlage, wie sie ist</dt><dd><strong>Ausgewertet wird, was heute schon aufgezeichnet wird</strong> — aus Steuerung, Sensorik, Labor oder Badbuch, auch bei älteren Anlagen und aus verschiedenen Quellen. Keine neue Sensorik, keine Kameras</dd>
 <dt>Kein Eingriff</dt><dd>Ihre Steuerung bleibt unverändert: keine Verkabelung, kein Umbau — und kein KI-Dienst sieht Ihre Messwerte</dd>
 <dt>Tag vor Ort</dt><dd>Optional, Sie entscheiden. Der Umkreis von 250 km um Bregenz ist inklusive, darüber 1 € je zusätzlichem Kilometer</dd>
-<dt>Ergebnis</dt><dd>Datenampel je Anlage, Liste der Fehlerbilder mit Potenzial, schriftlicher Befund</dd>
+<dt>Ergebnis</dt><dd>Datenampel je Anlage, Fehlerbilder mit Potenzial, Automatisierungs- und KI-Potenziale, schriftlicher Befund</dd>
 <dt>Danach</dt><dd>Sie entscheiden frei. Es folgt kein Automatismus</dd>
 </dl>
 <a class="eck-cta" href="docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-leistungen">Alles auf einer Seite (PDF)</a>
@@ -180,24 +166,57 @@ weiter unten bei "Wie es weitergeht" — genau dort, wo der Text
 </div>
 </div>
 </section>
+<!-- ===== ZWEITER EINSTIEG: ERSTANALYSE (21.10.2026) =====
+Fuer Betriebe, deren Daten schon vorliegen. Gleicher Preis wie die Standortanalyse,
+erfuellt wie sie die Voraussetzung fuer die Analyse je Fehlerbild. Keine
+Ursachenanalyse. Preis: BD/areas/preise.yaml leiter.erstanalyse. -->
+<section id="erstanalyse" style="padding:56px 0;background:var(--hellgrau);">
+<div class="container">
+<p class="section-label">Einstieg · Daten liegen vor</p>
+<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Erstanalyse</h2>
+<p class="lead" style="max-width:780px;margin-bottom:30px;">Ihre Daten sind schon gesammelt, etwa als Export aus Steuerung oder Datenbank? Dann prüfen wir, ob sie für Auswertungen tragen und wo Lücken sind. <strong>1.500 € netto je vorliegendem Datenbestand.</strong></p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
+<div>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Daten bereitstellen</h3>
+<p style="font-size:0.92rem;">Sie geben uns die vorhandenen Daten — nach unterschriebener NDA, verschlüsselt übergeben.</p>
+</div>
+<div>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Prüfung</h3>
+<p style="font-size:0.92rem;">Vollständigkeit, Zeitachse und Lücken — ausgewertet auf unseren eigenen Rechnern.</p>
+</div>
+<div>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Befund</h3>
+<p style="font-size:0.92rem;">Datenampel je Anlage, welche Fehlerbilder sich auswerten lassen, und eine Empfehlung, womit Sie anfangen oder was nachzurüsten ist.</p>
+</div>
+</div>
+<div class="umfang-hinweis" style="margin-bottom:24px;">
+<strong style="color:var(--dunkelblau);">Eine Prüfung der Daten, keine Ursachenanalyse.</strong><br>
+Warum ein Fehlerbild auftritt, klärt der nächste Schritt, die <a href="#analyse-je-fehlerbild" data-funnel="link-fehlerbild-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Analyse je Fehlerbild</a>. Sind Ihre Daten noch verstreut, ist die <a href="#standortanalyse" data-funnel="link-standortanalyse-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> der passendere Einstieg.
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+<a class="btn btn-primary" href="docs/erstanalyse-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-erstanalyse-leistungen">Überblick auf einer Seite (PDF)</a>
+<a class="btn btn-outline" href="docs/erstanalyse-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-erstanalyse-befund-leistungen">Beispiel-Befund (PDF)</a>
+</div>
+</div>
+</section>
 <!-- ===== STUFE 2: ANALYSE JE FEHLERBILD =====
-Seit 21.10.2026 (Stefan): ersetzt den "kurzen Weg" zum Preis der Standortanalyse (die
-Schnelldiagnose ist in dieser Stufe aufgegangen). Intern heisst die Stufe Proof of
-Concept, kundenseitig "Analyse je Fehlerbild". id und Funnel-Marker bleiben, damit
-Anker und Clarity-Reihen weiterlaufen. Preis: BD/areas/preise.yaml leiter.poc. -->
-<section id="datenanalyse" style="padding:56px 0;background:#fff;border-top:1px solid var(--silber);">
+Seit 21.10.2026 kundenseitig "Analyse je Fehlerbild", intern Proof of Concept.
+#datenanalyse bleibt als zweiter Anker stehen, damit aeltere Links und die
+Clarity-Reihen weiterlaufen. Preis: BD/areas/preise.yaml leiter.poc. -->
+<section id="analyse-je-fehlerbild" style="padding:56px 0;background:#fff;">
+<span id="datenanalyse" aria-hidden="true"></span>
 <div class="container">
 <p class="section-label">Der nächste Schritt</p>
 <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Analyse je Fehlerbild</h2>
-<p class="lead" style="max-width:780px;margin-bottom:30px;">Woran liegt dieses Fehlerbild — und was ist zuerst zu prüfen? Für ein Fehlerbild aus der Standortanalyse legen wir Ihre Prozessdaten neben das Wissen Ihrer Leute. <strong>5.000 € netto je Fehlerbild</strong>, weitere Fehlerbilder jederzeit zusätzlich.</p>
+<p class="lead" style="max-width:780px;margin-bottom:30px;">Woran liegt dieses Fehlerbild — und was ist zuerst zu prüfen? Für ein Fehlerbild aus der Standort- oder Erstanalyse legen wir Ihre Prozessdaten neben das Wissen Ihrer Leute. <strong>5.000 € netto je Fehlerbild</strong>, weitere Fehlerbilder jederzeit zusätzlich.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
 <div>
 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Fehlerbild wählen</h3>
-<p style="font-size:0.92rem;">Aus der Liste der Standortanalyse — nach Potenzial und Datenlage.</p>
+<p style="font-size:0.92rem;">Aus dem Befund der Standort- oder Erstanalyse — nach Potenzial und Datenlage.</p>
 </div>
 <div>
 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Datengrundlage</h3>
-<p style="font-size:0.92rem;">Die Daten sind aus der Standortanalyse angebunden; bei Bedarf kommt ein ergänzender Auszug dazu, abgestimmt mit Ihrer IT.</p>
+<p style="font-size:0.92rem;">Die Daten liegen aus dem Einstieg bereits vor; bei Bedarf kommt ein ergänzender Auszug dazu, abgestimmt mit Ihrer IT.</p>
 </div>
 <div>
 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Gespräche</h3>
@@ -209,19 +228,63 @@ Anker und Clarity-Reihen weiterlaufen. Preis: BD/areas/preise.yaml leiter.poc. -
 </div>
 <div>
 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">5 · Befund</h3>
-<p style="font-size:0.92rem;">Ursache-Wirkungs-Diagramm nach Ishikawa, die Datenauswertungen dazu und eine begründete Reihenfolge, was zuerst zu prüfen ist.</p>
+<p style="font-size:0.92rem;">Ursache-Wirkungs-Diagramm nach Ishikawa, die Datenauswertungen dazu, eine begründete Prüfreihenfolge und eine klare Aussage, ob sich eine Umsetzung lohnt.</p>
 </div>
 <div>
 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">6 · Zum Durchklicken</h3>
-<p style="font-size:0.92rem;">Die Auswertung Ihrer Daten interaktiv, im Browser ohne Installation und ohne Internetverbindung.</p>
+<p style="font-size:0.92rem;">Die Auswertung Ihrer Daten interaktiv, im Browser ohne Installation und ohne Internetverbindung. <a href="demo.html" data-funnel="cta-demo-vorprojekt" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So sieht sie aus</a></p>
 </div>
 </div>
 <div class="umfang-hinweis" style="margin-bottom:24px;">
 <strong style="color:var(--dunkelblau);">Ergebnisoffen — und das ist so gemeint.</strong><br>
-Lässt sich die Ursache aus Daten und Gesprächen nicht eingrenzen, sagt der Befund, welche Angabe oder Messung dafür fehlt. Voraussetzung ist eine abgeschlossene <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> — sie klärt vorher, ob Ihre Daten tragen.
+Lässt sich die Ursache aus Daten und Gesprächen nicht eingrenzen, sagt der Befund, welche Angabe oder Messung dafür fehlt. Voraussetzung ist eine abgeschlossene <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> oder <a href="#erstanalyse" data-funnel="link-zurueck-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Erstanalyse</a> — sie klärt vorher, ob Ihre Daten tragen.
 </div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
 <a class="btn btn-primary" href="docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-datenanalyse-leistungen">Ablauf auf einer Seite (PDF)</a>
-<a class="btn btn-outline" style="margin-left:10px;" href="docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-fehlerbild">Blanko-Angebot zum Ausfüllen (PDF)</a>
+<a class="btn btn-outline" href="docs/fehlerbild-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-fehlerbild-befund-leistungen">Beispiel-Befund (PDF)</a>
+<a class="btn btn-outline" href="docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-fehlerbild">Blanko-Angebot zum Ausfüllen (PDF)</a>
+</div>
+</div>
+</section>
+<!-- ===== KI-SETUP-CHECK (21.10.2026) =====
+Eigener Einstieg neben der Leiter: Setup fuer die Datenanalyse beim Kunden. Nach
+aussen "datenschutzgerecht und nach EU-KI-Verordnung eingerichtet", nie "konform".
+Keine Anbieternamen. Keine Datenuebergabe an uns. Preis: BD/areas/preise.yaml
+weitere.ki_setup_check. -->
+<section id="ki-setup-check" style="padding:56px 0;background:var(--hellgrau);">
+<div class="container">
+<p class="section-label">Einstieg · Ihr Team wertet selbst aus</p>
+<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Der KI-Setup-Check</h2>
+<p class="lead" style="max-width:780px;margin-bottom:26px;">Ihre Fachkräfte bauen Auswertungen ihrer Prozess- und Qualitätsdaten selbst, ohne zu programmieren. Wir richten das Setup für die Datenanalyse ein — datenschutzgerecht und nach EU-KI-Verordnung eingerichtet. <strong>1.500 € netto</strong>, Probe-Setup für 1 bis 3 Personen.</p>
+<ul class="baust-liste" style="margin-bottom:24px;">
+<li><b>Einrichtung</b> der Arbeitsumgebung mit Freigaben und schriftlicher Datengrenze, abgestimmt mit Ihrer IT.</li>
+<li><b>Ihre Messwerte sieht keine KI:</b> Die Werkzeuge entstehen an künstlichen Beispieldaten mit derselben Struktur und laufen danach lokal bei Ihnen auf den echten Daten.</li>
+<li><b>Zwei Auswertungen aus Ihrem Alltag</b>, gemeinsam gebaut — etwa für Prüfprotokolle oder das Badbuch.</li>
+<li><b>Regeln für den Umgang</b> und Schulung nach EU-KI-Verordnung.</li>
+<li><b>Vier Wochen zum Ausprobieren</b>, mit Begleitung bei Fragen.</li>
+</ul>
+<div class="umfang-hinweis" style="margin-bottom:24px;">
+<strong style="color:var(--dunkelblau);">Keine Datenübergabe an uns.</strong><br>
+Wir arbeiten in Ihrer Umgebung. Danach auf Wunsch die <a href="ausbildung.html" data-funnel="link-ausbildung-leistungen" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Datenwerkstatt</a> für Ihr Team, als Angebot auf Anfrage. Lizenzen buchen Sie direkt beim Anbieter.
+</div>
+<a class="btn btn-primary" href="docs/ki-setup-check-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-kisetup-leistungen">Überblick auf einer Seite (PDF)</a>
+</div>
+</section>
+<!-- ===== WIE ES WEITERGEHT: Begleitung und Betreuung =====
+Gleiche Reihenfolge wie "Und danach?" auf der Startseite. Beide Stufen ohne Betrag
+nach aussen (21.10.2026). Nutzen nennen, Rechenregel weglassen (10.09.2026).
+Zahlen kanonisch in areas/preise.yaml (leiter.projektumsetzung, leiter.betreuung). -->
+<section class="danach" id="danach">
+<div class="container">
+<p class="section-label">Nach der Analyse</p>
+<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Begleitung der Fehlerbehebung und Betreuung</h2>
+<p class="lead" style="max-width:780px;">Jede Analyse ist eine abgeschlossene Leistung — Sie zahlen keinen Folgeschritt, um ein Ergebnis zu bekommen. Auch „Ihre Datenlage trägt es derzeit nicht“ ist ein Ergebnis: Dann steht im Befund, was nachzurüsten ist und in welcher Reihenfolge. Das erspart eine Fehlinvestition, die deutlich teurer gewesen wäre.</p>
+<div style="margin-top:26px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--schild-blau);border-radius:0 12px 12px 0;padding:20px 24px;">
+<p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Begleitung der Fehlerbehebung.</strong> Aus einem Fehlerbild wird ein Projekt: Wir begleiten Ihr Team fachlich, bis die Fehlerbilder behoben sind — Aufgaben und Termine im Blick, alle zwei Wochen ein Statusbericht für die Geschäftsführung. Als <strong>Festpreis je Projekt, vereinbart, bevor Sie zusagen</strong>, kein offener Stundenzettel; die Höhe richtet sich nach der Zahl der Fehlerbilder und Anlagen. <strong>Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr</strong>, bezogen auf die ausgewählten Anwendungsfälle. Zur Einordnung: Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von <strong>60.000 bis 90.000 €</strong> — ein Potenzial, keine Zusage.</p>
+</div>
+<div id="betreuung" style="margin-top:16px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--logo-gruen);border-radius:0 12px 12px 0;padding:20px 24px;">
+<p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Betreuung je Anlage.</strong> Soll eine Auswertung im Betrieb weiterlaufen, binden wir sie auf Ihrer Hardware ein, ohne Cloud. Die Betreuung wird je überwachter Anlage abgerechnet; die Modellpflege ist enthalten, damit die Erkennung nicht mit der Zeit abdriftet. Sie ist ein eigenes Angebot und keine Bedingung für die Schritte davor.</p>
+</div>
 </div>
 </section>
 <!-- ===== DIE VIER POTENZIALFELDER ===== -->
@@ -229,7 +292,7 @@ Lässt sich die Ursache aus Daten und Gesprächen nicht eingrenzen, sagt der Bef
 <div class="container">
 <p class="section-label">Wonach wir suchen</p>
 <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Vier Felder, in denen bei Galvaniken Geld liegt</h2>
-<p class="lead" style="max-width:780px;">Jedes Feld wird mit <strong>Ihren</strong> Zahlen bewertet — der Rechenweg steht im Befund. Weil der Blick bewusst auf Übersicht angelegt ist, bekommen Sie <strong>Größenordnungen mit Bandbreite</strong>, keine auf den Euro gerechneten Geschäftsfälle. Die entstehen im nächsten Schritt, wenn Sie ihn wollen. <strong>Womit sich jedes Feld angehen lässt, steht im Beispiel-Befund</strong> — von der Auffälligkeitserkennung in Ihren Prozessdaten bis zu Sprachmodellen, die Ihr Haus nicht verlassen.</p>
+<p class="lead" style="max-width:780px;">Jedes Feld wird mit <strong>Ihren</strong> Zahlen bewertet, als <strong>Größenordnung mit Bandbreite</strong> — der Rechenweg steht im Befund. Womit sich jedes Feld angehen lässt, zeigt der Beispiel-Befund: von der Auffälligkeitserkennung in Ihren Prozessdaten bis zu Sprachmodellen, die Ihr Haus nicht verlassen.</p>
 <div class="feld-cards">
 <article class="fcard">
 <span class="num">FELD 1</span>
@@ -252,7 +315,7 @@ Lässt sich die Ursache aus Daten und Gesprächen nicht eingrenzen, sagt der Bef
 <article class="fcard">
 <span class="num">FELD 4</span>
 <h3>KI-Kompetenz im Haus</h3>
-<p>Welche Daten dürfen in eine Cloud, und welche müssen im Haus bleiben — Rezepturen und Messwerte zum Beispiel? Für die gibt es lokal betriebene Sprachmodelle. Ohne ein kleines Kernteam bleibt es sonst bei Einzelversuchen.</p>
+<p>Welche Daten dürfen in eine Cloud, und welche müssen im Haus bleiben — Rezepturen und Messwerte zum Beispiel? Für die gibt es lokal betriebene Sprachmodelle. Ohne ein kleines Kernteam bleibt es sonst bei Einzelversuchen — der Einstieg dafür ist der <a href="#ki-setup-check" data-funnel="link-kisetup-feld4" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">KI-Setup-Check</a>.</p>
 <span class="bezug">Ihre Bezugsgröße: Zeitaufwand für Suche und Doppelarbeit heute</span>
 </article>
 </div>
@@ -327,31 +390,6 @@ inklusive Eintrag per Handy. Was fehlt, ist selten das Programm, sondern der Auf
 dahinter.</p>
 </div>
 </section>
-<!-- ===== WIE ES WEITERGEHT ===== -->
-<section class="danach" id="danach">
-<div class="container">
-<p class="section-label">Nach der Analyse</p>
-<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Drei mögliche Ergebnisse — und mit jedem können Sie weiterarbeiten</h2>
-<p class="lead" style="max-width:780px;">Die Standortanalyse ist eine abgeschlossene Leistung. Auch das Ergebnis „Ihre Datenlage trägt es derzeit nicht" ist ein Ergebnis — und es erspart Ihnen eine Fehlinvestition, die deutlich teurer gewesen wäre.</p>
-<!-- Bis 10.09.2026 standen hier drei Ergebniskarten (Vorprojekt / Fahrplan /
-Groessere Analyse). Sie waren der Hauptgrund, warum der Ablauf verzweigt
-wirkte - der Prozess laeuft jetzt als ein Strang, die drei moeglichen
-Ausgaenge stehen als Satz. Entscheidung Stefan, 10.09.2026. -->
-<p class="lead" style="max-width:820px;margin-top:6px;">Drei Wege sind möglich, und welcher es wird, steht am Ende fest — gemeinsam in der Abschlussrunde, bevor irgendetwas zu Papier gebracht wird:</p>
-<ul style="max-width:820px;margin:16px 0 0;padding-left:0;list-style:none;">
-<li style="position:relative;padding-left:22px;margin-bottom:11px;color:var(--text-body);font-size:1rem;line-height:1.7;"><span style="position:absolute;left:0;top:0;color:var(--schild-blau);font-weight:700;">·</span><strong style="color:var(--dunkelblau);">Die Analyse je Fehlerbild</strong>, wenn die Daten tragen — ein Fehlerbild aus Ihrer Liste, an Ihren echten Daten, bis Ursache und Prüfreihenfolge belegt sind. Hier sehen Sie das Auswertewerkzeug erstmals an Ihren Daten arbeiten. <a href="demo.html" data-funnel="cta-demo-vorprojekt" style="font-size:0.92rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">▶ Die Anwendung in Aktion ansehen</a></li>
-<li style="position:relative;padding-left:22px;margin-bottom:11px;color:var(--text-body);font-size:1rem;line-height:1.7;"><span style="position:absolute;left:0;top:0;color:var(--schild-blau);font-weight:700;">·</span><strong style="color:var(--dunkelblau);">Ein Fahrplan</strong>, wenn die Daten noch nicht tragen — was Ihr Standort braucht, um die Datenverfügbarkeit zu erhöhen, in welcher Reihenfolge. Kein Ersatzangebot, sondern das, was vorher dran ist.</li>
-<li style="position:relative;padding-left:22px;color:var(--text-body);font-size:1rem;line-height:1.7;"><span style="position:absolute;left:0;top:0;color:var(--schild-blau);font-weight:700;">·</span><strong style="color:var(--dunkelblau);">Ein breiterer Rahmen</strong>, wenn das Thema über die Anlagen hinausgeht — mit Bereichsgesprächen, Workshops und einer bewerteten Prioritätenliste für Ihre Leitung.</li>
-</ul>
-<p style="margin-top:30px;max-width:780px;color:var(--text-body);font-size:1.02rem;line-height:1.75;"><strong style="color:var(--dunkelblau);">Die Standortanalyse ist in jedem Fall abgeschlossen</strong> — Sie zahlen keinen Folgeschritt, um ein Ergebnis zu bekommen.</p>
-<!-- Der Sprung vom 5.000-EUR-Nachweis ins Unbekannte ist die Stelle, an der ein
-Entscheider abbricht. Deshalb: Nutzen nennen, Rechenregel weglassen
-(Beschluss 10.09.2026). Zahlen kanonisch in areas/preise.yaml. -->
-<div style="margin-top:26px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--schild-blau);border-radius:0 12px 12px 0;padding:20px 24px;">
-<p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Und danach? Die Begleitung der Fehlerbehebung.</strong> Wir begleiten Ihr Team strukturiert, bis die Fehlerbilder behoben sind — als <strong>Festpreis je Projekt, vereinbart, bevor Sie zusagen</strong>, kein offener Stundenzettel. Die Höhe richtet sich nach der Zahl der Fehlerbilder und Anlagen. Auf Wunsch binden wir eine Monitoring-Software ein; Lizenz und Betreuung dafür sind eigene Positionen. <strong>Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr</strong>, bezogen auf die ausgewählten Anwendungsfälle. Zur Einordnung: Bei Energie, Wasser, Anodenmetall, Chemikalien und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von <strong>60.000 bis 90.000 €</strong> — ein Potenzial, keine Zusage. Was davon bei Ihnen erreichbar ist, beziffert der Befund.</p>
-</div>
-</div>
-</section>
 <!-- ===== DAS UEBRIGE PORTFOLIO ===== -->
 <!-- ===== PORTFOLIO — bewusst knapp: WAS gebaut wird, steht oben bei den Anwendungen.
 Hier steht nur, in welcher Form es beauftragt wird. ===== -->
@@ -359,14 +397,9 @@ Hier steht nur, in welcher Form es beauftragt wird. ===== -->
 <div class="container">
 <p class="section-label">Das übrige Portfolio</p>
 <h2>Was Sie außerdem beauftragen können</h2>
-<p class="baust-intro">Alles davon wird einzeln beauftragt, und nichts setzt voraus, dass Sie
-den nächsten Schritt auch nehmen. Die meisten dieser Themen kommen ohnehin erst aus der
-Standortanalyse heraus.</p>
+<p class="baust-intro">Alles davon wird einzeln beauftragt, als Angebot auf Anfrage. Die
+meisten dieser Themen kommen ohnehin erst aus der Standortanalyse heraus.</p>
 <ul class="baust-liste">
-<li><b>Begleitung der Fehlerbehebung</b> — aus einem Fehlerbild wird ein Projekt: fachliche
-Führung, bis es behoben ist, Aufgaben und Termine im Blick, alle zwei Wochen ein
-Statusbericht für die Geschäftsführung. Das entlastet Ihre Leute genau dort, wo
-interne Projekte sonst liegen bleiben.</li>
 <li><b>Ausschreibungen vorbereiten</b> — wenn Sensorik, Automatisierung oder ein
 IT-Dienstleister gebraucht wird: Anforderungen formuliert, Angebote vergleichbar.
 Beauftragt und verhandelt wird von Ihnen.</li>
@@ -381,9 +414,6 @@ Erfahrung mit einzelnen Personen aus dem Haus geht.</li>
 Warendurchsatz, Amperestunden und Standzeit wird der erwartete Konzentrationsverlauf
 eines Bades gerechnet und gegen die Analytik gestellt. Weicht er ab, wird gemeldet,
 bevor die Charge auffällt.</li>
-<li><b>Laufender Betrieb</b> — die Auswertung läuft weiter, abgerechnet je überwachter
-Anlage, auf Ihrer Hardware und ohne Cloud. Modellpflege inklusive, damit die
-Erkennung nicht mit der Zeit abdriftet.</li>
 </ul>
 </div>
 </section>
@@ -391,7 +421,7 @@ Erkennung nicht mit der Zeit abdriftet.</li>
 <div class="container">
 <div class="abgrenzung-box">
 <h2 style="font-size:1.25rem;color:var(--dunkelblau);margin-bottom:12px;">Wo die Grenzen liegen</h2>
-<p style="color:var(--text-body);line-height:1.75;">Ihr Ansprechpartner ist Galvanikmeister und Materialphysiker — Sie müssen niemandem Ihren Prozess erklären, aber Sie bekommen auch keinen allgemeinen Digitalisierungsberater. Fremde Gewerke werden benannt und weiterverwiesen, nicht koordiniert. Hardware wird Ihnen keine verkauft, und an keiner Anschaffung wird mitverdient. Und Sie brauchen kein Datenplattform-Vorprojekt als Voraussetzung: Der Nachweis läuft auf dem Datenstand, den Sie heute schon haben.</p>
+<p style="color:var(--text-body);line-height:1.75;">Ihr Ansprechpartner ist Galvanikmeister und Materialphysiker — Sie müssen niemandem Ihren Prozess erklären, aber Sie bekommen auch keinen allgemeinen Digitalisierungsberater. Fremde Gewerke werden benannt und weiterverwiesen, nicht koordiniert. Hardware wird Ihnen keine verkauft, und an keiner Anschaffung wird mitverdient.</p>
 <!-- Drei Grenzen ergaenzt 03.09.2026: Reihenfolge, Umfang und Art der
 Massnahme. Alle drei schuetzen vor Projekten, die scheitern muessen --
 und trennen die Leistung von der klassischen Digitalisierungsberatung. -->
@@ -405,14 +435,6 @@ die kleine Lösung für die zwei, drei teuersten Bäder kostet, steht daneben �
 meistens gewinnt sie. Und <b>Abstellmaßnahmen sind technisch, nicht organisatorisch:</b>
 ein anderer Parameter im Rezept, mehr Durchfluss in der Spüle, langlebigere
 Sensorik — statt einer weiteren Kontrolle, die jemand zusätzlich erledigen muss.</p>
-<!-- Wegweiser statt vierter Baustein: die Startseite behaelt EINE Botschaft
-(Fokus-Umbau 30.07.2026). Wer schon hier ist, soll aber erfahren, dass es
-den zweiten Weg gibt -- und umgekehrt verweist ausbildung.html hierher. -->
-<p style="color:var(--text-body);line-height:1.75;margin-top:16px;">Und wenn Sie lieber
-Ihre eigenen Leute befähigen wollen, statt eine Auswertung zu beauftragen: Das ist
-die <a href="ausbildung.html" data-funnel="link-ausbildung-leistungen"
-style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">Datenwerkstatt</a>
-— derselbe Prozess, nur bauen ihn Ihre Fachkräfte selbst.</p>
 </div>
 </div>
 </section>
@@ -444,10 +466,8 @@ bleibt Ihr Aufwand klein.</p>
 überall gemischt: Protokolle der Anlagensteuerung, Sensorwerte, Messwerte aus
 dem Röntgen, Aufträge im ERP. Vieles davon liegt bereits in
 Sicherungsdateien, ohne dass jemand es nutzt.</p>
-<p>Der umgekehrte Weg — erst alles in ein großes System zusammenführen — ist der
-teure. In der Automobilindustrie sind so Plattformen entstanden, die
-hinterher niemand mehr bedienen konnte. Wo später wirklich etwas fehlt, wird
-es benannt: meist ein bis zwei zusätzliche Exporte aus der Steuerung.</p>
+<p>Wo später wirklich etwas fehlt, wird es benannt: meist ein bis zwei
+zusätzliche Exporte aus der Steuerung.</p>
 </div>
 </details>
 <details class="frage">
@@ -474,13 +494,14 @@ Stunde genügt.</p>
 <details class="frage">
 <summary>Was passiert mit unseren Daten?</summary>
 <div class="antwort">
-<p>Das fertige System läuft bei Ihnen im Haus — keine Cloud, kein Abo. Für die
-erste Demo stellen Sie freiwillig einen Auszug bereit: nur den, den Sie
-freigeben, verschlüsselt übergeben und mit Vertraulichkeitsvereinbarung.
-Ihre Messwerte werden ausschließlich auf unseren eigenen Rechnern
-ausgewertet. Kein KI-Dienst sieht sie.</p>
-<p>Rezepturen und Prozessparameter werden nicht gebraucht, um Auffälligkeiten zu
-finden. Was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt —
+<p>Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben —
+verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet
+wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim
+KI-Setup-Check gibt es keine Übergabe an uns: Wir arbeiten in Ihrer Umgebung.</p>
+<p>Eine Anwendung, die danach im Betrieb weiterläuft, steht bei Ihnen im Haus,
+ohne Cloud. Rezepturen und Prozessparameter werden nicht gebraucht, um
+Auffälligkeiten zu finden. Was ein Werkzeug sehen darf, wird vorher
+schriftlich festgelegt —
 <a href="sicherheit.html" data-funnel="link-sicherheit-leistungen">welche
 Rahmenwerke dahinterstehen</a>.</p>
 </div>
@@ -531,7 +552,7 @@ dokumentiert, was sonst nur abgehakt ist.</p>
 <section class="cta-bottom">
 <div class="container">
 <h2>Ob sich das für Sie lohnt, klärt sich in einer halben Stunde</h2>
-<p>Im Erstgespräch schildern Sie Ihre Situation und bekommen eine ehrliche Einschätzung — auch dann, wenn sie lautet, dass es sich für Ihren Betrieb noch nicht rechnet. Passt es nicht, wissen Sie das nach dieser halben Stunde und nicht nach drei Monaten. Für österreichische Betriebe können Förderungen die Kosten der späteren Schritte deutlich senken.</p>
+<p>Im Erstgespräch schildern Sie Ihre Situation und bekommen eine ehrliche Einschätzung — auch dann, wenn sie lautet, dass es sich für Ihren Betrieb noch nicht rechnet. Für österreichische Betriebe können Förderungen die Kosten der späteren Schritte deutlich senken.</p>
 <div class="cta-buttons">
 <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-leistungen">
 Kostenloses Erstgespräch buchen
@@ -547,7 +568,7 @@ Zum Weiterreichen im Haus:
 <a href="docs/leistungen-ueberblick.pdf" target="_blank" rel="noopener"
 data-funnel="pdf-leistungen-ueberblick"
 style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">alle
-vier Wege auf einer Seite (PDF)</a> — mit Aufwand und Preis, damit Ihre
+vier Angebote auf einer Seite (PDF)</a> — mit Aufwand und Preis, damit Ihre
 Geschäftsführung nicht nachfragen muss.
 </p>
 </div>
