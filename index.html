@@ -743,7 +743,8 @@
   .angebot-stufe { display:inline-block; font-family:'Montserrat',Arial,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 11px; border-radius:50px; background:rgba(43,94,167,.1); color:var(--schild-blau); }
   .angebot-karte.neu .angebot-stufe { background:rgba(61,140,62,.12); color:var(--logo-gruen); }
   .angebot-karte h3 { font-family:'Montserrat',Arial,sans-serif; font-size:1.22rem; color:var(--dunkelblau); margin:12px 0 8px; min-height:2.5em; display:flex; align-items:flex-end; }
-  .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 16px; min-height:4.6em; }
+  .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; min-height:4.6em; }
+  .angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; min-height:7.6em; }
   .angebot-preis { font-family:'Montserrat',Arial,sans-serif; font-size:1.3rem; font-weight:700; color:var(--dunkelblau); }
   .angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; min-height:2.6em; }
   .angebot-inhalt .btn { white-space:nowrap; font-size:.92rem; padding:12px 20px; }
@@ -761,47 +762,24 @@
   .angebot-unterlagen { font-size:.88rem; margin:0 0 16px; line-height:1.9; }
   .angebot-unterlagen a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
   @media (max-width:1180px) { .angebote-karten { grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } .angebot-frage, .angebot-karte h3, .angebot-preis small { min-height:0; } }
+  @media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } .angebot-frage, .angebot-fuer, .angebot-karte h3, .angebot-preis small { min-height:0; } }
 </style>
 <section id="ablauf" style="padding:64px 0 72px;background:var(--hellgrau);">
     <div class="container">
         <div class="section-header fade-up" style="margin-bottom:30px;">
             <p class="section-label">Unsere Angebote</p>
             <h2 style="color:var(--dunkelblau);">Vier Angebote — jedes zum Festpreis.</h2>
-            <p>Liegen Ihre Daten schon vor, beginnen Sie mit der Erstanalyse, sonst mit der Standortanalyse. Jede Stufe beauftragen Sie einzeln. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
+            <p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Daten schon vorliegen. Beide führen zur Analyse je Fehlerbild. Jede Stufe beauftragen Sie einzeln. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
         </div>
 
         <div class="angebote-karten">
             <div class="angebot-spalte fade-up">
                 <details class="angebot-karte">
                     <summary>
-                        <span class="angebot-stufe">Daten liegen vor</span>
-                        <h3>Erstanalyse</h3>
-                        <p class="angebot-frage">Sind Ihre vorhandenen Daten auswertbar, und wo sind Lücken?</p>
-                        <div class="angebot-preis">1.500 € netto<small>je vorliegendem Datenbestand</small></div>
-                        <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
-                    </summary>
-                    <div class="angebot-inhalt">
-                        <ul>
-                            <li>Sie stellen uns die vorhandenen Daten bereit, nach unterschriebener NDA</li>
-                            <li>Prüfung auf Vollständigkeit, Zeitachse und Lücken</li>
-                            <li>Datenampel je Anlage: Was trägt für Auswertungen, was nicht</li>
-                            <li>Empfehlung, womit Sie anfangen, oder was nachzurüsten ist</li>
-                        </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse">Erstgespräch buchen</a>
-                    </div>
-                </details>
-                <p class="angebot-belege">
-                    <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-erstanalyse">Beispiel-Befund (PDF)</a><br>
-                    <a href="docs/beispiel-anlagendaten.pdf" target="_blank" rel="noopener" data-funnel="pdf-anlagendaten-erstanalyse">Was in Anlagendaten steckt (PDF)</a>
-                </p>
-            </div>
-            <div class="angebot-spalte fade-up">
-                <details class="angebot-karte">
-                    <summary>
                         <span class="angebot-stufe">Daten erschließen</span>
                         <h3>Standortanalyse</h3>
                         <p class="angebot-frage">Welche Daten haben Sie, tragen sie, und wo liegt das Geld?</p>
+                        <p class="angebot-fuer">Für Betriebe, deren Anlagendaten verstreut liegen oder noch nie ausgewertet wurden.</p>
                         <div class="angebot-preis">1.500 € netto<small>je Standort, unabhängig von der Anlagenzahl</small></div>
                         <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
                     </summary>
@@ -824,9 +802,35 @@
             <div class="angebot-spalte fade-up">
                 <details class="angebot-karte">
                     <summary>
+                        <span class="angebot-stufe">Daten liegen vor</span>
+                        <h3>Erstanalyse</h3>
+                        <p class="angebot-frage">Sind Ihre vorhandenen Daten auswertbar, und wo sind Lücken?</p>
+                        <p class="angebot-fuer">Für Betriebe, die ihre Daten schon gesammelt haben, etwa als Export aus Steuerung oder Datenbank.</p>
+                        <div class="angebot-preis">1.500 € netto<small>je vorliegendem Datenbestand</small></div>
+                        <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
+                    </summary>
+                    <div class="angebot-inhalt">
+                        <ul>
+                            <li>Sie stellen uns die vorhandenen Daten bereit, nach unterschriebener NDA</li>
+                            <li>Prüfung auf Vollständigkeit, Zeitachse und Lücken</li>
+                            <li>Datenampel je Anlage: Was trägt für Auswertungen, was nicht</li>
+                            <li>Empfehlung, womit Sie anfangen, oder was nachzurüsten ist</li>
+                        </ul>
+                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse">Erstgespräch buchen</a>
+                    </div>
+                </details>
+                <p class="angebot-belege">
+                    <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-erstanalyse">Beispiel-Befund (PDF)</a><br>
+                    <a href="docs/beispiel-anlagendaten.pdf" target="_blank" rel="noopener" data-funnel="pdf-anlagendaten-erstanalyse">Was in Anlagendaten steckt (PDF)</a>
+                </p>
+            </div>
+            <div class="angebot-spalte fade-up">
+                <details class="angebot-karte">
+                    <summary>
                         <span class="angebot-stufe">Wenn die Daten tragen</span>
                         <h3>Analyse je Fehlerbild</h3>
                         <p class="angebot-frage">Woran liegt dieses Fehlerbild, und was ist zuerst zu prüfen?</p>
+                        <p class="angebot-fuer">Für Betriebe mit einem wiederkehrenden Fehlerbild und Daten, die sich als tragfähig erwiesen haben.</p>
                         <div class="angebot-preis">5.000 € netto<small>je Fehlerbild, an Ihren vorhandenen Daten</small></div>
                         <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
                     </summary>
@@ -851,14 +855,15 @@
                     <summary>
                         <span class="angebot-stufe">Neu</span>
                         <h3>KI-Setup-Check</h3>
-                        <p class="angebot-frage">KI im Betrieb nutzen, ohne dass sie Ihre Daten sieht.</p>
+                        <p class="angebot-frage">Ihre Leute bauen sich ihre Werkzeuge selbst, und die KI sieht Ihre Daten nicht.</p>
+                        <p class="angebot-fuer">Für Fachkräfte, die Werkzeuge, Auswertungen und Dokumentenprüfungen selbst bauen wollen, ohne zu programmieren.</p>
                         <div class="angebot-preis">1.500 € netto<small>Probe-Setup für 1 bis 3 Personen</small></div>
                         <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
                     </summary>
                     <div class="angebot-inhalt">
                         <ul>
                             <li>Einrichtung mit Datenschutz-Sperren und Freigaben, abgestimmt mit Ihrer IT</li>
-                            <li>Zwei Anwendungsfälle aus Ihrem Alltag, gemeinsam umgesetzt</li>
+                            <li>Zwei Anwendungsfälle aus Ihrem Alltag, gemeinsam umgesetzt — zum Beispiel eine Auswertung von Prüfprotokollen oder der Abgleich von Zertifikat, Lieferschein und Spezifikation</li>
                             <li>Regeln für den Umgang, passend zur Schulungspflicht nach EU-KI-Verordnung</li>
                             <li>Vier Wochen zum Ausprobieren, mit Begleitung bei Fragen</li>
                             <li>Danach auf Wunsch: Ausbau auf Team oder Unternehmen, als Angebot auf Anfrage. Lizenzen buchen Sie direkt beim Anbieter.</li>
