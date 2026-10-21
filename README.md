@@ -382,6 +382,8 @@ homepage/
   impressum/ stefan-maier/ kontakt/ trusted-ai/ data-analytics/
                            Redirect-Stubs auf die WordPress-Alt-URLs — generiert aus _generate_redirects.py,
                            nicht von Hand editieren. Nur Pfade mit echtem Nachfolger; tote PDFs bleiben 404.
+  termin/                  Kurzlink secure-galvano-ai.com/termin -> Bookings-Erstgespraech (fuer LinkedIn und
+                           Mails; noindex, kein canonical) — aus SHORTLINKS in _generate_redirects.py
   impressum.html           Impressum (ECG/UGB) + Marken-Hinweis
   datenschutz.html         Datenschutzerklärung (DSGVO)
   404.html                 GitHub-Pages-Fehlerseite (noindex, nicht in Nav/Sitemap) — faengt Alt-URLs
@@ -399,7 +401,7 @@ homepage/
                            Messung (clarity_daily.py, youtube_abrufe.py, wochenbericht.py) -> OPTIMIERUNG.md
   _doku/                   Betriebsdoku, die nicht ausgeliefert wird (Unterstrich) — infrastruktur.md
   _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
-  _generate_redirects.py   Generator: Redirect-Stubs fuer WordPress-Alt-URLs (REDIRECTS-Dict = einzige Quelle)
+  _generate_redirects.py   Generator: Redirect-Stubs fuer WordPress-Alt-URLs (REDIRECTS-Dict = einzige Quelle) und Kurzlinks (SHORTLINKS)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
   credentials/
     _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full (§ Deployment)

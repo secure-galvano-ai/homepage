@@ -39,6 +39,32 @@ REDIRECTS = {
 
 SITE = "https://secure-galvano-ai.com"
 
+# Short links for messages (LinkedIn, mail): /<key>/ -> external target. Unlike REDIRECTS these
+# are not page moves, so they carry noindex and no canonical. Booking URL mirrors
+# `kontakt.buchung` in Business Development/areas/stammdaten.yaml -- change both together.
+SHORTLINKS = {
+    "termin": (
+        "https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2",
+        "Terminbuchung",
+    ),
+}
+
+SHORTLINK_TEMPLATE = """<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url={target}">
+    <title>{label} · secure galvano ai</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <p><a href="{target}">Weiter zur {label} &rarr;</a></p>
+    <script>window.location.replace('{target}');</script>
+</body>
+</html>
+"""
+
 TEMPLATE = """<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -74,6 +100,11 @@ def main() -> None:
             encoding="utf-8",
         )
         print(f"  /{path}/ -> {target}")
+    for path, (target, label) in SHORTLINKS.items():
+        out = ROOT / path / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(SHORTLINK_TEMPLATE.format(target=target, label=label), encoding="utf-8")
+        print(f"  /{path}/ -> {target} (short link)")
     print("Done.")
 
 
