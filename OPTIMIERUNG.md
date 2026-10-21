@@ -54,8 +54,7 @@ abgelehnt wurde.
 
 **LinkedIn gehört seit 31.08.2026 in denselben Monatslauf** — eigener Abschnitt, gemeinsame
 Schlussfolgerung. Die Zahlen kommen aus dem XLSX-Export über
-`Business Development/scripts/analyse_linkedin.py`, **nicht** über den Browser: automatisierter
-Zugriff verstößt dort gegen die Nutzungsbedingungen und riskiert das Konto. Gepflegt wird der
+`Business Development/scripts/analyse_linkedin.py`; das Dashboard wird nicht ausgelesen. Gepflegt wird der
 Befund seit 07.09.2026 auf SharePoint unter `01_LinkedIn/00_LIESMICH_Reichweite-und-Serie.md`
 (das BD-Projekt `projects/linkedin-auftritt/` ist aufgeloest); hier steht nur, ob ein Beitrag
 Verkehr auf die Seite gebracht hat.
@@ -67,12 +66,12 @@ Verkehr auf die Seite gebracht hat.
 > Obergrenze des Sinnvollen** — bei vier bis acht Beiträgen im Monat ist ein kürzerer Takt
 > Rauschen (§5), und die 7-Tage-Werte des Dashboards zeigen genau das.
 >
-> **Was Stefan bleibt: der Export selbst** (2 Minuten, verlangt eine angemeldete Sitzung) und
-> die vier Dashboard-Zahlen, die im Export fehlen. **Alles danach übernimmt ein Befehl:**
+> **Den Export ziehe ich selbst** *(seit 21.10.2026, Klickfolge in `/optimierung` 3b)*; bei Stefan
+> bleiben nur die Dashboard-Zahlen, die im Export fehlen (👤). **Danach ein Befehl:**
 > ```
 > py "Business Development/scripts/linkedin_abholen.py"
 > ```
-> Er holt die Datei aus dem Download-Ordner, benennt sie nach der Ablagekonvention, legt sie
+> Er holt die Datei aus `Downloads` oder `.playwright-mcp`, benennt sie nach der Ablagekonvention, legt sie
 > neben die alten Exporte auf SharePoint, fährt die Auswertung und räumt das Original weg.
 > **Kein Task Scheduler** — an 29 von 30 Tagen gäbe es nichts abzuholen.
 >
