@@ -67,7 +67,7 @@
 <section class="methodik">
 <div class="container methodik-inner">
 <h2>Wie das im Alltag organisiert ist</h2>
-<p>Die internen Datensicherheits-Prozesse folgen den Prinzipien der ISO/IEC 27001 — Risikobetrachtung, Zugriffskontrolle, dokumentierte Verfahren, Vorfallreaktion. Die Entwicklung läuft auf einem getrennten Arbeitsgerät mit Festplattenverschlüsselung, Multi-Faktor-Authentifizierung und Hardware-Token für Code-Signierung. Ihre Messwerte werden ausschließlich auf unseren eigenen Rechnern ausgewertet, kein KI-Dienst sieht sie; für Entwicklungs-Tests kommen synthetische Daten aus einem digitalen Zwilling zum Einsatz.</p>
+<p>Die internen Datensicherheits-Prozesse folgen den Prinzipien der ISO/IEC 27001 — Risikobetrachtung, Zugriffskontrolle, dokumentierte Verfahren, Vorfallreaktion. Die Entwicklung läuft auf einem getrennten Arbeitsgerät mit Festplattenverschlüsselung, Multi-Faktor-Authentifizierung und Hardware-Token für Code-Signierung. Ihre Messwerte werden ausschließlich auf unseren eigenen Rechnern ausgewertet, kein KI-Dienst sieht sie; entwickelt wird an einer Testanlage mit künstlichen Daten derselben Struktur.</p>
 <p>Vor jedem Projektstart wird eine Geheimhaltungsvereinbarung unterzeichnet. Ihre Daten bleiben während des gesamten Projekts in einer geschützten Umgebung und werden auf Wunsch nach Projektende vollständig gelöscht, mit schriftlicher Bestätigung.</p>
 </div>
 </section>
