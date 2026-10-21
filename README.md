@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-10-15
+**Stand:** 2026-10-21
 
 ---
 
@@ -154,7 +154,7 @@ wird NUR `base.css` editiert. Ad-hoc-Hex im Seiten-CSS vermeiden — stattdessen
 **Nicht migriert (bewusst):** `sicherheit.html` traegt weiter ihr eigenes CSS.
 `ausbildung.html` bekommt Nav und Fuss generiert; ihr Seiten-CSS ist eine Kopie des Standes aus
 `leistungen.html` plus eigener Abschnitte. Die Leistungsbausteine auf `leistungen.html` sind
-handgeschrieben; `_generate_leistungen.py` ist stillgelegt und bricht beim Aufruf ab.
+handgeschrieben.
 
 **Eine Seite (wieder) aufnehmen:** Nav-Eintrag in `NAV_LINKS`, Seite in `PAGES`
 (`_generate_layout.py`), Marker in die Seite setzen, Sitemap-Eintrag, Meta-Block samt
@@ -293,9 +293,7 @@ Coaching als Teil des Angebots. Derselbe Satz steht im Flyer (`AENDERUNGSPROZESS
 **direkt unter dem Hero** — vor der Nutzenliste, weil ein Besucher aus einer Mail zuerst sehen
 will, wovon die Rede ist. Inhalt: das Badbuch aus `lehrmittel/demos/badbuch/` (nachgestellter
 Verlauf, keine Betriebsdaten, kein Lieferantenname). Der Videostart meldet sich als
-**`video-badbuch`** (`data-video="badbuch"`). Die fruehere Illustration
-`assets/img/techniker-monitoring.jpg` liegt weiter in `assets/img/`, ist aber seit 11.09.2026
-auf keiner Seite mehr eingebunden.
+**`video-badbuch`** (`data-video="badbuch"`).
 
 **Titel wortgleich halten:** Der YouTube-Titel lautet *„Digitale Badkarte mit KI aufbauen"*
 (geprueft 11.09.2026 ueber `https://www.youtube.com/oembed?url=…`), das `title`-Attribut am
@@ -420,7 +418,6 @@ homepage/
     img/                   Bild-Assets (Bestand: ls assets/img); Partnerlogos in kooperation/
     css/
       base.css             SINGLE SOURCE (§ Architektur) — jede Seite bindet es als erstes CSS ein
-      leistungen.css       Komponenten-CSS für die Leistungsbausteine (Karten + Mail-Button)
     js/
       consent.js           Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
       site.js              Geteiltes Verhalten (§ Architektur)
@@ -430,7 +427,6 @@ homepage/
   _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
   _generate_redirects.py   Generator: Redirect-Stubs fuer WordPress-Alt-URLs (REDIRECTS-Dict = einzige Quelle)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
-  _generate_leistungen.py  STILLGELEGT — bricht bewusst beim Aufruf ab
   credentials/
     _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full (§ Deployment)
     thumbs/ full/          Grid-Thumbnails und Lightbox-Originale
@@ -523,11 +519,10 @@ beider Zonen (`secure-galvano-ai.com`, `rvh.at`), Endstand der Absenderauthentif
 
 | Asset | Pfad |
 |-------|------|
-| **Logo (groß)** | `brand/logo.png` |
-| **Logo (Header)** | `brand/logo_header.png` |
+| **Logo (groß)** | `BD/areas/brand/logo.png` |
+| **Logo (Header)** | `BD/areas/brand/logo_header.png` |
 | **Porträt** | Quelle: `Stefan Maier - Dokumente/02_Unterlagen/04_Fotos/MICHAELKREYER/` |
-| **Corporate Design Doku** | `brand/corporate_design.md` |
-| **Canva Workflow** | `brand/canva_workflow.md` |
+| **Corporate Design Doku** | `BD/areas/brand/corporate_design.md` |
 
 Farben und Schriften der Website: § *Architektur* (Tokens in `assets/css/base.css :root`).
 
@@ -555,8 +550,7 @@ Push auf `main` → GitHub Pages deployed automatisch (~1 Min).
 
 ```bash
 cd homepage
-git add <nur die eigenen Dateien>   # nie -A, fremde Arbeit bleibt draussen (AGENTS.md §5)
-git commit -m "Beschreibung"
+git commit -m "Beschreibung" -- <nur die eigenen Dateien>   # nie -A, fremde Arbeit bleibt draussen (AGENTS.md §5)
 git push
 ```
 

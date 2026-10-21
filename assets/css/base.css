@@ -6,9 +6,9 @@
    Footer, WhatsApp-FAB, Sticky-Mobil-CTA und die fade-up-Animation.
 
    Diese Datei ist die EINZIGE Quelle fuer diese Bausteine — Seiten binden sie
-   als erstes CSS ein (vor leistungen.css und vor dem seiteneigenen <style>).
+   als erstes CSS ein (vor dem seiteneigenen <style>).
    Seiten-spezifisches CSS (Hero, einzelne Sektionen) bleibt im jeweiligen
-   <style>-Block der Seite bzw. in assets/css/<seite>.css.
+   <style>-Block der Seite.
 
    Farbwerte sind kanonisch abgeleitet aus:
      Business Development/areas/brand/corporate_design.md

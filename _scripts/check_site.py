@@ -6,7 +6,7 @@ tinycss2 (CSS-Parser); fehlt es, wird der CSS-Parse-Check uebersprungen.
 
 Checks (E = Error -> Exit 1, W = Warnung -> Exit 0):
   1. HTML wohlgeformt        (balancierter Tag-Stack, void/opaque-aware)   E
-  2. CSS parst sauber        (base.css, leistungen.css, jeder <style>-Block) E
+  2. CSS parst sauber        (base.css, jeder <style>-Block)               E
   3. var(--token) aufloesbar (gegen base.css :root + Seiten-eigenes :root)  E
   4. Layout-Marker           (nav/footer vorhanden + nicht leer)           E
   5. Generator-Sync          (Marker-Inhalt == _generate_layout-Ausgabe)   E
@@ -126,11 +126,9 @@ def marker_content(html: str, name: str):
 # ---- main --------------------------------------------------------------------
 def main() -> int:
     base_css = (ROOT / "assets/css/base.css").read_text(encoding="utf-8")
-    leist_css = (ROOT / "assets/css/leistungen.css").read_text(encoding="utf-8")
     base_tokens = defined_tokens([base_css])
 
     check_css("base.css", base_css, "base.css")
-    check_css("leistungen.css", leist_css, "leistungen.css")
 
     # generator sync
     sys.path.insert(0, str(ROOT))
