@@ -450,6 +450,11 @@ homepage/
                            Hand bearbeitet -- Aenderung immer im Skript, dann neu bauen:
                              standortanalyse-flyer.pdf        BD/templates/flyer-corporate/build_flyer.py
                              standortanalyse-musterbefund.pdf BD/templates/befund-corporate/build_befund.py
+                             erstanalyse-ueberblick.pdf       BD/templates/flyer-corporate/build_flyer_erstanalyse.py
+                             erstanalyse-beispielbefund.pdf   BD/templates/befund-corporate/build_erstanalyse.py
+                             datenanalyse-ablauf.pdf          BD/templates/flyer-corporate/build_flyer_datenanalyse.py
+                             fehlerbild-beispielbefund.pdf    BD/templates/befund-corporate/build_fehlerbild_befund.py
+                             ki-setup-check-ueberblick.pdf    BD/templates/flyer-corporate/build_flyer_kisetup.py
                              leistungen-ueberblick.pdf        BD/templates/uebersicht-corporate/build_uebersicht.py
                              datenwerkstatt-ueberblick.pdf    BD/areas/coaching-und-ausbildung/build_flyer_datenwerkstatt.py
                              anwendung-ueberblick.pdf         BD/templates/flyer-corporate/build_flyer_anwendung.py
