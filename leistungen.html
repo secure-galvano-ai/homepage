@@ -39,10 +39,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Wie viel Zeit kostet uns das?",
+      "name": "Wie viel Zeit kostet uns das? Wir haben keine freien Leute.",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Beim letzten Projekt lag der Aufwand des Kundenteams über drei Monate unter zwanzig Stunden insgesamt: alle ein bis eineinhalb Monate zwanzig Minuten aus der Morgenbesprechung, dazu eine Person als Ansprechpartner mit ein bis zwei Stunden pro Woche."
+        "text": "Beim letzten Projekt lag der Aufwand des Kundenteams über drei Monate unter zwanzig Stunden insgesamt: alle ein bis eineinhalb Monate zwanzig Minuten aus der Morgenbesprechung, dazu eine Person als Ansprechpartner mit ein bis zwei Stunden pro Woche, die prüft, ob die Auswertungen fachlich stimmen."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "Müssen wir vorher unsere Daten in Ordnung bringen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Gearbeitet wird auf dem Stand, den Sie heute haben — Protokolle der Anlagensteuerung, Sensorwerte, Messwerte, Aufträge im ERP. Vieles liegt bereits in Sicherungsdateien. Wo später etwas fehlt, sind es meist ein bis zwei zusätzliche Exporte aus der Steuerung."
+        "text": "Nein. Gearbeitet wird auf dem Stand, den Sie heute haben — Protokolle der Anlagensteuerung, Sensorwerte, Messwerte, Aufträge im ERP, vieles davon in Sicherungsdateien. Fehlt später etwas, sind es meist ein bis zwei zusätzliche Exporte aus der Steuerung."
       }
     },
     {
@@ -58,15 +58,7 @@
       "name": "Greift das in unsere Anlagensteuerung ein?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Ausgewertet wird, was die Steuerung ohnehin ausgibt; sie wird nicht verändert und nicht ferngesteuert. Neue Sensoren oder Etiketten am Teil sind nicht nötig."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wo läuft die Software, und wer bedient sie?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Auf einem Server oder einer virtuellen Maschine in Ihrem Haus. Die Anwendung holt die Daten selbst ab und meldet sich, wenn etwas auffällt. Für das Öffnen einer Auswertung braucht es keinen Ingenieur; eine Einschulung von einer Stunde genügt."
+        "text": "Nein. Ausgewertet wird, was die Steuerung ohnehin ausgibt; sie wird weder verändert noch ferngesteuert, neue Sensoren sind nicht nötig. Läuft eine Auswertung dauerhaft, steht sie auf einem Server in Ihrem Haus, ohne Cloud; eine Stunde Einschulung genügt."
       }
     },
     {
@@ -74,7 +66,7 @@
       "name": "Was passiert mit unseren Daten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Setup-Check gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Eine Anwendung, die danach im Betrieb weiterläuft, steht bei Ihnen im Haus, ohne Cloud."
+        "text": "Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Setup-Check gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Rezepturen werden nicht gebraucht, und was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt."
       }
     },
     {
@@ -82,7 +74,7 @@
       "name": "Was ist, wenn eine Sonde falsch misst?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Eine verkrustete oder dekalibrierte Sonde meldet sich nicht als defekt — sie liefert weiter Werte, nur die falschen. Erkannt wird das über Messgrößen aus verschiedenen Quellen, die sich normalerweise gleichsinnig bewegen: Laufen sie auseinander, schlägt die Auswertung an und benennt die auffälligsten Messstellen des Tages als Prüf- und Kalibrierhinweis. Dafür braucht es keinen zusätzlichen Sensor."
+        "text": "Eine verkrustete oder dekalibrierte Sonde meldet sich nicht als defekt — sie liefert weiter Werte, nur die falschen. Erkannt wird das über Messgrößen aus verschiedenen Quellen, die sich sonst gleichsinnig bewegen: Laufen sie auseinander, benennt die Auswertung die auffälligsten Messstellen des Tages zur Kontrolle — ohne zusätzlichen Sensor."
       }
     },
     {
@@ -90,15 +82,7 @@
       "name": "Ersetzt das unsere Fachkräfte?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Eine Überwachung ohne fachliche Aufsicht funktioniert nicht: Verkrustungen, mechanische Schäden und der Zustand einer Anlage zeigen sich beim Hingehen. Die Auswertung sagt, wo zuerst hinzusehen ist, und nimmt die Suche ab — die Beurteilung bleibt bei Ihrer Verfahrenstechnik und Instandhaltung."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wie sehen wir, ob eine Prüfung wirklich an der Anlage stattgefunden hat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Indem beide Spuren getrennt erfasst und gegeneinander gerechnet werden: die Werte der Anlage auf der einen Seite, die manuelle Kontrollmessung auf der anderen, digital erfasst statt auf Papier. Überschreitet die Abweichung eine vereinbarte Schwelle, entsteht eine Meldung. Damit ist belegt, dass gemessen wurde — und dass die Sensorik zum selben Ergebnis kommt."
+        "text": "Nein. Krusten, mechanische Schäden und der Zustand einer Anlage zeigen sich beim Hingehen, nicht in einer Zahlenreihe. Die Auswertung nimmt das Suchen ab und sagt, wo zuerst hinzusehen ist — die Beurteilung bleibt bei Ihrer Verfahrenstechnik und Instandhaltung."
       }
     }
   ]
@@ -474,7 +458,7 @@
             <p class="section-label">Leistungen</p>
             <h1>Vier Einstiegsangebote, jedes zum Festpreis</h1>
             <p class="goldzeile">Erst wissen, wo das Gold liegt. Dann schürfen.</p>
-            <p>Die meisten Galvanikbetriebe zeichnen längst genug auf, um Fehler früher zu erkennen — ausgewertet wird es nicht. Der Einstieg ist die Standortanalyse — oder die Erstanalyse, wenn Ihre Daten schon gesammelt sind; danach geht es um die Ursachen einzelner Fehlerbilder. Sollen Ihre Fachkräfte selbst auswerten, beginnen Sie mit dem KI-Setup-Check.</p>
+            <p>Ihre Anlagen zeichnen genug auf, um Fehler früher zu erkennen — es wird nur nicht ausgewertet. Jedes Angebot ist ein abgeschlossener Schritt mit klarem Ergebnis; danach entscheiden Sie frei, ob es weitergeht.</p>
 
             <!-- Angebotsleiter (21.10.2026): dieselben vier Angebote in derselben Reihenfolge
                  wie die Kacheln auf der Startseite (index.html#ablauf). Begleitung und
@@ -488,12 +472,9 @@
                 <a href="#ki-setup-check" data-funnel="link-kisetup-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Ihr Team wertet aus</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">KI-Setup-Check</strong><span style="font-size:0.86rem;opacity:.82;">5.000 € netto, 1 bis 3 Personen</span></a>
             </nav>
             <p style="margin-top:14px;font-size:0.9rem;color:rgba(255,255,255,0.78);">Davor: ein <a href="index.html#ablauf" data-funnel="link-ablauf-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">kostenloses Erstgespräch</a> von 30 Minuten. Danach: die <a href="#danach" data-funnel="link-umsetzung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Begleitung der Fehlerbehebung</a>, Festpreis je Projekt, und die <a href="#betreuung" data-funnel="link-betreuung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Betreuung je Anlage</a>.</p>
-            <!-- 23.09.2026: „netto" ergaenzt und der B2B-Hinweis darunter. Die Seite nannte
-                 1.500 € und 5.000 € ohne Zusatz, waehrend index.html und die Angebots-PDFs
-                 „netto" sagen. Das PrAG verlangt Bruttopreise nur gegenueber Konsumenten,
-                 aber eine offen zugaengliche Seite gilt als auch an Verbraucher gerichtet,
-                 solange die Beschraenkung nicht klar dasteht (WKO, Preisauszeichnung im
-                 Webshop). Der Hinweis kostet eine Zeile und schliesst das. -->
+            <!-- 23.09.2026: „netto" und der B2B-Hinweis. Eine offen zugaengliche Seite gilt
+                 als auch an Verbraucher gerichtet, solange die Beschraenkung nicht klar
+                 dasteht (PrAG, WKO Preisauszeichnung im Webshop). Steht einmal hier. -->
             <p style="margin-top:10px;font-size:0.82rem;color:var(--text-light);">Alle Preise netto, zuzüglich Umsatzsteuer. Das Angebot richtet sich an Unternehmen.</p>
         </div>
     </div>
@@ -502,62 +483,41 @@
 <!-- ===== SCHWERPUNKT: Standortanalyse =====
      Zuschnitt seit 21.10.2026 (Leiter in BD/areas/preise.yaml): Anbindung der
      Datenquellen, Datenampel je Anlage, Fehlerbilder mit Potenzial und dazu die
-     Automatisierungs- und KI-Potenziale; der Tag vor Ort mit Rundgang ist optional.
-     Aufwand steht durchgehend aus Kundensicht und beziffert, weil unbezifferter Aufwand
-     immer zu gross geschaetzt wird. Termine werden gemeinsam nach der Verfuegbarkeit des
-     Kunden vereinbart (03.09.2026). -->
+     Automatisierungs- und KI-Potenziale; der Tag vor Ort ist optional.
+     Am 21.10.2026 auf etwa die Haelfte gestrafft (mobil vorher rund 19.000 px), weil die
+     Startseite die vier Angebote samt Nutzen, Preis und Unterlagen schon traegt: je
+     Schritt eine Zeile, die Eckdaten wiederholen die Schritte nicht. -->
 <section class="schwerpunkt" id="standortanalyse">
     <div class="container">
         <p class="section-label">Einstieg · Daten erschließen</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Standortanalyse</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:38px;">Vier bis sechs kurze Online-Gespräche mit Ihren Fachbereichen und die Anbindung Ihrer Datenquellen. Am Ende wissen Sie, ob Ihre Daten für Auswertungen tragen, bei welchen Fehlerbildern das Geld liegt — und wo sich Automatisierung und KI in Ihren Abläufen lohnen, etwa wenn Aufträge und Angebotsunterlagen automatisch eingelesen werden. <strong>1.500 € netto je Standort</strong>, unabhängig von der Anlagenzahl. Die Übersicht gehört Ihnen, auch wenn Sie danach nicht weitermachen.</p>
+        <p class="lead" style="max-width:780px;margin-bottom:38px;">Danach wissen Sie, ob Ihre Daten für Auswertungen tragen, bei welchen Fehlerbildern das Geld liegt und wo sich Automatisierung und KI in Ihren Abläufen lohnen — etwa wenn Aufträge und Angebotsunterlagen automatisch eingelesen werden. <strong>1.500 € netto je Standort</strong>, unabhängig von der Anlagenzahl.</p>
 
         <div class="schwerpunkt-grid">
             <div>
                 <ol class="schritt-liste">
-                    <li><span class="wo">ONLINE · KOSTENLOS</span><strong>Erstgespräch</strong>Worum es geht, was Sie erwarten, welche Anlagen in Frage kommen. Sie nennen uns dabei nur, wer Ihre Fachbereiche vertritt — die Termine vereinbaren wir danach gemeinsam nach deren Verfügbarkeit.</li>
-                    <li><span class="wo">VOR DEM ERSTEN DATENAUSTAUSCH</span><strong>NDA</strong>Beidseitig, drei Jahre Geheimhaltung — verbindlich, bevor eine einzige Datei Ihr Haus verlässt. Beim Einstieg ist sie im Angebot enthalten, auf Wunsch zusätzlich als eigene Vereinbarung. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-leistungen" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Vorab lesen (PDF)</a></li>
-                    <li><span class="wo">ONLINE · JE RUND 45 MINUTEN</span><strong>Vier bis sechs Vorgespräche</strong>Mit Verfahrenstechnik, Instandhaltung, Qualität und Produktion; bei Bedarf zusätzlich Betriebsleitung und IT. <strong class="hebt">Einzeltermine, keine gemeinsame Runde</strong> — jeder wird einzeln nach der Verfügbarkeit des Beteiligten vereinbart, verteilbar über zwei Wochen. Ihre Leute schildern, was wiederkehrend Ärger macht; diese Information steht in keiner Datenbank.</li>
-                    <li><span class="wo">ONLINE · MIT IHRER IT</span><strong>Anbindung der Datenquellen</strong>Gemeinsam mit Ihrer IT binden wir die Datenbank bzw. die Datenquellen an — Steuerung, Labor, Qualitätsdaten. Daran zeigt sich, was tatsächlich aufgezeichnet wird und ob es für Auswertungen trägt.</li>
-                    <li><span class="wo">AUF WUNSCH · VOR ORT</span><strong>Tag vor Ort mit Rundgang</strong>Wenn Sie es möchten, kommen wir ins Werk: Anlagen, Steuerungen, Sensorik und Dosierung im Rundgang, die Fehlerbilder mit Ihren Führungskräften sortiert. Ohne diesen Tag ist das Ergebnis dasselbe.</li>
-                    <li><span class="wo">ONLINE · EINE STUNDE</span><strong>Abschlussrunde</strong>Wir gehen das Ergebnis gemeinsam durch und legen die Schwerpunkte fest, bevor es ein Dokument wird — damit nichts drinsteht, das Sie anders sehen.</li>
-                    <li><span class="wo">DANACH</span><strong>Schriftlicher Befund</strong>Datenampel je Anlage, die Liste der Fehlerbilder mit Potenzial, die Automatisierungs- und KI-Potenziale nach Nutzen sortiert und eine klare Empfehlung, womit Sie anfangen — oder ob es sich noch nicht lohnt.</li>
+                    <li><span class="wo">VOR DEM ERSTEN DATENAUSTAUSCH</span><strong>NDA</strong>Beidseitig, drei Jahre Geheimhaltung, bevor eine Datei Ihr Haus verlässt. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-leistungen" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Vorab lesen (PDF)</a></li>
+                    <li><span class="wo">ONLINE · JE RUND 45 MINUTEN</span><strong>Vier bis sechs Einzelgespräche</strong>Mit Verfahrenstechnik, Instandhaltung, Qualität und Produktion, verteilbar über zwei Wochen. Was wiederkehrend Ärger macht, steht in keiner Datenbank.</li>
+                    <li><span class="wo">ONLINE · MIT IHRER IT</span><strong>Anbindung der Datenquellen</strong>Steuerung, Labor, Qualitätsdaten — daran zeigt sich, was tatsächlich aufgezeichnet wird.</li>
+                    <li><span class="wo">AUF WUNSCH · VOR ORT</span><strong>Tag vor Ort mit Rundgang</strong>Anlagen und Fehlerbilder mit Ihren Führungskräften; 250 km um Bregenz inklusive, darüber 1 € je Kilometer. Ohne diesen Tag ist das Ergebnis dasselbe.</li>
+                    <li><span class="wo">ONLINE · EINE STUNDE</span><strong>Abschlussrunde und Befund</strong>Datenampel je Anlage, Fehlerbilder mit Potenzial, Automatisierungs- und KI-Potenziale nach Nutzen sortiert — und eine klare Empfehlung, womit Sie anfangen oder ob es sich noch nicht lohnt.</li>
                 </ol>
-
-                <div class="umfang-hinweis">
-                    <strong style="color:var(--dunkelblau);">Ob fünf Anlagen oder zwanzig — der Preis bleibt derselbe.</strong><br>
-                    In die Übersicht kommen <strong>alle</strong> Ihre Anlagen. In die Tiefe gehen wir bei ein bis zwei Fokusanlagen, ausgewählt nach der besten Datenlage und nach dem, was Ihnen aktuell tatsächlich weh tut.
-                </div>
             </div>
 
             <aside class="eckdaten">
                 <h3>Auf einen Blick</h3>
-                <!-- Bewusst OHNE die Schritte links zu wiederholen (31.08.2026): "Vorbereitung",
-                     "Vor Ort" und die Abschlussrunde standen hier ein zweites Mal. Diese Karte
-                     beantwortet nur, was die Schrittliste nicht sagt — Aufwand, Beteiligte,
-                     Grenzen, Ergebnis. -->
                 <dl>
-                    <dt>Ihr Aufwand</dt><dd><strong>Je Person eine Stunde online, dazu ein Termin mit Ihrer IT.</strong> Anlagenliste und Systemübersicht — sonst keine Vorarbeit</dd>
-                    <dt>Terminplanung</dt><dd><strong>Nur die Abschlussrunde verlangt mehrere Personen gleichzeitig.</strong> Alles davor läuft online und einzeln; jeder Termin wird gemeinsam nach der Verfügbarkeit Ihrer Leute vereinbart</dd>
-                    <dt>Wer dabei ist</dt><dd>Fokus auf Produktion, Qualitätssicherung, Instandhaltung und Verfahrenstechnik</dd>
-                    <dt>Ihre Anlage, wie sie ist</dt><dd><strong>Ausgewertet wird, was heute schon aufgezeichnet wird</strong> — aus Steuerung, Sensorik, Labor oder Badbuch, auch bei älteren Anlagen und aus verschiedenen Quellen. Keine neue Sensorik, keine Kameras</dd>
-                    <dt>Kein Eingriff</dt><dd>Ihre Steuerung bleibt unverändert: keine Verkabelung, kein Umbau — und kein KI-Dienst sieht Ihre Messwerte</dd>
-                    <dt>Tag vor Ort</dt><dd>Optional, Sie entscheiden. Der Umkreis von 250 km um Bregenz ist inklusive, darüber 1 € je zusätzlichem Kilometer</dd>
-                    <dt>Ergebnis</dt><dd>Datenampel je Anlage, Fehlerbilder mit Potenzial, Automatisierungs- und KI-Potenziale, schriftlicher Befund</dd>
-                    <dt>Danach</dt><dd>Sie entscheiden frei. Es folgt kein Automatismus</dd>
+                    <dt>Ihr Aufwand</dt><dd>Je Person eine Stunde online, dazu ein Termin mit Ihrer IT. Nur die Abschlussrunde braucht mehrere Personen gleichzeitig</dd>
+                    <dt>Umfang</dt><dd>Alle Anlagen in der Übersicht, ein bis zwei Fokusanlagen in der Tiefe — ob fünf Anlagen oder zwanzig, der Preis bleibt</dd>
+                    <dt>Ihre Anlage, wie sie ist</dt><dd>Ausgewertet wird, was heute schon aufgezeichnet wird. Keine neue Sensorik, kein Eingriff in die Steuerung</dd>
+                    <dt>Danach</dt><dd>Der Befund gehört Ihnen. Sie entscheiden frei, es folgt kein Automatismus</dd>
                 </dl>
                 <a class="eck-cta" href="docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-leistungen">Alles auf einer Seite (PDF)</a>
                 <a class="eck-cta" style="margin-top:10px;" href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-leistungen">So sieht ein fertiger Befund aus (PDF)</a>
-                <!-- Blanko-Angebot, neu 23.09.2026. Dasselbe Dokument, das Sie als
-                     verbindliches Angebot bekommen, nur ohne Empfaenger, Nummer, Datum,
-                     Bankverbindung und Unterschrift. Gebaut ueber
-                     BD/scripts/angebot_muster.py aus der Angebotsvorlage -- nicht von
-                     Hand nachbauen, sonst laufen Muster und Angebot auseinander. -->
+                <!-- Blanko-Angebot: dasselbe Dokument wie das verbindliche Angebot, nur ohne
+                     Empfaenger, Nummer, Datum, Bankverbindung und Unterschrift. Gebaut ueber
+                     BD/scripts/angebot_muster.py -- nicht von Hand nachbauen. -->
                 <a class="eck-cta" style="margin-top:10px;" href="docs/angebot-standortanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-standortanalyse">Blanko-Angebot zum Ausfüllen (PDF)</a>
-                <!-- KEIN Verweis auf demo.html hier: die Belegspalte sammelt Belege zur
-                     STANDORTANALYSE, das Video zeigt die ANWENDUNG. Der Verweis steht
-                     weiter unten bei "Wie es weitergeht" — genau dort, wo der Text
-                     "erst hier sehen Sie die Auswertung selbst arbeiten" verspricht. -->
             </aside>
         </div>
     </div>
@@ -571,26 +531,26 @@
     <div class="container">
         <p class="section-label">Einstieg · Daten liegen vor</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Erstanalyse</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:30px;">Ihre Daten sind schon gesammelt, etwa als Export aus Steuerung oder Datenbank? Dann prüfen wir, ob sie für Auswertungen tragen und wo Lücken sind. <strong>1.500 € netto je vorliegendem Datenbestand.</strong></p>
+        <p class="lead" style="max-width:780px;margin-bottom:30px;">Ihre Daten liegen schon vor, etwa als Export aus Steuerung oder Datenbank? Dann wissen Sie in rund zwei Wochen, ob sie für Auswertungen tragen und wo Lücken sind — bevor Sie in eine Ursachensuche investieren. <strong>1.500 € netto je vorliegendem Datenbestand.</strong></p>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Daten bereitstellen</h3>
-                <p style="font-size:0.92rem;">Sie geben uns die vorhandenen Daten — nach unterschriebener NDA, verschlüsselt übergeben.</p>
+                <p style="font-size:0.92rem;">Nach unterschriebener NDA, verschlüsselt übergeben.</p>
             </div>
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Prüfung</h3>
-                <p style="font-size:0.92rem;">Vollständigkeit, Zeitachse und Lücken — ausgewertet auf unseren eigenen Rechnern.</p>
+                <p style="font-size:0.92rem;">Vollständigkeit, Zeitachse und Lücken, auf unseren eigenen Rechnern.</p>
             </div>
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Befund</h3>
-                <p style="font-size:0.92rem;">Datenampel je Anlage, welche Fehlerbilder sich auswerten lassen, und eine Empfehlung, womit Sie anfangen oder was nachzurüsten ist.</p>
+                <p style="font-size:0.92rem;">Datenampel je Anlage, auswertbare Fehlerbilder und eine Empfehlung, womit Sie anfangen oder was nachzurüsten ist.</p>
             </div>
         </div>
 
         <div class="umfang-hinweis" style="margin-bottom:24px;">
             <strong style="color:var(--dunkelblau);">Eine Prüfung der Daten, keine Ursachenanalyse.</strong><br>
-            Warum ein Fehlerbild auftritt, klärt der nächste Schritt, die <a href="#analyse-je-fehlerbild" data-funnel="link-fehlerbild-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Analyse je Fehlerbild</a>. Sind Ihre Daten noch verstreut, ist die <a href="#standortanalyse" data-funnel="link-standortanalyse-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> der passendere Einstieg.
+            Die Ursachen klärt die <a href="#analyse-je-fehlerbild" data-funnel="link-fehlerbild-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Analyse je Fehlerbild</a>. Sind Ihre Daten noch verstreut, passt die <a href="#standortanalyse" data-funnel="link-standortanalyse-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> besser.
         </div>
 
         <div style="display:flex;flex-wrap:wrap;gap:10px;">
@@ -610,38 +570,30 @@
     <div class="container">
         <p class="section-label">Der nächste Schritt</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Analyse je Fehlerbild</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:30px;">Woran liegt dieses Fehlerbild — und was ist zuerst zu prüfen? Für ein Fehlerbild aus der Standort- oder Erstanalyse legen wir Ihre Prozessdaten neben das Wissen Ihrer Leute. <strong>5.000 € netto je Fehlerbild</strong>, weitere Fehlerbilder jederzeit zusätzlich.</p>
+        <p class="lead" style="max-width:780px;margin-bottom:30px;">Statt Meinungen eine belegte Ursache und eine Prüfreihenfolge — weniger Ausschuss, weniger Suchzeit. Für ein Fehlerbild aus der Standort- oder Erstanalyse legen wir Ihre Prozessdaten neben das Wissen Ihrer Leute. <strong>5.000 € netto je Fehlerbild</strong>, weitere jederzeit zusätzlich.</p>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Fehlerbild wählen</h3>
-                <p style="font-size:0.92rem;">Aus dem Befund der Standort- oder Erstanalyse — nach Potenzial und Datenlage.</p>
+                <p style="font-size:0.92rem;">Aus dem Befund des Einstiegs, nach Potenzial und Datenlage. Die Daten liegen dann schon vor.</p>
             </div>
             <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Datengrundlage</h3>
-                <p style="font-size:0.92rem;">Die Daten liegen aus dem Einstieg bereits vor; bei Bedarf kommt ein ergänzender Auszug dazu, abgestimmt mit Ihrer IT.</p>
+                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Gespräche und Auswertung</h3>
+                <p style="font-size:0.92rem;">Bei Bedarf je 45 Minuten mit Ihren Fachbereichen, dann rund drei Wochen Auswertung: Soll gegen Ist, Verläufe um die Fehlerzeitpunkte.</p>
             </div>
             <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Gespräche</h3>
-                <p style="font-size:0.92rem;">Bei Bedarf je 45 Minuten mit Verfahrenstechnik, Instandhaltung und Qualitätssicherung — was der Betrieb beobachtet, steht in keiner Datenbank.</p>
+                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Befund</h3>
+                <p style="font-size:0.92rem;">Ursache-Wirkungs-Diagramm nach Ishikawa mit den Auswertungen dazu, eine begründete Prüfreihenfolge und eine klare Aussage, ob sich eine Umsetzung lohnt.</p>
             </div>
             <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">4 · Auswertung</h3>
-                <p style="font-size:0.92rem;">Rund drei Wochen: Soll gegen Ist, Verläufe um die Fehlerzeitpunkte, das Auswertewerkzeug erstmals an Ihren Daten.</p>
-            </div>
-            <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">5 · Befund</h3>
-                <p style="font-size:0.92rem;">Ursache-Wirkungs-Diagramm nach Ishikawa, die Datenauswertungen dazu, eine begründete Prüfreihenfolge und eine klare Aussage, ob sich eine Umsetzung lohnt.</p>
-            </div>
-            <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">6 · Zum Durchklicken</h3>
-                <p style="font-size:0.92rem;">Die Auswertung Ihrer Daten interaktiv, im Browser ohne Installation und ohne Internetverbindung. <a href="demo.html" data-funnel="cta-demo-vorprojekt" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So sieht sie aus</a></p>
+                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">4 · Zum Durchklicken</h3>
+                <p style="font-size:0.92rem;">Ihre Auswertung im Browser, ohne Installation und ohne Internetverbindung. <a href="demo.html" data-funnel="cta-demo-vorprojekt" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So sieht sie aus</a></p>
             </div>
         </div>
 
         <div class="umfang-hinweis" style="margin-bottom:24px;">
             <strong style="color:var(--dunkelblau);">Ergebnisoffen — und das ist so gemeint.</strong><br>
-            Lässt sich die Ursache aus Daten und Gesprächen nicht eingrenzen, sagt der Befund, welche Angabe oder Messung dafür fehlt. Voraussetzung ist eine abgeschlossene <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> oder <a href="#erstanalyse" data-funnel="link-zurueck-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Erstanalyse</a> — sie klärt vorher, ob Ihre Daten tragen.
+            Lässt sich die Ursache nicht eingrenzen, sagt der Befund, welche Angabe oder Messung fehlt. Voraussetzung ist eine abgeschlossene <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> oder <a href="#erstanalyse" data-funnel="link-zurueck-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Erstanalyse</a>.
         </div>
 
         <div style="display:flex;flex-wrap:wrap;gap:10px;">
@@ -661,13 +613,13 @@
     <div class="container">
         <p class="section-label">Einstieg · Ihr Team wertet selbst aus</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Der KI-Setup-Check</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:26px;">Ihre Fachkräfte bauen Auswertungen ihrer Prozess- und Qualitätsdaten selbst, ohne zu programmieren. Wir richten das Setup für die Datenanalyse ein — datenschutzgerecht und nach EU-KI-Verordnung eingerichtet. <strong>5.000 € netto</strong>, Probe-Setup für 1 bis 3 Personen.</p>
+        <p class="lead" style="max-width:780px;margin-bottom:26px;">Ihre Fachkräfte beantworten Datenfragen selbst, in Stunden statt in Projekten und ohne zu programmieren. Wir richten das Setup dafür ein — datenschutzgerecht und nach EU-KI-Verordnung eingerichtet. <strong>5.000 € netto</strong>, Probe-Setup für 1 bis 3 Personen.</p>
 
         <ul class="baust-liste" style="margin-bottom:24px;">
             <li><b>Einrichtung</b> der Arbeitsumgebung mit Freigaben und schriftlicher Datengrenze, abgestimmt mit Ihrer IT.</li>
-            <li><b>Eine Testanlage mit der Struktur Ihrer Daten:</b> Die Werkzeuge entstehen an künstlichen Beispieldaten und laufen danach lokal bei Ihnen auf den echten Daten — Ihre Messwerte sieht keine KI.</li>
+            <li><b>Eine Testanlage mit der Struktur Ihrer Daten:</b> Die Werkzeuge entstehen an künstlichen Beispieldaten und laufen danach lokal auf Ihren echten Daten — Ihre Messwerte sieht keine KI.</li>
             <li><b>Zwei Auswertungen aus Ihrem Alltag</b>, gemeinsam gebaut — etwa für Prüfprotokolle oder das Badbuch.</li>
-            <li><b>Regeln für den Umgang</b> und ein halber Tag Schulung nach EU-KI-Verordnung.</li>
+            <li><b>Ein halber Tag Schulung</b> nach EU-KI-Verordnung, mit Regeln für den Umgang.</li>
             <li><b>Vier Wochen zum Ausprobieren</b>, mit Begleitung bei Fragen.</li>
         </ul>
 
@@ -689,292 +641,110 @@
     <div class="container">
         <p class="section-label">Nach der Analyse</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Begleitung der Fehlerbehebung und Betreuung</h2>
-        <p class="lead" style="max-width:780px;">Jede Analyse ist eine abgeschlossene Leistung — Sie zahlen keinen Folgeschritt, um ein Ergebnis zu bekommen. Auch „Ihre Datenlage trägt es derzeit nicht“ ist ein Ergebnis: Dann steht im Befund, was nachzurüsten ist und in welcher Reihenfolge. Das erspart eine Fehlinvestition, die deutlich teurer gewesen wäre.</p>
+        <p class="lead" style="max-width:780px;">Jede Analyse ist abgeschlossen. Auch „Ihre Datenlage trägt es derzeit nicht“ ist ein Ergebnis — samt der Reihenfolge, in der nachzurüsten ist; das erspart eine teure Fehlinvestition.</p>
 
         <div style="margin-top:26px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--schild-blau);border-radius:0 12px 12px 0;padding:20px 24px;">
-            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Begleitung der Fehlerbehebung.</strong> Aus einem Fehlerbild wird ein Projekt: Wir begleiten Ihr Team fachlich, bis die Fehlerbilder behoben sind — Aufgaben und Termine im Blick, alle zwei Wochen ein Statusbericht für die Geschäftsführung. Als <strong>Festpreis je Projekt, vereinbart, bevor Sie zusagen</strong>, kein offener Stundenzettel; die Höhe richtet sich nach der Zahl der Fehlerbilder und Anlagen. <strong>Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr</strong>, bezogen auf die ausgewählten Anwendungsfälle. Zur Einordnung: Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von <strong>60.000 bis 90.000 €</strong> — ein Potenzial, keine Zusage.</p>
+            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Begleitung der Fehlerbehebung.</strong> Wir begleiten Ihr Team fachlich, bis die Fehlerbilder behoben sind, alle zwei Wochen mit einem Statusbericht für die Geschäftsführung. <strong>Festpreis je Projekt, vereinbart, bevor Sie zusagen</strong>; Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr. Zur Einordnung: Das Einsparpotenzial je Anlage und Jahr liegt über Energie, Wasser, Anodenmetall, Chemie und Entsorgung bei 60.000 bis 90.000 € — ein Potenzial, keine Zusage.</p>
         </div>
 
         <div id="betreuung" style="margin-top:16px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--logo-gruen);border-radius:0 12px 12px 0;padding:20px 24px;">
-            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Betreuung je Anlage.</strong> Soll eine Auswertung im Betrieb weiterlaufen, binden wir sie auf Ihrer Hardware ein, ohne Cloud. Die Betreuung wird je überwachter Anlage abgerechnet; die Modellpflege ist enthalten, damit die Erkennung nicht mit der Zeit abdriftet. Sie ist ein eigenes Angebot und keine Bedingung für die Schritte davor.</p>
+            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Betreuung je Anlage.</strong> Soll eine Auswertung im Betrieb weiterlaufen, binden wir sie auf Ihrer Hardware ein, ohne Cloud. Die Modellpflege ist enthalten, damit die Erkennung nicht mit der Zeit abdriftet. Ein eigenes Angebot und keine Bedingung für die Schritte davor.</p>
         </div>
     </div>
 </section>
 
-<!-- ===== DIE VIER POTENZIALFELDER ===== -->
+<!-- ===== WONACH WIR SUCHEN: Felder, Anwendungen, uebriges Portfolio =====
+     Am 21.10.2026 aus drei Abschnitten (Vier Felder, Sieben Anwendungen, Portfolio)
+     zu einem verdichtet: je Feld und je Anwendung eine Zeile. Die Anker #anwendungen
+     und #bausteine bleiben als Sprungmarken in diesem Abschnitt stehen. -->
 <section class="felder" id="potenzialfelder">
     <div class="container">
         <p class="section-label">Wonach wir suchen</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Vier Felder, in denen bei Galvaniken Geld liegt</h2>
-        <p class="lead" style="max-width:780px;">Jedes Feld wird mit <strong>Ihren</strong> Zahlen bewertet, als <strong>Größenordnung mit Bandbreite</strong> — der Rechenweg steht im Befund. Womit sich jedes Feld angehen lässt, zeigt der Beispiel-Befund: von der Auffälligkeitserkennung in Ihren Prozessdaten bis zu Sprachmodellen, die Ihr Haus nicht verlassen.</p>
+        <p class="lead" style="max-width:780px;">Jedes Feld wird mit <strong>Ihren</strong> Zahlen bewertet, als Größenordnung mit Bandbreite; der Rechenweg steht im Befund.</p>
 
-        <div class="feld-cards">
-            <article class="fcard">
-                <span class="num">FELD 1</span>
-                <h3>Fehlerkosten</h3>
-                <p>Sporadisch wiederkehrende Fehler, die viel Geld kosten und trotzdem nur abgestellt statt verstanden werden — weil im Tagesgeschäft die Zeit für eine echte Ursachenanalyse fehlt.</p>
-                <span class="bezug">Ihre Bezugsgröße: Ausschuss- und Nacharbeitskosten pro Jahr</span>
-            </article>
-            <article class="fcard">
-                <span class="num">FELD 2</span>
-                <h3>Chemie und Entsorgung</h3>
-                <p>Verbrauch und Entsorgung in der Prozessführung. Wo wird nachdosiert, ohne dass jemand weiß, ob es nötig war — und was kostet das über ein Jahr gerechnet?</p>
-                <span class="bezug">Ihre Bezugsgröße: Chemie- und Entsorgungskosten pro Jahr</span>
-            </article>
-            <article class="fcard">
-                <span class="num">FELD 3</span>
-                <h3>Automatisierungsgrad</h3>
-                <p>Manuelle Wartungsplanung, manuelle Nachdosierung, Listen auf Papier. Vieles davon ist seit Jahren automatisierbar und bindet trotzdem jede Woche Stunden Ihrer Fachkräfte.</p>
-                <span class="bezug">Ihre Bezugsgröße: gebundene Stunden und Personalressourcen</span>
-            </article>
-            <article class="fcard">
-                <span class="num">FELD 4</span>
-                <h3>KI-Kompetenz im Haus</h3>
-                <p>Welche Daten dürfen in eine Cloud, und welche müssen im Haus bleiben — Rezepturen und Messwerte zum Beispiel? Für die gibt es lokal betriebene Sprachmodelle. Ohne ein kleines Kernteam bleibt es sonst bei Einzelversuchen — der Einstieg dafür ist der <a href="#ki-setup-check" data-funnel="link-kisetup-feld4" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">KI-Setup-Check</a>.</p>
-                <span class="bezug">Ihre Bezugsgröße: Zeitaufwand für Suche und Doppelarbeit heute</span>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- ===== ANWENDUNGEN — was aus den Feldern konkret gebaut wird ===== -->
-<section class="anwendungen" id="anwendungen">
-    <div class="container">
-        <p class="section-label">Was daraus gebaut wird</p>
-        <h2>Sieben Anwendungen, die in Galvaniken immer wieder gebraucht werden</h2>
-        <p class="anw-intro">Jede davon läuft auf Daten, die Ihre Anlagen heute schon schreiben —
-           Steuerungsprotokolle, Sensorwerte, Schichtdickenmessungen, Sicherungsdateien. Welche für
-           Sie zuerst lohnt, entscheidet der Befund.</p>
-
-        <div class="anw-grid">
-            <article class="anw">
-                <h3>Der Fehler, den man dem Teil nicht ansieht</h3>
-                <p>Manche Muster erzeugen einen Mangel, der erst beim Kunden auffällt — und dann eine
-                   Rückholaktion auslöst. Über die normalen Fehlermeldungen der Anlage sind sie nicht
-                   erkennbar. Die Auswertung meldet sie am selben Tag, die Charge lässt sich
-                   zurückverfolgen und vor dem Versand prüfen.</p>
-            </article>
-            <article class="anw">
-                <h3>Der Chargennachweis in Minuten</h3>
-                <p>Schichtdicken, Ströme, Badwerte — Ihre Anlagen erfassen das ohnehin, nur nicht auf
-                   Knopfdruck abrufbar. Kommt die Anfrage eines Automobilkunden, entsteht der
-                   Nachweis für eine Charge in Minuten statt nach stundenlanger Suche.</p>
-            </article>
-            <article class="anw">
-                <h3>Frühwarnung, die den Richtigen erreicht</h3>
-                <p>Auslaufende Bäder und Störungen passieren nachts und am Wochenende. Eine
-                   Anwendung auf Ihrem Server holt die Daten alle paar Minuten ab und meldet
-                   Auffälligkeiten per Mail oder SMS an die Bereitschaft — mit Klartext dazu, was
-                   zusammenkam und worum zu prüfen ist.</p>
-            </article>
-            <article class="anw">
-                <h3>Weniger Meldungen, dafür die richtigen</h3>
-                <p>In vielen Steuerungen liegen zehntausende Warnungen. Wer jede Minute fünf davon
-                   bekommt, klickt sie weg — auch die zwei pro Tag, die zählen. Die Meldungen werden
-                   ausgewertet und mit Ihnen sortiert: die wichtigen nach vorn, der Rest
-                   nachvollziehbar in den Hintergrund.</p>
-            </article>
-            <article class="anw">
-                <h3>Wartung nach Bedarf statt nach Kalender</h3>
-                <p>Wie beim Auto: feste Intervalle dort, wo sie passen — und dort, wo die Produktion
-                   schwankt, ausgelöst durch gefahrene Chargen, Quadratmeter oder Durchflussmenge.
-                   Diese Werte liegen meist schon vor. Betriebe sparen damit spürbar Wartungsaufwand,
-                   weil gewartet wird, was Wartung braucht.</p>
-            </article>
-            <!-- Siebte Anwendung, 03.09.2026: die haeufigste Rueckfrage aus den
-                 Kundengespraechen des Kanalpartners. Eine driftende Sonde meldet sich
-                 nicht als defekt -- ohne diese Antwort steht die ganze Auswertung auf
-                 Werten, denen niemand widerspricht. -->
-            <article class="anw">
-                <h3>Die Sonde, die falsch misst</h3>
-                <p>Verkrustet, dekalibriert, beschädigt — die Sonde meldet sich nicht als defekt,
-                   sie liefert weiter Werte. Die Auswertung benennt, welche Messstellen heute
-                   zuerst zu prüfen sind, ohne einen einzigen zusätzlichen Sensor.
-                   <a href="#fragen" style="color:var(--schild-blau);font-weight:600;">Woran das
-                   erkannt wird</a>.</p>
-            </article>
-            <article class="anw">
-                <h3>Der Nachweis, dass Ihre Maßnahmen greifen</h3>
-                <p>Ein Betrieb beschließt, die Kontakte regelmäßig zu schleifen. Ob es geschieht und
-                   ob es wirkt, steht in denselben Protokollen — bisher sieht es niemand. Daraus
-                   entstehen monatliche Kennzahlen zu jedem Verbesserungsprojekt, für die
-                   Geschäftsführung auf einen Blick.</p>
-            </article>
-        </div>
-
-        <p class="anw-fuss">Für Wartungspläne, Prüflisten und Sicherheitsroutinen braucht es oft
-           <b>gar keine neue Software</b> — die Microsoft-Werkzeuge in Ihrem Haus tragen das,
-           inklusive Eintrag per Handy. Was fehlt, ist selten das Programm, sondern der Aufbau
-           dahinter.</p>
-    </div>
-</section>
-
-<!-- ===== DAS UEBRIGE PORTFOLIO ===== -->
-<!-- ===== PORTFOLIO — bewusst knapp: WAS gebaut wird, steht oben bei den Anwendungen.
-     Hier steht nur, in welcher Form es beauftragt wird. ===== -->
-<section class="bausteine" id="bausteine">
-    <div class="container">
-        <p class="section-label">Das übrige Portfolio</p>
-        <h2>Was Sie außerdem beauftragen können</h2>
-        <p class="baust-intro">Alles davon wird einzeln beauftragt, als Angebot auf Anfrage. Die
-           meisten dieser Themen kommen ohnehin erst aus der Standortanalyse heraus.</p>
-        <ul class="baust-liste">
-            <li><b>Ausschreibungen vorbereiten</b> — wenn Sensorik, Automatisierung oder ein
-                IT-Dienstleister gebraucht wird: Anforderungen formuliert, Angebote vergleichbar.
-                Beauftragt und verhandelt wird von Ihnen.</li>
-            <li><b>Datenlandkarte</b> — welche Systeme zeichnen bei Ihnen was auf, was wird doppelt
-                geführt, wo sitzt eine Lücke.</li>
-            <li><b>Wissen verfügbar machen</b> — Arbeitsanweisungen, Ansatzvorschriften und
-                Fachliteratur werden abfragbar: Wer eine Störung eingrenzen will, fragt in eigenen
-                Worten und bekommt die Stelle aus Ihren eigenen Unterlagen. Läuft auf Ihrem Server
-                oder in einem europäischen Datenraum — nicht auf einem Privatzugang. Hilft dort, wo
-                Erfahrung mit einzelnen Personen aus dem Haus geht.</li>
-            <li><b>Sollkurve statt Stichprobe</b> — für Standorte mit dichter Datenlage: Aus
-                Warendurchsatz, Amperestunden und Standzeit wird der erwartete Konzentrationsverlauf
-                eines Bades gerechnet und gegen die Analytik gestellt. Weicht er ab, wird gemeldet,
-                bevor die Charge auffällt.</li>
+        <ul class="baust-liste" style="margin-top:22px;">
+            <li><b>Fehlerkosten</b> — wiederkehrende Fehler, die im Tagesgeschäft nur abgestellt statt verstanden werden.</li>
+            <li><b>Chemie und Entsorgung</b> — nachdosiert, ohne dass jemand weiß, ob es nötig war.</li>
+            <li><b>Automatisierungsgrad</b> — Wartungsplanung und Listen auf Papier, die jede Woche Stunden binden.</li>
+            <li><b>KI-Kompetenz im Haus</b> — ein Kernteam arbeitet mit KI, Rezepturen und Messwerte bleiben im Haus; Einstieg ist der <a href="#ki-setup-check" data-funnel="link-kisetup-feld4">KI-Setup-Check</a>.</li>
         </ul>
+
+        <span id="anwendungen" aria-hidden="true"></span>
+        <h3 style="font-size:1.08rem;color:var(--dunkelblau);margin:34px 0 14px;">Was daraus typischerweise entsteht</h3>
+        <ul class="baust-liste">
+            <li><b>Der Fehler, den man dem Teil nicht ansieht</b> — gemeldet, bevor die Charge versandt wird.</li>
+            <li><b>Der Chargennachweis in Minuten</b> — statt stundenlanger Suche.</li>
+            <li><b>Frühwarnung an die Bereitschaft</b> — per Mail oder SMS, mit Klartext, was zu prüfen ist.</li>
+            <li><b>Weniger Meldungen, dafür die richtigen</b> — die wichtigen nach vorn, der Rest nachvollziehbar dahinter.</li>
+            <li><b>Wartung nach Bedarf</b> — nach Chargen oder Durchfluss statt nur nach Kalender.</li>
+            <li><b>Die Sonde, die falsch misst</b> — erkannt ohne einen zusätzlichen Sensor.</li>
+            <li><b>Der Nachweis, dass Ihre Maßnahmen greifen</b> — monatliche Kennzahlen je Verbesserungsprojekt.</li>
+        </ul>
+        <span id="bausteine" aria-hidden="true"></span>
+        <p class="baust-intro" style="margin-top:18px;"><b style="color:var(--dunkelblau);">Außerdem auf Anfrage:</b> Ausschreibungen für Sensorik oder Automatisierung vorbereiten, eine Datenlandkarte Ihrer Systeme, Arbeitsanweisungen und Fachliteratur abfragbar machen, Sollkurven für Bäder statt Stichproben.</p>
     </div>
 </section>
+
 <section class="abgrenzung">
     <div class="container">
         <div class="abgrenzung-box">
             <h2 style="font-size:1.25rem;color:var(--dunkelblau);margin-bottom:12px;">Wo die Grenzen liegen</h2>
-            <p style="color:var(--text-body);line-height:1.75;">Ihr Ansprechpartner ist Galvanikmeister und Materialphysiker — Sie müssen niemandem Ihren Prozess erklären, aber Sie bekommen auch keinen allgemeinen Digitalisierungsberater. Fremde Gewerke werden benannt und weiterverwiesen, nicht koordiniert. Hardware wird Ihnen keine verkauft, und an keiner Anschaffung wird mitverdient.</p>
-            <!-- Drei Grenzen ergaenzt 03.09.2026: Reihenfolge, Umfang und Art der
-                 Massnahme. Alle drei schuetzen vor Projekten, die scheitern muessen --
-                 und trennen die Leistung von der klassischen Digitalisierungsberatung. -->
-            <p style="color:var(--text-body);line-height:1.75;margin-top:16px;">Drei Dinge, die
-                bewusst <b>nicht</b> zum Angebot gehören. <b>Eine Auswertung ist nicht der erste
-                Schritt:</b> Wo eine Dosierung noch von Hand nachgeschärft wird, gehört zuerst der
-                Regelkreis geschlossen — das nimmt den Großteil der Schwankung heraus, und erst
-                darüber lohnt eine Überwachung. <b>Es wird keine Datenplattform gebaut.</b> Ein
-                Datenlager kostet im Aufbau schnell sechsstellig und danach jedes Jahr weiter; was
-                die kleine Lösung für die zwei, drei teuersten Bäder kostet, steht daneben — und
-                meistens gewinnt sie. Und <b>Abstellmaßnahmen sind technisch, nicht organisatorisch:</b>
-                ein anderer Parameter im Rezept, mehr Durchfluss in der Spüle, langlebigere
-                Sensorik — statt einer weiteren Kontrolle, die jemand zusätzlich erledigen muss.</p>
+            <p style="color:var(--text-body);line-height:1.75;">Ihr Ansprechpartner ist Galvanikmeister und Materialphysiker — kein allgemeiner Digitalisierungsberater. Hardware wird Ihnen keine verkauft, an keiner Anschaffung wird mitverdient. Bewusst nicht im Angebot: <b>eine Datenplattform</b>, wo eine kleine Lösung für die teuersten Bäder reicht; <b>eine Auswertung vor dem Regelkreis</b>, solange die Dosierung von Hand nachgeschärft wird; und <b>zusätzliche Kontrollen</b> statt technischer Abstellmaßnahmen.</p>
         </div>
     </div>
 </section>
 
-<!-- ===== FRAGEN — die acht, die in Kundengesprächen zuerst kommen.
-     Stand 03.09.2026: fuenf aus den eigenen Gespraechen, drei aus denen des
-     Kanalpartners. Ueberschrift und Zahl hier immer gemeinsam nachziehen. ===== -->
+<!-- ===== FRAGEN — die wichtigsten aus den Kundengesprächen. Seit 21.10.2026 sechs
+     statt acht, je eine Antwort in einem Absatz. Sichtbarer Text und JSON-LD im Kopf
+     sind wortgleich; beim Aendern beide nachziehen. ===== -->
 <section class="fragen" id="fragen">
     <div class="container">
         <p class="section-label">Was zuerst gefragt wird</p>
-        <h2>Acht Fragen, acht Antworten</h2>
+        <h2>Die häufigsten Fragen</h2>
         <div class="fragen-liste">
-
             <details class="frage">
                 <summary>Wie viel Zeit kostet uns das? Wir haben keine freien Leute.</summary>
                 <div class="antwort">
-                    <p>Beim letzten Projekt lag der Aufwand des Kundenteams über drei Monate
-                       <b>unter zwanzig Stunden insgesamt</b>: alle ein bis eineinhalb Monate
-                       zwanzig Minuten aus der Morgenbesprechung — Verfahrenstechnik,
-                       Instandhaltung, Qualität, Produktion, Geschäftsführung an einem Tisch.</p>
-                    <p>Dazu eine Person bei Ihnen als Ansprechpartner, ein bis zwei Stunden die
-                       Woche, im Wesentlichen um zu prüfen, ob die Auswertungen fachlich stimmen.
-                       Entwickelt wird von jemandem, der die Daten selbst lesen kann — dadurch
-                       bleibt Ihr Aufwand klein.</p>
+                    <p>Beim letzten Projekt lag der Aufwand des Kundenteams über drei Monate unter zwanzig Stunden insgesamt: alle ein bis eineinhalb Monate zwanzig Minuten aus der Morgenbesprechung, dazu eine Person als Ansprechpartner mit ein bis zwei Stunden pro Woche, die prüft, ob die Auswertungen fachlich stimmen.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>Müssen wir vorher unsere Daten in Ordnung bringen?</summary>
                 <div class="antwort">
-                    <p>Nein. Gearbeitet wird auf dem Stand, den Sie heute haben — und der ist fast
-                       überall gemischt: Protokolle der Anlagensteuerung, Sensorwerte, Messwerte aus
-                       dem Röntgen, Aufträge im ERP. Vieles davon liegt bereits in
-                       Sicherungsdateien, ohne dass jemand es nutzt.</p>
-                    <p>Wo später wirklich etwas fehlt, wird es benannt: meist ein bis zwei
-                       zusätzliche Exporte aus der Steuerung.</p>
+                    <p>Nein. Gearbeitet wird auf dem Stand, den Sie heute haben — Protokolle der Anlagensteuerung, Sensorwerte, Messwerte, Aufträge im ERP, vieles davon in Sicherungsdateien. Fehlt später etwas, sind es meist ein bis zwei zusätzliche Exporte aus der Steuerung.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>Greift das in unsere Anlagensteuerung ein?</summary>
                 <div class="antwort">
-                    <p>Nein. Ausgewertet wird, was die Steuerung ohnehin ausgibt — sie wird nicht
-                       verändert und nicht ferngesteuert. Braucht es zusätzliche Exporte, macht das
-                       der Programmierer Ihrer Anlage; der Aufwand dafür ist überschaubar.</p>
-                    <p>Neue Sensoren oder Etiketten am Teil sind nicht nötig. Die Zuordnung läuft
-                       über das, was Ihre Anlage bereits mitschreibt.</p>
-                </div>
-            </details>
-
-            <details class="frage">
-                <summary>Wo läuft die Software, und wer bedient sie?</summary>
-                <div class="antwort">
-                    <p>Bei Ihnen — auf einem Server oder einer virtuellen Maschine im Haus. Die
-                       Anwendung holt die Daten selbst ab, wertet aus und meldet sich, wenn etwas
-                       auffällt. Im Normalbetrieb bedient sie niemand.</p>
-                    <p>Wer eine Auswertung öffnet, braucht keinen Ingenieur dafür: Sie ist auf die
-                       Leute zugeschnitten, die an der Anlage stehen. Eine Einschulung von einer
-                       Stunde genügt.</p>
+                    <p>Nein. Ausgewertet wird, was die Steuerung ohnehin ausgibt; sie wird weder verändert noch ferngesteuert, neue Sensoren sind nicht nötig. Läuft eine Auswertung dauerhaft, steht sie auf einem Server in Ihrem Haus, ohne Cloud; eine Stunde Einschulung genügt.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>Was passiert mit unseren Daten?</summary>
                 <div class="antwort">
-                    <p>Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben —
-                       verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet
-                       wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim
-                       KI-Setup-Check gibt es keine Übergabe an uns: Wir arbeiten in Ihrer Umgebung.</p>
-                    <p>Eine Anwendung, die danach im Betrieb weiterläuft, steht bei Ihnen im Haus,
-                       ohne Cloud. Rezepturen und Prozessparameter werden nicht gebraucht, um
-                       Auffälligkeiten zu finden. Was ein Werkzeug sehen darf, wird vorher
-                       schriftlich festgelegt —
-                       <a href="sicherheit.html" data-funnel="link-sicherheit-leistungen">welche
-                       Rahmenwerke dahinterstehen</a>.</p>
+                    <p>Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Setup-Check gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Rezepturen werden nicht gebraucht, und was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt.</p>
+                    <p><a href="sicherheit.html" data-funnel="link-sicherheit-leistungen">Welche Rahmenwerke dahinterstehen</a></p>
                 </div>
             </details>
 
-            <!-- Drei Fragen ergaenzt 03.09.2026 aus den Kundengespraechen des Kanalpartners.
-                 Sie kommen dort frueher als die fuenf oben und blieben bisher unbeantwortet. -->
             <details class="frage">
                 <summary>Was ist, wenn eine Sonde falsch misst?</summary>
                 <div class="antwort">
-                    <p>Eine verkrustete oder dekalibrierte Sonde meldet sich nicht als defekt. Sie
-                       liefert weiter Werte — nur die falschen, und die Steuerung übernimmt sie
-                       widerspruchslos. Auffällig wird das oft erst über die Qualität, also spät.</p>
-                    <p>Erkennbar ist es früher: Es gibt Größen aus <b>verschiedenen Quellen</b>, die
-                       sich normalerweise gleichsinnig bewegen — Warendurchsatz und der Leitwert
-                       hinter der Spüle etwa. Laufen sie auseinander, schlägt die Auswertung an und
-                       benennt die auffälligsten Messstellen des Tages. Damit wissen Ihre Leute, wo
-                       eine Kontrollmessung oder eine Kalibrierung ansteht — <b>ohne einen einzigen
-                       zusätzlichen Sensor</b>.</p>
+                    <p>Eine verkrustete oder dekalibrierte Sonde meldet sich nicht als defekt — sie liefert weiter Werte, nur die falschen. Erkannt wird das über Messgrößen aus verschiedenen Quellen, die sich sonst gleichsinnig bewegen: Laufen sie auseinander, benennt die Auswertung die auffälligsten Messstellen des Tages zur Kontrolle — ohne zusätzlichen Sensor.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>Ersetzt das unsere Fachkräfte?</summary>
                 <div class="antwort">
-                    <p>Nein — und eine Überwachung, die das verspricht, würde in der Galvanik nicht
-                       halten. Krusten, mechanische Schäden und der tatsächliche Zustand einer
-                       Anlage zeigen sich beim Hingehen, nicht in einer Zahlenreihe.</p>
-                    <p>Was die Auswertung abnimmt, ist das <b>Suchen</b>: Sie sagt, welche Stelle
-                       und welches Zeitfenster zuerst dran sind. Die Beurteilung bleibt bei Ihrer
-                       Verfahrenstechnik und Instandhaltung — und die gewinnt genau die Zeit zurück,
-                       die heute in die Fehlersuche geht.</p>
+                    <p>Nein. Krusten, mechanische Schäden und der Zustand einer Anlage zeigen sich beim Hingehen, nicht in einer Zahlenreihe. Die Auswertung nimmt das Suchen ab und sagt, wo zuerst hinzusehen ist — die Beurteilung bleibt bei Ihrer Verfahrenstechnik und Instandhaltung.</p>
                 </div>
             </details>
-
-            <details class="frage">
-                <summary>Wie sehen wir, ob eine Prüfung wirklich an der Anlage stattgefunden hat?</summary>
-                <div class="antwort">
-                    <p>Über zwei getrennte Spuren, die gegeneinander gerechnet werden: die Werte der
-                       Anlage auf der einen Seite, die manuelle Kontrollmessung auf der anderen —
-                       digital erfasst, per Handy direkt an der Anlage, statt auf einer Liste.</p>
-                    <p>Überschreitet die Abweichung eine mit Ihnen vereinbarte Schwelle, entsteht
-                       eine Meldung. Das belegt zweierlei auf einmal: <b>dass gemessen wurde</b> —
-                       und dass die Sensorik zum selben Ergebnis kommt. Für Audits ist damit
-                       dokumentiert, was sonst nur abgehakt ist.</p>
-                </div>
-            </details>
-
         </div>
     </div>
 </section>
@@ -982,7 +752,7 @@
 <section class="cta-bottom">
     <div class="container">
         <h2>Ob sich das für Sie lohnt, klärt sich in einer halben Stunde</h2>
-        <p>Im Erstgespräch schildern Sie Ihre Situation und bekommen eine ehrliche Einschätzung — auch dann, wenn sie lautet, dass es sich für Ihren Betrieb noch nicht rechnet. Für österreichische Betriebe können Förderungen die Kosten der späteren Schritte deutlich senken.</p>
+        <p>Im Erstgespräch bekommen Sie eine ehrliche Einschätzung — auch wenn sie lautet, dass es sich für Ihren Betrieb noch nicht rechnet. Für österreichische Betriebe können Förderungen die späteren Schritte deutlich günstiger machen.</p>
         <div class="cta-buttons">
             <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-leistungen">
                 Kostenloses Erstgespräch buchen
@@ -998,8 +768,7 @@
             <a href="docs/leistungen-ueberblick.pdf" target="_blank" rel="noopener"
                data-funnel="pdf-leistungen-ueberblick"
                style="color:var(--schild-blau);font-weight:600;border-bottom:1px solid rgba(43,94,167,0.35);">alle
-               vier Angebote auf einer Seite (PDF)</a> — mit Aufwand und Preis, damit Ihre
-            Geschäftsführung nicht nachfragen muss.
+               vier Angebote auf einer Seite (PDF)</a>, mit Aufwand und Preis.
         </p>
     </div>
 </section>

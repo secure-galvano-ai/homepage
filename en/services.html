@@ -33,10 +33,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How much of our time does this take?",
+      "name": "How much of our time does this take? We have no one to spare.",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On the most recent project, the customer team spent less than twenty hours in total over three months: twenty minutes of the morning meeting every month to month and a half, plus one person as the point of contact for one to two hours a week."
+        "text": "On the most recent project, the customer team spent less than twenty hours in total over three months: twenty minutes of the morning meeting every month to month and a half, plus one person as the point of contact for one to two hours a week, checking whether the analyses are technically correct."
       }
     },
     {
@@ -44,7 +44,7 @@
       "name": "Do we have to get our data in order first?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The work is done on the data you have today: logs from the line controller, sensor values, measurements, orders in the ERP system. Much of it is already sitting in backup files. Where something is missing later on, it is usually one or two additional exports from the controller."
+        "text": "No. The work is done on the data you have today — logs from the line controller, sensor values, measurements, orders in the ERP system, much of it in backup files. Where something is missing later on, it is usually one or two additional exports from the controller."
       }
     },
     {
@@ -52,15 +52,7 @@
       "name": "Does this interfere with our line controls?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The analysis uses what the controller already puts out; the controller is not changed and not operated remotely. No new sensors and no labels on the parts are needed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where does the software run, and who operates it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "On a server or a virtual machine in your building. The application collects the data on its own and reports when something looks unusual. Opening an analysis does not take an engineer; one hour of training is enough."
+        "text": "No. The analysis uses what the controller already puts out; the controller is neither changed nor operated remotely, and no new sensors are needed. If an analysis keeps running, it sits on a server in your building, with no cloud; one hour of training is enough."
       }
     },
     {
@@ -68,7 +60,7 @@
       "name": "What happens to our data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For the analyses you provide only the extract you release, handed over encrypted once a mutual NDA is signed. The analysis runs on our own computers, and no AI service sees your readings. For the AI Setup Check nothing is handed over to us; we work in your environment. An application that keeps running in operation afterward sits in your building, with no cloud."
+        "text": "For the analyses you provide only the extract you release — handed over encrypted, once a mutual NDA is signed. The analysis runs on our own computers, and no AI service sees your readings. For the AI Setup Check nothing is handed over to us; we work in your environment. Formulations are not needed, and what a tool is allowed to see is agreed in writing beforehand."
       }
     },
     {
@@ -76,7 +68,7 @@
       "name": "What if a probe is reading wrong?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A crusted or out-of-calibration probe does not report itself as faulty. It keeps delivering values, just the wrong ones. It is detected through measurements from different sources that normally move in the same direction: if they drift apart, the analysis flags it and names the most unusual measuring points of the day as a hint for checking and calibration. No additional sensor is needed for this."
+        "text": "A crusted or out-of-calibration probe does not report itself as faulty — it keeps delivering values, just the wrong ones. It is detected through measurements from different sources that normally move together: if they drift apart, the analysis names the most unusual measuring points of the day for a check — without an additional sensor."
       }
     },
     {
@@ -84,15 +76,7 @@
       "name": "Does this replace our skilled staff?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Monitoring without expert oversight does not work: crusting, mechanical damage and the condition of a line show up when someone goes and looks. The analysis tells you where to look first and takes the searching off your hands. The judgment stays with your process engineering and maintenance teams."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can we tell whether a check actually took place at the line?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "By recording two tracks separately and comparing them: the line's values on one side, the manual check measurement on the other, recorded digitally instead of on paper. If the difference exceeds an agreed threshold, an alert is raised. That proves the measurement was taken, and that the sensors arrive at the same result."
+        "text": "No. Crusting, mechanical damage and the condition of a line show up when someone goes and looks, not in a series of numbers. The analysis takes the searching off your hands and tells you where to look first — the judgment stays with your process engineering and maintenance teams."
       }
     }
   ]
@@ -468,7 +452,7 @@
             <p class="section-label">Services</p>
             <h1>Four entry offers, each at a fixed price</h1>
             <p class="goldzeile">First find out where the gold is. Then dig.</p>
-            <p>Most plating shops have long been recording enough data to catch defects earlier — it just never gets analyzed. You start with the Site Assessment — or with the Initial Data Check if your data has already been collected; after that, the focus is on the causes of individual defect patterns. If your specialists are to analyze the data themselves, you start with the AI Setup Check.</p>
+            <p>Your lines record enough data to catch defects earlier — it just never gets analyzed. Each offer is a self-contained step with a clear result; afterward you decide freely whether to go on.</p>
 
             <!-- Offer ladder (21.10.2026): the same four offers in the same order as the
                  cards on the home page (index.html#ablauf). Guided Defect Resolution and
@@ -485,42 +469,33 @@
     </div>
 </section>
 
-<!-- ===== FOCUS: Site Assessment ===== -->
+<!-- ===== FOCUS: Site Assessment =====
+     Condensed to about half on 21.10.2026, same as the German page: one line per step,
+     the "at a glance" box does not repeat the steps. -->
 <section class="schwerpunkt" id="standortanalyse">
     <div class="container">
         <p class="section-label">Starting point · Tap into your data</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">The Site Assessment</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:38px;">Four to six short online calls with your department leads and the connection of your data sources. At the end you know whether your data supports analysis, which defect patterns cost you money — and where automation and AI pay off in your processes, for example when orders and quotation documents are read in automatically. <strong>€1,500 net per site</strong>, regardless of the number of lines. The overview is yours to keep, even if you go no further.</p>
+        <p class="lead" style="max-width:780px;margin-bottom:38px;">Afterward you know whether your data supports analysis, which defect patterns cost you money and where automation and AI pay off in your processes — for example when orders and quotation documents are read in automatically. <strong>€1,500 net per site</strong>, regardless of the number of lines.</p>
 
         <div class="schwerpunkt-grid">
             <div>
                 <ol class="schritt-liste">
-                    <li><span class="wo">ONLINE · FREE</span><strong>Intro call</strong>What it is about, what you expect, which lines could be considered. All you tell us is who represents your departments — we then schedule the calls together, based on their availability.</li>
-                    <li><span class="wo">BEFORE ANY DATA IS EXCHANGED</span><strong>NDA</strong>Mutual, three years of confidentiality — binding before a single file leaves your building. For the starting package it is included in the quote, and on request also available as a separate agreement. <a href="../docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-leistungen-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Read it in advance (PDF, German)</a></li>
-                    <li><span class="wo">ONLINE · ABOUT 45 MINUTES EACH</span><strong>Four to six preparatory calls</strong>With process engineering, maintenance, quality and production; if needed, also plant management and IT. <strong class="hebt">One-on-one calls, not a group meeting</strong> — each one is scheduled around the person involved and can be spread over two weeks. Your people describe what keeps causing trouble; that information is not in any database.</li>
-                    <li><span class="wo">ONLINE · WITH YOUR IT TEAM</span><strong>Connecting your data sources</strong>Together with your IT team we connect the database or data sources — controls, lab, quality data. This shows what is actually being recorded and whether it supports analysis.</li>
-                    <li><span class="wo">OPTIONAL · ON SITE</span><strong>A day on site with a walk-through</strong>If you would like, we come to your plant: lines, controls, sensors and dosing on the walk-through, and the defect patterns sorted out with your managers. Without this day, the result is the same.</li>
-                    <li><span class="wo">ONLINE · ONE HOUR</span><strong>Wrap-up session</strong>We go through the results together and set the priorities before anything is written up — so the report contains nothing you see differently.</li>
-                    <li><span class="wo">AFTERWARD</span><strong>Written findings</strong>A data traffic light for each line, the list of defect patterns with their potential, the automation and AI potential ranked by benefit, and a clear recommendation on where to start — or whether it does not pay off yet.</li>
+                    <li><span class="wo">BEFORE ANY DATA IS EXCHANGED</span><strong>NDA</strong>Mutual, three years of confidentiality, before a single file leaves your building. <a href="../docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-leistungen-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Read it in advance (PDF, German)</a></li>
+                    <li><span class="wo">ONLINE · ABOUT 45 MINUTES EACH</span><strong>Four to six one-on-one calls</strong>With process engineering, maintenance, quality and production, spread over up to two weeks. What keeps causing trouble is not in any database.</li>
+                    <li><span class="wo">ONLINE · WITH YOUR IT TEAM</span><strong>Connecting your data sources</strong>Controls, lab, quality data — this shows what is actually being recorded.</li>
+                    <li><span class="wo">OPTIONAL · ON SITE</span><strong>A day on site with a walk-through</strong>Lines and defect patterns with your managers; travel within 250 km (about 155 miles) of Bregenz, Austria included, beyond that €1 per kilometer. Without this day, the result is the same.</li>
+                    <li><span class="wo">ONLINE · ONE HOUR</span><strong>Wrap-up session and findings</strong>A data traffic light for each line, defect patterns with their potential, automation and AI potential ranked by benefit — and a clear recommendation on where to start, or whether it does not pay off yet.</li>
                 </ol>
-
-                <div class="umfang-hinweis">
-                    <strong style="color:var(--dunkelblau);">Five lines or twenty — the price stays the same.</strong><br>
-                    <strong>All</strong> of your lines go into the overview. We go into depth on one or two focus lines, chosen by the best data situation and by what is actually hurting you right now.
-                </div>
             </div>
 
             <aside class="eckdaten">
                 <h3>At a glance</h3>
                 <dl>
-                    <dt>Your effort</dt><dd><strong>One hour online per person, plus one session with your IT team.</strong> A list of lines and an overview of your systems — no other preparation</dd>
-                    <dt>Scheduling</dt><dd><strong>Only the wrap-up session needs several people at once.</strong> Everything before that is online and one-on-one; each meeting is scheduled together around your people's availability</dd>
-                    <dt>Who takes part</dt><dd>Focus on production, quality assurance, maintenance and process engineering</dd>
-                    <dt>Your line as it is</dt><dd><strong>We analyze what is already being recorded today</strong> — from controls, sensors, the lab or the bath log, including older lines and data from different sources. No new sensors, no cameras</dd>
-                    <dt>No interference</dt><dd>Your controls stay as they are: no wiring, no modifications — and no AI service sees your readings</dd>
-                    <dt>Day on site</dt><dd>Optional, your choice. Travel within 250 km (about 155 miles) of Bregenz, Austria is included, beyond that €1 per additional kilometer</dd>
-                    <dt>Result</dt><dd>Data traffic light for each line, defect patterns with their potential, automation and AI potential, written findings</dd>
-                    <dt>Afterward</dt><dd>You decide freely. Nothing follows automatically</dd>
+                    <dt>Your effort</dt><dd>One hour online per person, plus one session with your IT team. Only the wrap-up needs several people at once</dd>
+                    <dt>Scope</dt><dd>All lines in the overview, one or two focus lines in depth — five lines or twenty, the price stays the same</dd>
+                    <dt>Your line as it is</dt><dd>We analyze what is already being recorded today. No new sensors, no changes to your controls</dd>
+                    <dt>Afterward</dt><dd>The findings are yours to keep. You decide freely, nothing follows automatically</dd>
                 </dl>
             </aside>
         </div>
@@ -532,26 +507,26 @@
     <div class="container">
         <p class="section-label">Starting point · Data already collected</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">The Initial Data Check</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:30px;">Your data has already been collected, for example as an export from the controls or a database? Then we check whether it supports analysis and where the gaps are. <strong>€1,500 net per existing data set.</strong></p>
+        <p class="lead" style="max-width:780px;margin-bottom:30px;">Your data has already been collected, for example as an export from the controls or a database? Then within about two weeks you know whether it supports analysis and where the gaps are — before you invest in a search for causes. <strong>€1,500 net per existing data set.</strong></p>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Provide the data</h3>
-                <p style="font-size:0.92rem;">You hand us the data you already have — once the NDA is signed, with encrypted handover.</p>
+                <p style="font-size:0.92rem;">Once the NDA is signed, handed over encrypted.</p>
             </div>
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Check</h3>
-                <p style="font-size:0.92rem;">Completeness, timeline and gaps — analyzed on our own computers.</p>
+                <p style="font-size:0.92rem;">Completeness, timeline and gaps, on our own computers.</p>
             </div>
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Findings</h3>
-                <p style="font-size:0.92rem;">A data traffic light for each line, which defect patterns can be analyzed, and a recommendation on where to start or what to retrofit.</p>
+                <p style="font-size:0.92rem;">A data traffic light for each line, the defect patterns that can be analyzed, and a recommendation on where to start or what to retrofit.</p>
             </div>
         </div>
 
         <div class="umfang-hinweis" style="margin-bottom:24px;">
             <strong style="color:var(--dunkelblau);">A check of the data, not a root cause analysis.</strong><br>
-            Why a defect pattern occurs is answered by the next step, the <a href="#analyse-je-fehlerbild" data-funnel="link-fehlerbild-erstanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Defect Analysis</a>. If your data is still scattered, the <a href="#standortanalyse" data-funnel="link-standortanalyse-erstanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Site Assessment</a> is the better starting point.
+            The causes are found in the <a href="#analyse-je-fehlerbild" data-funnel="link-fehlerbild-erstanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Defect Analysis</a>. If your data is still scattered, the <a href="#standortanalyse" data-funnel="link-standortanalyse-erstanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Site Assessment</a> is the better fit.
         </div>
     </div>
 </section>
@@ -563,38 +538,30 @@
     <div class="container">
         <p class="section-label">The next step</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Defect Analysis</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:30px;">What causes this defect pattern — and what should be checked first? For one defect pattern from the Site Assessment or the Initial Data Check, we put your process data side by side with what your people know. <strong>€5,000 net per defect pattern</strong>, more defect patterns can be added at any time.</p>
+        <p class="lead" style="max-width:780px;margin-bottom:30px;">Instead of opinions, a proven cause and an order of checks — less scrap, less time spent searching. For one defect pattern from the Site Assessment or the Initial Data Check, we put your process data side by side with what your people know. <strong>€5,000 net per defect pattern</strong>, more can be added at any time.</p>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
             <div>
                 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Choose the defect pattern</h3>
-                <p style="font-size:0.92rem;">From the findings of the Site Assessment or Initial Data Check — based on potential and data situation.</p>
+                <p style="font-size:0.92rem;">From the findings of your starting step, based on potential and data situation. The data is then already available.</p>
             </div>
             <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Data basis</h3>
-                <p style="font-size:0.92rem;">The data is already available from the starting step; if needed, an additional extract is agreed with your IT team.</p>
+                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Interviews and analysis</h3>
+                <p style="font-size:0.92rem;">If needed, 45 minutes each with your departments, then about three weeks of analysis: target versus actual, trends around the times the defect occurred.</p>
             </div>
             <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Interviews</h3>
-                <p style="font-size:0.92rem;">If needed, 45 minutes each with process engineering, maintenance and quality assurance — what the shop floor observes is not in any database.</p>
+                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">3 · Findings</h3>
+                <p style="font-size:0.92rem;">A cause-and-effect diagram (Ishikawa) with the analyses behind it, a reasoned order of checks and a clear statement on whether implementation pays off.</p>
             </div>
             <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">4 · Analysis</h3>
-                <p style="font-size:0.92rem;">About three weeks: target versus actual, the trends around the times the defect occurred, and the analysis tool on your data for the first time.</p>
-            </div>
-            <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">5 · Findings</h3>
-                <p style="font-size:0.92rem;">A cause-and-effect diagram (Ishikawa), the data analyses behind it, a reasoned order of checks and a clear statement on whether implementation pays off.</p>
-            </div>
-            <div>
-                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">6 · Interactive report</h3>
-                <p style="font-size:0.92rem;">The analysis of your data to click through, in the browser, with no installation and no internet connection.</p>
+                <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">4 · Interactive report</h3>
+                <p style="font-size:0.92rem;">Your analysis to click through in the browser, with no installation and no internet connection.</p>
             </div>
         </div>
 
         <div class="umfang-hinweis" style="margin-bottom:24px;">
             <strong style="color:var(--dunkelblau);">Open-ended — and we mean that.</strong><br>
-            If data and interviews cannot narrow down the cause, the findings say which information or measurement is missing. A completed <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Site Assessment</a> or <a href="#erstanalyse" data-funnel="link-zurueck-erstanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Initial Data Check</a> comes first — it makes sure beforehand that your data holds up.
+            If the cause cannot be narrowed down, the findings say which information or measurement is missing. A completed <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Site Assessment</a> or <a href="#erstanalyse" data-funnel="link-zurueck-erstanalyse-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Initial Data Check</a> comes first.
         </div>
     </div>
 </section>
@@ -606,13 +573,13 @@
     <div class="container">
         <p class="section-label">Starting point · Your team analyzes its own data</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">The AI Setup Check</h2>
-        <p class="lead" style="max-width:780px;margin-bottom:26px;">Your specialists build analyses of their process and quality data themselves, without programming. We set up the environment for data analysis — in line with GDPR and the EU AI Act. <strong>€5,000 net</strong>, trial setup for 1 to 3 people.</p>
+        <p class="lead" style="max-width:780px;margin-bottom:26px;">Your specialists answer data questions themselves, in hours instead of projects and without programming. We set up the environment for it — in line with GDPR and the EU AI Act. <strong>€5,000 net</strong>, trial setup for 1 to 3 people.</p>
 
         <ul class="baust-liste" style="margin-bottom:24px;">
             <li><b>Setup</b> of the workspace with approvals and a written data boundary, agreed with your IT team.</li>
-            <li><b>A test plant with the structure of your data:</b> the tools are built on synthetic sample data and then run locally at your site on the real data — no AI sees your readings.</li>
+            <li><b>A test plant with the structure of your data:</b> the tools are built on synthetic sample data and then run locally on your real data — no AI sees your readings.</li>
             <li><b>Two analyses from your daily work</b>, built together — for inspection records or the bath log, for example.</li>
-            <li><b>Rules for day-to-day use</b> and a half-day training in line with the EU AI Act.</li>
+            <li><b>A half-day training</b> in line with the EU AI Act, with rules for day-to-day use.</li>
             <li><b>Four weeks to try it out</b>, with support when questions come up.</li>
         </ul>
 
@@ -630,278 +597,108 @@
     <div class="container">
         <p class="section-label">After the analysis</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Guided Defect Resolution and ongoing support</h2>
-        <p class="lead" style="max-width:780px;">Every analysis is a self-contained service — you do not pay for a follow-up step to get a result. Even "your data cannot support it at this point" is a result: the findings then state what needs to be retrofitted and in what order. That saves you a bad investment that would have cost considerably more.</p>
+        <p class="lead" style="max-width:780px;">Every analysis is self-contained. Even "your data cannot support it at this point" is a result — including the order in which to retrofit; that saves you an expensive bad investment.</p>
 
         <div style="margin-top:26px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--schild-blau);border-radius:0 12px 12px 0;padding:20px 24px;">
-            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Guided Defect Resolution.</strong> A defect pattern becomes a project: we support your team technically until the defect patterns are resolved — tasks and deadlines kept in view, a status report for management every two weeks. At a <strong>fixed price per project, agreed before you commit</strong>, no open-ended timesheet; the price depends on the number of defect patterns and lines. <strong>The goal is annual savings of three to four times the investment</strong>, based on the selected use cases. For context: across energy, water, anode metal, chemicals and disposal, the savings potential per line and year is in the range of <strong>€60,000 to €90,000</strong> — a potential, not a promise.</p>
+            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Guided Defect Resolution.</strong> We support your team technically until the defect patterns are resolved, with a status report for management every two weeks. <strong>Fixed price per project, agreed before you commit</strong>; the goal is annual savings of three to four times the investment. For context: the savings potential per line and year, summed over energy, water, anode metal, chemicals and disposal, is €60,000 to €90,000 — a potential, not a promise.</p>
         </div>
 
         <div id="betreuung" style="margin-top:16px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--logo-gruen);border-radius:0 12px 12px 0;padding:20px 24px;">
-            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Ongoing support per line.</strong> If an analysis is to keep running in operation, we integrate it on your hardware, with no cloud. Support is billed per monitored line; model maintenance is included, so detection does not drift over time. It is a separate offer and not a condition for any of the steps before it.</p>
+            <p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Ongoing support per line.</strong> If an analysis is to keep running in operation, we integrate it on your hardware, with no cloud. Model maintenance is included, so detection does not drift over time. A separate offer and not a condition for any of the steps before it.</p>
         </div>
     </div>
 </section>
 
-<!-- ===== THE FOUR AREAS OF POTENTIAL ===== -->
+<!-- ===== WHAT WE LOOK FOR: areas, applications, rest of the portfolio =====
+     Merged from three sections on 21.10.2026, one line per area and per application.
+     The anchors #anwendungen and #bausteine stay as jump targets in this section. -->
 <section class="felder" id="potenzialfelder">
     <div class="container">
         <p class="section-label">What we look for</p>
         <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Four areas where plating shops have money on the table</h2>
-        <p class="lead" style="max-width:780px;">Each area is assessed with <strong>your</strong> numbers, as an <strong>order of magnitude with a range</strong> — the calculation is spelled out in the report. How each area can be tackled is shown in the sample report: from detecting anomalies in your process data to language models that never leave your building.</p>
+        <p class="lead" style="max-width:780px;">Each area is assessed with <strong>your</strong> numbers, as an order of magnitude with a range; the calculation is spelled out in the report.</p>
 
-        <div class="feld-cards">
-            <article class="fcard">
-                <span class="num">AREA 1</span>
-                <h3>Cost of defects</h3>
-                <p>Sporadic, recurring defects that cost a lot of money and still only get fixed instead of understood — because day-to-day operations leave no time for a real root cause analysis.</p>
-                <span class="bezug">Your reference figure: scrap and rework costs per year</span>
-            </article>
-            <article class="fcard">
-                <span class="num">AREA 2</span>
-                <h3>Chemicals and disposal</h3>
-                <p>Consumption and disposal in process control. Where are chemicals being added without anyone knowing whether it was needed — and what does that cost over a year?</p>
-                <span class="bezug">Your reference figure: chemical and disposal costs per year</span>
-            </article>
-            <article class="fcard">
-                <span class="num">AREA 3</span>
-                <h3>Level of automation</h3>
-                <p>Manual maintenance planning, manual chemical additions, lists on paper. Much of this could have been automated years ago and still ties up hours of your skilled staff every week.</p>
-                <span class="bezug">Your reference figure: hours and staff time tied up</span>
-            </article>
-            <article class="fcard">
-                <span class="num">AREA 4</span>
-                <h3>AI know-how in-house</h3>
-                <p>Which data may go into a cloud, and which has to stay in-house — formulations and measurements, for example? For that data there are language models that run locally. Without a small core team, it otherwise stays at isolated experiments — the starting point for that is the <a href="#ki-setup-check" data-funnel="link-kisetup-feld4-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">AI Setup Check</a>.</p>
-                <span class="bezug">Your reference figure: time spent today on searching and duplicate work</span>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- ===== APPLICATIONS — what gets built from the areas ===== -->
-<section class="anwendungen" id="anwendungen">
-    <div class="container">
-        <p class="section-label">What gets built from it</p>
-        <h2>Seven applications plating shops need again and again</h2>
-        <p class="anw-intro">Each of them runs on data your lines already write today —
-           controller logs, sensor values, coating thickness measurements, backup files. Which one
-           pays off first for you is decided by the findings.</p>
-
-        <div class="anw-grid">
-            <article class="anw">
-                <h3>The defect you cannot see on the part</h3>
-                <p>Some patterns cause a defect that only shows up at your customer — and then triggers
-                   a recall. They cannot be spotted through the line's normal error messages. The
-                   analysis reports them the same day, so the batch can be traced and checked before
-                   it ships.</p>
-            </article>
-            <article class="anw">
-                <h3>Batch documentation in minutes</h3>
-                <p>Coating thicknesses, currents, bath values — your lines record all of this anyway, just
-                   not retrievable at the push of a button. When an automotive customer asks, the
-                   documentation for a batch is ready in minutes instead of after hours of searching.</p>
-            </article>
-            <article class="anw">
-                <h3>Early warnings that reach the right person</h3>
-                <p>Baths drifting out of spec and breakdowns happen at night and on weekends. An
-                   application on your server collects the data every few minutes and reports
-                   anything unusual to the on-call staff by email or text message — with a plain-language
-                   note on what came together and what to check.</p>
-            </article>
-            <article class="anw">
-                <h3>Fewer alarms, but the right ones</h3>
-                <p>Many controllers hold tens of thousands of warnings. Anyone who gets five of them
-                   every minute clicks them away — including the two a day that matter. The alarms are
-                   analyzed and sorted with you: the important ones up front, the rest moved to the
-                   background in a traceable way.</p>
-            </article>
-            <article class="anw">
-                <h3>Maintenance when it is needed, not by the calendar</h3>
-                <p>Like with a car: fixed intervals where they fit — and where production fluctuates,
-                   triggered by batches run, square feet plated or flow volume. These values are
-                   usually already available. Shops noticeably cut maintenance effort this way,
-                   because maintenance goes where it is needed.</p>
-            </article>
-            <article class="anw">
-                <h3>The probe that reads wrong</h3>
-                <p>Crusted, out of calibration, damaged — the probe does not report itself as faulty,
-                   it keeps delivering values. The analysis names which measuring points should be
-                   checked first today, without a single additional sensor.
-                   <a href="#fragen" style="color:var(--schild-blau);font-weight:600;">How this is
-                   detected</a>.</p>
-            </article>
-            <article class="anw">
-                <h3>Proof that your improvements work</h3>
-                <p>A shop decides to sand the contacts regularly. Whether it happens and whether it
-                   works is recorded in the same logs — so far, nobody looks. From them come monthly
-                   metrics for every improvement project, for management at a glance.</p>
-            </article>
-        </div>
-
-        <p class="anw-fuss">Maintenance plans, checklists and safety routines often need
-           <b>no new software at all</b> — the Microsoft tools you already have can handle them,
-           including entries from a phone. What is missing is rarely the program, but the setup
-           behind it.</p>
-    </div>
-</section>
-
-<!-- ===== THE REST OF THE PORTFOLIO ===== -->
-<section class="bausteine" id="bausteine">
-    <div class="container">
-        <p class="section-label">The rest of the portfolio</p>
-        <h2>What else you can order</h2>
-        <p class="baust-intro">Each of these is ordered separately, quoted on request. Most of these
-           topics only come up out of the Site Assessment anyway.</p>
-        <ul class="baust-liste">
-            <li><b>Preparing requests for proposal</b> — when sensors, automation or an IT service
-                provider is needed: requirements written up, quotes made comparable. You place the
-                order and do the negotiating.</li>
-            <li><b>Data map</b> — which of your systems record what, what is kept twice, where there
-                is a gap.</li>
-            <li><b>Making knowledge accessible</b> — work instructions, bath make-up instructions and
-                technical literature become searchable: anyone trying to narrow down a fault asks in
-                their own words and gets the relevant passage from your own documents. Runs on your
-                server or in a European data space — not on a personal account. Helps where experience
-                walks out the door with individual people.</li>
-            <li><b>Target curve instead of spot checks</b> — for sites with dense data: from parts
-                throughput, ampere-hours and bath age, the expected concentration curve of a bath is
-                calculated and compared with the lab analysis. If it deviates, an alert goes out
-                before the batch shows a problem.</li>
+        <ul class="baust-liste" style="margin-top:22px;">
+            <li><b>Cost of defects</b> — recurring defects that, in day-to-day operations, only get fixed instead of understood.</li>
+            <li><b>Chemicals and disposal</b> — chemicals added without anyone knowing whether it was needed.</li>
+            <li><b>Level of automation</b> — maintenance planning and paper lists that tie up hours every week.</li>
+            <li><b>AI know-how in-house</b> — a core team works with AI while formulations and readings stay in-house; the starting point is the <a href="#ki-setup-check" data-funnel="link-kisetup-feld4-en">AI Setup Check</a>.</li>
         </ul>
+
+        <span id="anwendungen" aria-hidden="true"></span>
+        <h3 style="font-size:1.08rem;color:var(--dunkelblau);margin:34px 0 14px;">What typically comes out of it</h3>
+        <ul class="baust-liste">
+            <li><b>The defect you cannot see on the part</b> — reported before the batch ships.</li>
+            <li><b>Batch documentation in minutes</b> — instead of hours of searching.</li>
+            <li><b>Early warnings for the on-call staff</b> — by email or text message, with a plain-language note on what to check.</li>
+            <li><b>Fewer alarms, but the right ones</b> — the important ones up front, the rest traceably in the background.</li>
+            <li><b>Maintenance when it is needed</b> — by batches or flow volume instead of only by the calendar.</li>
+            <li><b>The probe that reads wrong</b> — detected without a single additional sensor.</li>
+            <li><b>Proof that your improvements work</b> — monthly metrics for every improvement project.</li>
+        </ul>
+        <span id="bausteine" aria-hidden="true"></span>
+        <p class="baust-intro" style="margin-top:18px;"><b style="color:var(--dunkelblau);">Also on request:</b> preparing requests for proposal for sensors or automation, a data map of your systems, making work instructions and technical literature searchable, target curves for baths instead of spot checks.</p>
     </div>
 </section>
+
 <section class="abgrenzung">
     <div class="container">
         <div class="abgrenzung-box">
             <h2 style="font-size:1.25rem;color:var(--dunkelblau);margin-bottom:12px;">Where the limits are</h2>
-            <p style="color:var(--text-body);line-height:1.75;">Your contact is a master electroplater (Austrian master craftsman qualification) and materials physicist — you do not have to explain your process to anyone, but you also do not get a general digitalization consultant. Other trades are named and referred on, not coordinated. You will not be sold any hardware, and no commission is earned on any purchase.</p>
-            <p style="color:var(--text-body);line-height:1.75;margin-top:16px;">Three things are
-                deliberately <b>not</b> part of the offer. <b>An analysis is not the first
-                step:</b> where dosing is still being adjusted by hand, the control loop needs to be
-                closed first — that removes most of the variation, and only then does monitoring
-                pay off. <b>No data platform is built.</b> A data warehouse quickly costs six figures
-                to set up and keeps costing every year after that; what the small solution for the
-                two or three most expensive baths costs is set next to it — and it usually wins. And
-                <b>corrective actions are technical, not organizational:</b> a different parameter
-                in the recipe, more flow in the rinse, longer-lasting sensors — instead of one more
-                check that someone has to do on top of everything else.</p>
+            <p style="color:var(--text-body);line-height:1.75;">Your contact is a master electroplater (Austrian master craftsman qualification) and materials physicist — not a general digitalization consultant. You will not be sold any hardware, and no commission is earned on any purchase. Deliberately not part of the offer: <b>a data platform</b>, where a small solution for the most expensive baths is enough; <b>an analysis before the control loop</b>, as long as dosing is still adjusted by hand; and <b>additional checks</b> instead of technical corrective actions.</p>
         </div>
     </div>
 </section>
 
-<!-- ===== QUESTIONS — the eight that come up first in customer conversations ===== -->
+<!-- ===== QUESTIONS — the most important ones from customer conversations. Since
+     21.10.2026 six instead of eight. Visible text and JSON-LD in the head are identical. ===== -->
 <section class="fragen" id="fragen">
     <div class="container">
         <p class="section-label">What people ask first</p>
-        <h2>Eight questions, eight answers</h2>
+        <h2>The most common questions</h2>
         <div class="fragen-liste">
-
             <details class="frage">
                 <summary>How much of our time does this take? We have no one to spare.</summary>
                 <div class="antwort">
-                    <p>On the most recent project, the customer team spent <b>less than twenty hours
-                       in total</b> over three months: twenty minutes of the morning meeting every
-                       month to month and a half — process engineering, maintenance, quality,
-                       production and management at one table.</p>
-                    <p>Plus one person on your side as the point of contact, one to two hours a
-                       week, mainly to check whether the analyses are technically correct. The
-                       development is done by someone who can read the data himself — which keeps
-                       your effort small.</p>
+                    <p>On the most recent project, the customer team spent less than twenty hours in total over three months: twenty minutes of the morning meeting every month to month and a half, plus one person as the point of contact for one to two hours a week, checking whether the analyses are technically correct.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>Do we have to get our data in order first?</summary>
                 <div class="antwort">
-                    <p>No. The work is done on the data you have today — and almost everywhere it is
-                       a mix: logs from the line controller, sensor values, readings from the X-ray
-                       thickness gauge, orders in the ERP system. Much of it is already sitting in
-                       backup files without anyone using it.</p>
-                    <p>Where something is really missing later on, it is named: usually one or two
-                       additional exports from the controller.</p>
+                    <p>No. The work is done on the data you have today — logs from the line controller, sensor values, measurements, orders in the ERP system, much of it in backup files. Where something is missing later on, it is usually one or two additional exports from the controller.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>Does this interfere with our line controls?</summary>
                 <div class="antwort">
-                    <p>No. The analysis uses what the controller already puts out — the controller is
-                       not changed and not operated remotely. If additional exports are needed, your
-                       line's programmer sets them up; the effort for that is manageable.</p>
-                    <p>No new sensors and no labels on the parts are needed. The matching runs on
-                       what your line already records.</p>
-                </div>
-            </details>
-
-            <details class="frage">
-                <summary>Where does the software run, and who operates it?</summary>
-                <div class="antwort">
-                    <p>At your site — on a server or a virtual machine in your building. The
-                       application collects the data on its own, analyzes it and reports when
-                       something looks unusual. In normal operation, nobody operates it.</p>
-                    <p>Opening an analysis does not take an engineer: it is designed for the people
-                       who work at the line. One hour of training is enough.</p>
+                    <p>No. The analysis uses what the controller already puts out; the controller is neither changed nor operated remotely, and no new sensors are needed. If an analysis keeps running, it sits on a server in your building, with no cloud; one hour of training is enough.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>What happens to our data?</summary>
                 <div class="antwort">
-                    <p>For the analyses you provide only the extract you release — handed over
-                       encrypted, once a mutual NDA is signed. The analysis runs on our own
-                       computers, and no AI service sees your readings. For the AI Setup Check
-                       nothing is handed over to us: we work in your environment.</p>
-                    <p>An application that keeps running in operation afterward sits in your
-                       building, with no cloud. Formulations and process parameters are not needed
-                       to find anomalies. What a tool is allowed to see is agreed in writing
-                       beforehand —
-                       <a href="security.html" data-funnel="link-sicherheit-leistungen-en">which
-                       frameworks stand behind this</a>.</p>
+                    <p>For the analyses you provide only the extract you release — handed over encrypted, once a mutual NDA is signed. The analysis runs on our own computers, and no AI service sees your readings. For the AI Setup Check nothing is handed over to us; we work in your environment. Formulations are not needed, and what a tool is allowed to see is agreed in writing beforehand.</p>
+                    <p><a href="security.html" data-funnel="link-sicherheit-leistungen-en">Which frameworks stand behind this</a></p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>What if a probe is reading wrong?</summary>
                 <div class="antwort">
-                    <p>A crusted or out-of-calibration probe does not report itself as faulty. It
-                       keeps delivering values — just the wrong ones, and the controller accepts them
-                       without question. It often only becomes noticeable through quality, which
-                       means late.</p>
-                    <p>It can be spotted earlier: there are measurements from <b>different
-                       sources</b> that normally move in the same direction — parts throughput and
-                       the conductivity after the rinse, for example. If they drift apart, the
-                       analysis flags it and names the most unusual measuring points of the day.
-                       That way your people know where a check measurement or a calibration is
-                       due — <b>without a single additional sensor</b>.</p>
+                    <p>A crusted or out-of-calibration probe does not report itself as faulty — it keeps delivering values, just the wrong ones. It is detected through measurements from different sources that normally move together: if they drift apart, the analysis names the most unusual measuring points of the day for a check — without an additional sensor.</p>
                 </div>
             </details>
 
             <details class="frage">
                 <summary>Does this replace our skilled staff?</summary>
                 <div class="antwort">
-                    <p>No — and monitoring that promised this would not hold up in a plating shop.
-                       Crusting, mechanical damage and the actual condition of a line show up when
-                       someone goes and looks, not in a series of numbers.</p>
-                    <p>What the analysis takes off your hands is the <b>searching</b>: it tells you
-                       which spot and which time window to look at first. The judgment stays with
-                       your process engineering and maintenance teams — and they get back exactly
-                       the time that goes into troubleshooting today.</p>
+                    <p>No. Crusting, mechanical damage and the condition of a line show up when someone goes and looks, not in a series of numbers. The analysis takes the searching off your hands and tells you where to look first — the judgment stays with your process engineering and maintenance teams.</p>
                 </div>
             </details>
-
-            <details class="frage">
-                <summary>How can we tell whether a check actually took place at the line?</summary>
-                <div class="antwort">
-                    <p>Through two separate tracks that are compared against each other: the line's
-                       values on one side, the manual check measurement on the other — recorded
-                       digitally by phone right at the line, instead of on a paper list.</p>
-                    <p>If the difference exceeds a threshold agreed with you, an alert is raised.
-                       That proves two things at once: <b>that the measurement was taken</b> — and
-                       that the sensors arrive at the same result. For audits, this documents what
-                       would otherwise just be checked off.</p>
-                </div>
-            </details>
-
         </div>
     </div>
 </section>
@@ -909,7 +706,7 @@
 <section class="cta-bottom">
     <div class="container">
         <h2>Whether this pays off for you becomes clear in half an hour</h2>
-        <p>In the intro call you describe your situation and get an honest assessment — even if it is that it does not add up for your shop yet.</p>
+        <p>In the intro call you get an honest assessment — even if it is that it does not add up for your shop yet.</p>
         <div class="cta-buttons">
             <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-leistungen-en">
                 Book a free intro call

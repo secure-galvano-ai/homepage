@@ -172,6 +172,14 @@ handgeschrieben.
 Sitemap-Eintraege ab; beim Aufbau von `ausbildung.html` am 02.09.2026 sind alle drei
 tatsaechlich aufgetreten.
 
+**Nach einem groesseren Umbau: Klicktest gegen die Live-Seite** *(seit 21.10.2026)*:
+`py -X utf8 _scripts/check_live.py` — jede Seite aus `sitemap.xml` am Bildschirm und am Handy,
+jeder Link und Sprunganker, jede Kachel und Frage aufklappen, Videos, Konsolenfehler, seitliches
+Verrutschen; dazu die Kennzahl „Angebote nach n Bildschirmen" am Handy. `check_site.py` sieht nur
+die Dateien vor dem Push, dieser Test das, was live steht. Bookings (417) und LinkedIn (999)
+sperren automatische Abrufe und gelten nicht als Befund — die Buchungsseite nach einer Aenderung
+von Hand oeffnen.
+
 ## Englische Fassung (`en/`) — seit 12.10.2026
 
 **Zweck:** US-Besucher (und alle ohne Deutsch) mit demselben Argument erreichen *(Stefan,
