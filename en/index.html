@@ -558,11 +558,18 @@
             .hero h1 { margin-bottom: 16px; }
             .hero p { margin-bottom: 26px; font-size: 1.05rem; line-height: 1.6; }
             .hero-content { grid-template-columns: 1fr; gap: 32px; }
-            .hero-portrait::before { width: 200px; height: 200px; top: -10px; }
-            .hero-portrait > img { width: 180px; height: 180px; border-width: 4px; }
-            .hero-portrait-label { margin-top: 14px; font-size: 0.68rem; }
-            .hero-portrait-name { font-size: 0.98rem; }
-            .hero-portrait-role { font-size: 0.78rem; }
+            /* Portraet am Handy als kompakte Zeile (21.10.2026): Bild links, Name und Rolle rechts,
+               Meisterbrief darunter. Vorher stand es zentriert gross da und schob die Angebote
+               auf 1,5 Bildschirme Tiefe. */
+            .hero-portrait { display: grid; grid-template-columns: 84px 1fr; column-gap: 14px;
+                             align-items: center; justify-items: start; text-align: left; }
+            .hero-portrait::before { display: none; }
+            .hero-portrait > img { width: 84px; height: 84px; border-width: 3px; grid-row: 1 / span 3;
+                                   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4); }
+            .hero-portrait-label { grid-column: 2; margin-top: 0; font-size: 0.66rem; }
+            .hero-portrait-name { grid-column: 2; margin-top: 2px; font-size: 0.98rem; }
+            .hero-portrait-role { grid-column: 2; margin-top: 2px; font-size: 0.78rem; text-align: left; }
+            .hero-portrait .meister-badge { grid-column: 1 / -1; margin-top: 14px; }
             /* Keine automatische Silbentrennung (21.10.2026): sie trennte "Ober-flächentechnik" und "Nut-zen". */
             .hero h1 { font-size: clamp(1.5rem, 6.6vw, 2.3rem); hyphens: manual; overflow-wrap: break-word; }
             .hero-buttons { flex-direction: column; }
