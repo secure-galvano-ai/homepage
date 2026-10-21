@@ -284,7 +284,7 @@ STYLE_RE = re.compile(r"<style>.*?</style>", re.DOTALL)
 def render_styles(page: str) -> str:
     """Der erste <style>-Block im Kopf der deutschen Seite, unveraendert.
 
-    Die Seiten tragen ihr CSS inline (CLS/LCP, README § Core Web Vitals). Eine Kopie
+    Die Seiten tragen ihr CSS inline (CLS/LCP, README § Regeln, die dauerhaft gelten). Eine Kopie
     von Hand liefe beim ersten Umbau auseinander -- so zieht jeder Lauf sie nach.
     """
     de_text = (ROOT / DE_OF[page]).read_text(encoding="utf-8")

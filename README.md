@@ -16,14 +16,12 @@ JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent. Aufbau der einzelnen Sei
 Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimierung`).
 
 **Offen in der Wirkungsmessung (November-Lauf):**
-- **`#belege` direkt unter dem Hero, vor dem Pitch-Video** *(Stefan, 28.09.2026)* — TÜV-Kacheln
-  und Logoleiste, mobil Kacheln nebeneinander, Logos im 2×2-Raster. Anlass: Clarity August
-  111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen
+- **`#belege` direkt unter dem Hero, vor dem Pitch-Video** *(Stefan, 28.09.2026)*. Anlass: Clarity
+  August 111 Sitzungen, 0 CTA-Klicks, Startseite mobil nur zu 5 % bis zum Ende gelesen
   (`BD/archive/akquise-strategie-h2-2026-in-areas-2026-10/benchmark-werchota.md` §4 Nr. 4).
   Ablesen: CTA-Klicks, mobile Scrolltiefe.
-- **`#bestand` „Ihre Anlage muss nicht neu sein"** *(Stefan, 02.10.2026)* — mit „Ihre Anlage, wie
-  sie ist" auf `leistungen.html` und dem Eigentumssatz in der Weiche *Selbst können* die drei
-  Änderungen des Oktobers; Marker `link-standortanalyse-bestand` (`OPTIMIERUNG.md` §4).
+- **`#bestand` „Ihre Anlage muss nicht neu sein"** *(Stefan, 02.10.2026)* samt Gegenstücken auf
+  `leistungen.html` und in der Weiche *Selbst können* — Kennzahl in `OPTIMIERUNG.md` §4.
 
 ### Regeln, die dauerhaft gelten
 
@@ -34,20 +32,17 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   ohne Datengeber beschrieben. Offen: FFG-Logo, Wiedervorlage in
   `BD/projects/ffg-kleinprojekt-2026/README.md` § *Termine*.
 - **Partner stehen im Streifen „Partner" am Fuß der Startseite — nicht im Thema und nicht in
-  der Trust-Bar** *(Stefan, 21.10.2026, ersetzt die Unterseiten-Regel vom 05.10.2026)*. Anlass:
-  Ein Block „In Zusammenarbeit mit" stand direkt hinter dem eigenen Lernwerkzeug auf
-  `ausbildung.html` und las sich für den Partner wie eine Mitarbeit an unserem Projekt. Der
-  Streifen `#partner` (DE `index.html`, EN `en/index.html`, jeweils zwischen FAQ und Abschluss)
-  trennt beides sauber: **eigenes Wort „Partner" gegen „Gefördert durch", eigener Platz, eigene
-  Optik** — flaches Logo im weißen Feld, ein Satz daneben, kein Beleg-Kontext.
+  der Trust-Bar** *(Stefan, 21.10.2026)*. Anlass: Ein Block „In Zusammenarbeit mit" direkt hinter
+  dem eigenen Lernwerkzeug auf `ausbildung.html` las sich für den Partner wie eine Mitarbeit an
+  unserem Projekt. Der Streifen `#partner` (DE `index.html`, EN `en/index.html`, zwischen FAQ und
+  Abschluss) trennt beides: **eigenes Wort „Partner" gegen „Gefördert durch", eigener Platz,
+  eigene Optik** — flaches Logo im weißen Feld, ein Satz daneben, kein Beleg-Kontext. **Ein Logo
+  reicht**, weitere Partner alphabetisch darunter, ein Satz je Partner.
   - **Jeder Satz sagt, dass der Partner eigenständig ist** („eigenständig betrieben", „run
     independently"). Keine Personennamen: Wer dort als Mensch steht, wirkt wie Personal.
   - **Logo nur vom Partner selbst**, verkleinert und ohne Metadaten nach
     `assets/img/kooperation/`; Darstellung 160×60 px. `flex-shrink` gehört an den Link, nicht
     ans Bild — sonst quetscht der Textabsatz das Logo (21.10.2026: 58 statt 160 px).
-  - **Ein Logo reicht.** Die frühere Schwelle „erst ab drei Partnern" ist damit erledigt; sie
-    entstand aus der Sorge, ein einzelnes Logo wirke dünn — der eigene Streifen im Fuß löst das,
-    ohne die Hauptbotschaft zu stören. Weitere Partner alphabetisch darunter, ein Satz je Partner.
   - Keine Partner-Begründung in Kommentaren oder Commits (Repo ist öffentlich).
 - **Presse (`#aktuell`): maximal zwei Karten, veraltete ersetzen statt stapeln.** Eine sichtbar
   veraltete News-Sektion schadet mehr als keine. Eine Termin-Karte wird nach dem Termin getauscht
@@ -58,9 +53,8 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Struktur). Fotos mit weiteren Personen sind trotzdem erlaubt, wenn sie einen **Anlass**
   dokumentieren statt eine Struktur: datierte Bildunterschrift, echter Termin, Freigabe der
   Abgebildeten. Vorbild ist das aws-Jurytermin-Foto auf `forschung.html` (17.08.2026).
-  Die eigentliche Kundensorge dahinter — „was, wenn der ausfällt?" — beantwortet ohnehin kein
-  Teamfoto, sondern ein benannter Mechanismus (Haftpflicht, Doku beim Kunden, Software läuft
-  ohne ihn). **Noch offen, empfohlen:** vier Zeilen „Ausfallsicherheit" bei `#ablauf`.
+  Die Kundensorge dahinter — „was, wenn der ausfällt?" — beantwortet kein Teamfoto, sondern ein
+  benannter Mechanismus (Haftpflicht, Doku beim Kunden, Software läuft ohne ihn; § *Optional*).
 - **„Lokale Datenverarbeitung", nicht „Ihre Daten bleiben bei Ihnen"** *(Stefan, 02.09.2026)* —
   der Wortlaut ist seitenübergreifend identisch: Startseiten-H2, Vertrauenszeile auf `demo.html`,
   Baustein *Laufende Überwachung* auf `leistungen.html`. Das Beleg-Foto in
@@ -72,35 +66,26 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Schriften erst, nachdem `fonts.css` geparst ist; der `font-display:swap`-Wechsel von Arial
   auf Montserrat/Open Sans verschiebt dann den Seitenkopf. Auf der Startseite waren das
   **CLS 0,153** bei einer Google-Grenze von 0,1 (gemessen 24.08.2026; mit Preload und
-  WebP-Portrait: CLS 0, Seitengewicht 997 → 467 KB). Das `crossorigin` am
-  Preload-Link ist Pflicht, auch bei eigener Domain — fehlt es, lädt der Browser jede Schrift
-  ein zweites Mal. Prüfen mit `_scripts/check_site.py` und einem Blick ins Netzwerk-Protokoll:
-  jede `woff2` darf genau einmal auftauchen.
+  WebP-Portrait: CLS 0, 997 → 467 KB). Das `crossorigin` am Preload-Link ist Pflicht, auch bei
+  eigener Domain — fehlt es, lädt der Browser jede Schrift zweimal. Prüfen mit `check_site.py`
+  und im Netzwerk-Protokoll: jede `woff2` genau einmal.
 - **Urheberrecht:** nur Kurzzitate mit Quellenangabe. **Keine VN-Fotos, kein VOL.AT-Logo als Bild**,
   kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
   Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
-- **Aus- und Weiterbildung steht seit 02.09.2026 auf der Website** — `ausbildung.html`, Nav-Eintrag
-  „Datenwerkstatt" (der naheliegende Name „KI-Werkstatt" ist in Vorarlberg von der WKO belegt).
-  Grund ist die **Neuausrichtung des Angebotsschwerpunkts** (Strategiegespraech 02.09.2026,
-  `BD/areas/coaching-und-ausbildung/`): verkauft wird die Befaehigung, nicht mehr nur die fertige
-  Software. **Die Messerkenntnis, die vorher gegen die Seite sprach, hat ihren Aufbau bestimmt:**
-  104 Sitzungen mit **0 Klicks** auf den Buchungs-CTA heisst, dass ein reiner Termin-Aufruf auf
-  dieser Seite nicht traegt. Deshalb steht ein **niederschwelliger zweiter Weg** daneben
-  (Ueberblick als PDF, ohne E-Mail-Gate), und die Seite hat eine **Erfolgsdefinition mit
-  Abbruchkriterium** statt einer Daumenprobe (`BD/areas/coaching-und-ausbildung/README.md`
-  § Experiment). Der fruehere Beschluss „kein Coaching-Baustein" (25.08.2026) ist damit abgeloest;
-  die Fallakte zum 1:1-Coaching liegt auf SharePoint
-  `01_Business Development\02_Vertrieb\06_KI-Coaching Einzelpersonen\`.
+- **Aus- und Weiterbildung: `ausbildung.html`, Nav „Datenwerkstatt"** *(seit 02.09.2026;
+  „KI-Werkstatt" ist in Vorarlberg von der WKO belegt)*. Grund: verkauft wird die Befähigung,
+  nicht nur die fertige Software (`BD/areas/coaching-und-ausbildung/`). 104 Sitzungen mit
+  **0 Klicks** auf den Buchungs-CTA zeigten, dass ein reiner Termin-Aufruf dort nicht trägt —
+  deshalb ein **niederschwelliger zweiter Weg** (Überblick als PDF, ohne E-Mail-Gate) und eine
+  **Erfolgsdefinition mit Abbruchkriterium** (`BD/areas/coaching-und-ausbildung/README.md` § Experiment).
 - **Tracking-Konvention:** je CTA-Position ein eigener Event-Name (`cta-nav`, `cta-hero`,
   `cta-ablauf`, `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`), Downloads als
   `pdf-<dateiname>`. **Keine generischen Selektoren** — die haben die Zahlen einmal verdoppelt
   (erster Optimierungslauf 10.08.2026: jeder CTA war doppelt verdrahtet).
-- **Bei Abweichungen zwischen Website und Angebotsvorlage gilt die Website** *(Stefan, 17.08.2026)*.
-  Konkret angewandt: Die Diagnose dauert **„innerhalb einer Woche"**, nicht acht Wochen —
-  `BD/areas/business-model.md` wurde am 17.08. nachgezogen. Der Vor-Ort-Teil steckt in der
-  vorgelagerten **Standortanalyse** (Stufe 2). Preise kanonisch in `BD/areas/preise.yaml`,
-  ausgegeben mit `py "Business Development/scripts/preise.py"`.
+- **Bei Abweichungen zwischen Website und Angebotsvorlage gilt die Website** *(Stefan, 17.08.2026;
+  Anlass: Laufzeit „innerhalb einer Woche" gegen acht Wochen in `BD/areas/business-model.md`)*.
+  Preise kanonisch in `BD/areas/preise.yaml`, ausgegeben mit `py "Business Development/scripts/preise.py"`.
 - **Anschrift, Buchungslink, Telefon, UID und Gruendungsdatum kommen aus `BD/areas/stammdaten.yaml`**
   *(seit 24.09.2026)*. Die Seiten sind statisches HTML und lesen die Datei nicht selbst —
   `py "Business Development/scripts/check_konsistenz.py"` meldet jede Seite, die eine abgeloeste
@@ -116,16 +101,16 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" — weicht von der
   Linie ab (korrekt: *Modellpruefung*). Das Heft ist gedruckt; beim naechsten Nachdruck
   mitkorrigieren.
-- **Kontaktblock im Portraet nachgesetzt** *(Stefan, 25.09.2026)*: „Stefan Maier e.U." und die
-  Alberschwender Postleitzahl stehen in der Homepage-Kopie als „Stefan Maier / AT-6960 Buch". Eine
-  Quelle gibt es nicht (InDesign-Seite des Verlags) — die Zeilen wurden im PDF getauscht, in der
-  eingebetteten Univers LT Std Light Condensed; deren Teilsatz hatte keine 9, sie ist die um 180°
-  gedrehte 6 (fontTools). Sonst ist die Seite pixelgleich mit dem Original, das unveraendert unter
-  `01_Außenauftritt/02_Veranstaltungen/20260618_Galvano Forum SWISSGALVANIK/01_Anbahnung/` liegt.
+- **Kontaktblock im Portraet nachgesetzt** *(Stefan, 25.09.2026)*: statt „Stefan Maier e.U." und
+  Alberschwender PLZ steht „Stefan Maier / AT-6960 Buch". Ohne Quelldatei (InDesign beim Verlag)
+  direkt im PDF getauscht, in der eingebetteten Univers LT Std Light Condensed (keine 9 im
+  Teilsatz — sie ist die um 180° gedrehte 6, fontTools). Original unverändert unter
+  `01_Außenauftritt/02_Veranstaltungen/20260618_Galvano Forum SWISSGALVANIK/01_Anbahnung/`.
 
 ## Optional (noch offen)
 
 - [ ] Weitere Unterseiten (Trusted AI, Downloads)
+- [ ] **Vier Zeilen „Ausfallsicherheit" bei `#ablauf`** (empfohlen statt Team-Sektion, § *Regeln, die dauerhaft gelten*).
 - [ ] **UTM auf die eingehenden Links** setzen (Mailstufe 3, LinkedIn, Signatur) — die interne
       Verlinkung bleibt bewusst ohne UTM, sonst zerlegt sie die Sitzung. § *Demo-Seite*.
 - [ ] **Demo-Video neu vertonen** *(entschieden 09.09.2026)* — vier Stellen im Ton von
@@ -256,16 +241,12 @@ Klick, die Datenschutzerklaerung setzt das voraus. Die Seite ist indexiert und s
 `sitemap.xml`; zwei Verweise zeigen darauf: Startseite unter dem Pitch-Video
 (`link-demo-startseite`) und `leistungen.html` in der Karte *Vorprojekt* (`cta-demo-vorprojekt`).
 **Nicht** in die Belegspalte bei `#standortanalyse` — die sammelt Belege zur *Standortanalyse*,
-das Video zeigt die *Anwendung*. Ein am 02.09.2026 dort versuchsweise gesetzter dritter Verweis
-ist aus genau diesem Grund wieder raus: zwei Links auf dieselbe Seite konkurrieren miteinander,
-statt zu fuehren. Ebenso gestrichen *(Stefan, 09.09.2026)*: der zweite Videolink „Überwachung im
-laufenden Betrieb" (`lWJQq0x2_1c`) — mit dem Hauptvideo ergab er das vollständige Bild des
-Funktionsumfangs; unter *Weitere Aufnahme* bleibt nur „Auswertungen und Berichte". Die Videos
-selbst bleiben bestehen und werden gezielt im Gespräch verschickt.
+das Video zeigt die *Anwendung*; ein dort am 02.09.2026 gesetzter dritter Verweis konkurrierte
+mit den anderen, statt zu fuehren. Unter *Weitere Aufnahme* steht nur „Auswertungen und
+Berichte" *(Stefan, 09.09.2026)*; weitere Videos (`lWJQq0x2_1c`) gehen gezielt im Gespräch raus.
 
-**Die Seite erzaehlt DIE ANWENDUNG, nicht den Vor-Ort-Tag** *(Stefan, 02.09.2026)*. Zwischen
-31.08. und 01.09. stand hier kurzzeitig die Standortanalyse-Fassung („So laeuft ein Tag
-Standortanalyse ab", Kartenwand, Rundgang) — das aufgenommene Video zeigt aber die Auswertung.
+**Die Seite erzaehlt DIE ANWENDUNG, nicht den Vor-Ort-Tag** *(Stefan, 02.09.2026; Anlass: kurzzeitig
+stand hier die Standortanalyse-Fassung, das Video zeigt aber die Auswertung)*.
 **Dauerregel daraus: Seite und Video muessen dasselbe versprechen.** Wird das Video getauscht,
 wandern Ueberschrift, Vorspann, die drei Punkte *„Was Sie im Video sehen"*, `<title>`, die
 `og:`-Tags und die Laengenangabe **im selben Zug** mit. Die Laenge steht an vier Stellen:
@@ -281,15 +262,11 @@ setzen" (2 Minuten). **Kein zweites Video auf die Startseite** — zwei Videos u
 die Aufmerksamkeit; die Startseite bekommt einen Verweis auf `demo.html`, nicht das Video selbst.
 
 **Der Einseiter zum Weiterleiten** *(02.09.2026)*: `docs/anwendung-ueberblick.pdf`, verlinkt
-**unter den drei Punkten** und bewusst **nicht** als dritter Nebenweg unter dem CTA — wer
-weiterreichen will, tut das direkt nach dem Inhalt, und dort konkurriert der Link nicht mit dem
-Buchungs-Knopf. Zielgruppe sind die Kollegen des Besuchers, die keine fuenf Minuten Video schauen:
-das Blatt muss deshalb **allein stehen** und traegt Video-Adresse, Kontakt und Ablauf selbst.
-Gebaut wird es von `BD/templates/flyer-corporate/build_flyer_anwendung.py` (Inhalt und Layout
-stehen dort, **nie im PDF nachbessern**); der Build prueft Seitenzahl **und** Pflichtstellen, weil
-`overflow:hidden` Inhalt sonst lautlos abschneidet — genau das passierte beim ersten Lauf mit der
-Fusszeile. **Aendert sich das Video oder die Seite, aendert sich das Blatt mit** (dieselbe Regel
-wie oben: Seite und Video muessen dasselbe versprechen — das Blatt gehoert dazu).
+**unter den drei Punkten**, bewusst **nicht** als Nebenweg unter dem CTA — dort konkurrierte er mit
+dem Buchungs-Knopf. Zielgruppe sind Kollegen des Besuchers ohne fuenf Minuten fuer das Video: das
+Blatt muss **allein stehen** (Video-Adresse, Kontakt, Ablauf). Erzeuger
+`BD/templates/flyer-corporate/build_flyer_anwendung.py`, **nie im PDF nachbessern** (Pflichtstellen-
+Pruefung: § *Projektstruktur*, `docs/`). **Aendert sich Video oder Seite, aendert sich das Blatt mit.**
 
 **Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, der Videostart meldet sich als
 **`video-anwendung`** (aus `data-video="anwendung"` am iframe; die Erkennung in `consent.js` nimmt
@@ -321,19 +298,16 @@ muessen dasselbe versprechen.
 > Begriff eines Betriebs, fuer den Stefan gearbeitet hat, und darf **auf keinem oeffentlichen
 > Kanal vorkommen** — auch nicht in `alt`, `title`, Meta-Angaben oder im HTML-Kommentar (der
 > Quelltext ist oeffentlich; deshalb steht die Regel hier und nicht in der Seite). Statt
-> dessen: *„die Kurve mit den Grenzen"*, *„der Verlauf"*, *„Verlaufskurve"*. Betroffen war der
-> Vorspann des Badbuch-Videos und das `title`-Attribut des iframes, beide am 11.09.2026
-> bereinigt.
+> dessen: *„die Kurve mit den Grenzen"*, *„der Verlauf"*, *„Verlaufskurve"*.
 >
 > **Die Sperre gilt dem Leser, nicht dieser Website** *(praezisiert 13.09.2026)* — **ueberall, wo
-> Fremde mitlesen**: LinkedIn, Flyer, Vortragsfolie, Video, Bildunterschrift. Anlass: Beim
-> LinkedIn-Beitrag vom 17.09.2026 musste erst hergeleitet werden, dass sie fuer ein oeffentliches
-> Beitragsbild genauso gilt. Das Bau-Skript des Beitragsbildes maskiert den Begriff deshalb auf
-> einer Kopie der Demo und bricht ab, wenn er stehen bleibt.
+> Fremde mitlesen**: LinkedIn, Flyer, Vortragsfolie, Video, Bildunterschrift. Anlass: Fuer das
+> LinkedIn-Beitragsbild vom 17.09.2026 musste das erst hergeleitet werden; dessen Bau-Skript
+> maskiert den Begriff seither auf einer Kopie der Demo und bricht ab, wenn er stehen bleibt.
 >
-> **Nicht betroffen** sind die Demo `Badbuch.html` selbst und die Projektdoku im BD-Repo — beide
-> sind nicht oeffentlich. Wird die Demo verschickt, ist das Stefans Entscheidung.
-> Gegenprobe: `grep -rn "Regelkarte" *.html` muss leer bleiben.
+> **Nicht betroffen** sind die Demo `Badbuch.html` selbst und die Projektdoku im BD-Repo (nicht
+> oeffentlich; ob die Demo verschickt wird, entscheidet Stefan). Gegenprobe:
+> `grep -rn "Regelkarte" *.html` muss leer bleiben; auf `en/` schlaegt zusaetzlich `check_englisch.py` an.
 
 **Es bleibt EIN Video auf dieser Seite.** `consent.js` greift das erste YouTube-iframe; ein
 zweites waere in der Messung unsichtbar und teilte die Aufmerksamkeit. Der Verweis auf
@@ -342,24 +316,18 @@ das Video hier zeigt ein **selbstgebautes** Werkzeug, `demo.html` die **fertige*
 
 **Im Style-Block nur Klassen, die auf DIESER Seite vorkommen** — Gemeinsames gehoert nach
 `assets/css/base.css`. Anlass: Der Block war aus `sicherheit.html`/`leistungen.html` kopiert und
-trug rund 10 kB Regeln fuer Bausteine, die es hier nie gab; am 11.09.2026 ausgebaut, jede Klasse
-vorher gegen Rumpf, `_generate_layout.py`, `consent.js`, `site.js` und `base.css` geprueft, die
-Geometrie aller Elemente vor und nach dem Ausbau identisch. *Bewusst gelassen: `.wa-fab`/`.wa-label`
-— sie gehoeren zum abgeschalteten WhatsApp-Knopf und stehen auf allen Seiten gleich
-(§ WhatsApp).*
+trug rund 10 kB fremde Regeln (11.09.2026 ausgebaut, jede Klasse gegen Rumpf, Generator, JS und
+`base.css` geprueft). *Bewusst gelassen: `.wa-fab`/`.wa-label` (§ WhatsApp-Kontakt).*
 
 **Die Hero-Laenge ist eine Messgroesse.** Waechst der Hero, rutscht der Hauptknopf mobil hinter
-das Einwilligungsbanner — die Klasse ist in `consent.js` dokumentiert und am 11.09.2026 erneut
-eingetreten: der erste Entwurf des neuen Heros lag **60 px** unter dem Bannerrand. Nach jeder
-Textaenderung im Hero auf **390 × 844** nachmessen, nicht ansehen. Stand: Hauptknopf endet bei
-y 643, Banner ab 714 — **71 px Luft** *(gemessen 13.09.2026)*.
+das Einwilligungsbanner (Klasse: `AENDERUNGSPROZESS.md` Gate 3; hier am 11.09.2026 erneut, der
+erste Entwurf lag **60 px** darunter). Nach jeder Hero-Textaenderung auf **390 × 844** nachmessen.
+Stand: Hauptknopf endet bei y 643, Banner ab 714 — **71 px Luft** *(gemessen 13.09.2026)*.
 
 > **Wortwahl im Hero ist seit 13.09.2026 gebunden** *(Stefan)*: **gebaut werden Werkzeuge,
-> nicht Auswertungen.** Die Auswertung ist das Ergebnis, das Werkzeug der Gegenstand. Betroffen
-> waren Schlagzeile, beide `meta`-Beschreibungen und der Schritt *Werkstatt*; die Stellen, an
-> denen „Auswertung" die Taetigkeit meint („bei jeder Auswertung dieselben", „bevor die erste
-> Auswertung laeuft"), sind **richtig und bleiben**. Dieselbe Unterscheidung gilt fuer LinkedIn
-> und den Flyer.
+> nicht Auswertungen.** Die Auswertung ist das Ergebnis, das Werkzeug der Gegenstand. Wo
+> „Auswertung" die Taetigkeit meint („bevor die erste Auswertung laeuft"), ist es **richtig und
+> bleibt**. Dieselbe Unterscheidung gilt fuer LinkedIn und den Flyer.
 
 ## Aenderungsprozess
 
@@ -382,33 +350,20 @@ Generator**, interne Links/Assets existieren, keine Transliterations-Reste im
 Sichttext, englische Fassung auf deutschem Stand. Exit 1 bei Fehlern -> nicht deployen.
 `check_inhalt.py` (Metadaten, Marker, Sitemap) steht in `AENDERUNGSPROZESS.md` Gate 1.
 
-Optionaler zweiter/dritter Validator (Node, kein Java noetig), als unabhaengiger
-Gegencheck bei groesseren Umbauten:
-
-```bash
-npx --yes htmlhint *.html
-npx --yes html-validate *.html en/*.html
-```
+Optionaler Gegencheck bei groesseren Umbauten (Node, kein Java):
+`npx --yes htmlhint *.html` und `npx --yes html-validate *.html en/*.html`.
 
 ## Projektstruktur
 
 ```
 homepage/
-  index.html               Predictive-Quality-Landing (ein roter Faden): Hero, Belegstreifen #belege
-                           (TUeV/8-von-10 + Logoleiste, VOR dem Video), Pitch-Video, Aktuell (#aktuell),
-                           Schmerz, 3-Stufen-Treppe Fehlersuche->Live->Frueherkennung (#so-funktionierts),
-                           Bestand statt Austausch (#bestand), Ablauf (#ablauf) mit Preisen nur fuer die
-                           Einstiegsstufen (Standortanalyse, Analyse je Fehlerbild; Umsetzung und Betreuung ohne
-                           Preis), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung),
-                           Partner (#partner, Streifen vor dem Abschluss), Kontakt (#kontakt).
-                           Traegt KEINE Leistungs-Teaser-Karten.
-  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt
-                           (#standortanalyse), #datenanalyse (seit 21.10.2026 Stufe 3 „Analyse je Fehlerbild“),
-                           sieben Anwendungen (#anwendungen), Fragen (#fragen) mit FAQPage-Schema,
-                           Portfolio, Abgrenzung, Sticky-CTA. In #standortanalyse und #datenanalyse
-                           Blanko-Angebote als PDF (docs/angebot-*-muster.pdf). Seit 31.08.2026 wieder
-                           eigene Seite -- Anlass: 87 GSC-Impressionen auf eine Weiterleitung, 0 Klicks
-                           auf kommerzielle Suchanfragen.
+  index.html               Predictive-Quality-Landing (ein roter Faden), Sektionen per grep 'id="' index.html.
+                           Preise im #ablauf nur fuer die Einstiegsstufen (Standortanalyse, Analyse je
+                           Fehlerbild; Umsetzung und Betreuung ohne Preis). KEINE Leistungs-Teaser-Karten.
+  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt, #datenanalyse
+                           (Stufe 3 „Analyse je Fehlerbild“), #anwendungen, #fragen mit FAQPage-Schema,
+                           Blanko-Angebote als PDF. Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
+                           GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen.
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
   ausbildung.html          Datenwerkstatt — Aus- und Weiterbildung, Reihenfolge Nutzen -> Ablauf ->
                            Beispiel -> Angebot (Partner stehen seit 21.10.2026 nur noch im
@@ -455,38 +410,24 @@ homepage/
                            grep -o "docs/[a-z0-9_-]*\.pdf" *.html
                            Wird von Jekyll ausgeliefert -- hier nur, was oeffentlich sein darf.
                            Die erzeugten PDFs kommen aus BD-Build-Skripten und werden NIE von
-                           Hand bearbeitet -- Aenderung immer im Skript, dann neu bauen:
-                             standortanalyse-flyer.pdf        BD/templates/flyer-corporate/build_flyer.py
-                             standortanalyse-musterbefund.pdf BD/templates/befund-corporate/build_befund.py
-                             erstanalyse-ueberblick.pdf       BD/templates/flyer-corporate/build_flyer_erstanalyse.py
-                             erstanalyse-beispielbefund.pdf   BD/templates/befund-corporate/build_erstanalyse.py
-                             datenanalyse-ablauf.pdf          BD/templates/flyer-corporate/build_flyer_datenanalyse.py
-                             fehlerbild-beispielbefund.pdf    BD/templates/befund-corporate/build_fehlerbild_befund.py
-                             ki-setup-check-ueberblick.pdf    BD/templates/flyer-corporate/build_flyer_kisetup.py
-                             leistungen-ueberblick.pdf        BD/templates/uebersicht-corporate/build_uebersicht.py
-                             datenwerkstatt-ueberblick.pdf    BD/areas/coaching-und-ausbildung/build_flyer_datenwerkstatt.py
-                             anwendung-ueberblick.pdf         BD/templates/flyer-corporate/build_flyer_anwendung.py
-                             nda-muster.pdf                   BD/scripts/nda_pdf.py
-                             angebot-standortanalyse-muster.pdf   BD/scripts/angebot_muster.py
-                             angebot-analyse-fehlerbild-muster.pdf, angebot-erstanalyse-muster.pdf,
-                             angebot-ki-setup-check-muster.pdf (alle vier aus demselben Lauf)
-                             unternehmenspraesentation_secure-galvano-ai.pdf  (deutsch)
-                             company-presentation_secure-galvano-ai.pdf       (englisch)
-                               Beide aus dem Pitch-Deck-Master auf SharePoint, NICHT aus einem
-                               BD-Skript: 01_Aussenauftritt/06_Praesentationsmaterialien/
-                               Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py. Ablauf, Auswahl
-                               der Folien und Begruendung im 00_LIESMICH.md desselben Ordners
-                               (Abschnitt "Zwei abgeleitete Fassungen"). Dateinamen NICHT aendern
-                               -- consent.js bildet das Clarity-Ereignis aus dem Dateinamen.
-                           Die zwei Angebots-Muster sind dasselbe Dokument, das ein Kunde verbindlich
-                           bekommt, im Muster-Modus gebaut: ohne Empfaenger, Nummer, Datum, IBAN und
-                           Unterschrift, mit Ausfuellfeldern und Muster-Vermerk im Fuss. Die Pruefung
-                           im Generator laeuft dort UMGEKEHRT und schlaegt an, wenn eine dieser
-                           Angaben doch im PDF steht -- Begruendung im Docstring von
-                           BD/scripts/angebot_bauen.py.
-                           Jedes Skript prueft Seitenzahl und Pflichtstellen selbst und bricht ab, wenn
-                           Inhalt verschluckt wird. leistungen-ueberblick.pdf ist das Blatt zum
-                           Weiterreichen: alle vier Wege nebeneinander, mit Aufwand und Preis.
+                           Hand bearbeitet -- Aenderung im Skript, dann neu bauen. Erzeuger finden:
+                             grep -rl "<dateiname>.pdf" "../Business Development/templates" \
+                               "../Business Development/scripts" "../Business Development/areas"
+                           (Flyer/Befunde unter templates/*-corporate/, Datenwerkstatt unter
+                           areas/coaching-und-ausbildung/, NDA und die vier Angebots-Muster unter
+                           scripts/ -- angebot_muster.py baut alle vier in einem Lauf).
+                           Ausnahme: unternehmenspraesentation_secure-galvano-ai.pdf (DE) und
+                           company-presentation_secure-galvano-ai.pdf (EN) kommen aus dem Pitch-Deck-
+                           Master auf SharePoint: 01_Aussenauftritt/06_Praesentationsmaterialien/
+                           Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py, Ablauf im 00_LIESMICH.md
+                           dort ("Zwei abgeleitete Fassungen"). Dateinamen NICHT aendern -- consent.js
+                           bildet das Clarity-Ereignis aus dem Dateinamen.
+                           Angebots-Muster = das verbindliche Kundendokument im Muster-Modus (ohne
+                           Empfaenger, Nummer, Datum, IBAN, Unterschrift); die Pruefung laeuft dort
+                           UMGEKEHRT und schlaegt an, wenn eine dieser Angaben doch drinsteht
+                           (Docstring BD/scripts/angebot_bauen.py). Jedes Skript prueft Seitenzahl
+                           und Pflichtstellen und bricht ab, wenn Inhalt verschluckt wird
+                           (overflow:hidden schnitt beim ersten Lauf die Fusszeile lautlos ab).
   fonts/                   fonts.css + Montserrat/Open Sans als WOFF2 (latin, latin-ext), OFL
   favicon.ico              Browser-Tab Icon (Root — Browser-Konvention)
   apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
@@ -579,18 +520,14 @@ git commit -m "Beschreibung" -- <nur die eigenen Dateien>   # nie -A, fremde Arb
 git push
 ```
 
-**KEIN GPG-Signing in diesem Repo.** Die Homepage ist ein reines Content-Repo
-(HTML/CSS/Assets) — Commit-Signing ist nur für Code-Repos vorgesehen. Lokal per
-`git config commit.gpgsign false` deaktiviert; Commits laufen ohne Yubikey-PIN-Dialog.
+**KEIN GPG-Signing in diesem Repo** (reines Content-Repo, lokal `commit.gpgsign false`) —
+Commits laufen ohne Yubikey-PIN-Dialog.
 
 ### Nach dem Push: Deploy bestätigen *(Regel seit 26.08.2026, Stefan)*
 
-`check_site.py` prüft die **Dateien vor** dem Push. Es kann prinzipiell nicht sehen, was
-danach live steht — und genau dort lag die Panne vom 02.07.2026: Der Build gelang, der
-**Deploy**-Job scheiterte GitHub-seitig, und die Seite blieb still auf dem alten Stand.
-Zwei Stunden Suche, weil lokal alles grün war.
-
-**Pflicht — ein Befehl, fünf Sekunden:**
+`check_site.py` prüft die **Dateien vor** dem Push, nicht, was live steht. Anlass 02.07.2026:
+Build gelang, der **Deploy**-Job scheiterte GitHub-seitig, die Seite blieb still auf dem alten
+Stand — zwei Stunden Suche, weil lokal alles grün war. **Pflicht — ein Befehl, fünf Sekunden:**
 
 ```bash
 cd homepage && gh run list --limit 1
@@ -600,15 +537,10 @@ cd homepage && gh run list --limit 1
 Steht dort `failure` oder hängt der Lauf: **nicht neu pushen**, sondern die Anti-Patterns
 unten lesen. Ein zweiter Push auf denselben Fehler kostet nur Zeit.
 
-**Zusätzlich in den Browser — aber nur, wenn sich sichtbar etwas geändert hat**
-(Layout, CSS, Assets, Textbausteine, generierte Seiten). Dann rund eine Minute warten und
-die geänderte Seite **live** öffnen, nicht lokal:
-
-- `browser_navigate` auf `https://secure-galvano-ai.com/...` + `browser_snapshot` — ist die
-  Änderung da, stehen Navigation und Footer unverändert?
-- `browser_console_messages` — neue Fehler?
-- Bei Layout- und Designänderungen **ein Bildschirmfoto ansehen**. Der Strukturbaum zeigt
-  keine verrutschten Abstände, überlappenden Elemente oder falschen Farben.
+**Zusätzlich in den Browser — nur, wenn sich sichtbar etwas geändert hat** (Layout, CSS, Assets,
+Textbausteine, generierte Seiten): nach rund einer Minute die Seite **live** öffnen — Änderung da,
+Navigation und Footer unverändert, keine neuen Konsolenfehler; bei Layout und Design **ein
+Bildschirmfoto ansehen** (der Strukturbaum zeigt keine verrutschten Abstände oder falschen Farben).
 
 **Bei reinen Text- oder Doku-Änderungen entfällt die Browser-Runde** — dort findet sie
 nichts, was der Deploy-Status nicht schon sagt. **Das Ergebnis wird gemeldet**, auch wenn
@@ -646,18 +578,8 @@ alles passt; eine stille Prüfung ist keine.
 5. **`.nojekyll` NICHT reflexartig hinzufügen.** Der Jekyll-`build` gelingt hier (getestet); `.nojekyll` löst das Deploy-Problem NICHT und liefert zusätzlich `_generate_*.py` **öffentlich** aus (Jekyll schließt `_`-Dateien sonst aus). → **ohne `.nojekyll` bleiben.**
 6. **Kein `{{ … }}` / `{% … %}` im HTML** — Jekyll/Liquid parst das und failt den *Build* (war hier NICHT die Ursache, ist aber die klassische echte Build-Bremse).
 
-Assets neu generieren (Favicon, OG-Image):
-```bash
-cd homepage
-py _generate_assets.py
-```
-
-Nachweise neu rendern (wenn das Quell-PDF aktualisiert wird):
-```bash
-cd homepage
-py credentials/_generate_credentials.py
-```
-Quelle: `Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`.
+Favicon/OG-Image neu generieren: `py _generate_assets.py`. Nachweise neu rendern (wenn das
+Quell-PDF aktualisiert wird): `py credentials/_generate_credentials.py`. Quelle: `Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`.
 Seitenauswahl und Metadaten (Titel, Untertitel, Kategorie pro Seite) stehen in
 `credentials/_generate_credentials.py` — Reihenfolge dort ändern. Schwärzungen (Liste
 `REDAKTIONEN`) gehören in den Erzeuger, nicht ins fertige Bild (`CLAUDE.md` §1 *Was öffentlich
@@ -665,15 +587,11 @@ gestellt wird*).
 
 ## WhatsApp-Kontakt — abgeschaltet seit 07.09.2026
 
-Der Floating-Button unten rechts ist **entfernt** (Stefan): Er trug die private Mobilnummer im
-Klartext auf jeder Seite, damit maschinell abgreifbar — Folge waren laufende Phishing-Anfragen von
-unbekannten Nummern. Mit derselben Änderung ist `telephone` aus dem Schema.org-Block der Startseite
-raus; **eine Telefonnummer steht damit nirgends mehr auf der Website.** Rechtlich unbedenklich:
-§ 5 ECG verlangt eine schnelle elektronische Kontaktaufnahme, die E-Mail-Adresse im Impressum
-erfüllt das.
+Der Floating-Button ist **entfernt** (Stefan): Er trug die private Mobilnummer im Klartext auf
+jeder Seite — Folge waren laufende Phishing-Anfragen. Auch `telephone` ist aus dem Schema.org-Block
+raus; **eine Telefonnummer steht nirgends mehr auf der Website** (§ 5 ECG erfüllt die E-Mail im
+Impressum). Kontaktweg: Erstgespräch-Buchung + mailto.
 
-Mechanik: `_generate_layout.py` rendert den `wa-fab`-Block leer, die Marker bleiben in den Seiten
-stehen. Wer den Knopf zurückholen will, setzt `render_wa_fab()` wieder auf die Link-Fassung — die
-Nummer liegt bewusst nicht mehr im Repo. `.wa-fab`-CSS in `assets/css/base.css` und die
-Positionierungslogik in `consent.js` bleiben ungenutzt liegen. Kontaktweg ist jetzt
-Erstgespräch-Buchung + mailto.
+Mechanik: `_generate_layout.py` rendert den `wa-fab`-Block leer, die Marker bleiben. Zurückholen =
+`render_wa_fab()` wieder auf die Link-Fassung (die Nummer liegt bewusst nicht mehr im Repo);
+`.wa-fab`-CSS in `base.css` und die Logik in `consent.js` bleiben ungenutzt liegen.
