@@ -186,7 +186,8 @@ Auslöser ist der Monatslauf am zweiten Werktag des Monats (§7).
 | Tote Klicks | Clarity `DeadClickCount` | **6 von 111 ≈ 5,4 %** ⚠️ — Ursache  am 31.08. behoben; alle sechs Faelle vom 6.–10.08. | < 5 % |
 | Aktive Zeit | Clarity | 45 s von 1,5 min | — |
 | Geräte | Clarity | 59 mobil / 46 Desktop | — |
-| **CTA-Klicks je Position** | Clarity, Intelligente Ereignisse | **0** — alle Positionen | > 0 |
+| **Zielklicks** *(neu 21.10.2026 — die Leitreihe über Umbauten hinweg)* | Clarity, Ereignisse `ziel-termin`, `ziel-mail`, `ziel-whatsapp`, `ziel-unterlage` | **noch keine Historie** | steigend. Abgeleitet in `consent.js` aus dem **Linkziel**, nicht aus dem Knopf: jeder neue Buchungsknopf zählt automatisch mit, auch ohne `data-funnel`. **Nie mit `cta-*` summieren** — ein Klick feuert beide Reihen. Nur im Clarity-Dashboard ablesbar, die API-Historie führt keine Ereignisse |
+| **CTA-Klicks je Position** | Clarity, Intelligente Ereignisse | **0** — alle Positionen | > 0. Detail zu den Zielklicks: *welcher* Knopf. Namen wechseln mit dem Seitenbau, deshalb nur innerhalb eines Bauzustands vergleichen |
 | Beleg-Abrufe (PDF/Video) | Clarity `pdf-*`, `video-*` | **18 PDF · 5 Video** | steigend |
 | **Demo-Seite: Zulauf und Weiterweg** *(neu 02.09.2026)* | Clarity `link-*` und `cta-demo-seite` | **12 Besuche vom 02.–17.09., davon 6 am Veröffentlichungstag** *(Stand 18.09.2026)* — danach an vier einzelnen Tagen je einer | **Veröffentlichungseffekt ohne Sockel** (Regel 6). Kein Grund, am Video zu arbeiten: Bei drei Website-Besuchern am Tag erzeugt kein Video Zulauf. Konsequenz ist die **Verwendung** — Link in Nachfass und Telefonat. Vollständiger Befund im Funnel-Dokument auf SharePoint §8a |
 | **Demo-Einseiter: Weitergabe im Haus** *(neu 02.09.2026)* | Clarity `pdf-anwendung-demo` | **noch keine Historie** | erstmals im Oktober-Lauf ablesbar. Er misst etwas anderes als die übrigen `pdf-*`: nicht Interesse, sondern die Absicht, die Sache **intern weiterzureichen** — Abrufe ohne Terminanfrage sind hier kein Fehlschlag |
@@ -207,19 +208,19 @@ Quelle für alle Zeilen: XLSX-Export → `Business Development/scripts/analyse_l
 Befund unter `01_LinkedIn/Analytics-Exporte/` auf SharePoint. **Zwei Werte stehen nur im
 Dashboard** und sind mit 👤 markiert — sie sind nicht im Export enthalten.
 
-| Kennzahl | Stand 18.06.–15.09.2026 (90 Tage) | Richtung |
+| Kennzahl | Stand 18.06.–15.09.2026 (90 Tage), Nachtrag 21.10.2026 | Richtung |
 |---|---|---|
 | **Profilbesuche / 90 Tage** 👤 | **299 (+219 %)** | **die Leitzahl** — wer das Profil öffnet, prüft die Person. Der Schritt unmittelbar vor dem Anruf |
 | **Impressionen je Beitrag, Anlassbeitrag** | **511** (Median, stabil seit 12 Monaten) | ≥ 500 halten |
 | **Impressionen je Beitrag, Serienbeitrag** | **199** (166 und 232) | **→ 400.** Darunter trägt die Serie den Kanal nicht, sie verdünnt ihn |
-| Beiträge je Monat | **5** (Aug und Sept) | 4–8; unter 4 drosselt die Verteilung, über 8 fällt die Wirkung je Beitrag |
-| Neue Follower je Monat | **65–84** | ≥ 60 |
-| Engagement-Rate | **2,4 %** (Jahreswert 2,6 %) | ≥ 2,5 % |
-| **Zielkonten im Publikum** | **Collini 5 % · SurTec 5 %** | halten — das ist der eigentliche Zweck des Kanals |
+| Beiträge je Monat | **5** (Aug) · **11** (Sept) · **10** (Okt bis 21.) — Impressionen je Beitrag fielen dabei auf 411 bzw. 508 (Median Mai–Aug 555–858) | 4–8; unter 4 drosselt die Verteilung, über 8 fällt die Wirkung je Beitrag |
+| Neue Follower je Monat | **65–84** · Sept **283** · Okt bis 21. **133** | ≥ 60 |
+| Engagement-Rate | **2,4 %** (Jahreswert 2,6 %) · Jahreswert 21.10.: **2,2 %** | ≥ 2,5 % |
+| **Zielkonten im Publikum** | **Collini 5 % · SurTec 5 %** · 21.10.: je **4 %** | halten — das ist der eigentliche Zweck des Kanals |
 | **Kommentare unter fremden Beiträgen** 👤 | **2 / Woche** | **≥ 1 / Woche** — LinkedIn selbst nennt bis zu **3× mehr Profilaufrufe** für wöchentliches Kommentieren; im Export nicht enthalten, nur im Wochenfortschritt sichtbar |
 | In Suchen erschienen 👤 | 51 (±0 %) | steigend |
 | Impressionen / 7 Tage 👤 | 780 (**−27 %**) | **Diagnose, kein Ziel** — der Wochenwert misst, was gepostet wurde, nicht was daraus wurde. Nie danach steuern |
-| Verkehr von LinkedIn auf die Seite | erstmals im Oktober-Lauf trennbar (UTM seit 15.09.) | — |
+| Verkehr von LinkedIn auf die Seite | **keine einzige Seite mit `utm_source=linkedin`** in der Historie vom 15.09. bis 20.10.2026, Mail-Links mit UTM erscheinen dagegen. Der Beitrag vom 15.10. verlinkt `secure-galvano-ai.com` **ohne UTM** *(Stand 21.10.2026)* | jeder Link in Beitrag und Profil mit `?utm_source=linkedin` |
 
 > **Nur diese Tabelle wird monatlich nachgezogen — sonst keine Stelle** *(15.09.2026)*. Dieselben
 > Zahlen stehen mit Absicht auch in `brand/messaging.md` § 5b, `marketing.md` und der

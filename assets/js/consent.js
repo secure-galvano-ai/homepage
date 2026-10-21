@@ -66,9 +66,36 @@
             });
         });
 
+        wireZiele();
         wirePdfDownloads();
         wireVideoInteraktion();
         wireScrollDepth();
+    }
+
+    // Feste Zielmarken: EIN Ereignis je Ziel, abgeleitet aus dem Linkziel statt aus dem
+    // Knopf (seit 21.10.2026). Die cta-*-Namen haengen an Position und Seitenbau und
+    // wechseln bei jedem Umbau -- 'ziel-termin' zaehlt dagegen jeden Buchungsklick, egal
+    // wo der Knopf steht und ob er ein data-funnel traegt. Damit bleiben Monate vor und
+    // nach einem Umbau vergleichbar.
+    // Eigene Reihe, nie mit cta-* summieren: ein Klick feuert absichtlich beide (die Lehre
+    // vom 10.08.2026 oben betraf zwei Namen in DERSELBEN Reihe).
+    function zielVon(href) {
+        if (!href) return null;
+        if (href.indexOf('outlook.office.com/book') !== -1 || /\/termin\/?$/.test(href)) return 'termin';
+        if (href.indexOf('mailto:') === 0) return 'mail';
+        if (href.indexOf('wa.me/') !== -1) return 'whatsapp';
+        if (/\.pdf$/.test(href)) return 'unterlage';
+        return null;
+    }
+
+    function wireZiele() {
+        document.querySelectorAll('a[href]').forEach(function (el) {
+            var ziel = zielVon(el.getAttribute('href'));
+            if (!ziel) return;
+            el.addEventListener('click', function () {
+                if (window.clarity) window.clarity('event', 'ziel-' + ziel);
+            });
+        });
     }
 
     // PDF-Downloads: eigenes Event je Dokument. Die Unternehmenspraesentation ist das
