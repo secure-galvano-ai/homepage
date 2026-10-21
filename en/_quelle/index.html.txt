@@ -79,10 +79,10 @@
 {
 "@type": "Service",
 "@id": "https://secure-galvano-ai.com/#folgeprojekt",
-"name": "Analyse je Fehlerbild, Live-Auswertung und Roll-out für Galvanikbetriebe",
+"name": "Analyse je Fehlerbild und Begleitung der Fehlerbehebung für Galvanikbetriebe",
 "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-"description": "Folgeleistungen nach der Standortanalyse: Analyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und Auswertung zum Durchklicken, danach Umsetzung und Begleitung der Optimierung je Anlage, Live-Auswertung in der Produktion, KPI-Dashboard und kontinuierliches Tracking. Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Konditionen auf Basis des Ergebnisses. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
-"serviceType": "Custom Software Development"
+"description": "Folgeleistungen nach der Standortanalyse: Analyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und Auswertung zum Durchklicken, danach die strukturierte Begleitung der Fehlerbehebung, bis die Fehlerbilder behoben sind, als Festpreis je Projekt, optional mit Integration einer Monitoring-Software für Live-Auswertung und kontinuierliches Tracking. Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
+"serviceType": "Process Consulting"
 },
 {
 "@type": "FAQPage",
@@ -353,7 +353,7 @@ Rückblick
 </div>
 <p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 18px;">Ihre Überwachung bewertet jeden Messwert einzeln: Temperatur zu hoch, Alarm. Genau daran scheitert sie bei den teuren Fällen. Denn oft liegt <strong>jeder einzelne Wert im grünen Bereich</strong> — und trotzdem stimmt die Kombination nicht. Der Strom etwas niedriger, das Bad etwas kühler, die Ware ein wenig länger drin. Einzeln unauffällig, zusammen ein Fehler. Genau dieses Zusammenspiel lesen wir.</p>
 <p class="fade-up" style="font-style:italic;font-size:1.02rem;color:var(--schild-blau);line-height:1.6;border-left:3px solid var(--schild-blau);padding-left:18px;margin:0 0 22px;">„Nicht: irgendwo stimmt etwas nicht. Sondern: an dieser Stelle der Anlage, in diesem Zeitfenster — schauen Sie dort zuerst."</p>
-<p class="fade-up" style="font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:18px 22px;margin:0;"><strong style="color:var(--text-body);">Was das für Sie heißt:</strong> Wie weit es bei Ihnen geht, entscheiden Ihre Daten. Schritt 1 zeigt, was Ihre Datenlage trägt.</p>
+<p class="fade-up" style="font-size:0.95rem;color:var(--text-light);line-height:1.7;background:var(--hellgrau);border-radius:12px;padding:18px 22px;margin:0;"><strong style="color:var(--text-body);">Was das für Sie heißt:</strong> Wie weit es bei Ihnen geht, entscheiden Ihre Daten. Die Standortanalyse zeigt, was Ihre Datenlage trägt.</p>
 </div>
 </section>
 <!-- ===== AUCH FUER AELTERE ANLAGEN (02.10.2026) =====
@@ -379,9 +379,9 @@ Weiss mit Linie oben, weil davor und danach die Hintergruende schon wechseln. --
 </section>
 <!-- ===== ABLAUF =====
 Preise stehen nur an den Einstiegsstufen: Standortanalyse 1.500 EUR und Analyse je
-Fehlerbild 5.000 EUR netto (Leiter seit 21.10.2026, Quelle BD/areas/preise.yaml). Umsetzung und
-Betreuung bleiben ohne Preis -- sie werden nach Aufwand kalkuliert und im Gespraech
-vereinbart. -->
+Fehlerbild 5.000 EUR netto (Leiter seit 21.10.2026, Quelle BD/areas/preise.yaml). Das
+Erstgespraech steht vorab und ohne Nummer. Stufe 3 (Begleitung der Fehlerbehebung, Festpreis
+je Projekt) und die Betreuung bleiben hier ohne Preis -- vereinbart im Gespraech. -->
 <!-- ===== ABLAUF — die Treppe, bewusst kurz =====
 Die Startseite zeigt, DASS es einen Weg gibt; erklaert wird er auf
 leistungen.html. Vorher standen beide Erklaerungen nebeneinander
@@ -390,8 +390,8 @@ leistungen.html. Vorher standen beide Erklaerungen nebeneinander
 <div class="container">
 <div class="section-header fade-up">
 <p class="section-label">So arbeiten wir zusammen</p>
-<h2 style="color:var(--dunkelblau);">Vier Schritte — Sie wissen vorher, was jeder kostet.</h2>
-<p>Fester Preis, festes Ergebnis, keine Bindung: Sie beauftragen einzeln und entscheiden nach jedem Schritt neu. Das Erstgespräch kostet Sie nichts.</p>
+<h2 style="color:var(--dunkelblau);">Zwei Stufen bis zum Befund — Sie wissen vorher, was jede kostet.</h2>
+<p>Fester Preis, festes Ergebnis, keine Bindung: Sie beauftragen jede Stufe einzeln und entscheiden danach neu. Das Erstgespräch davor kostet Sie nichts.</p>
 </div>
 <!-- Ein Strang statt drei Karten plus drei Ergebniskarten (Stefan, 10.09.2026):
 Der Ablauf laeuft linear bis zur Analyse je Fehlerbild, danach oeffnet er sich.
@@ -399,25 +399,25 @@ Die NDA ist bewusst schmaler und ohne Preis - sie wird nicht gekauft,
 beruhigt aber genau dort, wo Daten ins Spiel kommen. Preise: areas/preise.yaml. -->
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;align-items:stretch;">
 <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);">Schritt 1 · kostenlos</span>
+<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(61,140,62,0.12);color:var(--logo-gruen);">Vorab · kostenlos</span>
 <h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Erstgespräch</h3>
 <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">30 Minuten. Sie schildern Ihre Situation, Sie bekommen eine ehrliche Einschätzung — auch wenn sie lautet, dass es sich noch nicht rechnet.</p>
 <p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">kostenlos <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">30 Minuten</span></p>
 </article>
 <article class="fade-up" style="display:flex;flex-direction:column;background:transparent;border:1px dashed var(--silber);border-radius:16px;padding:24px 20px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.07);color:var(--text-light);">Schritt 2 · bevor Daten fließen</span>
+<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.07);color:var(--text-light);">Bevor Daten fließen</span>
 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:7px;">NDA</h3>
 <p style="color:var(--text-body);font-size:0.89rem;line-height:1.6;margin:0 0 12px;">Unterschrieben, bevor eine einzige Datei Ihr Haus verlässt — beidseitig, drei Jahre Geheimhaltung. Ihre Messwerte gehen durch keinen externen KI-Dienst.</p>
 <p style="margin:auto 0 0;font-size:0.85rem;"><a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Unsere NDA vorab lesen (PDF)</a></p>
 </article>
 <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Schritt 3 · Tag vor Ort optional</span>
+<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Stufe 1 · Tag vor Ort optional</span>
 <h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Standortanalyse</h3>
 <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">Wir binden Ihre Datenquellen an und zeigen, ob die Daten tragen: Datenampel je Anlage und die Fehlerbilder, bei denen das Geld liegt.</p>
 <p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">1.500 € netto <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">je Standort</span></p>
 </article>
 <article class="fade-up" style="display:flex;flex-direction:column;background:var(--weiss);border:1px solid var(--silber);border-radius:16px;padding:24px 22px;">
-<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Schritt 4 · wenn die Daten tragen</span>
+<span style="align-self:flex-start;font-family:'Montserrat',Arial,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:50px;margin-bottom:12px;background:rgba(43,94,167,0.1);color:var(--schild-blau);">Stufe 2 · wenn die Daten tragen</span>
 <h3 style="font-size:1.06rem;color:var(--dunkelblau);margin-bottom:7px;">Analyse je Fehlerbild</h3>
 <p style="color:var(--text-body);font-size:0.93rem;line-height:1.6;margin:0 0 12px;">Woran ein Fehlerbild liegt und was zuerst zu prüfen ist — mit Ishikawa-Befund und Auswertung zum Durchklicken. Weitere Fehlerbilder jederzeit zusätzlich.</p>
 <p style="margin:auto 0 0;font-family:'Montserrat',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--schild-blau);">5.000 € netto <span style="font-family:'Open Sans',Arial,sans-serif;font-size:0.82rem;font-weight:400;color:var(--text-light);">je Fehlerbild</span></p>
@@ -428,7 +428,7 @@ beruhigt aber genau dort, wo Daten ins Spiel kommen. Preise: areas/preise.yaml. 
 <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-ablauf" style="display:inline-block;margin-left:22px;font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Beispiel-Befund (PDF)</a>
 <div style="margin-top:26px;">
 <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-ablauf" style="font-size:1.02rem;padding:15px 36px;">Mit dem Erstgespräch beginnen</a>
-<p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:20px auto 0;max-width:660px;"><strong style="color:var(--dunkelblau);">Und danach?</strong> Die Umsetzung wird nach Aufwand kalkuliert und als Festpreis vereinbart, bevor Sie zusagen — <strong>Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr.</strong> Zur Einordnung: Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von 60.000 bis 90.000 €. <a href="leistungen.html#danach" data-funnel="link-danach-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Wie es weitergeht</a></p>
+<p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:20px auto 0;max-width:660px;"><strong style="color:var(--dunkelblau);">Und danach?</strong> Stufe 3 ist die <strong>Begleitung der Fehlerbehebung</strong>: Wir begleiten Ihr Team strukturiert, bis die Fehlerbilder behoben sind — zum Festpreis je Projekt, vereinbart, bevor Sie zusagen. Auf Wunsch binden wir eine Monitoring-Software ein. <strong>Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr.</strong> Zur Einordnung: Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von 60.000 bis 90.000 €. <a href="leistungen.html#danach" data-funnel="link-danach-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Wie es weitergeht</a></p>
 <p style="color:var(--text-light);font-size:0.9rem;margin-top:14px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten der späteren Schritte deutlich senken.</p>
 </div>
 </div>
