@@ -426,6 +426,31 @@
         .belege-text { font-size: 0.92rem; color: var(--text-body); line-height: 1.5; }
         .belege .trust-bar { padding: 36px 0 40px; }
 
+        /* ===== PARTNER — eigener Streifen, bewusst NICHT die Trust-Bar =====
+           Die Trust-Bar sagt "gefoerdert durch" und "geprueft von"; ein Partnerlogo
+           darin liest sich als Beleg fuer uns. Deshalb eigener Streifen am Seitenfuss,
+           eigenes Wort, flaches Layout ohne Kachel -- und der Zusatz "eigenstaendig
+           betrieben" im Text, damit niemand eine Mitarbeit hineinliest. */
+        .partner { background: var(--hellgrau); border-top: 1px solid var(--silber); padding: 40px 0; }
+        .partner-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+        .partner-label {
+            font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 0.78rem;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        .partner-item { display: flex; align-items: center; justify-content: center; gap: 26px; text-align: left; }
+        /* flex-shrink gehoert an den Link, nicht an das Bild: Flex-Element ist das <a>,
+           und ohne die Sperre quetscht der lange Textabsatz das Logo auf ein Drittel
+           zusammen (gemessen 21.10.2026: 58 statt 160 px). */
+        .partner-item > a {
+            flex: 0 0 auto; display: block; line-height: 0;
+            background: var(--weiss); border: 1px solid var(--silber);
+            border-radius: 10px; padding: 10px 14px;
+        }
+        .partner-item img { width: 160px; height: 60px; }
+        .partner-item p { font-size: 0.9rem; line-height: 1.65; color: var(--text-light); margin: 0; }
+        .partner-item p strong { color: var(--text-body); font-weight: 600; }
+
         /* ===== SERVICES ===== */
         .services {
             padding: 100px 0;
@@ -557,6 +582,9 @@
             .belege .trust-item { flex-direction: column; justify-self: center; text-align: center; gap: 6px; font-size: 0.78rem; line-height: 1.35; }
             .belege .trust-item img { height: 34px; }
             .belege .trust-item img.logo-startupv { height: 28px; }
+            /* Partnerstreifen mobil untereinander, Logo zentriert ueber dem Text. */
+            .partner { padding: 32px 0; }
+            .partner-item { flex-direction: column; gap: 14px; text-align: center; }
         }
     </style>
 <!-- END styles -->
@@ -932,6 +960,25 @@
                 <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">We have several sites. How does that work?</summary>
                 <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">It starts at one site — that one carries the analysis. Every additional site costs significantly less, because the method is in place and nothing has to be developed from scratch. Billing is per monitored line, and you decide site by site.</p>
             </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PARTNER (21.10.2026) =====
+     Gegenstueck zum Partnerstreifen auf der deutschen Startseite -- gleiche Stelle,
+     gleicher Satz, gleiche Trennung von der Foerderleiste. Aenderungen immer in beiden
+     Fassungen, danach py _scripts/check_englisch.py --bestaetigen index.html. -->
+<section class="partner" id="partner">
+    <div class="container partner-inner">
+        <p class="partner-label">Partner</p>
+        <div class="partner-item">
+            <a href="https://galvanocalc.app/" target="_blank" rel="noopener" data-funnel="partner-galvanocalc-en">
+                <img src="../assets/img/kooperation/galvanocalc.png" alt="GalvanoCalc &amp; Learn" width="160" height="60" loading="lazy">
+            </a>
+            <p><strong>GalvanoCalc &amp; Learn</strong> — a free learning and calculation platform for
+                electroplating, run independently. A good place to go when the basics need to stick or
+                something needs a quick calculation during the working day.
+                <a href="https://galvanocalc.app/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:600;">galvanocalc.app →</a></p>
         </div>
     </div>
 </section>

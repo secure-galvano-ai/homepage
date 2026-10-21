@@ -33,13 +33,22 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   das FFG-Kleinprojekt „ML Galvanik" bewusst **ohne Verfahren** (was gemacht wird, nicht wie) und
   ohne Datengeber beschrieben. Offen: FFG-Logo, Wiedervorlage in
   `BD/projects/ffg-kleinprojekt-2026/README.md` § *Termine*.
-- **Kooperationen stehen dort, wo ihr Thema steht — nicht auf der Startseite** *(Stefan,
-  05.10.2026)*. Eine gegenseitige Verlinkung bekommt einen Block „In Zusammenarbeit mit" auf der
-  passenden Unterseite (Lernplattform → `ausbildung.html`). **Ein Logostreifen auf der
-  Startseite erst ab drei Partnern** — ein einzelnes Logo dort wirkt dünn und stört die eine
-  Botschaft. Logo nur vom Partner selbst, verkleinert und ohne Metadaten nach
-  `assets/img/kooperation/`. Keine Partner-Begründung in Kommentaren oder Commits (Repo ist
-  öffentlich).
+- **Partner stehen im Streifen „Partner" am Fuß der Startseite — nicht im Thema und nicht in
+  der Trust-Bar** *(Stefan, 21.10.2026, ersetzt die Unterseiten-Regel vom 05.10.2026)*. Anlass:
+  Ein Block „In Zusammenarbeit mit" stand direkt hinter dem eigenen Lernwerkzeug auf
+  `ausbildung.html` und las sich für den Partner wie eine Mitarbeit an unserem Projekt. Der
+  Streifen `#partner` (DE `index.html`, EN `en/index.html`, jeweils zwischen FAQ und Abschluss)
+  trennt beides sauber: **eigenes Wort „Partner" gegen „Gefördert durch", eigener Platz, eigene
+  Optik** — flaches Logo im weißen Feld, ein Satz daneben, kein Beleg-Kontext.
+  - **Jeder Satz sagt, dass der Partner eigenständig ist** („eigenständig betrieben", „run
+    independently"). Keine Personennamen: Wer dort als Mensch steht, wirkt wie Personal.
+  - **Logo nur vom Partner selbst**, verkleinert und ohne Metadaten nach
+    `assets/img/kooperation/`; Darstellung 160×60 px. `flex-shrink` gehört an den Link, nicht
+    ans Bild — sonst quetscht der Textabsatz das Logo (21.10.2026: 58 statt 160 px).
+  - **Ein Logo reicht.** Die frühere Schwelle „erst ab drei Partnern" ist damit erledigt; sie
+    entstand aus der Sorge, ein einzelnes Logo wirke dünn — der eigene Streifen im Fuß löst das,
+    ohne die Hauptbotschaft zu stören. Weitere Partner alphabetisch darunter, ein Satz je Partner.
+  - Keine Partner-Begründung in Kommentaren oder Commits (Repo ist öffentlich).
 - **Presse (`#aktuell`): maximal zwei Karten, veraltete ersetzen statt stapeln.** Eine sichtbar
   veraltete News-Sektion schadet mehr als keine. Eine Termin-Karte wird nach dem Termin getauscht
   (KI Days: seit 06.10.2026 Rückblick statt Ankündigung).
@@ -383,7 +392,8 @@ homepage/
                            Bestand statt Austausch (#bestand), Ablauf (#ablauf) mit Preisen nur fuer die
                            Einstiegsstufen (Standortanalyse, Analyse je Fehlerbild; Umsetzung und Betreuung ohne
                            Preis), Lokale Datenverarbeitung mit Beleg-Foto (#lokale-datenverarbeitung),
-                           Kontakt (#kontakt). Traegt KEINE Leistungs-Teaser-Karten.
+                           Partner (#partner, Streifen vor dem Abschluss), Kontakt (#kontakt).
+                           Traegt KEINE Leistungs-Teaser-Karten.
   leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt
                            (#standortanalyse), #datenanalyse (seit 21.10.2026 Stufe 3 „Analyse je Fehlerbild“),
                            sieben Anwendungen (#anwendungen), Fragen (#fragen) mit FAQPage-Schema,
@@ -393,7 +403,8 @@ homepage/
                            auf kommerzielle Suchanfragen.
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
   ausbildung.html          Datenwerkstatt — Aus- und Weiterbildung, Reihenfolge Nutzen -> Ablauf ->
-                           Beispiel -> Angebot, Block „In Zusammenarbeit mit". Flyer dazu:
+                           Beispiel -> Angebot (Partner stehen seit 21.10.2026 nur noch im
+                           Streifen #partner der Startseite). Flyer dazu:
                            docs/datenwerkstatt-ueberblick.pdf — § Datenwerkstatt-Seite.
   forschung.html           Forschungsprojekte (FFG-Kleinprojekt, aws), aws-Jurytermin-Foto.
   sicherheit.html          Compliance-Seite (indexiert, in Sitemap und Footer, bewusst NICHT in der
