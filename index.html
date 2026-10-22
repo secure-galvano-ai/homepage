@@ -593,6 +593,8 @@
             .belege .trust-item { flex-direction: column; justify-self: center; text-align: center; gap: 6px; font-size: 0.78rem; line-height: 1.35; }
             .belege .trust-item img { height: 34px; }
             .belege .trust-item img.logo-startupv { height: 28px; }
+            /* Fuenf Logos (seit 22.10.2026): das letzte steht mobil mittig ueber beide Spalten. */
+            .belege .trust-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
             /* Partnerstreifen mobil untereinander, Logo zentriert ueber dem Text. */
             .partner { padding: 32px 0; }
             .partner-item { flex-direction: column; gap: 14px; text-align: center; }
@@ -889,6 +891,12 @@
                 <div class="trust-item">
                     <img src="assets/img/startup-vorarlberg.svg" class="logo-startupv" alt="Startup Vorarlberg" >
                     Programm Startup Vorarlberg
+                </div>
+                <!-- WKNOe seit 22.10.2026: Listung als KI-Partner der Plattform KI (TIP, Land NOe + WKNOe).
+                     Logo aus der Mailsignatur der WKNOe ausgeschnitten, kein Download. -->
+                <div class="trust-item">
+                    <img src="assets/img/wko-noe.png" alt="Wirtschaftskammer Niederösterreich" width="130" height="40">
+                    KI-Partner der Plattform KI
                 </div>
                 <div class="trust-item">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C6 2 3 5 3 8.5C3 14 10 18 10 18S17 14 17 8.5C17 5 14 2 10 2Z" stroke="#2B5EA7" stroke-width="1.5" fill="none"/><path d="M7.5 9.5L9.5 11.5L13 7.5" stroke="#2B5EA7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
