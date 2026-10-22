@@ -32,7 +32,9 @@ ROOT = Path(__file__).parent
 REDIRECTS = {
     "impressum": ("/impressum.html", "Impressum"),
     "stefan-maier": ("/ueber-mich.html", "Über mich"),
-    "kontakt": ("/index.html#kontakt", "Kontakt"),
+    # Ziel ohne `index.html`: sonst zeigt der Canonical auf /index.html, das selbst auf /
+    # kanonisiert -- eine Kette, und / ist die URL, die in der Sitemap steht.
+    "kontakt": ("/#kontakt", "Kontakt"),
     "trusted-ai": ("/forschung.html", "Forschung & TÜV-Modellprüfung"),
     "data-analytics": ("/leistungen.html", "Leistungen"),
 }
@@ -96,8 +98,12 @@ TEMPLATE = """<!DOCTYPE html>
 def main() -> None:
     print(f"Rendering {len(REDIRECTS)} redirect stubs...")
     for path, (target, label) in REDIRECTS.items():
-        # canonical must not carry a fragment -- Google strips it anyway
+        # canonical must not carry a fragment -- Google strips it anyway -- and must
+        # not end in index.html: that URL canonicalises to / itself, so pointing at it
+        # builds a canonical chain instead of naming the URL from the sitemap.
         canonical = target.split("#")[0]
+        if canonical.endswith("/index.html"):
+            canonical = canonical.removesuffix("index.html")
         out = ROOT / path / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(

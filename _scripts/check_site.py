@@ -12,6 +12,7 @@ Checks (E = Error -> Exit 1, W = Warnung -> Exit 0):
   5. Generator-Sync          (Marker-Inhalt == _generate_layout-Ausgabe)   E
   6. Interne Links / Assets  (href/src auf lokale Datei existiert)         E
   7. Transliterations-Reste  (ae/oe/ue in Sichttext, kuratierte Ausnahmen) W
+  8. Sitemap <-> noindex     (Widerspruch in beide Richtungen, lastmod)    E/W
 
 Aufruf:
     py scripts/check_site.py            # alle Root-*.html
@@ -112,6 +113,87 @@ def defined_tokens(css_texts: list[str]) -> set[str]:
     return toks
 
 
+# ---- 8. Sitemap <-> Indexierung ----------------------------------------------
+# Die Search Console meldet den Widerspruch "Seite steht in der Sitemap, traegt
+# aber noindex" als eigene Fehlerklasse -- und sie entsteht lautlos: eine Seite
+# zurueckstellen heisst zwei Dateien aendern, die Sitemap wird dabei vergessen.
+# Umgekehrt genauso: eine Seite ohne Datei bekommt von GitHub Pages die 404-Seite
+# serviert, und die traegt noindex -- Google sieht also exakt denselben Befund.
+SITE = "https://secure-galvano-ai.com"
+
+
+def robots_meta(html: str) -> str:
+    """Inhalt des robots-Meta-Tags in Kleinschreibung, '' wenn keines gesetzt ist."""
+    tag = re.search(r'<meta\s+[^>]*name=["\']robots["\'][^>]*>', html, re.I)
+    if not tag:
+        return ""
+    inhalt = re.search(r'content=["\']([^"\']+)["\']', tag.group(0), re.I)
+    return inhalt.group(1).strip().lower() if inhalt else ""
+
+
+def ist_weiterleitung(html: str) -> bool:
+    """Redirect-Stub: Instant-Meta-Refresh statt eigenem Inhalt."""
+    return bool(re.search(r'<meta\s+[^>]*http-equiv=["\']refresh["\']', html, re.I))
+
+
+def ausgelieferte_seiten() -> list[Path]:
+    """Jede HTML-Seite, die Jekyll ausliefert -- Unterstrich-Praefixe tun es nicht."""
+    return sorted(
+        p for p in ROOT.rglob("*.html")
+        if not any(teil.startswith("_") for teil in p.relative_to(ROOT).parts)
+    )
+
+
+def check_indexierung(gen) -> None:
+    sitemap = ROOT / "sitemap.xml"
+    if not sitemap.exists():
+        err("sitemap.xml", "fehlt -- robots.txt verweist darauf")
+        return
+
+    sys.path.insert(0, str(ROOT / "_scripts"))
+    import sitemap_pflegen
+
+    text = sitemap.read_text(encoding="utf-8")
+    gelistet: dict[str, str] = {}  # Dateipfad relativ zur Wurzel -> URL
+    for block in re.findall(r"<url>.*?</url>", text, re.DOTALL):
+        treffer = re.search(r"<loc>\s*([^<\s]+)\s*</loc>", block)
+        if not treffer:
+            err("sitemap.xml", "<url>-Block ohne <loc>")
+            continue
+        url = treffer.group(1)
+        if not url.startswith(SITE):
+            err("sitemap.xml", f"URL zeigt nicht auf {SITE}: {url}")
+            continue
+        datei = sitemap_pflegen.datei_zu_url(url)
+        gelistet[datei.relative_to(ROOT).as_posix()] = url
+        if not datei.exists():
+            err("sitemap.xml", f"{url} -> {datei.name} fehlt (Pages liefert die 404-Seite)")
+            continue
+        html = datei.read_text(encoding="utf-8")
+        if "noindex" in robots_meta(html):
+            err("sitemap.xml", f"{url} traegt noindex -- entweder noindex raus oder URL raus")
+        if ist_weiterleitung(html):
+            err("sitemap.xml", f"{url} ist ein Weiterleitungs-Stub und gehoert nicht hinein")
+        alt = re.search(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", block)
+        neu = sitemap_pflegen.commit_datum(datei)
+        if alt and neu and alt.group(1) != neu:
+            warn("sitemap.xml", f"lastmod {url}: {alt.group(1)} statt {neu} "
+                                "-> py _scripts/sitemap_pflegen.py")
+
+    # Gegenrichtung: zurueckgestellte Seiten duerfen nicht in der Sitemap stehen,
+    # und eine Inhaltsseite mit Navigationseintrag darf dort nicht fehlen.
+    inhaltsseiten = set(getattr(gen, "PAGES", {})) | set(getattr(gen, "PAGES_EN", {})) if gen else set()
+    for pfad in ausgelieferte_seiten():
+        rel = pfad.relative_to(ROOT).as_posix()
+        html = pfad.read_text(encoding="utf-8")
+        verborgen = "noindex" in robots_meta(html)
+        if verborgen and rel in gelistet:
+            err(rel, "traegt noindex, steht aber in der Sitemap")
+        if not verborgen and not ist_weiterleitung(html) and rel in inhaltsseiten \
+                and rel not in gelistet:
+            warn(rel, "indexierbare Inhaltsseite fehlt in der Sitemap")
+
+
 # ---- helpers -----------------------------------------------------------------
 def style_blocks(html: str) -> list[str]:
     return re.findall(r"<style>(.*?)</style>", html, re.DOTALL)
@@ -146,8 +228,9 @@ def main() -> int:
         # totes Redirect-Ziel genauso auffliegt wie ein toter interner Link.
         # Seit 12.10.2026 dazu die englische Fassung unter en/ (en/index.html steckt
         # schon im zweiten Muster, deshalb ueber eine Menge).
-        pages = sorted(set(ROOT.glob("*.html")) | set(ROOT.glob("*/index.html"))
-                       | set(ROOT.glob("en/*.html")))
+        # rglob statt glob: die Kurzlinks liegen zwei Ebenen tief (en/li/, werkzeug/aufgaben/)
+        # und sind sonst aus jeder Pruefung herausgefallen.
+        pages = ausgelieferte_seiten()
 
     for path in pages:
         page = path.relative_to(ROOT).as_posix()
@@ -206,6 +289,11 @@ def main() -> int:
         visible = re.sub(r"<[^>]+>", " ", visible)
         for m in TRANSLIT_BAD.finditer(visible):
             warn(page, f"moegliche Transliteration: '{m.group(0)}'")
+
+    # Sitemap und noindex gegeneinander (seit 22.10.2026) -- nur im Vollauf, der
+    # Befund gilt fuer die Site als Ganzes, nicht fuer eine einzelne Seite.
+    if not args:
+        check_indexierung(gen)
 
     # Englische Fassung gegen die deutsche (seit 12.10.2026). Hier eingebunden, damit
     # Gate 1 sie nicht vergessen kann -- Einzelheiten in check_englisch.py.
