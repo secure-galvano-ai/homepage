@@ -81,7 +81,7 @@ def main() -> int:
     if nur_pruefen:
         print("\n--pruefen: nichts geschrieben. Ohne den Schalter nachziehen.")
         return 1
-    SITEMAP.write_text(neuer_text, encoding="utf-8")
+    SITEMAP.write_text(neuer_text, encoding="utf-8", newline="\n")
     print("\nsitemap.xml nachgezogen.")
     return 0
 

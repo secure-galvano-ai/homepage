@@ -358,6 +358,7 @@ def main() -> None:
         if not path.exists():
             raise SystemExit(f"Page not found: {filename}")
         text = path.read_text(encoding="utf-8")
+        original = text
         # A page joins the system once it carries the markers; until then skip it
         # (keeps the rollout incremental instead of failing on un-migrated pages).
         if "<!-- BEGIN nav -->" not in text:
@@ -368,7 +369,10 @@ def main() -> None:
                 text = inject(text, marker, html)
         text, n_links = sync_booking_links(text, booking_url(filename))
         links_fixed += n_links
-        path.write_text(text, encoding="utf-8")
+        if text == original:
+            continue
+        # LF like the repo; Windows would otherwise write CRLF and leave no-op diffs.
+        path.write_text(text, encoding="utf-8", newline="\n")
         print(f"  updated {filename}" + (f" ({n_links} Buchungslinks nachgezogen)" if n_links else ""))
         updated += 1
     if skipped:

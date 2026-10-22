@@ -109,12 +109,15 @@ def main() -> None:
         out.write_text(
             TEMPLATE.format(target=target, canonical=canonical, label=label, site=SITE),
             encoding="utf-8",
+            newline="\n",
         )
         print(f"  /{path}/ -> {target}")
     for path, (target, label) in SHORTLINKS.items():
         out = ROOT / path / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(SHORTLINK_TEMPLATE.format(target=target, label=label), encoding="utf-8")
+        out.write_text(
+            SHORTLINK_TEMPLATE.format(target=target, label=label), encoding="utf-8", newline="\n"
+        )
         print(f"  /{path}/ -> {target} (short link)")
     print("Done.")
 
