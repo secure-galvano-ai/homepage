@@ -397,7 +397,8 @@ homepage/
     js/
       consent.js           Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
       site.js              Geteiltes Verhalten (§ Architektur)
-  _scripts/                check_site.py (vor jedem Deploy), check_inhalt.py, check_englisch.py;
+  _scripts/                check_site.py (vor jedem Deploy), check_inhalt.py, check_englisch.py,
+                           sitemap_pflegen.py (lastmod nachziehen);
                            Messung (clarity_daily.py, youtube_abrufe.py, wochenbericht.py) -> OPTIMIERUNG.md
   _doku/                   Betriebsdoku, die nicht ausgeliefert wird (Unterstrich) — infrastruktur.md
   _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
@@ -436,7 +437,10 @@ homepage/
   CNAME                    Custom Domain Config — nicht löschen (_doku/infrastruktur.md)
   _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung — nie docs/ eintragen
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (13 URLs, davon 4 englisch -- Stand 12.10.2026)
+  sitemap.xml              Google Sitemap (13 URLs, davon 4 englisch -- Stand 12.10.2026).
+                           Welche URL hineingehoert, ist Handarbeit; die lastmod-Daten nicht
+                           (_scripts/sitemap_pflegen.py), und check_site.py Check 8 haelt die
+                           Liste gegen noindex und fehlende Dateien.
   README.md                Diese Datei
 ```
 
@@ -451,8 +455,8 @@ meisten Eintraege sind **Soll-Zustand**, kein Defekt. Einordnung vor jeder Reakt
 
 | Meldung | Ursache | Zu tun |
 |---|---|---|
-| **Nicht gefunden (404)** | Alt-URLs der WordPress-Installation bei IONOS. Instanz ist mit dem Vertragsende **02.06.2026** weg. Kein Link im Repo zeigt darauf (`check_site.py` prueft das). | Zweiteilen: Alt-URL **mit** heutigem Pendant -> Redirect-Stub in `_generate_redirects.py` eintragen. Alt-URL **ohne** Pendant (tote PDFs, `/wp-*.php`-Bot-Scans) -> nichts tun, 404 ist der korrekte Endzustand. |
-| **Durch „noindex"-Tag ausgeschlossen** | Keine Inhaltsseite der Website traegt `noindex`. Frueher zurueckgestellte Seiten koennen noch eine Weile hier auftauchen, bis Google neu crawlt. | Nichts. Haengt eine Seite nach Wochen noch hier, einmalig „Indexierung beantragen". |
+| **Nicht gefunden (404)** | **Zwei** Quellen. (a) Alt-URLs der WordPress-Installation bei IONOS, mit dem Vertragsende **02.06.2026** weg. (b) Eigene, einmal ausgelieferte Dateien, die inzwischen entfernt wurden — die Liste holt `git log --diff-filter=D --name-only -- "*.html" "*.pdf" "*.jpg"` und die Gegenprobe, ob die Datei heute noch existiert. Kein **Link im Repo** zeigt je darauf, das prueft `check_site.py`. | Zweiteilen: URL **mit** heutigem Pendant -> Redirect-Stub in `_generate_redirects.py`. URL **ohne** Pendant (tote PDFs und Bilder, `/wp-*.php`-Bot-Scans, vom Auftritt genommene Werkzeugseiten) -> nichts tun, 404 ist der korrekte Endzustand. Eine Weiterleitung auf eine bewusst verborgene Nachfolgeadresse ist **keine** Option. |
+| **Durch „noindex"-Tag ausgeschlossen** | Keine Seite in der Sitemap traegt `noindex` — `check_site.py` Check 8 prueft das in beide Richtungen, auch die Umkehrung (die vier verborgenen Seiten `termin/`, `li/`, `en/li/`, `werkzeug/aufgaben/` duerfen dort nicht auftauchen). Was im **Sitemap**-Bericht trotzdem hier landet, sind Adressen, die Google aus einer Sitemap kennt und die heute 404 liefern: GitHub Pages serviert dafuer `404.html`, und die traegt `noindex`. Gleiche Wurzel wie die Zeile darueber. | Nichts. Steht eine URL betroffen da, die **wirklich in `sitemap.xml`** liegt, ist es ein Defekt — dann schlaegt Check 8 an. |
 | **Alternative Seite mit richtigem kanonischen Tag** | `/index.html` vs. `/` — Canonical zeigt korrekt auf `/`. | Nichts. |
 | **Gecrawlt / Gefunden – zurzeit nicht indexiert** | Googles Qualitaets-/Budget-Entscheidung, kein technischer Fehler. Einziger echter SEO-Hebel im Bericht. | Betroffene URL in der URL-Pruefung ansehen, Inhalt schaerfen (eigenstaendiger Text, interne Verlinkung), dann **„Indexierung beantragen"**. Nicht wiederholt beantragen. |
 
@@ -473,8 +477,11 @@ und verhindert damit, dass Google den Refresh ueberhaupt als Redirect verarbeite
 zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL.
 `noindex` gehoert nur auf zurueckgestellte **Inhalts**seiten mit Self-Canonical.
 
-**Sitemap:** `lastmod` beim Deploy auf das tatsaechliche Aenderungsdatum ziehen
-(`git log -1 --format=%ad --date=short -- <datei>`) — veraltete Werte kosten Crawl-Prioritaet.
+**Sitemap:** `lastmod` zieht `py _scripts/sitemap_pflegen.py` aus dem letzten Commit der
+jeweiligen Datei (`--pruefen` schreibt nicht), und `check_site.py` warnt, solange ein Wert
+veraltet ist. Veraltete Werte kosten Crawl-Prioritaet, ein pauschales „heute" verbrennt sie.
+**Als Vorgabe im Text hat das nicht gehalten:** Am 22.10.2026 waren alle 13 Daten veraltet,
+das aelteste um 3,5 Monate — deshalb jetzt ein Skript und eine Warnung statt einer Zeile hier.
 
 ## DNS-Konfiguration, IONOS und Systemabhängigkeiten
 
