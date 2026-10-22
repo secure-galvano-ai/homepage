@@ -36,13 +36,18 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   dem eigenen Lernwerkzeug auf `ausbildung.html` las sich für den Partner wie eine Mitarbeit an
   unserem Projekt. Der Streifen `#partner` (DE `index.html`, EN `en/index.html`, zwischen FAQ und
   Abschluss) trennt beides: **eigenes Wort „Partner" gegen „Gefördert durch", eigener Platz,
-  eigene Optik** — flaches Logo im weißen Feld, ein Satz daneben, kein Beleg-Kontext. **Ein Logo
-  reicht**, weitere Partner alphabetisch darunter, ein Satz je Partner.
+  eigene Optik** — flaches Logo im weißen Feld, ein Satz daneben, kein Beleg-Kontext. Partner
+  alphabetisch untereinander, ein Satz je Partner (Stand 22.10.2026: GalvanoCalc, Galvanoclean).
   - **Jeder Satz sagt, dass der Partner eigenständig ist** („eigenständig betrieben", „run
     independently"). Keine Personennamen: Wer dort als Mensch steht, wirkt wie Personal.
-  - **Logo nur vom Partner selbst**, verkleinert und ohne Metadaten nach
-    `assets/img/kooperation/`; Darstellung 160×60 px. `flex-shrink` gehört an den Link, nicht
-    ans Bild — sonst quetscht der Textabsatz das Logo (21.10.2026: 58 statt 160 px).
+  - **Logo nur vom Partner selbst oder von seinem eigenen Auftritt**, verkleinert und ohne
+    Metadaten nach `assets/img/kooperation/`; Feld 160×60 px. `flex-shrink` gehört an den Link,
+    nicht ans Bild — sonst quetscht der Textabsatz das Logo (21.10.2026: 58 statt 160 px).
+  - **Das Feld ist für jeden Partner gleich groß, das Logo darin behält sein Seitenverhältnis**
+    (`object-fit: contain`). Zwei Wortmarken haben selten dasselbe Format — eine feste Höhe am
+    Bild zerrt die flachere in die Höhe (22.10.2026: 4:1 wäre auf 8:3 gezogen worden). Dateibreite
+    dreifach (480 px), als Palettenbild gespeichert: ein Viertel des Gewichts bei gleicher
+    Darstellung (28 → 6 KB).
   - Keine Partner-Begründung in Kommentaren oder Commits (Repo ist öffentlich).
 - **Presse (`#aktuell`): maximal zwei Karten, veraltete ersetzen statt stapeln.** Eine sichtbar
   veraltete News-Sektion schadet mehr als keine. Eine Termin-Karte wird nach dem Termin getauscht

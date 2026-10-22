@@ -439,6 +439,7 @@
             margin-bottom: 20px;
         }
         .partner-item { display: flex; align-items: center; justify-content: center; gap: 26px; text-align: left; }
+        .partner-item + .partner-item { margin-top: 26px; }
         /* flex-shrink gehoert an den Link, nicht an das Bild: Flex-Element ist das <a>,
            und ohne die Sperre quetscht der lange Textabsatz das Logo auf ein Drittel
            zusammen (gemessen 21.10.2026: 58 statt 160 px). */
@@ -447,7 +448,11 @@
             background: var(--weiss); border: 1px solid var(--silber);
             border-radius: 10px; padding: 10px 14px;
         }
-        .partner-item img { width: 160px; height: 60px; }
+        /* Das weisse Feld ist bei jedem Partner gleich gross, das Logo darin behaelt
+           sein eigenes Seitenverhaeltnis: object-fit legt es hinein, statt es auf
+           160x60 zu ziehen. Zwei Wortmarken haben selten dasselbe Format -- ohne die
+           Zeile wuerde die flachere in die Hoehe gezerrt (22.10.2026: 4:1 auf 8:3). */
+        .partner-item img { width: 160px; height: 60px; object-fit: contain; }
         .partner-item p { font-size: 0.9rem; line-height: 1.65; color: var(--text-light); margin: 0; }
         .partner-item p strong { color: var(--text-body); font-weight: 600; }
 
@@ -1055,6 +1060,15 @@
                 electroplating, run independently. A good place to go when the basics need to stick or
                 something needs a quick calculation during the working day.
                 <a href="https://galvanocalc.app/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:600;">galvanocalc.app →</a></p>
+        </div>
+        <div class="partner-item">
+            <a href="https://www.galvano-clean.de/" target="_blank" rel="noopener" data-funnel="partner-galvanoclean-en">
+                <img src="../assets/img/kooperation/galvanoclean.png" alt="Galvanoclean" width="160" height="60" loading="lazy">
+            </a>
+            <p><strong>Galvanoclean</strong> — a service provider for plating lines in Germany, run
+                independently. Worth a call when the line itself needs work: cleaning of tanks and
+                extraction systems, maintenance, installation and conversion.
+                <a href="https://www.galvano-clean.de/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:600;">galvano-clean.de →</a></p>
         </div>
     </div>
 </section>

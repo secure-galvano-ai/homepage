@@ -574,7 +574,7 @@ Gegenseitige Verlinkung mit einem eigenstaendigen Anbieter. Steht hier und nicht
 in der Logoleiste unter dem Hero: dort heisst jede Zeile "gefoerdert durch" oder
 "geprueft von", ein Partnerlogo waere dann ein Beleg fuer uns. Umgekehrt stand der
 Block bis heute mitten im Ausbildungsteil und wirkte wie eine gemeinsame
-Entwicklung. Logo vom Partner selbst geliefert, verkleinert und ohne Metadaten.
+Entwicklung. Logos auf Anzeigegroesse verkleinert und ohne Metadaten.
 Pflege: Reihenfolge alphabetisch, ein Satz je Partner, DE und EN gleich. -->
 <section class="partner" id="partner">
 <div class="container partner-inner">
@@ -587,6 +587,15 @@ Pflege: Reihenfolge alphabetisch, ein Satz je Partner, DE und EN gleich. -->
 Galvanotechnik, eigenständig betrieben. Eine gute Anlaufstelle, wenn Grundlagen sitzen
 sollen oder im Betriebsalltag schnell etwas nachzurechnen ist.
 <a href="https://galvanocalc.app/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:600;">galvanocalc.app →</a></p>
+</div>
+<div class="partner-item">
+<a href="https://www.galvano-clean.de/" target="_blank" rel="noopener" data-funnel="partner-galvanoclean">
+<img src="assets/img/kooperation/galvanoclean.png" alt="Galvanoclean" width="160" height="60" loading="lazy">
+</a>
+<p><strong>Galvanoclean</strong> — Dienstleister für Galvanikanlagen in Deutschland,
+eigenständig betrieben. Gefragt, wenn an der Anlage selbst etwas zu tun ist:
+Reinigung von Bädern und Absaugungen, Instandhaltung, Auf- und Umbau.
+<a href="https://www.galvano-clean.de/" target="_blank" rel="noopener" style="color:var(--schild-blau);font-weight:600;">galvano-clean.de →</a></p>
 </div>
 </div>
 </section>
