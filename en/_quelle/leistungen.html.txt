@@ -1,8 +1,8 @@
 <title>Leistungen und Preise für Galvanikbetriebe · secure galvano ai</title>
-<meta name="description" content="Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Setup-Check zum Festpreis: ob Ihre Galvanikdaten tragen, woran Fehler liegen, wo das Geld liegt.">
+<meta name="description" content="Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Basis-Setup zum Festpreis: ob Ihre Galvanikdaten tragen, woran Fehler liegen, wo das Geld liegt.">
 <meta name="keywords" content="Galvanik Software, Software für Galvanikanlagen, Digitalisierung Galvanotechnik, Standortanalyse Galvanik, Datenauswertung Oberflächentechnik, KI Galvanik, Potenzialanalyse Galvanotechnik">
 <meta property="og:title" content="Leistungen und Preise — secure galvano ai">
-<meta property="og:description" content="Vier Angebote zum Festpreis: Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Setup-Check. Danach wissen Sie, ob Ihre Daten tragen und wo das Geld liegt.">
+<meta property="og:description" content="Vier Angebote zum Festpreis: Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Basis-Setup. Danach wissen Sie, ob Ihre Daten tragen und wo das Geld liegt.">
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -38,7 +38,7 @@
 "name": "Was passiert mit unseren Daten?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Setup-Check gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Rezepturen werden nicht gebraucht, und was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt."
+"text": "Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Basis-Setup gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Rezepturen werden nicht gebraucht, und was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt."
 }
 },
 {
@@ -77,7 +77,7 @@ link-umsetzung-hero bleiben, damit die Clarity-Reihen weiterlaufen. -->
 <a href="#standortanalyse" data-funnel="link-standortanalyse-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Daten erschließen</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Standortanalyse</strong><span style="font-size:0.86rem;opacity:.82;">1.500 € netto je Standort</span></a>
 <a href="#erstanalyse" data-funnel="link-erstanalyse-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Daten liegen vor</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Erstanalyse</strong><span style="font-size:0.86rem;opacity:.82;">1.500 € netto je Datenbestand</span></a>
 <a href="#analyse-je-fehlerbild" data-funnel="link-vorprojekt-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Ursachen finden</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Analyse je Fehlerbild</strong><span style="font-size:0.86rem;opacity:.82;">5.000 € netto je Fehlerbild</span></a>
-<a href="#ki-setup-check" data-funnel="link-kisetup-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Ihr Team wertet aus</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">KI-Setup-Check</strong><span style="font-size:0.86rem;opacity:.82;">5.000 € netto, 1 bis 3 Personen</span></a>
+<a href="#ki-setup-check" data-funnel="link-kisetup-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Ihr Team wertet aus</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">KI-Basis-Setup</strong><span style="font-size:0.86rem;opacity:.82;">9.900 € netto, 1 bis 3 Personen</span></a>
 </nav>
 <p style="margin-top:14px;font-size:0.9rem;color:rgba(255,255,255,0.78);">Davor: ein <a href="index.html#ablauf" data-funnel="link-ablauf-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">kostenloses Erstgespräch</a> von 30 Minuten. Danach: die <a href="#danach" data-funnel="link-umsetzung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Begleitung der Fehlerbehebung</a>, Festpreis je Projekt, und die <a href="#betreuung" data-funnel="link-betreuung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Betreuung je Anlage</a>.</p>
 <!-- 23.09.2026: „netto" und der B2B-Hinweis. Eine offen zugaengliche Seite gilt
@@ -200,16 +200,17 @@ Lässt sich die Ursache nicht eingrenzen, sagt der Befund, welche Angabe oder Me
 </div>
 </div>
 </section>
-<!-- ===== KI-SETUP-CHECK (21.10.2026) =====
+<!-- ===== KI-BASIS-SETUP (21.10.2026, umbenannt und auf 9.900 EUR angehoben 22.10.2026) =====
 Eigener Einstieg neben der Leiter: Setup fuer die Datenanalyse beim Kunden. Nach
 aussen "datenschutzgerecht und nach EU-KI-Verordnung eingerichtet", nie "konform".
 Keine Anbieternamen. Keine Datenuebergabe an uns. Preis: BD/areas/preise.yaml
-weitere.ki_setup_check. -->
+weitere.ki_basis_setup. Der Anker #ki-setup-check und die Funnel-Marker *kisetup*
+bleiben stehen (verschickte Links, Clarity-Reihen). -->
 <section id="ki-setup-check" style="padding:56px 0;background:var(--hellgrau);">
 <div class="container">
 <p class="section-label">Einstieg · Ihr Team wertet selbst aus</p>
-<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Der KI-Setup-Check</h2>
-<p class="lead" style="max-width:780px;margin-bottom:26px;">Ihre Fachkräfte beantworten Datenfragen selbst, in Stunden statt in Projekten und ohne zu programmieren. Wir richten das Setup dafür ein — datenschutzgerecht und nach EU-KI-Verordnung eingerichtet. <strong>5.000 € netto</strong>, Probe-Setup für 1 bis 3 Personen.</p>
+<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Das KI-Basis-Setup</h2>
+<p class="lead" style="max-width:780px;margin-bottom:26px;">Ihre Fachkräfte werten Ihre Prozessdaten selbst aus — Datenfragen in Stunden statt in Projekten, ohne zu programmieren. Wir richten das Setup dafür ein, datenschutzgerecht und nach EU-KI-Verordnung. <strong>9.900 € netto</strong>, Festpreis je Betrieb, für 1 bis 3 Personen.</p>
 <ul class="baust-liste" style="margin-bottom:24px;">
 <li><b>Einrichtung</b> der Arbeitsumgebung mit Freigaben und schriftlicher Datengrenze, abgestimmt mit Ihrer IT.</li>
 <li><b>Eine Testanlage mit der Struktur Ihrer Daten:</b> Die Werkzeuge entstehen an künstlichen Beispieldaten und laufen danach lokal auf Ihren echten Daten — Ihre Messwerte sieht keine KI.</li>
@@ -255,7 +256,7 @@ und #bausteine bleiben als Sprungmarken in diesem Abschnitt stehen. -->
 <li><b>Fehlerkosten</b> — wiederkehrende Fehler, die im Tagesgeschäft nur abgestellt statt verstanden werden.</li>
 <li><b>Chemie und Entsorgung</b> — nachdosiert, ohne dass jemand weiß, ob es nötig war.</li>
 <li><b>Automatisierungsgrad</b> — Wartungsplanung und Listen auf Papier, die jede Woche Stunden binden.</li>
-<li><b>KI-Kompetenz im Haus</b> — ein Kernteam arbeitet mit KI, Rezepturen und Messwerte bleiben im Haus; Einstieg ist der <a href="#ki-setup-check" data-funnel="link-kisetup-feld4">KI-Setup-Check</a>.</li>
+<li><b>KI-Kompetenz im Haus</b> — ein Kernteam arbeitet mit KI, Rezepturen und Messwerte bleiben im Haus; Einstieg ist das <a href="#ki-setup-check" data-funnel="link-kisetup-feld4">KI-Basis-Setup</a>.</li>
 </ul>
 <span id="anwendungen" aria-hidden="true"></span>
 <h3 style="font-size:1.08rem;color:var(--dunkelblau);margin:34px 0 14px;">Was daraus typischerweise entsteht</h3>
@@ -309,7 +310,7 @@ sind wortgleich; beim Aendern beide nachziehen. ===== -->
 <details class="frage">
 <summary>Was passiert mit unseren Daten?</summary>
 <div class="antwort">
-<p>Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Setup-Check gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Rezepturen werden nicht gebraucht, und was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt.</p>
+<p>Für die Analysen stellen Sie nur den Auszug bereit, den Sie freigeben — verschlüsselt übergeben, nach unterschriebener beidseitiger NDA. Ausgewertet wird auf unseren eigenen Rechnern, kein KI-Dienst sieht Ihre Messwerte. Beim KI-Basis-Setup gibt es keine Übergabe an uns, wir arbeiten in Ihrer Umgebung. Rezepturen werden nicht gebraucht, und was ein Werkzeug sehen darf, wird vorher schriftlich festgelegt.</p>
 <p><a href="sicherheit.html" data-funnel="link-sicherheit-leistungen">Welche Rahmenwerke dahinterstehen</a></p>
 </div>
 </details>

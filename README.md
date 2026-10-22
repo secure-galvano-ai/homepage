@@ -213,6 +213,7 @@ auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert ha
   Sprachen (`OPTIMIERUNG.md` §4).
 - Glossar: Modellprüfung = *model audit* (nie *certification/certified*), Standortanalyse =
   *Site Assessment*, Analyse je Fehlerbild = *Defect Analysis* (bis 20.10.2026 Vorprojekt = *Feasibility Project*), Erstgespräch = *intro call*,
+  KI-Basis-Setup = *AI Base Setup* (bis 22.10.2026 KI-Setup-Check = *AI Setup Check*),
   Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
   „Regelkarte“ ist auch als *control chart* gesperrt (die Prüfung schlägt an).
 - Was nur für Österreich gilt (Förderprogramme), entfällt auf Englisch. Preise als

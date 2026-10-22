@@ -159,8 +159,10 @@ WKO Kärnten · Urkunde ansehen
 </section>
 <!-- ===== ANGEBOTE — vier Karten, aufklappbar (Vorschlag 21.10.2026) =====
 Ersetzt den frueheren Ablauf-Strang. id bleibt "ablauf", weil forschung.html und
-leistungen.html darauf verlinken. Preise: BD/areas/preise.yaml (Erstanalyse und
-KI-Setup-Check dort noch `intern`, Staffelpreise sind Vorschlag). Jede Karte traegt die
+leistungen.html darauf verlinken. Preise: BD/areas/preise.yaml. Das vierte Angebot heisst
+seit 22.10.2026 "KI-Basis-Setup" und kostet 9.900 EUR (vorher "KI-Setup-Check", 5.000 EUR);
+die Funnel-Marker *kisetup* und die PDF-Dateinamen bleiben bewusst stehen, daran haengen
+Clarity-Reihen und verschickte Links. Jede Karte traegt die
 Unterlagen, die vorher im Ablauf und im Hero standen, damit nichts verloren geht. -->
 <style>
 .angebote-karten { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
@@ -294,10 +296,10 @@ Unterlagen, die vorher im Ablauf und im Hero standen, damit nichts verloren geht
 <details class="angebot-karte neu">
 <summary>
 <span class="angebot-stufe">Neu</span>
-<h3>KI-Setup-Check</h3>
-<p class="angebot-frage">Ihre Leute werten Ihre Daten selbst aus, sicher eingerichtet.</p>
+<h3>KI-Basis-Setup</h3>
+<p class="angebot-frage">Ihre Leute werten Ihre Prozessdaten selbst aus, sicher eingerichtet.</p>
 <p class="angebot-fuer">Für Fachkräfte, die Auswertungen ihrer Prozess- und Qualitätsdaten selbst bauen wollen, ohne zu programmieren.</p>
-<div class="angebot-preis">5.000 €<small>Probe-Setup für 1 bis 3 Personen</small></div>
+<div class="angebot-preis">9.900 €<small>Festpreis je Betrieb, für 1 bis 3 Personen</small></div>
 <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
 </summary>
 <div class="angebot-inhalt">
@@ -322,7 +324,7 @@ Unterlagen, die vorher im Ablauf und im Hero standen, damit nichts verloren geht
 </div>
 <p class="fade-up" style="text-align:center;color:var(--text-light);font-size:0.88rem;margin:18px 0 0;">Alle Preise netto, zuzüglich USt.</p>
 <div class="fade-up" style="text-align:center;margin-top:30px;">
-<p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">Für die drei Analysen werten wir Ihre Daten auf unseren eigenen Rechnern aus — bevor eine Datei Ihr Haus verlässt, unterschreiben wir eine beidseitige NDA. Beim KI-Setup-Check arbeiten wir in Ihrer Umgebung, eine Übergabe von Daten an uns gibt es nicht. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">NDA vorab lesen (PDF)</a></p>
+<p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">Für die drei Analysen werten wir Ihre Daten auf unseren eigenen Rechnern aus — bevor eine Datei Ihr Haus verlässt, unterschreiben wir eine beidseitige NDA. Beim KI-Basis-Setup arbeiten wir in Ihrer Umgebung, eine Übergabe von Daten an uns gibt es nicht. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">NDA vorab lesen (PDF)</a></p>
 <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:16px auto 0;max-width:700px;"><strong style="color:var(--dunkelblau);">Und danach?</strong> Wir begleiten Ihr Team bei der Fehlerbehebung, zum Festpreis je Projekt, vereinbart, bevor Sie zusagen. Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von 60.000 bis 90.000 €. <a href="leistungen.html#danach" data-funnel="link-danach-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Wie es weitergeht</a></p>
 <p style="color:var(--text-light);font-size:0.9rem;margin-top:12px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten der späteren Schritte deutlich senken.</p>
 </div>
