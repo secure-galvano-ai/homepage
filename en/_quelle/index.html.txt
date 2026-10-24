@@ -361,9 +361,15 @@ Bildschirmhoehen Belege liegen (CSS .belege). -->
 <img src="assets/img/aws.png" alt="aws Austria Wirtschaftsservice" >
 Gefördert durch aws Deep Tech
 </div>
+<!-- Foerderhinweis seit 24.10.2026: Pflicht aus Punkt 3.3 der Foerdervereinbarung
+Startup Vorarlberg (Inkubation im Rahmen AplusB Scale-up, Vertragsbeginn 29.10.2026):
+beide Logos plus Hinweis. AplusB-Logo von startup-vorarlberg.at (Foerderblock dort). -->
 <div class="trust-item">
+<span class="logo-paar">
 <img src="assets/img/startup-vorarlberg.svg" class="logo-startupv" alt="Startup Vorarlberg" >
-Programm Startup Vorarlberg
+<img src="assets/img/aplusb.png" class="logo-aplusb" alt="Teil von AplusB" width="73" height="34">
+</span>
+Gefördert von Startup Vorarlberg im Rahmen von AplusB Scale-up
 </div>
 <!-- WKNOe seit 22.10.2026: Listung als KI-Partner der Plattform KI (TIP, Land NOe + WKNOe).
 Logo aus der Mailsignatur der WKNOe ausgeschnitten, kein Download. -->

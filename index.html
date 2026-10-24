@@ -397,6 +397,8 @@
 
         .trust-item img { height: 40px; width: auto; display: block; }
         .trust-item img.logo-startupv { height: 34px; }
+        .trust-item img.logo-aplusb { height: 34px; }
+        .trust-item .logo-paar { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
         .trust-item svg { flex-shrink: 0; width: 26px; height: 26px; }
 
         .trust-items {
@@ -598,6 +600,7 @@
             .belege .trust-item { flex-direction: column; justify-self: center; text-align: center; gap: 6px; font-size: 0.78rem; line-height: 1.35; }
             .belege .trust-item img { height: 34px; }
             .belege .trust-item img.logo-startupv { height: 28px; }
+            .belege .trust-item img.logo-aplusb { height: 28px; }
             /* Fuenf Logos (seit 22.10.2026): das letzte steht mobil mittig ueber beide Spalten. */
             .belege .trust-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
             /* Partnerstreifen mobil untereinander, Logo zentriert ueber dem Text. */
@@ -893,9 +896,15 @@
                     <img src="assets/img/aws.png" alt="aws Austria Wirtschaftsservice" >
                     Gefördert durch aws Deep Tech
                 </div>
+                <!-- Foerderhinweis seit 24.10.2026: Pflicht aus Punkt 3.3 der Foerdervereinbarung
+                     Startup Vorarlberg (Inkubation im Rahmen AplusB Scale-up, Vertragsbeginn 29.10.2026):
+                     beide Logos plus Hinweis. AplusB-Logo von startup-vorarlberg.at (Foerderblock dort). -->
                 <div class="trust-item">
-                    <img src="assets/img/startup-vorarlberg.svg" class="logo-startupv" alt="Startup Vorarlberg" >
-                    Programm Startup Vorarlberg
+                    <span class="logo-paar">
+                        <img src="assets/img/startup-vorarlberg.svg" class="logo-startupv" alt="Startup Vorarlberg" >
+                        <img src="assets/img/aplusb.png" class="logo-aplusb" alt="Teil von AplusB" width="73" height="34">
+                    </span>
+                    Gefördert von Startup Vorarlberg im Rahmen von AplusB Scale-up
                 </div>
                 <!-- WKNOe seit 22.10.2026: Listung als KI-Partner der Plattform KI (TIP, Land NOe + WKNOe).
                      Logo aus der Mailsignatur der WKNOe ausgeschnitten, kein Download. -->
