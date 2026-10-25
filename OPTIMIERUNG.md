@@ -126,18 +126,17 @@ verloren. Bei HTTP 429 bricht das Skript sauber ab, ohne Retry.
 
 **Protokoll:** je Lauf eine Zeile in `_analytics/_sammler.log`.
 
-### Wöchentlich *(neu 18.09.2026)*
+### Wochenbericht auf Abruf *(seit 18.09.2026; geplanter Lauf entfernt 25.10.2026)*
 
-Geplante Aufgabe `\SecureGalvano\Homepage Wochenbericht` (montags 09:20, fünf Minuten nach
-dem Tages-Pull, damit der Sonntag schon in der Historie steht) rechnet die abgelaufene
-Kalenderwoche aus der **bereits vorhandenen** Historie: `_scripts/wochenbericht.py`.
-**Kein API-Aufruf** — der Bericht lässt sich beliebig oft und für jede vergangene Woche neu
-rechnen (`py _scripts/wochenbericht.py --woche 2026-W37`). Die vorgeschaltete Aktion
-`youtube_abrufe.py` holt die Video-Zählerstände, sonst stünde in der Video-Tabelle dauerhaft
-„Erststand" statt eines Wochenzuwachses.
+`_scripts/wochenbericht.py` rechnet eine Kalenderwoche aus der **bereits vorhandenen**
+Historie — **kein API-Aufruf**, beliebig oft und für jede vergangene Woche
+(`py _scripts/wochenbericht.py --woche 2026-W37`). Bis 25.10.2026 lief er montags als eigene
+geplante Aufgabe; sie wurde entfernt, weil den Bericht nachweislich niemand las. Die
+Sammlerlücke steht in `_analytics/_sammler.log`, die der Monatslauf ohnehin sieht, und
+`youtube_abrufe.py` fährt der Optimierungslauf selbst.
 
 **Ablage:** `_analytics/wochen/<JJJJ>-W<NN>.md` (Langfassung) und `_analytics/wochen/AKTUELL.md`
-(zwölf Zeilen, wird jede Woche überschrieben).
+(zwölf Zeilen, wird bei jedem Lauf überschrieben).
 
 **Für die Frage „wird es mehr?“:** `py _scripts/wochenbericht.py --gesamt` schreibt
 `_analytics/wochen/GESAMTVERLAUF.md` — alle gemessenen Wochen, die stärksten Einzeltage mit
@@ -147,9 +146,8 @@ ihrem Anteil am Gesamtverkehr, und jeder externe Verweis seit Beginn der Histori
 > **Der Wochenbericht entscheidet nichts — er überwacht.** Bei rund 20 Sitzungen je Woche ist
 > jede Differenz zur Vorwoche Rauschen; §5 sagt das schon für Monatswerte, und ein Wochenwert
 > ist ein Viertel davon. Der Bericht schreibt diese Warnung selbst in seine erste Zeile,
-> solange er unter 30 Sitzungen liegt. **Was er kann und der Monatslauf zu spät sieht:**
-> Sammler-Lücken (über die API nach drei Tagen endgültig verloren), einen Ausreißertag, der
-> noch eine Erklärung hat, und einen neu auftauchenden externen Verweis. **Trendgröße ist der
+> solange er unter 30 Sitzungen liegt. Nützlich bleibt er für einen Ausreißertag, der noch eine
+> Erklärung hat, und einen neu auftauchenden externen Verweis. **Trendgröße ist der
 > rollierende Vierwochenwert**, nicht die einzelne Woche.
 
 **Zwei Dinge rechnet er bewusst anders als die Rohdaten:** `/` und `/index.html` werden als
@@ -195,7 +193,7 @@ Auslöser ist der Monatslauf am zweiten Werktag des Monats (§7).
 | **Beleg-Foto: trägt die Datenort-Frage?** *(neu 03.09.2026)* | Clarity `link-sicherheit-startseite`, dazu `scroll-75` auf der Startseite | **noch keine Historie** — Foto und Verweis seit 03.09. live | Die Sektion liegt im unteren Drittel; bei Ø 44,6 % Scrolltiefe sieht sie heute nur ein Teil der Besucher. **Erst `scroll-75` lesen, dann die Klicks** — wenige Klicks bei wenig Scrolltiefe widerlegen das Foto nicht, sondern zeigen, dass die Sektion zu weit unten steht. Bei `scroll-75` über ~40 % und weiterhin null Klicks ist der Verweis der falsche Weg, nicht das Bild |
 | **Trägt „Ihre Anlage muss nicht neu sein"?** *(neu 02.10.2026)* | Clarity `link-standortanalyse-bestand` gegen `link-standortanalyse-weiche`, dazu `link-datenwerkstatt-startseite` vor und nach dem 02.10. | **noch keine Historie** — Abschnitt `#bestand` und neuer Weichentext seit 02.10. live | Der Abschnitt setzt die Kernbotschaften vom 02.10.2026 um (Bestand auswerten, auch bei älteren Anlagen; `BD/areas/brand/messaging.md` §4a). Er zählt mit `leistungen.html` „Ihre Anlage, wie sie ist" als **die drei Änderungen des Oktobers** (§5). Klicks auf den neuen Link zeigen, ob die Altanlagen-Frage ein Einstieg ist; ein Anstieg bei `link-datenwerkstatt-startseite` zeigt, ob der Eigentumssatz zieht. Erstmals im November-Lauf ablesbar |
 | **Englische Fassung: kommt jemand, und was tut er?** *(neu 12.10.2026)* | Clarity: Aufrufe unter `/en/`, alle Marker mit Endung `-en` (`cta-nav-en`, `cta-hero-en`, `cta-sticky-en` …), dazu `lang-en`, `lang-de`, `lang-hint-en`; GSC: Abfragen auf `/en/` und Land `USA` | **noch keine Historie** — `/en/` seit 12.10. live, Sitemap am selben Tag eingereicht | Anlass: Entscheidung für einen internationalen Auftritt mit Blick auf den US-Markt (Stefan, 12.10.2026). **Die Seite ist kein Optimierungsschritt** und zählt nicht zu den drei Änderungen des Oktobers (§5) — sie ist ein Test, ob es US-Nachfrage gibt. Erst nach drei Monaten bewerten: ohne englische Sitzungen aus LinkedIn/Suche ist der Kanal noch nicht bespielt, nicht widerlegt. `lang-hint-en` zählt nur Besucher, deren Browser kein Deutsch führt |
-| **Video-Abrufe** *(neu 10.09.2026)* | `py _scripts/youtube_abrufe.py` → `_analytics/youtube_history.jsonl`; seit 18.09. wöchentlich über den Wochenbericht-Task | **16** Anwendung · **29** Pitch · **51** Prozessdatenauswertung *(Stand 18.09.2026)* — in acht Tagen **+1 / +5 / ±0** | **Die Zeitreihe wird hier nicht gepflegt**, jede Ablesung kommt datiert ins Funnel-Dokument auf SharePoint §8a. Das Demo-Video flacht nach dem Start ab, das ältere Pitch-Video wächst schneller |
+| **Video-Abrufe** *(neu 10.09.2026)* | `py _scripts/youtube_abrufe.py` → `_analytics/youtube_history.jsonl`; je Optimierungslauf (bis 25.10. zusätzlich wöchentlich) | **16** Anwendung · **29** Pitch · **51** Prozessdatenauswertung *(Stand 18.09.2026)* — in acht Tagen **+1 / +5 / ±0** | **Die Zeitreihe wird hier nicht gepflegt**, jede Ablesung kommt datiert ins Funnel-Dokument auf SharePoint §8a. Das Demo-Video flacht nach dem Start ab, das ältere Pitch-Video wächst schneller |
 | **Video: mittlere Wiedergabedauer** *(neu 02.09.2026)* | 👤 YouTube Studio, Video `RStpqzz3r5g` — **steht in keiner offenen Quelle**, nur mit Anmeldung | — | **< 2:00 heißt: Kurzfassung schneiden** (Länge ist 4:51, Zielmarke war 2–3 Min) |
 | Core Web Vitals | Clarity | 93/100 · LCP 0,44 s · INP 140 ms · CLS 0 | ✅ halten |
 | GSC Klicks | 👤 GSC, Export | **60** (+253 %) bei 317 Impressionen | steigend |
