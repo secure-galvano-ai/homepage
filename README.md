@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-10-21
+**Stand:** 2026-10-25
 
 ---
 
@@ -106,10 +106,8 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" — weicht von der
   Linie ab (korrekt: *Modellpruefung*). Das Heft ist gedruckt; beim naechsten Nachdruck
   mitkorrigieren.
-- **Kontaktblock im Portraet nachgesetzt** *(Stefan, 25.09.2026)*: statt „Stefan Maier e.U." und
-  Alberschwender PLZ steht „Stefan Maier / AT-6960 Buch". Ohne Quelldatei (InDesign beim Verlag)
-  direkt im PDF getauscht, in der eingebetteten Univers LT Std Light Condensed (keine 9 im
-  Teilsatz — sie ist die um 180° gedrehte 6, fontTools). Original unverändert unter
+- **Kontaktblock im Portraet** trägt „Stefan Maier / AT-6960 Buch" *(25.09.2026)* — ohne
+  Quelldatei direkt im PDF getauscht (Univers-Teilsatz ohne 9: gedrehte 6, fontTools). Original:
   `01_Außenauftritt/02_Veranstaltungen/20260618_Galvano Forum SWISSGALVANIK/01_Anbahnung/`.
 
 ## Optional (noch offen)
@@ -217,9 +215,8 @@ auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert ha
 - **Jeder Funnel-Marker endet auf `-en`**, `data-video` ebenso — sonst mischt Clarity beide
   Sprachen (`OPTIMIERUNG.md` §4).
 - Glossar: Modellprüfung = *model audit* (nie *certification/certified*), Standortanalyse =
-  *Site Assessment*, Analyse je Fehlerbild = *Defect Analysis* (bis 20.10.2026 Vorprojekt = *Feasibility Project*), Erstgespräch = *intro call*,
-  KI-Basis-Setup = *AI Base Setup* (bis 22.10.2026 KI-Setup-Check = *AI Setup Check*),
-  Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
+  *Site Assessment*, Analyse je Fehlerbild = *Defect Analysis*, Erstgespräch = *intro call*,
+  KI-Basis-Setup = *AI Base Setup*, Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
   „Regelkarte“ ist auch als *control chart* gesperrt (die Prüfung schlägt an).
 - Was nur für Österreich gilt (Förderprogramme), entfällt auf Englisch. Preise als
   „€1,500 net (excl. VAT)“.
@@ -245,7 +242,8 @@ und LinkedIn zeigen. Begruendung der Platzierung im ganzen Trichter: SharePoint
 Ueberblick"), **4:51**, nicht gelistet, eingebunden ueber `youtube-nocookie.com` — kein Cookie vor
 Klick, die Datenschutzerklaerung setzt das voraus. Die Seite ist indexiert und steht in der
 `sitemap.xml`; zwei Verweise zeigen darauf: Startseite unter dem Pitch-Video
-(`link-demo-startseite`) und `leistungen.html` in der Karte *Vorprojekt* (`cta-demo-vorprojekt`).
+(`link-demo-startseite`) und `leistungen.html` in der Sektion *Analyse je Fehlerbild*
+(`cta-demo-vorprojekt` — Ereignisname bewusst alt, sonst bricht die Clarity-Reihe).
 **Nicht** in die Belegspalte bei `#standortanalyse` — die sammelt Belege zur *Standortanalyse*,
 das Video zeigt die *Anwendung*; ein dort am 02.09.2026 gesetzter dritter Verweis konkurrierte
 mit den anderen, statt zu fuehren. Unter *Weitere Aufnahme* steht nur „Auswertungen und
@@ -282,9 +280,8 @@ Monatslauf trennbar bleibt.
 
 ## Datenwerkstatt-Seite (`ausbildung.html`) — Video und Zielgruppe *(11.09.2026)*
 
-**Zielgruppe steht in der Kennzeile:** *„Weiterbildung fuer kleine Betriebe"*. Der Hero setzte
-bis 11.09.2026 laufende Messtechnik voraus („In Ihren Anlagen laeuft die Messtechnik laengst
-mit") und nannte die Begleitung nicht — beides ging an der Zielgruppe vorbei. **Dauerregel:
+**Zielgruppe steht in der Kennzeile:** *„Weiterbildung fuer kleine Betriebe"* (Anlass: der Hero
+setzte laufende Messtechnik voraus und nannte die Begleitung nicht). **Dauerregel:
 Auf dieser Seite ist die manuelle Erfassung der gleichwertige Fall**, nicht der Sonderfall;
 wer hier Text aendert, prueft beide Wege (Steuerung *und* Badbuch von Hand) und nennt das
 Coaching als Teil des Angebots. Derselbe Satz steht im Flyer (`AENDERUNGSPROZESS.md` Gate 4).
@@ -418,25 +415,18 @@ homepage/
                            Einzelliste hier -- sie driftet bei jedem neuen Beleg. Wo welcher verlinkt ist:
                            grep -o "docs/[a-z0-9_-]*\.pdf" *.html
                            Wird von Jekyll ausgeliefert -- hier nur, was oeffentlich sein darf.
-                           Die erzeugten PDFs kommen aus BD-Build-Skripten und werden NIE von
-                           Hand bearbeitet -- Aenderung im Skript, dann neu bauen. Erzeuger finden:
-                             grep -rl "<dateiname>.pdf" "../Business Development/templates" \
-                               "../Business Development/scripts" "../Business Development/areas"
-                           (Flyer/Befunde unter templates/*-corporate/, Datenwerkstatt unter
-                           areas/coaching-und-ausbildung/, NDA und die vier Angebots-Muster unter
-                           scripts/ -- angebot_muster.py baut alle vier in einem Lauf).
-                           Ausnahme: unternehmenspraesentation_secure-galvano-ai.pdf (DE) und
-                           company-presentation_secure-galvano-ai.pdf (EN) kommen aus dem Pitch-Deck-
-                           Master auf SharePoint: 01_Aussenauftritt/06_Praesentationsmaterialien/
-                           Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py, Ablauf im 00_LIESMICH.md
-                           dort ("Zwei abgeleitete Fassungen"). Dateinamen NICHT aendern -- consent.js
-                           bildet das Clarity-Ereignis aus dem Dateinamen.
-                           Angebots-Muster = das verbindliche Kundendokument im Muster-Modus (ohne
-                           Empfaenger, Nummer, Datum, IBAN, Unterschrift); die Pruefung laeuft dort
-                           UMGEKEHRT und schlaegt an, wenn eine dieser Angaben doch drinsteht
-                           (Docstring BD/scripts/angebot_bauen.py). Jedes Skript prueft Seitenzahl
-                           und Pflichtstellen und bricht ab, wenn Inhalt verschluckt wird
-                           (overflow:hidden schnitt beim ersten Lauf die Fusszeile lautlos ab).
+                           Die PDFs kommen aus BD-Build-Skripten, NIE von Hand bearbeiten -- im
+                           Skript aendern, neu bauen. Erzeuger: grep -rl "<dateiname>.pdf" in
+                           BD templates/ (Flyer, Befunde), areas/coaching-und-ausbildung/
+                           (Datenwerkstatt), scripts/ (NDA; angebot_muster.py baut die vier
+                           Angebots-Muster = Kundendokument ohne Empfaenger, Nummer, Datum, IBAN,
+                           Unterschrift, Pruefung dort UMGEKEHRT, Docstring angebot_bauen.py).
+                           Ausnahme: unternehmenspraesentation_/company-presentation_secure-galvano-ai.pdf
+                           aus dem Pitch-Deck-Master (SharePoint 01_Aussenauftritt/06_Praesentations-
+                           materialien/Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py, 00_LIESMICH.md
+                           "Zwei abgeleitete Fassungen"). Dateinamen NICHT aendern -- consent.js
+                           bildet das Clarity-Ereignis daraus. Jedes Skript prueft Seitenzahl und
+                           Pflichtstellen (overflow:hidden schnitt einmal die Fusszeile lautlos ab).
   fonts/                   fonts.css + Montserrat/Open Sans als WOFF2 (latin, latin-ext), OFL
   favicon.ico              Browser-Tab Icon (Root — Browser-Konvention)
   apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
@@ -483,11 +473,10 @@ und verhindert damit, dass Google den Refresh ueberhaupt als Redirect verarbeite
 zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL.
 `noindex` gehoert nur auf zurueckgestellte **Inhalts**seiten mit Self-Canonical.
 
-**Sitemap:** `lastmod` zieht `py _scripts/sitemap_pflegen.py` aus dem letzten Commit der
-jeweiligen Datei (`--pruefen` schreibt nicht), und `check_site.py` warnt, solange ein Wert
-veraltet ist. Veraltete Werte kosten Crawl-Prioritaet, ein pauschales „heute" verbrennt sie.
-**Als Vorgabe im Text hat das nicht gehalten:** Am 22.10.2026 waren alle 13 Daten veraltet,
-das aelteste um 3,5 Monate — deshalb jetzt ein Skript und eine Warnung statt einer Zeile hier.
+**Sitemap:** `lastmod` zieht `py _scripts/sitemap_pflegen.py` aus dem letzten Commit je Datei
+(`--pruefen` schreibt nicht), `check_site.py` warnt bei veralteten Werten — die kosten
+Crawl-Prioritaet, ein pauschales „heute" verbrennt sie. Anlass fuer Skript statt Textvorgabe: am
+22.10.2026 waren alle 13 Daten veraltet, das aelteste um 3,5 Monate.
 
 ## DNS-Konfiguration, IONOS und Systemabhängigkeiten
 
@@ -602,11 +591,8 @@ gestellt wird*).
 
 ## WhatsApp-Kontakt — abgeschaltet seit 07.09.2026
 
-Der Floating-Button ist **entfernt** (Stefan): Er trug die private Mobilnummer im Klartext auf
-jeder Seite — Folge waren laufende Phishing-Anfragen. Auch `telephone` ist aus dem Schema.org-Block
-raus; **eine Telefonnummer steht nirgends mehr auf der Website** (§ 5 ECG erfüllt die E-Mail im
-Impressum). Kontaktweg: Erstgespräch-Buchung + mailto.
-
-Mechanik: `_generate_layout.py` rendert den `wa-fab`-Block leer, die Marker bleiben. Zurückholen =
-`render_wa_fab()` wieder auf die Link-Fassung (die Nummer liegt bewusst nicht mehr im Repo);
-`.wa-fab`-CSS in `base.css` und die Logik in `consent.js` bleiben ungenutzt liegen.
+Der Floating-Button ist **entfernt** (Stefan) — die private Mobilnummer im Klartext brachte laufend
+Phishing-Anfragen. Auch `telephone` ist aus dem Schema.org-Block; **keine Telefonnummer mehr auf der
+Website** (§ 5 ECG erfüllt die E-Mail im Impressum), Kontakt über Buchung + mailto. Mechanik:
+`_generate_layout.py` rendert den `wa-fab`-Block leer, Marker, `.wa-fab`-CSS und `consent.js`-Logik
+bleiben ungenutzt liegen; zurück über `render_wa_fab()` (die Nummer liegt bewusst nicht im Repo).
