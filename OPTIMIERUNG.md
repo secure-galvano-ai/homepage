@@ -61,8 +61,9 @@ Verkehr auf die Seite gebracht hat.
 
 > **Rhythmus entschieden am 15.09.2026: monatlich, in diesem Lauf — kein zweiter Termin.**
 > Vorher stand im Beitragsprozess „bei Bedarf, etwa vierteljährlich". Das war richtig, solange
-> Content Zweitverwertung war; seit dem 02.09.2026 ist er der Motor, und ein Kanal, der den
-> Umsatz tragen soll, wird nicht dreimal im Jahr angesehen. **Monatlich ist zugleich die
+> Content Zweitverwertung war; seit 21.10.2026 ist die persönliche LinkedIn-Nachricht der Motor
+> der Akquise (`Business Development/areas/marketing.md`), und ein Kanal, der die Akquise trägt,
+> wird nicht dreimal im Jahr angesehen. **Monatlich ist zugleich die
 > Obergrenze des Sinnvollen** — bei vier bis acht Beiträgen im Monat ist ein kürzerer Takt
 > Rauschen (§5), und die 7-Tage-Werte des Dashboards zeigen genau das.
 >
@@ -348,13 +349,11 @@ HOMEPAGE-OPTIMIERUNG — Block 3 des Monatslaufs (ca. 25 Min)
    Suchdaten aendern sich zu langsam fuer einen Monatsrhythmus. Ein API-Zugang
    dafuer ist bewusst verworfen (Abschnitt 2).
 
-   LINKEDIN — Export ziehen (2 Min, seit 15.09.2026 fester Bestandteil):
+   LINKEDIN — vier Zahlen (2 Min, seit 15.09.2026 fester Bestandteil):
    https://www.linkedin.com/analytics/creator/content/
-   Zeitraum auf 365 Tage, oben rechts "Exportieren". Datei im Download-Ordner liegen lassen.
-   Danach auf der Uebersichtsseite vier Zahlen abschreiben, die im Export FEHLEN:
+   Auf der Uebersichtsseite vier Zahlen abschreiben, die im Export FEHLEN:
    Profilbesucher 90 Tage, Impressionen 7 Tage, "in Suchen erschienen",
    Kommentare aus dem Woechentlichen Fortschritt.
-   Ablegen und auswerten macht Claude in Schritt 3 mit einem Befehl.
 
 2) DIE EINE ZAHL (2 Min)
 
