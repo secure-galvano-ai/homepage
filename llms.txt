@@ -19,6 +19,6 @@
 
 - [English site](https://secure-galvano-ai.com/en/)
 - [About Stefan Maier](https://secure-galvano-ai.com/ueber-mich.html)
-- [Ethics & values](https://secure-galvano-ai.com/en/ethics.html): AI should relieve skilled workers, not replace them — time saved is redistributed instead of cutting jobs, management and HR are involved from the start, people make the decision (human in the loop).
+- [Ethics & values](https://secure-galvano-ai.com/en/ethics.html): AI should relieve skilled workers and give them time for what matters — time saved goes to improvement, training and getting home on time, every job is kept, management and HR are involved from the start, people make the decision (human in the loop).
 - [Data Workshop (Datenwerkstatt) for in-house teams](https://secure-galvano-ai.com/ausbildung.html)
 - [Free 30-minute intro call](https://secure-galvano-ai.com/termin)
