@@ -1,0 +1,23 @@
+# secure galvano ai
+
+> Process data and AI for electroplating and anodizing shops (Galvanik- und Eloxalbetriebe) in Austria, Germany and Switzerland. Stefan Maier, master electroplater and materials physicist, finds the causes of recurring defects in the data a plating line already records, shows where automation pays off, and sets up AI so that process readings stay protected. AI models reviewed by TÜV AUSTRIA (Trusted AI). Fixed prices, net, B2B only.
+
+## Offers (German site, English versions linked)
+
+- [Standortanalyse / Site Assessment](https://secure-galvano-ai.com/leistungen.html#standortanalyse): Does the data hold up, and where is the money? Data traffic light per line, defect patterns with potential. EUR 1,500 per site.
+- [Erstanalyse / Initial Data Check](https://secure-galvano-ai.com/leistungen.html#erstanalyse): Data already available — is it usable, what is missing? EUR 1,500 per data set.
+- [Analyse je Fehlerbild / Defect Analysis](https://secure-galvano-ai.com/leistungen.html#analyse-je-fehlerbild): Causes of one recurring defect pattern, Ishikawa findings and an interactive analysis. EUR 5,000 per defect pattern.
+- [KI-Basis-Setup / AI Base Setup](https://secure-galvano-ai.com/leistungen.html#ki-setup-check): Put the AI tools a company already has to profitable use — one recurring task automated, from process-data analysis to order entry, in the customer's own environment. EUR 9,900 per company, for 1 to 3 people and one use case.
+- [Begleitung und Betreuung / Follow-up](https://secure-galvano-ai.com/leistungen.html#danach): Support until defects are fixed (fixed price per project), then upkeep per monitored line.
+
+## Data handling
+
+- [Where data is processed](https://secure-galvano-ai.com/#lokale-datenverarbeitung): Tools are built on synthetic data with the same structure; real readings are analyzed only on our own encrypted computers, no AI service sees them; the finished tool runs on the customer's infrastructure without internet. With the AI Base Setup no data is handed over to us.
+- [Security and compliance](https://secure-galvano-ai.com/sicherheit.html): EU AI Act, NIS2, Cyber Resilience Act, GDPR, IEC 62443, TÜV Trusted AI.
+
+## More
+
+- [English site](https://secure-galvano-ai.com/en/)
+- [About Stefan Maier](https://secure-galvano-ai.com/ueber-mich.html)
+- [Data Workshop (Datenwerkstatt) for in-house teams](https://secure-galvano-ai.com/ausbildung.html)
+- [Free 30-minute intro call](https://secure-galvano-ai.com/termin)

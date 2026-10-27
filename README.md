@@ -22,6 +22,11 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Ablesen: CTA-Klicks, mobile Scrolltiefe.
 - **`#bestand` „Ihre Anlage muss nicht neu sein"** *(Stefan, 02.10.2026)* samt Gegenstücken auf
   `leistungen.html` und `ausbildung.html` — Kennzahl in `OPTIMIERUNG.md` §4.
+- **Für den Optimierungslauf am 03.11.2026 vorgemerkt** *(Befund 21.10.2026, am 27.10. bewusst
+  nicht vorgezogen, weil die beiden Messungen oben sonst nicht mehr zuzuordnen sind)*: Startseite
+  von zehn auf rund sechs Abschnitte (Kandidaten: Pitch-Video, „Aktuell" mit Rückblick vom
+  29.09., „So funktioniert's"; „Partner" bleibt wegen der gegenseitigen Verlinkung) und
+  „Sicherheit" statt „Forschung" im Hauptmenü — nur mit Clarity-Beleg, höchstens drei Änderungen.
 
 ### Regeln, die dauerhaft gelten
 
