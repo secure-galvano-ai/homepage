@@ -85,6 +85,10 @@ NAV_LINKS = [
     # liegen noch im empfohlenen Rahmen von vier bis sechs.
     ("ausbildung.html", "Datenwerkstatt"),
     ("ueber-mich.html", "Über mich"),
+    # Seit 27.10.2026 (Stefan): eigener Reiter fuer die Haltung zu KI und Beschaeftigung --
+    # nach "Ueber mich", weil es die Werte der Person hinter dem Angebot sind. Sechs
+    # Eintraege plus CTA: obere Grenze des Rahmens von vier bis sechs.
+    ("ethik.html", "Ethik &amp; Werte"),
     ("forschung.html", "Forschung"),
 ]
 
@@ -95,6 +99,7 @@ FOOTER_LINKS = [
     ("Demo", "demo.html", False),
     ("Datenwerkstatt", "ausbildung.html", False),
     ("Über mich", "ueber-mich.html", False),
+    ("Ethik &amp; Werte", "ethik.html", False),
     # "Sicherheit (PDF)" entfernt am 12.10.2026: Das PDF hatte keine Quelle mehr und trug
     # zwei ueberholte Aussagen (Commit-Signatur, NIS2-Frist DE). sicherheit.html ist die
     # gepflegte Fassung desselben Inhalts.
@@ -132,6 +137,7 @@ PAGES = {
     "ausbildung.html": "ausbildung.html",
     "ueber-mich.html": "ueber-mich.html",
     "forschung.html": "forschung.html",
+    "ethik.html": "ethik.html",
     "impressum.html": None,
     "datenschutz.html": None,
 }
@@ -149,17 +155,21 @@ PAIRS = {  # deutsche Seite -> englische Seite
     "leistungen.html": "en/services.html",
     "ueber-mich.html": "en/about.html",
     "sicherheit.html": "en/security.html",
+    # 27.10.2026: die Haltung zu KI und Beschaeftigung gilt fuer jeden Markt gleich.
+    "ethik.html": "en/ethics.html",
 }
 DE_OF = {en: de for de, en in PAIRS.items()}
 
 NAV_LINKS_EN = [
     ("services.html", "Services"),
     ("about.html", "About"),
+    ("ethics.html", "Ethics &amp; Values"),
 ]
 FOOTER_LINKS_EN = [
     ("Home", "index.html", False),
     ("Services", "services.html", False),
     ("About", "about.html", False),
+    ("Ethics &amp; Values", "ethics.html", False),
     ("Security", "security.html", False),
     ("Legal notice (German)", "../impressum.html", False),
     ("Privacy policy (German)", "../datenschutz.html", False),
@@ -174,6 +184,7 @@ PAGES_EN = {
     "en/services.html": "services.html",
     "en/about.html": "about.html",
     "en/security.html": None,
+    "en/ethics.html": "ethics.html",
 }
 
 

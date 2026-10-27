@@ -395,6 +395,18 @@
                               background: var(--weiss); padding: 24px; border-bottom: 1px solid var(--silber);
                               box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); z-index: 50; }
         }
+        /* Sechs Nav-Eintraege (27.10.2026): derselbe Block wie am Ende von base.css, das diese
+           Seite nicht laedt -- Begruendung und Messung dort. */
+        .nav .nav-inner { max-width: 1200px; }
+        .nav .nav-links { gap: 18px; }
+        .nav .nav-links a { white-space: nowrap; }
+        @media (max-width: 1247px) {
+            .nav .nav-links { display: none; }
+            .nav .nav-toggle { display: block; }
+            .nav .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0;
+                                   gap: 24px; background: var(--weiss); padding: 24px; border-bottom: 1px solid var(--silber);
+                                   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); z-index: 50; }
+        }
     </style>
     <script src="assets/js/consent.js" defer></script>
 </head>
@@ -413,6 +425,7 @@
             <li><a href="demo.html">Demo</a></li>
             <li><a href="ausbildung.html" class="active">Datenwerkstatt</a></li>
             <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="ethik.html">Ethik &amp; Werte</a></li>
             <li><a href="forschung.html">Forschung</a></li>
             <li><a href="en/index.html" class="nav-lang" hreflang="en" lang="en" data-funnel="lang-en">EN</a></li>
             <li><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="nav-cta" data-funnel="cta-nav">Erstgespräch</a></li>
@@ -946,6 +959,7 @@
                 <li><a href="demo.html">Demo</a></li>
                 <li><a href="ausbildung.html">Datenwerkstatt</a></li>
                 <li><a href="ueber-mich.html">Über mich</a></li>
+                <li><a href="ethik.html">Ethik &amp; Werte</a></li>
                 <li><a href="forschung.html">Forschung</a></li>
                 <li><a href="sicherheit.html">Sicherheit</a></li>
                 <li><a href="impressum.html">Impressum</a></li>

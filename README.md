@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-10-25
+**Stand:** 2026-10-27
 
 ---
 
@@ -177,7 +177,8 @@ von Hand oeffnen.
 ## Englische Fassung (`en/`) — seit 12.10.2026
 
 **Zweck:** US-Besucher (und alle ohne Deutsch) mit demselben Argument erreichen *(Stefan,
-12.10.2026)*. Übersetzt sind die vier Seiten, die einen Erstkontakt tragen:
+12.10.2026)*. Übersetzt sind die vier Seiten, die einen Erstkontakt tragen, dazu seit 27.10.2026
+die Haltungsseite (gilt für jeden Markt gleich):
 
 | Deutsch | Englisch |
 |---|---|
@@ -185,6 +186,7 @@ von Hand oeffnen.
 | `leistungen.html` | `en/services.html` |
 | `ueber-mich.html` | `en/about.html` |
 | `sicherheit.html` | `en/security.html` |
+| `ethik.html` | `en/ethics.html` |
 
 Die Liste steht **genau einmal**, in `PAIRS` in `_generate_layout.py`. Demo, Datenwerkstatt
 und Forschung bleiben deutsch — Videos und Unterlagen dort sind deutsch. Impressum und
@@ -379,6 +381,13 @@ homepage/
                            Streifen #partner der Startseite). Flyer dazu:
                            docs/datenwerkstatt-ueberblick.pdf — § Datenwerkstatt-Seite.
   forschung.html           Forschungsprojekte (FFG-Kleinprojekt, aws), aws-Jurytermin-Foto.
+  ethik.html               Ethik & Werte (seit 27.10.2026, Nav nach "Über mich"): Haltung zu KI und
+                           Beschaeftigung -- Fachkraeftelage, Forschung, Zeit umverteilen statt kuendigen,
+                           Change Management, Human in the Loop. Jede Zahl mit nummerierter Referenz am
+                           Seitenende; Herkunft der Zahlen: Change-Management-Recherche vom 26.10.2026
+                           (SharePoint, Akquise-Ordner) und BD archive/ffg-kleinprojekt-eingereicht-2026-09/
+                           stand-der-technik.md (Ausbildungsbestand = Bestand, nicht Neuabschluesse).
+                           Kein Betrieb genannt, auch nicht umschrieben. Abbildungen Inline-SVG/HTML.
   sicherheit.html          Compliance-Seite (indexiert, in Sitemap und Footer, bewusst NICHT in der
                            Hauptnavigation). Nav/Footer aus _generate_layout.py (PAGES-Eintrag mit
                            None = kein eigener Nav-Punkt); nur das Seiten-CSS ist noch eigen.
@@ -439,7 +448,7 @@ homepage/
   CNAME                    Custom Domain Config — nicht löschen (_doku/infrastruktur.md)
   _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung — nie docs/ eintragen
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (13 URLs, davon 4 englisch -- Stand 12.10.2026).
+  sitemap.xml              Google Sitemap (15 URLs, davon 5 englisch -- Stand 27.10.2026).
                            Welche URL hineingehoert, ist Handarbeit; die lastmod-Daten nicht
                            (_scripts/sitemap_pflegen.py), und check_site.py Check 8 haelt die
                            Liste gegen noindex und fehlende Dateien.
