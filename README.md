@@ -27,6 +27,7 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   von zehn auf rund sechs Abschnitte (Kandidaten: Pitch-Video, „Aktuell" mit Rückblick vom
   29.09., „So funktioniert's"; „Partner" bleibt wegen der gegenseitigen Verlinkung) und
   „Sicherheit" statt „Forschung" im Hauptmenü — nur mit Clarity-Beleg, höchstens drei Änderungen.
+  Terminiert als Zentraldokument Nr 311 (fällig 03.11.2026).
 
 ### Regeln, die dauerhaft gelten
 
