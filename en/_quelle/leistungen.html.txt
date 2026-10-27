@@ -1,8 +1,8 @@
 <title>Leistungen und Preise für Galvanikbetriebe · secure galvano ai</title>
-<meta name="description" content="Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Basis-Setup zum Festpreis: ob Ihre Galvanikdaten tragen, woran Fehler liegen, wo das Geld liegt.">
+<meta name="description" content="Vier Einstiege zum Festpreis: ob Ihre Galvanikdaten tragen, woran Fehler liegen, wo das Geld liegt und welche Aufgaben sich automatisieren lassen.">
 <meta name="keywords" content="Galvanik Software, Software für Galvanikanlagen, Digitalisierung Galvanotechnik, Standortanalyse Galvanik, Datenauswertung Oberflächentechnik, KI Galvanik, Potenzialanalyse Galvanotechnik">
 <meta property="og:title" content="Leistungen und Preise — secure galvano ai">
-<meta property="og:description" content="Vier Angebote zum Festpreis: Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Basis-Setup. Danach wissen Sie, ob Ihre Daten tragen und wo das Geld liegt.">
+<meta property="og:description" content="Vier Angebote zum Festpreis: Standortanalyse, Erstanalyse, Analyse je Fehlerbild und KI-Basis-Setup. Danach wissen Sie, ob Ihre Daten tragen, wo das Geld liegt und welche Aufgaben automatisiert laufen können.">
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",

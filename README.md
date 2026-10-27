@@ -21,7 +21,7 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   (`BD/archive/akquise-strategie-h2-2026-in-areas-2026-10/benchmark-werchota.md` §4 Nr. 4).
   Ablesen: CTA-Klicks, mobile Scrolltiefe.
 - **`#bestand` „Ihre Anlage muss nicht neu sein"** *(Stefan, 02.10.2026)* samt Gegenstücken auf
-  `leistungen.html` und in der Weiche *Selbst können* — Kennzahl in `OPTIMIERUNG.md` §4.
+  `leistungen.html` und `ausbildung.html` — Kennzahl in `OPTIMIERUNG.md` §4.
 
 ### Regeln, die dauerhaft gelten
 
@@ -216,7 +216,7 @@ auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert ha
   Sprachen (`OPTIMIERUNG.md` §4).
 - Glossar: Modellprüfung = *model audit* (nie *certification/certified*), Standortanalyse =
   *Site Assessment*, Analyse je Fehlerbild = *Defect Analysis*, Erstgespräch = *intro call*,
-  KI-Basis-Setup = *AI Base Setup*, Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
+  KI-Basis-Setup = *AI Base Setup* (Untertitel „Ihre KI-Werkzeuge gewinnbringend einsetzen" = *Put your AI tools to profitable use*), Datenwerkstatt = *Data Workshop*, Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
   „Regelkarte“ ist auch als *control chart* gesperrt (die Prüfung schlägt an).
 - Was nur für Österreich gilt (Förderprogramme), entfällt auf Englisch. Preise als
   „€1,500 net (excl. VAT)“.
