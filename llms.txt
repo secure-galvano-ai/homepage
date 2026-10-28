@@ -12,7 +12,7 @@
 
 ## Data handling
 
-- [Where data is processed](https://secure-galvano-ai.com/#lokale-datenverarbeitung): Tools are built on synthetic data with the same structure; real readings are analyzed only on our own encrypted computers, no AI service sees them; the finished tool runs on the customer's infrastructure without internet. With the AI Base Setup no data is handed over to us.
+- [Where data is processed](https://secure-galvano-ai.com/#lokale-datenverarbeitung): Tools are built on a synthetic test plant; real readings are analyzed only on our own encrypted computers, no AI service sees them; the finished tool runs on the customer's infrastructure without internet. With the AI Base Setup no data is handed over to us.
 - [Security and compliance](https://secure-galvano-ai.com/sicherheit.html): EU AI Act, NIS2, Cyber Resilience Act, GDPR, IEC 62443, TÜV Trusted AI.
 
 ## More
