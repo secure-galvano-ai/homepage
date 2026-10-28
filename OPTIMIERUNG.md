@@ -86,7 +86,7 @@ Verkehr auf die Seite gebracht hat.
 | Was | Wo | Erneuern |
 |---|---|---|
 | Clarity-API-Token | `.env` im Repo-Wurzelverzeichnis, Schlüssel `CLARITY_API_TOKEN` — **gitignored** | Clarity → Einstellungen → Datenexport → *Neues API-Token generieren* (nur Projektadmin) |
-| — (kein GSC-API-Zugang) | **Verworfen 11.08.2026, nicht erneut vorschlagen.** Der MCP-Server liegt fertig unter `~/.mcp-gsc/` (installiert 10.08.), es fehlt bewusst nur das Dienstkonto. Zwei Gründe: der Dienstkonto-Schlüssel wäre eine Zugangsdatei im Klartext auf der Platte und läuft `25_zugriffs-und-kryptographie.md` §3 zuwider („sämtliche Zugangsdaten im Tresor"); und er hinge am privaten Google-Konto, das über die Anthropic-SSO-Kopplung ohnehin schon geschäftskritisch ist. Gegenwert wären zwei erspartes Copy-Paste im Jahr. | — |
+| — (kein GSC-API-Zugang) | **Verworfen 11.08.2026, nicht erneut vorschlagen.** Der MCP-Server liegt fertig unter `~/.mcp-gsc/` (installiert 10.08.), es fehlt bewusst das Dienstkonto; der Eintrag in `.mcp.json` ist seit 28.10.2026 entfernt, weil der Server ohne Schlüssel nur Fehlaufrufe erzeugte. Zwei Gründe: der Dienstkonto-Schlüssel wäre eine Zugangsdatei im Klartext auf der Platte und läuft `25_zugriffs-und-kryptographie.md` §3 zuwider („sämtliche Zugangsdaten im Tresor"); und er hinge am privaten Google-Konto, das über die Anthropic-SSO-Kopplung ohnehin schon geschäftskritisch ist. Gegenwert wären zwei erspartes Copy-Paste im Jahr. | — |
 | Clarity-Projekt-ID | `wql3vpgrxl` | — |
 | GSC-Property | `https://secure-galvano-ai.com/` | — |
 
