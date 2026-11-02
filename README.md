@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-10-27
+**Stand:** 2026-11-02
 
 ---
 
@@ -178,17 +178,9 @@ von Hand oeffnen.
 
 **Zweck:** US-Besucher (und alle ohne Deutsch) mit demselben Argument erreichen *(Stefan,
 12.10.2026)*. Übersetzt sind die vier Seiten, die einen Erstkontakt tragen, dazu seit 27.10.2026
-die Haltungsseite (gilt für jeden Markt gleich):
-
-| Deutsch | Englisch |
-|---|---|
-| `index.html` | `en/index.html` |
-| `leistungen.html` | `en/services.html` |
-| `ueber-mich.html` | `en/about.html` |
-| `sicherheit.html` | `en/security.html` |
-| `ethik.html` | `en/ethics.html` |
-
-Die Liste steht **genau einmal**, in `PAIRS` in `_generate_layout.py`. Demo, Datenwerkstatt
+die Haltungsseite (gilt für jeden Markt gleich): `index` → `en/index`, `leistungen` → `en/services`,
+`ueber-mich` → `en/about`, `sicherheit` → `en/security`, `ethik` → `en/ethics`.
+Maßgeblich ist die Liste **genau einmal**, in `PAIRS` in `_generate_layout.py`. Demo, Datenwerkstatt
 und Forschung bleiben deutsch — Videos und Unterlagen dort sind deutsch. Impressum und
 Datenschutz bleiben deutsch und sind aus dem englischen Fuß mit „(German)“ verlinkt;
 deutsche PDFs und Videos tragen auf den englischen Seiten „(PDF, German)“ bzw. „Video in German.“
@@ -388,12 +380,11 @@ homepage/
                            (SharePoint, Akquise-Ordner) und BD archive/ffg-kleinprojekt-eingereicht-2026-09/
                            stand-der-technik.md (Ausbildungsbestand = Bestand, nicht Neuabschluesse).
                            Kein Betrieb genannt, auch nicht umschrieben. Abbildungen Inline-SVG/HTML.
-  sicherheit.html          Compliance-Seite (indexiert, in Sitemap und Footer, bewusst NICHT in der
-                           Hauptnavigation). Nav/Footer aus _generate_layout.py (PAGES-Eintrag mit
-                           None = kein eigener Nav-Punkt); nur das Seiten-CSS ist noch eigen.
+  sicherheit.html          Compliance-Seite (indexiert, in Sitemap und Footer, bewusst NICHT in der Haupt-
+                           navigation: PAGES-Eintrag mit None); eigenes Seiten-CSS (§ Architektur).
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
-  en/                      Englische Fassung: index, services, about, security. Nav/Fuss/hreflang/CSS
+  en/                      Englische Fassung (Seiten: PAIRS in _generate_layout.py). Nav/Fuss/hreflang/CSS
                            aus _generate_layout.py, der Text ist Handarbeit. en/_quelle/ = deutscher
                            Stand je Uebersetzung fuer check_englisch.py (Jekyll liefert es wegen des
                            Unterstrichs nicht aus). § Englische Fassung.
@@ -443,8 +434,7 @@ homepage/
                            bildet das Clarity-Ereignis daraus. Jedes Skript prueft Seitenzahl und
                            Pflichtstellen (overflow:hidden schnitt einmal die Fusszeile lautlos ab).
   fonts/                   fonts.css + Montserrat/Open Sans als WOFF2 (latin, latin-ext), OFL
-  favicon.ico              Browser-Tab Icon (Root — Browser-Konvention)
-  apple-touch-icon.png     iOS Home Screen Icon (Root — Konvention)
+  favicon.ico, apple-touch-icon.png  Browser-Tab- und iOS-Icon (im Root — Konvention)
   CNAME                    Custom Domain Config — nicht löschen (_doku/infrastruktur.md)
   _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung — nie docs/ eintragen
   robots.txt               Crawler-Erlaubnis
@@ -452,7 +442,6 @@ homepage/
                            Welche URL hineingehoert, ist Handarbeit; die lastmod-Daten nicht
                            (_scripts/sitemap_pflegen.py), und check_site.py Check 8 haelt die
                            Liste gegen noindex und fehlende Dateien.
-  README.md                Diese Datei
 ```
 
 ## Search Console / Indexierung
@@ -502,13 +491,8 @@ beider Zonen (`secure-galvano-ai.com`, `rvh.at`), Endstand der Absenderauthentif
 
 ## Corporate Design Assets
 
-| Asset | Pfad |
-|-------|------|
-| **Logo (groß)** | `BD/areas/brand/logo.png` |
-| **Logo (Header)** | `BD/areas/brand/logo_header.png` |
-| **Porträt** | Quelle: `Stefan Maier - Dokumente/02_Unterlagen/04_Fotos/MICHAELKREYER/` |
-| **Corporate Design Doku** | `BD/areas/brand/corporate_design.md` |
-
+Logos (`logo.png` groß, `logo_header.png`) und die Corporate-Design-Doku (`corporate_design.md`)
+liegen in `BD/areas/brand/`; Porträt-Quelle: `Stefan Maier - Dokumente/02_Unterlagen/04_Fotos/MICHAELKREYER/`.
 Farben und Schriften der Website: § *Architektur* (Tokens in `assets/css/base.css :root`).
 
 ## Externe Services
@@ -601,8 +585,8 @@ Favicon/OG-Image neu generieren: `py _generate_assets.py`. Nachweise neu rendern
 Quell-PDF aktualisiert wird): `py credentials/_generate_credentials.py`. Quelle: `Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`.
 Seitenauswahl und Metadaten (Titel, Untertitel, Kategorie pro Seite) stehen in
 `credentials/_generate_credentials.py` — Reihenfolge dort ändern. Schwärzungen (Liste
-`REDAKTIONEN`) gehören in den Erzeuger, nicht ins fertige Bild (`CLAUDE.md` §1 *Was öffentlich
-gestellt wird*).
+`REDAKTIONEN`) gehören in den Erzeuger, nicht ins fertige Bild (`CLAUDE.md` §1 *Dokumentation*, „Vor dem
+Veroeffentlichen schwaerzen").
 
 ## WhatsApp-Kontakt — abgeschaltet seit 07.09.2026
 
