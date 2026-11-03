@@ -28,6 +28,11 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   29.09., „So funktioniert's"; „Partner" bleibt wegen der gegenseitigen Verlinkung) und
   „Sicherheit" statt „Forschung" im Hauptmenü — nur mit Clarity-Beleg, höchstens drei Änderungen.
   Terminiert als Zentraldokument Nr 311 (fällig 03.11.2026).
+- **Versuch „Angebote und Hauptaufruf“ seit 03.11.2026** *(Clarity-Befund 28 Tage, Stefan: mehr Klicks
+  und Ersttermine)*: zwei Startkarten mit sichtbarem Buchungsknopf, je Angebot nur der Beispiel-Befund,
+  zwei Wege darunter; derselbe Hauptaufruf oben und unten auf Leistungen, Über mich, Demo; mobiler
+  Sticky-CTA auf allen Inhaltsseiten außer `sicherheit.html` (lädt `site.js` nicht). Messpunkt
+  01.12.2026, Bezugsgrößen in `OPTIMIERUNG.md` §4.
 
 ### Regeln, die dauerhaft gelten
 
@@ -84,14 +89,18 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
   Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
-- **Angebotsleiter seit 03.11.2026** *(Stefan: „So einfach wie möglich", Fokus auf die Werkzeuge
-  zur Fehlerursachenanalyse)*: Erstgespräch (kostenlos) → Standortanalyse **oder** Erstanalyse
-  (je 1.500 €; nach der Standortanalyse auf Wunsch Begleitung bei der Umsetzung von
-  Anwendungsfällen, nach Aufwand) → **Fehlerursachenanalyse mit Demo-Werkzeug** (5.000 € je
-  Fehlerbild, nach positiver Standort- oder Erstanalyse, Stefan 03.11.2026; Anker bleibt `#analyse-je-fehlerbild`) → **Einführung in
-  den Betrieb** (nach Aufwand, nach Freigabe des Demo-Werkzeugs für den Testbetrieb; Anker
-  `#einfuehrung`, `#ki-setup-check` bleibt als unsichtbarer Anker). Begleitung der Fehlerbehebung
-  und Betreuung je Anlage unverändert. **Grundvoraussetzung** (gleicher Tag): Messwerte in einem
+- **Angebote seit 03.11.2026: zwei Startangebote, zwei Wege** *(Stefan; kanonisch
+  `BD/areas/kundenprozess.md` § Zwei Pfade)*: Erstgespräch (kostenlos) → Standortanalyse **oder**
+  Erstanalyse (je 1.500 €, nur diese beiden prominent als Karte). Danach **Weg A · Fehlerbild**:
+  **Fehlerursachenanalyse mit Demo-Werkzeug** (5.000 € je Fehlerbild, nach positiver Standort- oder
+  Erstanalyse; Anker `#analyse-je-fehlerbild`, dort auch `#danach`) → **Einführung in den Betrieb**
+  (nach Aufwand; `#einfuehrung`, `#ki-setup-check`, `#betreuung`), Betreuung je Anlage nur als
+  Halbsatz. Oder **Weg B · KI-Anwendungsfall mit Ihrer eigenen KI** (nur nach der Standortanalyse):
+  **KI-Fahrplan** (5.000 € für bis zu drei Anwendungsfälle: Machbarkeit, Kosten-Nutzen-Einschätzung,
+  Fahrplan; `#ki-fahrplan`) → Arbeitsabläufe aufbauen und Mitarbeitende schulen (nach Aufwand).
+  **Nicht mehr beworben:** die Begleitung der Fehlerbehebung (Absatz „Und danach?" und Abschnitt
+  `#danach` entfallen), Training als eigenes Angebot. EN: *Path A – Defect pattern*, *Path B – AI
+  use case with your own AI*, *AI Roadmap*, *Build workflows and train your team*. **Grundvoraussetzung** (gleicher Tag): Messwerte in einem
   Datenbanksystem, nicht in Excel-Tabellen; fehlt das, begleiten wir die Partnerwahl und den
   Aufbau der Aufzeichnung (nach Aufwand) — steht in beiden FAQ, bei Standort- und Erstanalyse und
   in `#bestand`. Abgelöst: das **KI-Basis-Setup** (9.900 €, 22.10.–03.11.2026) und die
@@ -225,6 +234,7 @@ auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert ha
 - Glossar: Modellprüfung = *model audit* (nie *certification/certified*), Standortanalyse =
   *Site Assessment*, Erstanalyse = *Initial Data Check*, Fehlerursachenanalyse mit Demo-Werkzeug =
   *Root Cause Analysis with Demo Tool*, Einführung in den Betrieb = *Rollout into Operations*,
+  KI-Fahrplan = *AI Roadmap*, Weg A/B = *Path A/B*,
   nach Aufwand = *billed by effort*, Erstgespräch = *intro call*, Lohngalvanik = *job shop*,
   Ausschuss = *scrap*, Reklamation = *customer complaint*. Abgelöst (03.11.2026): *Defect Analysis*,
   *AI Base Setup*, *Data Workshop*.
@@ -283,7 +293,9 @@ Blatt muss **allein stehen** (Video-Adresse, Kontakt, Ablauf). Erzeuger
 `BD/templates/flyer-corporate/build_flyer_anwendung.py`, **nie im PDF nachbessern** (Pflichtstellen-
 Pruefung: § *Projektstruktur*, `docs/`). **Aendert sich Video oder Seite, aendert sich das Blatt mit.**
 
-**Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, der Videostart meldet sich als
+**Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, derselbe Knopf oben im Hero seit
+03.11.2026 `cta-demo-hero` (ein Zweck, ein CTA, zweimal gezeigt; darunter nur noch EIN Nebenweg,
+`link-fehlerbild-demo`), der Videostart meldet sich als
 **`video-anwendung`** (aus `data-video="anwendung"` am iframe; die Erkennung in `consent.js` nimmt
 das erste YouTube-iframe der Seite — auf `demo.html` gibt es genau eines, es ist nichts
 anzupassen). Eingehende Links aus Mail und LinkedIn bekommen UTM-Parameter, damit der Verkehr im
@@ -377,13 +389,16 @@ Optionaler Gegencheck bei groesseren Umbauten (Node, kein Java):
 ```
 homepage/
   index.html               Predictive-Quality-Landing (ein roter Faden), Sektionen per grep 'id="' index.html.
-                           #ablauf = vier Angebotskarten (Standortanalyse, Erstanalyse, Fehlerursachenanalyse
-                           mit Demo-Werkzeug, Einfuehrung in den Betrieb nach Aufwand; Begleitung und
-                           Betreuung ohne Preis darunter). KEINE Leistungs-Teaser-Karten.
-  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt, #erstanalyse,
-                           #analyse-je-fehlerbild (= #datenanalyse, Stufe 2 „Fehlerursachenanalyse mit
-                           Demo-Werkzeug“), #einfuehrung (= #ki-setup-check), #danach, #fragen mit FAQPage-Schema,
-                           Blanko-Angebote als PDF. Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
+                           #ablauf (direkt unter dem Hero) = zwei Startkarten (Standortanalyse, Erstanalyse;
+                           Buchungsknopf sichtbar im Kopf, "Was Sie bekommen" klappt darunter auf, je EIN
+                           Beispiel-Befund) und darunter die zwei Wege (A Fehlerbild, B KI-Anwendungsfall).
+                           KEINE Leistungs-Teaser-Karten.
+  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt, #erstanalyse
+                           (Landeabschnitt der LinkedIn-Links, Buchungsknopf unter dem Preis), Weg A:
+                           #analyse-je-fehlerbild (= #datenanalyse, #danach), #einfuehrung (= #ki-setup-check,
+                           #betreuung), Weg B: #ki-fahrplan, #fragen mit FAQPage-Schema. Je Angebot nur der
+                           Beispiel-Befund als PDF; Produktblaetter und Blanko-Angebote liegen unverlinkt in
+                           docs/ (gehen im Gespraech raus). Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
                            GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen.
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
   ausbildung.html          Seit 03.11.2026 noindex und unverlinkt (nur alte direkte Links).

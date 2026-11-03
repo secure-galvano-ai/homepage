@@ -249,6 +249,7 @@ Ausbildungsbestand (nicht Neuabschluesse) -- Bestand ist nicht Zugang. -->
 </ol>
 </div>
 </section>
+<!-- ===== STICKY MOBILE CTA (nur mobil, nach dem Hero; seit 03.11.2026 auf allen Inhaltsseiten) ===== -->
 <!-- geteiltes Verhalten (Nav-Scroll, Mobile-Menue, fade-up) -> assets/js/site.js -->
 </body>
 </html>

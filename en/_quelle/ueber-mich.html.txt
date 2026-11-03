@@ -12,6 +12,8 @@
 <p class="label">Über mich</p>
 <h1>Stefan Maier</h1>
 <p class="role">Galvanikmeister mit Materialphysik-Hintergrund — heute Spezialist für Prozessdaten und KI in Galvanikbetrieben</p>
+<!-- 03.11.2026: Hauptaufruf auch oben (13 Einstiege in 28 Tagen, vorher nur am Seitenende); vor dem Vorspann, damit er mobil ueber dem Einwilligungsbanner liegt -->
+<p style="margin:0 0 18px;"><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-uebermich-hero">Kostenloses Erstgespräch buchen</a></p>
 <p class="lead">Über 20 Jahre Praxis am Galvanikbecken, ein Materialphysik-Studium dazu und die Erfahrung, KI-Systeme so zu bauen, dass sie in der Produktion tatsächlich genutzt werden. Hier finden Sie meinen Werdegang und die belegten Stationen meiner Laufbahn.</p>
 <div class="page-hero-links">
 <a href="https://www.linkedin.com/in/stefan-maier-bb0b73100" target="_blank" rel="noopener">
@@ -235,9 +237,10 @@ Bei Erscheinen benachrichtigen
 <div class="container">
 <h2>Reden wir über Ihre Möglichkeiten</h2>
 <p>30 Minuten kostenloses Erstgespräch. Sie schildern, was klemmt — Sie erfahren, was machbar ist.</p>
-<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn" data-funnel="cta-uebermich-abschluss">Erstgespräch buchen</a>
+<a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn" data-funnel="cta-uebermich-abschluss">Kostenloses Erstgespräch buchen</a>
 </div>
 </section>
+<!-- ===== STICKY MOBILE CTA (nur mobil, nach dem Hero; seit 03.11.2026 auf allen Inhaltsseiten) ===== -->
 <script>
 const CERTIFICATES = [
 { slug: "19-tuev-inspektionsbericht", title: "Inspektionsbericht — Management Summary", subtitle: "TÜV AUSTRIA TRUSTIFAI — ML-gestützte Anomalieerkennung an stromzuführenden Elementen galvanischer Prozesse", year: "2026", category: "modellpruefung" },

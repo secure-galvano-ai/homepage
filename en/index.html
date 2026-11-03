@@ -106,16 +106,16 @@
           "@id": "https://secure-galvano-ai.com/#diagnose",
           "name": "Site Assessment: Data and AI Potential for Plating Shops",
           "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-          "description": "Online meetings with the departments and the connection of your data sources: a finding on whether the data supports analysis, a data traffic light for each line across all source types, and the list of defect patterns with their potential. A day on site with a plant tour is optional. The documents belong to the shop, even without a follow-up order. Afterwards, if you wish, support in implementing selected use cases, agreed in advance and billed by effort. No AI service sees your readings.",
+          "description": "Online meetings with the departments and the connection of your data sources: a finding on whether the data supports analysis, a data traffic light for each line across all source types, and the list of defect patterns with their potential. A day on site with a plant tour is optional. The documents belong to the shop, even without a follow-up order. Afterwards two paths: the Root Cause Analysis with Demo Tool for a defect pattern, or the AI Roadmap for use cases with the shop's own AI. No AI service sees your readings.",
           "serviceType": "AI Diagnostic Consulting",
           "areaServed": "AT, DE, CH, US"
         },
         {
           "@type": "Service",
           "@id": "https://secure-galvano-ai.com/#folgeprojekt",
-          "name": "Root Cause Analysis with Demo Tool, Rollout into Operations and Guided Defect Resolution for Plating Shops",
+          "name": "Root Cause Analysis with Demo Tool, Rollout into Operations and AI Roadmap for Plating Shops",
           "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-          "description": "Follow-up services after the Site Assessment or the Initial Data Check: root cause analysis per defect pattern with a cause-and-effect diagram, an order of checks and a demo tool, then the rollout of the tool into operations, billed by effort, and structured guidance until the defect patterns are resolved, at a fixed price per project, optionally with integrated monitoring software for live analysis and continuous tracking. Built on synthetic data, analyzed on our side, run at your site. Trusted AI methodology.",
+          "description": "Follow-up services after the Site Assessment or the Initial Data Check: root cause analysis per defect pattern with a cause-and-effect diagram, an order of checks and a demo tool, then the rollout of the tool into operations, billed by effort (Path A). Or, after the Site Assessment, the AI Roadmap for up to three use cases with the shop's own AI: feasibility, a cost-benefit assessment and a roadmap, then building workflows and training the team, billed by effort (Path B). Built on synthetic data, analyzed on our side, run at your site. Trusted AI methodology.",
           "serviceType": "Process Consulting"
         },
         {
@@ -645,7 +645,7 @@
                     TÜV AUSTRIA Trusted AI · Model audit completed
                 </div>
                 <!-- Since 03.11.2026 (Stefan) the defect headline is back: defect patterns resonate with
-                     customers, that is the focus. The paragraph below bridges to the four offers.
+                     customers, that is the focus. The paragraph below bridges to the offers.
                      Interim 21.10.-03.11.: "Secure AI for surface finishing. Benefits you can measure." -->
                 <h1>The defect is already in your data. <span class="accent">You just can't see it.</span></h1>
                 <!-- 03.11.2026 (Stefan): AI setup offer dropped, focus on tools for automated analysis -->
@@ -684,61 +684,81 @@
      Replaces the former process strip. id stays "ablauf" because other pages link to it.
      Counterpart of the offer cards on the German home page -- same order, same markers.
      Ladder since 03.11.2026 (Stefan): Root Cause Analysis with Demo Tool, then Rollout into
-     Operations (billed by effort) instead of the AI Base Setup. -->
+     Operations (billed by effort) instead of the AI Base Setup.
+     Since 03.11.2026 the booking button sits in the visible head of each card; detail
+     links below the cards were removed (one call to action per card). -->
 <style>
-  .angebote-karten { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
-  .angebot-spalte { display:flex; flex-direction:column; gap:10px; }
-  .angebot-belege { font-size:.86rem; line-height:1.8; padding:0 6px; }
-  .angebot-belege a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
-  .angebot-belege a::before { content:"→ "; color:var(--logo-gruen); border:0; }
-  .angebot-karte { background:var(--weiss); border:1px solid var(--silber); border-radius:16px; box-shadow:0 6px 22px rgba(27,42,74,.08); transition:box-shadow .2s, border-color .2s; }
-  .angebot-karte:hover { box-shadow:0 10px 30px rgba(27,42,74,.16); }
-  .angebot-karte[open] { border-color:var(--schild-blau); }
-  .angebot-karte > summary { list-style:none; cursor:pointer; padding:24px 22px 22px; }
-  .angebot-karte > summary::-webkit-details-marker { display:none; }
-  .angebot-stufe { display:inline-block; font-family:'Montserrat',Arial,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 11px; border-radius:50px; background:rgba(43,94,167,.1); color:var(--schild-blau); }
+  /* Seit 03.11.2026: Der Buchungsknopf steht im sichtbaren Kopf jeder Karte, "Was Sie
+     bekommen" klappt darunter als eigenes details-Element auf. Subgrid haelt Stufe, Titel,
+     Frage, Zielgruppe, Preis und Knopf ueber alle Karten einer Reihe auf gleicher Hoehe,
+     ohne feste Mindesthoehen; beim Aufklappen waechst nur die eigene Karte. */
+  .angebote-karten { display:grid; grid-template-columns:repeat(2,1fr); column-gap:22px; row-gap:0; align-items:start; max-width:900px; margin:0 auto; }
+  .angebot-spalte { display:grid; grid-row:span 8; grid-template-rows:subgrid; row-gap:0; margin-bottom:18px; }
+  .angebot-karte { grid-row:span 6; display:grid; grid-template-rows:subgrid; row-gap:0; background:var(--weiss); border:1px solid var(--silber); border-bottom:0; border-radius:16px 16px 0 0; padding:24px 22px 6px; box-shadow:0 -2px 18px rgba(27,42,74,.06); }
+  .angebot-stufe { justify-self:start; align-self:start; display:inline-block; font-family:'Montserrat',Arial,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 11px; border-radius:50px; background:rgba(43,94,167,.1); color:var(--schild-blau); }
   .angebot-karte.neu .angebot-stufe { background:rgba(61,140,62,.12); color:var(--logo-gruen); }
-  .angebot-karte h3 { font-family:'Montserrat',Arial,sans-serif; font-size:1.22rem; color:var(--dunkelblau); margin:12px 0 8px; min-height:2.5em; display:flex; align-items:flex-end; }
-  .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; min-height:4.6em; }
-  .angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; min-height:7.6em; }
+  .angebot-karte h3 { align-self:start; font-family:'Montserrat',Arial,sans-serif; font-size:1.22rem; color:var(--dunkelblau); margin:12px 0 8px; }
+  .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; }
+  .angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; }
   .angebot-preis { font-family:'Montserrat',Arial,sans-serif; font-size:1.3rem; font-weight:700; color:var(--dunkelblau); }
-  .angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; min-height:2.6em; }
-  .angebot-inhalt .btn { white-space:nowrap; font-size:.92rem; padding:12px 20px; }
+  .angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; }
+  .angebot-karte .btn { justify-self:start; align-self:start; margin-top:16px; white-space:nowrap; font-size:.92rem; padding:12px 20px; }
+  .angebot-details { align-self:start; background:var(--weiss); border:1px solid var(--silber); border-top:0; border-radius:0 0 16px 16px; box-shadow:0 10px 18px -8px rgba(27,42,74,.14); }
+  .angebot-details[open] { border-color:var(--schild-blau); }
+  .angebot-details > summary { list-style:none; cursor:pointer; padding:14px 22px 20px; }
+  .angebot-details > summary::-webkit-details-marker { display:none; }
   #ablauf { scroll-margin-top:84px; }
-  .angebot-mehr { display:inline-block; margin-top:16px; font-weight:600; color:var(--schild-blau); font-size:.95rem; }
+  .angebot-mehr { display:inline-block; font-weight:600; color:var(--schild-blau); font-size:.95rem; }
   .angebot-mehr::after { content:" ▾"; }
-  .angebot-karte[open] .angebot-mehr::after { content:" ▴"; }
+  .angebot-details[open] .angebot-mehr::after { content:" ▴"; }
   .angebot-mehr .zu { display:none; }
-  .angebot-karte[open] .angebot-mehr .zu { display:inline; }
-  .angebot-karte[open] .angebot-mehr .auf { display:none; }
+  .angebot-details[open] .angebot-mehr .zu { display:inline; }
+  .angebot-details[open] .angebot-mehr .auf { display:none; }
   .angebot-inhalt { padding:0 22px 22px; border-top:1px solid var(--hellgrau); }
-  .angebot-inhalt ul { padding-left:20px; margin:16px 0; }
+  .angebot-inhalt ul { padding-left:20px; margin:16px 0 0; }
   .angebot-inhalt li { margin:9px 0; color:var(--text-body); font-size:.93rem; line-height:1.55; }
   .angebot-inhalt li::marker { color:var(--logo-gruen); }
-  .angebot-unterlagen { font-size:.88rem; margin:0 0 16px; line-height:1.9; }
-  .angebot-unterlagen a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
-  @media (max-width:1180px) { .angebote-karten { grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } .angebot-frage, .angebot-fuer, .angebot-karte h3, .angebot-preis small { min-height:0; } }
+  .angebot-belege { font-size:.86rem; line-height:1.8; padding:0 6px; margin:10px 0 0; }
+  .angebot-belege a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+  .angebot-belege a::before { content:"→ "; color:var(--logo-gruen); border:0; }
+  @media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } }
+  /* Zwei Wege nach dem Befund (Stefan 03.11.2026, BD areas/kundenprozess.md): je Weg drei
+     Stationen untereinander, verbunden mit Pfeilen. Nur die Startangebote stehen als Karte. */
+  .wege { max-width:900px; margin:10px auto 0; }
+  .wege-titel { text-align:center; font-family:'Montserrat',Arial,sans-serif; font-weight:700; color:var(--dunkelblau); font-size:1.15rem; margin:0 0 16px; }
+  .wege-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .weg { background:var(--weiss); border:1px solid var(--silber); border-radius:16px; padding:20px 22px; }
+  .weg-name { font-family:'Montserrat',Arial,sans-serif; font-size:.74rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--schild-blau); margin:0 0 12px; }
+  .weg-schritte { list-style:none; margin:0; padding:0; }
+  .weg-schritte li { background:var(--hellgrau); border-radius:10px; padding:10px 14px; font-size:.92rem; line-height:1.45; color:var(--text-body); }
+  .weg-schritte li strong { display:block; color:var(--dunkelblau); font-family:'Montserrat',Arial,sans-serif; font-size:.98rem; }
+  .weg-schritte li.weg-start { background:transparent; border:1px dashed var(--silber); color:var(--text-light); }
+  .weg-schritte li + li { margin-top:22px; position:relative; }
+  .weg-schritte li + li::before { content:"↓"; position:absolute; top:-21px; left:20px; color:var(--logo-gruen); font-weight:700; line-height:20px; }
+  .weg-fuss { font-size:.88rem; line-height:1.7; color:var(--text-light); margin:14px 0 0; }
+  .weg-fuss a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+  @media (max-width:760px) { .wege-grid { grid-template-columns:1fr; } }
 </style>
 <section id="ablauf" style="padding:64px 0 72px;background:var(--hellgrau);">
     <div class="container">
         <div class="section-header fade-up" style="margin-bottom:30px;">
             <p class="section-label">Offers and prices</p>
-            <h2 style="color:var(--dunkelblau);">From the root cause to a tool in daily operation.</h2>
-            <p>You start with the Site Assessment, or with the Initial Data Check if your data is already available. If either one shows that your data holds up, the Root Cause Analysis finds the cause and builds a demo tool for it; after that we roll it out into your operations. Every step has a clear result, and you decide freely what comes next. Before that comes a free 30-minute intro call.</p>
+            <h2 style="color:var(--dunkelblau);">Two starting points, two clear paths.</h2>
+            <p>You start with the Site Assessment, or with the Initial Data Check if your readings are already recorded in a database system. The findings show which path pays off for you; after that you decide freely. Before that comes a free 30-minute intro call.</p>
         </div>
 
         <div class="angebote-karten">
             <div class="angebot-spalte fade-up">
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">Uncover potential</span>
-                        <h3>Site Assessment</h3>
-                        <p class="angebot-frage">What can your data support, and where do automation and AI pay off?</p>
-                        <p class="angebot-fuer">For shops whose data is scattered, or who want to know where automation and AI pay off.</p>
-                        <div class="angebot-preis">€1,500<small>per site, regardless of the number of lines</small></div>
-                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
-                    </summary>
+                <div class="angebot-karte">
+                    <span class="angebot-stufe">Uncover potential</span>
+                    <h3>Site Assessment</h3>
+                    <p class="angebot-frage">What can your data support, and where do automation and AI pay off?</p>
+                    <p class="angebot-fuer">For shops whose data is scattered, or who want to know where automation and AI pay off.</p>
+                    <div class="angebot-preis">€1,500<small>per site, regardless of the number of lines</small></div>
+                    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort-en">Book an intro call</a>
+                </div>
+                <details class="angebot-details">
+                    <summary><span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span></summary>
                     <div class="angebot-inhalt">
                         <ul>
                             <li><strong>What you gain:</strong> you know where scrap, time and cost can be saved before you invest in a project.</li>
@@ -747,26 +767,23 @@
                             <li>A data traffic light for each line and the defect patterns where the money is</li>
                             <li>Automation potential and AI use cases in your processes, ranked by benefit</li>
                             <li>A day on site with a plant tour, if you wish</li>
-                            <li>Afterwards, if you wish: support in implementing selected use cases, agreed in advance and billed by effort</li>
+                            <li>Afterwards: Path A for a defect pattern or Path B for AI use cases with your own AI, see below</li>
                             <li>If your readings are not yet recorded in a database system: help choosing the right partner and setting up the recording, if you wish, billed by effort</li>
                         </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort-en">Book an intro call</a>
                     </div>
                 </details>
-                <p class="angebot-belege">
-                    <a href="services.html#standortanalyse" data-funnel="link-standortanalyse-karte-en">Process and effort in detail</a>
-                </p>
             </div>
             <div class="angebot-spalte fade-up">
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">Data already collected</span>
-                        <h3>Initial Data Check</h3>
-                        <p class="angebot-frage">Can your existing data be analyzed, and where are the gaps?</p>
-                        <p class="angebot-fuer">For shops that already record their readings in a database system, for example through the line controls.</p>
-                        <div class="angebot-preis">€1,500<small>per existing data set</small></div>
-                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
-                    </summary>
+                <div class="angebot-karte">
+                    <span class="angebot-stufe">Data already collected</span>
+                    <h3>Initial Data Check</h3>
+                    <p class="angebot-frage">Can your existing data be analyzed, and where are the gaps?</p>
+                    <p class="angebot-fuer">For shops that already record their readings in a database system, for example through the line controls.</p>
+                    <div class="angebot-preis">€1,500<small>per existing data set</small></div>
+                    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse-en">Book an intro call</a>
+                </div>
+                <details class="angebot-details">
+                    <summary><span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span></summary>
                     <div class="angebot-inhalt">
                         <ul>
                             <li><strong>What you gain:</strong> within about two weeks you know whether your data holds up, and you don't invest in a root-cause search that fails on gaps.</li>
@@ -775,64 +792,39 @@
                             <li>A data traffic light for each line: what supports analysis and what doesn't</li>
                             <li>A recommendation on where to start, or what to retrofit</li>
                         </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse-en">Book an intro call</a>
                     </div>
                 </details>
             </div>
-            <div class="angebot-spalte fade-up">
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">If the data supports it</span>
-                        <h3>Root Cause Analysis with Demo Tool</h3>
-                        <p class="angebot-frage">What are the causes of a selected defect pattern?</p>
-                        <p class="angebot-fuer">For shops with a recurring defect pattern, once the Site Assessment or the Initial Data Check has shown that the data holds up.</p>
-                        <div class="angebot-preis">€5,000<small>per defect pattern, using the data you already have</small></div>
-                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
-                    </summary>
-                    <div class="angebot-inhalt">
-                        <ul>
-                            <li><strong>What you gain:</strong> a substantiated cause instead of opinions, and a tool your team can keep working with.</li>
-                            <li>Cause-and-effect diagram with the supporting analyses</li>
-                            <li>A reasoned order of checks for your team</li>
-                            <li>A demo tool for your defect pattern that runs without installation and without internet</li>
-                            <li>The tool can be developed further and rolled out into operations — no intervention in production during the analysis</li>
-                        </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-fehlerbild-en">Book an intro call</a>
-                    </div>
-                </details>
-            </div>
-            <div class="angebot-spalte fade-up">
-                <!-- Since 03.11.2026 (Stefan) instead of the AI Base Setup: Rollout into Operations, billed by effort -->
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">If the tool convinces you</span>
-                        <h3>Rollout into Operations</h3>
-                        <p class="angebot-frage">How does the demo tool become a tool for everyday work?</p>
-                        <p class="angebot-fuer">For shops that have approved the demo tool for a trial run.</p>
-                        <div class="angebot-preis">Billed by effort<small>once your requirements are agreed</small></div>
-                        <span class="angebot-mehr"><span class="auf">What you get</span><span class="zu">Show less</span></span>
-                    </summary>
-                    <div class="angebot-inhalt">
-                        <ul>
-                            <li><strong>What you gain:</strong> the tool runs in your operations, on your hardware, without the cloud.</li>
-                            <li>Approval of the demo tool for a trial run</li>
-                            <li>Requirements agreed with your team and your IT</li>
-                            <li>Further development and integration into your operations</li>
-                            <li>Afterwards, if you wish, ongoing support per line</li>
-                        </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-einfuehrung-en">Book an intro call</a>
-                    </div>
-                </details>
-                <p class="angebot-belege">
-                    <a href="services.html#einfuehrung" data-funnel="link-einfuehrung-karte-en">Process in detail</a>
-                </p>
+        </div>
+
+        <!-- Two paths after the findings (Stefan 03.11.2026). -->
+        <div class="wege fade-up">
+            <p class="wege-titel">After the findings: two paths</p>
+            <div class="wege-grid">
+                <div class="weg">
+                    <p class="weg-name">Path A – Defect pattern</p>
+                    <ol class="weg-schritte">
+                        <li class="weg-start">Site Assessment or Initial Data Check</li>
+                        <li><strong>Root Cause Analysis with Demo Tool</strong>€5,000 per defect pattern: a proven cause and a tool your team keeps working with</li>
+                        <li><strong>Rollout into Operations</strong>billed by effort, on your hardware, without the cloud</li>
+                    </ol>
+                    <p class="weg-fuss">Afterwards, ongoing support per line if you wish.<br><a href="services.html#analyse-je-fehlerbild" data-funnel="link-weg-a-en">Path A in detail</a></p>
+                </div>
+                <div class="weg">
+                    <p class="weg-name">Path B – AI use case with your own AI</p>
+                    <ol class="weg-schritte">
+                        <li class="weg-start">Site Assessment</li>
+                        <li><strong>AI Roadmap</strong>€5,000 for up to three use cases: feasibility, a cost-benefit assessment and a clear roadmap with the next steps</li>
+                        <li><strong>Build workflows and train your team</strong>billed by effort, on your company's own AI</li>
+                    </ol>
+                    <p class="weg-fuss"><a href="services.html#ki-fahrplan" data-funnel="link-weg-b-en">Path B in detail</a></p>
+                </div>
             </div>
         </div>
 
         <p class="fade-up" style="text-align:center;color:var(--text-light);font-size:0.88rem;margin:18px 0 0;">All prices net, excluding VAT.</p>
         <div class="fade-up" style="text-align:center;margin-top:30px;">
             <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">For the analyses, we analyze your data on our own computers — before a single file leaves your building, we sign a mutual NDA. The finished tool runs at your site. <a href="../docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Read the NDA in advance (PDF, German)</a></p>
-            <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:16px auto 0;max-width:700px;"><strong style="color:var(--dunkelblau);">And after that?</strong> We support your team in resolving the defects, at a fixed price per project, agreed before you commit. Across energy, water, anode metal, chemicals and disposal, the savings potential per line and year is on the order of €60,000 to €90,000. <a href="services.html#danach" data-funnel="link-danach-ablauf-en" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">What happens next</a></p>
         </div>
     </div>
 </section>

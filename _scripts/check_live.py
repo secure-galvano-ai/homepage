@@ -125,7 +125,7 @@ def _links_und_klicks(page, ctx, basis: str, pfad: str) -> list[str]:
             if not p2.evaluate("a => !!document.getElementById(a)", anker):
                 befunde.append(f"{pfad}: Anker fehlt auf der Zielseite {ln['href']} ({ln['text']})")
             p2.close()
-    for sel in ("details.angebot-karte > summary", "details.faq-item > summary"):
+    for sel in ("details.angebot-details > summary", "details.faq-item > summary"):
         knoepfe = page.locator(sel)
         for i in range(knoepfe.count()):
             knoepfe.nth(i).click()

@@ -111,16 +111,16 @@
           "@id": "https://secure-galvano-ai.com/#diagnose",
           "name": "Standortanalyse Daten- und KI-Potenziale für Galvanikbetriebe",
           "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-          "description": "Online-Gespräche mit den Fachbereichen und die Anbindung der Datenquellen: ein Befund, ob die Daten für Auswertungen tragen, die Datenampel je Anlage über alle Quellarten und die Liste der Fehlerbilder mit Potenzial. Ein Tag vor Ort mit Rundgang ist optional. Die Unterlagen gehören dem Betrieb, auch ohne Folgeauftrag. Danach auf Wunsch Begleitung bei der Umsetzung ausgewählter Anwendungsfälle, nach Abstimmung und nach Aufwand. Kein KI-Dienst sieht Ihre Messwerte.",
+          "description": "Online-Gespräche mit den Fachbereichen und die Anbindung der Datenquellen: ein Befund, ob die Daten für Auswertungen tragen, die Datenampel je Anlage über alle Quellarten und die Liste der Fehlerbilder mit Potenzial. Ein Tag vor Ort mit Rundgang ist optional. Die Unterlagen gehören dem Betrieb, auch ohne Folgeauftrag. Danach zwei Wege: die Fehlerursachenanalyse mit Demo-Werkzeug für ein Fehlerbild oder der KI-Fahrplan für Anwendungsfälle mit der eigenen KI des Betriebs. Kein KI-Dienst sieht Ihre Messwerte.",
           "serviceType": "AI Diagnostic Consulting",
           "areaServed": "AT, DE, CH"
         },
         {
           "@type": "Service",
           "@id": "https://secure-galvano-ai.com/#folgeprojekt",
-          "name": "Fehlerursachenanalyse mit Demo-Werkzeug, Einführung in den Betrieb und Begleitung der Fehlerbehebung für Galvanikbetriebe",
+          "name": "Fehlerursachenanalyse mit Demo-Werkzeug, Einführung in den Betrieb und KI-Fahrplan für Galvanikbetriebe",
           "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-          "description": "Folgeleistungen nach der Standort- oder Erstanalyse: Fehlerursachenanalyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und einem Demo-Werkzeug, danach die Einführung des Werkzeugs in den Betrieb nach Aufwand und die strukturierte Begleitung der Fehlerbehebung, bis die Fehlerbilder behoben sind, als Festpreis je Projekt, optional mit Integration einer Monitoring-Software für Live-Auswertung und kontinuierliches Tracking. Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
+          "description": "Folgeleistungen nach der Standort- oder Erstanalyse: Fehlerursachenanalyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und einem Demo-Werkzeug, danach die Einführung des Werkzeugs in den Betrieb nach Aufwand (Weg A). Oder nach der Standortanalyse der KI-Fahrplan für bis zu drei Anwendungsfälle mit der eigenen KI des Betriebs: Machbarkeit, Kosten-Nutzen-Einschätzung und Fahrplan, danach Arbeitsabläufe aufbauen und Mitarbeitende schulen nach Aufwand (Weg B). Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
           "serviceType": "Process Consulting"
         },
         {
@@ -649,7 +649,7 @@
                     TÜV AUSTRIA Trusted AI · Modellprüfung abgeschlossen
                 </div>
                 <!-- Seit 03.11.2026 (Stefan) wieder der Fehler-Kopf: Das Fehlerbild kommt bei Kunden an,
-                     darauf liegt der Fokus. Der Absatz darunter schlaegt die Bruecke zu den vier Angeboten.
+                     darauf liegt der Fokus. Der Absatz darunter schlaegt die Bruecke zu den Angeboten.
                      Zwischenstand 21.10.-03.11.: "Sichere KI fuer die Oberflaechentechnik. Mit Nutzen, den Sie messen." -->
                 <h1>Der Fehler steckt schon in Ihren Daten. <span class="accent">Sie sehen ihn nur nicht.</span></h1>
                 <!-- 03.11.2026 (Stefan): KI-Basis-Setup entfallen, Fokus auf Werkzeuge zur automatisierten Auswertung -->
@@ -662,8 +662,8 @@
                 <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">Für <strong style="color:#fff;">Galvanik- und Eloxalbetriebe mit mehreren Anlagen</strong> — an einem Standort oder über mehrere Werke hinweg. Einstieg ab 1.500 € netto.</p>
                 <div class="hero-buttons">
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero">Kostenloses Erstgespräch</a>
-                    <!-- Zweiter Hero-Button fuehrt seit 21.10.2026 zu den vier Angebotskacheln: Beispiel-
-                         Befund, Produktblatt und Musterangebot haengen dort je Angebot. Vorher fuehrte er
+                    <!-- Zweiter Hero-Button fuehrt seit 21.10.2026 zu den Angebotskacheln (seit
+                         03.11.2026 zwei Startkarten mit Buchungsknopf und Befund, darunter zwei Wege). Vorher fuehrte er
                          direkt zum Musterbefund der Standortanalyse (Beleg zum Mitnehmen, 10.08.2026). -->
                     <a href="#ablauf" class="btn btn-outline" data-funnel="cta-angebote-hero">Angebote und Preise</a>
                 </div>
@@ -692,66 +692,90 @@
 <!-- ===== ANGEBOTE — vier Karten, aufklappbar (Vorschlag 21.10.2026) =====
      Ersetzt den frueheren Ablauf-Strang. id bleibt "ablauf", weil forschung.html und
      leistungen.html darauf verlinken. Preise: BD/areas/preise.yaml.
+     Seit 03.11.2026 (Stefan, BD areas/kundenprozess.md "Zwei Pfade"): nur die zwei Startangebote als
+     Karte, darunter Weg A (Fehlerbild) und Weg B (KI-Anwendungsfall mit der eigenen KI). Davor:
      Leiter seit 03.11.2026 (Stefan: "so einfach wie moeglich", Fokus Fehlerursachenanalyse):
      Standortanalyse oder Erstanalyse -> Fehlerursachenanalyse mit Demo-Werkzeug (5.000 EUR,
      vorher "Analyse je Fehlerbild"; Voraussetzung eine positive Standort- ODER Erstanalyse,
      Stefan 03.11.2026) -> Einfuehrung in den Betrieb (nach Aufwand). Das
      KI-Basis-Setup und der Verweis auf die Datenwerkstatt sind entfallen; Marker *fehlerbild*
-     bleiben, damit die Clarity-Reihen weiterlaufen. Jede Karte traegt ihre Unterlagen. -->
+     bleiben, damit die Clarity-Reihen weiterlaufen.
+     Seit 03.11.2026 (Clarity 28 Tage: Musterangebote 0 Klicks, Produktblaetter ~4, Befunde je 1):
+     je Karte nur noch der Buchungsknopf im sichtbaren Kopf und hoechstens EIN Beleg, der
+     Beispiel-Befund. Produktblaetter und Musterangebote liegen weiter in docs/ und gehen im
+     Gespraech raus. OPTIMIERUNG.md §4, Versuch "Angebotskarten". -->
 <style>
-  .angebote-karten { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
-  .angebot-spalte { display:flex; flex-direction:column; gap:10px; }
-  .angebot-belege { font-size:.86rem; line-height:1.8; padding:0 6px; }
-  .angebot-belege a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
-  .angebot-belege a::before { content:"→ "; color:var(--logo-gruen); border:0; }
-  .angebot-karte { background:var(--weiss); border:1px solid var(--silber); border-radius:16px; box-shadow:0 6px 22px rgba(27,42,74,.08); transition:box-shadow .2s, border-color .2s; }
-  .angebot-karte:hover { box-shadow:0 10px 30px rgba(27,42,74,.16); }
-  .angebot-karte[open] { border-color:var(--schild-blau); }
-  .angebot-karte > summary { list-style:none; cursor:pointer; padding:24px 22px 22px; }
-  .angebot-karte > summary::-webkit-details-marker { display:none; }
-  .angebot-stufe { display:inline-block; font-family:'Montserrat',Arial,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 11px; border-radius:50px; background:rgba(43,94,167,.1); color:var(--schild-blau); }
+  /* Seit 03.11.2026: Der Buchungsknopf steht im sichtbaren Kopf jeder Karte, "Was Sie
+     bekommen" klappt darunter als eigenes details-Element auf. Subgrid haelt Stufe, Titel,
+     Frage, Zielgruppe, Preis und Knopf ueber alle Karten einer Reihe auf gleicher Hoehe,
+     ohne feste Mindesthoehen; beim Aufklappen waechst nur die eigene Karte. */
+  .angebote-karten { display:grid; grid-template-columns:repeat(2,1fr); column-gap:22px; row-gap:0; align-items:start; max-width:900px; margin:0 auto; }
+  .angebot-spalte { display:grid; grid-row:span 8; grid-template-rows:subgrid; row-gap:0; margin-bottom:18px; }
+  .angebot-karte { grid-row:span 6; display:grid; grid-template-rows:subgrid; row-gap:0; background:var(--weiss); border:1px solid var(--silber); border-bottom:0; border-radius:16px 16px 0 0; padding:24px 22px 6px; box-shadow:0 -2px 18px rgba(27,42,74,.06); }
+  .angebot-stufe { justify-self:start; align-self:start; display:inline-block; font-family:'Montserrat',Arial,sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 11px; border-radius:50px; background:rgba(43,94,167,.1); color:var(--schild-blau); }
   .angebot-karte.neu .angebot-stufe { background:rgba(61,140,62,.12); color:var(--logo-gruen); }
-  .angebot-karte h3 { font-family:'Montserrat',Arial,sans-serif; font-size:1.22rem; color:var(--dunkelblau); margin:12px 0 8px; min-height:2.5em; display:flex; align-items:flex-end; }
-  .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; min-height:4.6em; }
-  .angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; min-height:7.6em; }
+  .angebot-karte h3 { align-self:start; font-family:'Montserrat',Arial,sans-serif; font-size:1.22rem; color:var(--dunkelblau); margin:12px 0 8px; }
+  .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; }
+  .angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; }
   .angebot-preis { font-family:'Montserrat',Arial,sans-serif; font-size:1.3rem; font-weight:700; color:var(--dunkelblau); }
-  .angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; min-height:2.6em; }
-  .angebot-inhalt .btn { white-space:nowrap; font-size:.92rem; padding:12px 20px; }
+  .angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; }
+  .angebot-karte .btn { justify-self:start; align-self:start; margin-top:16px; white-space:nowrap; font-size:.92rem; padding:12px 20px; }
+  .angebot-details { align-self:start; background:var(--weiss); border:1px solid var(--silber); border-top:0; border-radius:0 0 16px 16px; box-shadow:0 10px 18px -8px rgba(27,42,74,.14); }
+  .angebot-details[open] { border-color:var(--schild-blau); }
+  .angebot-details > summary { list-style:none; cursor:pointer; padding:14px 22px 20px; }
+  .angebot-details > summary::-webkit-details-marker { display:none; }
   #ablauf { scroll-margin-top:84px; }
-  .angebot-mehr { display:inline-block; margin-top:16px; font-weight:600; color:var(--schild-blau); font-size:.95rem; }
+  .angebot-mehr { display:inline-block; font-weight:600; color:var(--schild-blau); font-size:.95rem; }
   .angebot-mehr::after { content:" ▾"; }
-  .angebot-karte[open] .angebot-mehr::after { content:" ▴"; }
+  .angebot-details[open] .angebot-mehr::after { content:" ▴"; }
   .angebot-mehr .zu { display:none; }
-  .angebot-karte[open] .angebot-mehr .zu { display:inline; }
-  .angebot-karte[open] .angebot-mehr .auf { display:none; }
+  .angebot-details[open] .angebot-mehr .zu { display:inline; }
+  .angebot-details[open] .angebot-mehr .auf { display:none; }
   .angebot-inhalt { padding:0 22px 22px; border-top:1px solid var(--hellgrau); }
-  .angebot-inhalt ul { padding-left:20px; margin:16px 0; }
+  .angebot-inhalt ul { padding-left:20px; margin:16px 0 0; }
   .angebot-inhalt li { margin:9px 0; color:var(--text-body); font-size:.93rem; line-height:1.55; }
   .angebot-inhalt li::marker { color:var(--logo-gruen); }
-  .angebot-unterlagen { font-size:.88rem; margin:0 0 16px; line-height:1.9; }
-  .angebot-unterlagen a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
-  @media (max-width:1180px) { .angebote-karten { grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } .angebot-frage, .angebot-fuer, .angebot-karte h3, .angebot-preis small { min-height:0; } }
+  .angebot-belege { font-size:.86rem; line-height:1.8; padding:0 6px; margin:10px 0 0; }
+  .angebot-belege a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+  .angebot-belege a::before { content:"→ "; color:var(--logo-gruen); border:0; }
+  @media (max-width:700px) { .angebote-karten { grid-template-columns:1fr; } }
+  /* Zwei Wege nach dem Befund (Stefan 03.11.2026, BD areas/kundenprozess.md): je Weg drei
+     Stationen untereinander, verbunden mit Pfeilen. Nur die Startangebote stehen als Karte. */
+  .wege { max-width:900px; margin:10px auto 0; }
+  .wege-titel { text-align:center; font-family:'Montserrat',Arial,sans-serif; font-weight:700; color:var(--dunkelblau); font-size:1.15rem; margin:0 0 16px; }
+  .wege-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .weg { background:var(--weiss); border:1px solid var(--silber); border-radius:16px; padding:20px 22px; }
+  .weg-name { font-family:'Montserrat',Arial,sans-serif; font-size:.74rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--schild-blau); margin:0 0 12px; }
+  .weg-schritte { list-style:none; margin:0; padding:0; }
+  .weg-schritte li { background:var(--hellgrau); border-radius:10px; padding:10px 14px; font-size:.92rem; line-height:1.45; color:var(--text-body); }
+  .weg-schritte li strong { display:block; color:var(--dunkelblau); font-family:'Montserrat',Arial,sans-serif; font-size:.98rem; }
+  .weg-schritte li.weg-start { background:transparent; border:1px dashed var(--silber); color:var(--text-light); }
+  .weg-schritte li + li { margin-top:22px; position:relative; }
+  .weg-schritte li + li::before { content:"↓"; position:absolute; top:-21px; left:20px; color:var(--logo-gruen); font-weight:700; line-height:20px; }
+  .weg-fuss { font-size:.88rem; line-height:1.7; color:var(--text-light); margin:14px 0 0; }
+  .weg-fuss a { color:var(--schild-blau); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(43,94,167,.35); }
+  @media (max-width:760px) { .wege-grid { grid-template-columns:1fr; } }
 </style>
 <section id="ablauf" style="padding:64px 0 72px;background:var(--hellgrau);">
     <div class="container">
         <div class="section-header fade-up" style="margin-bottom:30px;">
             <p class="section-label">Angebote und Preise</p>
-            <h2 style="color:var(--dunkelblau);">Von der Ursache zum Werkzeug im Betrieb.</h2>
-            <p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Daten schon vorliegen. Zeigt eine der beiden, dass Ihre Daten tragen, findet die Fehlerursachenanalyse die Ursache und baut ein Demo-Werkzeug dazu; danach führen wir es in Ihren Betrieb ein. Jeder Schritt hat ein klares Ergebnis, Sie entscheiden danach frei. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
+            <h2 style="color:var(--dunkelblau);">Zwei Einstiege, zwei klare Wege.</h2>
+            <p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Messwerte schon in einem Datenbanksystem vorliegen. Der Befund zeigt, welcher Weg sich für Sie lohnt; danach entscheiden Sie frei. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
         </div>
 
         <div class="angebote-karten">
             <div class="angebot-spalte fade-up">
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">Potenziale erschließen</span>
-                        <h3>Standortanalyse</h3>
-                        <p class="angebot-frage">Was tragen Ihre Daten, und wo lohnen sich Automatisierung und KI?</p>
-                        <p class="angebot-fuer">Für Betriebe, deren Daten verstreut liegen oder die wissen wollen, wo sich Automatisierung und KI lohnen.</p>
-                        <div class="angebot-preis">1.500 €<small>je Standort, unabhängig von der Anlagenzahl</small></div>
-                        <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
-                    </summary>
+                <div class="angebot-karte">
+                    <span class="angebot-stufe">Potenziale erschließen</span>
+                    <h3>Standortanalyse</h3>
+                    <p class="angebot-frage">Was tragen Ihre Daten, und wo lohnen sich Automatisierung und KI?</p>
+                    <p class="angebot-fuer">Für Betriebe, deren Daten verstreut liegen oder die wissen wollen, wo sich Automatisierung und KI lohnen.</p>
+                    <div class="angebot-preis">1.500 €<small>je Standort, unabhängig von der Anlagenzahl</small></div>
+                    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort">Erstgespräch buchen</a>
+                </div>
+                <details class="angebot-details">
+                    <summary><span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span></summary>
                     <div class="angebot-inhalt">
                         <ul>
                             <li><strong>Ihr Nutzen:</strong> Sie wissen, wo sich Ausschuss, Zeit und Kosten sparen lassen, bevor Sie in ein Projekt investieren.</li>
@@ -760,29 +784,26 @@
                             <li>Datenampel je Anlage und die Fehlerbilder, bei denen das Geld liegt</li>
                             <li>Automatisierungspotenziale und KI-Anwendungsfälle in Ihren Abläufen, nach Nutzen sortiert</li>
                             <li>Tag vor Ort mit Rundgang auf Wunsch</li>
-                            <li>Danach auf Wunsch: Begleitung bei der Umsetzung ausgewählter Anwendungsfälle, nach Abstimmung und nach Aufwand</li>
+                            <li>Danach: Weg A für ein Fehlerbild oder Weg B für KI-Anwendungsfälle mit Ihrer eigenen KI, siehe unten</li>
                             <li>Werden Ihre Messwerte noch nicht in einem Datenbanksystem aufgezeichnet: auf Wunsch Begleitung bei der Wahl des passenden Partners und beim Aufbau der Aufzeichnung, nach Aufwand</li>
                         </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort">Erstgespräch buchen</a>
                     </div>
                 </details>
                 <p class="angebot-belege">
-                    <a href="docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-standort">Produktblatt (PDF)</a><br>
-                    <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-standort">Beispiel-Befund (PDF)</a><br>
-                    <a href="docs/angebot-standortanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-standort-karte">Musterangebot (PDF)</a><br>
-                    <a href="leistungen.html#standortanalyse" data-funnel="link-standortanalyse-karte">Ablauf und Aufwand im Detail</a>
+                    <a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-standort">Beispiel-Befund (PDF)</a>
                 </p>
             </div>
             <div class="angebot-spalte fade-up">
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">Daten liegen vor</span>
-                        <h3>Erstanalyse</h3>
-                        <p class="angebot-frage">Sind Ihre vorhandenen Daten auswertbar, und wo sind Lücken?</p>
-                        <p class="angebot-fuer">Für Betriebe, die ihre Messwerte schon in einem Datenbanksystem aufzeichnen, etwa über die Anlagensteuerung.</p>
-                        <div class="angebot-preis">1.500 €<small>je vorliegendem Datenbestand</small></div>
-                        <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
-                    </summary>
+                <div class="angebot-karte">
+                    <span class="angebot-stufe">Daten liegen vor</span>
+                    <h3>Erstanalyse</h3>
+                    <p class="angebot-frage">Sind Ihre vorhandenen Daten auswertbar, und wo sind Lücken?</p>
+                    <p class="angebot-fuer">Für Betriebe, die ihre Messwerte schon in einem Datenbanksystem aufzeichnen, etwa über die Anlagensteuerung.</p>
+                    <div class="angebot-preis">1.500 €<small>je vorliegendem Datenbestand</small></div>
+                    <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse">Erstgespräch buchen</a>
+                </div>
+                <details class="angebot-details">
+                    <summary><span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span></summary>
                     <div class="angebot-inhalt">
                         <ul>
                             <li><strong>Ihr Nutzen:</strong> In rund zwei Wochen wissen Sie, ob Ihre Daten tragen, und investieren nicht in eine Ursachensuche, die an Lücken scheitert.</li>
@@ -791,76 +812,43 @@
                             <li>Datenampel je Anlage: Was trägt für Auswertungen, was nicht</li>
                             <li>Empfehlung, womit Sie anfangen, oder was nachzurüsten ist</li>
                         </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse">Erstgespräch buchen</a>
                     </div>
                 </details>
                 <p class="angebot-belege">
-                    <a href="docs/erstanalyse-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-erstanalyse">Produktblatt (PDF)</a><br>
-                    <a href="docs/erstanalyse-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-erstanalyse">Beispiel-Befund (PDF)</a><br>
-                    <a href="docs/angebot-erstanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-erstanalyse-karte">Musterangebot (PDF)</a><br>
-                    <a href="docs/beispiel-anlagendaten.pdf" target="_blank" rel="noopener" data-funnel="pdf-anlagendaten-erstanalyse">Was in Anlagendaten steckt (PDF)</a>
+                    <a href="docs/erstanalyse-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-erstanalyse">Beispiel-Befund (PDF)</a>
                 </p>
             </div>
-            <div class="angebot-spalte fade-up">
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">Wenn die Daten tragen</span>
-                        <h3>Fehler&shy;ursachen&shy;analyse mit Demo-Werkzeug</h3>
-                        <p class="angebot-frage">Was sind die Ursachen für ein ausgewähltes Fehlerbild?</p>
-                        <p class="angebot-fuer">Für Betriebe mit einem wiederkehrenden Fehlerbild, nachdem die Standort- oder Erstanalyse gezeigt hat, dass die Daten tragen.</p>
-                        <div class="angebot-preis">5.000 €<small>je Fehlerbild, an Ihren vorhandenen Daten</small></div>
-                        <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
-                    </summary>
-                    <div class="angebot-inhalt">
-                        <ul>
-                            <li><strong>Ihr Nutzen:</strong> Statt Meinungen eine belegte Ursache und ein Werkzeug, mit dem Ihr Team weiterarbeiten kann.</li>
-                            <li>Ursache-Wirkungs-Diagramm mit den Auswertungen dazu</li>
-                            <li>Begründete Prüfreihenfolge für Ihr Team</li>
-                            <li>Demo-Werkzeug zu Ihrem Fehlerbild, läuft ohne Installation und ohne Internet</li>
-                            <li>Das Werkzeug lässt sich weiterentwickeln und in den Betrieb einführen — kein Eingriff in den Betrieb während der Analyse</li>
-                        </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-fehlerbild">Erstgespräch buchen</a>
-                    </div>
-                </details>
-                <p class="angebot-belege">
-                    <a href="docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-fehlerbild">Produktblatt (PDF)</a><br>
-                    <a href="docs/fehlerbild-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-fehlerbild">Beispiel-Befund (PDF)</a><br>
-                    <a href="demo.html" data-funnel="link-demo-karte">So sieht ein Werkzeug aus</a><br>
-                    <a href="docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-fehlerbild-karte">Musterangebot (PDF)</a>
-                </p>
-            </div>
-            <div class="angebot-spalte fade-up">
-                <!-- Seit 03.11.2026 (Stefan) statt KI-Basis-Setup: Einfuehrung in den Betrieb, nach Aufwand -->
-                <details class="angebot-karte">
-                    <summary>
-                        <span class="angebot-stufe">Wenn das Werkzeug überzeugt</span>
-                        <h3>Einführung in den Betrieb</h3>
-                        <p class="angebot-frage">Wie wird aus dem Demo-Werkzeug ein Werkzeug für den Alltag?</p>
-                        <p class="angebot-fuer">Für Betriebe, die das Demo-Werkzeug für den Testbetrieb freigegeben haben.</p>
-                        <div class="angebot-preis">Nach Aufwand<small>nach Abstimmung Ihrer Anforderungen</small></div>
-                        <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
-                    </summary>
-                    <div class="angebot-inhalt">
-                        <ul>
-                            <li><strong>Ihr Nutzen:</strong> Das Werkzeug läuft in Ihrem Betrieb, auf Ihrer Hardware, ohne Cloud.</li>
-                            <li>Freigabe des Demo-Werkzeugs für den Testbetrieb</li>
-                            <li>Abstimmung der Anforderungen mit Ihrem Team und Ihrer IT</li>
-                            <li>Weiterentwicklung und Einbindung in Ihren Betrieb</li>
-                            <li>Danach auf Wunsch die Betreuung je Anlage</li>
-                        </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-einfuehrung">Erstgespräch buchen</a>
-                    </div>
-                </details>
-                <p class="angebot-belege">
-                    <a href="leistungen.html#einfuehrung" data-funnel="link-einfuehrung-karte">Ablauf im Detail</a>
-                </p>
+        </div>
+
+        <!-- Zwei Wege nach dem Befund (Stefan 03.11.2026): Weg A Fehlerbild, Weg B KI-Anwendungsfall
+             mit der eigenen KI des Betriebs. Die Begleitung der Fehlerbehebung wird nicht mehr beworben. -->
+        <div class="wege fade-up">
+            <p class="wege-titel">Nach dem Befund: zwei Wege</p>
+            <div class="wege-grid">
+                <div class="weg">
+                    <p class="weg-name">Weg A · Fehlerbild</p>
+                    <ol class="weg-schritte">
+                        <li class="weg-start">Standortanalyse oder Erstanalyse</li>
+                        <li><strong>Fehlerursachenanalyse mit Demo-Werkzeug</strong>5.000 € je Fehlerbild: die belegte Ursache und ein Werkzeug, mit dem Ihr Team weiterarbeitet</li>
+                        <li><strong>Einführung in den Betrieb</strong>nach Aufwand, auf Ihrer Hardware, ohne Cloud</li>
+                    </ol>
+                    <p class="weg-fuss">Danach auf Wunsch die Betreuung je Anlage.<br><a href="docs/fehlerbild-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-fehlerbild">Beispiel-Befund (PDF)</a> · <a href="leistungen.html#analyse-je-fehlerbild" data-funnel="link-weg-a">Weg A im Detail</a></p>
+                </div>
+                <div class="weg">
+                    <p class="weg-name">Weg B · KI-Anwendungsfall mit Ihrer eigenen KI</p>
+                    <ol class="weg-schritte">
+                        <li class="weg-start">Standortanalyse</li>
+                        <li><strong>KI-Fahrplan</strong>5.000 € für bis zu drei Anwendungsfälle: Machbarkeit, Kosten-Nutzen-Einschätzung und ein klarer Fahrplan mit den nächsten Schritten</li>
+                        <li><strong>Arbeitsabläufe aufbauen und Mitarbeitende schulen</strong>nach Aufwand, auf der KI Ihres Betriebs</li>
+                    </ol>
+                    <p class="weg-fuss"><a href="leistungen.html#ki-fahrplan" data-funnel="link-weg-b">Weg B im Detail</a></p>
+                </div>
             </div>
         </div>
 
         <p class="fade-up" style="text-align:center;color:var(--text-light);font-size:0.88rem;margin:18px 0 0;">Alle Preise netto, zuzüglich USt.</p>
         <div class="fade-up" style="text-align:center;margin-top:30px;">
             <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">Für die Analysen werten wir Ihre Daten auf unseren eigenen Rechnern aus — bevor eine Datei Ihr Haus verlässt, unterschreiben wir eine beidseitige NDA. Das fertige Werkzeug läuft bei Ihnen. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">NDA vorab lesen (PDF)</a></p>
-            <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:16px auto 0;max-width:700px;"><strong style="color:var(--dunkelblau);">Und danach?</strong> Wir begleiten Ihr Team bei der Fehlerbehebung, zum Festpreis je Projekt, vereinbart, bevor Sie zusagen. Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von 60.000 bis 90.000 €. <a href="leistungen.html#danach" data-funnel="link-danach-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Wie es weitergeht</a></p>
             <p style="color:var(--text-light);font-size:0.9rem;margin-top:12px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten der späteren Schritte deutlich senken.</p>
         </div>
     </div>

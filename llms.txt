@@ -4,13 +4,15 @@
 
 ## Offers (German site, English versions linked)
 
+Two starting offers, then two paths. Path A (defect pattern): Root Cause Analysis with Demo Tool, then Rollout into Operations. Path B (AI use case with the shop's own AI): AI Roadmap, then building workflows and training the team.
+
 Prerequisite for the analyses: process readings are recorded in a database system (not in Excel spreadsheets). Where that is missing, help with choosing a partner and setting up the recording is available, billed by effort.
 
-- [Standortanalyse / Site Assessment](https://secure-galvano-ai.com/leistungen.html#standortanalyse): Does the data hold up, and where is the money? Data traffic light per line, defect patterns with potential. EUR 1,500 per site. Afterwards, on request, support in implementing selected use cases, billed by effort.
+- [Standortanalyse / Site Assessment](https://secure-galvano-ai.com/leistungen.html#standortanalyse): Does the data hold up, and where is the money? Data traffic light per line, defect patterns with potential. EUR 1,500 per site.
 - [Erstanalyse / Initial Data Check](https://secure-galvano-ai.com/leistungen.html#erstanalyse): Readings already recorded in a database — are they usable, what is missing? EUR 1,500 per data set.
-- [Fehlerursachenanalyse mit Demo-Werkzeug / Root Cause Analysis with Demo Tool](https://secure-galvano-ai.com/leistungen.html#analyse-je-fehlerbild): After a positive Site Assessment or Initial Data Check — causes of one recurring defect pattern, Ishikawa findings and a demo tool that can be developed further and rolled out into operations. EUR 5,000 per defect pattern.
-- [Einführung in den Betrieb / Rollout into Operations](https://secure-galvano-ai.com/leistungen.html#einfuehrung): After the demo tool is approved for a trial run and the requirements are agreed — further development and integration on the customer's hardware, without cloud. Billed by effort.
-- [Begleitung und Betreuung / Follow-up](https://secure-galvano-ai.com/leistungen.html#danach): Support until defects are fixed (fixed price per project), then upkeep per monitored line.
+- [Weg A: Fehlerursachenanalyse mit Demo-Werkzeug / Path A: Root Cause Analysis with Demo Tool](https://secure-galvano-ai.com/leistungen.html#analyse-je-fehlerbild): After a positive Site Assessment or Initial Data Check — causes of one recurring defect pattern, Ishikawa findings and a demo tool that can be developed further and rolled out into operations. EUR 5,000 per defect pattern.
+- [Weg A: Einführung in den Betrieb / Path A: Rollout into Operations](https://secure-galvano-ai.com/leistungen.html#einfuehrung): After the demo tool is approved for a trial run and the requirements are agreed — further development and integration on the customer's hardware, without cloud. Billed by effort. Afterwards, on request, upkeep per line.
+- [Weg B: KI-Fahrplan / Path B: AI Roadmap](https://secure-galvano-ai.com/leistungen.html#ki-fahrplan): After a Site Assessment that identified suitable use cases — for up to three use cases on the shop's own AI: feasibility, cost-benefit assessment and a clear roadmap with next steps. EUR 5,000. Then building workflows and training the team, billed by effort.
 
 ## Data handling
 

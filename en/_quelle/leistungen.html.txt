@@ -2,7 +2,7 @@
 <meta name="description" content="Ob Ihre Galvanikdaten tragen und woran Fehler liegen: Einstieg und Fehlerursachenanalyse zum Festpreis, danach das Werkzeug in Ihrem Betrieb.">
 <meta name="keywords" content="Galvanik Software, Software für Galvanikanlagen, Digitalisierung Galvanotechnik, Standortanalyse Galvanik, Datenauswertung Oberflächentechnik, KI Galvanik, Potenzialanalyse Galvanotechnik">
 <meta property="og:title" content="Leistungen und Preise — secure galvano ai">
-<meta property="og:description" content="Standortanalyse, Erstanalyse und Fehlerursachenanalyse mit Demo-Werkzeug zum Festpreis, danach die Einführung in den Betrieb nach Aufwand. So wissen Sie, ob Ihre Daten tragen und woran Ihre Fehler liegen.">
+<meta property="og:description" content="Standortanalyse oder Erstanalyse zum Festpreis, danach zwei Wege: Fehlerursachenanalyse mit Demo-Werkzeug für ein Fehlerbild oder KI-Fahrplan für Anwendungsfälle mit Ihrer eigenen KI.">
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -65,23 +65,22 @@
 <div class="container">
 <div class="page-hero-content">
 <p class="section-label">Leistungen</p>
-<h1>Vier Schritte, vom Einstieg bis zum Werkzeug im Betrieb</h1>
+<h1>Zwei Einstiege, zwei klare Wege</h1>
 <p class="goldzeile">Erst wissen, wo das Gold liegt. Dann schürfen.</p>
 <p>Ihre Anlagen zeichnen genug auf, um Fehler früher zu erkennen — es wird nur nicht ausgewertet. Jedes Angebot ist ein abgeschlossener Schritt mit klarem Ergebnis; danach entscheiden Sie frei, ob es weitergeht.</p>
-<!-- Angebotsleiter (21.10.2026): dieselben vier Angebote in derselben Reihenfolge
-wie die Kacheln auf der Startseite (index.html#ablauf). Begleitung und
-Betreuung stehen bewusst ohne Betrag darunter. Preise kanonisch in
-areas/preise.yaml. Die Funnel-Marker link-vorprojekt-hero und
-link-umsetzung-hero bleiben, damit die Clarity-Reihen weiterlaufen.
-Seit 03.11.2026 (Stefan): dritte Kachel "Fehlerursachenanalyse mit Demo-Werkzeug",
-vierte "Einfuehrung in den Betrieb" (nach Aufwand) statt KI-Basis-Setup. -->
+<!-- 03.11.2026: derselbe Hauptaufruf oben wie am Seitenende (OPTIMIERUNG.md §4, Versuch
+Angebotskarten/Hauptaufruf). Vor den Kacheln, damit er mobil im ersten Bildschirm liegt. -->
+<p style="margin-top:22px;"><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-leistungen-hero">Kostenloses Erstgespräch buchen</a></p>
+<!-- Seit 03.11.2026 (Stefan, BD areas/kundenprozess.md "Zwei Pfade"): nur die zwei
+Startangebote als Kachel, wie auf der Startseite (index.html#ablauf); darunter die
+zwei Wege als Satz. Die Begleitung der Fehlerbehebung wird nicht mehr beworben.
+Preise kanonisch in areas/preise.yaml. Marker link-vorprojekt-hero bleibt (Weg A),
+damit die Clarity-Reihe weiterlaeuft. -->
 <nav aria-label="Die Angebote im Überblick" style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;">
 <a href="#standortanalyse" data-funnel="link-standortanalyse-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Daten erschließen</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Standortanalyse</strong><span style="font-size:0.86rem;opacity:.82;">1.500 € netto je Standort</span></a>
 <a href="#erstanalyse" data-funnel="link-erstanalyse-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Daten liegen vor</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Erstanalyse</strong><span style="font-size:0.86rem;opacity:.82;">1.500 € netto je Datenbestand</span></a>
-<a href="#analyse-je-fehlerbild" data-funnel="link-vorprojekt-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Ursachen finden</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Fehler&shy;ursachen&shy;analyse mit Demo-Werkzeug</strong><span style="font-size:0.86rem;opacity:.82;">5.000 € netto je Fehlerbild</span></a>
-<a href="#einfuehrung" data-funnel="link-einfuehrung-hero" style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 14px;color:var(--weiss);"><span style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-akzent);">Werkzeug einführen</span><strong style="display:block;font-family:'Montserrat',Arial,sans-serif;font-size:0.98rem;">Einführung in den Betrieb</strong><span style="font-size:0.86rem;opacity:.82;">nach Aufwand</span></a>
 </nav>
-<p style="margin-top:14px;font-size:0.9rem;color:rgba(255,255,255,0.78);">Davor: ein <a href="index.html#ablauf" data-funnel="link-ablauf-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">kostenloses Erstgespräch</a> von 30 Minuten. Danach: die <a href="#danach" data-funnel="link-umsetzung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Begleitung der Fehlerbehebung</a>, Festpreis je Projekt, und die <a href="#betreuung" data-funnel="link-betreuung-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Betreuung je Anlage</a>.</p>
+<p style="margin-top:14px;font-size:0.9rem;color:rgba(255,255,255,0.78);">Danach zwei Wege: <a href="#analyse-je-fehlerbild" data-funnel="link-vorprojekt-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Weg A · Fehlerbild</a> mit Fehlerursachenanalyse und Einführung in den Betrieb, oder <a href="#ki-fahrplan" data-funnel="link-kifahrplan-hero" style="color:var(--weiss);font-weight:600;border-bottom:1px solid rgba(255,255,255,0.35);">Weg B · KI-Anwendungsfall mit Ihrer eigenen KI</a> mit KI-Fahrplan und Schulung.</p>
 <!-- 23.09.2026: „netto" und der B2B-Hinweis. Eine offen zugaengliche Seite gilt
 als auch an Verbraucher gerichtet, solange die Beschraenkung nicht klar
 dasteht (PrAG, WKO Preisauszeichnung im Webshop). Steht einmal hier. -->
@@ -94,7 +93,7 @@ Zuschnitt seit 21.10.2026 (Leiter in BD/areas/preise.yaml): Anbindung der
 Datenquellen, Datenampel je Anlage, Fehlerbilder mit Potenzial und dazu die
 Automatisierungs- und KI-Potenziale; der Tag vor Ort ist optional.
 Am 21.10.2026 auf etwa die Haelfte gestrafft (mobil vorher rund 19.000 px), weil die
-Startseite die vier Angebote samt Nutzen, Preis und Unterlagen schon traegt: je
+Startseite die Angebote samt Nutzen und Preis schon traegt: je
 Schritt eine Zeile, die Eckdaten wiederholen die Schritte nicht. -->
 <section class="schwerpunkt" id="standortanalyse">
 <div class="container">
@@ -118,17 +117,15 @@ Schritt eine Zeile, die Eckdaten wiederholen die Schritte nicht. -->
 <dt>Umfang</dt><dd>Alle Anlagen in der Übersicht, ein bis zwei Fokusanlagen in der Tiefe — ob fünf Anlagen oder zwanzig, der Preis bleibt</dd>
 <dt>Ihre Anlage, wie sie ist</dt><dd>Ausgewertet wird, was heute schon aufgezeichnet wird. Keine neue Sensorik, kein Eingriff in die Steuerung</dd>
 <dt>Danach</dt><dd>Der Befund gehört Ihnen. Sie entscheiden frei, es folgt kein Automatismus</dd>
-<!-- 03.11.2026 (Stefan): Begleitung bei der Umsetzung und Grundvoraussetzung Datenbanksystem, beides nach Aufwand;
-die Standortanalyse findet auch weitere KI-Anwendungsfaelle, die wir gemeinsam begleiten und umsetzen -->
-<dt>Umsetzung</dt><dd>Weitere KI-Anwendungsfälle aus dem Befund begleiten und setzen wir auf Wunsch gemeinsam mit Ihnen um, nach vorheriger Abstimmung und nach Aufwand</dd>
+<!-- 03.11.2026 (Stefan): Grundvoraussetzung Datenbanksystem nach Aufwand; weitere KI-Anwendungsfaelle
+aus dem Befund fuehrt Weg B (KI-Fahrplan, #ki-fahrplan) weiter -->
+<dt>Zwei Wege</dt><dd>Weg A für ein Fehlerbild, oder Weg B: Anwendungsfälle für Ihre eigene KI führt der <a href="#ki-fahrplan" data-funnel="link-kifahrplan-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">KI-Fahrplan</a> weiter</dd>
 <dt>Datenbasis</dt><dd>Voraussetzung für Auswertungen ist ein Datenbanksystem für Ihre Messwerte. Fehlt es, begleiten wir auf Wunsch die Wahl des passenden Partners und den Aufbau der Aufzeichnung, damit Ihre Daten KI-fähig werden</dd>
 </dl>
-<a class="eck-cta" href="docs/standortanalyse-flyer.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-leistungen">Alles auf einer Seite (PDF)</a>
-<a class="eck-cta" style="margin-top:10px;" href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-leistungen">So sieht ein fertiger Befund aus (PDF)</a>
-<!-- Blanko-Angebot: dasselbe Dokument wie das verbindliche Angebot, nur ohne
-Empfaenger, Nummer, Datum, Bankverbindung und Unterschrift. Gebaut ueber
-BD/scripts/angebot_muster.py -- nicht von Hand nachbauen. -->
-<a class="eck-cta" style="margin-top:10px;" href="docs/angebot-standortanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-standortanalyse">Blanko-Angebot zum Ausfüllen (PDF)</a>
+<!-- Seit 03.11.2026 je Angebot nur der Beispiel-Befund (Clarity 28 Tage: Blanko-Angebote
+0 Klicks, Produktblaetter einzeln). Produktblatt und Blanko-Angebot liegen weiter in
+docs/ und gehen im Gespraech raus (BD/scripts/angebot_muster.py). -->
+<a class="eck-cta" href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-leistungen">So sieht ein fertiger Befund aus (PDF)</a>
 </aside>
 </div>
 </div>
@@ -144,6 +141,8 @@ Preis: BD/areas/preise.yaml leiter.erstanalyse. -->
 <p class="section-label">Einstieg · Daten liegen vor</p>
 <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Die Erstanalyse</h2>
 <p class="lead" style="max-width:780px;margin-bottom:30px;">Ihre Messwerte werden schon in einem Datenbanksystem aufgezeichnet, etwa über die Anlagensteuerung? Dann wissen Sie in rund zwei Wochen, ob sie für Auswertungen tragen und wo Lücken sind — bevor Sie in eine Ursachensuche investieren. <strong>1.500 € netto je vorliegendem Datenbestand.</strong></p>
+<!-- 03.11.2026: Landeabschnitt der LinkedIn-Links -- Buchung direkt unter dem Preis. -->
+<p style="margin:-10px 0 30px;"><a class="btn btn-primary" href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" data-funnel="cta-erstanalyse">Erstgespräch buchen</a></p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
 <div>
 <h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · Daten bereitstellen</h3>
@@ -163,9 +162,7 @@ Preis: BD/areas/preise.yaml leiter.erstanalyse. -->
 Tragen Ihre Daten, klärt die <a href="#analyse-je-fehlerbild" data-funnel="link-fehlerbild-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Fehlerursachenanalyse mit Demo-Werkzeug</a> die Ursachen. Voraussetzung ist ein Datenbanksystem für Ihre Messwerte, Excel-Tabellen genügen nicht. Fehlt es oder liegen Ihre Daten noch verstreut, passt die <a href="#standortanalyse" data-funnel="link-standortanalyse-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> besser.
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:10px;">
-<a class="btn btn-primary" href="docs/erstanalyse-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-erstanalyse-leistungen">Überblick auf einer Seite (PDF)</a>
 <a class="btn btn-outline" href="docs/erstanalyse-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-erstanalyse-befund-leistungen">Beispiel-Befund (PDF)</a>
-<a class="btn btn-outline" href="docs/angebot-erstanalyse-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-erstanalyse">Blanko-Angebot (PDF)</a>
 </div>
 </div>
 </section>
@@ -178,7 +175,8 @@ Clarity-Reihen weiterlaufen. Preis: BD/areas/preise.yaml leiter.poc. -->
 <section id="analyse-je-fehlerbild" style="padding:56px 0;background:#fff;">
 <span id="datenanalyse" aria-hidden="true"></span>
 <div class="container">
-<p class="section-label">Der nächste Schritt</p>
+<span id="danach" aria-hidden="true"></span>
+<p class="section-label">Weg A · Fehlerbild · Schritt 1</p>
 <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Fehler&shy;ursachen&shy;analyse mit Demo-Werkzeug</h2>
 <p class="lead" style="max-width:780px;margin-bottom:30px;">Statt Meinungen eine belegte Ursache — und ein Werkzeug, mit dem Ihr Team weiterarbeiten kann. Für ein Fehlerbild aus der Standort- oder Erstanalyse legen wir Ihre Prozessdaten neben das Wissen Ihrer Leute und bauen dazu ein Demo-Werkzeug, das sich weiterentwickeln und in den Betrieb einführen lässt. <strong>5.000 € netto je Fehlerbild</strong>, weitere jederzeit zusätzlich.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
@@ -204,9 +202,7 @@ Clarity-Reihen weiterlaufen. Preis: BD/areas/preise.yaml leiter.poc. -->
 Lässt sich die Ursache nicht eingrenzen, sagt der Befund, welche Angabe oder Messung fehlt. Voraussetzung ist eine <a href="#standortanalyse" data-funnel="link-zurueck-standortanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a> oder <a href="#erstanalyse" data-funnel="link-zurueck-erstanalyse" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Erstanalyse</a>, die gezeigt hat, dass Ihre Daten tragen.
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:10px;">
-<a class="btn btn-primary" href="docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-datenanalyse-leistungen">Ablauf auf einer Seite (PDF)</a>
 <a class="btn btn-outline" href="docs/fehlerbild-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-fehlerbild-befund-leistungen">Beispiel-Befund (PDF)</a>
-<a class="btn btn-outline" href="docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-muster-fehlerbild">Blanko-Angebot zum Ausfüllen (PDF)</a>
 </div>
 </div>
 </section>
@@ -217,31 +213,39 @@ Demo-Werkzeugs fuer den Testbetrieb und Abstimmung der Anforderungen, nach Aufwa
 <section id="einfuehrung" style="padding:56px 0;background:var(--hellgrau);">
 <span id="ki-setup-check" aria-hidden="true"></span>
 <div class="container">
-<p class="section-label">Wenn das Werkzeug überzeugt</p>
+<span id="betreuung" aria-hidden="true"></span>
+<p class="section-label">Weg A · Schritt 2</p>
 <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">Einführung in den Betrieb</h2>
 <p class="lead" style="max-width:780px;margin-bottom:26px;">Aus dem Demo-Werkzeug wird ein Werkzeug für den Alltag. Sobald Sie es für den Testbetrieb freigegeben haben und die Anforderungen abgestimmt sind, entwickeln wir es weiter und binden es in Ihren Betrieb ein. <strong>Nach Aufwand.</strong></p>
 <ul class="baust-liste" style="margin-bottom:24px;">
 <li><b>Freigabe für den Testbetrieb:</b> Ihr Team prüft das Demo-Werkzeug an Ihren Abläufen.</li>
 <li><b>Anforderungen abstimmen</b> mit Ihrem Team und Ihrer IT: was das Werkzeug im Alltag können muss.</li>
 <li><b>Weiterentwickeln und einbinden</b> auf Ihrer Hardware, ohne Cloud.</li>
-<li><b>Danach auf Wunsch</b> die <a href="#betreuung" data-funnel="link-betreuung-einfuehrung" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Betreuung je Anlage</a>.</li>
+<li><b>Danach auf Wunsch</b> die Betreuung je Anlage: auf Ihrer Hardware, die Modellpflege ist enthalten.</li>
 </ul>
 </div>
 </section>
-<!-- ===== WIE ES WEITERGEHT: Begleitung und Betreuung =====
-Gleiche Reihenfolge wie "Und danach?" auf der Startseite. Beide Stufen ohne Betrag
-nach aussen (21.10.2026). Nutzen nennen, Rechenregel weglassen (10.09.2026).
-Zahlen kanonisch in areas/preise.yaml (leiter.projektumsetzung, leiter.betreuung). -->
-<section class="danach" id="danach">
+<!-- ===== WEG B: KI-FAHRPLAN (Stefan 03.11.2026, BD areas/kundenprozess.md "Zwei Pfade") =====
+Ersetzt den Abschnitt "Begleitung der Fehlerbehebung und Betreuung" (#danach): Die Begleitung
+wird nicht mehr beworben, die Betreuung steht als Halbsatz bei #einfuehrung (Anker #betreuung
+dort, #danach bei #analyse-je-fehlerbild). Kein Training als eigenes Angebot, Schulung nur hier. -->
+<section id="ki-fahrplan" style="padding:56px 0;background:#fff;">
 <div class="container">
-<p class="section-label">Nach der Analyse</p>
-<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:12px;">Begleitung der Fehlerbehebung und Betreuung</h2>
-<p class="lead" style="max-width:780px;">Jede Analyse ist abgeschlossen. Auch „Ihre Datenlage trägt es derzeit nicht“ ist ein Ergebnis — samt der Reihenfolge, in der nachzurüsten ist; das erspart eine teure Fehlinvestition.</p>
-<div style="margin-top:26px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--schild-blau);border-radius:0 12px 12px 0;padding:20px 24px;">
-<p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Begleitung der Fehlerbehebung.</strong> Wir begleiten Ihr Team fachlich, bis die Fehlerbilder behoben sind, alle zwei Wochen mit einem Statusbericht für die Geschäftsführung. <strong>Festpreis je Projekt, vereinbart, bevor Sie zusagen</strong>; Ziel ist das Drei- bis Vierfache der Investition an Einsparung pro Jahr. Zur Einordnung: Das Einsparpotenzial je Anlage und Jahr liegt über Energie, Wasser, Anodenmetall, Chemie und Entsorgung bei 60.000 bis 90.000 € — ein Potenzial, keine Zusage.</p>
+<p class="section-label">Weg B · KI-Anwendungsfall mit Ihrer eigenen KI</p>
+<h2 style="font-size:clamp(1.5rem,3vw,2.1rem);color:var(--dunkelblau);margin-bottom:14px;">KI-Fahrplan</h2>
+<p class="lead" style="max-width:780px;margin-bottom:30px;">Die Standortanalyse findet oft Aufgaben, die die KI Ihres Hauses übernehmen kann — Aufträge einlesen, Berichte vorbereiten, Unterlagen durchsuchen. Für bis zu drei solcher Anwendungsfälle klären wir die Machbarkeit an Ihrer eigenen KI, schätzen Kosten und Nutzen ab und legen einen klaren Fahrplan mit den nächsten Schritten fest, abgestimmt mit Ihrer IT. <strong>5.000 € netto für bis zu drei Anwendungsfälle.</strong></p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 30px;margin-bottom:28px;">
+<div>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">1 · KI-Fahrplan</h3>
+<p style="font-size:0.92rem;">Je Anwendungsfall Machbarkeit, Kosten-Nutzen-Einschätzung und Fahrplan mit Zeitleiste. Sie entscheiden je Fall, ob es weitergeht.</p>
 </div>
-<div id="betreuung" style="margin-top:16px;max-width:780px;background:var(--hellgrau);border-left:3px solid var(--logo-gruen);border-radius:0 12px 12px 0;padding:20px 24px;">
-<p style="color:var(--text-body);font-size:1rem;line-height:1.75;margin:0;"><strong style="color:var(--dunkelblau);">Betreuung je Anlage.</strong> Soll ein Werkzeug nach der Einführung dauerhaft weiterlaufen, betreuen wir es auf Ihrer Hardware, ohne Cloud. Die Modellpflege ist enthalten, damit die Erkennung nicht mit der Zeit abdriftet. Ein eigenes Angebot und keine Bedingung für die Schritte davor.</p>
+<div>
+<h3 style="font-size:1rem;color:var(--dunkelblau);margin-bottom:6px;">2 · Arbeitsabläufe aufbauen und Mitarbeitende schulen</h3>
+<p style="font-size:0.92rem;">Auf der KI Ihres Betriebs, Ihre IT baut die Anbindung. <strong>Nach Aufwand.</strong></p>
+</div>
+</div>
+<div class="umfang-hinweis" style="margin-bottom:0;">
+Voraussetzung ist eine <a href="#standortanalyse" data-funnel="link-standortanalyse-kifahrplan" style="color:var(--schild-blau);font-weight:600;text-decoration:none;">Standortanalyse</a>, die solche Anwendungsfälle benannt hat.
 </div>
 </div>
 </section>
@@ -339,12 +343,10 @@ sind wortgleich; beim Aendern beide nachziehen. ===== -->
 <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-leistungen">
 Kostenloses Erstgespräch buchen
 </a>
-<a href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" class="btn btn-outline" data-funnel="pdf-musterbefund-abschluss">
-Beispiel-Befund ansehen
-</a>
 </div>
 <!-- Einseiter zum Weiterreichen: die haeufigste Bitte nach einem Erstgespraech ist
-etwas, das im Haus herumgeht. -->
+etwas, das im Haus herumgeht. Seit 03.11.2026 der einzige Nebenweg am Seitenende
+(der zweite Knopf "Beispiel-Befund ansehen" wiederholte den Befund aus #standortanalyse). -->
 <p style="margin-top:18px;font-size:0.93rem;color:var(--text-light);">
 Zum Weiterreichen im Haus:
 <a href="docs/leistungen-ueberblick.pdf" target="_blank" rel="noopener"
