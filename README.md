@@ -325,7 +325,8 @@ trug rund 10 kB fremde Regeln (11.09.2026 ausgebaut, jede Klasse gegen Rumpf, Ge
 **Die Hero-Laenge ist eine Messgroesse.** Waechst der Hero, rutscht der Hauptknopf mobil hinter
 das Einwilligungsbanner (Klasse: `AENDERUNGSPROZESS.md` Gate 3; hier am 11.09.2026 erneut, der
 erste Entwurf lag **60 px** darunter). Nach jeder Hero-Textaenderung auf **390 × 844** nachmessen.
-Stand: Hauptknopf endet bei y 643, Banner ab 714 — **71 px Luft** *(gemessen 13.09.2026)*.
+Stand: Hauptknopf endet bei y 652, Banner ab 714 — **62 px Luft**; englisch 603 gegen 730
+*(gemessen 03.11.2026, Kopf wieder „Der Fehler steckt schon in Ihren Daten")*.
 
 > **Wortwahl im Hero ist seit 13.09.2026 gebunden** *(Stefan)*: **gebaut werden Werkzeuge,
 > nicht Auswertungen.** Die Auswertung ist das Ergebnis, das Werkzeug der Gegenstand. Wo

@@ -1,7 +1,7 @@
-<title>Sichere KI für Galvanik & Oberflächentechnik | secure galvano ai</title>
-<meta name="description" content="Ursachen von Ausschuss in Ihren Anlagendaten finden, Automatisierung bewerten, KI sicher einrichten. Von TÜV AUSTRIA geprüft.">
+<title>Versteckte Fehler in Galvanik-Daten finden | secure galvano ai</title>
+<meta name="description" content="Die Ursache hinter Ausschuss und Reklamationen steckt in Ihren vorhandenen Anlagendaten. Wir finden sie. Von TÜV AUSTRIA geprüft.">
 <meta name="keywords" content="KI Galvanotechnik, Galvanik Software, Digitalisierung Galvanotechnik, Anomalieerkennung Galvanik, Standortanalyse Galvanik, Trusted AI Industrie, On-Premise Machine Learning, Stefan Maier Galvanik">
-<meta property="og:title" content="Sichere KI für die Oberflächentechnik. Mit Nutzen, den Sie messen.">
+<meta property="og:title" content="Der Fehler steckt schon in Ihren Daten. Sie sehen ihn nur nicht.">
 <meta property="og:description" content="Wir finden die Ursachen Ihrer Fehlerbilder in den Daten, die Ihre Anlage schon aufzeichnet, zeigen, wo sich Automatisierung lohnt, und richten KI so ein, dass Ihre Messwerte geschützt bleiben. Von TÜV AUSTRIA geprüft.">
 <script type="application/ld+json">
 {
@@ -118,10 +118,10 @@
 <span class="dot"></span>
 TÜV AUSTRIA Trusted AI · Modellprüfung abgeschlossen
 </div>
-<!-- Seit 21.10.2026 (Stefan): Die Seite verkauft vier Angebote -- Potenziale, Datenpruefung,
-Ursachenanalyse und den sicheren Einsatz von KI. Der fruehere Kopf "Der Fehler steckt
-schon in Ihren Daten" trug nur die Ursachenanalyse; er lebt im Absatz darunter weiter. -->
-<h1>Sichere KI für die Oberflächentechnik. <span class="accent">Mit Nutzen, den Sie messen.</span></h1>
+<!-- Seit 03.11.2026 (Stefan) wieder der Fehler-Kopf: Das Fehlerbild kommt bei Kunden an,
+darauf liegt der Fokus. Der Absatz darunter schlaegt die Bruecke zu den vier Angeboten.
+Zwischenstand 21.10.-03.11.: "Sichere KI fuer die Oberflaechentechnik. Mit Nutzen, den Sie messen." -->
+<h1>Der Fehler steckt schon in Ihren Daten. <span class="accent">Sie sehen ihn nur nicht.</span></h1>
 <p>Wir finden die Ursachen Ihrer Fehlerbilder in den Daten, die Ihre Anlage schon aufzeichnet, zeigen, wo sich Automatisierung lohnt — und richten KI so ein, dass Ihre Messwerte geschützt bleiben.</p>
 <!-- Zielgruppe klar benennen, aber ueber die ANLAGENZAHL statt ueber
 Betriebsgroesse: das ist laut business-model.md der echte Filter, und
