@@ -364,7 +364,7 @@ homepage/
                            Preise im #ablauf nur fuer die Einstiegsstufen (Standortanalyse, Analyse je
                            Fehlerbild; Umsetzung und Betreuung ohne Preis). KEINE Leistungs-Teaser-Karten.
   leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt, #datenanalyse
-                           (Stufe 3 „Analyse je Fehlerbild“), #anwendungen, #fragen mit FAQPage-Schema,
+                           (Stufe 2 „Analyse je Fehlerbild“), #anwendungen, #fragen mit FAQPage-Schema,
                            Blanko-Angebote als PDF. Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
                            GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen.
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
