@@ -172,8 +172,10 @@ def pruefe(nur_seo: bool = False) -> tuple[list[str], list[str]]:
 
     sm = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     in_sm = set(re.findall(r"<loc>https://secure-galvano-ai\.com/(.*?)</loc>", sm))
-    for name in echt:
-        if name == "404.html":
+    for name, inhalt in echt.items():
+        # noindex-Seiten gehoeren bewusst NICHT in die Sitemap (check_site.py Gate 8);
+        # seit 03.11.2026 ausbildung.html (Datenwerkstatt von der Website genommen).
+        if name == "404.html" or re.search(r'<meta name="robots"[^>]*noindex', inhalt):
             continue
         ordner_url = name[: -len("index.html")] if name.endswith("index.html") else None
         if not (name in in_sm or ordner_url in in_sm):

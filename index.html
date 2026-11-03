@@ -111,16 +111,16 @@
           "@id": "https://secure-galvano-ai.com/#diagnose",
           "name": "Standortanalyse Daten- und KI-Potenziale für Galvanikbetriebe",
           "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-          "description": "Online-Gespräche mit den Fachbereichen und die Anbindung der Datenquellen: ein Befund, ob die Daten für Auswertungen tragen, die Datenampel je Anlage über alle Quellarten und die Liste der Fehlerbilder mit Potenzial. Ein Tag vor Ort mit Rundgang ist optional. Die Unterlagen gehören dem Betrieb, auch ohne Folgeauftrag. Kein KI-Dienst sieht Ihre Messwerte.",
+          "description": "Online-Gespräche mit den Fachbereichen und die Anbindung der Datenquellen: ein Befund, ob die Daten für Auswertungen tragen, die Datenampel je Anlage über alle Quellarten und die Liste der Fehlerbilder mit Potenzial. Ein Tag vor Ort mit Rundgang ist optional. Die Unterlagen gehören dem Betrieb, auch ohne Folgeauftrag. Danach auf Wunsch Begleitung bei der Umsetzung ausgewählter Anwendungsfälle, nach Abstimmung und nach Aufwand. Kein KI-Dienst sieht Ihre Messwerte.",
           "serviceType": "AI Diagnostic Consulting",
           "areaServed": "AT, DE, CH"
         },
         {
           "@type": "Service",
           "@id": "https://secure-galvano-ai.com/#folgeprojekt",
-          "name": "Analyse je Fehlerbild und Begleitung der Fehlerbehebung für Galvanikbetriebe",
+          "name": "Fehlerursachenanalyse mit Demo-Werkzeug, Einführung in den Betrieb und Begleitung der Fehlerbehebung für Galvanikbetriebe",
           "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-          "description": "Folgeleistungen nach der Standortanalyse: Analyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und Auswertung zum Durchklicken, danach die strukturierte Begleitung der Fehlerbehebung, bis die Fehlerbilder behoben sind, als Festpreis je Projekt, optional mit Integration einer Monitoring-Software für Live-Auswertung und kontinuierliches Tracking. Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
+          "description": "Folgeleistungen nach der Erstanalyse: Fehlerursachenanalyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und einem Demo-Werkzeug, danach die Einführung des Werkzeugs in den Betrieb nach Aufwand und die strukturierte Begleitung der Fehlerbehebung, bis die Fehlerbilder behoben sind, als Festpreis je Projekt, optional mit Integration einer Monitoring-Software für Live-Auswertung und kontinuierliches Tracking. Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
           "serviceType": "Process Consulting"
         },
         {
@@ -130,7 +130,7 @@
             {
               "@type": "Question",
               "name": "Welche Daten brauchen Sie — und was, wenn unsere Datenlage nicht ideal ist?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Excel-Aufzeichnungen, Laborprotokolle, Reklamationsberichte. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage eine Frage nicht beantwortet, erhalten Sie dazu eine klare Aussage." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Laborprotokolle, Reklamationsberichte. Voraussetzung ist, dass Ihre Messwerte in einem Datenbanksystem aufgezeichnet werden, nicht in Excel-Tabellen. Fehlt das, begleiten wir auf Wunsch die Wahl des passenden Partners und den Aufbau der Aufzeichnung, damit Ihre Daten KI-fähig werden. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage eine Frage nicht beantwortet, erhalten Sie dazu eine klare Aussage." }
             },
             {
               "@type": "Question",
@@ -626,7 +626,6 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="leistungen.html">Leistungen</a></li>
             <li><a href="demo.html">Demo</a></li>
-            <li><a href="ausbildung.html">Datenwerkstatt</a></li>
             <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="ethik.html">Ethik &amp; Werte</a></li>
             <li><a href="forschung.html">Forschung</a></li>
@@ -691,11 +690,12 @@
 
 <!-- ===== ANGEBOTE — vier Karten, aufklappbar (Vorschlag 21.10.2026) =====
      Ersetzt den frueheren Ablauf-Strang. id bleibt "ablauf", weil forschung.html und
-     leistungen.html darauf verlinken. Preise: BD/areas/preise.yaml. Das vierte Angebot heisst
-     seit 22.10.2026 "KI-Basis-Setup" und kostet 9.900 EUR (vorher "KI-Setup-Check", 5.000 EUR);
-     die Funnel-Marker *kisetup* und die PDF-Dateinamen bleiben bewusst stehen, daran haengen
-     Clarity-Reihen und verschickte Links. Jede Karte traegt die
-     Unterlagen, die vorher im Ablauf und im Hero standen, damit nichts verloren geht. -->
+     leistungen.html darauf verlinken. Preise: BD/areas/preise.yaml.
+     Leiter seit 03.11.2026 (Stefan: "so einfach wie moeglich", Fokus Fehlerursachenanalyse):
+     Standortanalyse oder Erstanalyse -> Fehlerursachenanalyse mit Demo-Werkzeug (5.000 EUR,
+     vorher "Analyse je Fehlerbild") -> Einfuehrung in den Betrieb (nach Aufwand). Das
+     KI-Basis-Setup und der Verweis auf die Datenwerkstatt sind entfallen; Marker *fehlerbild*
+     bleiben, damit die Clarity-Reihen weiterlaufen. Jede Karte traegt ihre Unterlagen. -->
 <style>
   .angebote-karten { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
   .angebot-spalte { display:flex; flex-direction:column; gap:10px; }
@@ -734,9 +734,9 @@
 <section id="ablauf" style="padding:64px 0 72px;background:var(--hellgrau);">
     <div class="container">
         <div class="section-header fade-up" style="margin-bottom:30px;">
-            <p class="section-label">Einstiegsangebote</p>
-            <h2 style="color:var(--dunkelblau);">Für den gemeinsamen Start — zum Festpreis.</h2>
-            <p>Vier Einstiegsangebote, jedes ein abgeschlossener erster Schritt mit klarem Ergebnis. Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Daten schon vorliegen. Größere Vorhaben bieten wir danach je Projekt an. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
+            <p class="section-label">Angebote und Preise</p>
+            <h2 style="color:var(--dunkelblau);">Von der Ursache zum Werkzeug im Betrieb.</h2>
+            <p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Daten schon vorliegen. Tragen die Daten, findet die Fehlerursachenanalyse die Ursache und baut ein Demo-Werkzeug dazu; danach führen wir es in Ihren Betrieb ein. Jeder Schritt hat ein klares Ergebnis, Sie entscheiden danach frei. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
         </div>
 
         <div class="angebote-karten">
@@ -758,6 +758,8 @@
                             <li>Datenampel je Anlage und die Fehlerbilder, bei denen das Geld liegt</li>
                             <li>Automatisierungspotenziale und KI-Anwendungsfälle in Ihren Abläufen, nach Nutzen sortiert</li>
                             <li>Tag vor Ort mit Rundgang auf Wunsch</li>
+                            <li>Danach auf Wunsch: Begleitung bei der Umsetzung ausgewählter Anwendungsfälle, nach Abstimmung und nach Aufwand</li>
+                            <li>Werden Ihre Messwerte noch nicht in einem Datenbanksystem aufgezeichnet: auf Wunsch Begleitung bei der Wahl des passenden Partners und beim Aufbau der Aufzeichnung, nach Aufwand</li>
                         </ul>
                         <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort">Erstgespräch buchen</a>
                     </div>
@@ -775,7 +777,7 @@
                         <span class="angebot-stufe">Daten liegen vor</span>
                         <h3>Erstanalyse</h3>
                         <p class="angebot-frage">Sind Ihre vorhandenen Daten auswertbar, und wo sind Lücken?</p>
-                        <p class="angebot-fuer">Für Betriebe, die ihre Daten schon gesammelt haben, etwa als Export aus Steuerung oder Datenbank.</p>
+                        <p class="angebot-fuer">Für Betriebe, die ihre Messwerte schon in einem Datenbanksystem aufzeichnen, etwa über die Anlagensteuerung.</p>
                         <div class="angebot-preis">1.500 €<small>je vorliegendem Datenbestand</small></div>
                         <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
                     </summary>
@@ -801,19 +803,19 @@
                 <details class="angebot-karte">
                     <summary>
                         <span class="angebot-stufe">Wenn die Daten tragen</span>
-                        <h3>Analyse je Fehlerbild</h3>
+                        <h3>Fehler&shy;ursachen&shy;analyse mit Demo-Werkzeug</h3>
                         <p class="angebot-frage">Was sind die Ursachen für ein ausgewähltes Fehlerbild?</p>
-                        <p class="angebot-fuer">Für Betriebe mit einem wiederkehrenden Fehlerbild und Daten, die sich als tragfähig erwiesen haben.</p>
+                        <p class="angebot-fuer">Für Betriebe mit einem wiederkehrenden Fehlerbild, nachdem die Erstanalyse gezeigt hat, dass die Daten tragen.</p>
                         <div class="angebot-preis">5.000 €<small>je Fehlerbild, an Ihren vorhandenen Daten</small></div>
                         <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
                     </summary>
                     <div class="angebot-inhalt">
                         <ul>
-                            <li><strong>Ihr Nutzen:</strong> Statt Meinungen eine belegte Ursache und eine Prüfreihenfolge, also weniger Ausschuss und weniger Suchzeit.</li>
+                            <li><strong>Ihr Nutzen:</strong> Statt Meinungen eine belegte Ursache und ein Werkzeug, mit dem Ihr Team weiterarbeiten kann.</li>
                             <li>Ursache-Wirkungs-Diagramm mit den Auswertungen dazu</li>
                             <li>Begründete Prüfreihenfolge für Ihr Team</li>
-                            <li>Auswertung zum Durchklicken, läuft ohne Installation und ohne Internet</li>
-                            <li>Klare Aussage, ob sich eine Umsetzung lohnt — kein Eingriff in den Betrieb</li>
+                            <li>Demo-Werkzeug zu Ihrem Fehlerbild, läuft ohne Installation und ohne Internet</li>
+                            <li>Das Werkzeug lässt sich weiterentwickeln und in den Betrieb einführen — kein Eingriff in den Betrieb während der Analyse</li>
                         </ul>
                         <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-fehlerbild">Erstgespräch buchen</a>
                     </div>
@@ -821,44 +823,41 @@
                 <p class="angebot-belege">
                     <a href="docs/datenanalyse-ablauf.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-fehlerbild">Produktblatt (PDF)</a><br>
                     <a href="docs/fehlerbild-beispielbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-befund-fehlerbild">Beispiel-Befund (PDF)</a><br>
-                    <a href="demo.html" data-funnel="link-demo-karte">So sieht die Auswertung aus</a><br>
+                    <a href="demo.html" data-funnel="link-demo-karte">So sieht ein Werkzeug aus</a><br>
                     <a href="docs/angebot-analyse-fehlerbild-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-fehlerbild-karte">Musterangebot (PDF)</a>
                 </p>
             </div>
             <div class="angebot-spalte fade-up">
-                <details class="angebot-karte neu">
+                <!-- Seit 03.11.2026 (Stefan) statt KI-Basis-Setup: Einfuehrung in den Betrieb, nach Aufwand -->
+                <details class="angebot-karte">
                     <summary>
-                        <span class="angebot-stufe">Neu</span>
-                        <h3>KI-Basis-Setup</h3>
-                        <p class="angebot-frage">Sie haben die KI-Werkzeuge schon im Haus — wir sorgen dafür, dass sie sich rechnen.</p>
-                        <p class="angebot-fuer">Für Betriebe, die ihre vorhandenen KI-Werkzeuge sicher und mit messbarem Nutzen einsetzen wollen.</p>
-                        <div class="angebot-preis">9.900 €<small>Festpreis je Betrieb, für 1 bis 3 Personen und einen Anwendungsfall</small></div>
+                        <span class="angebot-stufe">Wenn das Werkzeug überzeugt</span>
+                        <h3>Einführung in den Betrieb</h3>
+                        <p class="angebot-frage">Wie wird aus dem Demo-Werkzeug ein Werkzeug für den Alltag?</p>
+                        <p class="angebot-fuer">Für Betriebe, die das Demo-Werkzeug für den Testbetrieb freigegeben haben.</p>
+                        <div class="angebot-preis">Nach Aufwand<small>nach Abstimmung Ihrer Anforderungen</small></div>
                         <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
                     </summary>
                     <div class="angebot-inhalt">
                         <ul>
-                            <li><strong>Ihr Nutzen:</strong> Wiederkehrende Aufgaben laufen automatisiert — von der Auswertung Ihrer Prozessdaten bis zum Auftragseingang.</li>
-                            <li>Einrichtung der KI-Arbeitsumgebung mit Freigaben und schriftlicher Datengrenze, abgestimmt mit Ihrer IT</li>
-                            <li>Eine künstliche Testanlage zum Entwickeln — Ihre Messwerte sieht keine KI</li>
-                            <li>Eine wiederkehrende Aufgabe automatisiert, gemeinsam ausgewählt und mit Ihren Werkzeugen umgesetzt</li>
-                            <li>Regeln für den Umgang und ein halber Tag Schulung nach EU-KI-Verordnung</li>
-                            <li>Vier Wochen zum Ausprobieren, mit Begleitung bei Fragen</li>
-                            <li>Danach auf Wunsch: die Datenwerkstatt für Ihr Team, als Angebot auf Anfrage. Lizenzen für die KI-Werkzeuge buchen Sie direkt beim Anbieter.</li>
+                            <li><strong>Ihr Nutzen:</strong> Das Werkzeug läuft in Ihrem Betrieb, auf Ihrer Hardware, ohne Cloud.</li>
+                            <li>Freigabe des Demo-Werkzeugs für den Testbetrieb</li>
+                            <li>Abstimmung der Anforderungen mit Ihrem Team und Ihrer IT</li>
+                            <li>Weiterentwicklung und Einbindung in Ihren Betrieb</li>
+                            <li>Danach auf Wunsch die Betreuung je Anlage</li>
                         </ul>
-                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-kisetup">Erstgespräch buchen</a>
+                        <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-einfuehrung">Erstgespräch buchen</a>
                     </div>
                 </details>
                 <p class="angebot-belege">
-                    <a href="docs/ki-setup-check-ueberblick.pdf" target="_blank" rel="noopener" data-funnel="pdf-flyer-kisetup">Produktblatt (PDF)</a><br>
-                    <a href="docs/angebot-ki-setup-check-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-angebot-kisetup-karte">Musterangebot (PDF)</a><br>
-                    <a href="ausbildung.html" data-funnel="link-datenwerkstatt-karte">Danach: die Datenwerkstatt für Ihr Team</a>
+                    <a href="leistungen.html#einfuehrung" data-funnel="link-einfuehrung-karte">Ablauf im Detail</a>
                 </p>
             </div>
         </div>
 
         <p class="fade-up" style="text-align:center;color:var(--text-light);font-size:0.88rem;margin:18px 0 0;">Alle Preise netto, zuzüglich USt.</p>
         <div class="fade-up" style="text-align:center;margin-top:30px;">
-            <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">Für die drei Analysen werten wir Ihre Daten auf unseren eigenen Rechnern aus — bevor eine Datei Ihr Haus verlässt, unterschreiben wir eine beidseitige NDA. Beim KI-Basis-Setup arbeiten wir in Ihrer Umgebung, eine Übergabe von Daten an uns gibt es nicht. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">NDA vorab lesen (PDF)</a></p>
+            <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:0 auto;max-width:700px;">Für die Analysen werten wir Ihre Daten auf unseren eigenen Rechnern aus — bevor eine Datei Ihr Haus verlässt, unterschreiben wir eine beidseitige NDA. Das fertige Werkzeug läuft bei Ihnen. <a href="docs/nda-muster.pdf" target="_blank" rel="noopener" data-funnel="pdf-nda-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">NDA vorab lesen (PDF)</a></p>
             <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7;margin:16px auto 0;max-width:700px;"><strong style="color:var(--dunkelblau);">Und danach?</strong> Wir begleiten Ihr Team bei der Fehlerbehebung, zum Festpreis je Projekt, vereinbart, bevor Sie zusagen. Bei Energie, Wasser, Anodenmetall, Chemie und Entsorgung liegt das Einsparpotenzial je Anlage und Jahr in der Größenordnung von 60.000 bis 90.000 €. <a href="leistungen.html#danach" data-funnel="link-danach-ablauf" style="color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">Wie es weitergeht</a></p>
             <p style="color:var(--text-light);font-size:0.9rem;margin-top:12px;">Für österreichische Betriebe können Förderungen (aws, KMU.DIGITAL) die Kosten der späteren Schritte deutlich senken.</p>
         </div>
@@ -983,14 +982,15 @@
         <div class="section-header fade-up" style="margin-bottom:24px;">
             <p class="section-label">Auch für ältere Anlagen</p>
             <h2 style="color:var(--dunkelblau);">Ihre Anlage muss nicht neu sein.</h2>
-            <p>Ob Ihre Werte aus der Steuerung kommen, aus dem Gleichrichter oder von Hand aus dem Badbuch — ausgewertet wird, was heute schon aufgezeichnet wird. Auch an einer Linie, die seit zwanzig Jahren läuft und deren Quellen jede ihr eigenes Format schreiben.</p>
+            <!-- 03.11.2026 (Stefan): Grundvoraussetzung Datenbanksystem, deshalb kein Badbuch von Hand mehr -->
+            <p>Ob Ihre Werte aus der Steuerung kommen oder aus dem Gleichrichter — ausgewertet wird, was heute schon aufgezeichnet wird. Auch an einer Linie, die seit zwanzig Jahren läuft und deren Quellen jede ihr eigenes Format schreiben.</p>
         </div>
         <div class="fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:22px;">
-            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Gelesen, wie es vorliegt</strong><br>Archive der Gleichrichter, Alarmmeldungen, Laborwerte, Badbuch — ohne neue Sensorik.</span>
+            <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Gelesen, wie es vorliegt</strong><br>Archive der Gleichrichter, Alarmmeldungen, Laborwerte — ohne neue Sensorik.</span>
             <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Auf eine Zeitachse gebracht</strong><br>Verschiedene Quellen in einem Bild, ohne dass der Hersteller Ihrer Steuerung mitwirken muss.</span>
             <span style="background:var(--hellgrau);border-radius:12px;padding:16px 18px;font-size:0.93rem;line-height:1.5;color:var(--text-body);"><strong style="color:var(--dunkelblau);">Ohne Umbau</strong><br>Keine Verkabelung, kein Zugriff auf die Steuerung, kein Stillstand.</span>
         </div>
-        <p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 14px;">Erst auswerten, was da ist, dann entscheiden, wo investiert wird. So wissen Sie vor einer Modernisierung, an welcher Linie sie sich lohnt — und an welcher nicht.</p>
+        <p class="fade-up" style="font-size:1rem;color:var(--text-body);line-height:1.7;margin:0 0 14px;">Erst auswerten, was da ist, dann entscheiden, wo investiert wird. So wissen Sie vor einer Modernisierung, an welcher Linie sie sich lohnt — und an welcher nicht. Voraussetzung: Ihre Messwerte werden in einem Datenbanksystem aufgezeichnet. Fehlt das, helfen wir bei der Wahl des passenden Partners und beim Aufbau.</p>
         <a class="fade-up" href="leistungen.html#standortanalyse" data-funnel="link-standortanalyse-bestand" style="font-size:0.95rem;color:var(--schild-blau);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(43,94,167,0.35);">So liest die Standortanalyse Ihren Bestand</a>
     </div>
 </section>
@@ -1044,7 +1044,7 @@
         <div class="fade-up" style="max-width:760px;margin:34px auto 0;">
             <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
                 <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Welche Daten brauchen Sie — und was, wenn unsere Datenlage nicht ideal ist?</summary>
-                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Excel-Aufzeichnungen, Laborprotokolle, Reklamationsberichte. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage eine Frage nicht beantwortet, erhalten Sie dazu eine klare Aussage.</p>
+                <p style="color:var(--text-body);font-size:0.93rem;line-height:1.65;margin:12px 0 0;">Das, was Sie ohnehin erfassen: Sensor-Logs, SCADA-Historie, Laborprotokolle, Reklamationsberichte. Voraussetzung ist, dass Ihre Messwerte in einem Datenbanksystem aufgezeichnet werden, nicht in Excel-Tabellen. Fehlt das, begleiten wir auf Wunsch die Wahl des passenden Partners und den Aufbau der Aufzeichnung, damit Ihre Daten KI-fähig werden. 3–12 Monate Historie sind ein guter Start. Lückenhafte Daten, verschiedene Formate, Zeitversatz sind die Regel, nicht die Ausnahme — das wird aufgearbeitet. Wo Ihre Datenlage eine Frage nicht beantwortet, erhalten Sie dazu eine klare Aussage.</p>
             </details>
             <details class="faq-item" style="border-top:1px solid var(--silber);padding:16px 0;">
                 <summary style="cursor:pointer;font-family:'Montserrat',Arial,sans-serif;font-weight:600;color:var(--dunkelblau);font-size:0.98rem;">Was, wenn die Ursache nicht eindeutig zu finden ist?</summary>
@@ -1232,7 +1232,6 @@
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="leistungen.html">Leistungen</a></li>
                 <li><a href="demo.html">Demo</a></li>
-                <li><a href="ausbildung.html">Datenwerkstatt</a></li>
                 <li><a href="ueber-mich.html">Über mich</a></li>
                 <li><a href="ethik.html">Ethik &amp; Werte</a></li>
                 <li><a href="forschung.html">Forschung</a></li>

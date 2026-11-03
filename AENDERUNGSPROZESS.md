@@ -183,8 +183,8 @@ Eine Seite kann für sich stimmen und trotzdem an der falschen Stelle stehen. Vi
 | Frage | Woran man scheitert |
 |---|---|
 | **Woher kommt der Besucher — Mail, Suche, Vortrag, Empfehlung?** | Aus einer Mail kommt jemand mit einer konkreten Frage. Findet er oben keinen Einstieg, scrollt er nicht bis zum CTA am Seitenende (Befund `ausbildung.html`, 02.09.2026) |
-| **Welche Frage hat er in dieser Phase — und beantwortet die Seite genau die?** | Orientierung braucht einen Beleg zum Mitnehmen (PDF), nicht sofort einen Termin. Deshalb steht auf der Datenwerkstatt-Seite **PDF vor Termin** |
-| **Gibt es mehr als eine sinnvolle Fortsetzung? Dann steht sie als Weiche da, nicht als Nachsatz** | Standortanalyse und Datenwerkstatt sind gleichwertige Antworten auf „wer macht es". Als Halbsatz angehängt verliert die zweite immer |
+| **Welche Frage hat er in dieser Phase — und beantwortet die Seite genau die?** | Orientierung braucht einen Beleg zum Mitnehmen (PDF), nicht sofort einen Termin. Deshalb stand auf der Datenwerkstatt-Seite (bis 03.11.2026 im Angebot) **PDF vor Termin** |
+| **Gibt es mehr als eine sinnvolle Fortsetzung? Dann steht sie als Weiche da, nicht als Nachsatz** | Standortanalyse und Erstanalyse sind gleichwertige Einstiege (Daten verstreut oder schon in einer Datenbank). Als Halbsatz angehängt verliert der zweite immer |
 | **Welche stille Frage bleibt offen?** | „Was passiert mit meinen Daten" ist bei Galvanikbetrieben die häufigste. Sie braucht einen Verweis dort, wo Daten zur Sprache kommen — nicht nur im Fußbereich |
 
 **Ein Weg pro Seite und Phase.** Zwei gleichrangige Links nebeneinander halbieren die

@@ -76,18 +76,13 @@ NAV_LINKS = [
     # was macht ihr, wie sieht das aus, wer seid ihr. Vier Eintraege plus CTA liegen im
     # empfohlenen Rahmen von vier bis sechs (31.08.2026).
     ("demo.html", "Demo"),
-    # Seit 02.09.2026 wieder in der Navigation (Stefan): das Ausbildungsangebot ist der neue
-    # Angebotsschwerpunkt. Label "Datenwerkstatt" -- der naheliegende Name "KI-Werkstatt" ist
-    # in derselben Region bereits belegt: die WKO Vorarlberg fuehrt unter diesem Namen ein
-    # eigenes Workshop-Programm fuer Vorarlberger KMU (geprueft 02.09.2026). Verwechslung mit
-    # einem Verbandsangebot waere doppelt schaedlich -- die WKO ist Netzwerk, kein Wettbewerber.
-    # "Daten" statt "KI" trifft zudem die Positionierung genauer. Fuenf Eintraege plus CTA
-    # liegen noch im empfohlenen Rahmen von vier bis sechs.
-    ("ausbildung.html", "Datenwerkstatt"),
+    # "Datenwerkstatt" (ausbildung.html) seit 03.11.2026 nicht mehr in Nav und Fuss (Stefan:
+    # Fokus auf die Werkzeuge zur Fehlerursachenanalyse). Die Seite bleibt erreichbar, aber
+    # noindex und ohne Verweis. Wieder aufnehmen: README § Architektur.
     ("ueber-mich.html", "Über mich"),
     # Seit 27.10.2026 (Stefan): eigener Reiter fuer die Haltung zu KI und Beschaeftigung --
-    # nach "Ueber mich", weil es die Werte der Person hinter dem Angebot sind. Sechs
-    # Eintraege plus CTA: obere Grenze des Rahmens von vier bis sechs.
+    # nach "Ueber mich", weil es die Werte der Person hinter dem Angebot sind. Fuenf
+    # Eintraege plus CTA (seit 03.11.2026 ohne Datenwerkstatt).
     ("ethik.html", "Ethik &amp; Werte"),
     ("forschung.html", "Forschung"),
 ]
@@ -97,7 +92,6 @@ FOOTER_LINKS = [
     ("Startseite", "index.html", False),
     ("Leistungen", "leistungen.html", False),
     ("Demo", "demo.html", False),
-    ("Datenwerkstatt", "ausbildung.html", False),
     ("Über mich", "ueber-mich.html", False),
     ("Ethik &amp; Werte", "ethik.html", False),
     # "Sicherheit (PDF)" entfernt am 12.10.2026: Das PDF hatte keine Quelle mehr und trug
@@ -134,7 +128,8 @@ PAGES = {
     # nicht mitbekommen, weil ihre Navigation als einzige nicht generiert wurde.
     "sicherheit.html": None,
     # Neu aufgebaut am 02.09.2026 -- vorher ein Redirect-Stub auf die Startseite.
-    "ausbildung.html": "ausbildung.html",
+    # Seit 03.11.2026 ohne Nav-Eintrag (noindex, nur noch fuer alte direkte Links).
+    "ausbildung.html": None,
     "ueber-mich.html": "ueber-mich.html",
     "forschung.html": "forschung.html",
     "ethik.html": "ethik.html",

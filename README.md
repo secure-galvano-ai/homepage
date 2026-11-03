@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-11-02
+**Stand:** 2026-11-03
 
 ---
 
@@ -84,12 +84,20 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   kein selbst gehosteter Volltext — Nachdruckrechte liegen bei Russmedia/VN. Der VOL.AT-Artikel
   steht hinter einer Bezahlschranke, deshalb verlinken wir die WISTO-Fassung. Kaeme eine
   Verlagsfreigabe, ersetzt sie diesen Link — nicht stapeln.
-- **Aus- und Weiterbildung: `ausbildung.html`, Nav „Datenwerkstatt"** *(seit 02.09.2026;
-  „KI-Werkstatt" ist in Vorarlberg von der WKO belegt)*. Grund: verkauft wird die Befähigung,
-  nicht nur die fertige Software (`BD/areas/coaching-und-ausbildung/`). 104 Sitzungen mit
-  **0 Klicks** auf den Buchungs-CTA zeigten, dass ein reiner Termin-Aufruf dort nicht trägt —
-  deshalb ein **niederschwelliger zweiter Weg** (Überblick als PDF, ohne E-Mail-Gate) und eine
-  **Erfolgsdefinition mit Abbruchkriterium** (`BD/areas/coaching-und-ausbildung/README.md` § Experiment).
+- **Angebotsleiter seit 03.11.2026** *(Stefan: „So einfach wie möglich", Fokus auf die Werkzeuge
+  zur Fehlerursachenanalyse)*: Erstgespräch (kostenlos) → Standortanalyse **oder** Erstanalyse
+  (je 1.500 €; nach der Standortanalyse auf Wunsch Begleitung bei der Umsetzung von
+  Anwendungsfällen, nach Aufwand) → **Fehlerursachenanalyse mit Demo-Werkzeug** (5.000 € je
+  Fehlerbild, nach positiver Erstanalyse; Anker bleibt `#analyse-je-fehlerbild`) → **Einführung in
+  den Betrieb** (nach Aufwand, nach Freigabe des Demo-Werkzeugs für den Testbetrieb; Anker
+  `#einfuehrung`, `#ki-setup-check` bleibt als unsichtbarer Anker). Begleitung der Fehlerbehebung
+  und Betreuung je Anlage unverändert. **Grundvoraussetzung** (gleicher Tag): Messwerte in einem
+  Datenbanksystem, nicht in Excel-Tabellen; fehlt das, begleiten wir die Partnerwahl und den
+  Aufbau der Aufzeichnung (nach Aufwand) — steht in beiden FAQ, bei Standort- und Erstanalyse und
+  in `#bestand`. Abgelöst: das **KI-Basis-Setup** (9.900 €, 22.10.–03.11.2026) und die
+  **Datenwerkstatt** als Angebot. `ausbildung.html` bleibt nur für alte direkte Links stehen:
+  `noindex`, nicht in Nav, Fuß, Sitemap, `llms.txt`, kein Verweis von anderen Seiten; die PDFs
+  `ki-setup-check-*`/`datenwerkstatt-*` liegen unverlinkt in `docs/`.
 - **Tracking-Konvention:** je CTA-Position ein eigener Event-Name (`cta-nav`, `cta-hero`,
   `cta-ablauf`, `cta-abschluss`, `cta-sticky`, `cta-whatsapp-fab`, `mail-abschluss`), Downloads als
   `pdf-<dateiname>`. **Keine generischen Selektoren** — die haben die Zahlen einmal verdoppelt
@@ -103,7 +111,7 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Fassung traegt (alte Anschrift, Sammel-Buchungsseite, falsches Gruendungsdatum).
 - **Beim Umbenennen oder Nachziehen einer Zahl `grep` über *alle* Seiten laufen lassen, nicht nur
   über die, die man gerade umbaut** — inklusive `<meta>`-Beschreibungen, `og:`-Tags und `en/`.
-  Anlass: Die Stufe hieß ab 31.08.2026 **„Vorprojekt"** statt „Diagnose" (seit 21.10.2026 „Analyse je Fehlerbild")
+  Anlass: Die Stufe hieß ab 31.08.2026 **„Vorprojekt"** statt „Diagnose" (seit 21.10.2026 „Analyse je Fehlerbild", seit 03.11.2026 „Fehlerursachenanalyse mit Demo-Werkzeug")
   (`BD/areas/business-model.md` §*Leiter*); bis 03.09.2026 stand „Diagnose" noch viermal auf
   `sicherheit.html` und `ueber-mich.html`, wo niemand nachsieht. Dasselbe beim Einsparpotenzial:
   **60.000–90.000 €**, die Oberkante 130.000 € ist seit 15.09.2026 abgelöst
@@ -215,8 +223,11 @@ auch ohne Diff auf. **Grenze:** Sie sieht, *dass* sich das Deutsche geändert ha
 - **Jeder Funnel-Marker endet auf `-en`**, `data-video` ebenso — sonst mischt Clarity beide
   Sprachen (`OPTIMIERUNG.md` §4).
 - Glossar: Modellprüfung = *model audit* (nie *certification/certified*), Standortanalyse =
-  *Site Assessment*, Analyse je Fehlerbild = *Defect Analysis*, Erstgespräch = *intro call*,
-  KI-Basis-Setup = *AI Base Setup* (Untertitel „Ihre KI-Werkzeuge gewinnbringend einsetzen" = *Put your AI tools to profitable use*), Datenwerkstatt = *Data Workshop*, Lohngalvanik = *job shop*, Ausschuss = *scrap*, Reklamation = *customer complaint*.
+  *Site Assessment*, Erstanalyse = *Initial Data Check*, Fehlerursachenanalyse mit Demo-Werkzeug =
+  *Root Cause Analysis with Demo Tool*, Einführung in den Betrieb = *Rollout into Operations*,
+  nach Aufwand = *billed by effort*, Erstgespräch = *intro call*, Lohngalvanik = *job shop*,
+  Ausschuss = *scrap*, Reklamation = *customer complaint*. Abgelöst (03.11.2026): *Defect Analysis*,
+  *AI Base Setup*, *Data Workshop*.
   „Regelkarte“ ist auch als *control chart* gesperrt (die Prüfung schlägt an).
 - Was nur für Österreich gilt (Förderprogramme), entfällt auf Englisch. Preise als
   „€1,500 net (excl. VAT)“.
@@ -242,7 +253,7 @@ und LinkedIn zeigen. Begruendung der Platzierung im ganzen Trichter: SharePoint
 Ueberblick"), **4:51**, nicht gelistet, eingebunden ueber `youtube-nocookie.com` — kein Cookie vor
 Klick, die Datenschutzerklaerung setzt das voraus. Die Seite ist indexiert und steht in der
 `sitemap.xml`; zwei Verweise zeigen darauf: Startseite unter dem Pitch-Video
-(`link-demo-startseite`) und `leistungen.html` in der Sektion *Analyse je Fehlerbild*
+(`link-demo-startseite`) und `leistungen.html` in der Sektion *Fehlerursachenanalyse mit Demo-Werkzeug*
 (`cta-demo-vorprojekt` — Ereignisname bewusst alt, sonst bricht die Clarity-Reihe).
 **Nicht** in die Belegspalte bei `#standortanalyse` — die sammelt Belege zur *Standortanalyse*,
 das Video zeigt die *Anwendung*; ein dort am 02.09.2026 gesetzter dritter Verweis konkurrierte
@@ -279,6 +290,10 @@ anzupassen). Eingehende Links aus Mail und LinkedIn bekommen UTM-Parameter, dami
 Monatslauf trennbar bleibt.
 
 ## Datenwerkstatt-Seite (`ausbildung.html`) — Video und Zielgruppe *(11.09.2026)*
+
+> **Seit 03.11.2026 nicht mehr auf der Website** (`noindex`, ohne Verweis; § *Regeln, die
+> dauerhaft gelten*, Angebotsleiter). Die Regeln unten gelten weiter für die Seite selbst und
+> beim Wiederaufnehmen. Die Regelkarte-Sperre gilt unverändert überall.
 
 **Zielgruppe steht in der Kennzeile:** *„Weiterbildung fuer kleine Betriebe"* (Anlass: der Hero
 setzte laufende Messtechnik voraus und nannte die Begleitung nicht). **Dauerregel:
@@ -362,14 +377,17 @@ Optionaler Gegencheck bei groesseren Umbauten (Node, kein Java):
 ```
 homepage/
   index.html               Predictive-Quality-Landing (ein roter Faden), Sektionen per grep 'id="' index.html.
-                           Preise im #ablauf nur fuer die Einstiegsstufen (Standortanalyse, Analyse je
-                           Fehlerbild; Umsetzung und Betreuung ohne Preis). KEINE Leistungs-Teaser-Karten.
-  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt, #datenanalyse
-                           (Stufe 2 „Analyse je Fehlerbild“), #anwendungen, #fragen mit FAQPage-Schema,
+                           #ablauf = vier Angebotskarten (Standortanalyse, Erstanalyse, Fehlerursachenanalyse
+                           mit Demo-Werkzeug, Einfuehrung in den Betrieb nach Aufwand; Begleitung und
+                           Betreuung ohne Preis darunter). KEINE Leistungs-Teaser-Karten.
+  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt, #erstanalyse,
+                           #analyse-je-fehlerbild (= #datenanalyse, Stufe 2 „Fehlerursachenanalyse mit
+                           Demo-Werkzeug“), #einfuehrung (= #ki-setup-check), #danach, #fragen mit FAQPage-Schema,
                            Blanko-Angebote als PDF. Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
                            GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen.
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
-  ausbildung.html          Datenwerkstatt — Aus- und Weiterbildung, Reihenfolge Nutzen -> Ablauf ->
+  ausbildung.html          Seit 03.11.2026 noindex und unverlinkt (nur alte direkte Links).
+                           Datenwerkstatt — Aus- und Weiterbildung, Reihenfolge Nutzen -> Ablauf ->
                            Beispiel -> Angebot (Partner stehen seit 21.10.2026 nur noch im
                            Streifen #partner der Startseite). Flyer dazu:
                            docs/datenwerkstatt-ueberblick.pdf — § Datenwerkstatt-Seite.
