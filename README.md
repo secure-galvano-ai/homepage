@@ -22,12 +22,13 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Ablesen: CTA-Klicks, mobile Scrolltiefe.
 - **`#bestand` „Ihre Anlage muss nicht neu sein"** *(Stefan, 02.10.2026)* samt Gegenstücken auf
   `leistungen.html` und `ausbildung.html` — Kennzahl in `OPTIMIERUNG.md` §4.
-- **Für den Optimierungslauf am 03.11.2026 vorgemerkt** *(Befund 21.10.2026, am 27.10. bewusst
-  nicht vorgezogen, weil die beiden Messungen oben sonst nicht mehr zuzuordnen sind)*: Startseite
-  von zehn auf rund sechs Abschnitte (Kandidaten: Pitch-Video, „Aktuell" mit Rückblick vom
-  29.09., „So funktioniert's"; „Partner" bleibt wegen der gegenseitigen Verlinkung) und
-  „Sicherheit" statt „Forschung" im Hauptmenü — nur mit Clarity-Beleg, höchstens drei Änderungen.
-  Terminiert als Zentraldokument Nr 311 (fällig 03.11.2026).
+- **Für den Optimierungslauf nach dem Messpunkt 01.12.2026 vorgemerkt** *(Befund 21.10.2026; am
+  27.10. und im Lauf 03.11. bewusst nicht umgesetzt — der Lauf 03.11. hat den Versuch „Angebote und
+  Hauptaufruf" gestartet, eine Kürzung daneben wäre nicht mehr zuzuordnen)*: Startseite von zehn
+  auf rund sechs Abschnitte (Kandidaten: Pitch-Video, „Aktuell" mit Rückblick vom 29.09., „So
+  funktioniert's"; „Partner" bleibt wegen der gegenseitigen Verlinkung) und „Sicherheit" statt
+  „Forschung" im Hauptmenü — nur mit Clarity-Beleg, höchstens drei Änderungen. Zentraldokument
+  Nr 311 damit geschlossen (03.11.2026).
 - **Versuch „Angebote und Hauptaufruf“ seit 03.11.2026** *(Clarity-Befund 28 Tage, Stefan: mehr Klicks
   und Ersttermine)*: zwei Startkarten mit sichtbarem Buchungsknopf, je Angebot nur der Beispiel-Befund,
   zwei Wege darunter; derselbe Hauptaufruf oben und unten auf Leistungen, Über mich, Demo; mobiler
