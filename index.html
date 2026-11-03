@@ -654,12 +654,11 @@
                 <h1>Der Fehler steckt schon in Ihren Daten. <span class="accent">Sie sehen ihn nur nicht.</span></h1>
                 <!-- 03.11.2026 (Stefan): KI-Basis-Setup entfallen, Fokus auf Werkzeuge zur automatisierten Auswertung -->
                 <p>Wir finden die Ursachen Ihrer Fehlerbilder in den Daten, die Ihre Anlage schon aufzeichnet — und bauen Werkzeuge, die solche Fehler künftig automatisch melden.</p>
-                <!-- Zielgruppe klar benennen, aber ueber die ANLAGENZAHL statt ueber
-                     Betriebsgroesse: das ist laut business-model.md der echte Filter, und
-                     es schliesst den Einzelstandort (Sekundaer-Zielgruppe) nicht aus.
-                     "Galvanik- und Eloxalbetriebe" = galvanische + anodische Verfahren
-                     in Branchensprache -- also genau die mit Bestromungskennlinie. -->
-                <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">Für <strong style="color:#fff;">Galvanik- und Eloxalbetriebe mit mehreren Anlagen</strong> — an einem Standort oder über mehrere Werke hinweg. Einstieg ab 1.500 € netto.</p>
+                <!-- Zielgruppe seit 03.11.2026 (Stefan) ueber "komplexe Prozesse" statt ueber die
+                     Anlagenzahl ("mit mehreren Anlagen -- an einem Standort oder ueber mehrere
+                     Werke hinweg" entfallen). "Galvanik- und Eloxalbetriebe" = galvanische +
+                     anodische Verfahren in Branchensprache. -->
+                <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">Für <strong style="color:#fff;">Galvanik- und Eloxalbetriebe mit komplexen Prozessen</strong>. Einstieg ab 1.500 € netto.</p>
                 <div class="hero-buttons">
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero">Kostenloses Erstgespräch</a>
                     <!-- Zweiter Hero-Button fuehrt seit 21.10.2026 zu den Angebotskacheln (seit
@@ -761,16 +760,19 @@
         <div class="section-header fade-up" style="margin-bottom:30px;">
             <p class="section-label">Angebote und Preise</p>
             <h2 style="color:var(--dunkelblau);">Zwei Einstiege, zwei klare Wege.</h2>
-            <p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Messwerte schon in einem Datenbanksystem vorliegen. Der Befund zeigt, welcher Weg sich für Sie lohnt; danach entscheiden Sie frei. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
+            <!-- 03.11.2026 (Stefan: "in der Lesart der Personen, die die Homepage checken"): eine
+                 Entscheidungshilfe statt Einleitung; die Karten fuehren mit Daten und Fehlerbildern,
+                 KI-Anwendungsfaelle (Weg B) nur als Halbsatz der Standortanalyse. -->
+            <p><strong>Welcher Einstieg passt?</strong> Daten verstreut oder noch unklar → Standortanalyse. Messwerte in der Datenbank, konkretes Fehlerbild → Erstanalyse. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
         </div>
 
         <div class="angebote-karten">
             <div class="angebot-spalte fade-up">
                 <div class="angebot-karte">
-                    <span class="angebot-stufe">Potenziale erschließen</span>
+                    <span class="angebot-stufe">Daten noch verstreut</span>
                     <h3>Standortanalyse</h3>
-                    <p class="angebot-frage">Was tragen Ihre Daten, und wo lohnen sich Automatisierung und KI?</p>
-                    <p class="angebot-fuer">Für Betriebe, deren Daten verstreut liegen oder die wissen wollen, wo sich Automatisierung und KI lohnen.</p>
+                    <p class="angebot-frage">Sie wissen noch nicht genau, welche Daten Sie haben und wo es sich lohnt?</p>
+                    <p class="angebot-fuer">Wir sichten alle Quellen (Steuerung, Gleichrichter, Labor, Reklamationen), bewerten je Anlage, ob die Daten tragen, und zeigen die Fehlerbilder mit dem größten Potenzial — und wo Ihre eigene KI Routinearbeit abnehmen kann.</p>
                     <div class="angebot-preis">1.500 €<small>je Standort, unabhängig von der Anlagenzahl</small></div>
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-standort">Erstgespräch buchen</a>
                 </div>
@@ -795,10 +797,10 @@
             </div>
             <div class="angebot-spalte fade-up">
                 <div class="angebot-karte">
-                    <span class="angebot-stufe">Daten liegen vor</span>
+                    <span class="angebot-stufe">Messwerte in der Datenbank</span>
                     <h3>Erstanalyse</h3>
-                    <p class="angebot-frage">Sind Ihre vorhandenen Daten auswertbar, und wo sind Lücken?</p>
-                    <p class="angebot-fuer">Für Betriebe, die ihre Messwerte schon in einem Datenbanksystem aufzeichnen, etwa über die Anlagensteuerung.</p>
+                    <p class="angebot-frage">Ihre Messwerte liegen schon in einem Datenbanksystem, und ein Fehlerbild kostet Sie Geld?</p>
+                    <p class="angebot-fuer">Wir prüfen den Datenbestand auf Vollständigkeit und Zeitachse, zeigen Lücken und die ersten Ursachenkandidaten für Ihr Fehlerbild — bevor Sie in eine Ursachensuche investieren.</p>
                     <div class="angebot-preis">1.500 €<small>je vorliegendem Datenbestand</small></div>
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-karte-erstanalyse">Erstgespräch buchen</a>
                 </div>
