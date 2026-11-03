@@ -81,7 +81,7 @@
 "@id": "https://secure-galvano-ai.com/#folgeprojekt",
 "name": "Fehlerursachenanalyse mit Demo-Werkzeug, Einführung in den Betrieb und Begleitung der Fehlerbehebung für Galvanikbetriebe",
 "provider": { "@id": "https://secure-galvano-ai.com/#business" },
-"description": "Folgeleistungen nach der Erstanalyse: Fehlerursachenanalyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und einem Demo-Werkzeug, danach die Einführung des Werkzeugs in den Betrieb nach Aufwand und die strukturierte Begleitung der Fehlerbehebung, bis die Fehlerbilder behoben sind, als Festpreis je Projekt, optional mit Integration einer Monitoring-Software für Live-Auswertung und kontinuierliches Tracking. Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
+"description": "Folgeleistungen nach der Standort- oder Erstanalyse: Fehlerursachenanalyse je Fehlerbild mit Ursache-Wirkungs-Diagramm, Prüfreihenfolge und einem Demo-Werkzeug, danach die Einführung des Werkzeugs in den Betrieb nach Aufwand und die strukturierte Begleitung der Fehlerbehebung, bis die Fehlerbilder behoben sind, als Festpreis je Projekt, optional mit Integration einer Monitoring-Software für Live-Auswertung und kontinuierliches Tracking. Entwickelt an künstlichen Daten, ausgewertet bei uns, betrieben bei Ihnen. Trusted-AI-Methodik. Förderungen (KMU.DIGITAL, aws, FFG) für österreichische Unternehmen.",
 "serviceType": "Process Consulting"
 },
 {
@@ -162,7 +162,8 @@ Ersetzt den frueheren Ablauf-Strang. id bleibt "ablauf", weil forschung.html und
 leistungen.html darauf verlinken. Preise: BD/areas/preise.yaml.
 Leiter seit 03.11.2026 (Stefan: "so einfach wie moeglich", Fokus Fehlerursachenanalyse):
 Standortanalyse oder Erstanalyse -> Fehlerursachenanalyse mit Demo-Werkzeug (5.000 EUR,
-vorher "Analyse je Fehlerbild") -> Einfuehrung in den Betrieb (nach Aufwand). Das
+vorher "Analyse je Fehlerbild"; Voraussetzung eine positive Standort- ODER Erstanalyse,
+Stefan 03.11.2026) -> Einfuehrung in den Betrieb (nach Aufwand). Das
 KI-Basis-Setup und der Verweis auf die Datenwerkstatt sind entfallen; Marker *fehlerbild*
 bleiben, damit die Clarity-Reihen weiterlaufen. Jede Karte traegt ihre Unterlagen. -->
 <style>
@@ -205,7 +206,7 @@ bleiben, damit die Clarity-Reihen weiterlaufen. Jede Karte traegt ihre Unterlage
 <div class="section-header fade-up" style="margin-bottom:30px;">
 <p class="section-label">Angebote und Preise</p>
 <h2 style="color:var(--dunkelblau);">Von der Ursache zum Werkzeug im Betrieb.</h2>
-<p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Daten schon vorliegen. Tragen die Daten, findet die Fehlerursachenanalyse die Ursache und baut ein Demo-Werkzeug dazu; danach führen wir es in Ihren Betrieb ein. Jeder Schritt hat ein klares Ergebnis, Sie entscheiden danach frei. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
+<p>Sie beginnen mit der Standortanalyse, oder mit der Erstanalyse, wenn Ihre Daten schon vorliegen. Zeigt eine der beiden, dass Ihre Daten tragen, findet die Fehlerursachenanalyse die Ursache und baut ein Demo-Werkzeug dazu; danach führen wir es in Ihren Betrieb ein. Jeder Schritt hat ein klares Ergebnis, Sie entscheiden danach frei. Davor steht ein kostenloses Erstgespräch von 30 Minuten.</p>
 </div>
 <div class="angebote-karten">
 <div class="angebot-spalte fade-up">
@@ -273,7 +274,7 @@ bleiben, damit die Clarity-Reihen weiterlaufen. Jede Karte traegt ihre Unterlage
 <span class="angebot-stufe">Wenn die Daten tragen</span>
 <h3>Fehler&shy;ursachen&shy;analyse mit Demo-Werkzeug</h3>
 <p class="angebot-frage">Was sind die Ursachen für ein ausgewähltes Fehlerbild?</p>
-<p class="angebot-fuer">Für Betriebe mit einem wiederkehrenden Fehlerbild, nachdem die Erstanalyse gezeigt hat, dass die Daten tragen.</p>
+<p class="angebot-fuer">Für Betriebe mit einem wiederkehrenden Fehlerbild, nachdem die Standort- oder Erstanalyse gezeigt hat, dass die Daten tragen.</p>
 <div class="angebot-preis">5.000 €<small>je Fehlerbild, an Ihren vorhandenen Daten</small></div>
 <span class="angebot-mehr"><span class="auf">Was Sie bekommen</span><span class="zu">Weniger anzeigen</span></span>
 </summary>

@@ -88,7 +88,7 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   zur Fehlerursachenanalyse)*: Erstgespräch (kostenlos) → Standortanalyse **oder** Erstanalyse
   (je 1.500 €; nach der Standortanalyse auf Wunsch Begleitung bei der Umsetzung von
   Anwendungsfällen, nach Aufwand) → **Fehlerursachenanalyse mit Demo-Werkzeug** (5.000 € je
-  Fehlerbild, nach positiver Erstanalyse; Anker bleibt `#analyse-je-fehlerbild`) → **Einführung in
+  Fehlerbild, nach positiver Standort- oder Erstanalyse, Stefan 03.11.2026; Anker bleibt `#analyse-je-fehlerbild`) → **Einführung in
   den Betrieb** (nach Aufwand, nach Freigabe des Demo-Werkzeugs für den Testbetrieb; Anker
   `#einfuehrung`, `#ki-setup-check` bleibt als unsichtbarer Anker). Begleitung der Fehlerbehebung
   und Betreuung je Anlage unverändert. **Grundvoraussetzung** (gleicher Tag): Messwerte in einem
