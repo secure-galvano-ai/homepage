@@ -403,9 +403,9 @@ homepage/
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
   ausbildung.html          Seit 03.11.2026 noindex und unverlinkt (nur alte direkte Links).
                            Datenwerkstatt — Aus- und Weiterbildung, Reihenfolge Nutzen -> Ablauf ->
-                           Beispiel -> Angebot (Partner stehen seit 21.10.2026 nur noch im
-                           Streifen #partner der Startseite). Flyer dazu:
-                           docs/datenwerkstatt-ueberblick.pdf — § Datenwerkstatt-Seite.
+                           Beispiel (Abschnitt Angebot und Flyer-Links seit 03.11.2026 entfernt,
+                           Knoepfe fuehren zu leistungen.html; Partner stehen seit 21.10.2026
+                           nur noch im Streifen #partner der Startseite) — § Datenwerkstatt-Seite.
   forschung.html           Forschungsprojekte (FFG-Kleinprojekt, aws), aws-Jurytermin-Foto.
   ethik.html               Ethik & Werte (seit 27.10.2026, Nav nach "Über mich"): Haltung zu KI und
                            Beschaeftigung -- Fachkraeftelage, Forschung, Zeit umverteilen statt kuendigen,
@@ -458,8 +458,8 @@ homepage/
                            Die PDFs kommen aus BD-Build-Skripten, NIE von Hand bearbeiten -- im
                            Skript aendern, neu bauen. Erzeuger: grep -rl "<dateiname>.pdf" in
                            BD templates/ (Flyer, Befunde), areas/coaching-und-ausbildung/
-                           (Datenwerkstatt), scripts/ (NDA; angebot_muster.py baut die vier
-                           Angebots-Muster = Kundendokument ohne Empfaenger, Nummer, Datum, IBAN,
+                           (Datenwerkstatt), scripts/ (NDA; angebot_muster.py baut seit
+                           03.11.2026 die drei Angebots-Muster = Kundendokument ohne Empfaenger, Nummer, Datum, IBAN,
                            Unterschrift, Pruefung dort UMGEKEHRT, Docstring angebot_bauen.py).
                            Ausnahme: unternehmenspraesentation_/company-presentation_secure-galvano-ai.pdf
                            aus dem Pitch-Deck-Master (SharePoint 01_Aussenauftritt/06_Praesentations-

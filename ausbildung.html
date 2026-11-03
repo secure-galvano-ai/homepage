@@ -10,13 +10,15 @@
     <!-- 11.09.2026: Description und og:description folgen dem neuen Hero — kleine Betriebe,
          Werte auch von Hand, Begleitung. "Agentische KI plus Entwicklungsprozess" war fuer
          die Zielgruppe kein Suchbegriff und versprach ein Produkt statt einer Begleitung. -->
-    <meta name="description" content="Für kleine Betriebe der Oberflächentechnik: Ihre Fachkräfte bauen sich die Werkzeuge zur Auswertung von Badbuch und Prüfprotokoll selbst — begleitet, ohne Programmierkenntnisse.">
+    <!-- 03.11.2026: Description und og:description sagen, dass die Datenwerkstatt nicht mehr
+         angeboten wird (Linkvorschau alter Links), wie der Hinweis im Hero. -->
+    <meta name="description" content="Die Datenwerkstatt bieten wir derzeit nicht mehr an. Unser Schwerpunkt sind Werkzeuge zur automatisierten Ursachenanalyse in der Oberflächentechnik.">
     <meta name="keywords" content="KI Schulung Galvanik, Weiterbildung Oberflächentechnik, Datenauswertung lernen, KI Coaching Galvanotechnik, Datenschutz KI Betrieb, Ausbildung Galvanik Digitalisierung">
     <link rel="canonical" href="https://secure-galvano-ai.com/ausbildung.html">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:title" content="Datenwerkstatt — Aus- und Weiterbildung für die Oberflächentechnik">
-    <meta property="og:description" content="Werte von Hand oder aus der Steuerung — Ihre Fachkräfte bauen die Werkzeuge dazu selbst. Begleitet, ohne neue Anlagentechnik, Ihre Messwerte werden nur auf Ihren Rechnern ausgewertet.">
+    <meta property="og:description" content="Die Datenwerkstatt bieten wir derzeit nicht mehr an. Unser Schwerpunkt sind Werkzeuge zur automatisierten Ursachenanalyse in der Oberflächentechnik.">
     <meta property="og:image" content="https://secure-galvano-ai.com/assets/img/og-image.jpg">
     <meta property="og:url" content="https://secure-galvano-ai.com/ausbildung.html">
     <meta property="og:type" content="website">
@@ -482,10 +484,11 @@
             <p>Ob die Werte aus der Steuerung kommen oder von Hand ins Badbuch — auswerten
                lässt sich beides. Ihre Fachkräfte werden dabei begleitet: ohne
                Programmierkenntnisse und ohne neue Anlagentechnik.</p>
-            <!-- Einstieg oben, PDF vor Termin. -->
+            <!-- 03.11.2026: statt des Datenwerkstatt-Flyers (nicht mehr angeboten, liegt
+                 unverlinkt in docs/) fuehrt der erste Knopf zu den Angeboten. -->
             <div class="hero-cta">
-                <a href="docs/datenwerkstatt-ueberblick.pdf" target="_blank" rel="noopener"
-                   class="btn btn-primary" data-funnel="pdf-flyer-ausbildung-hero">Überblick auf einer Seite (PDF)</a>
+                <a href="leistungen.html" class="btn btn-primary"
+                   data-funnel="link-ausbildung-hero-zu-leistungen">Zu den Angeboten</a>
                 <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2"
                    target="_blank" rel="noopener" class="btn btn-hero-outline"
                    data-funnel="cta-ausbildung-hero">Oder gleich ein Erstgespräch</a>
@@ -746,82 +749,11 @@
      sprachlich und raeumlich getrennt von "Gefoerdert durch". Regel im README. -->
 
 <!-- ===== ANGEBOT ===== -->
-<section class="stufen-angebot">
-    <div class="container">
-        <div class="section-label" style="color:var(--schild-blau);">Wie es abläuft</div>
-        <h2 style="font-size:1.7rem;">Fünf Schritte, jeder einzeln beendbar</h2>
-        <!-- 11.09.2026: Der Abschnitt stand zur Streichung, weil er wie eine Wiederholung des
-             Entwicklungsablaufs wirkte (Stefan). Er bleibt, beschreibt aber eine andere Achse:
-             oben steht, wie EINE Auswertung entsteht, hier, wie man zusammen anfaengt -- und
-             nur hier stehen Einstieg und Preislogik. Der erste Satz macht den Unterschied
-             sichtbar, damit die Frage nicht wiederkommt. Schritt 1 heisst seit heute
-             "Erstgespraech" statt "Vorfuehrung": gleicher Name wie im Flyer und auf dem
-             Knopf -- drei Woerter fuer dieselbe Sache waren eines zu viel.
-             Aufwandszeile: die Zahlen sind dieselben wie in der Ansprache. -->
-        <p style="max-width:820px;font-size:0.97rem;line-height:1.75;color:var(--text-body);margin-top:12px;">
-           Der Ablauf darüber beschreibt, wie eine einzelne Auswertung entsteht — hier steht,
-           wie wir anfangen. Der Aufwand bei Ihnen bleibt klein: eine Stunde zum Einstieg,
-           danach Einheiten von einer halben Stunde. Aufhören lässt sich nach jedem Schritt,
-           ohne Begründung.</p>
-        <!-- Preisspalte 11.09.2026 (Stefan): Vorher standen hier "unverbindlich", "Fixpreis",
-             "nach Aufwand", "nach Bedarf". Das widersprach der Ansprache, die den Weg bis zur
-             Klickdemo als kostenlos beschreibt -- wer beides liest, findet zwei Angebote.
-             Jetzt einheitlich "auf Anfrage": Die Seite nennt weiterhin keine Preiszahlen
-             (Regel im README), und was im Einzelfall gilt, wird im Gespraech geklaert.
-             Der erste Schritt bleibt ausdruecklich "kostenlos" -- das ist keine Preisangabe,
-             sondern die Einstiegshuerde, und sie steht auch im Sticky-CTA. -->
-        <div class="acard">
-            <div class="n">1</div>
-            <div><h3>Erstgespräch</h3><p>30 Minuten am echten Arbeitsplatz, online. Danach wissen Sie,
-                ob das zu Ihrem Betrieb passt — und was es nicht kann.</p></div>
-            <div class="preis">kostenlos</div>
-        </div>
-        <!-- Schritt 2 ergaenzt 11.09.2026 (Stefan): Seite und Flyer fuehren jetzt DIESELBEN
-             fuenf Schritte in derselben Reihenfolge. Die Demo an echten Daten stand seit
-             03.09.2026 nur im Flyer -- ausgerechnet der Schritt, der die Entscheidung traegt
-             ("ohne sie entscheidet niemand") und den auch die Ansprache verkauft.
-             Wer hier einen Schritt aendert, aendert build_flyer_datenwerkstatt.py mit. -->
-        <div class="acard">
-            <div class="n">2</div>
-            <div><h3>Demo an Ihren Daten</h3><p>Sie stellen einen Auszug bereit, wir bauen daraus
-                die erste Auswertung. Freiwillig und vertraulich — und danach reden wir über
-                etwas Konkretes statt über Möglichkeiten.</p></div>
-            <div class="preis">auf Anfrage</div>
-        </div>
-        <div class="acard">
-            <div class="n">3</div>
-            <!-- 21.10.2026 (Stefan): Einrichtung und erste Werkstatt sind das KI-Basis-Setup der
-                 Startseite, zum Festpreis; vorher standen hier zwei Schritte "auf Anfrage" fuer
-                 dieselbe Leistung. Flyer build_flyer_datenwerkstatt.py gleich gezogen.
-                 22.10.2026: umbenannt (vorher "KI-Setup-Check") und auf 9.900 EUR angehoben,
-                 Preis kanonisch in BD/areas/preise.yaml weitere.ki_basis_setup. -->
-            <div><h3>KI-Basis-Setup</h3><p>Die Arbeitsumgebung mit Freigaben und schriftlicher
-                Datengrenze, eine künstliche Testanlage, ein Anwendungsfall
-                gemeinsam automatisiert und ein halber Tag Schulung — Festpreis je Betrieb, für 1 bis 3
-                Personen und einen Anwendungsfall. Keine Datenübergabe an uns.
-                <a href="index.html#ablauf" data-funnel="link-kisetup-datenwerkstatt">Zum Angebot</a></p></div>
-            <div class="preis">9.900 €</div>
-        </div>
-        <div class="acard">
-            <div class="n">4</div>
-            <!-- "synthetischen Übungsdaten" statt "Übungsdaten" (13.09.2026): Der
-                 JSON-LD-Datensatz im Kopf sagte bereits "Geuebt wird zuerst an synthetischen
-                 Daten", der Sichttext nur "Uebungsdaten" -- strukturierte Daten muessen zum
-                 sichtbaren Text passen. Gleiches Wort jetzt auch im LinkedIn-Beitrag vom 17.09. -->
-            <div><h3>Werkstatt fürs Team</h3><p>Weitere Kolleginnen und Kollegen bauen ihre Werkzeuge —
-                erst an synthetischen Übungsdaten, dann an einer echten Frage aus Ihrem Betrieb. Und
-                lernen, das Ergebnis zu prüfen. In halbstündigen Sitzungen, damit die Produktion
-                weiterläuft.</p></div>
-            <div class="preis">auf Anfrage</div>
-        </div>
-        <div class="acard">
-            <div class="n">5</div>
-            <div><h3>Begleitung</h3><p>Wenn aus dem Versuch Produktion wird. Dann zählt
-                Verlässlichkeit statt Tempo — und wir schauen mit drauf.</p></div>
-            <div class="preis">auf Anfrage</div>
-        </div>
-    </div>
-</section>
+<!-- 03.11.2026 (Konsistenzlauf auf Stefans Freigabe): Der Abschnitt "Fuenf Schritte, jeder
+     einzeln beendbar" (Erstgespraech, Demo, KI-Basis-Setup 9.900 EUR, Werkstatt fuers Team,
+     Begleitung) ist entfernt: Datenwerkstatt und KI-Basis-Setup werden nicht mehr angeboten
+     (BD areas/preise.yaml weitere.ki_basis_setup, areas/kundenprozess.md § Zwei Pfade). Die
+     Seite bleibt nur fuer alte direkte Links; die Angebote stehen auf leistungen.html. -->
 
 
 <!-- ===== FRAGEN ===== -->
@@ -931,8 +863,8 @@
         <div class="cta-buttons">
             <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary"
                data-funnel="cta-ausbildung">Termin für ein Erstgespräch</a>
-            <a href="docs/datenwerkstatt-ueberblick.pdf" target="_blank" rel="noopener"
-               class="btn btn-outline" data-funnel="pdf-flyer-ausbildung">Erst den Überblick lesen (PDF, 1 Seite)</a>
+            <a href="leistungen.html" class="btn btn-outline"
+               data-funnel="link-ausbildung-abschluss-zu-leistungen">Zu den Angeboten</a>
         </div>
         <!-- Beleg neben der Handlungsaufforderung, nicht am Seitenende. -->
         <p class="cta-beleg">Über zwanzig Jahre Galvano- und Oberflächentechnik — Lehre bis Meister,
