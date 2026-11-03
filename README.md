@@ -395,10 +395,13 @@ homepage/
                            Buchungsknopf sichtbar im Kopf, "Was Sie bekommen" klappt darunter auf, je EIN
                            Beispiel-Befund) und darunter die zwei Wege (A Fehlerbild, B KI-Anwendungsfall).
                            KEINE Leistungs-Teaser-Karten.
-  leistungen.html          Leistungsseite, handgeschrieben: Standortanalyse als Schwerpunkt, #erstanalyse
-                           (Landeabschnitt der LinkedIn-Links, Buchungsknopf unter dem Preis), Weg A:
-                           #analyse-je-fehlerbild (= #datenanalyse, #danach), #einfuehrung (= #ki-setup-check,
-                           #betreuung), Weg B: #ki-fahrplan, #fragen mit FAQPage-Schema. Je Angebot nur der
+  leistungen.html          Leistungsseite, handgeschrieben, seit 03.11.2026 auf die Haelfte gekuerzt (Stefan;
+                           4,6 statt 9,2 Bildschirme): zwei Kartenpaare -- Einstiege #standortanalyse und
+                           #erstanalyse (Landeabschnitt der LinkedIn-Links, Buchungsknopf unter dem Preis),
+                           Wege #analyse-je-fehlerbild (Weg A, traegt die Anker #datenanalyse, #danach,
+                           #einfuehrung, #ki-setup-check, #betreuung) und #ki-fahrplan (Weg B) --, dann
+                           #fragen mit FAQPage-Schema (fuenf). Vier Felder, Anwendungsliste und Grenzen
+                           entfallen (Anker #potenzialfelder, #anwendungen, #bausteine leer). Je Angebot nur der
                            Beispiel-Befund als PDF; Produktblaetter und Blanko-Angebote liegen unverlinkt in
                            docs/ (gehen im Gespraech raus). Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
                            GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen.
