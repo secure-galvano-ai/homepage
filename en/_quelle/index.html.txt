@@ -278,6 +278,7 @@ Stationen untereinander, verbunden mit Pfeilen. Nur die Startangebote stehen als
 <li>Sie stellen uns die vorhandenen Daten bereit, nach unterschriebener NDA</li>
 <li>Prüfung auf Vollständigkeit, Zeitachse und Lücken</li>
 <li>Datenampel je Anlage: Was trägt für Auswertungen, was nicht</li>
+<li>Erste Ursachenkandidaten je auswertbarem Fehlerbild, als Übersicht</li>
 <li>Empfehlung, womit Sie anfangen, oder was nachzurüsten ist</li>
 </ul>
 </div>
