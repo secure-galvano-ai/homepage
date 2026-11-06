@@ -3,16 +3,15 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-11-03
+**Stand:** 2026-11-06
 
 ---
 
 ## Stand der Website
 
-Grundausstattung steht seit Mai 2026: GitHub Pages mit eigener Domain und erzwungenem HTTPS,
-Impressum/Datenschutz, Bookings-Termin, Open Graph, `robots.txt`/Sitemap, Search Console,
-JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent. Aufbau der einzelnen Seiten:
-§ *Projektstruktur*. Der Änderungsverlauf steht im `git log`, die Wirkung jeder Änderung im
+Grundausstattung steht seit Mai 2026 (eigene Domain mit HTTPS, Impressum/Datenschutz, Bookings,
+Open Graph, Sitemap, Search Console, JSON-LD, self-hosted Fonts, Clarity mit Opt-in-Consent);
+Aufbau der Seiten: § *Projektstruktur*. Änderungsverlauf im `git log`, Wirkung jeder Änderung im
 Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimierung`).
 
 **Offen in der Wirkungsmessung (November-Lauf):**
@@ -22,13 +21,11 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Ablesen: CTA-Klicks, mobile Scrolltiefe.
 - **`#bestand` „Ihre Anlage muss nicht neu sein"** *(Stefan, 02.10.2026)* samt Gegenstücken auf
   `leistungen.html` und `ausbildung.html` — Kennzahl in `OPTIMIERUNG.md` §4.
-- **Für den Optimierungslauf nach dem Messpunkt 01.12.2026 vorgemerkt** *(Befund 21.10.2026; am
-  27.10. und im Lauf 03.11. bewusst nicht umgesetzt — der Lauf 03.11. hat den Versuch „Angebote und
-  Hauptaufruf" gestartet, eine Kürzung daneben wäre nicht mehr zuzuordnen)*: Startseite von zehn
-  auf rund sechs Abschnitte (Kandidaten: Pitch-Video, „Aktuell" mit Rückblick vom 29.09., „So
+- **Für den Optimierungslauf nach dem Messpunkt 01.12.2026 vorgemerkt** *(Befund 21.10.2026; bis
+  dahin zurückgestellt, damit der Versuch vom 03.11. zuordenbar bleibt)*: Startseite von zehn auf
+  rund sechs Abschnitte (Kandidaten: Pitch-Video, „Aktuell" mit Rückblick vom 29.09., „So
   funktioniert's"; „Partner" bleibt wegen der gegenseitigen Verlinkung) und „Sicherheit" statt
-  „Forschung" im Hauptmenü — nur mit Clarity-Beleg, höchstens drei Änderungen. Zentraldokument
-  Nr 311 damit geschlossen (03.11.2026).
+  „Forschung" im Hauptmenü — nur mit Clarity-Beleg, höchstens drei Änderungen.
 - **Versuch „Angebote und Hauptaufruf“ seit 03.11.2026** *(Clarity-Befund 28 Tage, Stefan: mehr Klicks
   und Ersttermine)*: zwei Startkarten mit sichtbarem Buchungsknopf, je Angebot nur der Beispiel-Befund,
   zwei Wege darunter; derselbe Hauptaufruf oben und unten auf Leistungen, Über mich, Demo; mobiler
@@ -48,8 +45,7 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   dem eigenen Lernwerkzeug auf `ausbildung.html` las sich für den Partner wie eine Mitarbeit an
   unserem Projekt. Der Streifen `#partner` (DE `index.html`, EN `en/index.html`, zwischen FAQ und
   Abschluss) trennt beides: **eigenes Wort „Partner" gegen „Gefördert durch", eigener Platz,
-  eigene Optik** — flaches Logo im weißen Feld, ein Satz daneben, kein Beleg-Kontext. Partner
-  alphabetisch untereinander, ein Satz je Partner (Stand 22.10.2026: GalvanoCalc, Galvanoclean).
+  eigene Optik** — flaches Logo im weißen Feld, ein Satz je Partner, alphabetisch, kein Beleg-Kontext.
   - **Jeder Satz sagt, dass der Partner eigenständig ist** („eigenständig betrieben", „run
     independently"). Keine Personennamen: Wer dort als Mensch steht, wirkt wie Personal.
   - **Logo nur vom Partner selbst oder von seinem eigenen Auftritt**, verkleinert und ohne
@@ -94,7 +90,7 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   `BD/areas/kundenprozess.md` § Zwei Pfade)*: Erstgespräch (kostenlos) → Standortanalyse **oder**
   Erstanalyse (je 1.500 €, nur diese beiden prominent als Karte). Danach **Weg A · Fehlerbild**:
   **Fehlerursachenanalyse mit Demo-Werkzeug** (5.000 € je Fehlerbild, nach positiver Standort- oder
-  Erstanalyse; Anker `#analyse-je-fehlerbild`, dort auch `#danach`) → **Einführung in den Betrieb**
+  Erstanalyse; Anker `#analyse-je-fehlerbild`, dort auch `#datenanalyse`, `#danach`) → **Einführung in den Betrieb**
   (nach Aufwand; `#einfuehrung`, `#ki-setup-check`, `#betreuung`), Betreuung je Anlage nur als
   Halbsatz. Oder **Weg B · KI-Anwendungsfall mit Ihrer eigenen KI** (nur nach der Standortanalyse):
   **KI-Fahrplan** (5.000 € für bis zu drei Anwendungsfälle: Machbarkeit, Kosten-Nutzen-Einschätzung,
@@ -121,11 +117,11 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
   Fassung traegt (alte Anschrift, Sammel-Buchungsseite, falsches Gruendungsdatum).
 - **Beim Umbenennen oder Nachziehen einer Zahl `grep` über *alle* Seiten laufen lassen, nicht nur
   über die, die man gerade umbaut** — inklusive `<meta>`-Beschreibungen, `og:`-Tags und `en/`.
-  Anlass: Die Stufe hieß ab 31.08.2026 **„Vorprojekt"** statt „Diagnose" (seit 21.10.2026 „Analyse je Fehlerbild", seit 03.11.2026 „Fehlerursachenanalyse mit Demo-Werkzeug")
-  (`BD/areas/business-model.md` §*Leiter*); bis 03.09.2026 stand „Diagnose" noch viermal auf
-  `sicherheit.html` und `ueber-mich.html`, wo niemand nachsieht. Dasselbe beim Einsparpotenzial:
-  **60.000–90.000 €**, die Oberkante 130.000 € ist seit 15.09.2026 abgelöst
-  (`BD/areas/preise.yaml` § `abgeloest`) und stand bis 15.10.2026 noch auf vier Seiten.
+  Anlass: Nach der Umbenennung der Stufe „Diagnose" (31.08.2026, `BD/areas/business-model.md`
+  §*Leiter*) stand das alte Wort bis 03.09.2026 noch viermal auf `sicherheit.html` und
+  `ueber-mich.html`, wo niemand nachsieht. Dasselbe beim Einsparpotenzial **60.000–90.000 €**: die
+  seit 15.09.2026 abgelöste Oberkante 130.000 € (`BD/areas/preise.yaml` § `abgeloest`) stand bis
+  15.10.2026 noch auf vier Seiten.
 - **Bewusst getragener Widerspruch, nicht erneut melden** *(Stefan, 11.08.2026)*:
   `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" — weicht von der
   Linie ab (korrekt: *Modellpruefung*). Das Heft ist gedruckt; beim naechsten Nachdruck
@@ -144,10 +140,9 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
       `RStpqzz3r5g`, Bildspur bleibt: (1) 1:24 der Trainingsweg ueber das Ishikawa-Ergebnis,
       (2) 0:53 „Backupdateien aus Anlagensteuerung/MES/X-Ray/Labor" als Integrationsweg,
       (3) 2:32 „fast keine dieser Fehler stimmen mit dem Anomaliescore ueberein" — klingt wie
-      eine Einschraenkung, ist der Nutzen, (4) 4:22 der Preis „1.500 € netto" fuer die
-      Standortanalyse (steht inzwischen auch auf der Startseite, kein Widerspruch mehr). Danach
-      neu hochladen und **nur die ID im `<iframe>` tauschen** (§ *Demo-Seite*). Bis dahin bleibt
-      das Video online — eine tote Landingpage kostet mehr.
+      eine Einschraenkung, ist der Nutzen, (4) 4:22 der Preis „1.500 € netto" der Standortanalyse.
+      Danach neu hochladen und **nur die ID im `<iframe>` tauschen** (§ *Demo-Seite*). Bis dahin
+      bleibt das Video online — eine tote Landingpage kostet mehr.
 - [ ] **Deckt der Inspektionsbericht „technisch ausgereift"?** So sagt es das Video bei 4:14.
       Die Modellpruefung ergab *Low Risk* — eine Risiko-, keine Reifegradaussage. Wenn der
       Wortlaut nicht belegt ist, faellt der Satz beim Neuvertonen mit weg.
@@ -195,10 +190,9 @@ von Hand oeffnen.
 ## Englische Fassung (`en/`) — seit 12.10.2026
 
 **Zweck:** US-Besucher (und alle ohne Deutsch) mit demselben Argument erreichen *(Stefan,
-12.10.2026)*. Übersetzt sind die vier Seiten, die einen Erstkontakt tragen, dazu seit 27.10.2026
-die Haltungsseite (gilt für jeden Markt gleich): `index` → `en/index`, `leistungen` → `en/services`,
-`ueber-mich` → `en/about`, `sicherheit` → `en/security`, `ethik` → `en/ethics`.
-Maßgeblich ist die Liste **genau einmal**, in `PAIRS` in `_generate_layout.py`. Demo, Datenwerkstatt
+12.10.2026)*. Übersetzt sind die Seiten, die einen Erstkontakt tragen, dazu die Haltungsseite
+`ethik` (gilt für jeden Markt gleich); die Liste der Paare steht **genau einmal**, in `PAIRS` in
+`_generate_layout.py`. Demo, Datenwerkstatt
 und Forschung bleiben deutsch — Videos und Unterlagen dort sind deutsch. Impressum und
 Datenschutz bleiben deutsch und sind aus dem englischen Fuß mit „(German)“ verlinkt;
 deutsche PDFs und Videos tragen auf den englischen Seiten „(PDF, German)“ bzw. „Video in German.“
@@ -296,17 +290,15 @@ Pruefung: § *Projektstruktur*, `docs/`). **Aendert sich Video oder Seite, aende
 
 **Messung:** Der CTA traegt `data-funnel="cta-demo-seite"`, derselbe Knopf oben im Hero seit
 03.11.2026 `cta-demo-hero` (ein Zweck, ein CTA, zweimal gezeigt; darunter nur noch EIN Nebenweg,
-`link-fehlerbild-demo`), der Videostart meldet sich als
-**`video-anwendung`** (aus `data-video="anwendung"` am iframe; die Erkennung in `consent.js` nimmt
-das erste YouTube-iframe der Seite — auf `demo.html` gibt es genau eines, es ist nichts
-anzupassen). Eingehende Links aus Mail und LinkedIn bekommen UTM-Parameter, damit der Verkehr im
-Monatslauf trennbar bleibt.
+`link-fehlerbild-demo`), der Videostart meldet sich als **`video-anwendung`** (aus
+`data-video="anwendung"`; `consent.js` erfasst das erste YouTube-iframe der Seite, hier das einzige).
+Eingehende Links aus Mail und LinkedIn bekommen UTM-Parameter, damit der Verkehr im Monatslauf
+trennbar bleibt.
 
 ## Datenwerkstatt-Seite (`ausbildung.html`) — Video und Zielgruppe *(11.09.2026)*
 
-> **Seit 03.11.2026 nicht mehr auf der Website** (`noindex`, ohne Verweis; § *Regeln, die
-> dauerhaft gelten*, Angebotsleiter). Die Regeln unten gelten weiter für die Seite selbst und
-> beim Wiederaufnehmen. Die Regelkarte-Sperre gilt unverändert überall.
+> **Seit 03.11.2026 nicht mehr auf der Website** (§ *Regeln, die dauerhaft gelten*, Angebote). Die
+> Regeln unten gelten für die Seite selbst und beim Wiederaufnehmen, die Regelkarte-Sperre überall.
 
 **Zielgruppe steht in der Kennzeile:** *„Weiterbildung fuer kleine Betriebe"* (Anlass: der Hero
 setzte laufende Messtechnik voraus und nannte die Begleitung nicht). **Dauerregel:
@@ -320,10 +312,9 @@ will, wovon die Rede ist. Inhalt: das Badbuch aus `lehrmittel/demos/badbuch/` (n
 Verlauf, keine Betriebsdaten, kein Lieferantenname). Der Videostart meldet sich als
 **`video-badbuch`** (`data-video="badbuch"`).
 
-**Titel wortgleich halten:** Der YouTube-Titel lautet *„Digitale Badkarte mit KI aufbauen"*
-(geprueft 11.09.2026 ueber `https://www.youtube.com/oembed?url=…`), das `title`-Attribut am
-iframe ebenso. Wird er in YouTube Studio geaendert, wandert er hier mit — Seite und Video
-muessen dasselbe versprechen.
+**Titel wortgleich halten** (Dauerregel § *Demo-Seite*): YouTube-Titel und `title`-Attribut am
+iframe lauten *„Digitale Badkarte mit KI aufbauen"* (geprueft 11.09.2026 ueber
+`https://www.youtube.com/oembed?url=…`); wird er in YouTube Studio geaendert, wandert er hier mit.
 
 > ⛔ **Gesperrter Fachbegriff: „Regelkarte"** *(Stefan, 11.09.2026)*. Er liegt zu nah an einem
 > Begriff eines Betriebs, fuer den Stefan gearbeitet hat, und darf **auf keinem oeffentlichen
@@ -353,9 +344,8 @@ trug rund 10 kB fremde Regeln (11.09.2026 ausgebaut, jede Klasse gegen Rumpf, Ge
 **Die Hero-Laenge ist eine Messgroesse.** Waechst der Hero, rutscht der Hauptknopf mobil hinter
 das Einwilligungsbanner (Klasse: `AENDERUNGSPROZESS.md` Gate 3; hier am 11.09.2026 erneut, der
 erste Entwurf lag **60 px** darunter). Nach jeder Hero-Textaenderung auf **390 × 844** nachmessen.
-Stand: Hauptknopf endet bei y 577, Banner ab 731 — **154 px Luft**; englisch ebenso 577 gegen 731
-*(gemessen 03.11.2026 abends, Playwright-Chromium ohne gespeicherte Einwilligung, nach der
-kürzeren Zielgruppenzeile „mit komplexen Prozessen"; dieselbe Messung davor: 599 gegen 731)*.
+Stand: Hauptknopf endet bei y 577, Banner ab 731 — **154 px Luft**, englisch ebenso *(gemessen
+03.11.2026, Playwright-Chromium ohne gespeicherte Einwilligung)*.
 
 > **Wortwahl im Hero ist seit 13.09.2026 gebunden** *(Stefan)*: **gebaut werden Werkzeuge,
 > nicht Auswertungen.** Die Auswertung ist das Ergebnis, das Werkzeug der Gegenstand. Wo
@@ -390,43 +380,32 @@ Optionaler Gegencheck bei groesseren Umbauten (Node, kein Java):
 
 ```
 homepage/
-  index.html               Predictive-Quality-Landing (ein roter Faden), Sektionen per grep 'id="' index.html.
-                           #ablauf (direkt unter dem Hero) = zwei Startkarten (Standortanalyse, Erstanalyse;
-                           Buchungsknopf sichtbar im Kopf, "Was Sie bekommen" klappt darunter auf, je EIN
-                           Beispiel-Befund) und darunter die zwei Wege (A Fehlerbild, B KI-Anwendungsfall).
-                           KEINE Leistungs-Teaser-Karten.
+  index.html               Startseite (Predictive Quality, ein roter Faden); Sektionen: grep 'id="' index.html.
+                           #ablauf direkt unter dem Hero = zwei Startkarten (Buchungsknopf sichtbar im Kopf,
+                           je EIN Beispiel-Befund) und darunter die zwei Wege. KEINE Leistungs-Teaser-Karten.
   leistungen.html          Leistungsseite, handgeschrieben, seit 03.11.2026 auf die Haelfte gekuerzt (Stefan;
-                           4,6 statt 9,2 Bildschirme): zwei Kartenpaare -- Einstiege #standortanalyse und
-                           #erstanalyse (Landeabschnitt der LinkedIn-Links, Buchungsknopf unter dem Preis),
-                           Wege #analyse-je-fehlerbild (Weg A, traegt die Anker #datenanalyse, #danach,
-                           #einfuehrung, #ki-setup-check, #betreuung) und #ki-fahrplan (Weg B) --, dann
-                           #fragen mit FAQPage-Schema (fuenf). Vier Felder, Anwendungsliste und Grenzen
-                           entfallen (Anker #potenzialfelder, #anwendungen, #bausteine leer). Je Angebot nur der
-                           Beispiel-Befund als PDF; Produktblaetter und Blanko-Angebote liegen unverlinkt in
+                           4,6 statt 9,2 Bildschirme). Anker der Angebote: § Regeln, Angebote;
+                           #standortanalyse/#erstanalyse = Landeabschnitt der LinkedIn-Links; #fragen mit
+                           FAQPage-Schema; #potenzialfelder, #anwendungen, #bausteine stehen leer. Je Angebot
+                           nur der Beispiel-Befund als PDF; Produktblaetter und Blanko-Angebote unverlinkt in
                            docs/ (gehen im Gespraech raus). Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
                            GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen.
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
-  ausbildung.html          Seit 03.11.2026 noindex und unverlinkt (nur alte direkte Links).
-                           Datenwerkstatt — Aus- und Weiterbildung, Reihenfolge Nutzen -> Ablauf ->
-                           Beispiel (Abschnitt Angebot und Flyer-Links seit 03.11.2026 entfernt,
-                           Knoepfe fuehren zu leistungen.html; Partner stehen seit 21.10.2026
-                           nur noch im Streifen #partner der Startseite) — § Datenwerkstatt-Seite.
+  ausbildung.html          Datenwerkstatt, seit 03.11.2026 noindex und unverlinkt — § Datenwerkstatt-Seite.
+                           Reihenfolge Nutzen -> Ablauf -> Beispiel, Knoepfe fuehren zu leistungen.html.
   forschung.html           Forschungsprojekte (FFG-Kleinprojekt, aws), aws-Jurytermin-Foto.
   ethik.html               Ethik & Werte (seit 27.10.2026, Nav nach "Über mich"): Haltung zu KI und
-                           Beschaeftigung -- Fachkraeftelage, Forschung, Zeit umverteilen statt kuendigen,
-                           Change Management, Human in the Loop. Jede Zahl mit nummerierter Referenz am
-                           Seitenende; Herkunft der Zahlen: Change-Management-Recherche vom 26.10.2026
-                           (SharePoint, Akquise-Ordner) und BD archive/ffg-kleinprojekt-eingereicht-2026-09/
-                           stand-der-technik.md (Ausbildungsbestand = Bestand, nicht Neuabschluesse).
-                           Kein Betrieb genannt, auch nicht umschrieben. Abbildungen Inline-SVG/HTML.
+                           Beschaeftigung. Jede Zahl mit nummerierter Referenz am Seitenende; Herkunft:
+                           Change-Management-Recherche 26.10.2026 (SharePoint, Akquise-Ordner) und BD
+                           archive/ffg-kleinprojekt-eingereicht-2026-09/stand-der-technik.md (Ausbildungs-
+                           bestand = Bestand, nicht Neuabschluesse). Kein Betrieb genannt, auch nicht
+                           umschrieben. Abbildungen Inline-SVG/HTML.
   sicherheit.html          Compliance-Seite (indexiert, in Sitemap und Footer, bewusst NICHT in der Haupt-
                            navigation: PAGES-Eintrag mit None); eigenes Seiten-CSS (§ Architektur).
   ueber-mich.html          Vollständiges Profil + Bio + Nachweise-Galerie
   nachweise.html           Redirect-Stub auf ueber-mich.html#nachweise (Instant-Meta-Refresh + Canonical, KEIN noindex)
-  en/                      Englische Fassung (Seiten: PAIRS in _generate_layout.py). Nav/Fuss/hreflang/CSS
-                           aus _generate_layout.py, der Text ist Handarbeit. en/_quelle/ = deutscher
-                           Stand je Uebersetzung fuer check_englisch.py (Jekyll liefert es wegen des
-                           Unterstrichs nicht aus). § Englische Fassung.
+  en/                      Englische Fassung — § Englische Fassung. en/_quelle/ = deutscher Stand je
+                           Uebersetzung fuer check_englisch.py (wegen des Unterstrichs nicht ausgeliefert).
   impressum/ stefan-maier/ kontakt/ trusted-ai/ data-analytics/
                            Redirect-Stubs auf die WordPress-Alt-URLs — generiert aus _generate_redirects.py,
                            nicht von Hand editieren. Nur Pfade mit echtem Nachfolger; tote PDFs bleiben 404.
@@ -434,17 +413,13 @@ homepage/
                            Mails; noindex, kein canonical) — aus SHORTLINKS in _generate_redirects.py
   impressum.html           Impressum (ECG/UGB) + Marken-Hinweis
   datenschutz.html         Datenschutzerklärung (DSGVO)
-  404.html                 GitHub-Pages-Fehlerseite (noindex, nicht in Nav/Sitemap) — faengt Alt-URLs
-                           der WordPress-Zeit ab. NUR absolute Pfade (/assets/...), weil Pages die Datei
-                           auch fuer tiefe Pfade wie /wp-content/uploads/... ausliefert. Ohne Layout-Marker
-                           (Generator erzeugt relative hrefs) und ohne JS.
-  assets/
-    img/                   Bild-Assets (Bestand: ls assets/img); Partnerlogos in kooperation/
-    css/
-      base.css             SINGLE SOURCE (§ Architektur) — jede Seite bindet es als erstes CSS ein
-    js/
-      consent.js           Opt-in-Consent-Gate für Microsoft Clarity + CTA-Funnel-Events
-      site.js              Geteiltes Verhalten (§ Architektur)
+  404.html                 GitHub-Pages-Fehlerseite (noindex, nicht in Nav/Sitemap), faengt Alt-URLs der
+                           WordPress-Zeit ab. NUR absolute Pfade (/assets/...), weil Pages sie auch fuer tiefe
+                           Pfade wie /wp-content/uploads/... ausliefert; ohne Layout-Marker (Generator
+                           erzeugt relative hrefs) und ohne JS.
+  assets/                  img/ (Partnerlogos in kooperation/) · css/base.css = SINGLE SOURCE (§ Architektur),
+                           jede Seite bindet es als erstes CSS ein · js/consent.js = Opt-in-Consent-Gate für
+                           Microsoft Clarity + CTA-Funnel-Events · js/site.js = geteiltes Verhalten
   _scripts/                check_site.py (vor jedem Deploy), check_inhalt.py, check_englisch.py,
                            sitemap_pflegen.py (lastmod nachziehen);
                            Messung (clarity_daily.py, youtube_abrufe.py, wochenbericht.py) -> OPTIMIERUNG.md
@@ -452,35 +427,30 @@ homepage/
   _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
   _generate_redirects.py   Generator: Redirect-Stubs fuer WordPress-Alt-URLs (REDIRECTS-Dict = einzige Quelle) und Kurzlinks (SHORTLINKS)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
-  credentials/
-    _generate_credentials.py  Renderer: PDF -> JPG-Thumbs + Full (§ Deployment)
-    thumbs/ full/          Grid-Thumbnails und Lightbox-Originale
-  docs/                    Belege zum Verlinken und Mitschicken (Musterbefund, Flyer, Beispielauswertungen,
-                           Methoden-und-Standards, Meisterbrief, Fachartikel, Praesentationen). Bewusst KEINE
-                           Einzelliste hier -- sie driftet bei jedem neuen Beleg. Wo welcher verlinkt ist:
-                           grep -o "docs/[a-z0-9_-]*\.pdf" *.html
-                           Wird von Jekyll ausgeliefert -- hier nur, was oeffentlich sein darf.
-                           Die PDFs kommen aus BD-Build-Skripten, NIE von Hand bearbeiten -- im
-                           Skript aendern, neu bauen. Erzeuger: grep -rl "<dateiname>.pdf" in
-                           BD templates/ (Flyer, Befunde), areas/coaching-und-ausbildung/
-                           (Datenwerkstatt), scripts/ (NDA; angebot_muster.py baut seit
-                           03.11.2026 die drei Angebots-Muster = Kundendokument ohne Empfaenger, Nummer, Datum, IBAN,
-                           Unterschrift, Pruefung dort UMGEKEHRT, Docstring angebot_bauen.py).
-                           Ausnahme: unternehmenspraesentation_/company-presentation_secure-galvano-ai.pdf
-                           aus dem Pitch-Deck-Master (SharePoint 01_Aussenauftritt/06_Praesentations-
-                           materialien/Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py, 00_LIESMICH.md
-                           "Zwei abgeleitete Fassungen"). Dateinamen NICHT aendern -- consent.js
-                           bildet das Clarity-Ereignis daraus. Jedes Skript prueft Seitenzahl und
-                           Pflichtstellen (overflow:hidden schnitt einmal die Fusszeile lautlos ab).
+  credentials/             _generate_credentials.py (Renderer PDF -> JPG, § Deployment); thumbs/ = Grid-
+                           Thumbnails, full/ = Lightbox-Originale
+  docs/                    Belege zum Verlinken und Mitschicken; bewusst KEINE Einzelliste (driftet bei jedem
+                           neuen Beleg). Wo welcher verlinkt ist: grep -o "docs/[a-z0-9_-]*\.pdf" *.html
+                           Wird von Jekyll ausgeliefert -- hier nur, was oeffentlich sein darf. Die PDFs
+                           kommen aus BD-Build-Skripten, NIE von Hand bearbeiten -- im Skript aendern, neu
+                           bauen. Erzeuger: grep -rl "<dateiname>.pdf" in BD templates/ (Flyer, Befunde),
+                           areas/coaching-und-ausbildung/ (Datenwerkstatt), scripts/ (NDA; angebot_muster.py
+                           = die drei Angebots-Muster ohne Empfaenger, Nummer, Datum, IBAN, Unterschrift,
+                           Pruefung dort UMGEKEHRT, Docstring angebot_bauen.py). Ausnahme:
+                           unternehmenspraesentation_/company-presentation_secure-galvano-ai.pdf aus dem
+                           Pitch-Deck-Master (SharePoint 01_Aussenauftritt/06_Praesentationsmaterialien/
+                           Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py, 00_LIESMICH.md "Zwei abgeleitete
+                           Fassungen"). Dateinamen NICHT aendern -- consent.js bildet das Clarity-Ereignis
+                           daraus. Jedes Skript prueft Seitenzahl und Pflichtstellen (overflow:hidden
+                           schnitt einmal die Fusszeile lautlos ab).
   fonts/                   fonts.css + Montserrat/Open Sans als WOFF2 (latin, latin-ext), OFL
   favicon.ico, apple-touch-icon.png  Browser-Tab- und iOS-Icon (im Root — Konvention)
   CNAME                    Custom Domain Config — nicht löschen (_doku/infrastruktur.md)
   _config.yml              Nur exclude: haelt README/OPTIMIERUNG/AENDERUNGSPROZESS aus der Auslieferung — nie docs/ eintragen
   robots.txt               Crawler-Erlaubnis
-  sitemap.xml              Google Sitemap (15 URLs, davon 5 englisch -- Stand 27.10.2026).
-                           Welche URL hineingehoert, ist Handarbeit; die lastmod-Daten nicht
-                           (_scripts/sitemap_pflegen.py), und check_site.py Check 8 haelt die
-                           Liste gegen noindex und fehlende Dateien.
+  sitemap.xml              Google Sitemap. Welche URL hineingehoert, ist Handarbeit; die lastmod-Daten nicht
+                           (_scripts/sitemap_pflegen.py), und check_site.py Check 8 haelt die Liste gegen
+                           noindex und fehlende Dateien.
 ```
 
 ## Search Console / Indexierung
@@ -526,13 +496,12 @@ Crawl-Prioritaet, ein pauschales „heute" verbrennt sie. Anlass fuer Skript sta
 Ausgelagert nach [`_doku/infrastruktur.md`](_doku/infrastruktur.md) *(15.10.2026)*: Soll-Stand
 beider Zonen (`secure-galvano-ai.com`, `rvh.at`), Endstand der Absenderauthentifizierung
 (`p=quarantine`, warum kein `p=reject`), IONOS-Vertrag, Login-Wiederherstellung, der Vorfall vom
-17.08.2026, „Was bricht was" und der Routine-Check nach jeder IONOS-Aktion.
+17.08.2026, „Was bricht was" (§ *Systeme und Abhängigkeiten*) und der Routine-Check nach jeder IONOS-Aktion.
 
 ## Corporate Design Assets
 
-Logos (`logo.png` groß, `logo_header.png`) und die Corporate-Design-Doku (`corporate_design.md`)
-liegen in `BD/areas/brand/`; Porträt-Quelle: `Stefan Maier - Dokumente/02_Unterlagen/04_Fotos/MICHAELKREYER/`.
-Farben und Schriften der Website: § *Architektur* (Tokens in `assets/css/base.css :root`).
+Logos (`logo.png` groß, `logo_header.png`) und `corporate_design.md` liegen in `BD/areas/brand/`, Farben
+und Schriften der Website § *Architektur*; Porträt-Quelle: `Stefan Maier - Dokumente/02_Unterlagen/04_Fotos/MICHAELKREYER/`.
 
 ## Externe Services
 
@@ -542,15 +511,11 @@ Farben und Schriften der Website: § *Architektur* (Tokens in `assets/css/base.c
 | Microsoft Bookings — **der Link der Website** *(umgestellt 14.09.2026)* | Erstgespräch buchen, **30 Min.**, buchbar Mo 13–17, Di/Mi 9–19, Do 9–14 *(eigene Zeiten im Dienst, Stefan 01.10.2026)*; optionale Frage „Wie sind Sie auf uns aufmerksam geworden?" seit 01.10.2026 (Herkunftsmessung, Antwort steht im Outlook-Termin) — läuft auf dem rvh.at-Tenant. Dienst `secure galvano ai - unverbindliches Erstgespräch`. Gepflegt wird in `_generate_layout.py` die Konstante `BOOKING_URL` | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2` |
 | Microsoft Bookings — **der Link der `/en/`-Seiten** *(15.10.2026)* | Dasselbe Erstgespräch auf Englisch: Dienst `secure galvano ai - free intro call`, **Sprache English (United States)**, sonst eine Kopie des deutschen Dienstes (Zeiten, Teams, Erinnerungen) mit eigenen englischen Fragen. **Warum ein eigener Dienst:** Bookings richtet Oberfläche, Fragen und Bestätigungsmail nach der Sprache des **Dienstes**, nicht nach dem Browser. Die Fragen sind in Bookings dienstübergreifend — eine deutsche Frage umzuformulieren ändert sie im deutschen Dienst mit. Konstante `BOOKING_URL_EN`, maßgeblich `stammdaten.buchung_en`. **Die Kopie zieht nicht mit:** Wer Zeiten, Dauer, Beschreibung oder Fragen am deutschen Dienst ändert, ändert den englischen im selben Zug | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2` |
 | Microsoft Bookings — **Arbeitstermin** *(30.09.2026, seit 02.10.2026 `secure galvano ai - Arbeitstermin`)* | Arbeitstermine im laufenden Projekt — Coaching wie IT eines Kunden, **1 Std.**, Teams, ohne Preis. **Nie auf der Website verlinken** — der Link steht nur im Angebot (`stammdaten.buchung_coaching`, Begründung in `BD/areas/coaching-und-ausbildung/README.md` § Angebot und Ablauf) | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/WguGbyr1pUWQxZrPA0ISQA2` |
-| Microsoft Bookings — Sammel-Buchungsseite | Zeigt **alle sichtbaren Dienste zur Auswahl** — Erstgespräch, Arbeitstermin und seit 15.10.2026 der englische Intro call. Der Arbeitstermin muss sichtbar bleiben: **Bookings sperrt einen ausgeblendeten Dienst auch über seinen Direktlink** („Wir bieten im Moment keine Dienste … an", geprüft 30.09.2026). **Die Website verlinkt deshalb nur den Dienst-Direktlink des Erstgesprächs** — der zeigt nur diesen einen Dienst (geprüft ohne Anmeldung, 30.09.2026) | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
-| Microsoft Bookings — Kurzgespräch 30 Min. *(03.09.2026, abgelöst · seit 21.09.2026 ausgeblendet)* | Erster Akquise-Dienst, **1:N-Gruppendienst** — deshalb fehlten Name und Mailadresse des Buchenden im Outlook-Termin und Fremde konnten in denselben Slot buchen. **Ausgeblendet, nicht gelöscht**, weil der Termin vom 14.09. daran hängt; der Direktlink führt seitdem ins Leere. Der Typ 1:1/1:N wird beim Anlegen festgelegt und ist danach **nicht änderbar** | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/j9sT4U4iQ0WwxD0oCfcdeg2` |
+| Microsoft Bookings — Sammel-Buchungsseite | Zeigt **alle sichtbaren Dienste zur Auswahl** — Erstgespräch, Arbeitstermin und seit 15.10.2026 der englische Intro call. Der Arbeitstermin muss sichtbar bleiben: **Bookings sperrt einen ausgeblendeten Dienst auch über seinen Direktlink** („Wir bieten im Moment keine Dienste … an", geprüft 30.09.2026). **Die Website verlinkt deshalb nur den Dienst-Direktlink des Erstgesprächs** — der zeigt nur diesen einen Dienst (geprüft ohne Anmeldung, 30.09.2026). Neuer Dienst: Typ 1:1/1:N wird beim Anlegen festgelegt und ist danach nicht änderbar (`BD/areas/vertrieb/mailsequenz/buchungsdienst.md`) | `outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/` |
 | Microsoft Clarity | Web-Analyse (Opt-in, Projekt `wql3vpgrxl`) | `clarity.microsoft.com` |
 | Google Search Console | SEO / Indexierung | `search.google.com/search-console` |
 | GitHub Pages | Hosting + TLS-Zertifikat | `github.com/secure-galvano-ai/homepage/settings/pages` |
 | IONOS | **Domain-Registrar und DNS-Betreiber** — Login über Kundennummer, nicht über die Mailadresse | `my.ionos.de` · Service `0721 170 555` |
-
-> Alle Abhängigkeiten zwischen diesen Diensten stehen in
-> [`_doku/infrastruktur.md`](_doku/infrastruktur.md) § *Systeme und Abhängigkeiten*.
 
 ## Deployment
 
@@ -562,8 +527,7 @@ git commit -m "Beschreibung" -- <nur die eigenen Dateien>   # nie -A, fremde Arb
 git push
 ```
 
-**KEIN GPG-Signing in diesem Repo** (reines Content-Repo, lokal `commit.gpgsign false`) —
-Commits laufen ohne Yubikey-PIN-Dialog.
+**KEIN GPG-Signing in diesem Repo** (reines Content-Repo, lokal `commit.gpgsign false`) — kein Yubikey-PIN-Dialog.
 
 ### Nach dem Push: Deploy bestätigen *(Regel seit 26.08.2026, Stefan)*
 
