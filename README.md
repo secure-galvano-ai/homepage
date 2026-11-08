@@ -3,7 +3,7 @@
 **Status:** Live auf https://secure-galvano-ai.com
 **HTTPS:** Aktiv (GitHub Pages + Let's Encrypt)
 **Hosting:** GitHub Pages (kostenlos)
-**Stand:** 2026-11-06
+**Stand:** 2026-11-08
 
 ---
 
@@ -118,17 +118,15 @@ Monatsbericht ([`OPTIMIERUNG.md`](OPTIMIERUNG.md) §4, monatlich per `/optimieru
 - **Beim Umbenennen oder Nachziehen einer Zahl `grep` über *alle* Seiten laufen lassen, nicht nur
   über die, die man gerade umbaut** — inklusive `<meta>`-Beschreibungen, `og:`-Tags und `en/`.
   Anlass: Nach der Umbenennung der Stufe „Diagnose" (31.08.2026, `BD/areas/business-model.md`
-  §*Leiter*) stand das alte Wort bis 03.09.2026 noch viermal auf `sicherheit.html` und
-  `ueber-mich.html`, wo niemand nachsieht. Dasselbe beim Einsparpotenzial **60.000–90.000 €**: die
-  seit 15.09.2026 abgelöste Oberkante 130.000 € (`BD/areas/preise.yaml` § `abgeloest`) stand bis
-  15.10.2026 noch auf vier Seiten.
+  §*Leiter*) stand das alte Wort bis 03.09.2026 noch viermal auf `sicherheit.html` und `ueber-mich.html`,
+  wo niemand nachsieht. Dasselbe beim Einsparpotenzial **60.000–90.000 €**: die seit 15.09.2026
+  abgelöste Oberkante 130.000 € (`BD/areas/preise.yaml` § `abgeloest`) stand bis 15.10.2026 auf vier Seiten.
 - **Bewusst getragener Widerspruch, nicht erneut melden** *(Stefan, 11.08.2026)*:
   `docs/portrait_galvano_forum_2026.pdf` sagt „Trusted-AI-**Zertifizierung**" — weicht von der
   Linie ab (korrekt: *Modellpruefung*). Das Heft ist gedruckt; beim naechsten Nachdruck
   mitkorrigieren.
-- **Kontaktblock im Portraet** trägt „Stefan Maier / AT-6960 Buch" *(25.09.2026)* — ohne
-  Quelldatei direkt im PDF getauscht (Univers-Teilsatz ohne 9: gedrehte 6, fontTools). Original:
-  `01_Außenauftritt/02_Veranstaltungen/20260618_Galvano Forum SWISSGALVANIK/01_Anbahnung/`.
+- **Kontaktblock im Portraet** trägt „Stefan Maier / AT-6960 Buch" *(25.09.2026, direkt im PDF
+  getauscht)*; Original: `01_Außenauftritt/02_Veranstaltungen/20260618_Galvano Forum SWISSGALVANIK/01_Anbahnung/`.
 
 ## Optional (noch offen)
 
@@ -161,11 +159,10 @@ Seite dupliziert. Wer Farben, Nav oder Footer aendert, editiert **eine** Quelle:
 | Nav + Footer + WA-FAB + Sticky (HTML), `hreflang`, CSS der englischen Seiten | `_generate_layout.py` -> Marker `<!-- BEGIN/END nav -->` usw. | alle Seiten in `PAGES` und `PAIRS` |
 
 Die Markenfarben in `base.css :root` sind **kanonisch abgeleitet** aus
-`Business Development/areas/brand/corporate_design.md`. Aendern sich Markenfarben,
-wird NUR `base.css` editiert. Ad-hoc-Hex im Seiten-CSS vermeiden — stattdessen Token
-`var(--name)` nutzen. Seiten-spezifisches CSS (Hero, einzelne Sektionen) bleibt im
-`<style>`-Block der jeweiligen Seite. Schriften: Montserrat (Headlines) und Open Sans (Body),
-**self-hosted** in `fonts/` (OFL), eingebunden über `fonts/fonts.css` — kein Google-Fonts-Request.
+`Business Development/areas/brand/corporate_design.md`. Aendern sich Markenfarben, wird NUR
+`base.css` editiert. Ad-hoc-Hex im Seiten-CSS vermeiden — stattdessen Token `var(--name)`.
+Seiten-spezifisches CSS (Hero, einzelne Sektionen) bleibt im `<style>`-Block der Seite. Schriften:
+Montserrat (Headlines), Open Sans (Body), **self-hosted** in `fonts/` (OFL) über `fonts/fonts.css`.
 
 **Nicht migriert (bewusst):** `sicherheit.html` traegt weiter ihr eigenes CSS.
 `ausbildung.html` bekommt Nav und Fuss generiert; ihr Seiten-CSS ist eine Kopie des Standes aus
@@ -173,11 +170,10 @@ wird NUR `base.css` editiert. Ad-hoc-Hex im Seiten-CSS vermeiden — stattdessen
 handgeschrieben.
 
 **Eine Seite (wieder) aufnehmen:** Nav-Eintrag in `NAV_LINKS`, Seite in `PAGES`
-(`_generate_layout.py`), Marker in die Seite setzen, Sitemap-Eintrag, Meta-Block samt
-`preload` der Schriften — dann `py _generate_layout.py`, `check_site.py` **und**
-`check_inhalt.py`. Der zweite faengt zu lange Titel, zu lange Beschreibungen und fehlende
-Sitemap-Eintraege ab; beim Aufbau von `ausbildung.html` am 02.09.2026 sind alle drei
-tatsaechlich aufgetreten.
+(`_generate_layout.py`), Marker in die Seite setzen, Sitemap-Eintrag, Meta-Block samt `preload`
+der Schriften — dann `py _generate_layout.py`, `check_site.py` **und** `check_inhalt.py`. Der
+zweite faengt zu lange Titel und Beschreibungen und fehlende Sitemap-Eintraege ab; beim Aufbau von
+`ausbildung.html` am 02.09.2026 sind alle drei tatsaechlich aufgetreten.
 
 **Nach einem groesseren Umbau: Klicktest gegen die Live-Seite** *(seit 21.10.2026)*:
 `py -X utf8 _scripts/check_live.py` — jede Seite aus `sitemap.xml` am Bildschirm und am Handy,
@@ -192,10 +188,9 @@ von Hand oeffnen.
 **Zweck:** US-Besucher (und alle ohne Deutsch) mit demselben Argument erreichen *(Stefan,
 12.10.2026)*. Übersetzt sind die Seiten, die einen Erstkontakt tragen, dazu die Haltungsseite
 `ethik` (gilt für jeden Markt gleich); die Liste der Paare steht **genau einmal**, in `PAIRS` in
-`_generate_layout.py`. Demo, Datenwerkstatt
-und Forschung bleiben deutsch — Videos und Unterlagen dort sind deutsch. Impressum und
-Datenschutz bleiben deutsch und sind aus dem englischen Fuß mit „(German)“ verlinkt;
-deutsche PDFs und Videos tragen auf den englischen Seiten „(PDF, German)“ bzw. „Video in German.“
+`_generate_layout.py`. Demo, Datenwerkstatt und Forschung bleiben deutsch — Videos und Unterlagen
+dort sind deutsch. Impressum und Datenschutz bleiben deutsch und sind aus dem englischen Fuß mit
+„(German)“ verlinkt; deutsche PDFs und Videos tragen dort „(PDF, German)“ bzw. „Video in German.“
 
 **Was automatisch passiert** (`py _generate_layout.py`): englische Nav und Fuß, der
 DE/EN-Schalter (`lang-en`/`lang-de`), die `hreflang`-Paare im Kopf beider Seiten (x-default =
@@ -292,8 +287,7 @@ Pruefung: § *Projektstruktur*, `docs/`). **Aendert sich Video oder Seite, aende
 03.11.2026 `cta-demo-hero` (ein Zweck, ein CTA, zweimal gezeigt; darunter nur noch EIN Nebenweg,
 `link-fehlerbild-demo`), der Videostart meldet sich als **`video-anwendung`** (aus
 `data-video="anwendung"`; `consent.js` erfasst das erste YouTube-iframe der Seite, hier das einzige).
-Eingehende Links aus Mail und LinkedIn bekommen UTM-Parameter, damit der Verkehr im Monatslauf
-trennbar bleibt.
+Eingehende Links aus Mail und LinkedIn bekommen UTM-Parameter (offen, § *Optional*).
 
 ## Datenwerkstatt-Seite (`ausbildung.html`) — Video und Zielgruppe *(11.09.2026)*
 
@@ -366,12 +360,9 @@ py _generate_layout.py          # Nav/Footer/FAB/Sticky aus Single-Source neu re
 py _scripts/check_site.py        # Self-Check (0 Fehler = grün)
 ```
 
-`_scripts/check_site.py` ist das "pyright der Homepage" (zero-dependency ausser
-tinycss2) und prueft je Seite: HTML wohlgeformt, CSS parst sauber, alle
-`var(--token)` aufloesbar, Layout-Marker vorhanden **und in Sync mit dem
-Generator**, interne Links/Assets existieren, keine Transliterations-Reste im
-Sichttext, englische Fassung auf deutschem Stand. Exit 1 bei Fehlern -> nicht deployen.
-`check_inhalt.py` (Metadaten, Marker, Sitemap) steht in `AENDERUNGSPROZESS.md` Gate 1.
+`_scripts/check_site.py` ist das "pyright der Homepage" (nur tinycss2; Pruefliste im Skript, u. a.
+Layout-Marker **in Sync mit dem Generator** und englische Fassung auf deutschem Stand). Exit 1 bei
+Fehlern -> nicht deployen. `check_inhalt.py` (Metadaten, Marker, Sitemap): `AENDERUNGSPROZESS.md` Gate 1.
 
 Optionaler Gegencheck bei groesseren Umbauten (Node, kein Java):
 `npx --yes htmlhint *.html` und `npx --yes html-validate *.html en/*.html`.
@@ -381,15 +372,13 @@ Optionaler Gegencheck bei groesseren Umbauten (Node, kein Java):
 ```
 homepage/
   index.html               Startseite (Predictive Quality, ein roter Faden); Sektionen: grep 'id="' index.html.
-                           #ablauf direkt unter dem Hero = zwei Startkarten (Buchungsknopf sichtbar im Kopf,
-                           je EIN Beispiel-Befund) und darunter die zwei Wege. KEINE Leistungs-Teaser-Karten.
+                           #ablauf = Startkarten und Wege (§ Stand der Website). KEINE Leistungs-Teaser-Karten.
   leistungen.html          Leistungsseite, handgeschrieben, seit 03.11.2026 auf die Haelfte gekuerzt (Stefan;
-                           4,6 statt 9,2 Bildschirme). Anker der Angebote: § Regeln, Angebote;
-                           #standortanalyse/#erstanalyse = Landeabschnitt der LinkedIn-Links; #fragen mit
-                           FAQPage-Schema; #potenzialfelder, #anwendungen, #bausteine stehen leer. Je Angebot
-                           nur der Beispiel-Befund als PDF; Produktblaetter und Blanko-Angebote unverlinkt in
-                           docs/ (gehen im Gespraech raus). Seit 31.08.2026 wieder eigene Seite -- Anlass: 87
-                           GSC-Impressionen auf eine Weiterleitung, 0 Klicks auf kommerzielle Suchanfragen.
+                           4,6 statt 9,2 Bildschirme). Anker: § Regeln, Angebote; #standortanalyse/#erstanalyse
+                           = Landeabschnitt der LinkedIn-Links; #fragen mit FAQPage-Schema; #potenzialfelder,
+                           #anwendungen, #bausteine stehen leer. Je Angebot nur der Beispiel-Befund als PDF;
+                           Produktblaetter, Blanko-Angebote unverlinkt in docs/ (gehen im Gespraech raus). Seit
+                           31.08.2026 wieder eigene Seite (87 GSC-Impressionen auf Weiterleitung, 0 Klicks).
   demo.html                Landingpage fuer das Demo-Video (ein Zweck, ein CTA) — § Demo-Seite.
   ausbildung.html          Datenwerkstatt, seit 03.11.2026 noindex und unverlinkt — § Datenwerkstatt-Seite.
                            Reihenfolge Nutzen -> Ablauf -> Beispiel, Knoepfe fuehren zu leistungen.html.
@@ -420,15 +409,13 @@ homepage/
   assets/                  img/ (Partnerlogos in kooperation/) · css/base.css = SINGLE SOURCE (§ Architektur),
                            jede Seite bindet es als erstes CSS ein · js/consent.js = Opt-in-Consent-Gate für
                            Microsoft Clarity + CTA-Funnel-Events · js/site.js = geteiltes Verhalten
-  _scripts/                check_site.py (vor jedem Deploy), check_inhalt.py, check_englisch.py,
-                           sitemap_pflegen.py (lastmod nachziehen);
+  _scripts/                check_site.py (vor jedem Deploy), check_inhalt.py, check_englisch.py, sitemap_pflegen.py;
                            Messung (clarity_daily.py, youtube_abrufe.py, wochenbericht.py) -> OPTIMIERUNG.md
   _doku/                   Betriebsdoku, die nicht ausgeliefert wird (Unterstrich) — infrastruktur.md
   _generate_layout.py      Generator: Nav + Footer + WA-FAB + Sticky aus einer Quelle in die Marker-Bloecke aller Seiten
   _generate_redirects.py   Generator: Redirect-Stubs fuer WordPress-Alt-URLs (REDIRECTS-Dict = einzige Quelle) und Kurzlinks (SHORTLINKS)
   _generate_assets.py      Generator für Favicon/OG-Image (liest/schreibt assets/img/)
-  credentials/             _generate_credentials.py (Renderer PDF -> JPG, § Deployment); thumbs/ = Grid-
-                           Thumbnails, full/ = Lightbox-Originale
+  credentials/             _generate_credentials.py (PDF -> JPG, § Deployment); thumbs/ Grid, full/ Lightbox
   docs/                    Belege zum Verlinken und Mitschicken; bewusst KEINE Einzelliste (driftet bei jedem
                            neuen Beleg). Wo welcher verlinkt ist: grep -o "docs/[a-z0-9_-]*\.pdf" *.html
                            Wird von Jekyll ausgeliefert -- hier nur, was oeffentlich sein darf. Die PDFs
@@ -469,22 +456,20 @@ meisten Eintraege sind **Soll-Zustand**, kein Defekt. Einordnung vor jeder Reakt
 | **Alternative Seite mit richtigem kanonischen Tag** | `/index.html` vs. `/` — Canonical zeigt korrekt auf `/`. | Nichts. |
 | **Gecrawlt / Gefunden – zurzeit nicht indexiert** | Googles Qualitaets-/Budget-Entscheidung, kein technischer Fehler. Einziger echter SEO-Hebel im Bericht. | Betroffene URL in der URL-Pruefung ansehen, Inhalt schaerfen (eigenstaendiger Text, interne Verlinkung), dann **„Indexierung beantragen"**. Nicht wiederholt beantragen. |
 
-**„Behebung validieren" bei 404 nicht klicken.** GSC validiert nur gegen 200/Redirect.
-Solange auch nur eine legitim tote URL in der Gruppe steckt, schlaegt der Lauf
-zwangslaeufig fehl — das erklaert den Status „Fehlgeschlagen" vom 25.07.2026, nicht ein
-Defekt auf der Seite. Google dropt solche URLs nach ~4–8 Wochen selbst; wer es
-beschleunigen will, nimmt `Entfernungen → Neuer Antrag → Praefix` fuer `…/wp-content/`.
+**„Behebung validieren" bei 404 nicht klicken.** GSC validiert nur gegen 200/Redirect. Solange
+auch nur eine legitim tote URL in der Gruppe steckt, schlaegt der Lauf zwangslaeufig fehl — das
+erklaert den Status „Fehlgeschlagen" vom 25.07.2026, nicht ein Defekt auf der Seite. Google dropt
+solche URLs nach ~4–8 Wochen selbst; schneller: `Entfernungen → Neuer Antrag → Praefix` fuer `…/wp-content/`.
 
 **Redirects auf GitHub Pages.** Server-seitige 301 gibt es nicht. Google behandelt den
-**Instant-Meta-Refresh** (`content="0; url=…"`) laut Doku als permanenten Redirect und
-nennt ihn ausdruecklich als Ersatz, wenn server-seitige Redirects nicht implementierbar
-sind. Genau das erzeugt `_generate_redirects.py` — plus `rel=canonical` und einen
-sichtbaren Link als No-JS-Fallback.
+**Instant-Meta-Refresh** (`content="0; url=…"`) laut Doku als permanenten Redirect und nennt ihn
+ausdruecklich als Ersatz, wenn server-seitige Redirects nicht implementierbar sind. Genau das
+erzeugt `_generate_redirects.py` — plus `rel=canonical` und einen sichtbaren Link als No-JS-Fallback.
 
-**Kein `noindex` auf Redirect-Stubs.** `noindex` blockt die URL komplett aus der Suche
-und verhindert damit, dass Google den Refresh ueberhaupt als Redirect verarbeitet;
-zusammen mit `rel=canonical` sind es widerspruechliche Signale auf derselben URL.
-`noindex` gehoert nur auf zurueckgestellte **Inhalts**seiten mit Self-Canonical.
+**Kein `noindex` auf Redirect-Stubs.** `noindex` blockt die URL komplett aus der Suche und
+verhindert damit, dass Google den Refresh ueberhaupt als Redirect verarbeitet; zusammen mit
+`rel=canonical` sind es widerspruechliche Signale. `noindex` gehoert nur auf zurueckgestellte
+**Inhalts**seiten mit Self-Canonical.
 
 **Sitemap:** `lastmod` zieht `py _scripts/sitemap_pflegen.py` aus dem letzten Commit je Datei
 (`--pruefen` schreibt nicht), `check_site.py` warnt bei veralteten Werten — die kosten
@@ -576,20 +561,18 @@ alles passt; eine stille Prüfung ist keine.
    sleep 150 && gh api repos/secure-galvano-ai/homepage/pages/builds/latest --jq '.status'
    ```
    **Abgrenzung zu Punkt 3:** Läuft ein Deploy noch oder wartet er regulär → Finger weg, jeder
-   Trigger cancelt ihn. Hängt er als Zombie (`queued`, nicht cancelbar, > 30 Min) → genau dieser
-   POST ist der Ausweg. `githubstatus.com` meldete dabei durchgehend „operational", taugt also
-   nicht als Entscheidungsgrundlage.
+   Trigger cancelt ihn. Hängt er als Zombie (`queued`, nicht cancelbar, > 30 Min) → dieser POST.
+   `githubstatus.com` meldete durchgehend „operational" — keine Entscheidungsgrundlage.
 3. **NIEMALS mehrere Pages-Deploys schnell hintereinander triggern.** Die Concurrency-Gruppe `pages` hat **Queue-Tiefe 1** — jeder neue Deploy **cancelt den vorher wartenden**. Rapides `git push` + wiederholtes `gh api --method POST .../pages/builds` erzeugt eine Kaskade aus `Deployment cancelled`/`failure`. → **EINMAL pushen, dann 2–10 Min ungestört warten. Nicht nachtreten.**
 4. **Bei Fehler zuerst die LIVE-Seite prüfen, nicht blind retrien** (letzter guter Build bleibt live, meist schon korrekt): `curl -s https://secure-galvano-ai.com/ | grep -o '<h1>[^<]*'`
 5. **`.nojekyll` NICHT reflexartig hinzufügen.** Der Jekyll-`build` gelingt hier (getestet); `.nojekyll` löst das Deploy-Problem NICHT und liefert zusätzlich `_generate_*.py` **öffentlich** aus (Jekyll schließt `_`-Dateien sonst aus). → **ohne `.nojekyll` bleiben.**
 6. **Kein `{{ … }}` / `{% … %}` im HTML** — Jekyll/Liquid parst das und failt den *Build* (war hier NICHT die Ursache, ist aber die klassische echte Build-Bremse).
 
-Favicon/OG-Image neu generieren: `py _generate_assets.py`. Nachweise neu rendern (wenn das
-Quell-PDF aktualisiert wird): `py credentials/_generate_credentials.py`. Quelle: `Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`.
-Seitenauswahl und Metadaten (Titel, Untertitel, Kategorie pro Seite) stehen in
-`credentials/_generate_credentials.py` — Reihenfolge dort ändern. Schwärzungen (Liste
-`REDAKTIONEN`) gehören in den Erzeuger, nicht ins fertige Bild (`CLAUDE.md` §1 *Dokumentation*, „Vor dem
-Veroeffentlichen schwaerzen").
+Favicon/OG-Image neu generieren: `py _generate_assets.py`. Nachweise neu rendern (Quell-PDF
+`Business Development/resources/credentials/20260512_Lebenslauf & Nachweise_Stefan Maier.pdf`
+geändert): `py credentials/_generate_credentials.py` — dort auch Seitenauswahl, Metadaten und
+Reihenfolge. Schwärzungen (Liste `REDAKTIONEN`) gehören in den Erzeuger, nicht ins fertige Bild
+(`CLAUDE.md` §1 *Dokumentation*).
 
 ## WhatsApp-Kontakt — abgeschaltet seit 07.09.2026
 
