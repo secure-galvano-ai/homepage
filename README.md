@@ -421,9 +421,11 @@ homepage/
                            Wird von Jekyll ausgeliefert -- hier nur, was oeffentlich sein darf. Die PDFs
                            kommen aus BD-Build-Skripten, NIE von Hand bearbeiten -- im Skript aendern, neu
                            bauen. Erzeuger: grep -rl "<dateiname>.pdf" in BD templates/ (Flyer, Befunde),
-                           areas/coaching-und-ausbildung/ (Datenwerkstatt), scripts/ (NDA; angebot_muster.py
+                           areas/coaching-und-ausbildung/ (Datenwerkstatt), scripts/ (angebot_muster.py
                            = die drei Angebots-Muster ohne Empfaenger, Nummer, Datum, IBAN, Unterschrift,
-                           Pruefung dort UMGEKEHRT, Docstring angebot_bauen.py). Ausnahme:
+                           Pruefung dort UMGEKEHRT, Docstring angebot_bauen.py). Das NDA-Muster ist seit
+                           09.11.2026 nicht mehr veroeffentlicht (Entscheidung Stefan: Vertraulichkeit wird je
+                           Kunde in der Anbahnung einzeln vereinbart). Ausnahme:
                            unternehmenspraesentation_/company-presentation_secure-galvano-ai.pdf aus dem
                            Pitch-Deck-Master (SharePoint 01_Aussenauftritt/06_Praesentationsmaterialien/
                            Pitch Deck/03_Decks/_Werkzeuge/download_bauen.py, 00_LIESMICH.md "Zwei abgeleitete
