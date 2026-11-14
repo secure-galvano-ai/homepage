@@ -33,8 +33,27 @@
                h === '' || /\.local$/.test(h);
     }
 
+    // Eigene Besuche nicht messen (14.11.2026). Im Oktober/November stellte Edge 60 % der
+    // Sitzungen, mobil kam kaum noch jemand, 38 von 78 Verweisen waren interne Seitenwechsel --
+    // Verdacht: Stefans eigene Aufrufe und Pruefungen nach Aenderungen. Clarity kennt keinen
+    // IP-Filter, also wird der Ausschluss im Browser gemerkt: einmal ?intern=1 aufrufen, dann
+    // laedt dieser Browser Clarity nie wieder; ?intern=0 hebt es auf. Wie bei localhost laeuft
+    // die Funnel-Verdrahtung weiter (window.clarity fehlt dann einfach).
+    var INTERN_KEY = 'sgai-intern';
+
+    function istIntern() {
+        try {
+            var m = /[?&]intern=([01])\b/.exec(location.search);
+            if (m) {
+                if (m[1] === '1') localStorage.setItem(INTERN_KEY, '1');
+                else localStorage.removeItem(INTERN_KEY);
+            }
+            return localStorage.getItem(INTERN_KEY) === '1';
+        } catch (e) { return false; }
+    }
+
     function loadClarity() {
-        if (!window.clarity && !istLokal()) {
+        if (!window.clarity && !istLokal() && !istIntern()) {
             (function (c, l, a, r, i, t, y) {
                 c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
                 t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
@@ -264,6 +283,7 @@
 
     // --- Init ---
     function init() {
+        istIntern();   // ?intern=1/0 sofort merken, auch wenn noch keine Zustimmung vorliegt
         document.querySelectorAll('.cookie-settings').forEach(function (el) {
             el.addEventListener('click', function (e) {
                 e.preventDefault();
