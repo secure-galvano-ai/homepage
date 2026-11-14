@@ -211,8 +211,8 @@ Dashboard** und sind mit 👤 markiert — sie sind nicht im Export enthalten.
 | Kennzahl | Stand 18.06.–15.09.2026 (90 Tage), Nachtrag 21.10.2026 | Richtung |
 |---|---|---|
 | **Profilbesuche / 90 Tage** 👤 | **299 (+219 %)** | **die Leitzahl** — wer das Profil öffnet, prüft die Person. Der Schritt unmittelbar vor dem Anruf |
-| **Impressionen je Beitrag, Anlassbeitrag** | **511** (Median, stabil seit 12 Monaten) | ≥ 500 halten |
-| **Impressionen je Beitrag, Serienbeitrag** | **199** (166 und 232) | **→ 400.** Darunter trägt die Serie den Kanal nicht, sie verdünnt ihn |
+| **Impressionen je Beitrag, Anlassbeitrag** | **511** (Median, stabil seit 12 Monaten) · 14.11.: **rund 970** (14 Beiträge, Export 365 Tage) | ≥ 500 halten |
+| **Impressionen je Beitrag, Serienbeitrag** | **199** (166 und 232) · 14.11.: **rund 215** (15 Beiträge) | **Serien seit 14.11.2026 eingestellt** (Stefan) — jeder Beitrag ist ein Fall mit Szene (Beitragsprozess § 0) |
 | Beiträge je Monat | **5** (Aug) · **11** (Sept) · **10** (Okt bis 21.) — Impressionen je Beitrag fielen dabei auf 411 bzw. 508 (Median Mai–Aug 555–858) | 4–8; unter 4 drosselt die Verteilung, über 8 fällt die Wirkung je Beitrag |
 | Neue Follower je Monat | **65–84** · Sept **283** · Okt bis 21. **133** | ≥ 60 |
 | Engagement-Rate | **2,4 %** (Jahreswert 2,6 %) · Jahreswert 21.10.: **2,2 %** | ≥ 2,5 % |
