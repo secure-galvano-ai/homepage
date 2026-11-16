@@ -88,7 +88,22 @@
         wireZiele();
         wirePdfDownloads();
         wireVideoInteraktion();
+        wireEigeneVideos();
         wireScrollDepth();
+    }
+
+    // Selbst gehostete Erklaervideos in den Angebotskarten (seit 16.11.2026): Start ist
+    // ueber das play-Ereignis direkt messbar, einmal je Video und Seitenaufruf.
+    // Name aus data-video wie bei YouTube (-> 'video-standortanalyse').
+    function wireEigeneVideos() {
+        document.querySelectorAll('video[data-video]').forEach(function (v) {
+            var gemeldet = false;
+            v.addEventListener('play', function () {
+                if (gemeldet) return;
+                gemeldet = true;
+                if (window.clarity) window.clarity('event', 'video-' + v.getAttribute('data-video'));
+            });
+        });
     }
 
     // Feste Zielmarken: EIN Ereignis je Ziel, abgeleitet aus dem Linkziel statt aus dem

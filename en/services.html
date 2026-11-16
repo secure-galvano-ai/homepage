@@ -320,6 +320,10 @@
             font-weight: 700; color: var(--dunkelblau); font-size: 0.98rem; }
         .fcard .links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 14px; }
         .fcard a.txt { color: var(--schild-blau); font-weight: 600; border-bottom: 1px solid rgba(43,94,167,.35); }
+        /* Erklaervideo je Einstieg (Stefan 16.11.2026): stumm verstaendlich, startet nur auf Klick */
+        .fcard .fvideo { margin: 4px 0 14px; }
+        .fcard .fvideo video { display: block; width: 100%; max-width: 340px; aspect-ratio: 4/5; border-radius: 10px; background: var(--dunkelblau); }
+        .fcard .fvideo figcaption { font-size: 0.8rem; color: var(--text-light); margin-top: 6px; }
         .felder .umfang-hinweis { margin-top: 26px; font-size: 0.93rem; }
         .danach { padding: 78px 0; background: var(--weiss); }
         .danach .fcard { background: var(--hellgrau); }
@@ -430,6 +434,9 @@
                 <p>We review every source (line controls, rectifiers, lab, customer complaints), assess for each line whether the data holds up, and show the defect patterns with the greatest potential — and where your own AI can take over routine work.</p>
                 <p class="ablauf">Four to six calls of 45 minutes online, connecting the sources with your IT team, and a wrap-up session. A day on site is optional.</p>
                 <p class="preis">€1,500 net per site, whether five lines or twenty.</p>
+                <div class="links">
+                    <a class="btn btn-primary" href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" data-funnel="cta-standortanalyse-en">Book an intro call</a>
+                </div>
             </div>
             <div class="fcard" id="erstanalyse">
                 <span class="num">READINGS IN A DATABASE</span>

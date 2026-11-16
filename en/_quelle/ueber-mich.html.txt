@@ -16,6 +16,11 @@
 <p style="margin:0 0 18px;"><a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-uebermich-hero">Kostenloses Erstgespräch buchen</a></p>
 <p class="lead">Über 20 Jahre Praxis am Galvanikbecken, ein Materialphysik-Studium dazu und die Erfahrung, KI-Systeme so zu bauen, dass sie in der Produktion tatsächlich genutzt werden. Hier finden Sie meinen Werdegang und die belegten Stationen meiner Laufbahn.</p>
 <div class="page-hero-links">
+<!-- 16.11.2026 (Stefan): Siegel oben, oeffnet den Pruefbericht wie die Karte unter Nachweise -->
+<a href="credentials/full/19-tuev-inspektionsbericht.jpg" onclick="event.preventDefault(); openModal('19-tuev-inspektionsbericht')" data-funnel="link-tuev-uebermich">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+TÜV AUSTRIA Trusted AI geprüft · Prüfbericht
+</a>
 <a href="https://www.linkedin.com/in/stefan-maier-bb0b73100" target="_blank" rel="noopener">
 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
 LinkedIn Profil

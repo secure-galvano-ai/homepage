@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Hidden Defects in Your Plating Data | secure galvano ai</title>
-    <meta name="description" content="The cause behind scrap and customer returns is already in your line data. We find it. Independently audited by TÜV AUSTRIA.">
+    <title>Put AI to Work in Your Plating Shop | secure galvano ai</title>
+    <meta name="description" content="For surface finishing companies ready to unlock their AI potential: use cases that pay off and tools for your line data. Independently audited by TÜV AUSTRIA.">
     <meta name="keywords" content="AI for electroplating, plating shop software, electroplating digitalization, anomaly detection plating, plating site assessment, Trusted AI industry, on-premises machine learning, Stefan Maier electroplating">
     <meta name="author" content="Stefan Maier">
     <link rel="canonical" href="https://secure-galvano-ai.com/en/">
@@ -16,8 +16,8 @@
 <!-- END hreflang -->
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <meta property="og:title" content="The defect is already in your data. You just can't see it.">
-    <meta property="og:description" content="We find the causes of your defect patterns in the data your line already records and build tools that flag such defects automatically from then on. Independently audited by TÜV AUSTRIA.">
+    <meta property="og:title" content="Put AI to work in your plant where it pays off.">
+    <meta property="og:description" content="For surface finishing companies ready to unlock their AI potential. We show where AI pays off in your operations and build tools that work with your line data. Independently audited by TÜV AUSTRIA.">
     <meta property="og:image" content="https://secure-galvano-ai.com/assets/img/og-image.jpg">
     <meta property="og:url" content="https://secure-galvano-ai.com/en/">
     <meta property="og:type" content="website">
@@ -353,6 +353,9 @@
             backdrop-filter: blur(4px);
         }
 
+        a.hero-badge { color: inherit; text-decoration: none; transition: background .2s ease; }
+        a.hero-badge:hover { background: rgba(255, 255, 255, 0.18); }
+        .hero-badge-mehr { font-weight: 400; opacity: .75; border-left: 1px solid rgba(255, 255, 255, 0.3); padding-left: 8px; }
         .hero-badge .dot {
             width: 8px;
             height: 8px;
@@ -640,18 +643,19 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="hero-badge">
+                <!-- Seal since 16.11.2026 (Stefan): click opens the inspection report (same file as on
+                     about.html). Never "certified". -->
+                <a class="hero-badge" href="../credentials/full/19-tuev-inspektionsbericht.jpg" target="_blank" rel="noopener" onclick="openMeister(event, 'tuevLightbox')" data-funnel="link-tuev-hero-en" aria-label="TÜV AUSTRIA Trusted AI tested — view inspection report">
                     <span class="dot"></span>
-                    TÜV AUSTRIA Trusted AI · Model audit completed
-                </div>
-                <!-- Since 03.11.2026 (Stefan) the defect headline is back: defect patterns resonate with
-                     customers, that is the focus. The paragraph below bridges to the offers.
-                     Interim 21.10.-03.11.: "Secure AI for surface finishing. Benefits you can measure." -->
-                <h1>The defect is already in your data. <span class="accent">You just can't see it.</span></h1>
-                <!-- 03.11.2026 (Stefan): AI setup offer dropped, focus on tools for automated analysis -->
-                <p>We find the causes of your defect patterns in the data your line already records — and build tools that flag such defects automatically from then on.</p>
+                    TÜV AUSTRIA Trusted AI tested
+                    <span class="hero-badge-mehr">View report</span>
+                </a>
+                <!-- Since 16.11.2026 (Stefan): put AI to work where it pays off. 03.11.-16.11.: "The defect
+                     is already in your data. You just can't see it." -->
+                <h1>Put AI to work in your plant <span class="accent">where it pays off.</span></h1>
+                <p>For surface finishing companies ready to unlock their AI potential. We show where AI pays off in your operations and build tools that work with your line data.</p>
                 <!-- Target group since 03.11.2026 (Stefan): complex processes instead of number of lines. -->
-                <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;">For <strong style="color:#fff;">electroplating and anodizing shops with complex processes</strong>. Starting at €1,500 net (excl. VAT).</p>
+                <p style="font-size:0.9rem;color:rgba(255,255,255,0.72);margin-top:16px;line-height:1.5;border-left:2px solid var(--cyan-akzent);padding-left:14px;"><strong style="color:#fff;">Electroplating and anodizing shops with complex processes</strong> · starting at €1,500 net (excl. VAT).</p>
                 <div class="hero-buttons">
                     <a href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/ZivH8iyBokGAiByKXkWuqA2" target="_blank" rel="noopener" class="btn btn-primary" data-funnel="cta-hero-en">Book a free intro call</a>
                     <!-- Second hero button leads to the four offer cards (since 21.10.2026): sample
@@ -1122,6 +1126,13 @@
     <div class="meister-lightbox-caption">Master craftsman diploma · Surface finishing · WKO Carinthia 2009 &middot; <a href="../docs/meisterbrief.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="color:#fff;text-decoration:underline;">open as PDF (German)</a></div>
 </div>
 
+<!-- ===== TUEV INSPECTION REPORT LIGHTBOX (16.11.2026) ===== -->
+<div class="meister-lightbox" id="tuevLightbox" onclick="closeMeister(event)">
+    <button class="meister-lightbox-close" onclick="closeMeister(event)" aria-label="Close">&times;</button>
+    <img src="../credentials/full/19-tuev-inspektionsbericht.jpg" alt="TÜV AUSTRIA TRUSTIFAI inspection report, management summary" loading="lazy" decoding="async" onclick="event.stopPropagation()">
+    <div class="meister-lightbox-caption">TÜV AUSTRIA Trusted AI (TRUSTIFAI) · inspection report, management summary 2026 (German)</div>
+</div>
+
 <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
 <!-- BEGIN wa-fab -->
 <!-- AUTO-GENERATED by _generate_layout.py -- do not edit by hand -->
@@ -1164,14 +1175,15 @@
 
 <script>
     // Master craftsman diploma lightbox (page-specific; shared behavior -> assets/js/site.js)
-    function openMeister(e) {
+    // Since 16.11.2026 also for the TUEV inspection report (id as second argument).
+    function openMeister(e, id) {
         if (e) e.preventDefault();
-        document.getElementById('meisterLightbox').classList.add('open');
+        document.getElementById(id || 'meisterLightbox').classList.add('open');
         document.body.style.overflow = 'hidden';
     }
     function closeMeister(e) {
         if (e) e.stopPropagation();
-        document.getElementById('meisterLightbox').classList.remove('open');
+        document.querySelectorAll('.meister-lightbox.open').forEach(l => l.classList.remove('open'));
         document.body.style.overflow = '';
     }
     document.addEventListener('keydown', (e) => {

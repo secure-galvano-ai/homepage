@@ -273,8 +273,20 @@ Danach `py _scripts/check_site.py`, pushen und den Deploy bestaetigen (§ *Nach 
 
 **Das Startseiten-Video ist ein anderes** und bleibt, wo es ist: `index.html`, Sektion
 *Intro-Video (Pitch)*, YouTube-ID `lLgcKqhHOrU`, „Warum Galvaniken auf Daten statt Bauchgefuehl
-setzen" (2 Minuten). **Kein zweites Video auf die Startseite** — zwei Videos uebereinander teilen
-die Aufmerksamkeit; die Startseite bekommt einen Verweis auf `demo.html`, nicht das Video selbst.
+setzen" (2 Minuten). **Kein zweites Video dieser Art auf die Startseite** — zwei Videos
+uebereinander teilen die Aufmerksamkeit; die Startseite bekommt einen Verweis auf `demo.html`, nicht
+das Video selbst.
+
+**Ausnahme: kurze Erklaervideos in den Angebotskarten** *(Stefan, 16.11.2026: „bei den zwei
+Einstiegen … ganz kurz erklaert und dann Erstgespraech buchen darunter")*. Je Einstieg
+(Standortanalyse, Erstanalyse) ein gezeichnetes Video aus dem LinkedIn-Beitragsprozess (4:5,
+unter 60 s, stumm verstaendlich), **selbst gehostet** in `assets/video/<name>.mp4` mit
+`<name>-poster.webp` (540 × 675) — kein YouTube, also kein Fremd-Request und kein Consent-Thema.
+`<video controls muted playsinline preload="none">`, **kein Autoplay** (das unterscheidet sie
+vom Pitch, der weiter die Aufmerksamkeit fuehrt). Steht in `index.html` (`.angebot-video`, eigene
+Zeile im Subgrid der Karten) und `leistungen.html` (`.fvideo`), jeweils direkt vor Text, Preis und
+„Erstgespraech buchen". Messung: `consent.js` `wireEigeneVideos` meldet `video-<data-video>` beim
+ersten Start. **Englische Seiten bekommen die Videos nicht** — Bildtexte sind deutsch.
 
 **Der Einseiter zum Weiterleiten** *(02.09.2026)*: `docs/anwendung-ueberblick.pdf`, verlinkt
 **unter den drei Punkten**, bewusst **nicht** als Nebenweg unter dem CTA — dort konkurrierte er mit

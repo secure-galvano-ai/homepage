@@ -98,17 +98,30 @@ Startseite, llms.txt und verschickte Links weiter treffen. Preise: BD/areas/prei
 <div class="fcard" id="standortanalyse">
 <span class="num">DATEN NOCH VERSTREUT</span>
 <h3>Standortanalyse</h3>
+<figure class="fvideo">
+<video controls muted playsinline preload="none" poster="assets/video/standortanalyse-poster.webp" data-video="standortanalyse-leistungen" aria-label="Erklärvideo Standortanalyse: von vielen Ideen zur klaren Reihenfolge mit Business Case">
+<source src="assets/video/standortanalyse.mp4" type="video/mp4">
+</video>
+<figcaption>Kurz erklärt in 47 Sekunden, ohne Ton verständlich.</figcaption>
+</figure>
 <p>Wir sichten alle Quellen (Steuerung, Gleichrichter, Labor, Reklamationen), bewerten je Anlage, ob die Daten tragen, und zeigen die Fehlerbilder mit dem größten Potenzial — und wo Ihre eigene KI Routinearbeit abnehmen kann.</p>
 <p class="ablauf">Vier bis sechs Gespräche à 45 Minuten online, die Anbindung der Quellen mit Ihrer IT und eine Abschlussrunde. Ein Tag vor Ort ist optional.</p>
 <p class="preis">1.500 € netto je Standort, gleich ob fünf oder zwanzig Anlagen.</p>
 <div class="links">
-<a class="btn btn-outline" href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-leistungen">Musterbefund (PDF)</a>
+<a class="btn btn-primary" href="https://outlook.office.com/book/DatenintegrationKIEntwicklung@rvh.at/s/DdIPgTj7-0ymr6eHc38SQg2" target="_blank" rel="noopener" data-funnel="cta-standortanalyse">Erstgespräch buchen</a>
+<a class="txt" href="docs/standortanalyse-musterbefund.pdf" target="_blank" rel="noopener" data-funnel="pdf-musterbefund-leistungen">Musterbefund (PDF)</a>
 </div>
 </div>
 <!-- Landeabschnitt der LinkedIn-Links: Buchung direkt unter dem Preis (03.11.2026). -->
 <div class="fcard" id="erstanalyse">
 <span class="num">MESSWERTE IN DER DATENBANK</span>
 <h3>Erstanalyse</h3>
+<figure class="fvideo">
+<video controls muted playsinline preload="none" poster="assets/video/erstanalyse-poster.webp" data-video="erstanalyse-leistungen" aria-label="Erklärvideo Erstanalyse: vom Datenbestand zu den ersten Ursachenkandidaten">
+<source src="assets/video/erstanalyse.mp4" type="video/mp4">
+</video>
+<figcaption>Kurz erklärt in 46 Sekunden, ohne Ton verständlich.</figcaption>
+</figure>
 <p>Ein Fehlerbild kostet Sie Geld, und Ihre Messwerte liegen schon in einem Datenbanksystem? Wir prüfen Vollständigkeit, Zeitachse und Lücken und nennen die ersten Ursachenkandidaten — in rund zwei Wochen.</p>
 <p class="ablauf">Eine Prüfung der Daten, keine Ursachenanalyse. Excel-Tabellen genügen nicht; liegen die Daten noch verstreut, passt die Standortanalyse.</p>
 <p class="preis">1.500 € netto je Datenbestand.</p>
