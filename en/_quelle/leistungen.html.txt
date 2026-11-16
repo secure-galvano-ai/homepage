@@ -99,10 +99,16 @@ Startseite, llms.txt und verschickte Links weiter treffen. Preise: BD/areas/prei
 <span class="num">DATEN NOCH VERSTREUT</span>
 <h3>Standortanalyse</h3>
 <figure class="fvideo">
-<video controls muted playsinline preload="none" poster="assets/video/standortanalyse-poster.webp" data-video="standortanalyse-leistungen" aria-label="Erklärvideo Standortanalyse: von vielen Ideen zur klaren Reihenfolge mit Business Case">
+<div class="ev">
+<video muted playsinline preload="none" poster="assets/video/standortanalyse-poster.webp" data-video="standortanalyse-leistungen" aria-label="Erklärvideo Standortanalyse: von vielen Ideen zur klaren Reihenfolge mit Business Case">
 <source src="assets/video/standortanalyse.mp4" type="video/mp4">
 </video>
-<figcaption>Kurz erklärt in 47 Sekunden, ohne Ton verständlich.</figcaption>
+<button type="button" class="ev-start" aria-label="Erklärvideo Standortanalyse abspielen, 47 Sekunden">
+<span class="ev-kreis" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17L20 12z"/></svg></span>
+<span class="ev-etikett">Video ansehen · 47 s</span>
+</button>
+<span class="ev-hinweis" aria-hidden="true">▶ Zum Ansehen klicken</span>
+</div>
 </figure>
 <p>Wir sichten alle Quellen (Steuerung, Gleichrichter, Labor, Reklamationen), bewerten je Anlage, ob die Daten tragen, und zeigen die Fehlerbilder mit dem größten Potenzial — und wo Ihre eigene KI Routinearbeit abnehmen kann.</p>
 <p class="ablauf">Vier bis sechs Gespräche à 45 Minuten online, die Anbindung der Quellen mit Ihrer IT und eine Abschlussrunde. Ein Tag vor Ort ist optional.</p>
@@ -117,10 +123,16 @@ Startseite, llms.txt und verschickte Links weiter treffen. Preise: BD/areas/prei
 <span class="num">MESSWERTE IN DER DATENBANK</span>
 <h3>Erstanalyse</h3>
 <figure class="fvideo">
-<video controls muted playsinline preload="none" poster="assets/video/erstanalyse-poster.webp" data-video="erstanalyse-leistungen" aria-label="Erklärvideo Erstanalyse: vom Datenbestand zu den ersten Ursachenkandidaten">
+<div class="ev">
+<video muted playsinline preload="none" poster="assets/video/erstanalyse-poster.webp" data-video="erstanalyse-leistungen" aria-label="Erklärvideo Erstanalyse: vom Datenbestand zu den ersten Ursachenkandidaten">
 <source src="assets/video/erstanalyse.mp4" type="video/mp4">
 </video>
-<figcaption>Kurz erklärt in 46 Sekunden, ohne Ton verständlich.</figcaption>
+<button type="button" class="ev-start" aria-label="Erklärvideo Erstanalyse abspielen, 46 Sekunden">
+<span class="ev-kreis" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17L20 12z"/></svg></span>
+<span class="ev-etikett">Video ansehen · 46 s</span>
+</button>
+<span class="ev-hinweis" aria-hidden="true">▶ Zum Ansehen klicken</span>
+</div>
 </figure>
 <p>Ein Fehlerbild kostet Sie Geld, und Ihre Messwerte liegen schon in einem Datenbanksystem? Wir prüfen Vollständigkeit, Zeitachse und Lücken und nennen die ersten Ursachenkandidaten — in rund zwei Wochen.</p>
 <p class="ablauf">Eine Prüfung der Daten, keine Ursachenanalyse. Excel-Tabellen genügen nicht; liegen die Daten noch verstreut, passt die Standortanalyse.</p>
@@ -240,5 +252,6 @@ den Befund aus dem Optimierungslauf 08/2026: mobil erreichten 5 % der Besucher d
 Seitenende, dort sassen die Termin-Knoepfe, Klicks waren 0. -->
 <!-- ===== FOOTER ===== -->
 <script src="assets/js/site.js" defer></script>
+<script src="assets/js/erklaervideo.js" defer></script>
 </body>
 </html>

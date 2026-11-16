@@ -326,8 +326,7 @@
         .fcard a.txt { color: var(--schild-blau); font-weight: 600; border-bottom: 1px solid rgba(43,94,167,.35); }
         /* Erklaervideo je Einstieg (Stefan 16.11.2026): stumm verstaendlich, startet nur auf Klick */
         .fcard .fvideo { margin: 4px 0 14px; }
-        .fcard .fvideo video { display: block; width: 100%; max-width: 340px; aspect-ratio: 4/5; border-radius: 10px; background: var(--dunkelblau); }
-        .fcard .fvideo figcaption { font-size: 0.8rem; color: var(--text-light); margin-top: 6px; }
+        /* Overlay, Vorschau und Verhalten: .ev in assets/css/base.css + assets/js/erklaervideo.js */
         .felder .umfang-hinweis { margin-top: 26px; font-size: 0.93rem; }
         .danach { padding: 78px 0; background: var(--weiss); }
         .danach .fcard { background: var(--hellgrau); }
@@ -446,10 +445,16 @@
                 <span class="num">DATEN NOCH VERSTREUT</span>
                 <h3>Standortanalyse</h3>
                 <figure class="fvideo">
-                    <video controls muted playsinline preload="none" poster="assets/video/standortanalyse-poster.webp" data-video="standortanalyse-leistungen" aria-label="Erklärvideo Standortanalyse: von vielen Ideen zur klaren Reihenfolge mit Business Case">
-                        <source src="assets/video/standortanalyse.mp4" type="video/mp4">
-                    </video>
-                    <figcaption>Kurz erklärt in 47 Sekunden, ohne Ton verständlich.</figcaption>
+                    <div class="ev">
+                        <video muted playsinline preload="none" poster="assets/video/standortanalyse-poster.webp" data-video="standortanalyse-leistungen" aria-label="Erklärvideo Standortanalyse: von vielen Ideen zur klaren Reihenfolge mit Business Case">
+                            <source src="assets/video/standortanalyse.mp4" type="video/mp4">
+                        </video>
+                        <button type="button" class="ev-start" aria-label="Erklärvideo Standortanalyse abspielen, 47 Sekunden">
+                            <span class="ev-kreis" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17L20 12z"/></svg></span>
+                            <span class="ev-etikett">Video ansehen · 47 s</span>
+                        </button>
+                        <span class="ev-hinweis" aria-hidden="true">▶ Zum Ansehen klicken</span>
+                    </div>
                 </figure>
                 <p>Wir sichten alle Quellen (Steuerung, Gleichrichter, Labor, Reklamationen), bewerten je Anlage, ob die Daten tragen, und zeigen die Fehlerbilder mit dem größten Potenzial — und wo Ihre eigene KI Routinearbeit abnehmen kann.</p>
                 <p class="ablauf">Vier bis sechs Gespräche à 45 Minuten online, die Anbindung der Quellen mit Ihrer IT und eine Abschlussrunde. Ein Tag vor Ort ist optional.</p>
@@ -464,10 +469,16 @@
                 <span class="num">MESSWERTE IN DER DATENBANK</span>
                 <h3>Erstanalyse</h3>
                 <figure class="fvideo">
-                    <video controls muted playsinline preload="none" poster="assets/video/erstanalyse-poster.webp" data-video="erstanalyse-leistungen" aria-label="Erklärvideo Erstanalyse: vom Datenbestand zu den ersten Ursachenkandidaten">
-                        <source src="assets/video/erstanalyse.mp4" type="video/mp4">
-                    </video>
-                    <figcaption>Kurz erklärt in 46 Sekunden, ohne Ton verständlich.</figcaption>
+                    <div class="ev">
+                        <video muted playsinline preload="none" poster="assets/video/erstanalyse-poster.webp" data-video="erstanalyse-leistungen" aria-label="Erklärvideo Erstanalyse: vom Datenbestand zu den ersten Ursachenkandidaten">
+                            <source src="assets/video/erstanalyse.mp4" type="video/mp4">
+                        </video>
+                        <button type="button" class="ev-start" aria-label="Erklärvideo Erstanalyse abspielen, 46 Sekunden">
+                            <span class="ev-kreis" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17L20 12z"/></svg></span>
+                            <span class="ev-etikett">Video ansehen · 46 s</span>
+                        </button>
+                        <span class="ev-hinweis" aria-hidden="true">▶ Zum Ansehen klicken</span>
+                    </div>
                 </figure>
                 <p>Ein Fehlerbild kostet Sie Geld, und Ihre Messwerte liegen schon in einem Datenbanksystem? Wir prüfen Vollständigkeit, Zeitachse und Lücken und nennen die ersten Ursachenkandidaten — in rund zwei Wochen.</p>
                 <p class="ablauf">Eine Prüfung der Daten, keine Ursachenanalyse. Excel-Tabellen genügen nicht; liegen die Daten noch verstreut, passt die Standortanalyse.</p>
@@ -635,6 +646,7 @@
 <!-- END footer -->
 
 <script src="assets/js/site.js" defer></script>
+<script src="assets/js/erklaervideo.js" defer></script>
 
 </body>
 </html>

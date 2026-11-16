@@ -156,6 +156,7 @@ Seite dupliziert. Wer Farben, Nav oder Footer aendert, editiert **eine** Quelle:
 |----------|---------------|------------------|
 | Design-Tokens (Farben) + Reset + Typo + Container + Nav + Buttons + section-header + Footer + WA-FAB + Sticky-CTA + fade-up | `assets/css/base.css` | jede Seite (erstes CSS im `<head>`) |
 | Geteiltes Verhalten (Nav-Scroll, Mobile-Menue, fade-up, Sprachhinweis) | `assets/js/site.js` | jede Inhaltsseite (`defer`) ausser `sicherheit.html` und `en/security.html` (eigenes Menü-Skript, § *Englische Fassung*) |
+| Erklaervideo-Overlay und Vorschau (`.ev`) | `assets/js/erklaervideo.js` + `base.css` | `index.html`, `leistungen.html` (§ *Demo-Seite*, Ausnahme Angebotsvideos) |
 | Nav + Footer + WA-FAB + Sticky (HTML), `hreflang`, CSS der englischen Seiten | `_generate_layout.py` -> Marker `<!-- BEGIN/END nav -->` usw. | alle Seiten in `PAGES` und `PAIRS` |
 
 Die Markenfarben in `base.css :root` sind **kanonisch abgeleitet** aus
@@ -282,11 +283,16 @@ Einstiegen … ganz kurz erklaert und dann Erstgespraech buchen darunter")*. Je 
 (Standortanalyse, Erstanalyse) ein gezeichnetes Video aus dem LinkedIn-Beitragsprozess (4:5,
 unter 60 s, stumm verstaendlich), **selbst gehostet** in `assets/video/<name>.mp4` mit
 `<name>-poster.webp` (540 × 675) — kein YouTube, also kein Fremd-Request und kein Consent-Thema.
-`<video controls muted playsinline preload="none">`, **kein Autoplay** (das unterscheidet sie
-vom Pitch, der weiter die Aufmerksamkeit fuehrt). Steht in `index.html` (`.angebot-video`, eigene
-Zeile im Subgrid der Karten) und `leistungen.html` (`.fvideo`), jeweils direkt vor Text, Preis und
-„Erstgespraech buchen". Messung: `consent.js` `wireEigeneVideos` meldet `video-<data-video>` beim
-ersten Start. **Englische Seiten bekommen die Videos nicht** — Bildtexte sind deutsch.
+**Auf den ersten Blick als Video erkennbar** *(Stefan, 16.11.2026)*: Baustein `.ev` (CSS in
+`base.css`, Verhalten in `assets/js/erklaervideo.js`) — grosser Play-Knopf mit „Video ansehen ·
+n s" als Overlay, ganzer Bereich klickbar, Klick spielt von vorn mit nativen Controls. **Stumme
+Vorschau ohne Klick:** am Bildschirm beim Mouseover, am Handy sobald das Video zu 60 % sichtbar ist;
+dabei der Hinweis „▶ Zum Ansehen klicken". Bei `prefers-reduced-motion` nur der Knopf. Nie zwei
+gleichzeitig, `preload="none"` bis zur ersten Interaktion. Steht in `index.html` (`.angebot-video`,
+eigene Zeile im Subgrid der Karten) und `leistungen.html` (`.fvideo`), jeweils direkt vor Text,
+Preis und „Erstgespraech buchen". Messung im Skript selbst: Klick-Start `video-<data-video>`,
+Vorschau `video-vorschau` (einmal je Seitenaufruf). **Englische Seiten bekommen die Videos nicht**
+— Bildtexte sind deutsch.
 
 **Der Einseiter zum Weiterleiten** *(02.09.2026)*: `docs/anwendung-ueberblick.pdf`, verlinkt
 **unter den drei Punkten**, bewusst **nicht** als Nebenweg unter dem CTA — dort konkurrierte er mit

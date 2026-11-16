@@ -190,8 +190,7 @@ ohne feste Mindesthoehen; beim Aufklappen waechst nur die eigene Karte. */
 .angebot-frage { color:var(--text-body); font-size:.97rem; line-height:1.55; margin:0 0 12px; }
 /* Erklaervideo je Einstieg (Stefan 16.11.2026): stumm verstaendlich, startet nur auf Klick */
 .angebot-video { margin:0 0 14px; }
-.angebot-video video { display:block; width:100%; max-width:340px; aspect-ratio:4/5; border-radius:10px; background:var(--dunkelblau); }
-.angebot-video figcaption { font-size:.8rem; color:var(--text-light); margin-top:6px; }
+/* Overlay, Vorschau und Verhalten: .ev in assets/css/base.css + assets/js/erklaervideo.js */
 .angebot-fuer { font-size:.86rem; line-height:1.5; color:var(--text-light); border-left:3px solid var(--logo-gruen); padding-left:10px; margin:0 0 16px; }
 .angebot-preis { font-family:'Montserrat',Arial,sans-serif; font-size:1.3rem; font-weight:700; color:var(--dunkelblau); }
 .angebot-preis small { display:block; font-family:'Open Sans',Arial,sans-serif; font-size:.84rem; font-weight:400; color:var(--text-light); margin-top:2px; }
@@ -249,10 +248,16 @@ KI-Anwendungsfaelle (Weg B) nur als Halbsatz der Standortanalyse. -->
 <h3>Standortanalyse</h3>
 <p class="angebot-frage">Sie wissen noch nicht genau, welche Daten Sie haben und wo es sich lohnt?</p>
 <figure class="angebot-video">
-<video controls muted playsinline preload="none" poster="assets/video/standortanalyse-poster.webp" data-video="standortanalyse" aria-label="Erklärvideo Standortanalyse: von vielen Ideen zur klaren Reihenfolge mit Business Case">
+<div class="ev">
+<video muted playsinline preload="none" poster="assets/video/standortanalyse-poster.webp" data-video="standortanalyse" aria-label="Erklärvideo Standortanalyse: von vielen Ideen zur klaren Reihenfolge mit Business Case">
 <source src="assets/video/standortanalyse.mp4" type="video/mp4">
 </video>
-<figcaption>Kurz erklärt in 47 Sekunden, ohne Ton verständlich.</figcaption>
+<button type="button" class="ev-start" aria-label="Erklärvideo Standortanalyse abspielen, 47 Sekunden">
+<span class="ev-kreis" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17L20 12z"/></svg></span>
+<span class="ev-etikett">Video ansehen · 47 s</span>
+</button>
+<span class="ev-hinweis" aria-hidden="true">▶ Zum Ansehen klicken</span>
+</div>
 </figure>
 <p class="angebot-fuer">Wir sichten alle Quellen (Steuerung, Gleichrichter, Labor, Reklamationen), bewerten je Anlage, ob die Daten tragen, und zeigen die Fehlerbilder mit dem größten Potenzial — und wo Ihre eigene KI Routinearbeit abnehmen kann.</p>
 <div class="angebot-preis">1.500 €<small>je Standort, unabhängig von der Anlagenzahl</small></div>
@@ -283,10 +288,16 @@ KI-Anwendungsfaelle (Weg B) nur als Halbsatz der Standortanalyse. -->
 <h3>Erstanalyse</h3>
 <p class="angebot-frage">Ihre Messwerte liegen schon in einem Datenbanksystem, und ein Fehlerbild kostet Sie Geld?</p>
 <figure class="angebot-video">
-<video controls muted playsinline preload="none" poster="assets/video/erstanalyse-poster.webp" data-video="erstanalyse" aria-label="Erklärvideo Erstanalyse: vom Datenbestand zu den ersten Ursachenkandidaten">
+<div class="ev">
+<video muted playsinline preload="none" poster="assets/video/erstanalyse-poster.webp" data-video="erstanalyse" aria-label="Erklärvideo Erstanalyse: vom Datenbestand zu den ersten Ursachenkandidaten">
 <source src="assets/video/erstanalyse.mp4" type="video/mp4">
 </video>
-<figcaption>Kurz erklärt in 46 Sekunden, ohne Ton verständlich.</figcaption>
+<button type="button" class="ev-start" aria-label="Erklärvideo Erstanalyse abspielen, 46 Sekunden">
+<span class="ev-kreis" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17L20 12z"/></svg></span>
+<span class="ev-etikett">Video ansehen · 46 s</span>
+</button>
+<span class="ev-hinweis" aria-hidden="true">▶ Zum Ansehen klicken</span>
+</div>
 </figure>
 <p class="angebot-fuer">Wir prüfen den Datenbestand auf Vollständigkeit und Zeitachse, zeigen Lücken und die ersten Ursachenkandidaten für Ihr Fehlerbild — bevor Sie in eine Ursachensuche investieren.</p>
 <div class="angebot-preis">1.500 €<small>je vorliegendem Datenbestand</small></div>

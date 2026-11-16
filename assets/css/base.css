@@ -438,3 +438,28 @@ img { max-width: 100%; height: auto; }
         z-index: 50;
     }
 }
+
+/* ===== Erklaervideo in Angebotskarten (16.11.2026, index.html + leistungen.html) =====
+   Grosser Play-Knopf als Overlay, stumme Vorschau mit Hinweis; Verhalten in
+   assets/js/erklaervideo.js. Nur Tokens bzw. rgba des Dunkelblau, kein neuer Hexwert. */
+.ev { position: relative; max-width: 340px; border-radius: 10px; overflow: hidden; cursor: pointer;
+      background: var(--dunkelblau); box-shadow: 0 6px 20px rgba(27, 42, 74, 0.18); }
+.ev video { display: block; width: 100%; aspect-ratio: 4 / 5; background: var(--dunkelblau); }
+.ev-start { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center;
+            justify-content: center; gap: 14px; border: 0; padding: 0; cursor: pointer; color: var(--weiss);
+            background: linear-gradient(180deg, rgba(27, 42, 74, 0.05) 0%, rgba(27, 42, 74, 0.55) 100%); }
+.ev-kreis { width: 84px; height: 84px; border-radius: 50%; background: var(--cyan-akzent);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.22), 0 8px 24px rgba(27, 42, 74, 0.45);
+            transition: transform .2s ease; }
+.ev-kreis svg { width: 34px; height: 34px; margin-left: 6px; fill: var(--dunkelblau); }
+.ev:hover .ev-kreis, .ev-start:focus-visible .ev-kreis { transform: scale(1.08); }
+.ev-start:focus-visible { outline: 3px solid var(--cyan-akzent); outline-offset: -6px; }
+.ev-etikett { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 0.92rem;
+              background: rgba(27, 42, 74, 0.82); padding: 7px 16px; border-radius: 50px; }
+.ev-hinweis { position: absolute; left: 10px; bottom: 10px; display: none; pointer-events: none;
+              font-family: 'Montserrat', Arial, sans-serif; font-weight: 600; font-size: 0.78rem;
+              color: var(--weiss); background: rgba(27, 42, 74, 0.82); padding: 6px 12px; border-radius: 50px; }
+.ev.vorschau .ev-start, .ev.voll .ev-start { display: none; }
+.ev.vorschau .ev-hinweis { display: block; }
+.ev.voll { cursor: auto; }
